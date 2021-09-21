@@ -19,11 +19,12 @@
 
     &--1 {
       &::before {
-        top: 14px;
+        // top: 14px;
+        bottom: 3px;
 
-        width: 127px;
-        height: 44px;
-        background-image: url('assets/images/highlight-1.png');
+        width: 387px;
+        height: 12px;
+        background-image: url('assets/images/new-highlights/new-highlight-1.png');
       }
     }
 
@@ -33,7 +34,7 @@
 
         width: 205px;
         height: 100px;
-        background-image: url('assets/images/highlight-2.png');
+        background-image: url('assets/images/new-highlights/new-highlight-2.png');
       }
     }
 
