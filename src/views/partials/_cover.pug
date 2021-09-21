@@ -1,0 +1,29 @@
+section.section.cover(data-scroll-section="")
+  .container
+    .row
+      .col__xl-13.col
+        h1.alpha.cover__heading
+          span.cover__heading-line <span class="accent text--none">Прямые</span> поставки
+          span.cover__heading-line продукции <span class="accent text--none">из Европы</span>
+          span.cover__heading-line <span class="accent text--none">премиального</span> качества
+        a.btn.cover__btn наша продукция
+      .col__xl-3.col
+        .cover__slider.swiper-container(data-cover-slider="")
+          .cover__slider-controls
+            .cover__slider-counter(data-cover-slider-counter="")
+            .arrows.cover__slider-arrows
+              +arrow('white', 'white', 'left', '15', '13', '41')(data-cover-slider-prev="")
+              +arrow('white', 'white', 'right', '15', '13', '41')(data-cover-slider-next="")
+          .swiper-wrapper
+            .swiper-slide.cover__slide
+              .cover__slide-heading.text--uppercase У нас новая категория продукции
+              .cover__slide-img-wrap
+                img.img.cover__slide-img(src="assets/images/cover__slide-img.jpg", alt="Img")
+              .cover__slide-tags
+                .cover__slide-tag.text__tn.text--uppercase новинка
+            .swiper-slide.cover__slide
+              .cover__slide-heading.text--uppercase У нас новая категория продукции
+              .cover__slide-img-wrap
+                img.img.cover__slide-img(src="assets/images/cover__slide-img.jpg", alt="Img")
+              .cover__slide-tags
+                .cover__slide-tag.text__tn.text--uppercase новинка

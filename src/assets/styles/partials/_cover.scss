@@ -1,0 +1,137 @@
+.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  min-height: 100vh;
+  padding-bottom: 40px;
+
+  background: url('assets/images/cover__bg.jpg') no-repeat center / cover;
+  color: $white-lighten;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(7, 13, 13, 0.15);
+  }
+
+  &__heading {
+    margin-bottom: 40px;
+
+    &-line {
+      display: block;
+
+      &:nth-child(even) {
+        margin-left: 96px;
+      }
+    }
+  }
+
+  &__slide {
+    padding: 20px;
+
+    background: $white-lighten;
+    color: $black;
+
+    &-heading {
+      position: relative;
+      z-index: 2;
+
+      margin-bottom: 33px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    &-tags {
+      display: flex;
+      flex-wrap: wrap;
+
+      position: relative;
+      z-index: 2;
+    }
+
+    &-tag {
+      &::before {
+        content: '#';
+      }
+    }
+
+    &-img {
+      width: 75px;
+      height: 75px;
+      margin: 0 auto;
+      border-radius: 50%;
+      object-fit: cover;
+
+      &-wrap {
+        position: relative;
+        margin-bottom: 58px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          width: 154px;
+          height: 198px;
+
+          border: 1px solid $green-extra-lighten;
+          border-radius: 0px 0px 900px 900px;
+        }
+      }
+    }
+  }
+
+  &__slider {
+
+    &-counter {
+      position: relative;
+
+      display: flex;
+      justify-content: space-between;
+
+      flex: 0 0 106px;
+      max-width: 106px;
+
+      font-size: $font-size-h5;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 1px;
+        background: $white-lighten;
+      }
+
+      &-active {
+        font-weight: 600;
+      }
+    }
+
+    &-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    &-arrows {
+      flex: 0 0 92px;
+      max-width: 92px;
+    }
+  }
+}
+
+
+

@@ -1,0 +1,56 @@
+//
+// Partials -> Main
+// ------------------------------------
+
+@if $use-adaptive == false {
+  header, main, footer {
+    min-width: $container-xl;
+  }
+}
+
+//
+// Main container
+
+.main {
+  position: relative;
+  min-height: 100vh;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: $black;
+
+  &__wrap {
+    transform: translate(0px, 0px) scale(1);
+
+    @include transition;
+    border-color: $green-lighten;
+    border-width: 0px;
+    // will-change: transform;
+    overflow: hidden;
+
+    &.is-scaled {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: auto;
+
+      width: 100vw;
+      height: 232.5581395348837vh;
+
+      border-width: 93px;
+      border-style: solid;
+    }
+  }
+}
+
+
+//tempaltes
+.text-template {
+  padding: 20px 0;
+}
+.dark-template {
+  padding: 20px 0;
+  background-color: $base-color-darken;
+}
+//tempaltes

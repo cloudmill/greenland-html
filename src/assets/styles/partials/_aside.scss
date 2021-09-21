@@ -1,0 +1,63 @@
+.aside {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: $zindex-navbar;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: baseline;
+
+  width: 80px;
+  padding: 40px 20px;
+  border-radius: 0px 20px 20px 0px;
+
+  background: $green;
+
+  @include transition;
+
+  &.is-hidden {
+    left: -80px;
+  }
+
+  &__header {
+    height: 237px;
+  }
+  &__footer {
+    width: 100%;
+  }
+
+  &__btn {
+    display: block;
+    position: relative;
+
+    width: 100%;
+    margin-top: 40px;
+
+    font-size: $font-size-tiny;
+    color: $white-lighten;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &-title {
+      display: block;
+      margin-top: 13px;
+      text-align: center;
+      line-height: normal;
+    }
+
+    &-counter {
+      position: absolute;
+      right: 0;
+      transform: translate(0, -100%);
+
+      font-size: $font-size-small;
+    }
+  }
+}

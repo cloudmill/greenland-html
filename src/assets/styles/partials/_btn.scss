@@ -1,0 +1,16 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  padding: 0 30px;
+  border-radius: 0px 20px;
+  background: $green-lighten;
+  font-size: $font-size-large;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  // &:hover {
+
+  // }
+}
