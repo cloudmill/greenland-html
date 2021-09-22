@@ -1,0 +1,26 @@
+.about-title-head {
+  padding-bottom: 80px;
+  // border-bottom: ;
+}
+
+.about-title {
+  margin-bottom: 40px;
+}
+
+.about-tabs {
+  display: flex;
+
+  &__item {
+    padding-bottom: 10px;
+    border-bottom: 1px solid $green-extra-lighten;
+    font-size: $base-font-size;
+
+    &:not(:first-child) {
+      margin-left: 20px;
+    }
+
+    &--active {
+      border-bottom: 1px solid $green;
+    }
+  }
+}

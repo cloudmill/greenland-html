@@ -6,4 +6,15 @@ block content
 
   .main__wrap(data-scroll-container="")
 
-    include ../partials/_header.pug
+    //- include ../partials/_header.pug
+
+    include ../components/_breadcrumbs.pug
+
+    .section
+      .container
+        h1.beta.about-title О компании
+
+        .about-tabs
+          .about-tabs__item.about-tabs__item--active О компании
+          .about-tabs__item История
+          .about-tabs__item Бренды

@@ -103,7 +103,7 @@ $debug-mode:                   false!default;
 @import "partials/index";
 
 // Pages
-@import "pages/index";
+@import "pages/*";
 
 //Fonts
 @include font('SuisseIntl', normal, 300, '../fonts/SuisseIntl-Light');
