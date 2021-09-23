@@ -6,6 +6,8 @@ block config
 
 include ../mixins/_mixins.pug
 
+include ../components/grids
+
 doctype html
 html(lang='ru')
   head
@@ -67,6 +69,10 @@ html(lang='ru')
       - var pageName = "main"
 
   body(class="page-" + pageName)
+
+    block grid-test
+      +grid-test
+
     <!--[if lt IE 9]>
     p.browsehappy
       | Данный сайт построен на передовых, современных технологиях и не поддерживает Ваш браузер. Настоятельно рекомендуем выбрать и установить любой из &nbsp;

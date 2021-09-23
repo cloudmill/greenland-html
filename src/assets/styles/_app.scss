@@ -97,7 +97,7 @@ $debug-mode:                   false!default;
 @import "base/index";
 
 // Modules
-@import "modules/index";
+@import "modules/*";
 
 // Partials
 @import "partials/index";
