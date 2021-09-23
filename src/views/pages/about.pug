@@ -10,7 +10,7 @@ block content
 
     include ../components/_breadcrumbs.pug
 
-    .section
+    .section.about
       .container
         h1.beta.about-title О компании
 
@@ -18,3 +18,76 @@ block content
           .about-tabs__item.about-tabs__item--active О компании
           .about-tabs__item История
           .about-tabs__item Бренды
+        
+        .about-mission
+          
+          .mission__slide
+            .mission__main
+              .mission__slider-underlay
+              .gamma.mission__heading
+                .
+                  Мы раскрываем #[br] потенциал пространства #[br] через #[span.accent  #[span.mission__highlight.mission__highlight--1 красоту, творчество] #[br] и #[span.mission__highlight.mission__highlight--2 созидание].]
+            img.about-mission__img(src="assets/images/about-1.jpg" alt="")
+
+        .about-deliveries
+          .about-deliveries__desc
+            h2.about-deliveries__ttl Прямые поставки из Европы
+            .about-deliveries__txt Являемся дистрибьютором европейских дизайнерских
+              br
+              |кашпо и вазонов премиум сегмента
+
+        .about-mission.border-green-top
+          
+          .mission__slide
+            img.about-mission__img(src="assets/images/about-2.jpg" alt="")
+            .mission__main
+              .mission__slider-underlay
+              .gamma.mission__heading
+                .
+                  Мы раскрываем #[br] потенциал пространства #[br] через #[span.accent  #[span.mission__highlight.mission__highlight--1 красоту, творчество] #[br] и #[span.mission__highlight.mission__highlight--2 созидание].]
+
+        .about-plan
+          h2 Наш замысел
+          .about-plan-table
+            .about-plan-table__item
+              p
+                |Помочь в создании красивых, дружелюбных пространств, в которых 
+                span люди чувствуют себя комфортно, спокойно и безопасно 
+                |путем дизайнерского озеленения
+            .about-plan-table__item
+              p
+                span Изменить облик городов 
+                |с помощью дизайна озеленения частных и общественных пространств
+            .about-plan-table__item
+              p
+                |Внедрить 
+                span стандарты «дизайнерского озеленения»
+                |, как осознанного выбора растений и емкостей для них в рамках дизайн-концепции пространства и обучить этим стандартам дизайнеров
+            .about-plan-table__item
+              p
+                |Менять представления о горшках в России: 
+                span «горшок – это не емкость для растений, а предмет интерьера»
+
+          .about-plan-row
+            h3.about-plan-row__ttl Наша цель
+            .about-plan-row__desc Стать компанией-создателем стандартов ведения «зеленого бизнеса». Обеспечить узнаваемость бренда и распространение продукции по всей территории России и СНГ.
+
+          .about-plan-row
+            h3.about-plan-row__ttl Наша задача
+            .about-plan-row__desc Предоставлять товар высочайшего качества, в соответствии со спросом и мировыми тенденциями.
+
+          .about-block
+            .about-block__img
+              img(src="assets/images/about-3.jpg" alt="")
+            .about-block__desc
+              h3.about-block__ttl Мы — не просто крупная компания. 
+                span мы — лидер в своем направлении
+              .about-block__row Работаем, чтобы изменить жизнь людей из больших городов.
+              .about-block__row Помогаем выбрать растения и кашпо, которые гармонично подчеркнут или полностью изменят атмосферу пространства.
+              .about-block__row Создадим атмосферу свободы, уверенности и защищённости.
+
+          a.about-history(href="")
+            div История компании
+            .about-history__circle
+              img(src="assets/images/about-history-arrow.svg" alt="")
+
