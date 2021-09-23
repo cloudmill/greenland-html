@@ -212,7 +212,7 @@
 
 .about-history {
   margin-top: 100px;
-  padding: 20px 20px 20px 96px;
+  padding: 20px 20px 20px calc(#{$col-part-d});
   background-color: #EBFAF2;
   width: 100%;
   border-radius: 0px 150px 150px 0px;

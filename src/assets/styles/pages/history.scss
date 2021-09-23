@@ -1,0 +1,60 @@
+.history {
+  padding-bottom: 160px;
+}
+
+.history-desc {
+  margin-top: 80px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__main {
+    width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
+    margin-bottom: 80px;
+
+    font-size: $font-size-h3;
+    text-transform: uppercase;
+    line-height: 120%;
+  
+    text-indent: calc(#{$col-part-d});
+  
+    span {
+      font-family: $base-font-family-serif;
+    }
+  }
+
+  &__item {
+    width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
+
+    font-size: 22px;
+    line-height: 140%;
+
+    span {
+      font-family: $base-font-family-serif;
+      color: $green
+    }
+  }
+}
+
+.history-years {
+  margin-top: 140px;
+
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
+    flex: 0 0 32%;
+  }
+
+  &__year {
+    font-size: $font-size-h1;
+    font-family: $base-font-family-serif;
+    color: $green
+  }
+
+  &__desc {
+    font-family: $base-font-family-serif;
+    line-height: 140%;
+  }
+}

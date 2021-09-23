@@ -1,0 +1,26 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    //- include ../partials/_header.pug
+
+    include ../components/_breadcrumbs.pug
+
+    .section.history
+      .container
+        h1.beta.about-title Бренды
+
+        .about-tabs
+          .about-tabs__item О компании
+          .about-tabs__item История
+          .about-tabs__item.about-tabs__item--active Бренды
+
+
+        a.about-history(href="")
+          |миссия и ценности
+          .about-history__circle
+            img(src="assets/images/about-history-arrow.svg" alt="")
