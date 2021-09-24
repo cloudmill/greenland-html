@@ -49,6 +49,9 @@ block content
             img(src="assets/images/brands-1.jpg", alt="")
             img(src="assets/images/brands-2.jpg", alt="")
           .brands-pics-slider.swiper-container
+            .brands-pics-slider__controls
+              +arrow('black', '#CAE8D9', 'left', '15', '13', '41')(data-brands-slider-prev="")
+              +arrow('black', '#CAE8D9', 'right', '15', '13', '41')(data-brands-slider-next="")
             .swiper-wrapper
               - for (let i=2; i<5; i++)
                 .swiper-slide

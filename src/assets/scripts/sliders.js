@@ -1,6 +1,14 @@
-import Swiper from "swiper";
+import Swiper, {Navigation} from "swiper";
 
-const brandsSlider = new Swiper('.brands-pics-slider', {
+const $brandsSlider = document.querySelector('.brands-pics-slider');
+
+const brandsSlider = new Swiper($brandsSlider, {
+
+  navigation: {
+    prevEl: $brandsSlider.querySelector('[data-brands-slider-prev]'),
+    nextEl: $brandsSlider.querySelector('[data-brands-slider-next]'),
+  },
+
   loop: true,
   centeredSlides: true,
   slidesPerView: 'auto',
