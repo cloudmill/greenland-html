@@ -12,6 +12,8 @@ import initFadeSliders from './assets/scripts/fade-slider';
 
 import LocomotiveScroll from 'locomotive-scroll';
 
+import './assets/scripts/sliders';
+
 import Swiper, {Navigation, Pagination, Mousewheel} from 'swiper';
 Swiper.use([Navigation, Pagination, Mousewheel]);
 

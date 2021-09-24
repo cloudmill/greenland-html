@@ -28,7 +28,15 @@ mixin footerDownload(title, caption, url="#")
     .footer__download-title.text__sm= title
     .footer__download-caption.text__super-tn= caption
     .footer__download-icon-wrap
-      i.sprite.sprite--download.footer__download-icon
+      +downloadIcon
+
+
+
+//- download icon
+mixin downloadIcon(className)
+  svg(class=className width="29" height="21" viewBox="0 0 29 21" fill="none" xmlns="http://www.w3.org/2000/svg")
+    path(d="M1 0V20H28V0" stroke="#CAE8D9")
+    path(d="M14.5 9L14.1746 9.37963L14.8254 9.37963L14.5 9ZM14 1.74846e-07L14 9L15 9L15 1.31134e-07L14 1.74846e-07ZM14.8254 9.37963L18.3254 6.37963L17.6746 5.62037L14.1746 8.62037L14.8254 9.37963ZM14.8254 8.62037L11.3254 5.62037L10.6746 6.37963L14.1746 9.37963L14.8254 8.62037Z" fill="#CAE8D9")
 
 //- footer social link
 mixin footerSocial(icon, url="#")

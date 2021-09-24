@@ -6,11 +6,11 @@ block content
 
   .main__wrap(data-scroll-container="")
 
-    //- include ../partials/_header.pug
+    include ../partials/_header.pug
 
     include ../components/_breadcrumbs.pug
 
-    .section.history
+    .section.brands
       .container
         h1.beta.about-title Бренды
 
@@ -19,8 +19,50 @@ block content
           .about-tabs__item История
           .about-tabs__item.about-tabs__item--active Бренды
 
+        .brands-list
+          ul 
+            li.brands-list--active Serralunga
+            li Lechuza
+            li Abhika
+            li Teraplast
+            li San&nbsp;Rocco
+            li Anduze
+            li Deroma
+            li Pottery&nbsp;Pots
+            li Poterie&nbsp;De&nbsp;La&nbsp;Madeleine
+            li Laboratorio&nbsp;San&nbsp;Rocco
+            li ItalGarden
+            li Pokon
+
+        .brands-top
+          .brands-top-logo
+            img(src="assets/images/brand-logo1.png", alt="")
+          .brands-top-desc
+            .brands-top-desc__ttl Serralunga
+            .brands-top-desc__txt Компания Serralunga — лидирующая компания среди производителей уличной мебели – была основана в 1825 году в итальянском городе Бьелла у подножия Альп. Название компании — это фамилия семьи, которая уже на протяжении пяти поколений управляет бизнесом. 
+          .brands-top-links
+            +footerDownload('презентация компании', 'pdf, 12 мб')
+            a.btn.projects__header-btn(href="#") каталог продукции
+
+        .brands-pics
+          .brands-pics-row
+            img(src="assets/images/brands-1.jpg", alt="")
+            img(src="assets/images/brands-2.jpg", alt="")
+          .brands-pics-slider.swiper-container
+            .swiper-wrapper
+              - for (let i=2; i<5; i++)
+                .swiper-slide
+                  img(src=`assets/images/brands-${i + 1}.jpg`, alt="")
+          .brands-pics-txt
+            .brands-pics-txt__col
+              |Предметы Serralunga, одновременно красивые и функциональные, притягивают к себе взгляд – будь то скульптурное цветочное кашпо, геометрический стол или минималистичный шезлонг. При изготовлении используются самые современные материалы и технологии. Благодаря этому, в том числе, продукция компании Serralunga не боится плохой погоды, и ею можно пользоваться как в помещении, так и на улице, расширяя тем самым свою зону комфорта.
+            .brands-pics-txt__col
+              |В 1950-х копания начала работать с пластиком, и до сих пор он остаётся основным материалом, с которым работает Serralunga. А в 1980-х из США пришла идея создавать предметы из объёмного пластика методом ротационного формования, эта техника была успешно перенята и позволила производить цветочные кашпо объёмом до 3 000 литров. Ротационное формование - это метод изготовления тонкостенных полых изделий. Закрытая металлическая форма наполняется материалом (в порошке или гранулах) и, нагреваясь, вращается по двум и более пересекающимся осям. Материал равномерно распределяется по форме и создает тонкую оболочку. При охлаждении фиксируются полученные форма и размер.
 
         a.about-history(href="")
           |миссия и ценности
           .about-history__circle
             img(src="assets/images/about-history-arrow.svg" alt="")
+
+
+    include ../partials/_footer.pug
