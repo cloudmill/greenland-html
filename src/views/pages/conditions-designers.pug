@@ -29,4 +29,103 @@ block content
                   Мы раскрываем #[br] потенциал пространства #[br] через #[span.accent  #[span.mission__highlight.mission__highlight--1 красоту, творчество] #[br] и #[span.mission__highlight.mission__highlight--2 созидание].]
             img.about-mission__img(src="assets/images/conditions-1.jpg" alt="")
 
+        .designers-brands
+          .designers-brands__desc
+            |Green Land является официальным и эксклюзивным поставщиком дизайнерских кашпо от ведущих европейских брендов:
+          .designers-brands__list
+            ul
+              - for (let i=0; i<6; i++)
+                li
+                  img(src=`assets/images/designers-brands-${i + 1}.png`, alt="")
+
+        .designers-offers
+          h2.designers-offers__title Если вы дизайнер, Green Land готов предложить
+          .designers-offers__table
+            ul
+              -
+                var items = [
+                  'Агентское вознаграждение',
+                  'Помощь в подборе кашпо и растений, выезд фитодизайнера из команды Green Land на объект для консультации',
+                  'Организация доставки с нашего склада до вашего объекта',
+                  'Профессиональная консультация и ответы на все вопросы о товаре',
+                  'Самый широкий ассортимент товаров на складе в РФ: кашпо, вазоны, МАФ, мебель, искусственные растения',
+                  'Товары из востребованных материалов: экологичный пластик, композитный материал (файберглас), 3D пластик, глина, композитный мрамор, дерево',
+                  'Шоу-румы в Москве, Санкт-Петербурге, Краснодаре',
+                  '3D-модели для вашего проекта',
+                ]
+              each item, index in items
+                li
+                  div
+                    img(src=`assets/images/designer-offers-${index + 1}.png`, alt="")
+                  |#{item}
+
+        .designers-benefits
+          h2.designers-benefits__title Выгода от работы с нами
+          .designers-benefits__table
+            ul
+              -
+                var items = [
+                  {
+                    title: 'Сохраняем задумки дизайнера',
+                    desc: 'Ваш проект дополняется качественным материалом, и заказчик не станет выбирать аналог в масмаркете.',
+                  },
+                  {
+                    title: 'На рынке цветочных кашпо с 2002 года',
+                    desc: 'Знаем, чего хочет ваш заказчик. Обладаем большим опытом в решении самых интересных задач.',
+                  },
+                  {
+                    title: 'Повышаем вероятность сделки',
+                    desc: 'По нашему опыту подскажем — проект с озеленением будет одобрен вероятнее на 30%, чем без зелени.',
+                  },
+                  {
+                    title: 'Выполним заказ под ключ',
+                    desc: 'Берем на себя всю подготовку по комплектации и дадим консультации по использованию продукции в интерьере.',
+                  },
+                  {
+                    title: 'Предлагаем широкий ассортимент',
+                    desc: 'Подберем уникальный продукт под любой стиль. Знаем, как важно, чтобы все элементы были в гармонии.',
+                  },
+                  {
+                    title: 'Предоставляем скидку дизайнерам',
+                    desc: 'Готовы работать с вами на особых условиях, разработали прогрессивную модель скидок и систему бонусов.',
+                  },
+                  {
+                    title: 'Закрепляем проект за вами',
+                    desc: 'Сотрудничая с нами вы не только получаете свой кэшбэк, но и уверенность в своей защите прав на проект.',
+                  },
+                  {
+                    title: 'Располагаем своим шоурумом',
+                    desc: 'При возниконовении вопросов по материалу, его всегда можно увидеть вживую и пощупать в нашем петербургском шоуруме.',
+                  },
+                ]
+
+              each item, index in items
+                li
+                  .designers-benefits__img
+                    img(src=`assets/images/designer-benefits-${index + 1}.png`, alt="")
+                  .designers-benefits__txt
+                    .designers-benefits__ttl #{item.title}
+                    .designers-benefits__desc #{item.desc}
+
+        .designers-form.about-mission
+          h2.designers-form__title Оставить заявку на консультацию
+          .mission__slide
+            .mission__main
+              .mission__slider-underlay
+              .designers-form__container
+                form.designers-form__form
+                  label.designers-form__label
+                    input.designers-form__input(placeholder="Имя")
+                  label.designers-form__label
+                    input.designers-form__input(placeholder="E-mail")
+                  label.designers-form__label
+                    input.designers-form__input(placeholder="Телефон")
+                  label.designers-form__label-checkbox
+                    input(type="checkbox")
+                    div Я соглашаюсь на обработку персональных данных
+                  button.btn.cover__btn(type="submit") отправить
+            img.about-mission__img(src="assets/images/conditions-1.jpg" alt="")
+
+                
+
     include ../partials/_footer.pug
