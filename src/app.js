@@ -9,10 +9,9 @@ import initConditionsSlider from './assets/scripts/conditions-slider';
 import FullPage from './assets/scripts/fullpage';
 import initProjectsSlider from './assets/scripts/projects-slider';
 import initFadeSliders from './assets/scripts/fade-slider';
+import initBrandsSlider from './assets/scripts/brands-slider';
 
 import LocomotiveScroll from 'locomotive-scroll';
-
-import './assets/scripts/sliders';
 
 import Swiper, {Navigation, Pagination, Mousewheel} from 'swiper';
 Swiper.use([Navigation, Pagination, Mousewheel]);
@@ -30,7 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	initProjectsSlider();
 
-	initFadeSliders()
+	initFadeSliders();
+
+	initBrandsSlider();
 
 	// new FullPage();
 
