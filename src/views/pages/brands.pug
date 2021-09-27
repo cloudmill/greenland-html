@@ -48,7 +48,8 @@ block content
           .brands-pics-row
             img(src="assets/images/brands-1.jpg", alt="")
             img(src="assets/images/brands-2.jpg", alt="")
-          .brands-pics-slider.swiper-container
+
+          .brands-pics-slider.swiper-container(data-brands-slider="")
             .brands-pics-slider__controls
               +arrow('black', '#CAE8D9', 'left', '15', '13', '41')(data-brands-slider-prev="")
               +arrow('black', '#CAE8D9', 'right', '15', '13', '41')(data-brands-slider-next="")
@@ -56,6 +57,7 @@ block content
               - for (let i=2; i<5; i++)
                 .swiper-slide
                   img(src=`assets/images/brands-${i + 1}.jpg`, alt="")
+                  
           .brands-pics-txt
             .brands-pics-txt__col
               |Предметы Serralunga, одновременно красивые и функциональные, притягивают к себе взгляд – будь то скульптурное цветочное кашпо, геометрический стол или минималистичный шезлонг. При изготовлении используются самые современные материалы и технологии. Благодаря этому, в том числе, продукция компании Serralunga не боится плохой погоды, и ею можно пользоваться как в помещении, так и на улице, расширяя тем самым свою зону комфорта.

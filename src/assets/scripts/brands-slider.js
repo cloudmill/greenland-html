@@ -1,8 +1,8 @@
 import Swiper, {Navigation} from "swiper";
+Swiper.use([Navigation]);
 
 export default function initBrandsSlider() {
-
-  const $brandsSlider = document.querySelector('.brands-pics-slider');
+  const $brandsSlider = document.querySelector('[data-brands-slider]');
 
   const brandsSlider = new Swiper($brandsSlider, {
 
@@ -15,6 +15,10 @@ export default function initBrandsSlider() {
     centeredSlides: true,
     slidesPerView: 'auto',
     spaceBetween: 100,
+
+    // slidesPerView: 3,
+    // spaceBetween: 172,
+    // loop: true,
   });
 
   window.sliders.push(brandsSlider);

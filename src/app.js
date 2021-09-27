@@ -21,17 +21,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	window.sliders = [];
 
-	initCoverSlider();
+	try {
+		initCoverSlider();
+	} catch {};
+	
+	try {
+		initMissionSlider();
+	} catch {};
+	
+	try {
+		initConditionsSlider();
+	} catch {}
+	
+	try {
+		initProjectsSlider();
+	} catch {}
 
-	initMissionSlider();
-
-	initConditionsSlider();
-
-	initProjectsSlider();
-
-	initFadeSliders();
-
-	initBrandsSlider();
+	try {
+		initFadeSliders();
+	} catch {}
+	
+	try {
+		initBrandsSlider();
+	} catch {}
 
 	// new FullPage();
 
