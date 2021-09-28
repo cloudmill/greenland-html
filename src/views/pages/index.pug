@@ -1,23 +1,34 @@
 extends ../layouts/master.pug
 
+block header
+
 block content
+  .pages
+    -
+      var pages = [
+        {
+          href: 'main.html',
+          title: 'Главная',
+        },
+        {
+          href: 'about.html',
+          title: 'О компании',
+        },
+        {
+          href: 'history.html',
+          title: '[О компании] История',
+        },
+        {
+          href: 'brands.html',
+          title: '[О компании] Бренды',
+        },
+      ];
+    .main__wrap
+      .section
+        .container
+          ol
+            each page in pages
+              li.margin50
+                a.btn.cover__btn(href=page.href)
+                  |#{page.title}
 
-  include ../partials/_aside.pug
-
-  .main__wrap(data-scroll-container="")
-
-    include ../partials/_header.pug
-
-    include ../partials/_cover.pug
-
-    include ../partials/_mission.pug
-
-    include ../partials/_conditions.pug
-
-    include ../partials/_projects.pug
-
-    include ../partials/_blog.pug
-
-    include ../partials/_news.pug
-
-    include ../partials/_footer.pug
