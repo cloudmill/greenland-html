@@ -1,0 +1,69 @@
+// параметры grid'a на сайте
+// за основу взято 100vw (боковой скроллбар страниц не учитываем)
+
+$col-count-m: 4;
+$col-count-d: 16;
+
+$aside: 80px;
+
+$col-pad-m: 20px;
+$col-pad-d: 40px;
+
+$col-gap-m: 20px;
+$col-gap-d: 20px;
+
+$col-width-m: '((100vw - (#{$col-pad-m} * 2) - (#{$col-gap-m} * #{$col-count-m - 1}) - #{$aside}) / #{$col-count-m})';
+$col-width-d: '((100vw - (#{$col-pad-d} * 2) - (#{$col-gap-d} * #{$col-count-d - 1}) - #{$aside}) / #{$col-count-d})';
+
+$col-part-m: '(#{$col-width-m} + #{$col-gap-m})';
+$col-part-d: '(#{$col-width-d} + #{$col-gap-d})';
+
+// breakpoints
+$breakpoint-m: 768px;
+$breakpoint-961: 961px;
+$breakpoint-t: 1024px;
+$breakpoint: 1280px;
+$breakpoint-l: 1366px;
+$breakpoint-ll: 1440px;
+$breakpoint-xl: 1680px;
+$breakpoint-xxl: 1920px;
+
+
+.grid-test {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000; // ?
+
+  width: 100vw;
+  overflow: hidden;
+  pointer-events: none;
+
+  &__container {
+    margin: 0 40px 0 120px;
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    width: calc(#{$col-width-m});
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-width-d});
+    }
+    flex-shrink: 0;
+    min-height: 100vh;
+
+    background-color: rgba($color: black, $alpha: 0.1); // ?
+
+    // скрываем на мобильном лишние колонки
+    &:nth-child(-n + #{$col-count-d - $col-count-m}) {
+      @media (max-width: $breakpoint - 1px) {
+        display: none;
+      }
+    }
+  }
+}

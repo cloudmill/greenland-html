@@ -9,6 +9,7 @@ import initConditionsSlider from './assets/scripts/conditions-slider';
 import FullPage from './assets/scripts/fullpage';
 import initProjectsSlider from './assets/scripts/projects-slider';
 import initFadeSliders from './assets/scripts/fade-slider';
+import initBrandsSlider from './assets/scripts/brands-slider';
 
 import LocomotiveScroll from 'locomotive-scroll';
 
@@ -20,15 +21,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	window.sliders = [];
 
-	initCoverSlider();
+	try {
+		initCoverSlider();
+	} catch {};
+	
+	try {
+		initMissionSlider();
+	} catch {};
+	
+	try {
+		initConditionsSlider();
+	} catch {}
+	
+	try {
+		initProjectsSlider();
+	} catch {}
 
-	initMissionSlider();
-
-	initConditionsSlider();
-
-	initProjectsSlider();
-
-	initFadeSliders()
+	try {
+		initFadeSliders();
+	} catch {}
+	
+	try {
+		initBrandsSlider();
+	} catch {}
 
 	// new FullPage();
 

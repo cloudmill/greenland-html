@@ -1,0 +1,155 @@
+.designers-brands {
+  margin-top: 120px;
+
+  &__desc {
+    width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
+    font-size: 20px;
+    line-height: 140%;
+    margin-bottom: 70px;
+  }
+
+  &__list {
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    li {
+      min-width: 238px;
+      min-height: 150px;
+
+      border: 1px solid $green-extra-lighten;
+      border-radius: 50%;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.designers-offers {
+  margin-top: 160px;
+
+  &__title {
+    // margin-bottom: 60px;
+    width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
+  }
+
+  &__table {
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    li {
+      margin-top: 60px;
+      padding-bottom: 20px;
+      width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+
+      border-bottom: 1px solid $green-extra-lighten;
+
+      display: flex;
+      flex-direction: column;
+
+      div {
+        margin-bottom: 57px;
+      }
+    }
+  }
+}
+
+.designers-benefits {
+  $comp: &;
+
+  margin-top: 160px;
+
+  &__title {
+    margin-bottom: 80px;
+    width: calc(#{$col-part-d} * 6 - (#{$col-gap-d} * 3));
+  }
+
+  &__table {
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    li {
+      width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+      border-top: 1px solid $green-extra-lighten;
+      padding-top: 20px;
+      margin-bottom: 60px;
+
+      display: flex;
+    }
+  }
+
+  &__img {
+    width: calc(#{$col-part-d} * 2);
+  }
+  &__txt {
+    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    padding-right: calc(#{$col-part-d});
+
+    #{$comp}__ttl {
+      font-size: 24px;
+      line-height: 130%;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    #{$comp}__desc {
+      font-size: 16px;
+      line-height: 160%;
+    }
+  }
+}
+
+.designers-form {
+
+  &__container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+  &__form {
+    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+
+    button {
+      width: 100%;
+      margin-top: 40px;
+    }
+  }
+  &__label {
+
+  }
+  &__label-checkbox {
+    display: flex;
+  }
+  &__input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $green-extra-lighten;
+
+    font-family: "SuisseIntl", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 160%;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+}

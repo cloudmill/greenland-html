@@ -5,6 +5,7 @@
 
   &__highlight {
     position: relative;
+    z-index: 0;
 
     &::before {
       content: '';
@@ -20,21 +21,23 @@
 
     &--1 {
       &::before {
-        top: 0px;
+        // top: 0px;
+        bottom: 0;
 
-        width: 155px;
-        height: 54px;
+        width: 125px;
+        height: 12px;
         background-image: url('assets/images/highlight-1.png');
       }
     }
 
     &--2 {
       &::before {
-        top: 6px;
+        // top: 6px;
+        bottom: 0;
 
-        width: 132px;
-        height: 41px;
-        background-image: url('assets/images/highlight-3.png');
+        width: 152px;
+        height: 12px;
+        background-image: url('assets/images/highlight-2.png');
       }
     }
   }
@@ -45,6 +48,15 @@
     &-subheading {
       margin-bottom: 40px;
     }
+  }
+
+  &__title {
+    width: 100%;
+    margin-bottom: 60px;
+
+    font-size: 48px;
+    line-height: 130%;
+    text-transform: uppercase;
   }
 
   &__slider {
@@ -153,6 +165,4 @@
       }
     }
   }
-
-
 }

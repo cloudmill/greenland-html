@@ -7,6 +7,7 @@ export default function initCoverSlider() {
   const $wrap = document.querySelector('.main__wrap');
   const $aside = document.querySelector('.aside');
   const $coverSlider = document.querySelector('[data-cover-slider]');
+
   const $coverSliderCounter = $coverSlider.querySelector('[data-cover-slider-counter]');
 
   const shiftX = (window.innerWidth / 2) - (window.innerWidth * 0.43 / 2);

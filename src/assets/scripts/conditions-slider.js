@@ -50,7 +50,8 @@ export default function initConditionsSlider() {
           this.params.mousewheel.releaseOnEdges = false;
         }
       }
-    }
+    },
+    // slidesPerView: 1.2,
   });
 
   window.sliders.push(conditionsSlider);
