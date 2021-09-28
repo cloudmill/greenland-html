@@ -1,0 +1,20 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    include ../components/_breadcrumbs.pug
+
+    .section.brands
+      .container
+        h1.beta.about-title Для дистрибьютеров и оптовых покупателей
+
+        .about-tabs
+          a.about-tabs__item(href="") Условия работы с дизайнерами
+          a.about-tabs__item(href="") Условия работы для объектов
+          a.about-tabs__item.about-tabs__item--active(href="") Условия работы для дистрибьютеров и оптовых покупателей
