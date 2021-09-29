@@ -11,6 +11,7 @@ import initProjectsSlider from './assets/scripts/projects-slider';
 import initFadeSliders from './assets/scripts/fade-slider';
 import initBrandsSlider from './assets/scripts/brands-slider';
 import initCatalogSlider from './assets/scripts/catalog-slider';
+import initBrandsLogosSlider from './assets/scripts/brands-logos-slider';
 
 import LocomotiveScroll from 'locomotive-scroll';
 
@@ -49,6 +50,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	try {
 		initCatalogSlider();
 	} catch {}
+
+	try {
+		initBrandsLogosSlider();
+	} catch {}
+
+	
 
 	// new FullPage();
 

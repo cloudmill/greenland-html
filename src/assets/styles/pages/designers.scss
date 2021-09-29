@@ -15,9 +15,11 @@
       justify-content: space-between;
     }
 
-    li {
+    &-img {
       min-width: 238px;
       min-height: 150px;
+
+      margin-bottom: 20px;
 
       border: 1px solid $green-extra-lighten;
       border-radius: 50%;
@@ -25,6 +27,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    li {
+      font-size: 14px;
+      line-height: 130%;
+      text-transform: uppercase;
+      text-align: center;
 
       &:not(:first-child) {
         margin-left: 10px;
@@ -276,7 +285,7 @@
   &__title {
     width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
   }
-  &__desc {
+  &__subtitle {
     font-family: $base-font-family-serif;
     font-size: 20px;
   }
@@ -300,15 +309,10 @@
   &__desc {
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
 
-    font-family: $base-font-family;
     display: flex;
     flex-direction: column;
   }
-  &__name {
-    // font-family: $base-font-family;
-  }
   &__position {
-    // font-family: $base-font-family;
     font-size: 13px;
     line-height: 160%;
   }

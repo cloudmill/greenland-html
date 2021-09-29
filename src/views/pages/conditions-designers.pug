@@ -34,9 +34,20 @@ block content
             |Green Land является официальным и эксклюзивным поставщиком дизайнерских кашпо от ведущих европейских брендов:
           .designers-brands__list
             ul
-              - for (let i=0; i<6; i++)
+              -
+                var items = [
+                  'Pottery Pots',
+                  'Teraplast',
+                  'Fleur Ami',
+                  'ItalGarden',
+                  'Poterie De La Madeleine (Anduze)',
+                  'Laboratorio San Rocco',
+                ]
+              each item, index in items
                 li
-                  img(src=`assets/images/designers-brands-${i + 1}.png`, alt="")
+                  .designers-brands__list-img
+                    img(src=`assets/images/designers-brands-${index + 1}.png`, alt="")
+                  |#{item}
 
         .designers-offers
           h2.designers-offers__title Если вы дизайнер, Green Land готов предложить
@@ -212,7 +223,7 @@ block content
         .designers-contacts
           .designers-contacts__top
             h2.designers-contacts__title Начать работу с нами
-            .designers-contacts__desc Звоните или пишите нам. Мы расскажем и о других 
+            .designers-contacts__subtitle Звоните или пишите нам. Мы расскажем и о других 
               br
               |преимуществах работы с Green Land.
           .designers-contacts__row

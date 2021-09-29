@@ -19,8 +19,33 @@ block content
           a.about-tabs__item(href="") Условия работы для объектов
           a.about-tabs__item.about-tabs__item--active(href="") Условия работы для дистрибьютеров и оптовых покупателей
 
+        .distributor-desc
+          h3.distributor-desc__ttl
+            |Оптовым покупателям, 
+            br
+            |региональным дистрибьюторам, 
+            span интернет-магазинам
+          .distributor-desc__txt
+            |Green Land всегда открыт для партнерства, мы знаем что предложить вашему бизнесу для успешного развития. Основываясь на собственном опыте, мы подобрали товары наиболее востребованные у современного покупателя, а предлагаемые коммерческие условия, помогут вам заработать.
+
+        .designers-offers.distributor-offers
+          .designers-offers__table
+            ul
+              -
+                var items = [
+                  'Оптовый прайс от 1 штуки',
+                  'Помощь в организации логистики с нашего склада до вашего адреса',
+                  'Большой ассортимент товаров на складе, товары разных ценовых категорий всегда в наличии и под заказ',
+                  'Персональный менеджер, поддержка и консультация',
+                ]
+              each item, index in items
+                li
+                  div
+                    img(src=`assets/images/designer-offers-${index + 1}.png`, alt="")
+                  |#{item}
+
         .designers-products
-          h3.designers-products__title
+          h2.mb60
             |Складская программа 
             br
             |для торговых организаций
@@ -65,5 +90,119 @@ block content
                       .catalog-card__ttl Высокое напольное кашпо MUSCHEL
                       .catalog-card__color Серебро
                       .catalog-card__price 5 292 ₽
+
+        .distributor-brands
+          .distributor-brands__top
+            h2
+              |С нами уже работают
+            .designers-products__controls(data-brands-logos-controls="")
+              .arrows.cover__slider-arrows
+                +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-brands-logos-prev="")
+                +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-brands-logos-next="")
+
+          .designers-brands__list.swiper-container(data-brands-logos-slider="")
+            ul.swiper-wrapper
+              -
+                var items = [
+                  'ашан',
+                  'максидом',
+                  'obi',
+                  'leroy merlin',
+                ]
+              each item, index in items
+                li.swiper-slide
+                  .designers-brands__list-img
+                    img(src=`assets/images/distributor-brand-${index + 1}.png`, alt="")
+                  |#{item}
+
+        .designers-showrooms
+          h3.designers-showrooms__title
+            |Товар 
+            span всегда в наличии 
+            |на самом большом 
+            br
+            |складе кашпо и горшков в РФ
+          .designers-products-filter
+            ul
+              -
+                var items = [
+                  'Шоу-рум',
+                  'Упаковка продукции',
+                ]
+              each item in items
+                li.designers-products-filter__item
+                  |#{item}
+          .projects__slider.swiper-container(data-projects-slider="")
+            .swiper-wrapper
+              - for (i=0; i<3; i++)
+                .swiper-slide.projects__slide
+                  .projects__item
+                    .projects__item-slider(data-fade-item-slider="")
+                      .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                        img.projects__item-img.is-active(src=`assets/images/projects__item-img-${i + 1}.jpg`, alt="", data-fade-item-slider-item="")
+              
+            .projects__slider-controls
+              +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+              +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+
+        .designers-contacts.distributor-contacts
+          .designers-contacts__top
+            h2.designers-contacts__title Начать работу с нами
+            .designers-contacts__subtitle Звоните или пишите нам. Мы расскажем и о других 
+              br
+              |преимуществах работы с Green Land.
+          .designers-contacts__row
+            .designers-contacts__card
+              .designers-contacts__img
+                img(src="assets/images/designer-contacts-1.png", alt="")
+              .designers-contacts__desc
+                h4.designers-contacts__name Гвоздякова Алена
+                .designers-contacts__position Менеджер по работе с дизайнерами
+                .designers-contacts__contacts
+                  span.designers-contacts__tel 8 911 924-50-84
+                  span sv@green-land.ru
+
+                .contacts-btn
+                  |обратная связь
+                
+           
+
+            .designers-contacts__links
+              .designers-contacts__links-txt
+                |Написать в соц. сетях
+              .footer__socials
+                a.footer__socials-link(href="")
+                  +fbIcon
+                a.footer__socials-link(href="")
+                  +vkIcon
+                a.footer__socials-link(href="")
+                  +instIcon
+                a.footer__socials-link(href="")
+                  +houzzIcon
+
+        .objects-form.distributor-form
+          //- .distributor-form__ttl-background
+          .mission__slider-underlay
+          h2
+            |Вы комплексный поставщик
+            br
+            |— задайте вопрос
+
+          form.designers-form__form
+            label.designers-form__label
+              input.designers-form__input(placeholder="Имя")
+            label.designers-form__label
+              input.designers-form__input(placeholder="E-mail")
+
+            label.designers-form__label
+              textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос") 
+
+            label.designers-form__checkbox
+              input(type="checkbox"  id="checkbox")
+              .checkbox
+              .designers-form__checkbox-txt Я соглашаюсь на обработку
+                br
+                a(href="") персональных данных
+            button.btn.cover__btn(type="submit") отправить
 
     include ../partials/_footer.pug
