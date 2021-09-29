@@ -15,9 +15,11 @@
       justify-content: space-between;
     }
 
-    li {
+    &-img {
       min-width: 238px;
       min-height: 150px;
+
+      margin-bottom: 20px;
 
       border: 1px solid $green-extra-lighten;
       border-radius: 50%;
@@ -25,6 +27,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    li {
+      font-size: 14px;
+      line-height: 130%;
+      text-transform: uppercase;
+      text-align: center;
 
       &:not(:first-child) {
         margin-left: 10px;
@@ -114,76 +123,7 @@
   }
 }
 
-.designers-form {
-  &__title {
-    margin-bottom: 60px;
-  }
-  &__container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-  }
-  &__form {
-    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
 
-    button {
-      width: 100%;
-      margin-top: 40px;
-    }
-  }
-  &__label {
-
-  }
-  &__checkbox {
-    display: flex;
-    align-items: center;
-
-    input[type="checkbox"] {
-      display: none;
-      margin: 0;
-    }
-    input[type="checkbox"]:checked + .checkbox::before {
-      background-image: url(assets/images/checkbox.png);
-      background-position: center;
-    }
-    .checkbox::before {
-      content: '';
-      display: inline-block;
-      width: 30px;
-      height: 30px;
-      border-radius: 0px 7px;
-      border: 2px solid $green;
-      vertical-align: middle;
-      transition: 0.1s;
-    }
-    &-txt {
-      color: $black;
-      line-height: 120%;
-      font-size: 12px;
-      margin-left: 20px;
-      a {
-        color: $green;
-      }
-    }
-  }
-  &__input {
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid $green-extra-lighten;
-
-    font-family: "SuisseIntl", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 160%;
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-
-    &::placeholder {
-      opacity: 1;
-    }
-  }
-}
 
 .designers-products {
   margin-top: 160px;
@@ -197,6 +137,10 @@
   }
   &-filter {
     margin-bottom: 80px;
+
+    display: flex;
+    justify-content: space-between;
+
     ul {
       display: flex;
     }
@@ -207,6 +151,12 @@
     }
     li:not(:first-child) {
       margin-left: 20px;
+    }
+  }
+  &__controls {
+    width: 110px;
+    .cover__slider-arrows {
+      max-width: 110px;
     }
   }
 }
@@ -335,7 +285,7 @@
   &__title {
     width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
   }
-  &__desc {
+  &__subtitle {
     font-family: $base-font-family-serif;
     font-size: 20px;
   }
@@ -359,15 +309,10 @@
   &__desc {
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
 
-    font-family: $base-font-family;
     display: flex;
     flex-direction: column;
   }
-  &__name {
-    // font-family: $base-font-family;
-  }
   &__position {
-    // font-family: $base-font-family;
     font-size: 13px;
     line-height: 160%;
   }

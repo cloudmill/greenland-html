@@ -26,8 +26,8 @@ block content
               .mission__slider-underlay
               .gamma.mission__heading
                 .
-                  Мы раскрываем #[br] потенциал пространства #[br] через #[span.accent  #[span.mission__highlight.mission__highlight--1 красоту, творчество] #[br] и #[span.mission__highlight.mission__highlight--2 созидание].]
-            img.about-mission__img(src="assets/images/conditions-1.jpg" alt="")
+                  Мы знаем какие #[span.accent проблемы #[br] решает озеленение #[br] бизнес-пространств.] #[br] если стоит задача подобрать #[br] товар для декодирования #[br] или озеленения своими #[br] силами, #[span.accent наши менеджеры #[br] помогут с выбором кашпо и #[br] растений]
+            img.about-mission__img(src="assets/images/objects-1.jpg" alt="")
 
         .designers-benefits
           .designers-benefits__table
@@ -44,21 +44,34 @@ block content
               each item, index in items
                 li
                   .designers-benefits__img
-                    img(src=`assets/images/designer-benefits-${index + 1}.png`, alt="")
+                    img(src=`assets/images/objects-benefits-${index + 1}.png`, alt="")
                   .designers-benefits__txt
                     //- .designers-benefits__ttl #{item.title}
                     .designers-benefits__desc #{item}
 
-        .about-block
+        .about-block.mt70
           .about-block__img
-            img(src="assets/images/about-3.jpg" alt="")
+            img(src="assets/images/objects-2.jpg" alt="")
           .about-block__desc
-            h3.about-block__ttl Мы — не просто крупная компания. 
-              span мы — лидер в своем направлении
+            h3.about-block__ttl Мы 
+              span гордимся своими 
+                br
+                |проектами, 
+              |а наши партнёры 
+              br
+              |благодарят нас за сроки, 
+              br 
+              |качество и отличный 
+              br 
+              |клиентский сервис
             
         .designers-showrooms
-          h3
-            |Выполненные проекты
+          .ojects-projects-top
+            h2.ojects-projects-top__title
+              |Выполненные проекты
+            a.ojects-projects-top__link(href="")
+              |все проекты
+              img(src="assets/images/objects-arrow.png", alt="")
           .designers-products-filter
             ul
               -
@@ -131,3 +144,25 @@ block content
             .projects__slider-controls
               +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
               +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+
+        .objects-form
+          h2
+            |Связаться с нами
+          form.designers-form__form
+            label.designers-form__label
+              input.designers-form__input(placeholder="Имя")
+            label.designers-form__label
+              input.designers-form__input(placeholder="E-mail")
+
+            label.designers-form__label
+              textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос") 
+
+            label.designers-form__checkbox
+              input(type="checkbox"  id="checkbox")
+              .checkbox
+              .designers-form__checkbox-txt Я соглашаюсь на обработку
+                br
+                a(href="") персональных данных
+            button.btn.cover__btn(type="submit") отправить
+
+    include ../partials/_footer.pug
