@@ -88,7 +88,7 @@ $debug-mode:                   false!default;
 @import "themes/_scheme-default";
 
 // Mixins
-@import "helpers/index";
+@import "helpers/*";
 
 // Plugins
 @import "vendors/index";

@@ -1,0 +1,28 @@
+.objects-form {
+  margin-top: 160px;
+
+  h2 {
+    margin-bottom: 80px;
+  }
+}
+
+.ojects-projects-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+
+  &__title {
+    width: calc(#{$col-part-d} * 8);
+  }
+  &__link {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-left: 10px;
+    }
+  }
+}
