@@ -1,0 +1,133 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    include ../components/_breadcrumbs.pug
+
+    .section.brands
+      .container
+        h1.beta.about-title Условия работы для объектов
+
+        .about-tabs
+          a.about-tabs__item(href="") Условия работы с дизайнерами
+          a.about-tabs__item.about-tabs__item--active(href="") Условия работы для объектов
+          a.about-tabs__item(href="") Условия работы для дистрибьютеров и оптовых покупателей
+
+        .about-mission
+
+          .mission__slide
+            .mission__main
+              .mission__slider-underlay
+              .gamma.mission__heading
+                .
+                  Мы раскрываем #[br] потенциал пространства #[br] через #[span.accent  #[span.mission__highlight.mission__highlight--1 красоту, творчество] #[br] и #[span.mission__highlight.mission__highlight--2 созидание].]
+            img.about-mission__img(src="assets/images/conditions-1.jpg" alt="")
+
+        .designers-benefits
+          .designers-benefits__table
+            ul
+              -
+                var items = [
+                  'Если вам необходимо озеленить пространство «под ключ», команда отдела Озеленения предложит проект с реализацией',
+                  'У нас есть проверенные решение под каждую задачу',
+                  'Ассортимент кашпо с антивандальными характеристиками, для решения любой задачи по декорированию и озеленению вашего бизнес-пространства',
+                  'Программа лояльности и продуманная система скидок',
+                  'Мы работаем с коммерческими и бюджетными организациями',
+                ]
+
+              each item, index in items
+                li
+                  .designers-benefits__img
+                    img(src=`assets/images/designer-benefits-${index + 1}.png`, alt="")
+                  .designers-benefits__txt
+                    //- .designers-benefits__ttl #{item.title}
+                    .designers-benefits__desc #{item}
+
+        .about-block
+          .about-block__img
+            img(src="assets/images/about-3.jpg" alt="")
+          .about-block__desc
+            h3.about-block__ttl Мы — не просто крупная компания. 
+              span мы — лидер в своем направлении
+            
+        .designers-showrooms
+          h3
+            |Выполненные проекты
+          .designers-products-filter
+            ul
+              -
+                var items = [
+                  'Шоу-рум',
+                  'Упаковка продукции',
+                ]
+              each item in items
+                li.designers-products-filter__item
+                  |#{item}
+          .projects__slider.swiper-container(data-projects-slider="")
+            .swiper-wrapper
+              .swiper-slide.projects__slide
+                .projects__item
+                  .projects__item-slider(data-fade-item-slider="")
+                    .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                      img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                      img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                      img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                      img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                    .bullets.projects__item-slider-bullets
+                      .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                      .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                  .projects__item-caption
+                    .epsilon.projects__item-name Отель Crowne Plaza
+                    .projects__item-tags
+                      .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                      .projects__item-tag.text__super-tn.text--uppercase Террасы
+                      .projects__item-tag.text__super-tn.text--uppercase Входные группы
+              .swiper-slide.projects__slide
+                .projects__item
+                  .projects__item-slider(data-fade-item-slider="")
+                    .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                      img.projects__item-img.is-active(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                      img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                      img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                      img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                    .bullets.projects__item-slider-bullets
+                      .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                      .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                  .projects__item-caption
+                    .epsilon.projects__item-name Отель Crowne Plaza
+                    .projects__item-tags
+                      .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                      .projects__item-tag.text__super-tn.text--uppercase Террасы
+                      .projects__item-tag.text__super-tn.text--uppercase Входные группы
+              .swiper-slide.projects__slide
+                .projects__item
+                  .projects__item-slider(data-fade-item-slider="")
+                    .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                      img.projects__item-img.is-active(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                      img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                      img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                      img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                    .bullets.projects__item-slider-bullets
+                    .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                      .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                  .projects__item-caption
+                    .epsilon.projects__item-name Отель Crowne Plaza
+                    .projects__item-tags
+                      .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                      .projects__item-tag.text__super-tn.text--uppercase Террасы
+                      .projects__item-tag.text__super-tn.text--uppercase Входные группы
+            .projects__slider-controls
+              +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+              +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")

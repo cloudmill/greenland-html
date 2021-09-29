@@ -120,12 +120,132 @@ block content
                     input.designers-form__input(placeholder="E-mail")
                   label.designers-form__label
                     input.designers-form__input(placeholder="Телефон")
-                  label.designers-form__label-checkbox
-                    input(type="checkbox")
-                    div Я соглашаюсь на обработку персональных данных
+                  label.designers-form__checkbox
+                    input(type="checkbox"  id="checkbox")
+                    .checkbox
+                    .designers-form__checkbox-txt Я соглашаюсь на обработку
+                      br
+                      a(href="") персональных данных
                   button.btn.cover__btn(type="submit") отправить
             img.about-mission__img(src="assets/images/conditions-1.jpg" alt="")
 
+        .designers-products
+          h3.designers-products__title
+            |Наша продукция 
+            span не выбивается 
+            br
+            |из общего дизайна интерьера
+          .designers-products-filter
+            ul
+              -
+                var items = [
+                  'Классический',
+                  'Барокко',
+                  'Арт-деко',
+                ]
+              each item in items
+                li.designers-products-filter__item
+                  |#{item}
+          .designers-products__catalog
+            //- .swiper-container
+            //- .swiper-wrapper
+            //-   .swiper-slide
+            - for (i=0; i<5; i++)
+              .catalog-card
+                .catalog-card__labels
+                  .catalog-card__labels-item Скидки
+                  .catalog-card__labels-item Новинки
+                .catalog-card__top
+                  .catalog-card__layer
+                    .catalog-card__pagination
+                      .catalog-card__pagination-item
+                      .catalog-card__pagination-item
+                      .catalog-card__pagination-item
+                      .catalog-card__pagination-item
+                    .catalog-card__buttons
+                      button.catalog-card__buttons-item
+                        img(src="assets/images/catalog-buttons-1.svg", alt="")
+                      button.catalog-card__buttons-item
+                        img(src="assets/images/catalog-buttons-2.svg", alt="")
+                  img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                a.catalog-card__bottom(href="")
+                  .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                  .catalog-card__color Серебро
+                  .catalog-card__price 5 292 ₽
+
+        .designers-showrooms
+          h3.designers-showrooms__title
+            |Шоу-румы в Москве и Санкт-Петербурге — 
+            br
+            |возможность 
+            span посмотреть товар перед заказом
+          .designers-products-filter
+            ul
+              -
+                var items = [
+                  'Шоу-рум',
+                  'Упаковка продукции',
+                ]
+              each item in items
+                li.designers-products-filter__item
+                  |#{item}
+          .projects__slider.swiper-container(data-projects-slider="")
+            .swiper-wrapper
+              - for (i=0; i<3; i++)
+                .swiper-slide.projects__slide
+                  .projects__item
+                    .projects__item-slider(data-fade-item-slider="")
+                      .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                        img.projects__item-img.is-active(src=`assets/images/projects__item-img-${i + 1}.jpg`, alt="", data-fade-item-slider-item="")
+              
+            .projects__slider-controls
+              +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+              +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+
+        .designers-contacts
+          .designers-contacts__top
+            h2.designers-contacts__title Начать работу с нами
+            .designers-contacts__desc Звоните или пишите нам. Мы расскажем и о других 
+              br
+              |преимуществах работы с Green Land.
+          .designers-contacts__row
+            .designers-contacts__card
+              .designers-contacts__img
+                img(src="assets/images/designer-contacts-1.png", alt="")
+              .designers-contacts__desc
+                h4.designers-contacts__name Шабала Виктория
+                .designers-contacts__position Менеджер по работе с дизайнерами
+                .designers-contacts__contacts
+                  span.designers-contacts__tel 8 911 924-50-84
+                  span sv@green-land.ru
+
+                .contacts-btn
+                  |обратная связь
                 
+            .designers-contacts__card
+              .designers-contacts__img
+                img(src="assets/images/designer-contacts-2.png", alt="")
+              .designers-contacts__desc
+                h4.designers-contacts__name Филиппова Марина
+                .designers-contacts__position Менеджер по работе с дизайнерами
+                .designers-contacts__contacts
+                  span.designers-contacts__tel 8 911 924-50-84
+                  span sv@green-land.ru
+
+                .contacts-btn
+                  |обратная связь
+
+            .designers-contacts__links
+              .designers-contacts__links-txt
+                |Написать в соц. сетях
+              .footer__socials
+                a.footer__socials-link(href="")
+                  +fbIcon
+                a.footer__socials-link(href="")
+                  +vkIcon
+                a.footer__socials-link(href="")
+                  +instIcon
+                a.footer__socials-link(href="")
+                  +houzzIcon
 
     include ../partials/_footer.pug
