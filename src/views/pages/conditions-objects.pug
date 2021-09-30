@@ -8,10 +8,10 @@ block content
 
     include ../partials/_header.pug
 
-    include ../components/_breadcrumbs.pug
-
     .section.brands
       .container
+        +breadcrumbs2('работа с нами', 'условия работы для объектов')
+
         h1.beta.about-title Условия работы для объектов
 
         .about-tabs
@@ -74,14 +74,17 @@ block content
               img(src="assets/images/objects-arrow.png", alt="")
           .designers-products-filter
             ul
+              li.filter-tab.active-tab Входные группы
               -
                 var items = [
-                  'Шоу-рум',
-                  'Упаковка продукции',
+                  'Атриумы',
+                  'Процесс производства',
+                  'Рестораны',
                 ]
               each item in items
-                li.designers-products-filter__item
+                li.filter-tab
                   |#{item}
+
           .projects__slider.swiper-container(data-projects-slider="")
             .swiper-wrapper
               .swiper-slide.projects__slide
@@ -155,7 +158,7 @@ block content
               input.designers-form__input(placeholder="E-mail")
 
             label.designers-form__label
-              textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос") 
+              textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос")
 
             label.designers-form__checkbox
               input(type="checkbox"  id="checkbox")

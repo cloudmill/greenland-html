@@ -8,10 +8,12 @@ block content
 
     include ../partials/_header.pug
 
-    include ../components/_breadcrumbs.pug
+    
 
     .section.brands
       .container
+        +breadcrumbs2('работа с нами', 'Для дистрибьютеров и оптовых покупателей')
+
         h1.beta.about-title Для дистрибьютеров и оптовых покупателей
 
         .about-tabs
@@ -44,6 +46,48 @@ block content
                     img(src=`assets/images/designer-offers-${index + 1}.png`, alt="")
                   |#{item}
 
+        .designers-benefits.distributor-benefits
+          .designers-benefits__table
+            ul
+              -
+                var items = [
+                  'Лучшие условия сотрудничества для торговых организаций',
+                  'Для нас важны партнёры от небольшого магазина до крупного дистрибьютора',
+                  'Каждый найдет свое уникальное предложение и только проверенный ассортимент',
+                ]
+
+              li.distributor-benefits-ttl
+                span.distributor-highlight Почему
+                |именно мы
+
+              each item, index in items
+                li
+                  .designers-benefits__img
+                    img(src=`assets/images/designer-benefits-${index + 1}.png`, alt="")
+                  .designers-benefits__txt
+                    .designers-benefits__ttl #{item}
+
+        .distributor-price
+          .distributor-price__ttl
+            h3 Мы помогаем 
+              span.accent развивать 
+              |ваш бизнес, 
+              span.accent обучая 
+              |персонал и 
+              span.accent оказывая 
+              |маркетинговую 
+              span.accent поддержку
+            +footerDownload('скачать прайс-лист', 'pdf, 2 мб')
+
+          .distributor-price__txt
+            p Предоставляем обучающие материалы для вас и ваших сотрудников.
+            p После регистрации вы получаете доступ к:
+            ul
+              li 
+                div Cтатьи
+              li
+                div Видео-курс по обучению
+
         .designers-products
           h2.mb60
             |Складская программа 
@@ -51,14 +95,16 @@ block content
             |для торговых организаций
           .designers-products-filter
             ul
+              li.filter-tab.active-tab
+                |De Roma
               -
                 var items = [
-                  'Классический',
-                  'Барокко',
-                  'Арт-деко',
+                  //- 'De Roma',
+                  'Teraplast',
+                  'Pottery Pots',
                 ]
               each item in items
-                li.designers-products-filter__item
+                li.filter-tab
                   |#{item}
             .designers-products__controls(data-catalog-slider-controls="")
               .arrows.cover__slider-arrows
@@ -124,14 +170,18 @@ block content
             |складе кашпо и горшков в РФ
           .designers-products-filter
             ul
-              -
-                var items = [
-                  'Шоу-рум',
-                  'Упаковка продукции',
-                ]
-              each item in items
-                li.designers-products-filter__item
-                  |#{item}
+              //- -
+              //-   var items = [
+              //-     'Шоу-рум',
+              //-     'Упаковка продукции',
+              //-   ]
+              //- each item in items
+              //-   li.designers-products-filter__item
+              //-     |#{item}
+
+              li.filter-tab.active-tab Шоу-рум
+              li.filter-tab Упаковка продукции
+
           .projects__slider.swiper-container(data-projects-slider="")
             .swiper-wrapper
               - for (i=0; i<3; i++)
@@ -181,7 +231,6 @@ block content
                   +houzzIcon
 
         .objects-form.distributor-form
-          //- .distributor-form__ttl-background
           .mission__slider-underlay
           h2
             |Вы комплексный поставщик
@@ -195,7 +244,7 @@ block content
               input.designers-form__input(placeholder="E-mail")
 
             label.designers-form__label
-              textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос") 
+              textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос")
 
             label.designers-form__checkbox
               input(type="checkbox"  id="checkbox")

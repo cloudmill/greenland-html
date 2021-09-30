@@ -8,10 +8,10 @@ block content
 
     include ../partials/_header.pug
 
-    include ../components/_breadcrumbs.pug
-
     .section.brands
       .container
+        +breadcrumbs2('работа с нами', 'Условия работы с дизайнерами')
+
         h1.beta.about-title Условия работы с дизайнерами
 
         .about-tabs
@@ -148,14 +148,16 @@ block content
             |из общего дизайна интерьера
           .designers-products-filter
             ul
+              li.filter-tab.active-tab
+                |Классический
               -
                 var items = [
-                  'Классический',
+                  //- 'Классический',
                   'Барокко',
                   'Арт-деко',
                 ]
               each item in items
-                li.designers-products-filter__item
+                li.filter-tab
                   |#{item}
 
             .designers-products__controls(data-catalog-slider-controls="")
@@ -199,14 +201,18 @@ block content
             span посмотреть товар перед заказом
           .designers-products-filter
             ul
-              -
-                var items = [
-                  'Шоу-рум',
-                  'Упаковка продукции',
-                ]
-              each item in items
-                li.designers-products-filter__item
-                  |#{item}
+              //- -
+              //-   var items = [
+              //-     'Шоу-рум',
+              //-     'Упаковка продукции',
+              //-   ]
+              //- each item in items
+              //-   li.designers-products-filter__item
+              //-     |#{item}
+
+              li.filter-tab.active-tab Шоу-рум
+              li.filter-tab Упаковка продукции
+              
           .projects__slider.swiper-container(data-projects-slider="")
             .swiper-wrapper
               - for (i=0; i<3; i++)

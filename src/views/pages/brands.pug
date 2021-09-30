@@ -8,10 +8,10 @@ block content
 
     include ../partials/_header.pug
 
-    include ../components/_breadcrumbs.pug
-
     .section.brands
       .container
+        +breadcrumbs('Бренды')
+
         h1.beta.about-title Бренды
 
         .about-tabs
@@ -20,19 +20,25 @@ block content
           a.about-tabs__item.about-tabs__item--active(href="") Бренды
 
         .brands-list
-          ul 
-            li.brands-list--active Serralunga
-            li Lechuza
-            li Abhika
-            li Teraplast
-            li San&nbsp;Rocco
-            li Anduze
-            li Deroma
-            li Pottery&nbsp;Pots
-            li Poterie&nbsp;De&nbsp;La&nbsp;Madeleine
-            li Laboratorio&nbsp;San&nbsp;Rocco
-            li ItalGarden
-            li Pokon
+          ul
+            li.filter-tab.active-tab Serralunga
+            -
+              var items = [
+                'Lechuza',
+                'Abhika',
+                'Teraplast',
+                'San Rocco',
+                'Anduze',
+                'Deroma',
+                'Pottery Pots',
+                'Poterie De La Madeleine',
+                'Laboratorio San Rocco',
+                'ItalGarden',
+                'Pokon',
+              ]
+            each item in items
+              li.filter-tab
+                |!{item}
 
         .brands-top
           .brands-top-logo
@@ -49,14 +55,27 @@ block content
             img(src="assets/images/brands-1.jpg", alt="")
             img(src="assets/images/brands-2.jpg", alt="")
 
-          .brands-pics-slider.swiper-container(data-brands-slider="")
-            .brands-pics-slider__controls
-              +arrow('black', '#CAE8D9', 'left', '15', '13', '41')(data-brands-slider-prev="")
-              +arrow('black', '#CAE8D9', 'right', '15', '13', '41')(data-brands-slider-next="")
+          //- .brands-pics-slider.swiper-container(data-brands-slider="")
+          //-   .brands-pics-slider__controls
+          //-     +arrow('black', '#CAE8D9', 'left', '15', '13', '41')(data-brands-slider-prev="")
+          //-     +arrow('black', '#CAE8D9', 'right', '15', '13', '41')(data-brands-slider-next="")
+          //-   .swiper-wrapper
+          //-     - for (let i=2; i<5; i++)
+          //-       .swiper-slide
+          //-         img(src=`assets/images/brands-${i + 1}.jpg`, alt="")
+
+          .projects__slider.swiper-container(data-projects-slider="")
             .swiper-wrapper
-              - for (let i=2; i<5; i++)
-                .swiper-slide
-                  img(src=`assets/images/brands-${i + 1}.jpg`, alt="")
+              - for (i=2; i<5; i++)
+                .swiper-slide.projects__slide
+                  .projects__item
+                    .projects__item-slider(data-fade-item-slider="")
+                      .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                        img.projects__item-img.is-active(src=`assets/images/brands-${i + 1}.jpg`, alt="", data-fade-item-slider-item="")
+              
+            .projects__slider-controls
+              +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+              +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
 
           .brands-pics-txt
             .brands-pics-txt__col

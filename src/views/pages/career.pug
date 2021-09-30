@@ -1,0 +1,97 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    .section.brands
+      .container
+        +breadcrumbs('Карьера')
+
+        h1.beta.about-title Карьера
+        
+        .career-titles
+          .career-row
+            img.career-row__img(src="assets/images/career-1.jpg", alt="")
+            .career-row__txt
+              |Green Land — 
+              span.accent команда идейных людей, 
+              |транслирующих ценность озеленения пространства, живущих в 
+              span.accent гармонии с собой 
+              |и реализующих 
+              span.accent дело жизни.
+          .career-row
+            
+            .career-row__txt
+              |Green Land — 
+              span.accent команда идейных людей, 
+              |транслирующих ценность озеленения пространства, живущих в 
+              span.accent гармонии с собой 
+              |и реализующих 
+              span.accent дело жизни.
+
+            img.career-row__img(src="assets/images/career-2.jpg", alt="")
+
+          .career-row
+            img.career-row__img(src="assets/images/career-3.jpg", alt="")
+            .career-row__txt
+              |Green Land — 
+              span.accent команда идейных людей, 
+              |транслирующих ценность озеленения пространства, живущих в 
+              span.accent гармонии с собой 
+              |и реализующих 
+              span.accent дело жизни.
+
+        .career-requirement
+          h2.career-requirement__title Наш сотрудник
+          .career-requirement__list
+            ul
+              li Активный
+              li Инициативный
+              li Действует быстро
+              li Несет
+                br
+                |ответственность
+              li Предлагает идеи
+              li Не ждет, а действует
+
+        .career-vacancies
+          h2 Вакансии
+
+        .designers-contacts
+          .designers-contacts__row
+            .designers-contacts__card
+              .designers-contacts__img
+                img(src="assets/images/designer-contacts-1.png", alt="")
+              .designers-contacts__desc
+                h4.designers-contacts__name Шабала Виктория
+                .designers-contacts__position Менеджер по работе с дизайнерами
+                .designers-contacts__contacts
+                  span.designers-contacts__tel 8 911 924-50-84
+                  span sv@green-land.ru
+
+                .contacts-btn
+                  |обратная связь
+
+        form.designers-form__form
+          label.designers-form__label
+            input.designers-form__input(placeholder="Имя")
+          label.designers-form__label
+            input.designers-form__input(placeholder="E-mail")
+          label.designers-form__label
+            input.designers-form__input(placeholder="Телефон")
+          label.designers-form__label
+            textarea.designers-form__input(name="" cols="30" rows="3" placeholder="Немного о себе")
+          label.designers-form__checkbox
+            input(type="checkbox"  id="checkbox")
+            .checkbox
+            .designers-form__checkbox-txt Я соглашаюсь на обработку
+              br
+              a(href="") персональных данных
+          button.btn.cover__btn(type="submit") отправить
+
+    include ../partials/_footer.pug

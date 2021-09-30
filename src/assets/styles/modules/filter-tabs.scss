@@ -1,0 +1,35 @@
+.brands-list {
+  margin-top: 40px;
+
+  ul {
+    display: flex;
+
+    overflow-x: scroll;
+  }
+}
+
+.filter-tab {
+  padding: 12px 15px;
+  border: 1px solid $green-extra-lighten;
+  border-radius: 50px;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  &:not(:first-child) {
+    margin-left: 20px;
+  }
+}
+
+.active-tab {
+  color: #fff;
+  background-color: $green;
+  border: 1px solid $green;
+}

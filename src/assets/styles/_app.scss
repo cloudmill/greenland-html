@@ -91,16 +91,16 @@ $debug-mode:                   false!default;
 @import "helpers/*";
 
 // Plugins
-@import "vendors/index";
+@import "vendors/*";
 
 // Base
-@import "base/index";
+@import "base/*";
 
 // Modules
 @import "modules/*";
 
 // Partials
-@import "partials/index";
+@import "partials/*";
 
 // Pages
 @import "pages/*";
