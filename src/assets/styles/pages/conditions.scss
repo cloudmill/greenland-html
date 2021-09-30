@@ -1,3 +1,5 @@
+// designers page
+
 .designers-brands {
   margin-top: 120px;
 
@@ -46,7 +48,6 @@
   margin-top: 160px;
 
   &__title {
-    // margin-bottom: 60px;
     width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
   }
 
@@ -123,8 +124,6 @@
   }
 }
 
-
-
 .designers-products {
   margin-top: 160px;
   &__title {
@@ -144,20 +143,6 @@
     ul {
       display: flex;
     }
-    // &__item {
-    //   padding: 8px 15px 12px;
-    //   border-radius: 50px;
-    //   border: 1px solid $green-extra-lighten;
-
-    //   &.is-active {
-    //     background-color: $green;
-    //     border-color: $green;
-    //     color: #fff;
-    //   }
-    // }
-    // li:not(:first-child) {
-    //   margin-left: 20px;
-    // }
   }
   &__controls {
     width: 110px;
@@ -169,8 +154,6 @@
 
 .designers-products__catalog {
   display: flex;
-
-  // border: 1px solid $green-extra-lighten;
 }
 
 .catalog-card {
@@ -377,4 +360,187 @@
   // display: flex;
   // align-items: center;
   // justify-content: center;
+}
+
+// objects page
+
+.objects-form {
+  margin-top: 160px;
+
+  h2 {
+    margin-bottom: 80px;
+  }
+}
+
+.ojects-projects-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+
+  &__title {
+    width: calc(#{$col-part-d} * 8);
+  }
+  &__link {
+    font-weight: 600;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+
+    img {
+      margin-left: 10px;
+    }
+  }
+}
+
+// destributor page
+
+.distributor-desc {
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
+
+  &__ttl {
+    width: calc(#{$col-part-d} * 7);
+
+    span {
+      font-family: $base-font-family-serif;
+    }
+  }
+  &__txt {
+    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    font-size: 20px;
+    line-height: 160%;
+  }
+}
+
+.distributor-offers {
+  margin-top: 80px;
+}
+
+.distributor-benefits {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $green;
+
+  ul {
+    margin: 0;
+  }
+}
+
+.distributor-highlight {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &::before {
+    content: url('assets/images/new-highlights/distributor-highlight.png');
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+  }
+}
+
+.distributor-price {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+
+  &__ttl {
+    width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+
+    h3 {
+      text-indent: calc(#{$col-part-d});
+      margin: 0;
+    }
+  }
+  .footer__download {
+    margin-top: 40px;
+    color: #0F2C2D;
+    border-color: #CAE8D9;
+  }
+  .footer__download-icon-wrap {
+    border-color: #CAE8D9;
+  }
+  &__txt {
+    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+
+    p {
+      font-family: $base-font-family-serif;
+      font-size: 20px;
+      line-height: 130%;
+    }
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 46px;
+    }
+    li::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: $green;
+      margin-left: -46px;
+    }
+  }
+}
+
+.designers-benefits__table .distributor-benefits-ttl {
+  font-family: $base-font-family-serif;
+  font-size: 70px;
+  line-height: 100%;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  border-top: none;
+}
+
+.distributor-brands {
+  margin-top: 160px;
+
+  &__top {
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .designers-brands__list ul {
+    justify-content: flex-start;
+  }
+
+  .designers-brands__list li {
+    width: auto;
+  }
+}
+
+.distributor-contacts {
+  .designers-contacts__links {
+    padding-left: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+  }
+}
+
+.distributor-form {
+  background-color: #DEF5EA;
+  padding: 100px 96px;
+  border-radius: 0px 20px;
+
+  position: relative;
+
+  .mission__slider-underlay {
+    width: calc(#{$col-part-d} * 6);
+
+    &::before {
+      top: 20px;
+      right: 0;
+      bottom: 20px;
+      left: 20px;
+    }
+  }
+
+  h2 {
+    position: relative;
+    z-index: 1;
+  }
 }

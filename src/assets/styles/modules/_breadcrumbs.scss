@@ -2,29 +2,37 @@
 // Modules -> Breadcrumbs
 // --------------------------------------------------
 
-@if $use-breadcrumb == true {
-  .breadcrumbs {
-    padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
-    margin-bottom: $line-height-computed;
-    list-style: none;
-    background-color: $breadcrumb-bg;
+.breadcrumbs {
+  display: flex;
 
-    &__item {
-      display: inline-block;
-      & + & {
-        &:before {
-          content: "#{$breadcrumb-separator}";
-          padding: 0 5px;
-          color: $breadcrumb-color;
-        }
-      }
+  margin-bottom: 80px;
 
-      &.active {
-        color: $breadcrumb-active-color;
-      }
-    }
-    &__link {
-      color: $breadcrumb-color;
+  &__item {
+    margin-left: 10px;
+
+    display: flex;
+    align-items: center;
+  }
+  &__item::before{
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: $green;
+    margin-right: 10px;
+  }
+  &__link {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 100%;
+  }
+
+  &__main {
+    .breadcrumbs__link {
+      font-family: $base-font-family-serif;
+      // font-style: italic;
+      // line-height: 90%;
     }
   }
 }
