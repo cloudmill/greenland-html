@@ -144,23 +144,20 @@
     ul {
       display: flex;
     }
-    &__item {
-      padding: 8px 15px 12px;
-      border-radius: 50px;
-      border: 1px solid $green-extra-lighten;
+    // &__item {
+    //   padding: 8px 15px 12px;
+    //   border-radius: 50px;
+    //   border: 1px solid $green-extra-lighten;
 
-      &.is-active {
-        background-color: $green;
-        border-color: $green;
-        color: #fff;
-      }
-    }
-    // li {
-      
+    //   &.is-active {
+    //     background-color: $green;
+    //     border-color: $green;
+    //     color: #fff;
+    //   }
     // }
-    li:not(:first-child) {
-      margin-left: 20px;
-    }
+    // li:not(:first-child) {
+    //   margin-left: 20px;
+    // }
   }
   &__controls {
     width: 110px;

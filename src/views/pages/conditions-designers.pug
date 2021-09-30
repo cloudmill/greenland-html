@@ -148,7 +148,7 @@ block content
             |из общего дизайна интерьера
           .designers-products-filter
             ul
-              li.designers-products-filter__item.is-active
+              li.filter-tab.active-tab
                 |Классический
               -
                 var items = [
@@ -157,7 +157,7 @@ block content
                   'Арт-деко',
                 ]
               each item in items
-                li.designers-products-filter__item
+                li.filter-tab
                   |#{item}
 
             .designers-products__controls(data-catalog-slider-controls="")
@@ -201,14 +201,18 @@ block content
             span посмотреть товар перед заказом
           .designers-products-filter
             ul
-              -
-                var items = [
-                  'Шоу-рум',
-                  'Упаковка продукции',
-                ]
-              each item in items
-                li.designers-products-filter__item
-                  |#{item}
+              //- -
+              //-   var items = [
+              //-     'Шоу-рум',
+              //-     'Упаковка продукции',
+              //-   ]
+              //- each item in items
+              //-   li.designers-products-filter__item
+              //-     |#{item}
+
+              li.filter-tab.active-tab Шоу-рум
+              li.filter-tab Упаковка продукции
+              
           .projects__slider.swiper-container(data-projects-slider="")
             .swiper-wrapper
               - for (i=0; i<3; i++)

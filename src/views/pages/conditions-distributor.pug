@@ -93,7 +93,7 @@ block content
             |для торговых организаций
           .designers-products-filter
             ul
-              li.designers-products-filter__item.is-active
+              li.filter-tab.active-tab
                 |De Roma
               -
                 var items = [
@@ -102,7 +102,7 @@ block content
                   'Pottery Pots',
                 ]
               each item in items
-                li.designers-products-filter__item
+                li.filter-tab
                   |#{item}
             .designers-products__controls(data-catalog-slider-controls="")
               .arrows.cover__slider-arrows
@@ -168,14 +168,18 @@ block content
             |складе кашпо и горшков в РФ
           .designers-products-filter
             ul
-              -
-                var items = [
-                  'Шоу-рум',
-                  'Упаковка продукции',
-                ]
-              each item in items
-                li.designers-products-filter__item
-                  |#{item}
+              //- -
+              //-   var items = [
+              //-     'Шоу-рум',
+              //-     'Упаковка продукции',
+              //-   ]
+              //- each item in items
+              //-   li.designers-products-filter__item
+              //-     |#{item}
+
+              li.filter-tab.active-tab Шоу-рум
+              li.filter-tab Упаковка продукции
+
           .projects__slider.swiper-container(data-projects-slider="")
             .swiper-wrapper
               - for (i=0; i<3; i++)
@@ -238,7 +242,7 @@ block content
               input.designers-form__input(placeholder="E-mail")
 
             label.designers-form__label
-              textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос") 
+              textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос")
 
             label.designers-form__checkbox
               input(type="checkbox"  id="checkbox")
