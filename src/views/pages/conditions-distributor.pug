@@ -44,6 +44,48 @@ block content
                     img(src=`assets/images/designer-offers-${index + 1}.png`, alt="")
                   |#{item}
 
+        .designers-benefits.distributor-benefits
+          .designers-benefits__table
+            ul
+              -
+                var items = [
+                  'Лучшие условия сотрудничества для торговых организаций',
+                  'Для нас важны партнёры от небольшого магазина до крупного дистрибьютора',
+                  'Каждый найдет свое уникальное предложение и только проверенный ассортимент',
+                ]
+
+              li.distributor-benefits-ttl
+                span.distributor-highlight Почему
+                |именно мы
+
+              each item, index in items
+                li
+                  .designers-benefits__img
+                    img(src=`assets/images/designer-benefits-${index + 1}.png`, alt="")
+                  .designers-benefits__txt
+                    .designers-benefits__ttl #{item}
+
+        .distributor-price
+          .distributor-price__ttl
+            h3 Мы помогаем 
+              span.accent развивать 
+              |ваш бизнес, 
+              span.accent обучая 
+              |персонал и 
+              span.accent оказывая 
+              |маркетинговую 
+              span.accent поддержку
+            +footerDownload('скачать прайс-лист', 'pdf, 2 мб')
+
+          .distributor-price__txt
+            p Предоставляем обучающие материалы для вас и ваших сотрудников.
+            p После регистрации вы получаете доступ к:
+            ul
+              li 
+                div Cтатьи
+              li
+                div Видео-курс по обучению
+
         .designers-products
           h2.mb60
             |Складская программа 
@@ -181,7 +223,6 @@ block content
                   +houzzIcon
 
         .objects-form.distributor-form
-          //- .distributor-form__ttl-background
           .mission__slider-underlay
           h2
             |Вы комплексный поставщик

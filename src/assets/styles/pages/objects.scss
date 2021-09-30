@@ -50,6 +50,85 @@
   margin-top: 80px;
 }
 
+.distributor-benefits {
+  padding-bottom: 20px;
+  border-bottom: 1px solid $green;
+
+  ul {
+    margin: 0;
+  }
+}
+
+.distributor-highlight {
+  position: relative;
+  display: flex;
+  justify-content: center;
+
+  &::before {
+    content: url('assets/images/new-highlights/distributor-highlight.png');
+    position: absolute;
+    z-index: -1;
+    top: 5px;
+  }
+}
+
+.distributor-price {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+
+  &__ttl {
+    width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+
+    h3 {
+      text-indent: calc(#{$col-part-d});
+      margin: 0;
+    }
+  }
+  .footer__download {
+    margin-top: 40px;
+    color: #0F2C2D;
+    border-color: #CAE8D9;
+  }
+  .footer__download-icon-wrap {
+    border-color: #CAE8D9;
+  }
+  &__txt {
+    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+
+    p {
+      font-family: $base-font-family-serif;
+      font-size: 20px;
+      line-height: 130%;
+    }
+    li {
+      position: relative;
+      display: flex;
+      align-items: center;
+      padding-left: 46px;
+    }
+    li::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background-color: $green;
+      margin-left: -46px;
+    }
+  }
+}
+
+.designers-benefits__table .distributor-benefits-ttl {
+  font-family: $base-font-family-serif;
+  font-size: 70px;
+  line-height: 100%;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  border-top: none;
+}
+
 .distributor-brands {
   margin-top: 160px;
 
