@@ -6,7 +6,7 @@ export default function initCatalogSlider() {
   const $catalogSlider = document.querySelector('[data-catalog-slider]');
   const $catalogSliderControls = document.querySelector('[data-catalog-slider-controls]');
 
-  console.log('yo1');
+  // console.log('yo1');
 
   const catalogSlider = new Swiper($catalogSlider, {
     slidesPerView: 'auto',
@@ -19,7 +19,7 @@ export default function initCatalogSlider() {
 
     
   });
-  console.log('yo2');
+  // console.log('yo2');
   window.sliders.push(catalogSlider);
 
 }

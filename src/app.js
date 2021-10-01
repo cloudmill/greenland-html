@@ -13,6 +13,8 @@ import initBrandsSlider from './assets/scripts/brands-slider';
 import initCatalogSlider from './assets/scripts/catalog-slider';
 import initBrandsLogosSlider from './assets/scripts/brands-logos-slider';
 
+import './assets/scripts/spoiler';
+
 import LocomotiveScroll from 'locomotive-scroll';
 
 import Swiper, {Navigation, Pagination, Mousewheel} from 'swiper';

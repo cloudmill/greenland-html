@@ -48,3 +48,139 @@
     }
   }
 }
+
+.career-vacancies {
+  margin-top: 160px;
+}
+
+.career-spoilers {
+  padding: 0 calc(#{$col-part-d} * 2);
+  margin-top: 80px;
+}
+
+.spoiler {
+  border: 1px solid #CAE8D9;
+  transition: .5s;
+
+  &:not(:first-child) {
+    border-top: transparent;
+    margin-top: -1px;
+  }
+
+  &__button {
+    display: flex;
+    cursor: pointer;
+
+    &-inner {
+      display: flex;
+      padding: 40px 0 40px 20px;
+
+      width: calc(100% - 102px);
+    }
+  }
+  &__title {
+    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    font-size: 18px;
+    line-height: 120%;
+  }
+  &__city {
+    width: calc(#{$col-part-d} * 2);
+    font-family: $base-font-family-serif;
+    font-size: 16px;
+    line-height: 130%;
+  }
+  &__salary {
+    font-family: $base-font-family-serif;
+    font-size: 16px;
+    line-height: 130%;
+  }
+  &__close {
+    width: 102px;
+    height: 102px;
+    border-left: 1px solid #CAE8D9;
+    border-bottom: 1px solid transparent;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .5s;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: $black;
+
+      transition: .5s;
+    }
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  &__dropdown {
+    display: none;
+    &-inner {
+      padding: 40px 20px 60px;
+    }
+  }
+  &__desc {
+    border-bottom: 1px solid $green;
+
+    &-block {
+      display: flex;
+      margin-bottom: 60px;
+    }
+    &-ttl {
+      width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+      text-transform: uppercase;
+    }
+    &-list {
+      li {
+        display: flex;
+        align-items: center;
+      }
+      li:before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: $green;
+        margin-right: 40px;
+      }
+      li:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+  }
+  &__contact {
+    padding: 60px calc(#{$col-part-d} - #{$col-gap-d}) 0 calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: calc(#{$col-part-d} * 3);
+    } 
+  }
+}
+
+.spoiler.spoiler--active {
+  border-color: $green;
+  border-top: 1px solid $green;
+  .spoiler__close {
+    border-bottom: 1px solid $green;
+    border-left: 1px solid $green;
+
+    &::before {
+      background-color: $green;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      background-color: $green;
+      transform: rotate(135deg);
+    }
+  }
+}
