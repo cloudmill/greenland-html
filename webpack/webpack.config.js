@@ -224,12 +224,12 @@ module.exports = env => {
 				preserve_newlines: true
 			}),
 
-			// new webpack.ProvidePlugin({
-			// 	$: 'jquery',
-			// 	jQuery: 'jquery',
-			// 	'window.$': 'jquery',
-			// 	'window.jQuery': 'jquery'
-			// }),
+			new webpack.ProvidePlugin({
+				$: 'jquery',
+				jQuery: 'jquery',
+				'window.$': 'jquery',
+				'window.jQuery': 'jquery'
+			}),
 
 			new WebpackNotifierPlugin({
 				title: 'Noob__ui',

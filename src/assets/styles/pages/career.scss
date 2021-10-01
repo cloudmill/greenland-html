@@ -45,6 +45,233 @@
       font-size: 78px;
       line-height: 130%;
       text-transform: uppercase;
+
+      position: relative;
     }
+    .highlight-1::after {
+      content: url('assets/images/new-highlights/career/highlight-1.png');
+      position: absolute;
+      z-index: -1;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+    }
+    .highlight-2::after {
+      content: url('assets/images/new-highlights/career/highlight-2.png');
+      position: absolute;
+      z-index: -1;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+    }
+    .highlight-3::after {
+      content: url('assets/images/new-highlights/career/highlight-3.png');
+      position: absolute;
+      z-index: -1;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+    }
+    .highlight-4::after {
+      content: url('assets/images/new-highlights/career/highlight-4.png');
+      position: absolute;
+      z-index: -1;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+    }
+    .highlight-5::after {
+      content: url('assets/images/new-highlights/career/highlight-5.png');
+      position: absolute;
+      z-index: -1;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+    }
+    .highlight-6::after {
+      content: url('assets/images/new-highlights/career/highlight-6.png');
+      position: absolute;
+      z-index: -1;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+.career-vacancies {
+  margin-top: 160px;
+}
+
+.career-spoilers {
+  padding: 0 calc(#{$col-part-d} * 2);
+  margin-top: 80px;
+}
+
+.spoiler {
+  border: 1px solid #CAE8D9;
+  transition: .5s;
+
+  &:not(:first-child) {
+    border-top: transparent;
+    margin-top: -1px;
+  }
+
+  &__button {
+    display: flex;
+    cursor: pointer;
+
+    &-inner {
+      display: flex;
+      padding: 40px 0 40px 20px;
+
+      width: calc(100% - 102px);
+    }
+  }
+  &__title {
+    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    font-size: 18px;
+    line-height: 120%;
+  }
+  &__city {
+    width: calc(#{$col-part-d} * 2);
+    font-family: $base-font-family-serif;
+    font-size: 16px;
+    line-height: 130%;
+  }
+  &__salary {
+    font-family: $base-font-family-serif;
+    font-size: 16px;
+    line-height: 130%;
+  }
+  &__close {
+    width: 102px;
+    height: 102px;
+    border-left: 1px solid #CAE8D9;
+    border-bottom: 1px solid transparent;
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .5s;
+
+    &::before, &::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 2px;
+      background-color: $black;
+
+      transition: .5s;
+    }
+    &::after {
+      transform: rotate(90deg);
+    }
+  }
+  &__dropdown {
+    display: none;
+    &-inner {
+      padding: 40px 20px 60px;
+    }
+  }
+  &__desc {
+    border-bottom: 1px solid $green;
+
+    &-block {
+      display: flex;
+      margin-bottom: 60px;
+    }
+    &-ttl {
+      width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+      text-transform: uppercase;
+    }
+    &-list {
+      li {
+        display: flex;
+        align-items: center;
+      }
+      li:before {
+        content: '';
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: $green;
+        margin-right: 40px;
+      }
+      li:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+  }
+  &__contact {
+    padding: 60px calc(#{$col-part-d} - #{$col-gap-d}) 0 calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      width: calc(#{$col-part-d} * 3);
+    } 
+  }
+}
+
+.spoiler.spoiler--active {
+  border-color: $green;
+  border-top: 1px solid $green;
+  .spoiler__close {
+    border-bottom: 1px solid $green;
+    border-left: 1px solid $green;
+
+    &::before {
+      background-color: $green;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      background-color: $green;
+      transform: rotate(135deg);
+    }
+  }
+}
+
+.career-contacts-txt {
+  font-size: 36px;
+  line-height: 120%;
+  width: calc(#{$col-part-d} * 6);
+  margin-right: calc(#{$col-part-d});
+}
+.designers-contacts__card.career-contacts-card {
+  width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
+}
+
+.career-form {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.career-hh {
+  margin-top: 44px;
+  width: calc(#{$col-part-d} * 8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  border-top: 1px solid $green;
+  border-bottom: 1px solid #CAE8D9;
+
+  &__link {
+    font-size: 40px;
+    line-height: 120%;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+
+  img {
+    position: absolute;
+    z-index: -1;
   }
 }
