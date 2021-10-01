@@ -45,6 +45,56 @@
       font-size: 78px;
       line-height: 130%;
       text-transform: uppercase;
+
+      position: relative;
+    }
+    .highlight-1::after {
+      content: url('assets/images/new-highlights/career/highlight-1.png');
+      position: absolute;
+      z-index: -1;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+    }
+    .highlight-2::after {
+      content: url('assets/images/new-highlights/career/highlight-2.png');
+      position: absolute;
+      z-index: -1;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+    }
+    .highlight-3::after {
+      content: url('assets/images/new-highlights/career/highlight-3.png');
+      position: absolute;
+      z-index: -1;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+    }
+    .highlight-4::after {
+      content: url('assets/images/new-highlights/career/highlight-4.png');
+      position: absolute;
+      z-index: -1;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+    }
+    .highlight-5::after {
+      content: url('assets/images/new-highlights/career/highlight-5.png');
+      position: absolute;
+      z-index: -1;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+    }
+    .highlight-6::after {
+      content: url('assets/images/new-highlights/career/highlight-6.png');
+      position: absolute;
+      z-index: -1;
+      bottom: -15px;
+      left: 0;
+      right: 0;
     }
   }
 }
@@ -182,5 +232,46 @@
       background-color: $green;
       transform: rotate(135deg);
     }
+  }
+}
+
+.career-contacts-txt {
+  font-size: 36px;
+  line-height: 120%;
+  width: calc(#{$col-part-d} * 6);
+  margin-right: calc(#{$col-part-d});
+}
+.designers-contacts__card.career-contacts-card {
+  width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
+}
+
+.career-form {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.career-hh {
+  margin-top: 44px;
+  width: calc(#{$col-part-d} * 8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  border-top: 1px solid $green;
+  border-bottom: 1px solid #CAE8D9;
+
+  &__link {
+    font-size: 40px;
+    line-height: 120%;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+
+  img {
+    position: absolute;
+    z-index: -1;
   }
 }
