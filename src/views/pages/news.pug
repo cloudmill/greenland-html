@@ -1,0 +1,75 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    .section.brands
+      .container
+        +breadcrumbs('Новости')
+
+        h1.beta.about-title Новости
+
+        .brands-list.news-filter
+          ul
+            li.filter-tab.active-tab Компания
+            -
+              var items = [
+                //- 'Компания',
+                'Клиентам',
+                'Продукция',
+              ]
+            each item in items
+              li.filter-tab
+                |!{item}
+
+        .news-cols
+          .news-col-links
+            .news-social
+              .news-social__title
+                span Следите 
+                |за нами
+              ul.news-social__list
+                li
+                  a(href="") facebook
+                li
+                  a(href="") instagram
+                li
+                  a(href="") pinterest
+                li
+                  a(href="") houzz
+                li
+                  a(href="") наш блог
+
+            .news-subscribe
+              .news-social__title
+                span Подпишитесь 
+                |на нашу
+                br
+                |рассылку
+              form.designers-form__form
+                label.designers-form__label
+                  input.designers-form__input(placeholder="E-mail")
+                label.designers-form__checkbox
+                  input(type="checkbox"  id="checkbox")
+                  .checkbox
+                  .designers-form__checkbox-txt Я соглашаюсь на обработку
+                    br
+                    a(href="") персональных данных
+                button.btn.cover__btn(type="submit") отправить
+          .news-col-main
+            a.news-card(href="")
+              .news-card__date 18 ноября 2020
+              .news-card__title В Green Land сегодня праздник
+              img(src="assets/images/news-1.jpg", alt="")
+              ul.news-card__tags
+                li.news-card__tag #компания
+                li.news-card__tag #продукция
+              .news-card__desc
+                |Не тратьте время на поиск 3D-моделей товаров нашей линейки и ассортиментной матрицы Green Land.
+
+    include ../partials/_footer.pug
