@@ -1,0 +1,18 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    .section.brands
+      .container
+        +breadcrumbs('Новости')
+
+        h1.beta.about-title Новости
+
+    
+    include ../partials/_footer.pug
