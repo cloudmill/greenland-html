@@ -12,6 +12,7 @@ import initFadeSliders from './assets/scripts/fade-slider';
 import initBrandsSlider from './assets/scripts/brands-slider';
 import initCatalogSlider from './assets/scripts/catalog-slider';
 import initBrandsLogosSlider from './assets/scripts/brands-logos-slider';
+import initOtherSlider from './assets/scripts/other-news-slider';
 
 import './assets/scripts/spoiler';
 
@@ -57,7 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
 		initBrandsLogosSlider();
 	} catch {}
 
-	
+	try {
+		initOtherSlider();
+	} catch {}
 
 	// new FullPage();
 
