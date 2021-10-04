@@ -11,10 +11,6 @@
   width: calc(#{$col-part-d} * 4);
 }
 
-.news-col-main {
-  width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
-}
-
 .news-social {
   &__title {
     font-size: 24px;
@@ -49,10 +45,22 @@
   }
 }
 
+.news-col-main {
+  width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
+}
+
+.news-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .news-card {
   width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
   border-top: 1px solid $green;
   display: block;
+
+  margin-bottom: 80px;
 
   &__date {
     margin-top: 10px;
@@ -84,5 +92,91 @@
     width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
     font-size: 13px;
     line-height: 160%;
+  }
+}
+
+.news-card--small {
+  width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+}
+
+.news-blockquote {
+  width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+  padding: 125px 0 170px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 20px;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  span {
+    font-family: $base-font-family-serif;
+    text-transform: lowercase;
+  }
+
+  position: relative;
+
+  .mission__slider-underlay {
+    width: 100%;
+
+    &::before {
+      top: 125px;
+      left: 0;
+      right: 0;
+      bottom: 170px;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &-list {
+    display: flex;
+  }
+
+  &__item {
+    width: 46px;
+    height: 46px;
+    font-size: 14px;
+    line-height: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:not(:first-child) {
+      margin-left: 12px;
+    }
+
+    &.is-active {
+      border-radius: 0px 10px;
+      border: 1px solid $green-extra-lighten;
+    }
+  }
+  &__dots {
+    font-size: 14px;
+    line-height: 16px;
+    margin-left: 12px;
+  }
+
+  &-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 102px;
+    margin-left: 70px;
+
+    .arrow {
+      background-color: #CAE8D9;
+    }
+    .arrow-active {
+      background-color: #65BA7F;
+    }
   }
 }

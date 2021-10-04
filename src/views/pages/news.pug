@@ -34,16 +34,17 @@ block content
                 span Следите 
                 |за нами
               ul.news-social__list
-                li
-                  a(href="") facebook
-                li
-                  a(href="") instagram
-                li
-                  a(href="") pinterest
-                li
-                  a(href="") houzz
-                li
-                  a(href="") наш блог
+                -
+                  var items = [
+                    'facebook',
+                    'instagram',
+                    'pinterest',
+                    'houzz',
+                    'наш блог',
+                  ]
+                each item in items
+                  li
+                    a(href="") #{item}
 
             .news-subscribe
               .news-social__title
@@ -62,14 +63,98 @@ block content
                     a(href="") персональных данных
                 button.btn.cover__btn(type="submit") отправить
           .news-col-main
-            a.news-card(href="")
-              .news-card__date 18 ноября 2020
-              .news-card__title В Green Land сегодня праздник
-              img(src="assets/images/news-1.jpg", alt="")
-              ul.news-card__tags
-                li.news-card__tag #компания
-                li.news-card__tag #продукция
-              .news-card__desc
-                |Не тратьте время на поиск 3D-моделей товаров нашей линейки и ассортиментной матрицы Green Land.
+
+            .news-list
+
+              a.news-card.news-card--small(href="")
+                .news-card__date 18 ноября 2020
+                .news-card__title Наши 3D-модели для ваших проектов
+                img(src="assets/images/news-1.jpg", alt="")
+                ul.news-card__tags
+                  li.news-card__tag #компания
+                  li.news-card__tag #продукция
+                .news-card__desc
+                  |Не тратьте время на поиск 3D-моделей товаров нашей линейки и ассортиментной матрицы Green Land.
+
+              a.news-card(href="")
+                .news-card__date 18 ноября 2020
+                .news-card__title В Green Land сегодня праздник
+                img(src="assets/images/news-1.jpg", alt="")
+                ul.news-card__tags
+                  li.news-card__tag #компания
+                  li.news-card__tag #продукция
+                .news-card__desc
+                  |Не тратьте время на поиск 3D-моделей товаров нашей линейки и ассортиментной матрицы Green Land.
+
+              a.news-card(href="")
+                .news-card__date 18 ноября 2020
+                .news-card__title В Green Land сегодня праздник
+                img(src="assets/images/news-1.jpg", alt="")
+                ul.news-card__tags
+                  li.news-card__tag #компания
+                  li.news-card__tag #продукция
+                .news-card__desc
+                  |Не тратьте время на поиск 3D-моделей товаров нашей линейки и ассортиментной матрицы Green Land.
+
+              .news-blockquote
+                .mission__slider-underlay
+                |Мы раскрываем 
+                br
+                |потенциал 
+                br
+                |пространства через 
+                span красоту, творчество и созидание.
+
+              a.news-card(href="")
+                .news-card__date 18 ноября 2020
+                .news-card__title В Green Land сегодня праздник
+                img(src="assets/images/news-1.jpg", alt="")
+                ul.news-card__tags
+                  li.news-card__tag #компания
+                  li.news-card__tag #продукция
+                .news-card__desc
+                  |Не тратьте время на поиск 3D-моделей товаров нашей линейки и ассортиментной матрицы Green Land.
+
+              a.news-card.news-card--small(href="")
+                .news-card__date 18 ноября 2020
+                .news-card__title Наши 3D-модели для ваших проектов
+                img(src="assets/images/news-1.jpg", alt="")
+                ul.news-card__tags
+                  li.news-card__tag #компания
+                  li.news-card__tag #продукция
+                .news-card__desc
+                  |Не тратьте время на поиск 3D-моделей товаров нашей линейки и ассортиментной матрицы Green Land.
+
+              .news-blockquote
+                .mission__slider-underlay
+                |Мы раскрываем 
+                br
+                |потенциал 
+                br
+                |пространства через 
+                span красоту, творчество и созидание.
+
+              a.news-card(href="")
+                .news-card__date 18 ноября 2020
+                .news-card__title В Green Land сегодня праздник
+                img(src="assets/images/news-1.jpg", alt="")
+                ul.news-card__tags
+                  li.news-card__tag #компания
+                  li.news-card__tag #продукция
+                .news-card__desc
+                  |Не тратьте время на поиск 3D-моделей товаров нашей линейки и ассортиментной матрицы Green Land.
+
+            .pagination
+              .pagination-list
+                button.pagination__item.is-active 1
+                button.pagination__item 2
+                button.pagination__item 3
+                button.pagination__item 4
+                button.pagination__dots ...
+                button.pagination__item 12
+
+              .pagination-controls
+                +arrow('white', '#CAE8D9', 'left', '15', '13', '46')
+                +arrow('white', '#65BA7F', 'right', '15', '13', '46').arrow-active
 
     include ../partials/_footer.pug
