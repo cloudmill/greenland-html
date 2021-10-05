@@ -1,0 +1,74 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    .section.brands
+      .container
+        +breadcrumbs('Блог')
+
+        h1.beta.about-title Блог
+
+        .brands-list.news-filter
+          ul
+            li.filter-tab.active-tab Все
+            -
+              var items = [
+                'Уход за растенями',
+                'Процесс производства',
+                'Полезно знать',
+                'Озеленение и зимостойкость',
+                'Обрезка деревьев и кустарников',
+                'Ландшафтный дизайн',
+                'Советы дизайнерам',
+                'Советы садоводам',
+                'Полезное',
+              ]
+            each item in items
+              li.filter-tab
+                |!{item}
+
+        .news-cols
+          .news-col-links
+            .news-social
+              .news-social__title
+                span Следите 
+                |за нами
+              ul.news-social__list
+                -
+                  var items = [
+                    'facebook',
+                    'instagram',
+                    'pinterest',
+                    'houzz',
+                    'наш блог',
+                  ]
+                each item in items
+                  li
+                    a(href="") #{item}
+
+            .news-subscribe
+              .news-social__title
+                span Подпишитесь 
+                |на нашу
+                br
+                |рассылку
+              form.designers-form__form
+                label.designers-form__label
+                  input.designers-form__input(placeholder="E-mail")
+                label.designers-form__checkbox
+                  input(type="checkbox"  id="checkbox")
+                  .checkbox
+                  .designers-form__checkbox-txt Я соглашаюсь на обработку
+                    br
+                    a(href="") персональных данных
+                button.btn.cover__btn(type="submit") отправить
+          .news-col-main
+
+
+    include ../partials/_footer.pug
