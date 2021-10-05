@@ -50,13 +50,17 @@ block content
           href: 'blog.html',
           title: 'Блог',
         },
+        {
+          href: 'blog-page.html',
+          title: 'Детальный блог',
+        },
       ];
     .main__wrap
       .section
         .container
           ol
             each page in pages
-              li.margin50
+              li.margin20
                 a.btn.cover__btn(href=page.href)
                   |#{page.title}
 
