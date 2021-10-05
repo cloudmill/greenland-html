@@ -17,6 +17,10 @@
 
   color: $white-lighten;
 
+  @media (max-width: $breakpoint - 1px) {
+    display: none;
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -62,6 +66,10 @@
     text-align: left;
     line-height: normal;
 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
     &::after {
       content: '';
       position: absolute;
@@ -92,10 +100,8 @@
     justify-content: space-between;
 
     &-item {
-      // margin-right: 40px;
-
-      &::last-child {
-        margin-right: 0;
+      &:not(:last-child) {
+        margin-right: 40px;
       }
     }
   }

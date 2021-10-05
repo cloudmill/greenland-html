@@ -1,4 +1,6 @@
 .projects {
+  $comp: &;
+
   padding-top: 160px;
   padding-bottom: 160px;
   overflow: hidden;
@@ -45,8 +47,19 @@
   &__header {
     margin-bottom: 100px;
 
+    display: flex;
+    flex-wrap: wrap;
+
     &-subheading {
       margin-bottom: 40px;
+    }
+
+    #{$comp}__col:nth-child(2) {
+      width: calc(#{$col-part-d} * 8);
+      margin-right: calc(#{$col-part-d} * 2);
+    }
+    #{$comp}__col:nth-child(3) {
+      width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
     }
   }
 
@@ -58,6 +71,8 @@
     line-height: 130%;
     text-transform: uppercase;
   }
+
+
 
   &__slider {
     // max-width: 37.5%;
@@ -81,13 +96,19 @@
       z-index: 2;
       // left: -111px;
       // right: -111px;
-      top: 50%;
+      top: calc(50% - 25px);
       left: 50%;
       transform: translate(-50%, -50%);
 
-      width: 818px;
+      width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
 
       pointer-events: none;
+
+      .projects-controls-container {
+        width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+        display: flex;
+        justify-content: center;
+      }
 
       & > * {
         pointer-events: auto;
@@ -165,4 +186,9 @@
       }
     }
   }
+}
+
+.projects__slide {
+  width: calc(#{$col-part-d} * 6 + #{$col-gap-d});
+  margin: 0 calc((#{$col-part-d} * 2 - #{$col-gap-d}) / 2);
 }

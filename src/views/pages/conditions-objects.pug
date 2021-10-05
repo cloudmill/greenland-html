@@ -8,7 +8,7 @@ block content
 
     include ../partials/_header.pug
 
-    .section.brands
+    .section.page-wrapper
       .container
         +breadcrumbs2('работа с нами', 'условия работы для объектов')
 
@@ -145,8 +145,10 @@ block content
                       .projects__item-tag.text__super-tn.text--uppercase Террасы
                       .projects__item-tag.text__super-tn.text--uppercase Входные группы
             .projects__slider-controls
-              +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
-              +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+              .projects-controls-container
+                +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+              .projects-controls-container
+                +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
 
         .objects-form
           h2

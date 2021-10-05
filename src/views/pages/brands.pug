@@ -8,7 +8,7 @@ block content
 
     include ../partials/_header.pug
 
-    .section.brands
+    .section.page-wrapper
       .container
         +breadcrumbs('Бренды')
 
@@ -55,15 +55,6 @@ block content
             img(src="assets/images/brands-1.jpg", alt="")
             img(src="assets/images/brands-2.jpg", alt="")
 
-          //- .brands-pics-slider.swiper-container(data-brands-slider="")
-          //-   .brands-pics-slider__controls
-          //-     +arrow('black', '#CAE8D9', 'left', '15', '13', '41')(data-brands-slider-prev="")
-          //-     +arrow('black', '#CAE8D9', 'right', '15', '13', '41')(data-brands-slider-next="")
-          //-   .swiper-wrapper
-          //-     - for (let i=2; i<5; i++)
-          //-       .swiper-slide
-          //-         img(src=`assets/images/brands-${i + 1}.jpg`, alt="")
-
           .projects__slider.swiper-container(data-projects-slider="")
             .swiper-wrapper
               - for (i=2; i<5; i++)
@@ -74,8 +65,10 @@ block content
                         img.projects__item-img.is-active(src=`assets/images/brands-${i + 1}.jpg`, alt="", data-fade-item-slider-item="")
               
             .projects__slider-controls
-              +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
-              +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+              .projects-controls-container
+                +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+              .projects-controls-container
+                +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
 
           .brands-pics-txt
             .brands-pics-txt__col

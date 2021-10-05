@@ -90,14 +90,14 @@ $debug-mode:                   false!default;
 // Mixins
 @import "helpers/*";
 
+// Modules
+@import "modules/*";
+
 // Plugins
 @import "vendors/*";
 
 // Base
 @import "base/*";
-
-// Modules
-@import "modules/*";
 
 // Partials
 @import "partials/*";

@@ -1,10 +1,10 @@
 section.section.projects(data-scroll-section="")
   .container
-    .row.projects__header
+    .projects__header
       .projects__title Наши проекты
-      .col__xl-8
+      .projects__col
         h3.delta.projects__header-heading Green Land — #[span.accent.text--lowercase #[span.projects__highlight.projects__highlight--1 эксперты]] в дизайнерском #[br] озеленении #[span.accent.text--lowercase #[span.projects__highlight.projects__highlight--2 более 15 лет]]
-      .col__xl-8
+      .projects__col
         .accent.epsilon.text--none.projects__header-subheading Трансформируем общественные места #[br]в приятные, гармоничные, безопасные.
         a.btn.projects__header-btn(href="#") каталог продукции
     .projects__slider.swiper-container(data-projects-slider="")
@@ -67,5 +67,7 @@ section.section.projects(data-scroll-section="")
                 .projects__item-tag.text__super-tn.text--uppercase Террасы
                 .projects__item-tag.text__super-tn.text--uppercase Входные группы
       .projects__slider-controls
-        +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
-        +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+        .projects-controls-container
+          +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+        .projects-controls-container
+          +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")

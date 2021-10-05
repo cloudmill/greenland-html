@@ -1,10 +1,5 @@
-.about {
-  margin-top: 120px;
-}
-
 .about-title-head {
   padding-bottom: 80px;
-  // border-bottom: ;
 }
 
 .about-title {
@@ -13,8 +8,6 @@
 
 .about-tabs {
   display: flex;
-
-  // padding-bottom: 80px;
 
   &__item {
     padding-bottom: 10px;
@@ -37,7 +30,6 @@
   padding-top: 80px;
 
   .mission__slide {
-    // display: flex;
     justify-content: space-between;
   }
 
@@ -92,12 +84,10 @@
   border-top: 1px solid $green;
 }
 
-.about {
-  padding-bottom: 160px;
-}
-
 .about-plan {
   margin-top: 160px;
+
+
 }
 
 .about-plan-table {
@@ -147,7 +137,9 @@
     color: $green;
   }
 }
-
+.about-plan-rows {
+  margin: 100px 0;
+}
 .about-plan-row {
   display: flex;
 
@@ -167,7 +159,6 @@
 
   &__img {
     width: calc(#{$col-part-d} * 8);
-    // padding: 0 calc(#{$col-part-d}) 85px calc(#{$col-part-d});
     padding-bottom: 85px;
     text-align: center;
 

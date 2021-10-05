@@ -116,6 +116,10 @@ button {
 .section,
 .footer {
   padding-left: 80px;
+
+  @media (max-width: $breakpoint - 1px) {
+    padding-left: 0;
+  }
 }
 
 .has-scroll-smooth body {
@@ -135,4 +139,12 @@ button {
   border: 0;
   clip: rect(0,0,0,0);
   overflow: hidden;
+}
+
+.page-wrapper {
+  padding: 80px 0 40px 0;
+
+  @media (min-width: $breakpoint) {
+    padding: 140px 0 160px 80px;
+  }
 }

@@ -310,6 +310,7 @@
     font-size: 14px;
     margin-top: 20px;
     display: flex;
+    margin-bottom: 60px;
 
     .designers-contacts__tel {
       position: relative;
@@ -353,14 +354,9 @@
   border-radius: 0 20px;
   border: 1px solid $green-extra-lighten;
   text-transform: uppercase;
-  // font-family: $base-font-family;
   font-size: 14px;
   width: calc(#{$col-part-d} * 2);
   background-color: transparent;
-
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
 }
 
 // objects page

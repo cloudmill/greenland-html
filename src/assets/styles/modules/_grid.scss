@@ -7,6 +7,10 @@
   // @include container;
   position: relative;
   padding: 0 40px;
+
+  @media (max-width: $breakpoint - 1px) {
+    padding: 0 10px;
+  }
 }
 
 // Row
