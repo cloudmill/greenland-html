@@ -14,7 +14,8 @@ block content
 
         h1.beta.about-title Блог
 
-        .brands-list.news-filter
+        //- .brands-list.news-filter
+        .blog-filter
           ul
             li.filter-tab.active-tab Все
             -
@@ -69,6 +70,102 @@ block content
                     a(href="") персональных данных
                 button.btn.cover__btn(type="submit") отправить
           .news-col-main
+            .news-list
+              a.projects__item.blog-card(href="")
+                .projects__item-slider
+                  .projects__item-slider-wrapper
+                    img.projects__item-img.is-active(src="assets/images/blog-1-2x.jpg", alt="")
+                .projects__item-caption
+                  .news-card__date 18 ноября 2020
+                  .epsilon.projects__item-name Как пересадить орхидею сорта фаленопсис
+                  .projects__item-tags
+                    .projects__item-tag.text__super-tn.text--uppercase Уход за растениями
+                    .projects__item-tag.text__super-tn.text--uppercase Полезно знать
 
+              a.projects__item.blog-card(href="")
+                .projects__item-slider
+                  .projects__item-slider-wrapper
+                    img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="")
+                .projects__item-caption
+                  .news-card__date 18 ноября 2020
+                  .epsilon.projects__item-name Как пересадить толстянку (денежное дерево)
+                  .projects__item-tags
+                    .projects__item-tag.text__super-tn.text--uppercase Озеленение и зимостойкость
+
+              a.projects__item.blog-card(href="")
+                .projects__item-slider
+                  .projects__item-slider-wrapper
+                    img.projects__item-img.is-active(src="assets/images/blog-1-2x.jpg", alt="")
+                .projects__item-caption
+                  .news-card__date 18 ноября 2020
+                  .epsilon.projects__item-name Как пересадить орхидею сорта фаленопсис
+                  .projects__item-tags
+                    .projects__item-tag.text__super-tn.text--uppercase Уход за растениями
+                    .projects__item-tag.text__super-tn.text--uppercase Полезно знать
+
+              a.projects__item.blog-card(href="")
+                .projects__item-slider
+                  .projects__item-slider-wrapper
+                    img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="")
+                .projects__item-caption
+                  .news-card__date 18 ноября 2020
+                  .epsilon.projects__item-name Как пересадить толстянку (денежное дерево)
+                  .projects__item-tags
+                    .projects__item-tag.text__super-tn.text--uppercase Озеленение и зимостойкость
+
+              a.projects__item.blog-card(href="")
+                .projects__item-slider
+                  .projects__item-slider-wrapper
+                    img.projects__item-img.is-active(src="assets/images/blog-1-2x.jpg", alt="")
+                .projects__item-caption
+                  .news-card__date 18 ноября 2020
+                  .epsilon.projects__item-name Как пересадить орхидею сорта фаленопсис
+                  .projects__item-tags
+                    .projects__item-tag.text__super-tn.text--uppercase Уход за растениями
+                    .projects__item-tag.text__super-tn.text--uppercase Полезно знать
+
+              a.projects__item.blog-card(href="")
+                .projects__item-slider
+                  .projects__item-slider-wrapper
+                    img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="")
+                .projects__item-caption
+                  .news-card__date 18 ноября 2020
+                  .epsilon.projects__item-name Как пересадить толстянку (денежное дерево)
+                  .projects__item-tags
+                    .projects__item-tag.text__super-tn.text--uppercase Озеленение и зимостойкость
+
+              a.projects__item.blog-card(href="")
+                .projects__item-slider
+                  .projects__item-slider-wrapper
+                    img.projects__item-img.is-active(src="assets/images/blog-1-2x.jpg", alt="")
+                .projects__item-caption
+                  .news-card__date 18 ноября 2020
+                  .epsilon.projects__item-name Как пересадить орхидею сорта фаленопсис
+                  .projects__item-tags
+                    .projects__item-tag.text__super-tn.text--uppercase Уход за растениями
+                    .projects__item-tag.text__super-tn.text--uppercase Полезно знать
+
+              a.projects__item.blog-card(href="")
+                .projects__item-slider
+                  .projects__item-slider-wrapper
+                    img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="")
+                .projects__item-caption
+                  .news-card__date 18 ноября 2020
+                  .epsilon.projects__item-name Как пересадить толстянку (денежное дерево)
+                  .projects__item-tags
+                    .projects__item-tag.text__super-tn.text--uppercase Озеленение и зимостойкость
+
+            .pagination
+              .pagination-list
+                button.pagination__item.is-active 1
+                button.pagination__item 2
+                button.pagination__item 3
+                button.pagination__item 4
+                button.pagination__dots ...
+                button.pagination__item 12
+
+              .pagination-controls
+                +arrow('white', '#CAE8D9', 'left', '15', '13', '46')
+                +arrow('white', '#65BA7F', 'right', '15', '13', '46').arrow-active
 
     include ../partials/_footer.pug

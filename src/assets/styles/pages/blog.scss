@@ -1,0 +1,34 @@
+.blog-filter {
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: -20px;
+  }
+  li {
+    margin-bottom: 20px;
+  }
+}
+
+.blog-card {
+  width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+  margin-bottom: 80px;
+
+  .projects__item-caption {
+    flex-wrap: wrap;
+  }
+  .news-card__date {
+    width: calc(#{$col-part-d} * 4);
+    margin-bottom: 18px;
+  }
+  .projects__item-name {
+    flex: unset;
+    max-width: unset;
+    width: calc(#{$col-part-d} * 4);
+  }
+  .projects__item-tags {
+    width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+    margin-top: -32px;
+  }
+}
