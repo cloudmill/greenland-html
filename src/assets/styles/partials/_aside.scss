@@ -1,4 +1,6 @@
 .aside {
+  $comp: &;
+
   position: fixed;
   top: 0;
   left: 0;
@@ -18,15 +20,63 @@
 
   @include transition;
 
+  @media (max-width: $breakpoint - 1px) {
+    bottom: unset;
+    right: 0;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+  }
+
   &.is-hidden {
     left: -80px;
   }
 
   &__header {
     height: 237px;
+
+    @media (max-width: $breakpoint - 1px) {
+      height: auto;
+      width: calc(#{$col-part-m} / 2);
+
+      #{$comp}__btn {
+        display: flex;
+      }
+    }
+  }
+  &__center {
+    @media (max-width: $breakpoint - 1px) {
+      width: calc(#{$col-part-m} / 2);
+
+      #{$comp}__btn {
+        display: flex;
+      }
+    }
   }
   &__footer {
     width: 100%;
+
+    @media (max-width: $breakpoint - 1px) {
+      display: flex;
+      align-items: center;
+      width: calc(#{$col-part-m});
+
+      // justify-content: space-around;
+
+      #{$comp}__btn {
+        width: 50px;
+        margin-left: calc(#{$col-part-m} / 2 - 50px);
+
+        &:first-child {
+          order: 1;
+        }
+        &:nth-child(3), &:nth-child(4) {
+          display: none;
+        }
+      }
+    }
   }
 
   &__btn {
@@ -41,6 +91,10 @@
     text-transform: uppercase;
     cursor: pointer;
 
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 0;
+    }
+
     &:first-child {
       margin-top: 0;
     }
@@ -50,6 +104,10 @@
       margin-top: 13px;
       text-align: center;
       line-height: normal;
+
+      @media (max-width: $breakpoint - 1px) {
+        display: none;
+      }
     }
 
     &-counter {
@@ -58,6 +116,14 @@
       transform: translate(0, -100%);
 
       font-size: $font-size-small;
+    }
+  }
+
+  &__logo {
+    width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+    text-align: center;
+    @media (min-width: $breakpoint) {
+      display: none;
     }
   }
 }
