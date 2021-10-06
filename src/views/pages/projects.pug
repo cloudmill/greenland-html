@@ -13,3 +13,160 @@ block content
         +breadcrumbs(['Проекты'])
 
         h1.beta.about-title Проекты
+
+        .projects-subtitle.accent
+          |Наша продукция используется 
+          span по всей России
+
+        .blog-filter
+          ul
+            li.filter-tab.active-tab Озеленение интерьерное
+            -
+              var items = [
+                'Озеленение уличное',
+                'Озеленение офиса',
+                'Озеленение детского сада',
+                'Озеленение ресторана',
+                'Ампельные растения',
+                'Бизнес центр',
+                'Озеленение торгово-развлекательного центра',
+                'Мебель для общественных пространств',
+                'Искусственные растения',
+              ]
+            each item in items
+              li.filter-tab
+                |!{item}
+
+        .projects-table
+          a.projects-card.projects__item(href="")
+            .projects__item-slider(data-fade-item-slider="")
+              .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                img.projects__item-img.is-active(src="assets/images/projects-1.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+              .bullets.projects__item-slider-bullets
+                .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+            .projects__item-caption
+              .epsilon.projects__item-name Детский сад 59 в д. Новое Девяткино
+              .projects__item-tags
+                .projects__item-tag.text__super-tn.text--uppercase озеленение интерьерное
+                .projects__item-tag.text__super-tn.text--uppercase озеленение уличное
+                .projects__item-tag.text__super-tn.text--uppercase озеленение офиса
+                .projects__item-tag.text__super-tn.text--uppercase озеленение детского сада
+
+          a.projects-card.projects__item(href="")
+            .projects__item-slider(data-fade-item-slider="")
+              .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                img.projects__item-img.is-active(src="assets/images/projects-2.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+              .bullets.projects__item-slider-bullets
+                .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+            .projects__item-caption
+              .epsilon.projects__item-name Терраса ЛИДЕР СОНСАЛТ
+              .projects__item-tags
+                .projects__item-tag.text__super-tn.text--uppercase Терраса
+                .projects__item-tag.text__super-tn.text--uppercase бизнес-центр
+                .projects__item-tag.text__super-tn.text--uppercase озеленение офиса
+
+          a.projects-card.projects__item(href="")
+            .projects__item-slider(data-fade-item-slider="")
+              .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                img.projects__item-img.is-active(src="assets/images/projects-3.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+              .bullets.projects__item-slider-bullets
+                .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+            .projects__item-caption
+              .epsilon.projects__item-name Бар-клуб на ул. Садовая
+              .projects__item-tags
+                .projects__item-tag.text__super-tn.text--uppercase Терраса
+                .projects__item-tag.text__super-tn.text--uppercase бизнес-центр
+                .projects__item-tag.text__super-tn.text--uppercase озеленение офиса
+
+          a.projects-card.projects__item(href="")
+            .projects__item-slider(data-fade-item-slider="")
+              .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                img.projects__item-img.is-active(src="assets/images/projects-4.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+              .bullets.projects__item-slider-bullets
+                .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+            .projects__item-caption
+              .epsilon.projects__item-name Бизнес зал Кронштадт Пулково
+              .projects__item-tags
+                .projects__item-tag.text__super-tn.text--uppercase озеленение интерьерное
+                .projects__item-tag.text__super-tn.text--uppercase озеленение уличное
+                .projects__item-tag.text__super-tn.text--uppercase озеленение офиса
+                .projects__item-tag.text__super-tn.text--uppercase озеленение детского сада
+
+          a.projects-card.projects__item(href="")
+            .projects__item-slider(data-fade-item-slider="")
+              .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                img.projects__item-img.is-active(src="assets/images/projects-5.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+              .bullets.projects__item-slider-bullets
+                .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+            .projects__item-caption
+              .epsilon.projects__item-name Бизнес зал Кронштадт Пулково
+              .projects__item-tags
+                .projects__item-tag.text__super-tn.text--uppercase Терраса
+                .projects__item-tag.text__super-tn.text--uppercase бизнес-центр
+                .projects__item-tag.text__super-tn.text--uppercase озеленение офиса
+
+          a.projects-card.projects__item(href="")
+            .projects__item-slider(data-fade-item-slider="")
+              .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                img.projects__item-img.is-active(src="assets/images/projects-6.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+              .bullets.projects__item-slider-bullets
+                .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+            .projects__item-caption
+              .epsilon.projects__item-name Бизнес зал Кронштадт Пулково
+              .projects__item-tags
+                .projects__item-tag.text__super-tn.text--uppercase Терраса
+                .projects__item-tag.text__super-tn.text--uppercase бизнес-центр
+                .projects__item-tag.text__super-tn.text--uppercase озеленение офиса
+
+
+        .pagination
+          .pagination-list
+            button.pagination__item.is-active 1
+            button.pagination__item 2
+            button.pagination__item 3
+            button.pagination__item 4
+            button.pagination__dots ...
+            button.pagination__item 12
+
+          .pagination-controls
+            +arrow('white', '#CAE8D9', 'left', '15', '13', '46')
+            +arrow('white', '#65BA7F', 'right', '15', '13', '46').arrow-active
+
+
+    include ../partials/_footer.pug
