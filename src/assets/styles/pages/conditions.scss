@@ -1,6 +1,42 @@
 // conditions pages
 // designers page
 
+.designers-highlight {
+  &-1 {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: url(assets/images/new-highlights/designer-highlights-1.png);
+      left: 0;
+      bottom: -7px;
+      z-index: -1;
+    }
+  }
+  &-2 {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: url(assets/images/new-highlights/designer-highlights-2.png);
+      left: 0;
+      bottom: -7px;
+      z-index: -1;
+    }
+  }
+  &-3 {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: url(assets/images/new-highlights/designer-highlights-3.png);
+      left: 0;
+      bottom: -7px;
+      z-index: -1;
+    }
+  }
+}
+
 .designers-brands {
   margin-top: 120px;
 
@@ -308,9 +344,9 @@
   }
   &__contacts {
     font-size: 14px;
-    margin-top: 20px;
+    margin: 20px 0 60px;
     display: flex;
-    margin-bottom: 60px;
+    flex-wrap: wrap;
 
     .designers-contacts__tel {
       position: relative;
@@ -364,6 +400,19 @@
   white-space: nowrap;
 }
 
+.designers-form__imgs {
+  display: flex;
+  justify-content: space-between;
+
+  img:nth-child(1) {
+    width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    height: 80%;
+  }
+  img:nth-child(2) {
+    width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+  }
+}
+
 // objects page
 
 .objects-form {
@@ -371,6 +420,50 @@
 
   h2 {
     margin-bottom: 80px;
+  }
+}
+
+.objects-highlights {
+  &-1 {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: url(assets/images/new-highlights/objects-highlight-1.png);
+      left: 0;
+      bottom: -8px;
+      z-index: -1;
+    }
+  }
+  &-2 {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: url(assets/images/new-highlights/objects-highlight-2.png);
+      left: 0;
+      bottom: -8px;
+      z-index: -1;
+    }
+  }
+  &-3 {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: url(assets/images/new-highlights/objects-highlight-3.png);
+      // left: 0;
+      right: 0;
+      bottom: -8px;
+      z-index: -1;
+    }
+  }
+  &-4 {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: url(assets/images/new-highlights/objects-highlight-4.png);
+      left: 0;
+      bottom: -8px;
+      z-index: -1;
+    }
   }
 }
 
