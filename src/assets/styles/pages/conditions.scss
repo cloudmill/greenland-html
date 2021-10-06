@@ -314,15 +314,18 @@
 
     .designers-contacts__tel {
       position: relative;
-      padding-right: 15px;
-      margin-right: 21px;
+      // padding-right: 15px;
+      margin-right: 15px;
+      display: flex;
+      align-items: center;
     }
     .designers-contacts__tel::after {
       content: '';
       display: block;
-      position: absolute;
-      top: 5px;
-      right: -6px;
+      // position: absolute;
+      // top: 5px;
+      // right: -6px;
+      margin-left: 15px;
 
       width: 6px;
       height: 6px;
@@ -355,8 +358,10 @@
   border: 1px solid $green-extra-lighten;
   text-transform: uppercase;
   font-size: 14px;
-  width: calc(#{$col-part-d} * 2);
+  // width: calc(#{$col-part-d} * 2);
+  max-width: 190px;
   background-color: transparent;
+  white-space: nowrap;
 }
 
 // objects page
