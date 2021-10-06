@@ -30,21 +30,13 @@ mixin footerDownload(title, caption, url="#")
       +downloadIcon
 
 //- breadcrumbs
-mixin breadcrumbs(title)
+mixin breadcrumbs(titles)
   ul.breadcrumbs
     li.breadcrumbs__main
       a.breadcrumbs__link(href="#") Главная
-    li.breadcrumbs__item
-      a.breadcrumbs__link(href="#").bc= title
-
-mixin breadcrumbs2(bc2, bc3)
-  ul.breadcrumbs
-    li.breadcrumbs__main
-      a.breadcrumbs__link(href="#") Главная
-    li.breadcrumbs__item
-      a.breadcrumbs__link(href="#").bc2= bc2
-    li.breadcrumbs__item
-      a.breadcrumbs__link(href="#").bc3= bc3
+    each item in titles
+      li.breadcrumbs__item
+        a.breadcrumbs__link(href="#") #{item}
 
 //- download icon
 mixin downloadIcon(className)
