@@ -1,0 +1,91 @@
+.clients-top {
+  display: flex;
+  align-items: center;
+
+  h1 {
+    margin-right: 80px;;
+  }
+}
+
+.dekivery-stages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin-top: 80px;
+
+  &__ttl {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  &__item {
+    width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+    padding-right: calc(#{$col-part-d});
+    margin-bottom: 20px;
+
+    display: flex;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: $green;
+      flex: none;
+
+      margin-right: 40px;
+      margin-top: 10px;
+    }
+  }
+}
+
+.delivery-conditions {
+  margin-top: 120px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__ttl {
+    font-size: $font-size-h2;
+    line-height: 130%;
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  &__col {
+    width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+
+    &-ttl {
+      font-family: $base-font-family-serif;
+      font-size: $font-size-h3;
+      line-height: 130%;
+
+      margin-bottom: 40px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $green-extra-lighten;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    &-ttl {
+      font-size: 14px;
+      line-height: 130%;
+      text-transform: uppercase;
+    }
+    &-price {
+      font-size: 16px;
+      line-height: 130%;
+      font-weight: 500;
+    }
+  }
+}
