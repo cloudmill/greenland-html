@@ -1,0 +1,63 @@
+.payment-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  margin: 80px 0 120px;
+
+  // &:nth-child(3) {
+  //   margin-top: 80px;
+  // }
+
+  &__ttl {
+    border-bottom: 1px solid $green-extra-lighten;
+    padding-bottom: 40px;
+    width: 100%;
+  }
+
+  &__block {
+    width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
+    margin-right: calc(#{$col-part-d});
+
+    &:nth-child(2) {
+      font-size: 22px;
+      line-height: 160%;
+    }
+    &:nth-child(3) {
+      line-height: 160%;
+
+      span {
+        color: $green;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.payment-row-table {
+  display: flex;
+  border: 1px solid $green-extra-lighten;
+  width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
+
+  margin-left: calc(#{$col-part-d} * 4);
+  margin-top: 60px;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 33%;
+    padding: 20px;
+
+    img {
+      margin-bottom: 40px;
+      flex: none;
+      width: auto;
+    }
+  }
+}
+
+.payment-taxes-desc {
+  font-size: 22px;
+  line-height: 160%;
+}
