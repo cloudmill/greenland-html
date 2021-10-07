@@ -40,5 +40,85 @@ block content
           .news-single-main.blog-page-main
             h1.about-title Как пересадить монстеру
 
+            img.blog-image-main(src="assets/images/project-page-1.jpg", alt="")
+
+            .project-info
+              .project-info__col
+                .project-info__ttl расположение
+                .project-info__txt Санкт-Петербург, Лиговский проспект., 61
+              .project-info__col
+                .project-info__ttl Что было сделано
+                .project-info__txt Терраса, бизнес-центр, озеленение офиса
+
+            .project-products
+              h3
+                |На проекте использовалось
+              .designers-products-filter
+                ul
+                  li.filter-tab.active-tab
+                    |Кашпо
+                    sup 2
+                  -
+                    var items = [
+                      //- 'Классический',
+                      'Растения<sup>2</sup>',
+                    ]
+                  each item in items
+                    li.filter-tab
+                      |!{item}
+
+                .designers-products__controls(data-catalog-slider-controls="")
+                  .arrows.cover__slider-arrows
+                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-catalog-slider-prev="")
+                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-catalog-slider-next="")
+
+
+              .designers-products__catalog
+                .swiper-container(data-catalog-slider="")
+                  .swiper-wrapper
+                
+                    - for (i=0; i<5; i++)
+                      .catalog-card.swiper-slide
+                        .catalog-card__labels
+                          .catalog-card__labels-item Скидки
+                          .catalog-card__labels-item Новинки
+                        .catalog-card__top
+                          .catalog-card__layer
+                            .catalog-card__pagination
+                              .catalog-card__pagination-item
+                              .catalog-card__pagination-item
+                              .catalog-card__pagination-item
+                              .catalog-card__pagination-item
+                            .catalog-card__buttons
+                              button.catalog-card__buttons-item
+                                img(src="assets/images/catalog-buttons-1.svg", alt="")
+                              button.catalog-card__buttons-item
+                                img(src="assets/images/catalog-buttons-2.svg", alt="")
+                          img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                        a.catalog-card__bottom(href="")
+                          .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                          .catalog-card__color Серебро
+                          .catalog-card__price 5 292 ₽
+
+            .blog-body
+              h3 о проекте
+              p Открытая терраса на 8 этаже офиса компании ЛИДЕР КОНСАЛТ Менеджмент на Лиговском проспекте в г. Санкт-Петербург.
+              p В проекте использованы кашпо Pottery Pots  модель Orb, а также искусственные Самшиты 
+              p Бюджет до 100 000 руб
+              h3 С какими проблемами столкнулись
+              p Не стали использовать кашпо из  3D пластик (хоть они имеют идеальные характеристики для общественных зон:  UV фильтр, морозостойкость, не царапаются), тк на 8 этаже был ветер и кашпо использовалось без земли.
+              h3 Как решали
+              p Выбрали кашпо из файбергласса устойчивой формы, фактура кашпо идеально подошла к оформлению террасы. Файбергласс отлично подходит для открытых террас, тк не выгорает на солнце, имеет хорошую устойчивость к царапинам и сколам, разнообразие фактур и форм помогает подобрать вариант под любое пространство.
+
+            .project-photos
+              - for (i=0; i<4; i++)
+                img.project-photos__item(src=`assets/images/project-photo-${i + 1}.jpg`, alt="")
+
+
+            .career-hh.project-review
+              a.career-hh__link(href="") отзыв
+                br
+                |клиента
+              img(src="assets/images/project-blockquote.png", alt="")
 
     include ../partials/_footer.pug

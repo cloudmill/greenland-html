@@ -26,6 +26,12 @@
   &:not(:last-child) {
     margin-right: 20px;
   }
+
+  sup {
+    font-size: 10px;
+    line-height: 12px;
+    transform: translateY(-60%);
+  }
 }
 
 .active-tab {
