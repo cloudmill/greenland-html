@@ -24,6 +24,7 @@
 
   .career-row__txt {
     margin-right: calc(#{$col-part-d} * 2);
+    margin-top: 100px;
   }
 }
 
@@ -45,6 +46,7 @@
       font-size: 78px;
       line-height: 130%;
       text-transform: uppercase;
+      white-space: nowrap;
 
       position: relative;
     }

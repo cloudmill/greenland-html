@@ -1,0 +1,44 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    .section.page-wrapper
+      .container
+        +breadcrumbs(['Проекты', 'Отель Crowne Plaza'])
+
+        .news-cols
+          .news-col-links
+            a.news-back-link(href="")
+              +arrow('white', '#65BA7F', 'left', '15', '13', '46')
+              |Все новости
+
+            .news-social
+              .news-social__title
+                span Следите 
+                |за нами
+              ul.news-social__list
+                -
+                  var items = [
+                    'facebook',
+                    'instagram',
+                    'pinterest',
+                    'houzz',
+                    'наш блог',
+                  ]
+                each item in items
+                  li
+                    a(href="") #{item}
+
+            button.btn.cover__btn.mt300 задать вопрос
+
+          .news-single-main.blog-page-main
+            h1.about-title Как пересадить монстеру
+
+
+    include ../partials/_footer.pug

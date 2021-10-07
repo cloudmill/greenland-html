@@ -42,8 +42,8 @@ block content
                 ]
               each item, index in items
                 li
-                  div
-                    img(src=`assets/images/designer-offers-${index + 1}.png`, alt="")
+                  .distributor-offers-ico
+                    img(src=`assets/images/distributor-desc-ico-${index + 1}.svg`, alt="")
                   |#{item}
 
         .designers-benefits.distributor-benefits
@@ -63,7 +63,7 @@ block content
               each item, index in items
                 li
                   .designers-benefits__img
-                    img(src=`assets/images/designer-benefits-${index + 1}.png`, alt="")
+                    img(src=`assets/images/distributor-benefits-ico-${index + 1}.svg`, alt="")
                   .designers-benefits__txt
                     .designers-benefits__ttl #{item}
 
