@@ -1,0 +1,53 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    .section.page-wrapper
+      .container
+        +breadcrumbs(['клиентам'])
+
+        .clients-top
+          h1.beta клиентам
+          .about-tabs
+            a.about-tabs__item(href="") Возврат денеженых средств
+            a.about-tabs__item(href="") Доставка
+            a.about-tabs__item.about-tabs__item--active(href="") Оплата
+
+        .payment-row
+          h3.payment-row__ttl Если возникли вопросы по заказу
+          .payment-row__block Мы ответим на любые ваши вопросы в рабочее время с понедельника по пятницу с 9:00 до 18:00.
+          .payment-row__block Вы сможете написать нам в 
+            span WhatsApp 
+            |или позвонить по номеру 
+            span +7 981 938-34-73
+            |, а так же связаться с вашим персональным менеджером напрямую.
+
+        .payment-row
+          h3.payment-row__ttl СПОСОБЫ ОПЛАТЫ
+          .payment-row__block Заказы оплачиваются безналичным способом:
+          .payment-row__block Оплата за наличный расчет возможно только в шоуруме г. Санкт-Петербург.
+
+          .payment-row-table
+            .payment-row-table__item
+              div
+                img(src="assets/images/payment-1.png", alt="")
+              |На основании выставленного счета
+            .payment-row-table__item
+              div
+                img(src="assets/images/payment-2.png", alt="")
+              |Через платежную систему E-Pos
+            .payment-row-table__item
+              div
+                img(src="assets/images/payment-3.png", alt="")
+              |Банковской картой
+
+        h3 налоги
+        .payment-taxes-desc Все налоги включены в стоимость товара и доставки.
+    
+    include ../partials/_footer.pug
