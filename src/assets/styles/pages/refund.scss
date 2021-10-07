@@ -1,0 +1,31 @@
+.refund-txt {
+  ul {
+    // margin-top: 60px;
+  }
+  li {
+    display: flex;
+    // align-items: center;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: $green;
+      margin-top: 10px;
+      margin-right: 40px;
+      flex: none;
+    }
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  
+}
+
+.fw600 {
+  font-weight: 600;
+}
+.fz22 {
+  font-size: 22px;
+}
