@@ -1,0 +1,124 @@
+.contacts-top {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+
+  &__numbers {
+    width: calc(#{$col-part-d} * 6);
+    margin-bottom: 40px;
+
+    &-tel {
+      font-size: 45px;
+      line-height: 110%;
+      margin-bottom: 10px;
+    }
+    &-schedule {
+      display: flex;
+      font-size: 12px;
+      line-height: 14px;
+      text-transform: uppercase;
+      opacity: .4;
+    }
+    &-item {
+      margin-right: 15px;
+      padding-right: 15px;
+      border-right: 1px solid $black;
+    }
+  }
+  &__cities {
+    width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
+  }
+  &__mail {
+    width: calc(#{$col-part-d} * 6);
+    font-size: 25px;
+    line-height: 110%;
+  }
+  &__address {
+    width: calc(#{$col-part-d} * 6);
+    padding-right: calc(#{$col-part-d});
+
+    &-item {
+      margin-bottom: 20px;
+      font-size: 25px;
+      line-height: 140%;
+    }
+    &-link {
+      display: flex;
+      align-items: center;
+
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+
+      img {
+        margin-right: 12px;
+      }
+    }
+  }
+  &__social {
+    
+
+    .footer__socials {
+      margin: 0;
+    }
+
+    .footer__socials-link {
+      border-color: $black;
+
+      &:first-child {
+        border-left: 1px solid $black;
+      }
+    }
+  }
+}
+
+.contacts-cards {
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  margin-top: calc(#{$col-part-d} + #{$col-gap-d});
+
+  display: grid;
+  grid-template-columns: repeat(4, calc((3 * ((100% - 20px * 15) / 16)) + (20px * 2)));
+  // column-gap: ;
+  row-gap: 80px;
+  justify-content: space-between;
+
+  &__item {
+    width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    // margin-right: 140px;
+    // margin-bottom: 80px;
+
+    img {
+      width: 100%;
+    }
+  }
+  &__name {
+    font-size: 18px;
+    line-height: 120%;
+    margin-top: 20px;
+  }
+  &__position {
+    font-size: 13px;
+    line-height: 160%;
+    margin-bottom: 20px;
+  }
+  &-tel {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.contacts-txt {
+  margin: 120px 0 60px;
+
+  display: flex;
+
+  &__ttl {
+    width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+  }
+  &__desc {
+    width: calc(#{$col-part-d} * 11);
+  }
+}
