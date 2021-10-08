@@ -1,0 +1,19 @@
+.faq-row {
+  margin-top: 80px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq-spoilers {
+  width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
+
+  .spoiler__dropdown-inner {
+    padding: 0 calc(#{$col-part-d} * 2) 40px calc(#{$col-part-d});
+  }
+}
+
+.faq-ask {
+  white-space: nowrap;
+  width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+}
