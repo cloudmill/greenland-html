@@ -350,7 +350,6 @@
 
     .designers-contacts__tel {
       position: relative;
-      // padding-right: 15px;
       margin-right: 15px;
       display: flex;
       align-items: center;
@@ -358,9 +357,6 @@
     .designers-contacts__tel::after {
       content: '';
       display: block;
-      // position: absolute;
-      // top: 5px;
-      // right: -6px;
       margin-left: 15px;
 
       width: 6px;
@@ -418,8 +414,16 @@
 .objects-form {
   margin-top: 160px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+
   h2 {
     margin-bottom: 80px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
   }
 }
 

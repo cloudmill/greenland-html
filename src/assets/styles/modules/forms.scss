@@ -70,6 +70,10 @@
 
     resize: none;
 
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 14px;
+    }
+
     &::placeholder {
       opacity: 1;
     }
@@ -84,6 +88,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin: unset;
+    }
+
     textarea {
       resize: none;
 
@@ -94,10 +103,19 @@
 
     button {
       width: calc(#{$col-part-d} * 2);
+      margin-top: 0;
+
+      @media (max-width: $breakpoint - 1px) {
+        margin-top: 20px;
+      }
     }
   }
   label {
-    width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+    width: 100%;
+
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+    }
 
     &:nth-child(3) {
       width: 100%;
