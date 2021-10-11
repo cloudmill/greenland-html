@@ -136,9 +136,11 @@
     }
   }
   &__desc {
-
+    font-size: 14px;
+    line-height: 160%;
     @media (min-width: $breakpoint) {
       width: calc(#{$col-part-d} * 11);
+      font-size: 18px;
     }
   }
 }

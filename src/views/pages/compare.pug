@@ -1,0 +1,87 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    .section.page-wrapper
+      .container
+        +breadcrumbs(['Сравнение'])
+
+        h1.title-h1 Сравнение
+
+        .blog-filter
+          ul
+            li.filter-tab.active-tab Все
+            -
+              var items = [
+                'О компания',
+                'Продукция',
+                'Доставка',
+              ]
+            each item in items
+              li.filter-tab
+                |!{item}
+
+        .compare-table
+          .compare-table__col
+            .designers-products__controls(data-catalog-slider-controls="")
+              .arrows.cover__slider-arrows
+                +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-catalog-slider-prev="")
+                +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-catalog-slider-next="")
+
+            .compare-table__col-table
+              .compare-table__cell цвет
+              .compare-table__cell высота, см
+              .compare-table__cell диаметр, см
+              .compare-table__cell материал
+              .compare-table__cell крепление
+              .compare-table__cell Форма
+              .compare-table__cell Особенности
+              .compare-table__cell Коллекции
+
+          .compare-table__col.swiper-container(data-catalog-slider="")
+            .swiper-wrapper
+          
+              - for (i=0; i<5; i++)
+                .catalog-card.swiper-slide
+                  .catalog-card__labels
+                    .catalog-card__labels-item Скидки
+                    .catalog-card__labels-item Новинки
+                  .catalog-card__top
+                    .catalog-card__layer
+                      .catalog-card__pagination
+                        .catalog-card__pagination-item
+                        .catalog-card__pagination-item
+                        .catalog-card__pagination-item
+                        .catalog-card__pagination-item
+                      .catalog-card__buttons
+                        button.catalog-card__buttons-item
+                          img(src="assets/images/catalog-buttons-1.svg", alt="")
+                        button.catalog-card__buttons-item
+                          img(src="assets/images/catalog-buttons-2.svg", alt="")
+                    img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                  a.catalog-card__bottom(href="")
+                    .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                    .catalog-card__color Серебро
+                    .catalog-card__price 5 292 ₽
+
+                  .compare-table__cell Серебро
+                  .compare-table__cell 7.7
+                  .compare-table__cell 13.6
+                  .compare-table__cell Файбергласс
+                  .compare-table__cell Напольное
+                    br
+                    |Универсальное
+                  .compare-table__cell Морозостойкая
+                    br
+                    |Ударопрочная
+                    br
+                    |Устойчива к ультрофиолету
+                  .compare-table__cell Матовая
+
+    include ../partials/_footer.pug

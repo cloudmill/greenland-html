@@ -42,3 +42,13 @@
 .title-h3 {
   @include title-h3();
 }
+
+// Txt
+
+.p_large {
+  font-size: 14px;
+  line-height: 130%;
+  @media (min-width: $breakpoint) {
+    font-size: 20px;
+  }
+}

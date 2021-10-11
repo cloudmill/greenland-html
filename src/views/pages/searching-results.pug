@@ -1,0 +1,32 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    .section.page-wrapper
+      .container
+        +breadcrumbs(['Результат поиска'])
+
+        h1.title-h1 Результат поиска
+
+
+        .pagination
+          .pagination-list
+            button.pagination__item.is-active 1
+            button.pagination__item 2
+            button.pagination__item 3
+            button.pagination__item 4
+            button.pagination__dots ...
+            button.pagination__item 12
+
+          .pagination-controls
+            +arrow('white', '#CAE8D9', 'left', '15', '13', '46')
+            +arrow('white', '#65BA7F', 'right', '15', '13', '46').arrow-active
+
+
+    include ../partials/_footer.pug

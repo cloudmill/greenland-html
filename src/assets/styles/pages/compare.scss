@@ -1,0 +1,29 @@
+.compare-table {
+  display: flex;
+  margin-top: 80px;
+
+  &__col:nth-child(1) {
+    width: calc(#{$col-part-d} * 2);
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__col-table {
+    flex: none;
+    border-left: 1px solid $green-extra-lighten;
+    border-bottom: 1px solid $green-extra-lighten;
+
+    .compare-table__cell {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+
+  &__cell {
+    padding: 17px 20px;
+    border-top: 1px solid $green-extra-lighten;
+  }
+}
