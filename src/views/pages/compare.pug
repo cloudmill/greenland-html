@@ -48,11 +48,10 @@ block content
           .compare-table__col.swiper-container(data-catalog-slider="")
             .swiper-wrapper
           
-              - for (i=0; i<2; i++)
+              - for (i=0; i<5; i++)
                 .catalog-card.swiper-slide
                   .catalog-card__labels
-                    .catalog-card__labels-item Скидки
-                    .catalog-card__labels-item Новинки
+                    button.catalog-card__buttons-item
                   .catalog-card__top
                     .catalog-card__layer
                       .catalog-card__pagination
@@ -61,77 +60,6 @@ block content
                         .catalog-card__pagination-item
                         .catalog-card__pagination-item
                       .catalog-card__buttons
-                        button.catalog-card__buttons-item
-                          img(src="assets/images/catalog-buttons-1.svg", alt="")
-                        button.catalog-card__buttons-item
-                          img(src="assets/images/catalog-buttons-2.svg", alt="")
-                    img(src=`assets/images/catalog-${i + 1}.png`, alt="")
-                  a.catalog-card__bottom(href="")
-                    .catalog-card__ttl Высокое напольное кашпо MUSCHEL
-                    .catalog-card__color Серебро
-                    .catalog-card__price 5 292 ₽
-                  ul.compare-table__list
-                    li.compare-table__cell Серебро
-                    li.compare-table__cell 7.7
-                    li.compare-table__cell 13.6
-                    li.compare-table__cell Файбергласс
-                    li.compare-table__cell Напольное
-                      br
-                      |Универсальное
-                    li.compare-table__cell Прямоугольная
-                    li.compare-table__cell Морозостойкая
-                      br
-                      |Ударопрочная
-                      br
-                      |Устойчива к ультрофиолету
-                    li.compare-table__cell Матовая
-
-              .catalog-card.swiper-slide
-                .catalog-card__labels
-                  .catalog-card__labels-item Скидки
-                  .catalog-card__labels-item Новинки
-                .catalog-card__top
-                  .catalog-card__layer
-                    .catalog-card__pagination
-                      .catalog-card__pagination-item
-                      .catalog-card__pagination-item
-                      .catalog-card__pagination-item
-                      .catalog-card__pagination-item
-                    .catalog-card__buttons
-                      button.catalog-card__buttons-item
-                        img(src="assets/images/catalog-buttons-1.svg", alt="")
-                      button.catalog-card__buttons-item
-                        img(src="assets/images/catalog-buttons-2.svg", alt="")
-                  img(src=`assets/images/catalog-${i + 1}.png`, alt="")
-                a.catalog-card__bottom(href="")
-                  .catalog-card__ttl Высокое напольное кашпо MUSCHEL
-                  .catalog-card__color Серебро
-                  .catalog-card__price 5 292 ₽
-                ul.compare-table__list
-                  li.compare-table__cell Серебро
-                  li.compare-table__cell 7.7
-                  li.compare-table__cell 13.6
-                  li.compare-table__cell Файбергласс
-                  li.compare-table__cell Напольное
-                  li.compare-table__cell Прямоугольная
-                  li.compare-table__cell Морозостойкая
-                  li.compare-table__cell Матовая
-
-              - for (i=0; i<2; i++)
-                .catalog-card.swiper-slide
-                  .catalog-card__labels
-                    .catalog-card__labels-item Скидки
-                    .catalog-card__labels-item Новинки
-                  .catalog-card__top
-                    .catalog-card__layer
-                      .catalog-card__pagination
-                        .catalog-card__pagination-item
-                        .catalog-card__pagination-item
-                        .catalog-card__pagination-item
-                        .catalog-card__pagination-item
-                      .catalog-card__buttons
-                        button.catalog-card__buttons-item
-                          img(src="assets/images/catalog-buttons-1.svg", alt="")
                         button.catalog-card__buttons-item
                           img(src="assets/images/catalog-buttons-2.svg", alt="")
                     img(src=`assets/images/catalog-${i + 1}.png`, alt="")
