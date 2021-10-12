@@ -41,6 +41,8 @@
 
 .title-h3 {
   @include title-h3();
+
+  text-transform: uppercase;
 }
 
 // Txt
