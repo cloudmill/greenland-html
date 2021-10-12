@@ -3,14 +3,28 @@
   flex-wrap: wrap;
   margin-top: 80px;
 
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
   &__numbers {
     width: calc(#{$col-part-d} * 6);
     margin-bottom: 40px;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
 
     &-tel {
       font-size: 45px;
       line-height: 110%;
       margin-bottom: 10px;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 25px;
+      }
     }
     &-schedule {
       display: flex;
@@ -18,6 +32,10 @@
       line-height: 14px;
       text-transform: uppercase;
       opacity: .4;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 10px;
+      }
     }
     &-item {
       margin-right: 15px;
@@ -27,20 +45,42 @@
   }
   &__cities {
     width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      order: -1;
+      margin-bottom: 40px;
+      width: 100%;
+    }
   }
   &__mail {
     width: calc(#{$col-part-d} * 6);
     font-size: 25px;
     line-height: 110%;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-bottom: 40px;
+      font-size: 16px;
+    }
   }
   &__address {
     width: calc(#{$col-part-d} * 6);
     padding-right: calc(#{$col-part-d});
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      padding-right: unset;
+      margin-bottom: 40px;
+    }
+
     &-item {
       margin-bottom: 20px;
       font-size: 25px;
       line-height: 140%;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 16px;
+      }
     }
     &-link {
       display: flex;
@@ -51,20 +91,27 @@
       line-height: 16px;
       text-transform: uppercase;
 
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 12px;
+      }
+
       img {
         margin-right: 12px;
       }
     }
   }
   &__social {
-    
-
     .footer__socials {
       margin: 0;
     }
 
     .footer__socials-link {
       border-color: $black;
+
+      @media (max-width: $breakpoint - 1px) {
+        flex: 0 0 40px;
+        height: 40px;
+      }
 
       &:first-child {
         border-left: 1px solid $black;
@@ -73,22 +120,61 @@
   }
 }
 
+.contacts-txt {
+  margin: 120px 0 60px;
+
+  display: flex;
+
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+    margin: 40px 0 20px;
+  } 
+  &__ttl {
+
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+    }
+  }
+  &__desc {
+    font-size: 14px;
+    line-height: 160%;
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 11);
+      font-size: 18px;
+    }
+  }
+}
+
 .contacts-cards {
-  // display: flex;
-  // flex-wrap: wrap;
-  // justify-content: space-between;
-  margin-top: calc(#{$col-part-d} + #{$col-gap-d});
+  margin-top: 160px;
 
   display: grid;
   grid-template-columns: repeat(4, calc((3 * ((100% - 20px * 15) / 16)) + (20px * 2)));
-  // column-gap: ;
   row-gap: 80px;
   justify-content: space-between;
 
+  @media (max-width: $breakpoint - 1px) {
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: scroll;
+
+    margin-top: 40px;
+  }
+
   &__item {
-    width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
-    // margin-right: 140px;
-    // margin-bottom: 80px;
+    width: 192px;
+    flex: none;
+
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    }
+
+    &:not(:last-child) {
+      margin-right: 20px;
+      @media (min-width: $breakpoint) {
+        margin-right: 0;
+      }
+    }
 
     img {
       width: 100%;
@@ -98,27 +184,27 @@
     font-size: 18px;
     line-height: 120%;
     margin-top: 20px;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 16px;
+    }
   }
   &__position {
     font-size: 13px;
     line-height: 160%;
     margin-bottom: 20px;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
   }
-  &-tel {
+  &__tel {
     font-size: 14px;
     line-height: 16px;
-  }
-}
 
-.contacts-txt {
-  margin: 120px 0 60px;
-
-  display: flex;
-
-  &__ttl {
-    width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
-  }
-  &__desc {
-    width: calc(#{$col-part-d} * 11);
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 12px;
+    }
   }
 }

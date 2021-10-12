@@ -14,6 +14,8 @@ import initCatalogSlider from './assets/scripts/catalog-slider';
 import initBrandsLogosSlider from './assets/scripts/brands-logos-slider';
 import initOtherSlider from './assets/scripts/other-news-slider';
 
+import './assets/scripts/compare';
+
 import './assets/scripts/spoiler';
 
 import LocomotiveScroll from 'locomotive-scroll';

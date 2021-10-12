@@ -1,0 +1,54 @@
+.results {
+  .pagination {
+    margin-top: 80px;
+  }
+}
+
+.results-amount {
+  margin-top: 40px;
+
+  font-size: 20px;
+  line-height: 140%;
+
+  span {
+    font-family: $base-font-family-serif;
+  }
+}
+
+.results-searh {
+  margin: 40px 0 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  input {
+    width: calc(#{$col-part-d} * 14 - #{$col-gap-d});
+    border: none;
+    border-bottom: 1px solid $green-extra-lighten;
+
+    font-size: 16px;
+    line-height: 160%;
+
+    padding: 15px 0;
+  }
+  button {
+    width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+    min-width: unset;
+  }
+}
+
+.results-subtitle {
+  margin: 80px 0 40px;
+}
+
+.results-row {
+  display: flex;
+  margin: 40px 0;
+
+  .catalog-card {
+    width: 20%;
+  }
+  .catalog-card__img {
+    width: 100%;
+  }
+}

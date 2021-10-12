@@ -18,16 +18,6 @@ $col-width-d: '((100vw - (#{$col-pad-d} * 2) - (#{$col-gap-d} * #{$col-count-d -
 $col-part-m: '(#{$col-width-m} + #{$col-gap-m})';
 $col-part-d: '(#{$col-width-d} + #{$col-gap-d})';
 
-// breakpoints
-$breakpoint-m: 768px;
-$breakpoint-961: 961px;
-$breakpoint-t: 1024px;
-$breakpoint: 1280px;
-$breakpoint-l: 1366px;
-$breakpoint-ll: 1440px;
-$breakpoint-xl: 1680px;
-$breakpoint-xxl: 1920px;
-
 
 .grid-test {
   position: fixed;

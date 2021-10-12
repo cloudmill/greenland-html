@@ -29,14 +29,37 @@
 
   padding-top: 80px;
 
+  @media (max-width: $breakpoint - 1px) {
+    padding-top: 40px;
+  }
+
   .mission__slide {
     justify-content: space-between;
+
+    @media (max-width: $breakpoint - 1px) {
+      flex-direction: column;
+    }
   }
 
   .mission__main, .about-mission__img {
     width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
 
     flex: unset;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
+  }
+
+  .mission__main {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .mission__heading {
+    @media (max-width: $breakpoint - 1px) {
+      margin: 28px auto 44px;
+    }
   }
 
   .mission__slider-underlay {
@@ -71,12 +94,16 @@
 
   margin: 60px 0;
 
+  @media (max-width: $breakpoint - 1px) {
+    height: 150px;
+  }
+
   &__ttl {
     margin-bottom: 15px;
   }
   &__txt {
     font-family: $base-font-family-serif;
-    font-size: $font-size-h5;
+    // font-size: $font-size-h5;
   }
 }
 
