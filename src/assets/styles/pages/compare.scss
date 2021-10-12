@@ -20,10 +20,20 @@
       font-weight: 600;
       text-transform: uppercase;
     }
+    // .compare-table__list .compare-table__cell:last-child {
+    //   border-bottom: none;
+    // }
   }
 
   &__cell {
     padding: 17px 20px;
     border-top: 1px solid $green-extra-lighten;
   }
+}
+
+.compare-table__list {
+  margin: 0;
+  // .compare-table__cell:last-child {
+  //   border-bottom: 1px solid #CAE8D9;
+  // }
 }

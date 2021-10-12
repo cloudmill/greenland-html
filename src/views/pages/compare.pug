@@ -35,19 +35,20 @@ block content
                 +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-catalog-slider-next="")
 
             .compare-table__col-table
-              .compare-table__cell цвет
-              .compare-table__cell высота, см
-              .compare-table__cell диаметр, см
-              .compare-table__cell материал
-              .compare-table__cell крепление
-              .compare-table__cell Форма
-              .compare-table__cell Особенности
-              .compare-table__cell Коллекции
+              ul.compare-table__list
+                li.compare-table__cell цвет
+                li.compare-table__cell высота, см
+                li.compare-table__cell диаметр, см
+                li.compare-table__cell материал
+                li.compare-table__cell крепление
+                li.compare-table__cell Форма
+                li.compare-table__cell Особенности
+                li.compare-table__cell Коллекции
 
           .compare-table__col.swiper-container(data-catalog-slider="")
             .swiper-wrapper
           
-              - for (i=0; i<5; i++)
+              - for (i=0; i<2; i++)
                 .catalog-card.swiper-slide
                   .catalog-card__labels
                     .catalog-card__labels-item Скидки
@@ -69,19 +70,89 @@ block content
                     .catalog-card__ttl Высокое напольное кашпо MUSCHEL
                     .catalog-card__color Серебро
                     .catalog-card__price 5 292 ₽
+                  ul.compare-table__list
+                    li.compare-table__cell Серебро
+                    li.compare-table__cell 7.7
+                    li.compare-table__cell 13.6
+                    li.compare-table__cell Файбергласс
+                    li.compare-table__cell Напольное
+                      br
+                      |Универсальное
+                    li.compare-table__cell Прямоугольная
+                    li.compare-table__cell Морозостойкая
+                      br
+                      |Ударопрочная
+                      br
+                      |Устойчива к ультрофиолету
+                    li.compare-table__cell Матовая
 
-                  .compare-table__cell Серебро
-                  .compare-table__cell 7.7
-                  .compare-table__cell 13.6
-                  .compare-table__cell Файбергласс
-                  .compare-table__cell Напольное
-                    br
-                    |Универсальное
-                  .compare-table__cell Морозостойкая
-                    br
-                    |Ударопрочная
-                    br
-                    |Устойчива к ультрофиолету
-                  .compare-table__cell Матовая
+              .catalog-card.swiper-slide
+                .catalog-card__labels
+                  .catalog-card__labels-item Скидки
+                  .catalog-card__labels-item Новинки
+                .catalog-card__top
+                  .catalog-card__layer
+                    .catalog-card__pagination
+                      .catalog-card__pagination-item
+                      .catalog-card__pagination-item
+                      .catalog-card__pagination-item
+                      .catalog-card__pagination-item
+                    .catalog-card__buttons
+                      button.catalog-card__buttons-item
+                        img(src="assets/images/catalog-buttons-1.svg", alt="")
+                      button.catalog-card__buttons-item
+                        img(src="assets/images/catalog-buttons-2.svg", alt="")
+                  img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                a.catalog-card__bottom(href="")
+                  .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                  .catalog-card__color Серебро
+                  .catalog-card__price 5 292 ₽
+                ul.compare-table__list
+                  li.compare-table__cell Серебро
+                  li.compare-table__cell 7.7
+                  li.compare-table__cell 13.6
+                  li.compare-table__cell Файбергласс
+                  li.compare-table__cell Напольное
+                  li.compare-table__cell Прямоугольная
+                  li.compare-table__cell Морозостойкая
+                  li.compare-table__cell Матовая
+
+              - for (i=0; i<2; i++)
+                .catalog-card.swiper-slide
+                  .catalog-card__labels
+                    .catalog-card__labels-item Скидки
+                    .catalog-card__labels-item Новинки
+                  .catalog-card__top
+                    .catalog-card__layer
+                      .catalog-card__pagination
+                        .catalog-card__pagination-item
+                        .catalog-card__pagination-item
+                        .catalog-card__pagination-item
+                        .catalog-card__pagination-item
+                      .catalog-card__buttons
+                        button.catalog-card__buttons-item
+                          img(src="assets/images/catalog-buttons-1.svg", alt="")
+                        button.catalog-card__buttons-item
+                          img(src="assets/images/catalog-buttons-2.svg", alt="")
+                    img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                  a.catalog-card__bottom(href="")
+                    .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                    .catalog-card__color Серебро
+                    .catalog-card__price 5 292 ₽
+                  ul.compare-table__list
+                    li.compare-table__cell Серебро
+                    li.compare-table__cell 7.7
+                    li.compare-table__cell 13.6
+                    li.compare-table__cell Файбергласс
+                    li.compare-table__cell Напольное
+                      br
+                      |Универсальное
+                    li.compare-table__cell Прямоугольная
+                    li.compare-table__cell Морозостойкая
+                      br
+                      |Ударопрочная
+                      br
+                      |Устойчива к ультрофиолету
+                    li.compare-table__cell Матовая
 
     include ../partials/_footer.pug
