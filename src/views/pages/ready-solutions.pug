@@ -10,72 +10,85 @@ block content
 
       .section.page-wrapper
         .container
-          +breadcrumbs(['озеленение'])
+          +breadcrumbs(['озеленение', 'Готовые решения'])
 
-          h1.title-h1.about-title озеленение
+          h1.title-h1.about-title Готовые решения
 
-
-          .about-mission
           
+
+          .results-row
+            - for (i=0; i<5; i++)
+              .catalog-card
+                .catalog-card__labels
+                  .catalog-card__labels-item Скидки
+                  .catalog-card__labels-item Новинки
+                .catalog-card__top
+                  .catalog-card__layer
+                    .catalog-card__pagination
+                      .catalog-card__pagination-item
+                      .catalog-card__pagination-item
+                      .catalog-card__pagination-item
+                      .catalog-card__pagination-item
+                    .catalog-card__buttons
+                      button.catalog-card__buttons-item
+                        img(src="assets/images/catalog-buttons-1.svg", alt="")
+                      button.catalog-card__buttons-item
+                        img(src="assets/images/catalog-buttons-2.svg", alt="")
+                  img.catalog-card__img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                a.catalog-card__bottom(href="")
+                  .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                  .catalog-card__color Серебро
+                  .catalog-card__price 5 292 ₽
+
+          .results-row
+            - for (i=0; i<5; i++)
+              .catalog-card
+                .catalog-card__labels
+                  .catalog-card__labels-item Скидки
+                  .catalog-card__labels-item Новинки
+                .catalog-card__top
+                  .catalog-card__layer
+                    .catalog-card__pagination
+                      .catalog-card__pagination-item
+                      .catalog-card__pagination-item
+                      .catalog-card__pagination-item
+                      .catalog-card__pagination-item
+                    .catalog-card__buttons
+                      button.catalog-card__buttons-item
+                        img(src="assets/images/catalog-buttons-1.svg", alt="")
+                      button.catalog-card__buttons-item
+                        img(src="assets/images/catalog-buttons-2.svg", alt="")
+                  img.catalog-card__img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                a.catalog-card__bottom(href="")
+                  .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                  .catalog-card__color Серебро
+                  .catalog-card__price 5 292 ₽
+
+          .designers-form.about-mission
+            h2.designers-form__title Оставить заявку на подбор композиции
+              br
+              |для вашего проекта
             .mission__slide
               .mission__main
                 .mission__slider-underlay
-                h3.title-h3.mission__heading
-                  .
-                    Мы раскрываем #[br] потенциал пространства #[br] через #[span.accent  #[span.mission__highlight.mission__highlight--1 красоту, творчество] #[br] и #[span.mission__highlight.mission__highlight--2 созидание].]
-              img.about-mission__img(src="assets/images/about-1.jpg" alt="")
-
-          .landscaping-cards
-            .landscaping-cards__top
-              .landscaping-cards__title
-                |Green Land — 
-                span эксперты 
-                |в дизайнерском
-                br
-                |озеленении 
-                span более 15 лет
-              .landscaping-cards__subtitle
-                |Трансформируем общественные места 
-                br
-                |в приятные, гармоничные, безопасные.
-
-            .landscaping-cards-item
-              .landscaping-cards-item__count 1
-              .landscaping-cards-item__ttl Озеленение под ключ
-              img(src="assets/images/landscaping-card-1.jpg", alt="")
-              
-            .landscaping-cards-item
-              .landscaping-cards-item__count 2
-              .landscaping-cards-item__ttl Абонементы на уход за растениями
-              img(src="assets/images/landscaping-card-2.jpg", alt="")
-              
-            .landscaping-cards-item
-              .landscaping-cards-item__count 3
-              .landscaping-cards-item__ttl Готовые решения
-              img(src="assets/images/landscaping-card-3.jpg", alt="")
-
-          .landscaping-solutions
-            .landscaping-solutions__ttl.title-h2 Индивидуальные решения
-            -
-              const items = [
-                'Искусственные растения',
-                'Вертикальное озеленение: зелёные стены и фитомодули',
-                'Озеленение бизнес центров и офисов',
-                'Озеленение гостиниц и мини-отелей',
-                'Озеленение ресторанов и кафе',
-                'Озеленение летних террас',
-                'Озеленение торговых комплексов',
-                'Озеленение фитнес-центров и SPA-салонов',
-              ]
-
-            each item in items
-              a.landscaping-solutions__item(href="")
-                |#{item}
-                img(src="assets/images/icons/lanscape-arrow.svg", alt="")
-
-            .landscaping-solutions__bottom
-              button.landscaping-solutions__button
-                |показать все
+                .designers-form__container
+                  form.designers-form__form
+                    label.designers-form__label
+                      input.designers-form__input(placeholder="Имя")
+                    label.designers-form__label
+                      input.designers-form__input(placeholder="E-mail")
+                    label.designers-form__label
+                      input.designers-form__input(placeholder="Телефон")
+                    label.designers-form__checkbox
+                      input(type="checkbox"  id="checkbox")
+                      .checkbox
+                      .designers-form__checkbox-txt Я соглашаюсь на обработку
+                        br
+                        a(href="") персональных данных
+                    button.btn.cover__btn(type="submit") отправить
+              .about-mission__img.designers-form__imgs
+                img(src="assets/images/designer-form-1.jpg", alt="")
+                img(src="assets/images/designer-form-2.jpg", alt="")
 
           .designers-showrooms
             .ojects-projects-top
@@ -162,8 +175,6 @@ block content
                 .projects-controls-container
                   +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
 
-          
-
           .landscaping-contacts
             .contacts-cards__ttl.title-h2 Профессионалы Green Land
             .contacts-cards
@@ -174,28 +185,38 @@ block content
                   .contacts-cards__position Менеджер по работе с дизйнерами
                   .contacts-cards__tel 8 812 209-18-84
 
-          .designers-form.about-mission
-            h2.designers-form__title Оставить заявку на вызов дизайнера
-            .mission__slide
-              .mission__main
-                .mission__slider-underlay
-                .designers-form__container
-                  form.designers-form__form
-                    label.designers-form__label
-                      input.designers-form__input(placeholder="Имя")
-                    label.designers-form__label
-                      input.designers-form__input(placeholder="E-mail")
-                    label.designers-form__label
-                      input.designers-form__input(placeholder="Телефон")
-                    label.designers-form__checkbox
-                      input(type="checkbox"  id="checkbox")
-                      .checkbox
-                      .designers-form__checkbox-txt Я соглашаюсь на обработку
-                        br
-                        a(href="") персональных данных
-                    button.btn.cover__btn(type="submit") отправить
-              .about-mission__img.designers-form__imgs
-                img(src="assets/images/designer-form-1.jpg", alt="")
-                img(src="assets/images/designer-form-2.jpg", alt="")
-          
+          .designers-products
+            .section__top
+              h2.beta
+                |Вы смотрели 
+              .designers-products__controls(data-catalog-slider-controls="")
+                .arrows.cover__slider-arrows
+                  +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-catalog-slider-prev="")
+                  +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-catalog-slider-next="")
+            .designers-products__catalog
+              .swiper-container(data-catalog-slider="")
+                .swiper-wrapper
+                  - for (i=0; i<5; i++)
+                    .catalog-card.swiper-slide
+                      .catalog-card__labels
+                        .catalog-card__labels-item Скидки
+                        .catalog-card__labels-item Новинки
+                      .catalog-card__top
+                        .catalog-card__layer
+                          .catalog-card__pagination
+                            .catalog-card__pagination-item
+                            .catalog-card__pagination-item
+                            .catalog-card__pagination-item
+                            .catalog-card__pagination-item
+                          .catalog-card__buttons
+                            button.catalog-card__buttons-item
+                              img(src="assets/images/catalog-buttons-1.svg", alt="")
+                            button.catalog-card__buttons-item
+                              img(src="assets/images/catalog-buttons-2.svg", alt="")
+                        img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                      a.catalog-card__bottom(href="")
+                        .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                        .catalog-card__color Серебро
+                        .catalog-card__price 5 292 ₽
+
     include ../partials/_footer.pug

@@ -26,6 +26,8 @@
 
 .title-h2 {
   @include title-h2();
+
+  text-transform: uppercase;
 }
 
 // H3

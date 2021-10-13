@@ -1,0 +1,126 @@
+.landscaping-cards {
+  margin-top: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  position: relative;
+
+  &__top {
+    display: flex;
+  }
+  &__title {
+    // width: calc(#{$col-part-d} * 8);
+
+    font-size: 28px;
+    line-height: 130%;
+    text-transform: uppercase;
+
+    span {
+      font-family: $base-font-family-serif;
+      text-transform: lowercase;
+    }
+  }
+  &__subtitle {
+    font-family: $base-font-family-serif;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 130%;
+
+    margin: 0 calc(#{$col-part-d} + #{$col-gap-d});
+  }
+
+  &-item {
+    width: calc(100% / 3 - 10px);
+    margin-top: 80px;
+    position: relative;
+
+    &__count {
+      position: absolute;
+      z-index: 1;
+
+      left: 40px;
+      bottom: 114px;
+
+      color: $green-lighten;
+      font-family: $base-font-family-serif;
+      font-size: 60px;
+      line-height: 130%;
+    }
+
+    &__ttl {
+      position: absolute;
+      z-index: 1;
+
+      left: 40px;
+      bottom: 40px;
+
+      color: #fff;
+      font-size: 24px;
+      line-height: 130%;
+      text-transform: uppercase;
+
+      width: calc(#{$col-part-d} * 4);
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.landscaping-solutions {
+  margin-top: 160px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__ttl {
+    margin-bottom: 80px;
+    width: 100%;
+  }
+  &__item {
+    width: calc(#{$col-part-d} * 7);
+    border-bottom: 1px solid $green-extra-lighten;
+
+    font-size: 20px;
+    line-height: 120%;
+
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // img {
+    //   flex: none;
+    //   height: 15px;
+    // }
+  }
+  &__bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+  }
+  &__button {
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}
+.landscaping-contacts {
+  margin: 160px 0 80px;
+  
+  .contacts-cards {
+    margin-top: 0;
+  }
+}
+.contacts-cards__ttl {
+  margin-bottom: 80px;
+}

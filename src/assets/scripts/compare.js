@@ -16,7 +16,7 @@ $(() => {
 
   })
 
-  console.log(maxHeight);
+  // console.log(maxHeight);
 
   $('.compare-table__list').each(function () {
 
@@ -27,5 +27,7 @@ $(() => {
     })
     
   })
+
+  
 
 })
