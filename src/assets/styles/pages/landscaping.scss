@@ -205,3 +205,124 @@
     }
   }
 }
+
+.landscaping-stages {
+  margin: 160px 0;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__ttl {
+    width: 100%;
+  }
+
+  &-item {
+    margin-top: 80px;
+    padding-top: 30px;
+    width: calc(33% - 10px);
+    border-top: 1px solid $green;
+
+    display: flex;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-top: 1px solid $green;
+      border-right: 1px solid $green;
+
+      top: -3px;
+      right: 0;
+      transform: rotate(45deg);
+    }
+
+    &__count {
+      width: calc(#{$col-width-d});
+      font-family: $base-font-family-serif;
+      font-size: 60px;
+      line-height: 100%;
+      color: $green;
+    }
+    &__col {
+      width: calc(100% - #{$col-width-d});
+    }
+    &__ttl {
+      font-size: 24px;
+      line-height: 130%;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    &__txt {
+      font-family: $base-font-family-serif;
+      font-size: 16px;
+      line-height: 130%;
+    }
+  } 
+}
+
+.landscaping-pics {
+  display: flex;
+  justify-content: space-between;
+  
+
+  &__col1, &__col2 {
+    width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+    // display: flex;
+    position: relative;
+
+    img {
+      width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      border: 1px solid $green-extra-lighten;
+      border-radius: 0px 0px 900px 900px;
+
+      top: 100px;
+      left: 0;
+      right: calc(#{$col-part-d} * 2);
+      bottom: 0;
+    }
+  }
+  &__col1 {
+    text-align: right;
+  }
+  &__col2 {
+    text-align: left;
+
+    img {
+      margin-top: 100px;
+    }
+
+    &:after {
+      top: 0;
+      right: 0;
+      left: calc(#{$col-part-d} * 2);
+      bottom: 100px;
+    }
+  }
+}
+
+.landscaping-numbers {
+  margin: 160px 0;
+  display: flex;
+
+  &-col {
+    width: calc(#{$col-part-d} * 5);
+
+    &__ttl {
+      font-family: $base-font-family-serif;
+      font-size: 54px;
+      line-height: 90%;
+      margin-bottom: 30px;
+    }
+    &__txt {
+      
+    }
+  }
+}
