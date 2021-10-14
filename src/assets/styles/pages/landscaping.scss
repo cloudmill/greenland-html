@@ -304,6 +304,7 @@
       right: 0;
       left: calc(#{$col-part-d} * 2);
       bottom: 100px;
+      z-index: -1;
     }
   }
 }
@@ -320,9 +321,6 @@
       font-size: 54px;
       line-height: 90%;
       margin-bottom: 30px;
-    }
-    &__txt {
-      
     }
   }
 }

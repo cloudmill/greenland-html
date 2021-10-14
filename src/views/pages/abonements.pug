@@ -1,0 +1,79 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    +header('mainHeader')
+
+    .section.page-wrapper
+      .container
+        
+        .lanscaping-first-screen
+          
+          +breadcrumbs(['озеленение', 'Готовые решения'])
+
+          .lanscaping-first-screen__block
+            h1.title-h1.about-title Абонементы на уход
+              br
+              |за растениями
+            button.btn Запросить консультацию менеджера
+
+          +footerDownload('презентация компании', 'pdf, 12 мб')
+
+          img.lanscaping-first-screen__background(src="assets/images/ready-solutions-1.jpg", alt="")
+
+        .lanscaping-solutions-txt.title-h3
+          |Мы выбрали для Вас растения 
+          span.highlight-1 на все случаи жизни 
+          |в
+          br
+          |самых популярных и красивых дизайнерских кашпо.
+          br
+          |Вам остается только 
+          span.highlight-2 выбрать понравившийся вариант
+          |, а
+          br
+          |мы доставим Вам готовую, бережно пересаженную
+          br
+          |композицию.
+
+
+        .landscaping-contacts
+          .contacts-cards__ttl.title-h2 Профессионалы Green Land
+          .contacts-cards
+            - for (i=0; i<4; i++)
+              .contacts-cards__item
+                img(src="assets/images/designer-contacts-2.png", alt="")
+                .contacts-cards__name Шабала Виктория
+                .contacts-cards__position Менеджер по работе с дизйнерами
+                .contacts-cards__tel 8 812 209-18-84
+
+
+        .designers-form.about-mission
+          h2.designers-form__title Оставить заявку на абонемент
+          .mission__slide
+            .mission__main
+              .mission__slider-underlay
+              .designers-form__container
+                form.designers-form__form
+                  label.designers-form__label
+                    input.designers-form__input(placeholder="Имя")
+                  label.designers-form__label
+                    input.designers-form__input(placeholder="E-mail")
+                  label.designers-form__label
+                    input.designers-form__input(placeholder="Телефон")
+                  label.designers-form__checkbox
+                    input(type="checkbox"  id="checkbox")
+                    .checkbox
+                    .designers-form__checkbox-txt Я соглашаюсь на обработку
+                      br
+                      a(href="") персональных данных
+                  button.btn.cover__btn(type="submit") отправить
+            .about-mission__img.designers-form__imgs
+              img(src="assets/images/designer-form-1.jpg", alt="")
+              img(src="assets/images/designer-form-2.jpg", alt="")
+
+    include ../partials/_footer.pug

@@ -1,0 +1,149 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    +header('mainHeader')
+
+    .section.page-wrapper
+      .container
+        
+        .lanscaping-first-screen
+          
+          +breadcrumbs(['озеленение', 'Готовые решения'])
+
+          .lanscaping-first-screen__block
+            h1.title-h1.about-title Фитодизайн. Озеленение
+              br
+              |интерьеров
+            button.btn Запросить консультацию менеджера
+
+          +footerDownload('презентация компании', 'pdf, 12 мб')
+
+          img.lanscaping-first-screen__background(src="assets/images/ready-solutions-1.jpg", alt="")
+
+
+        .designers-showrooms
+            .ojects-projects-top
+              h2.ojects-projects-top__title
+                |Выполненные проекты
+              a.ojects-projects-top__link(href="")
+                |все проекты
+                img(src="assets/images/objects-arrow.png", alt="")
+            .designers-products-filter
+              ul
+                li.filter-tab.active-tab Входные группы
+                -
+                  var projects = [
+                    'Атриумы',
+                    'Процесс производства',
+                    'Рестораны',
+                  ]
+                each i in projects
+                  li.filter-tab
+                    |#{i}
+
+            .projects__slider.swiper-container(data-projects-slider="")
+              .swiper-wrapper
+                .swiper-slide.projects__slide
+                  .projects__item
+                    .projects__item-slider(data-fade-item-slider="")
+                      .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                        img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                        img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                        img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                        img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                      .bullets.projects__item-slider-bullets
+                        .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                    .projects__item-caption
+                      .epsilon.projects__item-name Отель Crowne Plaza
+                      .projects__item-tags
+                        .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                        .projects__item-tag.text__super-tn.text--uppercase Террасы
+                        .projects__item-tag.text__super-tn.text--uppercase Входные группы
+                .swiper-slide.projects__slide
+                  .projects__item
+                    .projects__item-slider(data-fade-item-slider="")
+                      .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                        img.projects__item-img.is-active(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                        img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                        img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                        img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                      .bullets.projects__item-slider-bullets
+                        .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                    .projects__item-caption
+                      .epsilon.projects__item-name Отель Crowne Plaza
+                      .projects__item-tags
+                        .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                        .projects__item-tag.text__super-tn.text--uppercase Террасы
+                        .projects__item-tag.text__super-tn.text--uppercase Входные группы
+                .swiper-slide.projects__slide
+                  .projects__item
+                    .projects__item-slider(data-fade-item-slider="")
+                      .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                        img.projects__item-img.is-active(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                        img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                        img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                        img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                      .bullets.projects__item-slider-bullets
+                      .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                    .projects__item-caption
+                      .epsilon.projects__item-name Отель Crowne Plaza
+                      .projects__item-tags
+                        .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                        .projects__item-tag.text__super-tn.text--uppercase Террасы
+                        .projects__item-tag.text__super-tn.text--uppercase Входные группы
+              .projects__slider-controls
+                .projects-controls-container
+                  +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+                .projects-controls-container
+                  +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+
+        .landscaping-contacts
+          .contacts-cards__ttl.title-h2 Профессионалы Green Land
+          .contacts-cards
+            - for (i=0; i<4; i++)
+              .contacts-cards__item
+                img(src="assets/images/designer-contacts-2.png", alt="")
+                .contacts-cards__name Шабала Виктория
+                .contacts-cards__position Менеджер по работе с дизйнерами
+                .contacts-cards__tel 8 812 209-18-84
+
+
+        .designers-form.about-mission
+          h2.designers-form__title Оставить заявку на абонемент
+          .mission__slide
+            .mission__main
+              .mission__slider-underlay
+              .designers-form__container
+                form.designers-form__form
+                  label.designers-form__label
+                    input.designers-form__input(placeholder="Имя")
+                  label.designers-form__label
+                    input.designers-form__input(placeholder="E-mail")
+                  label.designers-form__label
+                    input.designers-form__input(placeholder="Телефон")
+                  label.designers-form__checkbox
+                    input(type="checkbox"  id="checkbox")
+                    .checkbox
+                    .designers-form__checkbox-txt Я соглашаюсь на обработку
+                      br
+                      a(href="") персональных данных
+                  button.btn.cover__btn(type="submit") отправить
+            .about-mission__img.designers-form__imgs
+              img(src="assets/images/designer-form-1.jpg", alt="")
+              img(src="assets/images/designer-form-2.jpg", alt="")
+
+    include ../partials/_footer.pug
