@@ -47,6 +47,23 @@
   text-transform: uppercase;
 }
 
+// H4
+
+@mixin title-h4 {
+  font-size: 16px;
+  line-height: 130%;
+
+  @media (min-width: $breakpoint) {
+    font-size: 24px;
+  }
+}
+
+.title-h4 {
+  @include title-h4();
+
+  text-transform: uppercase;
+}
+
 // Txt
 
 .p_large {
