@@ -1,0 +1,17 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+      .section.page-wrapper
+        .container
+          +breadcrumbs(['избранное'])
+
+          h1.title-h1.about-title избранное
+
+    include ../partials/_footer.pug
