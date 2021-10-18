@@ -1,0 +1,69 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    .section.page-wrapper
+      .container
+        +breadcrumbs(['акции'])
+
+        h1.beta.about-title акции
+
+        .about-tabs
+          a.about-tabs__item.about-tabs__item--active(href="") Акции
+          a.about-tabs__item(href="") Предстоящие акции
+
+        .brands-list
+          ul
+            li.filter-tab.active-tab Все
+            -
+              var items = [
+                'Дизайнерам',
+                'Объектам',
+                'Торговым организациям',
+              ]
+            each item in items
+              li.filter-tab
+                |!{item}
+
+        .designers-products
+          .section__top
+            h2.beta
+              |Вы смотрели 
+            .designers-products__controls(data-catalog-slider-controls="")
+              .arrows.cover__slider-arrows
+                +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-catalog-slider-prev="")
+                +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-catalog-slider-next="")
+          .designers-products__catalog
+            .swiper-container(data-catalog-slider="")
+              .swiper-wrapper
+                - for (i=0; i<5; i++)
+                  .catalog-card.swiper-slide
+                    .catalog-card__labels
+                      .catalog-card__labels-item Скидки
+                      .catalog-card__labels-item Новинки
+                    .catalog-card__top
+                      .catalog-card__layer
+                        .catalog-card__pagination
+                          .catalog-card__pagination-item
+                          .catalog-card__pagination-item
+                          .catalog-card__pagination-item
+                          .catalog-card__pagination-item
+                        .catalog-card__buttons
+                          button.catalog-card__buttons-item
+                            img(src="assets/images/catalog-buttons-1.svg", alt="")
+                          button.catalog-card__buttons-item
+                            img(src="assets/images/catalog-buttons-2.svg", alt="")
+                      img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                    a.catalog-card__bottom(href="")
+                      .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                      .catalog-card__color Серебро
+                      .catalog-card__price 5 292 ₽
+
+
+    include ../partials/_footer.pug
