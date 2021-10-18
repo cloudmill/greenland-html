@@ -12,6 +12,58 @@ block content
         .container
           +breadcrumbs(['избранное'])
 
-          h1.title-h1.about-title избранное
+          .favorites-top
+            h1.title-h1 избранное
+            .favorites-top__reset
+              img(src="assets/images/icons/reset-ico.svg", alt="")
+              |очистить избранное
+
+          .favorites-table
+            .favorites-table__top
+
+              .favorites-table__col
+              .favorites-table__col Наименование
+              .favorites-table__col параметры
+              .favorites-table__col стоимость
+              .favorites-table__col наличие
+
+            - for (i=0; i<3; i++)
+              .favorites-table__row
+                .favorites-table__col
+                  img.favorites-table__img(src="assets/images/catalog-1.png", alt="")
+
+                a.favorites-table__col(href="")
+                  .catalog-card__labels
+                    .catalog-card__labels-item Скидки
+                    .catalog-card__labels-item Новинки
+
+                  .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                  .catalog-card__color Серебро
+                  .catalog-card__small Артикул: 13410
+
+                .favorites-table__col
+                  p Высота, см: 
+                    b 7.7
+                  p Диаметр, см: 
+                    b 13.7
+                  p Вес, кг: 
+                    b 2.7
+
+                .favorites-table__col
+                  .favorites-table__price-old 7 200 ₽
+                  .favorites-table__price 5 292 ₽
+
+                .favorites-table__col
+                  |В наличии
+
+                .favorites-table__buttons
+                  .favorites-table__close
+                  button.btn
+                    img(src="assets/images/icons/basket-ico.svg", alt="")
+                    |в корзину
+                  button.btn-white
+                    img(src="assets/images/icons/compare-ico.svg", alt="")
+                    |в сравнение
+
 
     include ../partials/_footer.pug
