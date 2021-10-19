@@ -13,49 +13,134 @@ block content
         +breadcrumbs(['Акции', 'Добавь весны! Скидка 40% на все самое яркое'])
 
         .news-cols
-          .news-col-links.blog-sidebar
+          .action-aside
             a.news-back-link(href="")
               +arrow('white', '#65BA7F', 'left', '15', '13', '46')
               |Все акции
 
+            button.btn
+              |Задать вопрос
 
-          .news-single-main.blog-page-main
-            h1.about-title Добавь весны! Скидка 40% на все самое яркое
+          .blog-page-main
+            h1.title-h1 Добавь весны! Скидка 40% на все самое яркое
+
+            .action-date
+              |до 25 сентября
+
+            .action-desc
+              p Кашпо, горшки, ящики и вазы. Металл, терракота, керамика, пластик. Подборка понравится и частным клиентам, и профессиональным дизайнерам.
+              p Добавьте весны в дом, офис, отель или ресторан! Устройте себе и своим клиентам весеннюю цветотерапию уже сейчас. А наши кашпо и весенние цены в этом помогут!
+
+            .project-products
+              .designers-products-filter
+                ul
+                  li.filter-tab.active-tab
+                    |Все
+                    sup 12
+                  -
+                    var items = [
+                      'Кашпо<sup>3</sup>',
+                      'Горки<sup>6</sup>',
+                      'Ящики<sup>3</sup>',
+                      'Вазоны<sup>6</sup>',
+                    ]
+                  each item in items
+                    li.filter-tab
+                      |!{item}
+              .designers-products__catalog.action-products
+                
+                - for (i=0; i<5; i++)
+                  .catalog-card
+                    .catalog-card__labels
+                      .catalog-card__labels-item Скидки
+                      .catalog-card__labels-item Новинки
+                    .catalog-card__top
+                      .catalog-card__layer
+                        .catalog-card__pagination
+                          .catalog-card__pagination-item
+                          .catalog-card__pagination-item
+                          .catalog-card__pagination-item
+                          .catalog-card__pagination-item
+                        .catalog-card__buttons
+                          button.catalog-card__buttons-item
+                            img(src="assets/images/catalog-buttons-1.svg", alt="")
+                          button.catalog-card__buttons-item
+                            img(src="assets/images/catalog-buttons-2.svg", alt="")
+                      img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                    a.catalog-card__bottom(href="")
+                      .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                      .catalog-card__color Серебро
+
+                - for (i=0; i<4; i++)
+                  .catalog-card
+                    .catalog-card__labels
+                      .catalog-card__labels-item Скидки
+                      .catalog-card__labels-item Новинки
+                    .catalog-card__top
+                      .catalog-card__layer
+                        .catalog-card__pagination
+                          .catalog-card__pagination-item
+                          .catalog-card__pagination-item
+                          .catalog-card__pagination-item
+                          .catalog-card__pagination-item
+                        .catalog-card__buttons
+                          button.catalog-card__buttons-item
+                            img(src="assets/images/catalog-buttons-1.svg", alt="")
+                          button.catalog-card__buttons-item
+                            img(src="assets/images/catalog-buttons-2.svg", alt="")
+                      img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                    a.catalog-card__bottom(href="")
+                      .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                      .catalog-card__color Серебро
+
+            .pagination.no-margin
+              .pagination-list
+                button.pagination__item.is-active 1
+                button.pagination__item 2
+                button.pagination__item 3
+                button.pagination__item 4
+                button.pagination__dots ...
+                button.pagination__item 12
+
+              .pagination-controls
+                +arrow('white', '#CAE8D9', 'left', '15', '13', '46')
+                +arrow('white', '#65BA7F', 'right', '15', '13', '46').arrow-active
+            
 
 
-            .designers-products
-              .section__top
-                h2.beta
-                  |Вы смотрели 
-                .designers-products__controls(data-catalog-slider-controls="")
-                  .arrows.cover__slider-arrows
-                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-catalog-slider-prev="")
-                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-catalog-slider-next="")
-              .designers-products__catalog
-                .swiper-container(data-catalog-slider="")
-                  .swiper-wrapper
-                    - for (i=0; i<5; i++)
-                      .catalog-card.swiper-slide
-                        .catalog-card__labels
-                          .catalog-card__labels-item Скидки
-                          .catalog-card__labels-item Новинки
-                        .catalog-card__top
-                          .catalog-card__layer
-                            .catalog-card__pagination
-                              .catalog-card__pagination-item
-                              .catalog-card__pagination-item
-                              .catalog-card__pagination-item
-                              .catalog-card__pagination-item
-                            .catalog-card__buttons
-                              button.catalog-card__buttons-item
-                                img(src="assets/images/catalog-buttons-1.svg", alt="")
-                              button.catalog-card__buttons-item
-                                img(src="assets/images/catalog-buttons-2.svg", alt="")
-                          img(src=`assets/images/catalog-${i + 1}.png`, alt="")
-                        a.catalog-card__bottom(href="")
-                          .catalog-card__ttl Высокое напольное кашпо MUSCHEL
-                          .catalog-card__color Серебро
-                          .catalog-card__price 5 292 ₽
+        .designers-products
+          .section__top
+            h2.beta
+              |Вы смотрели 
+            .designers-products__controls(data-catalog-slider-controls="")
+              .arrows.cover__slider-arrows
+                +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-catalog-slider-prev="")
+                +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-catalog-slider-next="")
+          .designers-products__catalog
+            .swiper-container(data-catalog-slider="")
+              .swiper-wrapper
+                - for (i=0; i<5; i++)
+                  .catalog-card.swiper-slide
+                    .catalog-card__labels
+                      .catalog-card__labels-item Скидки
+                      .catalog-card__labels-item Новинки
+                    .catalog-card__top
+                      .catalog-card__layer
+                        .catalog-card__pagination
+                          .catalog-card__pagination-item
+                          .catalog-card__pagination-item
+                          .catalog-card__pagination-item
+                          .catalog-card__pagination-item
+                        .catalog-card__buttons
+                          button.catalog-card__buttons-item
+                            img(src="assets/images/catalog-buttons-1.svg", alt="")
+                          button.catalog-card__buttons-item
+                            img(src="assets/images/catalog-buttons-2.svg", alt="")
+                      img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                    a.catalog-card__bottom(href="")
+                      .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                      .catalog-card__color Серебро
+                      .catalog-card__price 5 292 ₽
 
 
     include ../partials/_footer.pug
