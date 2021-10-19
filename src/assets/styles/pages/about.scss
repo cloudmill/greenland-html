@@ -4,6 +4,10 @@
 
 .about-title {
   margin-bottom: 40px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-bottom: 20px;
+  }
 }
 
 .about-tabs {

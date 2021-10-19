@@ -163,6 +163,11 @@
 
 .designers-products {
   margin-top: 160px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+
   &__title {
     text-indent: calc(#{$col-part-d});
     margin-bottom: 60px;
@@ -183,6 +188,11 @@
   }
   &__controls {
     width: 110px;
+
+    @media (max-width: $breakpoint - 1px) {
+      display: none;
+    }
+
     .cover__slider-arrows {
       max-width: 110px;
     }
