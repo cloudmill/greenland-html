@@ -1,0 +1,47 @@
+.actions-list {
+  margin-top: 40px;
+  margin-bottom: -100px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &-item {
+    width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+    margin-bottom: 100px;
+
+    &--small {
+      width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+      margin-bottom: 100px;
+    }
+
+    &__img {
+      position: relative;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &__date {
+      font-size: 12px;
+      line-height: 14px;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      background-color: $green-lighten;
+      border-radius: 0px 10px;
+
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    &__ttl {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  }
+
+  
+}
