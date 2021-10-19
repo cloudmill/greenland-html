@@ -1,0 +1,43 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    .section.page-wrapper
+      .container
+        +breadcrumbs(['Акции', 'Добавь весны! Скидка 40% на все самое яркое'])
+
+        .news-cols
+          .action-aside
+            a.news-back-link(href="")
+              +arrow('white', '#65BA7F', 'left', '15', '13', '46')
+              |Все акции
+
+            button.btn
+              |Задать вопрос
+
+          .blog-page-main
+            h1.title-h1 Добавь весны! Скидка 40% на все самое яркое
+
+            .action-date
+              |до 25 сентября
+
+            .action-desc
+              p Кашпо, горшки, ящики и вазы. Металл, терракота, керамика, пластик. Подборка понравится и частным клиентам, и профессиональным дизайнерам.
+              p Добавьте весны в дом, офис, отель или ресторан! Устройте себе и своим клиентам весеннюю цветотерапию уже сейчас. А наши кашпо и весенние цены в этом помогут!
+
+        .actions-more
+          h2.title-h2 Действующие акции
+
+          - for (i=0; i<4; i++)
+            a.actions-more-item(href="")
+              .actions-more-item__date до 25 сентября
+              .actions-more-item__ttl Скидка 30% на все кашпо
+              .actions-more-item__txt Добавьте весны в дом, офис, отель или ресторан! Добавьте красок в свою жизнь! До 24 февраля Green Land дарит скидку 40% на отобранный ассортимент ярких моделей.
+
+  include ../partials/_footer.pug

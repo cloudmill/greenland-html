@@ -77,3 +77,42 @@
     width: calc(#{$col-part-d} * 3);
   }
 }
+
+.actions-more {
+  margin-top: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .title-h2 {
+    width: 100%;
+    margin-bottom: 80px;
+  }
+
+  &-item {
+    width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+    border-top: 1px solid $green;
+    border-bottom: 1px solid $green-extra-lighten;
+
+    padding: 20px 0 50px;
+
+    &__date {
+      font-size: 12px;
+      line-height: 14px;
+      text-transform: uppercase;
+      margin-bottom: 60px;
+    }
+
+    &__ttl {
+      font-size: 25px;
+      line-height: 120%;
+      margin-bottom: 15px;
+    }
+
+    &__txt {
+      font-size: 13px;
+      line-height: 160%;
+    }
+  }
+}
