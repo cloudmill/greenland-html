@@ -31,27 +31,4 @@
 .compare-table__list {
   margin: 0;
 }
-
-.catalog-card__labels {
-  position: relative;
-  .catalog-card__buttons-item::after, .catalog-card__buttons-item::before {
-    content: '';
-    position: absolute;
-    width: 1px;
-    height: 15px;
-    background-color: $black;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    
-  }
-  .catalog-card__buttons-item::after {
-    transform: rotate(45deg);
-  }
-  .catalog-card__buttons-item::before {
-    transform: rotate(135deg);
-  }
-}
                     

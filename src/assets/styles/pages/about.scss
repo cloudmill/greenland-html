@@ -16,7 +16,11 @@
   &__item {
     padding-bottom: 10px;
     border-bottom: 1px solid $green-extra-lighten;
-    font-size: $base-font-size;
+    font-size: 16px;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 12px;
+    }
 
     &:not(:first-child) {
       margin-left: 20px;

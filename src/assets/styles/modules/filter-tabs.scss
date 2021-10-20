@@ -1,6 +1,10 @@
 .brands-list {
   margin-top: 40px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 20px;
+  }
+
   ul {
     display: flex;
 
@@ -23,8 +27,17 @@
 
   white-space: nowrap;
 
+  @media (max-width: $breakpoint - 1px) {
+    padding: 5px 15px;
+    font-size: 12px;
+  }
+
   &:not(:last-child) {
     margin-right: 20px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-right: 10px;
+    }
   }
 
   sup {

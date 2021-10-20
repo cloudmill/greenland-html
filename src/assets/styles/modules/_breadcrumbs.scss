@@ -37,6 +37,9 @@
   }
 
   &__main {
+    display: flex;
+    align-items: center;
+    
     .breadcrumbs__link {
       font-family: $base-font-family-serif;
       // font-style: italic;

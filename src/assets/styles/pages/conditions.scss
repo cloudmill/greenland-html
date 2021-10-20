@@ -168,6 +168,21 @@
     margin-top: 40px;
   }
 
+  &__top {
+    margin-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin: 0;
+    }
+  }
+
   &__title {
     text-indent: calc(#{$col-part-d});
     margin-bottom: 60px;
@@ -201,102 +216,6 @@
 
 .designers-products__catalog {
   display: flex;
-}
-
-.catalog-card {
-  width: 304px;
-  border: 1px solid $green-extra-lighten;
-
-  &:not(:last-child) {
-    border-right: none;
-  }
-
-  &__top {
-    position: relative;
-  }
-  &__layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    padding: 10px 10px 0 10px;
-
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-  &__labels {
-    display: flex;
-    padding: 10px;
-
-    &-item {
-      padding: 8px 16px;
-      border: 1px solid $green-extra-lighten;
-      border-radius: 0px 10px;
-
-      &:not(:first-child) {
-        margin-left: 5px;
-      }
-    }
-  }
-  &__pagination {
-    display: flex;
-    &-item {
-      width: 6px;
-      height: 6px;
-      background-color: $green-extra-lighten;
-
-      &:not(:first-child) {
-        margin-left: 10px;
-      }
-    }
-  }
-  &__buttons {
-    display: flex;
-    &-item {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      background-color: #fff;
-      border: 1px solid $green-extra-lighten;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      &:not(:first-child) {
-        margin-left: 5px;
-      }
-    }
-  }
-  &__bottom {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-
-    padding: 20px;
-  }
-  &__ttl {
-    width: 100%;
-    margin-bottom: 15px;
-
-    font-size: 16px;
-    line-height: 120%;
-  }
-  &__color {
-    font-family: $base-font-family-serif;
-    font-style: italic;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 130%;
-  }
-  &__price {
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 120%;
-  }
 }
 
 .designers-showrooms {
