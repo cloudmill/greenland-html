@@ -39,6 +39,10 @@
   }
   .blog-page-main {
     width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
   }
 }
 

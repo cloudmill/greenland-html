@@ -9,6 +9,7 @@
 
   @media (max-width: $breakpoint - 1px) {
     flex-direction: column;
+    margin-top: 20px;
   }
 }
 
@@ -226,6 +227,10 @@
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
+
+  @media (max-width: $breakpoint - 1px) {
+    font-size: 12px;
+  }
 
   .arrow {
     background-color: $green;
