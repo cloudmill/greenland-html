@@ -170,55 +170,6 @@
   }
 }
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &-list {
-    display: flex;
-  }
-
-  &__item {
-    width: 46px;
-    height: 46px;
-    font-size: 14px;
-    line-height: 16px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:not(:first-child) {
-      margin-left: 12px;
-    }
-
-    &.is-active {
-      border-radius: 0px 10px;
-      border: 1px solid $green-extra-lighten;
-    }
-  }
-  &__dots {
-    font-size: 14px;
-    line-height: 16px;
-    margin-left: 12px;
-  }
-
-  &-controls {
-    display: flex;
-    justify-content: space-between;
-    width: 102px;
-    margin-left: 70px;
-
-    .arrow {
-      background-color: #CAE8D9;
-    }
-    .arrow-active {
-      background-color: $green;
-    }
-  }
-}
-
 .news-back-link {
   display: flex;
   align-items: center;
