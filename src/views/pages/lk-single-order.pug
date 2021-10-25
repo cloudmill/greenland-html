@@ -10,7 +10,7 @@ block content
 
     .section.page-wrapper
       .container
-        +breadcrumbs(['РЕДАКТИРОВАТЬ ПРОФИЛЬ'])
+        +breadcrumbs(['Выполненные заказы', 'Заказ № 5523456'])
 
         h1.title-h1.about-title Заказ № 5523456
 
@@ -33,3 +33,88 @@ block content
             button.lk-sidebar__exit.lk-sidebar__item Выйти
 
           .lk-main
+            .lk-order-top
+              .lk-order-top__item
+                .lk-order-top__ttl Дата заказа
+                .lk-order-top__value 16.04.2021
+              .lk-order-top__item
+                .lk-order-top__ttl Дата отправки
+                .lk-order-top__value 16.04.2021
+              .lk-order-top__item
+                .lk-order-top__ttl Сумма заказа
+                .lk-order-top__value 12 540 ₽
+
+            .favorites-table.lk-order-list
+              .favorites-table__top
+
+                .favorites-table__col
+                .favorites-table__col товар
+                .favorites-table__col
+                .favorites-table__col количество
+                .favorites-table__col цена
+
+              - for (i=0; i<3; i++)
+                .favorites-table__row
+                  .favorites-table__col
+                    img.favorites-table__img(src="assets/images/catalog-1.png", alt="")
+
+                  a.favorites-table__col(href="")
+                    .catalog-card__labels
+                      .catalog-card__labels-item Скидки
+                      .catalog-card__labels-item Новинки
+
+                    .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                    .catalog-card__color Серебро
+                    .catalog-card__small Артикул: 13410
+
+                  .favorites-table__col
+                    p Высота, см: 
+                      b 7.7
+                    p Диаметр, см: 
+                      b 13.7
+                    p Вес, кг: 
+                      b 2.7
+
+                  .favorites-table__col 3
+
+                  .favorites-table__col
+                    .favorites-table__price-old 7 200 ₽
+                    .favorites-table__price 5 292 ₽
+
+            button.lk-repeat-order повторить заказ
+
+            .lk-delivery-info
+              .lk-delivery-info__ttl.title-h4 Информация о доставке
+
+              -
+                var items = [
+                  {
+                    name: 'Адрес доставки',
+                    value: '192252 Санкт-Петербург. Пр. Луначарского д. 19',
+                  },
+                  {
+                    name: 'Кому',
+                    value: 'Щербаков Кирилл Владимирович',
+                  },
+                  {
+                    name: 'Телефон',
+                    value: '+7 (911) 286-25-63',
+                  },
+                  {
+                    name: 'Способ оплаты',
+                    value: 'Курьером наличными',
+                  },
+                  {
+                    name: 'Способ доставки',
+                    value: 'Самовывоз с точки выдачи',
+                  },
+                ]
+
+              each item in items
+                .lk-delivery-info__item
+                  .lk-delivery-info__name #{item.name}
+                  .lk-delivery-info__value #{item.value}
+
+            a.news-back-link(href="")
+              +arrow('white', '#65BA7F', 'left', '15', '13', '46')
+              |Вернуться к списку заказов

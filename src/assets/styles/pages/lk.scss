@@ -119,6 +119,142 @@
     padding-bottom: 15px;
     border-bottom: 1px solid $green-extra-lighten;
     margin-bottom: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    &-label {
+      font-size: 12px;
+      line-height: 160%;
+      color: $green;
+      width: 100%;
+      margin-bottom: 5px;
+    }
   }
-  
+}
+
+.lk-password {
+  width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+  display: flex;
+  flex-direction: column;
+
+  label {
+    margin-bottom: 20px;
+
+    span {
+      opacity: 0;
+      font-size: 12px;
+      line-height: 160%;
+      color: $green;
+    }
+
+    &:active {
+      span {
+        opacity: 1;
+      }
+    }
+  }
+
+  input {
+    width: 100%;
+    padding-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid $green-extra-lighten;
+
+    font-size: 16px;
+    line-height: 160%;
+
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
+  .btn {
+    margin-top: 20px;
+  }
+
+  &-restore {
+    margin-top: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+  }
+}
+
+.lk-order-top {
+  display: flex;
+
+  &__item {
+    width: calc(#{$col-part-d} * 2);
+  }
+
+  &__ttl {
+    font-size: 14px;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__value {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    text-transform: uppercase;
+  }
+}
+
+.lk-order-list {
+  margin-top: 60px;
+
+  .favorites-table__col:nth-child(5) {
+    width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
+  }
+}
+
+.lk-repeat-order {
+  margin-top: 40px;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
+.lk-delivery-info {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  display: flex;
+  // justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__ttl {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  &__item {
+    width: calc(#{$col-part-d} * 4);
+    margin-bottom: 40px;
+    padding-right: 40px;
+
+    &:nth-child(3) {
+      width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+    }
+  }
+
+  &__name {
+    font-size: 14px;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__value {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 130%;
+    text-transform: uppercase;
+  }
 }

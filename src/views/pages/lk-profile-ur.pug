@@ -44,8 +44,55 @@ block content
 
             .lk-profile-info
 
-              - for (i=0; i<10; i++)
+              -
+                var items = [
+                  {
+                    label: 'Имя',
+                    value: 'Кирилл',
+                  },
+                  {
+                    label: 'Фамилия',
+                    value: 'Щербаков',
+                  },
+                  {
+                    label: 'E-mail',
+                    value: 'ksh@cloudmill.ru',
+                  },
+                  {
+                    label: 'Телефон',
+                    value: '+7 911 286-25-63',
+                  },
+                  {
+                    label: 'Город',
+                    value: 'Санкт-Петербург',
+                  },
+                  {
+                    label: 'Название компании',
+                    value: 'Альфаиомега',
+                  },
+                  {
+                    label: 'Сфера деятельности',
+                    value: 'Интерьер бюро',
+                  },
+                  {
+                    label: 'ИНН',
+                    value: '1213214598',
+                  },
+                  {
+                    label: 'Индекс',
+                    value: '192254',
+                  },
+                  {
+                    label: 'Адрес',
+                    value: 'пр. Луначарского д. 19',
+                  },
+                ]
+
+              each item in items
                 .lk-profile-info__item
-                  |Кирилл
+                  span.lk-profile-info__item-label #{item.label}
+                  |#{item.value}
+                  button
+                    img(src="assets/images/icons/edit-icon.svg", alt="")
 
     include ../partials/_footer.pug
