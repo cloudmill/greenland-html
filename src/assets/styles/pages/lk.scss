@@ -34,6 +34,10 @@
 
 .lk-main {
   width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
+
+  .news-back-link {
+    margin-bottom: 0;
+  }
 }
 
 .lk-table {
@@ -256,5 +260,40 @@
     font-size: 14px;
     line-height: 130%;
     text-transform: uppercase;
+  }
+}
+
+.lk-big-txt {
+  margin: 80px 0 60px;
+  font-size: 36px;
+  line-height: 120%;
+
+  width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
+
+  a {
+    color: $green;
+  }
+}
+
+.lk-faq-form {
+  width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
+
+  .designers-form__container {
+    justify-content: flex-end;
+  }
+  .designers-form__form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .designers-form__label {
+    width: 100%;
+  }
+  .designers-form__checkbox {
+    width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+    padding-right: calc(#{$col-part-d});
+  }
+  .designers-form__form button[type="submit"] {
+    width: calc(#{$col-part-d} * 2);
+    margin-top: 0;
   }
 }
