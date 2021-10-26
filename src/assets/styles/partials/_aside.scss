@@ -122,6 +122,11 @@
   &__logo {
     width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
     text-align: center;
+
+    svg {
+      width: 100%;
+    }
+
     @media (min-width: $breakpoint) {
       display: none;
     }

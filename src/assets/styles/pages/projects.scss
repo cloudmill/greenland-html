@@ -1,6 +1,10 @@
 .projects-subtitle {
   margin: 40px 0 60px;
-  font-size: $font-size-h3;
+  @include title-h3;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin: 20px 0;
+  }
 
   span {
     position: relative;
@@ -11,6 +15,10 @@
       left: 0;
       bottom: -12px;
       z-index: -1;
+
+      @media (max-width: $breakpoint - 1px) {
+        display: none;
+      }
     }
   }
 }
@@ -21,12 +29,21 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 20px;
+  }
 }
 
 .projects-card {
   width: calc(100% / 3 - 10px);
   margin-bottom: 60px;
   position: relative;
+
+  @media (max-width: $breakpoint - 1px) {
+    width: 100%;
+    margin-bottom: 40px;
+  }
 
   .projects__item-caption {
     flex-direction: column;
@@ -36,6 +53,12 @@
     flex: unset;
     max-width: unset;
     margin-bottom: 15px;
+
+    font-size: 20px;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 14px;
+    }
   }
 
   .projects__item-tags {
@@ -48,14 +71,37 @@
   }
 }
 
+.project-page-main {
+  width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
+
+  @media (max-width: $breakpoint - 1px) {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
 .project-info {
   display: flex;
   
   padding-top: 30px;
 
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+    padding-top: 20px;
+  }
+
   &__col {
     margin-left: calc(#{$col-part-d});
     width: calc(#{$col-part-d} * 4);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-left: 0;
+
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
   }
   &__ttl {
     font-weight: 600;
@@ -63,10 +109,18 @@
     line-height: 14px;
     text-transform: uppercase;
     margin-bottom: 10px;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 10px;
+    }
   }
   &__txt {
     font-size: 16px;
     line-height: 140%;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -79,6 +133,10 @@
 
   h3 {
     margin-bottom: 80px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
   }
   .designers-products-filter {
     margin-bottom: 60px;
@@ -97,13 +155,57 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
+  @media (max-width: $breakpoint - 1px) {
+    width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+
   &__item {
     width: calc(50% - 10px);
     margin-bottom: 20px;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: calc(#{$col-part-m} * 3 - #{$col-gap-m});
+      margin-bottom: 0;
+
+      &:not(:last-child) {
+        margin-right: $col-gap-m;
+      }
+    }
   }
 }
 
 .project-review {
   margin-top: 80px;
   height: 390px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+    width: 100%;
+    height: 238px;
+
+    img {
+      width: 200px;
+    }
+  }
+}
+
+.project-back-link {
+  @media (max-width: $breakpoint - 1px) {
+    display: none;
+  }
+}
+
+.project-aside-btn {
+  margin-top: 40px;
+  width: calc(#{$col-part-d} * 3);
+
+  @media (max-width: $breakpoint - 1px) {
+    width: calc(#{$col-part-m} * 3);
+  }
+}
+
+.project-pagination {
+  margin: 0;
 }

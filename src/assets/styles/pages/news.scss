@@ -1,5 +1,9 @@
 .news-filter {
   margin-top: 80px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 20px;
+  }
 }
 
 .news-cols {
@@ -28,6 +32,10 @@
     line-height: 130%;
     text-transform: uppercase;
 
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 16px;
+    }
+
     span {
       font-family: $base-font-family-serif;
       text-transform: none;
@@ -35,11 +43,20 @@
   }
   &__list {
     margin-top: 40px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 20px;
+    }
+
     li {
       font-weight: 600;
       font-size: 13px;
       line-height: 15px;
       text-transform: uppercase;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 12px;
+      }
     }
     li:not(:first-child) {
       margin-top: 15px;
@@ -50,9 +67,23 @@
 .news-subscribe {
   margin-top: 60px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+
   .designers-form__form {
     margin-top: 40px;
-    width: calc(#{$col-part-d} * 3)
+    width: calc(#{$col-part-d} * 3);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
+  }
+
+  .designers-form__form button[type="submit"] {
+    @media (max-width: $breakpoint - 1px) {
+      width: calc(#{$col-part-m} * 3);
+    }
   }
 }
 
@@ -79,6 +110,7 @@
 
   @media (max-width: $breakpoint - 1px) {
     width: 100%;
+    margin-bottom: 40px;
   }
 
   &__date {
@@ -86,11 +118,20 @@
     font-size: 12px;
     line-height: 14px;
     text-transform: uppercase;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 10px;
+    }
   }
   &__title {
     margin: 20px 0 50px;
     font-size: 25px;
     line-height: 120%;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 18px;
+      margin: 20px 0;
+    }
   }
   img {
     width: 100%;
@@ -102,6 +143,10 @@
     font-size: 12px;
     line-height: 14px;
     text-transform: uppercase;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 10px;
+    }
   }
   &__tag:not(:first-child) {
     margin-left: 10px;
@@ -111,6 +156,11 @@
     width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
     font-size: 13px;
     line-height: 160%;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      font-size: 12px;
+    }
   }
 }
 
@@ -178,22 +228,28 @@
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
+  margin-bottom: 80px;
 
   @media (max-width: $breakpoint - 1px) {
     font-size: 12px;
+    margin-bottom: 40px;
   }
 
   .arrow {
     background-color: $green;
     margin-right: 20px;
   }
-  margin-bottom: 80px;
 }
 
 .news-single-main {
   width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
 
   padding-bottom: 160px;
+
+  @media (max-width: $breakpoint - 1px) {
+    padding-bottom: 40px;
+    width: 100%;
+  }
 }
 
 .news-single__info {
@@ -226,6 +282,10 @@
 .news-single__txt {
   line-height: 160%;
   width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+
+  @media (max-width: $breakpoint - 1px) {
+    width: 100%;
+  }
 
   ul {
     margin: 40px 0;
@@ -272,6 +332,10 @@
   align-items: center;
 
   margin-bottom: 80px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-bottom: 20px;
+  }
 }
 .other-news__controls {
   display: flex;

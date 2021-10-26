@@ -14,9 +14,9 @@ block content
 
         .news-cols
           .news-col-links
-            a.news-back-link(href="")
+            a.news-back-link.project-back-link(href="")
               +arrow('white', '#65BA7F', 'left', '15', '13', '46')
-              |Все новости
+              |Все проекты
 
             .news-social
               .news-social__title
@@ -35,10 +35,10 @@ block content
                   li
                     a(href="") #{item}
 
-            button.btn.cover__btn.mt300 задать вопрос
+            button.btn.cover__btn.project-aside-btn задать вопрос
 
-          .news-single-main.blog-page-main
-            h1.about-title Как пересадить монстеру
+          .project-page-main
+            h1.about-title.title-h1 Терраса ЛИДЕР кОНСАЛТ
 
             img.blog-image-main(src="assets/images/project-page-1.jpg", alt="")
 
@@ -51,7 +51,7 @@ block content
                 .project-info__txt Терраса, бизнес-центр, озеленение офиса
 
             .project-products
-              h3
+              h3.title-h2
                 |На проекте использовалось
               .designers-products-filter
                 ul
@@ -94,20 +94,20 @@ block content
                                 img(src="assets/images/catalog-buttons-1.svg", alt="")
                               button.catalog-card__buttons-item
                                 img(src="assets/images/catalog-buttons-2.svg", alt="")
-                          img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                          img.catalog-card__main-img(src=`assets/images/catalog-${i + 1}.png`, alt="")
                         a.catalog-card__bottom(href="")
                           .catalog-card__ttl Высокое напольное кашпо MUSCHEL
                           .catalog-card__color Серебро
                           .catalog-card__price 5 292 ₽
 
             .blog-body
-              h3 о проекте
+              h3.title-h3 о проекте
               p Открытая терраса на 8 этаже офиса компании ЛИДЕР КОНСАЛТ Менеджмент на Лиговском проспекте в г. Санкт-Петербург.
               p В проекте использованы кашпо Pottery Pots  модель Orb, а также искусственные Самшиты 
               p Бюджет до 100 000 руб
-              h3 С какими проблемами столкнулись
+              h3.title-h3 С какими проблемами столкнулись
               p Не стали использовать кашпо из  3D пластик (хоть они имеют идеальные характеристики для общественных зон:  UV фильтр, морозостойкость, не царапаются), тк на 8 этаже был ветер и кашпо использовалось без земли.
-              h3 Как решали
+              h3.title-h3 Как решали
               p Выбрали кашпо из файбергласса устойчивой формы, фактура кашпо идеально подошла к оформлению террасы. Файбергласс отлично подходит для открытых террас, тк не выгорает на солнце, имеет хорошую устойчивость к царапинам и сколам, разнообразие фактур и форм помогает подобрать вариант под любое пространство.
 
             .project-photos

@@ -5,6 +5,11 @@
     flex-wrap: wrap;
 
     margin-bottom: -20px;
+
+    @media (max-width: $breakpoint - 1px) {
+      flex-wrap: nowrap;
+      overflow-x: scroll;
+    }
   }
   li {
     margin-bottom: 20px;
@@ -15,27 +20,56 @@
   width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
   margin-bottom: 80px;
 
+  @media (max-width: $breakpoint - 1px) {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
   .projects__item-caption {
     flex-wrap: wrap;
+
+    @media (max-width: $breakpoint - 1px) {
+      flex-direction: column;
+    }
   }
   .news-card__date {
     width: calc(#{$col-part-d} * 4);
     margin-bottom: 18px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin: 0 0 20px;
+      width: 100%;
+    }
   }
   .projects__item-name {
     flex: unset;
     max-width: unset;
     width: calc(#{$col-part-d} * 4);
+    font-size: 20px;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      font-size: 14px;
+    }
   }
   .projects__item-tags {
     width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
     margin-top: -32px;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-top: 20px;
+    }
   }
 }
 
 .news-cols {
   .blog-sidebar {
     width: calc(#{$col-part-d} * 4);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
   }
   .blog-page-main {
     width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
@@ -54,17 +88,53 @@
   display: flex;
   margin-top: 30px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
   &-col {
     margin-left: calc(#{$col-part-d});
-    width: c;
+    min-width: calc(#{$col-part-d} * 2);
 
     text-transform: uppercase;
     font-size: 12px;
     line-height: 14px;
 
+    @media (max-width: $breakpoint - 1px) {
+      
+      font-size: 10px;
+      min-width: none;
+
+      &:first-child {
+        width: 100%;
+        
+        margin-left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+
+
+        .blog-info-col__ttl {
+          width: 100%;
+        }
+        .blog-info-col__item:last-child {
+          margin-left: 10px;
+        }
+      }
+
+      &:nth-child(2) {
+        margin-left: 0;
+      }
+    }
+
     &__ttl {
       margin-bottom: 10px;
       font-weight: 600;
+
+      @media (max-width: $breakpoint - 1px) {
+        margin-bottom: 5px;
+      }
     }
     &__item:not(:first-child) {
       margin-top: 8px;
@@ -76,16 +146,34 @@
   margin-top: 80px;
   width: calc(#{$col-part-d} * 8);
 
+  @media (max-width: $breakpoint - 1px) {
+    width: 100%;
+    margin-top: 40px;
+  }
+
   p {
     font-size: 18px;
     line-height: 160%;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 14px;
+    }
   }
   h3 {
     margin: 80px 0 40px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin: 40px 0 20px;
+    }
   }
   img {
     width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
     margin: 80px 0;
     display: block;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin: 20px 0;
+    }
   }
 }
