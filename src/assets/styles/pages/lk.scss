@@ -297,3 +297,31 @@
     margin-top: 0;
   }
 }
+
+.lk-videos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__item {
+    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+    margin-bottom: 60px;
+  }
+
+  &__count {
+    font-family: $base-font-family-serif;
+    font-size: 16px;
+    line-height: 130%;
+
+    margin: 20px 0 10px;
+  }
+
+  &__ttl {
+    text-transform: uppercase;
+  }
+}
