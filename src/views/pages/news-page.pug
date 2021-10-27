@@ -70,7 +70,7 @@ block content
 
             img.news-single__img(src="assets/images/news-single-1-2x.jpg", alt="")
 
-            h3.news-single__subtitle Горшки и кашпо
+            h3.news-single__subtitle.title-h3 Горшки и кашпо
 
             .news-single__txt
               p Новинка итальянского бренда Дерома — 
@@ -80,14 +80,17 @@ block content
               p Коллекция Копенгаген полным составом! А также лаконичные кашпо и квадро Олл и Куб.
 
               ul
-                li Новинка итальянского бренда Дерома —&nbsp;
-                  a(href="") Вазон Сиена
-                li Коллекция Копенгаген полным составом
-                li А также лаконичные кашпо и квадро Олл и Куб
+                li
+                  p Новинка итальянского бренда Дерома —&nbsp;
+                    a(href="") Вазон Сиена
+                li
+                  p Коллекция Копенгаген полным составом
+                li
+                  p А также лаконичные кашпо и квадро Олл и Куб
 
         .other-news
           .other-news__top
-            h2 другие новости
+            h2.title-h2 другие новости
             .other-news__controls
               +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-other-slider-prev="")
               +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-other-slider-next="")

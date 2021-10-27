@@ -12,15 +12,22 @@ block content
       .container
         +breadcrumbs(['клиентам'])
 
-        .clients-top
-          h1.beta клиентам
-          .about-tabs
-            a.about-tabs__item(href="") Возврат денеженых средств
-            a.about-tabs__item.about-tabs__item--active(href="") Доставка
-            a.about-tabs__item(href="") Оплата
+        h1.title-h1.about-title клиентам
+
+        .about-tabs
+          a.about-tabs__item(href="") Возврат денеженых средств
+          a.about-tabs__item.about-tabs__item--active(href="") Доставка
+          a.about-tabs__item(href="") Оплата
+
+        //- .clients-top
+        //-   h1.beta клиентам
+        //-   .about-tabs
+        //-     a.about-tabs__item(href="") Возврат денеженых средств
+        //-     a.about-tabs__item.about-tabs__item--active(href="") Доставка
+        //-     a.about-tabs__item(href="") Оплата
 
         .delivery-stages
-          h3.delivery-stages__ttl ПРОЦЕДУРА ПОЛУЧЕНИЯ ЗАКАЗА
+          h3.delivery-stages__ttl.title-h3 ПРОЦЕДУРА ПОЛУЧЕНИЯ ЗАКАЗА
           .delivery-stages__item Внимательно проверьте количество и качество товара при его приёмке от представителя транспортной компании, если доставка до адреса или на терминале ТК.
           .delivery-stages__item При отсутствии каких-либо претензий вам необходимо получить от сотрудника транспортной компании сопроводительные документы на товар и подписать их.
           .delivery-stages__item Обязательно перед подписанием сопроводительных документов в присутствии сотрудника транспортной компании внимательно осмотреть заказ, убедиться, что он полностью соответствует по модели, цвету, количество. Убедитесь в отсутствии видимых механических и иных внешних повреждений.
