@@ -12,7 +12,7 @@ block content
       .container
         +breadcrumbs(['Сравнение'])
 
-        h1.title-h1 Сравнение
+        h1.title-h1.about-title Сравнение
 
         .blog-filter
           ul
@@ -28,7 +28,7 @@ block content
                 |!{item}
 
         .compare-table
-          .compare-table__col
+          .compare-table__col.compare-col-fixed
             .designers-products__controls(data-catalog-slider-controls="")
               .arrows.cover__slider-arrows
                 +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-catalog-slider-prev="")

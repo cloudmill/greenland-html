@@ -1,6 +1,6 @@
 .refund-txt {
   ul {
-    // margin-top: 60px;
+    // margin: 40px;
   }
   li {
     display: flex;
@@ -15,12 +15,62 @@
       margin-top: 10px;
       margin-right: 40px;
       flex: none;
+
+      @media (max-width: $breakpoint - 1px) {
+        margin-top: 8px;
+        margin-right: 20px;
+      }
     }
     &:not(:last-child) {
       margin-bottom: 20px;
+
+      @media (max-width: $breakpoint - 1px) {
+        margin-bottom: 10px;
+      }
     }
   }
-  
+}
+
+.refund-subtitle {
+  font-size: 22px;
+
+  @media (max-width: $breakpoint - 1px) {
+    font-size: 16px;
+  }
+}
+
+.refund-second-row {
+  margin-top: 80px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+}
+
+.refund-block-ttl {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-right: calc(#{$col-part-d} + #{$col-gap-d});
+
+  @media (max-width: $breakpoint - 1px) {
+    font-size: 14px;
+  }
+}
+
+.refund-ul {
+  margin-top: 60px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 20px;
+  }
+}
+
+.refund-ul-last {
+  margin: 40px 0;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin: 20px 0;
+  }
 }
 
 .fw600 {

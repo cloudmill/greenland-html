@@ -31,4 +31,9 @@
 .compare-table__list {
   margin: 0;
 }
-                    
+
+.compare-table__col.compare-col-fixed {
+  @media (max-width: $breakpoint - 1px) {
+    display: none;
+  }
+}
