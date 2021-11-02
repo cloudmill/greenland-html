@@ -12,19 +12,24 @@ block content
       .container
         +breadcrumbs(['работа с нами', 'Условия работы с дизайнерами'])
 
-        h1.beta.about-title Условия работы с дизайнерами
+        h1.title-h1.about-title Условия работы с дизайнерами
 
         .about-tabs
           a.about-tabs__item.about-tabs__item--active(href="") Условия работы с дизайнерами
           a.about-tabs__item(href="") Условия работы для объектов
           a.about-tabs__item(href="") Условия работы для дистрибьютеров и оптовых покупателей
 
+        //- .about-tabs-mob
+        //-   a.about-tabs__item.about-tabs__item--active(href="") Для дизайнеров
+        //-   a.about-tabs__item(href="") Для объектов
+        //-   a.about-tabs__item(href="") Для дистрибьютеров
+
         .about-mission
           
           .mission__slide
             .mission__main
               .mission__slider-underlay
-              .gamma.mission__heading.designers-highlight
+              .mission__heading.designers-highlight
                 .
                   Дизайнерам интерьера #[br] архитекторным бюро #[br] #[span.accent  #[span.designers-highlight-1 декораторам,] #[br] #[span.designers-highlight-2 фитодизайнерам] #[br] #[span.designers-highlight-3 и озеленителям]]
             img.about-mission__img(src="assets/images/conditions-1.jpg" alt="")
@@ -50,7 +55,7 @@ block content
                   |#{item}
 
         .designers-offers
-          h2.designers-offers__title Если вы дизайнер, Green Land готов предложить
+          h2.designers-offers__title.title-h2 Если вы дизайнер, Green Land готов предложить
           .designers-offers__table
             ul
               -
@@ -71,7 +76,7 @@ block content
                   |#{item}
 
         .designers-benefits
-          h2.designers-benefits__title Выгода от работы с нами
+          h2.designers-benefits__title.title-h2 Выгода от работы с нами
           .designers-benefits__table
             ul
               -
@@ -119,7 +124,7 @@ block content
                     .designers-benefits__desc #{item.desc}
 
         .designers-form.about-mission
-          h2.designers-form__title Оставить заявку на консультацию
+          h2.designers-form__title.title-h2 Оставить заявку на консультацию
           .mission__slide
             .mission__main
               .mission__slider-underlay
@@ -143,7 +148,7 @@ block content
               img(src="assets/images/designer-form-2.jpg", alt="")
 
         .designers-products
-          h3.designers-products__title
+          h3.designers-products__title.title-h3
             |Наша продукция 
             span не выбивается 
             br
@@ -189,14 +194,14 @@ block content
                             img(src="assets/images/catalog-buttons-1.svg", alt="")
                           button.catalog-card__buttons-item
                             img(src="assets/images/catalog-buttons-2.svg", alt="")
-                      img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                      img.catalog-card__img(src=`assets/images/catalog-${i + 1}.png`, alt="")
                     a.catalog-card__bottom(href="")
                       .catalog-card__ttl Высокое напольное кашпо MUSCHEL
                       .catalog-card__color Серебро
                       .catalog-card__price 5 292 ₽
 
         .designers-showrooms
-          h3.designers-showrooms__title
+          h3.designers-showrooms__title.title-h3
             |Шоу-румы в Москве и Санкт-Петербурге — 
             br
             |возможность 
@@ -232,7 +237,7 @@ block content
 
         .designers-contacts
           .designers-contacts__top
-            h2.designers-contacts__title Начать работу с нами
+            h2.designers-contacts__title.title-h2 Начать работу с нами
             .designers-contacts__subtitle Звоните или пишите нам. Мы расскажем и о других 
               br
               |преимуществах работы с Green Land.
@@ -241,7 +246,7 @@ block content
               .designers-contacts__img
                 img(src="assets/images/designer-contacts-1.png", alt="")
               .designers-contacts__desc
-                h4.designers-contacts__name Шабала Виктория
+                .designers-contacts__name Шабала Виктория
                 .designers-contacts__position Менеджер по работе с дизайнерами
                 .designers-contacts__contacts
                   span.designers-contacts__tel 8 911 924-50-84
@@ -254,7 +259,7 @@ block content
               .designers-contacts__img
                 img(src="assets/images/designer-contacts-2.png", alt="")
               .designers-contacts__desc
-                h4.designers-contacts__name Филиппова Марина
+                .designers-contacts__name Филиппова Марина
                 .designers-contacts__position Менеджер по работе с дизайнерами
                 .designers-contacts__contacts
                   span.designers-contacts__tel 8 911 924-50-84

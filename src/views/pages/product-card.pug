@@ -1,0 +1,79 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    .section.page-wrapper
+      .container
+        +breadcrumbs(['Цветочные горшки и кашпо', 'Пластиковые горшки и кашпо', 'Уличный вазон KATO'])
+
+        h1.title-h1.about-title Высокое напольное кашпо MUSCHEL
+
+        .category-row
+         - for (i=0; i<5; i++)
+          .catalog-card
+            .catalog-card__labels
+              .catalog-card__labels-item Скидки
+              .catalog-card__labels-item Новинки
+            .catalog-card__top
+              .catalog-card__layer
+                .catalog-card__pagination
+                  .catalog-card__pagination-item
+                  .catalog-card__pagination-item
+                  .catalog-card__pagination-item
+                  .catalog-card__pagination-item
+                .catalog-card__buttons
+                  button.catalog-card__buttons-item
+                    img(src="assets/images/catalog-buttons-1.svg", alt="")
+                  button.catalog-card__buttons-item
+                    img(src="assets/images/catalog-buttons-2.svg", alt="")
+              img.catalog-card__main-img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+            a.catalog-card__bottom(href="")
+              .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+              .catalog-card__color Серебро
+              .catalog-card__price 5 292 ₽
+
+        .designers-contacts.distributor-contacts
+          .designers-contacts__top
+            h2.designers-contacts__title Начать работу с нами
+            .designers-contacts__subtitle Звоните или пишите нам. Мы расскажем и о других 
+              br
+              |преимуществах работы с Green Land.
+          .designers-contacts__row
+            .designers-contacts__card
+              .designers-contacts__img
+                img(src="assets/images/designer-contacts-1.png", alt="")
+              .designers-contacts__desc
+                h4.designers-contacts__name Гвоздякова Алена
+                .designers-contacts__position Менеджер по работе с дизайнерами
+                .designers-contacts__contacts
+                  span.designers-contacts__tel 8 911 924-50-84
+                  span sv@green-land.ru
+
+                .contacts-btn
+                  |обратная связь
+                
+           
+
+            .designers-contacts__links
+              .designers-contacts__links-txt
+                |Написать в соц. сетях
+              .footer__socials
+                a.footer__socials-link(href="")
+                  +fbIcon
+                a.footer__socials-link(href="")
+                  +vkIcon
+                a.footer__socials-link(href="")
+                  +instIcon
+                a.footer__socials-link(href="")
+                  +houzzIcon
+
+        include ../partials/you-watched.pug
+
+
+    include ../partials/_footer.pug

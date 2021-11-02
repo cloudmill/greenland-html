@@ -62,25 +62,50 @@ block content
                       .catalog-card__buttons
                         button.catalog-card__buttons-item
                           img(src="assets/images/catalog-buttons-2.svg", alt="")
-                    img(src=`assets/images/catalog-${i + 1}.png`, alt="")
-                  a.catalog-card__bottom(href="")
-                    .catalog-card__ttl Высокое напольное кашпо MUSCHEL
-                    .catalog-card__color Серебро
-                    .catalog-card__price 5 292 ₽
+                    img.catalog-card__main-img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                  .catalog-card__bottom
+                    a.catalog-card__ttl(href="") Высокое напольное кашпо MUSCHEL
+                    .catalog-card__color
+                      .compare-table__cell-mob цвет
+                      |Серебро
+
+                    .catalog-card__price
+                      .favorites-table__price-old 7 200 ₽
+                      .favorites-table__price 5 292 ₽
+
+                      button.catalog-card__buttons-item
+                        img(src="assets/images/catalog-buttons-2.svg", alt="")
+
                   ul.compare-table__list
-                    li.compare-table__cell Серебро
-                    li.compare-table__cell 7.7
-                    li.compare-table__cell 13.6
-                    li.compare-table__cell Файбергласс
-                    li.compare-table__cell Напольное
+                    li.compare-table__cell
+                      .compare-table__cell-mob цвет
+                      |Серебро
+                    li.compare-table__cell
+                      .compare-table__cell-mob высота, см
+                      |7.7
+                    li.compare-table__cell
+                      .compare-table__cell-mob диаметр, см
+                      |13.6
+                    li.compare-table__cell
+                      .compare-table__cell-mob материал
+                      |Файбергласс
+                    li.compare-table__cell
+                      .compare-table__cell-mob крепление
+                      |Напольное
                       br
                       |Универсальное
-                    li.compare-table__cell Прямоугольная
-                    li.compare-table__cell Морозостойкая
+                    li.compare-table__cell
+                      .compare-table__cell-mob Форма
+                      |Прямоугольная
+                    li.compare-table__cell
+                      .compare-table__cell-mob Особенности
+                      |Морозостойкая
                       br
                       |Ударопрочная
                       br
                       |Устойчива к ультрофиолету
-                    li.compare-table__cell Матовая
+                    li.compare-table__cell
+                      .compare-table__cell-mob Коллекции
+                      |Матовая
 
     include ../partials/_footer.pug

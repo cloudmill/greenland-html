@@ -1,6 +1,10 @@
 .results {
   .pagination {
     margin-top: 80px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin: 20px 0 0;
+    }
   }
 }
 
@@ -9,6 +13,11 @@
 
   font-size: 20px;
   line-height: 140%;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 20px;
+    font-size: 14px;
+  }
 
   span {
     font-family: $base-font-family-serif;
@@ -21,6 +30,12 @@
   justify-content: space-between;
   align-items: flex-end;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin: 30px 0 40px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   input {
     width: calc(#{$col-part-d} * 14 - #{$col-gap-d});
     border: none;
@@ -30,15 +45,45 @@
     line-height: 160%;
 
     padding: 15px 0;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 8px 0;
+      font-size: 14px;
+    }
   }
   button {
     width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
     min-width: unset;
+
+    @media (max-width: $breakpoint - 1px) {
+      height: 40px;
+      width: 120px;
+      font-size: 12px;
+    }
   }
 }
 
 .results-subtitle {
   margin: 80px 0 40px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin: 40px 0 20px;
+  }
+}
+
+.results-table {
+  @media (max-width: $breakpoint - 1px) {
+    .results-row {
+      margin: 0;
+    }
+    .results-row:not(:first-child) {
+      .catalog-card {
+        border-top: none;
+      }
+    }
+  }
 }
 
 .results-row {
