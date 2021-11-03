@@ -104,6 +104,8 @@
 
   @media (max-width: $breakpoint - 1px) {
     height: 150px;
+    background-size: 150px;
+    margin: 40px 0;
   }
 
   &__ttl {
@@ -122,7 +124,9 @@
 .about-plan {
   margin-top: 160px;
 
-
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
 }
 
 .about-plan-table {
@@ -134,6 +138,11 @@
 
   counter-reset: list1;
 
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
   &__item {
     width: calc(50% - 30px);
     padding-left: calc(#{$col-part-d});
@@ -141,8 +150,21 @@
 
     margin-bottom: 50px;
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
     p {
       font-size: 22px;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 16px;
+      }
     }
 
     span {
@@ -170,10 +192,21 @@
     font-size: 34px;
     line-height: 130%;
     color: $green;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+      padding-top: 7px;
+    }
   }
 }
 .about-plan-rows {
   margin: 100px 0;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin: 40px 0;
+  }
 }
 .about-plan-row {
   display: flex;
@@ -181,16 +214,38 @@
   border-top: 1px solid $green-extra-lighten;
   padding: 20px 0 60px;
 
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+    padding: 20px 0 40px;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
   &__ttl {
     width: calc(#{$col-part-d} * 8);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
   &__desc {
     width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
   }
 }
 
 .about-block {
   display: flex;
+
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column-reverse;
+  }
 
   &__img {
     width: calc(#{$col-part-d} * 8);
@@ -199,9 +254,19 @@
 
     position: relative;
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      text-align: right;
+      padding-bottom: 40px;
+    }
+
     img {
       width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
       object-fit: cover;
+
+      @media (max-width: $breakpoint - 1px) {
+        width: 85%;
+      }
     }
 
     &::before {
@@ -213,16 +278,28 @@
       bottom: 0;
       border-radius: 0px 0px 900px 900px;
       border: 1px solid $green-extra-lighten;
+
+      @media (max-width: $breakpoint - 1px) {
+        right: 45px;
+      }
     }
   }
 
   &__desc {
     width: calc(#{$col-part-d} * 7);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
   }
 
   &__ttl {
     margin-bottom: 60px;
     text-indent: calc(#{$col-part-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 40px;
+    }
 
     span {
       font-family: $base-font-family-serif;
@@ -237,6 +314,11 @@
     font-family: $base-font-family-serif;
     font-size: 22px;
     line-height: 130%;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      font-size: 16px;
+    }
   }
 }
 
@@ -254,6 +336,10 @@
   justify-content: space-between;
   align-items: center;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+
   &__circle {
     width: 150px;
     height: 150px;
@@ -263,5 +349,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 50px;
+      height: 50px;
+
+      img {
+        width: 15px;
+      }
+    }
   }
 }

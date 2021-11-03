@@ -14,7 +14,7 @@ block content
       .container
         +breadcrumbs(['работа с нами', 'Для дистрибьютеров и оптовых покупателей'])
 
-        h1.beta.about-title Для дистрибьютеров и оптовых покупателей
+        h1.title-h1.about-title Для дистрибьютеров и оптовых покупателей
 
         .about-tabs
           a.about-tabs__item(href="") Условия работы с дизайнерами
@@ -22,7 +22,7 @@ block content
           a.about-tabs__item.about-tabs__item--active(href="") Условия работы для дистрибьютеров и оптовых покупателей
 
         .distributor-desc
-          h3.distributor-desc__ttl
+          h3.distributor-desc__ttl.title-h3
             |Оптовым покупателям, 
             br
             |региональным дистрибьюторам, 
@@ -69,7 +69,7 @@ block content
 
         .distributor-price
           .distributor-price__ttl
-            h3 Мы помогаем 
+            h3.title-h3 Мы помогаем 
               span.accent развивать 
               |ваш бизнес, 
               span.accent обучая 
@@ -87,9 +87,10 @@ block content
                 div Cтатьи
               li
                 div Видео-курс по обучению
+            +footerDownload('скачать прайс-лист', 'pdf, 2 мб')
 
         .designers-products
-          h2.mb60
+          h2.title-h2.distributor-products-ttl
             |Складская программа 
             br
             |для торговых организаций
@@ -131,7 +132,7 @@ block content
                             img(src="assets/images/catalog-buttons-1.svg", alt="")
                           button.catalog-card__buttons-item
                             img(src="assets/images/catalog-buttons-2.svg", alt="")
-                      img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                      img.catalog-card__img(src=`assets/images/catalog-${i + 1}.png`, alt="")
                     a.catalog-card__bottom(href="")
                       .catalog-card__ttl Высокое напольное кашпо MUSCHEL
                       .catalog-card__color Серебро
@@ -139,7 +140,7 @@ block content
 
         .distributor-brands
           .distributor-brands__top
-            h2
+            h2.title-h2
               |С нами уже работают
             .designers-products__controls(data-brands-logos-controls="")
               .arrows.cover__slider-arrows
@@ -162,7 +163,7 @@ block content
                   |#{item}
 
         .designers-showrooms
-          h3.designers-showrooms__title
+          h3.designers-showrooms__title.title-h3
             |Товар 
             span всегда в наличии 
             |на самом большом 
@@ -199,7 +200,7 @@ block content
 
         .designers-contacts.distributor-contacts
           .designers-contacts__top
-            h2.designers-contacts__title Начать работу с нами
+            h2.designers-contacts__title.title-h2 Начать работу с нами
             .designers-contacts__subtitle Звоните или пишите нам. Мы расскажем и о других 
               br
               |преимуществах работы с Green Land.
@@ -234,7 +235,7 @@ block content
 
         .objects-form.distributor-form
           .mission__slider-underlay
-          h2
+          h2.title-h2
             |Вы комплексный поставщик
             br
             |— задайте вопрос

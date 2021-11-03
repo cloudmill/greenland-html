@@ -201,14 +201,20 @@
       width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
       border-top: 1px solid $green-extra-lighten;
       padding-top: 20px;
-      margin-bottom: 60px;
 
       display: flex;
 
       @media (max-width: $breakpoint - 1px) {
         width: 100%;
         flex-direction: column;
-        margin-bottom: 40px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 60px;
+
+        @media (max-width: $breakpoint - 1px) {
+          margin-bottom: 40px;
+        }
       }
     }
   }
@@ -286,6 +292,9 @@
       text-transform: lowercase;
     }
   }
+
+
+
   &-filter {
     margin-bottom: 80px;
 
@@ -323,6 +332,28 @@
 
   @media (max-width: $breakpoint - 1px) {
     flex-direction: column-reverse;
+    margin-top: 40px;
+
+    .about-block__desc {
+      width: 100%;
+    }
+
+    .about-block__ttl {
+      margin-bottom: 40px;
+    }
+
+    .about-block__img {
+      width: 100%;
+      text-align: right;
+
+      &::before {
+        right: 15%;
+      }
+
+      img {
+        width: 85%;
+      }
+    }
   }
 }
 
@@ -346,6 +377,14 @@
       text-transform: lowercase;
     }
   }
+
+  .projects__slide {
+    @media (max-width: $breakpoint - 1px) {
+      margin: 0 10px 0 0;
+      width: 270px;
+    }
+  }
+
   .projects__slider-controls {
     @media (max-width: $breakpoint - 1px) {
       display: none;
@@ -639,8 +678,18 @@
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
   &__ttl {
     width: calc(#{$col-part-d} * 7);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
 
     span {
       font-family: $base-font-family-serif;
@@ -650,11 +699,21 @@
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
     font-size: 20px;
     line-height: 160%;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      font-size: 16px;
+      line-height: 140%;
+    }
   }
 }
 
 .distributor-offers {
   margin-top: 80px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 0;
+  }
 
   &-ico {
     height: 90px;
@@ -666,6 +725,15 @@
 .distributor-benefits {
   padding-bottom: 20px;
   border-bottom: 1px solid $green;
+
+  @media (max-width: $breakpoint - 1px) {
+    border-bottom: none;
+    padding-bottom: 0;
+
+    .designers-benefits__txt .designers-benefits__ttl {
+      margin-bottom: 0;
+    }
+  }
 
   ul {
     margin: 0;
@@ -685,17 +753,40 @@
   }
 }
 
+.distributor-products-ttl {
+  margin-bottom: 20px;
+
+  @media (min-width: $breakpoint) {
+    margin-bottom: 60px;
+  }
+}
+
 .distributor-price {
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
   &__ttl {
     width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
 
     h3 {
       text-indent: calc(#{$col-part-d});
       margin: 0;
+    }
+
+    .footer__download {
+      @media (max-width: $breakpoint - 1px) {
+        display: none;
+      }
     }
   }
   .footer__download {
@@ -709,16 +800,29 @@
   &__txt {
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-top: 20px;
+    }
+
     p {
       font-family: $base-font-family-serif;
       font-size: 20px;
       line-height: 130%;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 16px;
+      }
     }
     li {
       position: relative;
       display: flex;
       align-items: center;
       padding-left: 46px;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 14px;
+      }
     }
     li::before {
       content: '';
@@ -728,6 +832,13 @@
       height: 6px;
       background-color: $green;
       margin-left: -46px;
+    }
+
+    .footer__download {
+      width: 100%;
+      @media (min-width: $breakpoint) {
+        display: none;
+      }
     }
   }
 }
@@ -740,15 +851,27 @@
   justify-content: center;
   flex-direction: column;
   border-top: none;
+
+  @media (max-width: $breakpoint - 1px) {
+    font-size: 36px;
+  }
 }
 
 .distributor-brands {
   margin-top: 160px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+
   &__top {
     margin-bottom: 80px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
   }
 
   .designers-brands__list ul {
@@ -763,6 +886,10 @@
 .distributor-contacts {
   .designers-contacts__links {
     padding-left: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      padding-left: 0;
+    }
   }
 }
 
@@ -773,8 +900,17 @@
 
   position: relative;
 
+  @media (max-width: $breakpoint - 1px) {
+    padding: 40px 10px;
+    margin: 40px -10px 0;
+  }
+
   .mission__slider-underlay {
     width: calc(#{$col-part-d} * 6);
+
+    @media (max-width: $breakpoint - 1px) {
+      display: none;
+    }
 
     &::before {
       top: 20px;
