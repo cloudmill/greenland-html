@@ -5,15 +5,25 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
   &__main {
     width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
     margin-bottom: 80px;
 
-    font-size: $font-size-h3;
+    @include title-h3;
     text-transform: uppercase;
     line-height: 120%;
   
     text-indent: calc(#{$col-part-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
   
     span {
       font-family: $base-font-family-serif;
@@ -25,6 +35,15 @@
 
     font-size: 22px;
     line-height: 140%;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      font-size: 16px;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
 
     span {
       font-family: $base-font-family-serif;
@@ -39,9 +58,20 @@
   margin-top: 140px;
   margin-bottom: 160px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+    margin-bottom: 0;
+  }
+
   &__row {
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: $breakpoint - 1px) {
+      &:not(:nth-child(2)) {
+        flex-direction: column;
+      }
+    }
   }
   &__row:nth-child(2) {
     margin-top: 140px;
@@ -51,16 +81,31 @@
     border-bottom: 1px solid $green-extra-lighten;
     margin-bottom: 120px;
 
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 40px;
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 40px;
+    }
+
     #{$comp}__year {
       width: auto;
     }
     #{$comp}__arrow {
       width: 70%;
+
+      @media (max-width: $breakpoint - 1px) {
+        width: 20%;
+      }
     }
   }
   &__row:nth-child(3) {
     #{$comp}__item {
       width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+
+      @media (max-width: $breakpoint - 1px) {
+        width: 100%;
+      }
     }
   }
 
@@ -70,6 +115,14 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      } 
+    }
   }
 
   &__year {
@@ -80,6 +133,10 @@
 
     width: 40%;
     margin-bottom: 20px;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 50px;
+    }
   }
 
   &__arrow {
@@ -114,14 +171,28 @@
     width: calc(#{$col-part-d} * 7);
     margin-left: calc(#{$col-part-d} * 4);
 
+    @media (max-width: $breakpoint - 1px) {
+      margin-left: 0;
+      width: 100%;
+    }
+
     ul {
       display: flex;
       margin-bottom: 60px;
+
+      @media (max-width: $breakpoint - 1px) {
+        overflow-x: scroll;
+        margin-bottom: 20px;
+      }
     }
 
     li {
       border-bottom: 1px solid $green-extra-lighten;
       padding-bottom: 10px;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 12px;
+      }
 
       &:not(:first-child) {
         margin-left: 20px;
@@ -134,6 +205,16 @@
 
     &-desc {
       font-size: 22px;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 16px;
+      }
     }
+  }
+}
+
+.arrow-mobile {
+  @media (min-width: $breakpoint) {
+    display: none;
   }
 }

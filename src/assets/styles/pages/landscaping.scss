@@ -6,8 +6,17 @@
 
   position: relative;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
   &__top {
     display: flex;
+
+    @media (max-width: $breakpoint - 1px) {
+      flex-direction: column;
+    }
   }
   &__title {
     // width: calc(#{$col-part-d} * 8);
@@ -15,6 +24,10 @@
     font-size: 28px;
     line-height: 130%;
     text-transform: uppercase;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 16px;
+    }
 
     span {
       font-family: $base-font-family-serif;
@@ -28,12 +41,22 @@
     line-height: 130%;
 
     margin: 0 calc(#{$col-part-d} + #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      margin: 20px 0 0;
+      font-size: 16px;
+    }
   }
 
   &-item {
     width: calc(100% / 3 - 10px);
     margin-top: 80px;
     position: relative;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-top: 20px;
+    }
 
     &__count {
       position: absolute;
@@ -77,9 +100,18 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
   &__ttl {
     margin-bottom: 80px;
     width: 100%;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
   }
   &__item {
     width: calc(#{$col-part-d} * 7);
@@ -95,6 +127,11 @@
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      font-size: 16px;
+    }
+
     // img {
     //   flex: none;
     //   height: 15px;
@@ -104,6 +141,10 @@
     width: 100%;
     text-align: center;
     margin-top: 40px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 0;
+    }
   }
   &__button {
     border: none;
@@ -117,12 +158,20 @@
 .landscaping-contacts {
   margin: 160px 0 80px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin: 40px 0;
+  }
+
   .contacts-cards {
     margin-top: 0;
   }
 }
 .contacts-cards__ttl {
   margin-bottom: 80px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-bottom: 20px;
+  }
 }
 
 .lanscaping-first-screen {
@@ -213,6 +262,11 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin: 40px 0;
+    flex-direction: column;
+  }
+
   &__ttl {
     width: 100%;
   }
@@ -225,6 +279,15 @@
 
     display: flex;
     position: relative;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-top: 40px;
+
+      &:first-child {
+        margin-top: 20px;
+      }
+    }
 
     &::before {
       content: '';
@@ -267,14 +330,25 @@
   display: flex;
   justify-content: space-between;
   
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+  }
 
   &__col1, &__col2 {
     width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
     // display: flex;
     position: relative;
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
+
     img {
       width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+
+      @media (max-width: $breakpoint - 1px) {
+        width: calc(#{$col-part-m} * 3 - #{$col-gap-m});
+      }
     }
     
     &::after {
@@ -291,6 +365,10 @@
   }
   &__col1 {
     text-align: right;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
   }
   &__col2 {
     text-align: left;
@@ -313,8 +391,17 @@
   margin: 160px 0;
   display: flex;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin: 40px 0;
+    flex-direction: column;
+  }
+
   &-col {
     width: calc(#{$col-part-d} * 5);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
 
     &__ttl {
       font-family: $base-font-family-serif;
