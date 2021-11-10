@@ -42,6 +42,8 @@ block content
                   .catalog-card__small Артикул: 13410
 
                 .favorites-table__col
+                  .favorites-table__col-ttl параметры
+
                   p Высота, см: 
                     b 7.7
                   p Диаметр, см: 
@@ -50,6 +52,8 @@ block content
                     b 2.7
 
                 .favorites-table__col
+                  .favorites-table__col-ttl стоимость
+
                   .favorites-table__price-old 7 200 ₽
                   .favorites-table__price 5 292 ₽
 
@@ -57,13 +61,15 @@ block content
                   |В наличии
 
                 .favorites-table__buttons
-                  .favorites-table__close
+                  //- .favorites-table__close
                   button.btn
                     img(src="assets/images/icons/basket-ico.svg", alt="")
                     |в корзину
                   button.btn-white
                     img(src="assets/images/icons/compare-ico.svg", alt="")
                     |в сравнение
+
+                .basket-item-delete
 
 
     include ../partials/_footer.pug
