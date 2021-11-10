@@ -64,7 +64,7 @@ block content
                 .catalog-card__color Серебро
                 .catalog-card__price 5 292 ₽
 
-        .results-row
+        .results-row.results-row--second
           - for (i=0; i<5; i++)
             .catalog-card
               .catalog-card__labels
@@ -113,7 +113,7 @@ block content
             |композицию.
 
         .designers-form.about-mission
-          h2.designers-form__title Оставить заявку на подбор композиции
+          h2.designers-form__title.title-h2 Оставить заявку на подбор композиции
             br
             |для вашего проекта
           .mission__slide
@@ -140,7 +140,7 @@ block content
 
         .designers-showrooms
           .ojects-projects-top
-            h2.ojects-projects-top__title
+            h2.ojects-projects-top__title.title-h2
               |Выполненные проекты
             a.ojects-projects-top__link(href="")
               |все проекты
@@ -233,38 +233,6 @@ block content
                 .contacts-cards__position Менеджер по работе с дизйнерами
                 .contacts-cards__tel 8 812 209-18-84
 
-        .designers-products
-          .section__top
-            h2.beta
-              |Вы смотрели 
-            .designers-products__controls(data-catalog-slider-controls="")
-              .arrows.cover__slider-arrows
-                +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-catalog-slider-prev="")
-                +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-catalog-slider-next="")
-          .designers-products__catalog
-            .swiper-container(data-catalog-slider="")
-              .swiper-wrapper
-                - for (i=0; i<5; i++)
-                  .catalog-card.swiper-slide
-                    .catalog-card__labels
-                      .catalog-card__labels-item Скидки
-                      .catalog-card__labels-item Новинки
-                    .catalog-card__top
-                      .catalog-card__layer
-                        .catalog-card__pagination
-                          .catalog-card__pagination-item
-                          .catalog-card__pagination-item
-                          .catalog-card__pagination-item
-                          .catalog-card__pagination-item
-                        .catalog-card__buttons
-                          button.catalog-card__buttons-item
-                            img(src="assets/images/catalog-buttons-1.svg", alt="")
-                          button.catalog-card__buttons-item
-                            img(src="assets/images/catalog-buttons-2.svg", alt="")
-                      img(src=`assets/images/catalog-${i + 1}.png`, alt="")
-                    a.catalog-card__bottom(href="")
-                      .catalog-card__ttl Высокое напольное кашпо MUSCHEL
-                      .catalog-card__color Серебро
-                      .catalog-card__price 5 292 ₽
+        include ../partials/you-watched
 
     include ../partials/_footer.pug

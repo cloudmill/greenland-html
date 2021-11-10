@@ -1,0 +1,93 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    .section.page-wrapper
+      .container
+        +breadcrumbs(['Популярные вопросы'])
+
+        h1.title-h1.about-title Популярные вопросы
+
+        .lk-mobile-menu
+          .lk-mobile-menu__ttl Мой кабинет
+          .lk-mobile-menu__cross
+
+        .lk-cols
+          .lk-sidebar
+            .lk-sidebar__block
+              .lk-sidebar__ttl История заказов
+              a.lk-sidebar__item(href="") Активные заказы
+              a.lk-sidebar__item(href="") Выполненные заказы
+
+            .lk-sidebar__block
+              .lk-sidebar__ttl История заказов
+              a.lk-sidebar__item(href="") Активные заказы
+              a.lk-sidebar__item(href="") Выполненные заказы
+
+            .lk-sidebar__block
+              .lk-sidebar__ttl История заказов
+              a.lk-sidebar__item(href="") Активные заказы
+
+            button.lk-sidebar__exit.lk-sidebar__item Выйти
+
+          .lk-main
+            .faq-spoilers
+              .spoiler
+                .spoiler__button
+                  .spoiler__button-inner
+                    .spoiler__title Где мой заказ?
+                  .spoiler__close
+                .spoiler__dropdown
+                  .spoiler__dropdown-inner
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi a placeat modi autem quia mollitia ex pariatur velit accusantium odio exercitationem at numquam, illo corporis dicta ullam accusamus in quaerat!
+
+              .spoiler
+                .spoiler__button
+                  .spoiler__button-inner
+                    .spoiler__title Какие сроки доставки?
+                  .spoiler__close
+                .spoiler__dropdown
+                  .spoiler__dropdown-inner
+                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam dolorem quam ex perspiciatis fuga, eum fugit reprehenderit harum cumque nulla exercitationem consequuntur impedit at. Placeat, nisi iste. Placeat, error et?
+
+              .spoiler
+                .spoiler__button
+                  .spoiler__button-inner
+                    .spoiler__title Как вернуть товар?
+                  .spoiler__close
+                .spoiler__dropdown
+                  .spoiler__dropdown-inner
+                    p Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore cumque saepe ex autem, commodi doloribus dolor eum numquam harum aliquam fuga illo dicta amet sequi totam quas praesentium minus eveniet.
+
+            .lk-big-txt
+              |Вы можете задать вопрос на тему доставки, возвратов, оплаты через форму обратной связи. Мы ответим вам на почту. Или позвонить по телефону 
+              a(href="tel:+78002120650") +7 (800) 212-06-50
+
+            
+            .designers-form.lk-faq-form
+              .designers-form__container
+                form.designers-form__form
+                  label.designers-form__label
+                    input.designers-form__input(placeholder="Имя")
+                  label.designers-form__label
+                    input.designers-form__input(placeholder="E-mail")
+                  label.designers-form__label
+                    input.designers-form__input(placeholder="Телефон")
+                  label.designers-form__label
+                    textarea.designers-form__input(name="" cols="30" rows="4" placeholder="Вопрос")
+                  label.designers-form__checkbox
+                    input(type="checkbox"  id="checkbox")
+                    .checkbox
+                    .designers-form__checkbox-txt Я соглашаюсь на обработку
+                      br
+                      a(href="") персональных данных
+                  button.btn.cover__btn(type="submit") отправить
+
+
+    include ../partials/_footer.pug

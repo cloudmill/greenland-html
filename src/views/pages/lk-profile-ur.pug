@@ -1,0 +1,102 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    .section.page-wrapper
+      .container
+        +breadcrumbs(['РЕДАКТИРОВАТЬ ПРОФИЛЬ'])
+
+        h1.title-h1.about-title РЕДАКТИРОВАТЬ ПРОФИЛЬ
+
+        .lk-mobile-menu
+          .lk-mobile-menu__ttl Мой кабинет
+          .lk-mobile-menu__cross
+
+        .lk-cols
+          .lk-sidebar
+            .lk-sidebar__block
+              .lk-sidebar__ttl История заказов
+              a.lk-sidebar__item(href="") Активные заказы
+              a.lk-sidebar__item(href="") Выполненные заказы
+
+            .lk-sidebar__block
+              .lk-sidebar__ttl История заказов
+              a.lk-sidebar__item(href="") Активные заказы
+              a.lk-sidebar__item(href="") Выполненные заказы
+
+            .lk-sidebar__block
+              .lk-sidebar__ttl История заказов
+              a.lk-sidebar__item(href="") Активные заказы
+
+            button.lk-sidebar__exit.lk-sidebar__item Выйти
+
+          .lk-main
+
+            .lk-profile-top
+              .lk-profile-top__item
+                .lk-profile-top__ttl Ваш статус
+                .lk-profile-top__value Юридическое лицо
+              .lk-profile-top__item
+                .lk-profile-top__ttl Уровень цен
+                .lk-profile-top__value 3
+
+            .lk-profile-info
+
+              -
+                var items = [
+                  {
+                    label: 'Имя',
+                    value: 'Кирилл',
+                  },
+                  {
+                    label: 'Фамилия',
+                    value: 'Щербаков',
+                  },
+                  {
+                    label: 'E-mail',
+                    value: 'ksh@cloudmill.ru',
+                  },
+                  {
+                    label: 'Телефон',
+                    value: '+7 911 286-25-63',
+                  },
+                  {
+                    label: 'Город',
+                    value: 'Санкт-Петербург',
+                  },
+                  {
+                    label: 'Название компании',
+                    value: 'Альфаиомега',
+                  },
+                  {
+                    label: 'Сфера деятельности',
+                    value: 'Интерьер бюро',
+                  },
+                  {
+                    label: 'ИНН',
+                    value: '1213214598',
+                  },
+                  {
+                    label: 'Индекс',
+                    value: '192254',
+                  },
+                  {
+                    label: 'Адрес',
+                    value: 'пр. Луначарского д. 19',
+                  },
+                ]
+
+              each item in items
+                .lk-profile-info__item
+                  span.lk-profile-info__item-label #{item.label}
+                  |#{item.value}
+                  button
+                    img(src="assets/images/icons/edit-icon.svg", alt="")
+
+    include ../partials/_footer.pug

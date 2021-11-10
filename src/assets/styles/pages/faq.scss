@@ -3,13 +3,27 @@
 
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+    margin-top: 20px;
+  }
 }
 
 .faq-spoilers {
   width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
 
+  @media (max-width: $breakpoint - 1px) {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
   .spoiler__dropdown-inner {
     padding: 0 calc(#{$col-part-d} * 2) 40px calc(#{$col-part-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      padding: 0 60px 20px 20px;
+    }
   }
 }
 

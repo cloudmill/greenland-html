@@ -6,8 +6,17 @@
 
   position: relative;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
   &__top {
     display: flex;
+
+    @media (max-width: $breakpoint - 1px) {
+      flex-direction: column;
+    }
   }
   &__title {
     // width: calc(#{$col-part-d} * 8);
@@ -15,6 +24,10 @@
     font-size: 28px;
     line-height: 130%;
     text-transform: uppercase;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 16px;
+    }
 
     span {
       font-family: $base-font-family-serif;
@@ -28,12 +41,22 @@
     line-height: 130%;
 
     margin: 0 calc(#{$col-part-d} + #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      margin: 20px 0 0;
+      font-size: 16px;
+    }
   }
 
   &-item {
     width: calc(100% / 3 - 10px);
     margin-top: 80px;
     position: relative;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-top: 20px;
+    }
 
     &__count {
       position: absolute;
@@ -46,6 +69,12 @@
       font-family: $base-font-family-serif;
       font-size: 60px;
       line-height: 130%;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 50px;
+        left: 24px;
+        bottom: 90px;
+      }
     }
 
     &__ttl {
@@ -61,6 +90,13 @@
       text-transform: uppercase;
 
       width: calc(#{$col-part-d} * 4);
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 14px;
+        left: 24px;
+        bottom: 40px;
+        width: calc(#{$col-part-m} * 3 - #{$col-gap-m});
+      }
     }
 
     img {
@@ -77,9 +113,18 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
   &__ttl {
     margin-bottom: 80px;
     width: 100%;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
   }
   &__item {
     width: calc(#{$col-part-d} * 7);
@@ -95,6 +140,11 @@
     justify-content: space-between;
     align-items: center;
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      font-size: 16px;
+    }
+
     // img {
     //   flex: none;
     //   height: 15px;
@@ -104,6 +154,10 @@
     width: 100%;
     text-align: center;
     margin-top: 40px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 0;
+    }
   }
   &__button {
     border: none;
@@ -117,12 +171,20 @@
 .landscaping-contacts {
   margin: 160px 0 80px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin: 40px 0;
+  }
+
   .contacts-cards {
     margin-top: 0;
   }
 }
 .contacts-cards__ttl {
   margin-bottom: 80px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-bottom: 20px;
+  }
 }
 
 .lanscaping-first-screen {
@@ -135,6 +197,15 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: space-between;
+
+  @media (max-width: $breakpoint - 1px) {
+    height: 480px;
+    margin: -80px -10px 40px -10px;
+    padding: 80px 10px 20px 10px;
+
+    justify-content: flex-start;
+    align-content: unset;
+  }
 
   .breadcrumbs {
     width: 100%;
@@ -171,6 +242,11 @@
   margin: 160px 0 160px auto;
   text-indent: calc(#{$col-part-d});
 
+  @media (max-width: $breakpoint - 1px) {
+    margin: 40px 0;
+    width: 100%;
+  }
+
   .highlight-1, .highlight-2 {
     font-family: $base-font-family-serif;
     position: relative;
@@ -198,10 +274,25 @@
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: $breakpoint - 1px) {
+      margin: 40px 0;
+      padding-left: 0;
+      flex-direction: column;
+    }
+
     &__col {
       width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
       font-size: 20px;
       line-height: 140%;
+
+      @media (max-width: $breakpoint - 1px) {
+        width: 100%;
+        font-size: 16px;
+
+        &:not(:last-child) {
+          margin-bottom: 30px;
+        }
+      }
     }
   }
 }
@@ -212,6 +303,11 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin: 40px 0;
+    flex-direction: column;
+  }
 
   &__ttl {
     width: 100%;
@@ -225,6 +321,16 @@
 
     display: flex;
     position: relative;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-top: 40px;
+      padding-top: 24px;
+
+      &:first-child {
+        margin-top: 20px;
+      }
+    }
 
     &::before {
       content: '';
@@ -245,20 +351,39 @@
       font-size: 60px;
       line-height: 100%;
       color: $green;
+
+      @media (max-width: $breakpoint - 1px) {
+        width: auto;
+        margin-right: 13px;
+        font-size: 50px;
+      }
     }
     &__col {
       width: calc(100% - #{$col-width-d});
+
+      @media (max-width: $breakpoint - 1px) {
+        width: auto;
+      }
     }
     &__ttl {
       font-size: 24px;
       line-height: 130%;
       text-transform: uppercase;
       margin-bottom: 20px;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
     }
     &__txt {
       font-family: $base-font-family-serif;
       font-size: 16px;
       line-height: 130%;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 14px;
+      }
     }
   } 
 }
@@ -267,14 +392,25 @@
   display: flex;
   justify-content: space-between;
   
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+  }
 
   &__col1, &__col2 {
     width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
     // display: flex;
     position: relative;
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
+
     img {
       width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+
+      @media (max-width: $breakpoint - 1px) {
+        width: calc(#{$col-part-m} * 3 - #{$col-gap-m});
+      }
     }
     
     &::after {
@@ -291,6 +427,10 @@
   }
   &__col1 {
     text-align: right;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
   }
   &__col2 {
     text-align: left;
@@ -313,14 +453,32 @@
   margin: 160px 0;
   display: flex;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin: 40px 0;
+    flex-direction: column;
+  }
+
   &-col {
     width: calc(#{$col-part-d} * 5);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
 
     &__ttl {
       font-family: $base-font-family-serif;
       font-size: 54px;
       line-height: 90%;
       margin-bottom: 30px;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 38px;
+        margin-bottom: 10px;
+      }
     }
   }
 }
@@ -329,9 +487,15 @@
   margin: 160px 0;
   display: flex;
 
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+    margin: 40px 0;
+  }
+
   &__price {
     font-family: $base-font-family-serif;
-    @include title-h3;
+    // @include title-h3;
+    font-size: 34px;
 
     width: 100%;
     text-align: right;
@@ -339,11 +503,35 @@
 
     position: relative;
 
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 24px;
+      padding-right: 0;
+      text-align: left;
+    }
+
     &::after {
       content: url(assets/images/new-highlights/landscaping-highlight-1.png);
       position: absolute;
       z-index: -1;
       right: calc(#{$col-part-d} + (#{$col-gap-d} * 2));
+
+      @media (max-width: $breakpoint - 1px) {
+        left: 0;
+      }
+    }
+  }
+
+  .landscaping-title {
+
+    &--mobile {
+      @media (min-width: $breakpoint) {
+        display: none;
+      }
+    }
+    &--desktop {
+      @media (max-width: $breakpoint - 1px) {
+        display: none;
+      }
     }
   }
 
@@ -354,21 +542,53 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+
+      .landscaping-block-white__price {
+        display: none;
+      }
+    }
+
+    .landscaping-title--mobile {
+      margin-bottom: 20px;
+    }
+
     img {
       width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+
+      @media (max-width: $breakpoint - 1px) {
+        width: 100%;
+      }
     }
   }
+
   &__col:nth-child(2) {
     width: calc(#{$col-part-d} * 5);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-top: 40px;
+    }
 
     .title-h3 {
       margin-bottom: 120px;
       margin-right: calc(#{$col-part-d} * -2);
       white-space: nowrap;
+
+      @media (max-width: $breakpoint - 1px) {
+        margin-bottom: 20px;
+        margin-right: 0;
+        white-space: unset;
+      }
     }
 
     img {
       width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+
+      @media (max-width: $breakpoint - 1px) {
+        width: 100%;
+      }
     }
   }
 
@@ -380,8 +600,21 @@
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
     padding-top: 200px;
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      padding-top: 0;
+    }
+
     .title-h3 {
       margin-top: 85px;
+
+      @media (max-width: $breakpoint - 1px) {
+        margin-top: 40px;
+      }
+    }
+
+    .landscaping-block-white__price {
+      margin-top: 40px;
     }
   }
 }
@@ -393,6 +626,12 @@
 
   display: flex;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin: 40px -10px 90px;
+    padding: 40px 10px;
+    flex-direction: column;
+  }
+
   &__txt {
     width: calc(#{$col-part-d} * 10);
 
@@ -400,11 +639,20 @@
 
     flex-wrap: wrap;
     flex-direction: row-reverse;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      flex-direction: column;
+    }
   }
   &__item {
     width: calc(#{$col-part-d} * 5);
     padding-right: calc(#{$col-part-d});
     padding-bottom: 60px;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
 
     .title-h4 {
       margin-bottom: 20px;
@@ -413,6 +661,10 @@
   &__img {
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
     margin-bottom: -90px;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
 
     img {
       width: 100%;
@@ -429,9 +681,19 @@
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+    margin: 40px 0;
+  }
+
   &__txt {
     width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
     @include title-h4;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-bottom: 40px;
+    }
   }
   .landscaping-block-white__price {
     width: auto;
@@ -446,37 +708,77 @@
 .type-page-img {
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+  }
+
   &__ttl {
     width: calc(#{$col-part-d} * 10);
     padding-right: calc(#{$col-part-d} * 2);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 20px;
+    }
   }
+
   &__txt {
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
   }
   img {
     margin-top: 35px;
     width: 100%;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 20px;
+    }
   }
 }
 
 .type-page-block {
   margin: 160px 0;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin: 40px 0;
+  }
+
   &__row {
     display: flex;
 
     &:first-child {
       justify-content: space-between;
+
+      @media (max-width: $breakpoint - 1px) {
+        flex-direction: column;
+      }
     }
 
     &:last-child {
       margin-top: 160px;
       flex-direction: row-reverse;
       padding-right: calc(#{$col-part-d});
+
+      @media (max-width: $breakpoint - 1px) {
+        flex-direction: column;
+        margin-top: 40px;
+        padding-right: 0;
+      }
     }
   }
   &__img {
     width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
     margin: 0 calc(#{$col-part-d} * 2);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin: 0;
+    }
 
     img {
       width: 100%;
@@ -485,26 +787,121 @@
   }
   &__txt {
     width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
   }
   &__ttl {
     @include title-h3;
     text-transform: uppercase;
     margin-bottom: 40px;
     text-indent: calc(#{$col-part-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
   }
   &__desc {
     padding-left: calc(#{$col-part-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      padding-left: 0;
+    }
   }
 }
 
 .abonements-slider {
   margin: 160px 0;
 
-  display: flex;
-  padding-left: calc(#{$col-part-d});
+  @media (max-width: $breakpoint - 1px) {
+    margin: 40px 0;
+  }
+
+  .abonements-slide {
+    display: flex;
+    padding-left: calc(#{$col-part-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      padding-left: 0;
+      flex-direction: column;
+    }
+  }
 
   img {
     width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
     margin-right: calc(#{$col-part-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__desc {
+    width: calc(#{$col-part-d} * 9);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+
+  &__ttl {
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+    @media (min-width: $breakpoint) {
+      font-size: 24px;
+      margin-bottom: 40px;
+    }
+  }
+
+  li {
+    font-size: 14px;
+
+    @media (min-width: $breakpoint) {
+      font-size: 16px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+
+      @media (min-width: $breakpoint) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-self: flex-end;
+    margin-top: 70px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 20px;
+      flex-direction: column;
+    }
+  }
+
+  &__price, &__item {
+    width: calc(#{$col-part-d} * 2);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
+  }
+
+  &__price {
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
+  }
+  &__item:last-child {
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 10px;
+    }
   }
 }

@@ -33,11 +33,21 @@ block content
 
         .actions-more
           h2.title-h2 Действующие акции
+        
+          .actions-more__list
+            - for (i=0; i<4; i++)
+              a.actions-more-item(href="")
+                .actions-more-item__date до 25 сентября
+                .actions-more-item__ttl Скидка 30% на все кашпо
+                .actions-more-item__txt Добавьте весны в дом, офис, отель или ресторан! Добавьте красок в свою жизнь! До 24 февраля Green Land дарит скидку 40% на отобранный ассортимент ярких моделей.
+                img.actions-more-item__arrow(src="assets/images/icons/lanscape-arrow.svg", alt="")
 
-          - for (i=0; i<4; i++)
-            a.actions-more-item(href="")
-              .actions-more-item__date до 25 сентября
-              .actions-more-item__ttl Скидка 30% на все кашпо
-              .actions-more-item__txt Добавьте весны в дом, офис, отель или ресторан! Добавьте красок в свою жизнь! До 24 февраля Green Land дарит скидку 40% на отобранный ассортимент ярких моделей.
+        .action-aside.action-aside--mobile
+          a.news-back-link(href="")
+            +arrow('white', '#65BA7F', 'left', '15', '13', '46')
+            |Все акции
+
+          button.btn
+            |Задать вопрос
 
   include ../partials/_footer.pug

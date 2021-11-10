@@ -10,13 +10,9 @@ block content
 
     .section.page-wrapper
       .container
-        +breadcrumbs(['Активные заказы'])
+        +breadcrumbs(['Выполненные заказы'])
 
-        h1.title-h1.about-title Активные заказы
-
-        .lk-mobile-menu
-          .lk-mobile-menu__ttl Мой кабинет
-          .lk-mobile-menu__cross
+        h1.title-h1.about-title Выполненные заказы
 
         .lk-cols
           .lk-sidebar
@@ -47,22 +43,23 @@ block content
                 .lk-table__col Адрес доставки
                 .lk-table__col сумма
 
-              - for (i=0; i<3; i++)
+              - for (i=0; i<2; i++)
                 .lk-table__row
+                  .lk-table__col 5523456
+                  .lk-table__col 29.05.2021
+                  .lk-table__col Сборка заказа
+                  .lk-table__col 192252 Санкт-Петербург. пр. Луначарского д. 19
                   .lk-table__col
-                    span Номер заказа
-                    |5523456
+                    div 5 292 ₽
+                    button.lk-table__repeat повторить заказ
+                    
+                .lk-table__row
+                  .lk-table__col 5523456
+                  .lk-table__col 29.05.2021
+                  .lk-table__col Отправлен
+                  .lk-table__col 192252 Санкт-Петербург. пр. Луначарского д. 19
                   .lk-table__col
-                    span Дата заказа
-                    |29.05.2021
-                  .lk-table__col
-                    span Статус
-                    |Принят
-                  .lk-table__col
-                    span Адрес доставки
-                    |192252 Санкт-Петербург. пр. Луначарского д. 19
-                  .lk-table__col
-                    span сумма
-                    |5 292 ₽
+                    div 5 292 ₽
+                    button.lk-table__repeat повторить заказ
 
     include ../partials/_footer.pug

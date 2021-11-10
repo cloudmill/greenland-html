@@ -14,9 +14,17 @@
 
   margin-top: 80px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+
   &__ttl {
     width: 100%;
     margin-bottom: 40px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
   }
   &__item {
     width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
@@ -24,6 +32,13 @@
     margin-bottom: 20px;
 
     display: flex;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
 
     &::before {
       content: '';
@@ -35,6 +50,10 @@
 
       margin-right: 40px;
       margin-top: 10px;
+
+      @media (max-width: $breakpoint - 1px) {
+        margin-right: 20px;
+      }
     }
   }
 }
@@ -46,23 +65,41 @@
   flex-wrap: wrap;
   justify-content: space-between;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+
   &__ttl {
-    font-size: $font-size-h2;
-    line-height: 130%;
-    text-transform: uppercase;
     width: 100%;
     margin-bottom: 40px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__col {
     width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+
     &-ttl {
       font-family: $base-font-family-serif;
-      font-size: $font-size-h3;
-      line-height: 130%;
+      
+      @include title-h3;
 
-      margin-bottom: 40px;
+      margin-bottom: 30px;
+
+      @media (min-width: $breakpoint) {
+        width: 247px;
+        margin-bottom: 40px;
+      }
     }
   }
 
@@ -74,18 +111,30 @@
     border-bottom: 1px solid $green-extra-lighten;
 
     &:not(:last-child) {
-      margin-bottom: 30px;
+      margin-bottom: 10px;
+
+      @media (min-width: $breakpoint) {
+        margin-bottom: 30px;
+      }
     }
 
     &-ttl {
-      font-size: 14px;
+      font-size: 12px;
       line-height: 130%;
       text-transform: uppercase;
+
+      @media (min-width: $breakpoint) {
+        font-size: 14px;
+      }
     }
     &-price {
-      font-size: 16px;
+      font-size: 14px;
       line-height: 130%;
       font-weight: 500;
+
+      @media (min-width: $breakpoint) {
+        font-size: 16px;
+      }
     }
   }
 }

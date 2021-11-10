@@ -55,6 +55,9 @@
       }
     }
   }
+  &__img {
+    width: 100%;
+  }
   &__pagination {
     display: flex;
     &-item {
@@ -170,4 +173,9 @@
   .catalog-card__buttons-item::before {
     transform: rotate(135deg);
   }
+}
+
+.category-row {
+  display: flex;
+  margin-bottom: 40px;
 }

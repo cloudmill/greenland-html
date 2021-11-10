@@ -40,11 +40,21 @@
 .designers-brands {
   margin-top: 120px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+
   &__desc {
     width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
     font-size: 20px;
     line-height: 140%;
     margin-bottom: 70px;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
   }
 
   &__list {
@@ -52,6 +62,7 @@
     ul {
       display: flex;
       justify-content: space-between;
+      overflow-x: scroll;
     }
 
     &-img {
@@ -66,6 +77,22 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
+      @media (max-width: $breakpoint - 1px) {
+        min-width: 130px;
+        width: 130px;
+        min-height: 82px;
+        height: 82px;
+        margin-bottom: 12px;
+
+        padding: 20px 30px;
+
+        img {
+          // width: 29px;
+          max-width: 95%;
+          max-height: 95%;
+        }
+      }
     }
 
     li {
@@ -73,6 +100,10 @@
       line-height: 130%;
       text-transform: uppercase;
       text-align: center;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 10px;
+      }
 
       &:not(:first-child) {
         margin-left: 10px;
@@ -84,8 +115,16 @@
 .designers-offers {
   margin-top: 160px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+
   &__title {
     width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
   }
 
   &__table {
@@ -94,6 +133,10 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+
+      @media (max-width: $breakpoint - 1px) {
+        flex-direction: column;
+      }
     }
 
     li {
@@ -106,8 +149,18 @@
       display: flex;
       flex-direction: column;
 
+      @media (max-width: $breakpoint - 1px) {
+        width: 100%;
+        font-size: 14px;
+        margin-top: 40px;
+      }
+
       div {
         margin-bottom: 57px;
+
+        @media (max-width: $breakpoint - 1px) {
+          margin-bottom: 40px;
+        }
       }
     }
   }
@@ -118,9 +171,18 @@
 
   margin-top: 160px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+
   &__title {
     margin-bottom: 80px;
     width: calc(#{$col-part-d} * 6 - (#{$col-gap-d} * 3));
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 
   &__table {
@@ -129,34 +191,68 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+
+      @media (max-width: $breakpoint - 1px) {
+        flex-direction: column;
+      }
     }
     
     li {
       width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
       border-top: 1px solid $green-extra-lighten;
       padding-top: 20px;
-      margin-bottom: 60px;
 
       display: flex;
+
+      @media (max-width: $breakpoint - 1px) {
+        width: 100%;
+        flex-direction: column;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 60px;
+
+        @media (max-width: $breakpoint - 1px) {
+          margin-bottom: 40px;
+        }
+      }
     }
   }
 
   &__img {
     width: calc(#{$col-part-d} * 2);
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 40px;
+      width: auto;
+    }
   }
   &__txt {
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
     padding-right: calc(#{$col-part-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      padding-right: 0;
+    }
 
     #{$comp}__ttl {
       font-size: 24px;
       line-height: 130%;
       text-transform: uppercase;
       margin-bottom: 20px;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 14px;
+      }
     }
     #{$comp}__desc {
       font-size: 16px;
       line-height: 160%;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 14px;
+      }
     }
   }
 }
@@ -186,19 +282,32 @@
   &__title {
     text-indent: calc(#{$col-part-d});
     margin-bottom: 60px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
+
     span {
       font-family: $base-font-family-serif;
       text-transform: lowercase;
     }
   }
+
+
+
   &-filter {
     margin-bottom: 80px;
 
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 10px;
+    }
+
     ul {
       display: flex;
+      margin: 0;
     }
   }
   &__controls {
@@ -218,14 +327,67 @@
   display: flex;
 }
 
+.designers-block {
+  margin-top: 70px;
+
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column-reverse;
+    margin-top: 40px;
+
+    .about-block__desc {
+      width: 100%;
+    }
+
+    .about-block__ttl {
+      margin-bottom: 40px;
+    }
+
+    .about-block__img {
+      width: 100%;
+      text-align: right;
+
+      &::before {
+        right: 15%;
+      }
+
+      img {
+        width: 85%;
+      }
+    }
+  }
+}
+
 .designers-showrooms {
   margin-top: 160px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+
   &__title {
     text-indent: calc(#{$col-part-d});
     margin-bottom: 80px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
+
     span {
       font-family: $base-font-family-serif;
       text-transform: lowercase;
+    }
+  }
+
+  .projects__slide {
+    @media (max-width: $breakpoint - 1px) {
+      margin: 0 10px 0 0;
+      width: 270px;
+    }
+  }
+
+  .projects__slider-controls {
+    @media (max-width: $breakpoint - 1px) {
+      display: none;
     }
   }
 }
@@ -233,19 +395,41 @@
 .designers-contacts {
   margin-top: 160px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+
   &__top {
     display: flex;
     margin-bottom: 80px;
+
+    @media (max-width: $breakpoint - 1px) {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
   }
   &__title {
     width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
   &__subtitle {
     font-family: $base-font-family-serif;
     font-size: 20px;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 16px;
+    }
   }
   &__row {
     display: flex;
+
+    @media (max-width: $breakpoint - 1px) {
+      flex-direction: column;
+    }
   }
   &__card {
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
@@ -253,6 +437,15 @@
     border-top: 1px solid $green-extra-lighten;
 
     display: flex;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      flex-direction: column;
+
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
     
     &:first-child {
       margin-right: $col-gap-d;
@@ -260,12 +453,29 @@
   }
   &__img {
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      width: auto;
+    }
   }
   &__desc {
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
 
     display: flex;
     flex-direction: column;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  &__name {
+    font-size: 25px;
+    line-height: 120%;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 18px;
+    }
   }
   &__position {
     font-size: 13px;
@@ -276,6 +486,10 @@
     margin: 20px 0 60px;
     display: flex;
     flex-wrap: wrap;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin: 20px 0;
+    }
 
     .designers-contacts__tel {
       position: relative;
@@ -298,6 +512,10 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    @media (max-width: $breakpoint - 1px) {
+      padding-left: 0;
+    }
 
     &-txt {
       width: 100%;
@@ -323,6 +541,17 @@
   max-width: 190px;
   background-color: transparent;
   white-space: nowrap;
+
+  text-align: center;
+
+  @media (max-width: $breakpoint - 1px) {
+    padding: 13px 20px;
+    font-size: 12px;
+  }
+}
+
+.mission__main .designers-form__form {
+  width: calc(100% - 60px);
 }
 
 .designers-form__imgs {
@@ -332,9 +561,17 @@
   img:nth-child(1) {
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
     height: 80%;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: calc(35% - 5px);
+    }
   }
   img:nth-child(2) {
     width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      width: calc(65% - 5px);
+    }
   }
 }
 
@@ -407,8 +644,19 @@
   align-items: center;
   margin-bottom: 60px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   &__title {
     width: calc(#{$col-part-d} * 8);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: auto;
+      margin-bottom: 20px;
+    }
   }
   &__link {
     font-weight: 600;
@@ -430,8 +678,18 @@
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
   &__ttl {
     width: calc(#{$col-part-d} * 7);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-bottom: 20px;
+    }
 
     span {
       font-family: $base-font-family-serif;
@@ -441,11 +699,21 @@
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
     font-size: 20px;
     line-height: 160%;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      font-size: 16px;
+      line-height: 140%;
+    }
   }
 }
 
 .distributor-offers {
   margin-top: 80px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 0;
+  }
 
   &-ico {
     height: 90px;
@@ -457,6 +725,15 @@
 .distributor-benefits {
   padding-bottom: 20px;
   border-bottom: 1px solid $green;
+
+  @media (max-width: $breakpoint - 1px) {
+    border-bottom: none;
+    padding-bottom: 0;
+
+    .designers-benefits__txt .designers-benefits__ttl {
+      margin-bottom: 0;
+    }
+  }
 
   ul {
     margin: 0;
@@ -476,17 +753,40 @@
   }
 }
 
+.distributor-products-ttl {
+  margin-bottom: 20px;
+
+  @media (min-width: $breakpoint) {
+    margin-bottom: 60px;
+  }
+}
+
 .distributor-price {
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+    margin-top: 60px;
+  }
+
   &__ttl {
     width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
 
     h3 {
       text-indent: calc(#{$col-part-d});
       margin: 0;
+    }
+
+    .footer__download {
+      @media (max-width: $breakpoint - 1px) {
+        display: none;
+      }
     }
   }
   .footer__download {
@@ -500,16 +800,29 @@
   &__txt {
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-top: 20px;
+    }
+
     p {
       font-family: $base-font-family-serif;
       font-size: 20px;
       line-height: 130%;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 16px;
+      }
     }
     li {
       position: relative;
       display: flex;
       align-items: center;
       padding-left: 46px;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 14px;
+      }
     }
     li::before {
       content: '';
@@ -519,6 +832,13 @@
       height: 6px;
       background-color: $green;
       margin-left: -46px;
+    }
+
+    .footer__download {
+      width: 100%;
+      @media (min-width: $breakpoint) {
+        display: none;
+      }
     }
   }
 }
@@ -531,15 +851,27 @@
   justify-content: center;
   flex-direction: column;
   border-top: none;
+
+  @media (max-width: $breakpoint - 1px) {
+    font-size: 36px;
+  }
 }
 
 .distributor-brands {
   margin-top: 160px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+
   &__top {
     margin-bottom: 80px;
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
   }
 
   .designers-brands__list ul {
@@ -554,6 +886,10 @@
 .distributor-contacts {
   .designers-contacts__links {
     padding-left: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      padding-left: 0;
+    }
   }
 }
 
@@ -564,8 +900,17 @@
 
   position: relative;
 
+  @media (max-width: $breakpoint - 1px) {
+    padding: 40px 10px;
+    margin: 40px -10px 0;
+  }
+
   .mission__slider-underlay {
     width: calc(#{$col-part-d} * 6);
+
+    @media (max-width: $breakpoint - 1px) {
+      display: none;
+    }
 
     &::before {
       top: 20px;

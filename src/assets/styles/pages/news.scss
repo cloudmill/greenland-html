@@ -1,5 +1,9 @@
 .news-filter {
   margin-top: 80px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 20px;
+  }
 }
 
 .news-cols {
@@ -28,6 +32,10 @@
     line-height: 130%;
     text-transform: uppercase;
 
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 16px;
+    }
+
     span {
       font-family: $base-font-family-serif;
       text-transform: none;
@@ -35,11 +43,20 @@
   }
   &__list {
     margin-top: 40px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 20px;
+    }
+
     li {
       font-weight: 600;
       font-size: 13px;
       line-height: 15px;
       text-transform: uppercase;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 12px;
+      }
     }
     li:not(:first-child) {
       margin-top: 15px;
@@ -50,9 +67,23 @@
 .news-subscribe {
   margin-top: 60px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+
   .designers-form__form {
     margin-top: 40px;
-    width: calc(#{$col-part-d} * 3)
+    width: calc(#{$col-part-d} * 3);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
+  }
+
+  .designers-form__form button[type="submit"] {
+    @media (max-width: $breakpoint - 1px) {
+      width: calc(#{$col-part-m} * 3);
+    }
   }
 }
 
@@ -79,6 +110,7 @@
 
   @media (max-width: $breakpoint - 1px) {
     width: 100%;
+    margin-bottom: 40px;
   }
 
   &__date {
@@ -86,11 +118,20 @@
     font-size: 12px;
     line-height: 14px;
     text-transform: uppercase;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 10px;
+    }
   }
   &__title {
     margin: 20px 0 50px;
     font-size: 25px;
     line-height: 120%;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 18px;
+      margin: 20px 0;
+    }
   }
   img {
     width: 100%;
@@ -102,6 +143,10 @@
     font-size: 12px;
     line-height: 14px;
     text-transform: uppercase;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 10px;
+    }
   }
   &__tag:not(:first-child) {
     margin-left: 10px;
@@ -111,6 +156,11 @@
     width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
     font-size: 13px;
     line-height: 160%;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      font-size: 12px;
+    }
   }
 }
 
@@ -124,6 +174,10 @@
 .news-card--slide {
   width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
   margin-bottom: 0;
+
+  @media (max-width: $breakpoint - 1px) {
+    width: 271px;
+  }
 
   .news-card__title {
     margin: 20px 0;
@@ -149,6 +203,9 @@
 
   @media (max-width: $breakpoint - 1px) {
     width: 100%;
+    margin-bottom: 40px;
+    padding: 50px 0 80px;
+    font-size: 16px;
   }
 
   span {
@@ -166,55 +223,11 @@
       left: 0;
       right: 0;
       bottom: 170px;
-    }
-  }
-}
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &-list {
-    display: flex;
-  }
-
-  &__item {
-    width: 46px;
-    height: 46px;
-    font-size: 14px;
-    line-height: 16px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:not(:first-child) {
-      margin-left: 12px;
-    }
-
-    &.is-active {
-      border-radius: 0px 10px;
-      border: 1px solid $green-extra-lighten;
-    }
-  }
-  &__dots {
-    font-size: 14px;
-    line-height: 16px;
-    margin-left: 12px;
-  }
-
-  &-controls {
-    display: flex;
-    justify-content: space-between;
-    width: 102px;
-    margin-left: 70px;
-
-    .arrow {
-      background-color: #CAE8D9;
-    }
-    .arrow-active {
-      background-color: $green;
+      @media (max-width: $breakpoint - 1px) {
+        top: 0px;
+        bottom: 0;
+      }
     }
   }
 }
@@ -227,27 +240,37 @@
   font-size: 14px;
   line-height: 16px;
   text-transform: uppercase;
+  margin-bottom: 80px;
 
   @media (max-width: $breakpoint - 1px) {
     font-size: 12px;
+    margin-bottom: 40px;
   }
 
   .arrow {
     background-color: $green;
     margin-right: 20px;
   }
-  margin-bottom: 80px;
 }
 
 .news-single-main {
   width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
 
   padding-bottom: 160px;
+
+  @media (max-width: $breakpoint - 1px) {
+    padding-bottom: 40px;
+    width: 100%;
+  }
 }
 
 .news-single__info {
   display: flex;
   margin: 40px 0 80px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin: 20px 0;
+  }
 }
 .news-single__date {
   font-size: 12px;
@@ -255,6 +278,11 @@
   text-transform: uppercase;
 
   width: calc(#{$col-part-d} * 2);
+
+  @media (max-width: $breakpoint - 1px) {
+    width: auto;
+    margin-right: 40px;
+  }
 }
 .news-single__tags {
   display: flex;
@@ -264,20 +292,38 @@
     line-height: 14px;
     text-transform: uppercase;
 
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 10px;
+    }
+
     &:not(:first-child) {
       margin-left: 20px;
     }
   }
 }
+
 .news-single__subtitle {
   margin-bottom: 40px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin: 40px 0 20px;
+  }
 }
+
 .news-single__txt {
   line-height: 160%;
   width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
 
+  @media (max-width: $breakpoint - 1px) {
+    width: 100%;
+  }
+
   ul {
     margin: 40px 0;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin: 20px 0;
+    }
 
     :last-child {
       margin-bottom: 0;
@@ -286,7 +332,13 @@
 
   li {
     display: flex;
-    align-items: center;
+    // align-items: center;
+    // flex-wrap: wrap;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 14px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 20px;
     }
@@ -298,6 +350,12 @@
       background-color: $green;
 
       margin-right: 40px;
+      margin-top: 10px;
+      flex: none;
+
+      @media (max-width: $breakpoint - 1px) {
+        margin-right: 20px;
+      }
     }
   }
 
@@ -307,20 +365,35 @@
   }
   
   p:not(:last-child) {
-    margin-bottom: 20px;
+    font-size: 14px;
+
+    @media (min-width: $breakpoint) {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
   }
 }
+
 .news-single__img {
   width: 100%;
 
   margin: 80px 0;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin: 20px 0;
+  }
 }
+
 .other-news__top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   margin-bottom: 80px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-bottom: 20px;
+  }
 }
 .other-news__controls {
   display: flex;

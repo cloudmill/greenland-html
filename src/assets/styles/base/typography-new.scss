@@ -11,6 +11,8 @@
 
 .title-h1 {
   @include title-h1();
+
+  text-transform: uppercase;
 }
 
 // H2
@@ -62,6 +64,12 @@
   @include title-h4();
 
   text-transform: uppercase;
+}
+
+// H5
+
+@mixin title-h5 {
+
 }
 
 // Txt

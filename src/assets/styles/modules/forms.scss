@@ -1,6 +1,10 @@
 .designers-form {
   &__title {
     margin-bottom: 60px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+    }
   }
   &__container {
     width: 100%;
@@ -9,6 +13,10 @@
     position: relative;
     z-index: 1;
     margin: 60px 0;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin: 20px 0 15px;
+    }
   }
   &__form {
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
@@ -16,6 +24,10 @@
     button[type="submit"] {
       width: 100%;
       margin-top: 40px;
+
+      @media (max-width: $breakpoint - 1px) {
+        margin-top: 20px;
+      }
     }
   }
   &__label {
@@ -72,6 +84,8 @@
 
     @media (max-width: $breakpoint - 1px) {
       font-size: 14px;
+      margin-bottom: 20px;
+      padding-bottom: 8px;
     }
 
     &::placeholder {

@@ -2,6 +2,10 @@
   display: flex;
   margin-top: 60px;
 
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+  }
+
   &-logo {
    width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
    border: 1px solid $green-extra-lighten;
@@ -15,6 +19,15 @@
 
    position: relative;
 
+   @media (max-width: $breakpoint - 1px) {
+     width: 50%;
+     height: 140px;
+
+     img {
+       width: 94px;
+     }
+   }
+
    &::after {
     content: url('assets/images/brand-flag-1.png');
     position: absolute;
@@ -27,18 +40,33 @@
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
     margin-right: calc(#{$col-part-d} * 2 + #{$col-gap-d});
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-right: 0;
+      margin-top: 20px;
+    }
+
     &__ttl {
-      font-size: $font-size-h3;
       margin-bottom: 20px;
     }
     &__txt {
-      font-size: $font-size-h5;
+      font-size: 20px;
       line-height: 160%;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 16px;
+        line-height: 140%;
+      }
     }
   }
 
   &-links {
     width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-top: 20px;
+    }
 
     .footer__download {
       color: $black;
@@ -56,22 +84,54 @@
 .brands-pics {
   margin-top: 100px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
+
   &-row {
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: $breakpoint - 1px) {
+      flex-direction: column;
+    }
+
     img {
       width: calc(50% - 10px);
+
+      @media (max-width: $breakpoint - 1px) {
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
     }
   }
   .projects__slider.swiper-container {
     margin-top: 120px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 40px;
+    }
+
+    .projects__slider-controls {
+      @media (max-width: $breakpoint - 1px) {
+        display: none;
+      }
+    }
   }
+
   &-txt {
     margin-top: 120px;
 
     display: flex;
     justify-content: space-between;
+
+    @media (max-width: $breakpoint - 1px) {
+     margin-top: 40px;
+     flex-direction: column;
+    }
 
     &__col {
       width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
@@ -79,6 +139,16 @@
 
       font-size: 18px;
       line-height: 160%;
+
+      @media (max-width: $breakpoint - 1px) {
+        width: 100%;
+        padding-right: 0;
+        font-size: 14px;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+      }
     }
   }
 }

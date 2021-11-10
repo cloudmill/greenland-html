@@ -1,20 +1,38 @@
 .career-titles {
   margin-top: 80px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 20px;
+  }
 }
 
 .career-row {
   display: flex;
 
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column-reverse;
+  }
+
   &__img {
     width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
   }
   &__txt {
     width: calc(#{$col-part-d} * 7);
     margin-left: calc(#{$col-part-d} + #{$col-gap-d});
     text-indent: calc(#{$col-part-d});
-    font-size: $font-size-h3;
+    // font-size: $font-size-h3;
     line-height: 120%;
     text-transform: uppercase;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -22,23 +40,45 @@
   justify-content: flex-end;
   align-items: flex-end;
 
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+  }
+
   .career-row__txt {
     margin-right: calc(#{$col-part-d} * 2);
     margin-top: 100px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-right: 0;
+      margin-top: 40px;
+    }
   }
 }
 
 .career-row:nth-child(3) {
   margin-top: 120px;
   align-items: flex-end;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
 }
 
 .career-requirement {
   display: flex;
   margin-top: 160px;
 
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
   &__title {
-    width: calc(#{$col-part-d} * 6);;
+    width: calc(#{$col-part-d} * 6);
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
   }
   &__list {
     li {
@@ -49,6 +89,11 @@
       white-space: nowrap;
 
       position: relative;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 24px;
+        margin-top: 20px;
+      }
     }
     .highlight-1::after {
       content: url('assets/images/new-highlights/career/highlight-1.png');
@@ -103,11 +148,20 @@
 
 .career-vacancies {
   margin-top: 160px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+  }
 }
 
 .career-spoilers {
   padding: 0 calc(#{$col-part-d} * 2);
   margin-top: 80px;
+
+  @media (max-width: $breakpoint - 1px) {
+    padding: 0;
+    margin-top: 20px;
+  }
 }
 
 .spoiler {
@@ -128,12 +182,22 @@
       padding: 40px 0 40px 20px;
 
       width: calc(100% - 102px);
+
+      @media (max-width: $breakpoint - 1px) {
+        padding: 20px;
+        width: calc(100% - 40px);
+      }
     }
   }
   &__title {
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
     font-size: 18px;
     line-height: 120%;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 16px;
+      width: 100%;
+    }
   }
   &__city {
     width: calc(#{$col-part-d} * 2);
@@ -148,8 +212,6 @@
   }
   &__close {
     width: 102px;
-    // height: 102px;
-    // height: 100%;
     border-left: 1px solid #CAE8D9;
     border-bottom: 1px solid transparent;
 
@@ -160,6 +222,12 @@
 
     transition: .5s;
 
+    @media (max-width: $breakpoint - 1px) {
+    height: 40px;
+    width: 40px;
+    border-bottom: 1px solid #CAE8D9;
+    }
+
     &::before, &::after {
       content: '';
       position: absolute;
@@ -168,6 +236,11 @@
       background-color: $black;
 
       transition: .5s;
+
+      @media (max-width: $breakpoint - 1px) {
+        width: 12px;
+        height: 1px;
+      }
     }
     &::after {
       transform: rotate(90deg);
@@ -177,6 +250,13 @@
     display: none;
     &-inner {
       padding: 40px 20px 60px;
+
+
+      @media (max-width: $breakpoint - 1px) {
+        padding: 0 60px 20px 20px;
+        font-size: 14px;
+        line-height: 160%;
+      }
     }
   }
   &__desc {
@@ -243,15 +323,46 @@
   line-height: 120%;
   width: calc(#{$col-part-d} * 6);
   margin-right: calc(#{$col-part-d});
+
+  @media (max-width: $breakpoint - 1px) {
+    font-size: 16px;
+    width: 100%;
+    margin-right: 0;
+  }
 }
 .designers-contacts__card.career-contacts-card {
   width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
+
+  @media (max-width: $breakpoint - 1px) {
+    width: 100%;
+    margin-top: 40px;
+  }
 }
 
 .career-form {
   margin-top: 80px;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: $breakpoint - 1px) {
+    flex-direction: column;
+    margin-top: 40px;
+  }
+
+  &__form {
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      flex-direction: column;
+
+      .form__add-file {
+        margin: 0 0 20px;
+      }
+
+      button[type="submit"] {
+        margin-top: 20px;
+      }
+    }
+  }
 }
 
 .career-hh {
@@ -265,16 +376,29 @@
   border-top: 1px solid $green;
   border-bottom: 1px solid #CAE8D9;
 
+  @media (max-width: $breakpoint - 1px) {
+    width: 100%;
+    height: 304px;
+  }
+
   &__link {
     font-size: 40px;
     line-height: 120%;
     text-align: center;
     text-decoration: underline;
     text-transform: uppercase;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 24px;
+    }
   }
 
   img {
     position: absolute;
     z-index: -1;
+
+    @media (max-width: $breakpoint - 1px) {
+      max-height: 224px;
+    }
   }
 }

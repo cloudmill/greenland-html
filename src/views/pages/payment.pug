@@ -12,15 +12,15 @@ block content
       .container
         +breadcrumbs(['клиентам'])
 
-        .clients-top
-          h1.beta клиентам
-          .about-tabs
-            a.about-tabs__item(href="") Возврат денеженых средств
-            a.about-tabs__item(href="") Доставка
-            a.about-tabs__item.about-tabs__item--active(href="") Оплата
+        //- .clients-top
+        h1.title-h1.about-title клиентам
+        .about-tabs
+          a.about-tabs__item(href="") Возврат денеженых средств
+          a.about-tabs__item(href="") Доставка
+          a.about-tabs__item.about-tabs__item--active(href="") Оплата
 
         .payment-block
-          h3.payment-block__ttl Если возникли вопросы по заказу
+          h3.payment-block__ttl.title-h3 Если возникли вопросы по заказу
           .payment-block__row
             .payment-block__item Мы ответим на любые ваши вопросы в рабочее время с понедельника по пятницу с 9:00 до 18:00.
             .payment-block__item Вы сможете написать нам в 
@@ -30,7 +30,7 @@ block content
               |, а так же связаться с вашим персональным менеджером напрямую.
 
         .payment-block
-          h3.payment-block__ttl СПОСОБЫ ОПЛАТЫ
+          h3.payment-block__ttl.title-h3 СПОСОБЫ ОПЛАТЫ
           .payment-block__row
             .payment-block__item Заказы оплачиваются безналичным способом:
             .payment-block__item Оплата за наличный расчет возможно только в шоуруме г. Санкт-Петербург.
@@ -49,7 +49,7 @@ block content
                 img(src="assets/images/payment-3.png", alt="")
               |Банковской картой
 
-        h3 налоги
+        h3.title-h3 налоги
         .payment-taxes-desc Все налоги включены в стоимость товара и доставки.
     
     include ../partials/_footer.pug
