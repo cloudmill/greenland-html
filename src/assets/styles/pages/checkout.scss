@@ -1,0 +1,276 @@
+.checkout {
+  display: flex;
+  flex-wrap: wrap;
+
+  .news-back-link, .title-h1 {
+    width: 100%;
+  }
+
+  .news-back-link {
+    margin-bottom: 45px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 30px;
+    }
+  }
+}
+ 
+
+.checkout-left {
+  width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+  margin-top: -40px;
+
+  @media (max-width: $breakpoint - 1px) {
+    width: 100%;
+    margin-top: -20px;
+  }
+}
+
+.checkout-right {
+  @media (max-width: $breakpoint - 1px) {
+    display: none;
+  }
+}
+
+.checkout-login {
+  margin-top: 20px;
+  margin-left: calc(#{$col-part-d} * 2);
+
+  display: flex;
+  align-items: center;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  svg {
+    margin-right: 10px;
+  }
+}
+
+.checkout-block {
+  margin-top: 60px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 40px;
+    flex-direction: column;
+  }
+
+  &__ttl {
+    font-size: 24px;
+    line-height: 130%;
+    text-transform: uppercase;
+
+    width: 100%;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 14px;
+    }
+  }
+
+  &__input {
+    width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+    margin-top: 40px;
+    padding-bottom: 15px;
+
+    font-size: 16px;
+    line-height: 160%;
+
+    border: none;
+    border-bottom: 1px solid $green-extra-lighten;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-top: 20px;
+      font-size: 14px;
+      padding-bottom: 8px;
+    }
+
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
+  .about-tabs {
+    margin-top: 40px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 20px;
+    }
+  }
+
+  &__btn {
+    margin-top: 30px;
+
+    max-width: 562px;
+    width: 100%;
+
+    border: 1px solid $green-extra-lighten;
+    border-radius: 0px 20px;
+    padding: 22px;
+
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 20px;
+      max-width: 100%;
+      padding: 13px;
+      font-size: 12px;
+    }
+  }
+
+  &__txt {
+    margin-top: 20px;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 14px;
+      width: 100%;
+    }
+  }
+}
+
+.checkout-payment {
+  margin-top: 40px;
+
+  display: flex;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  &__item {
+    padding: 8px 15px 8px 8px;
+    border-radius: 50px;
+    border: 1px solid $green-extra-lighten;
+
+    display: flex;
+    align-items: center;
+
+    @media (max-width: $breakpoint - 1px) {
+      padding: 5px 10px 5px 5px;
+      font-size: 12px;
+    }
+
+    svg {
+      margin-right: 10px;
+
+      @media (max-width: $breakpoint - 1px) {
+        margin-right: 8px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &:not(:first-child) {
+      margin-left: 10px;
+
+      @media (max-width: $breakpoint - 1px) {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.checkout-address {
+  &__pvz, &__courier, &__sklad {
+    display: flex;
+    margin: 35px 0 30px;
+
+    @media (max-width: $breakpoint - 1px) {
+      flex-direction: column;
+      margin: 20px 0;
+    }
+  }
+
+  &__ttl {
+    width: calc(#{$col-part-d} * 2);
+    font-size: 11px;
+    line-height: 130%;
+    text-transform: uppercase;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__desc {
+    width: calc(#{$col-part-d} * 4);
+    // line-height: 160%;
+    font-size: 14px;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
+
+    div:not(:last-child) {
+      margin-bottom: 5px;
+    }
+
+    &--big {
+      font-weight: 600;
+    }
+
+    &--small {
+      font-size: 12px;
+    }
+  }
+}
+
+.summary-title {
+  margin: 90px 0 80px;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin: 0 0 20px;
+  }
+}
+
+.summary {
+  margin: 80px 0 0 calc(#{$col-part-d} * 4);
+  width: calc(#{$col-part-d} * 6);
+
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $breakpoint - 1px) {
+    margin: 20px 0 0 0;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__item {
+    width: calc(#{$col-part-d} * 2);
+    padding-right: calc(#{$col-gap-d});
+
+    font-size: 14px;
+
+    @media (max-width: $breakpoint - 1px) {
+      width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+      margin-bottom: 20px;
+    }
+
+    &-value {
+      margin-top: 5px;
+      font-weight: 600;
+    }
+  }
+
+  .btn {
+    margin-top: 60px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+}

@@ -10,16 +10,71 @@ block content
 
     .section.page-wrapper
       .container.basket
-        .basket-main
-          +breadcrumbs(['корзина'])
+        .basket-main.checkout
+          a.news-back-link(href="")
+            +arrow('white', '#65BA7F', 'left', '15', '13', '46')
+            |вернуться в корзину
 
           h1.title-h1.about-title Оформление заказа
 
-          .checkout-contacts
+          .checkout-left
 
-          .checkout-delivery
+            .checkout-block
+              .checkout-block__ttl контактные данные
 
-          .checkout-payment
+              input.checkout-block__input(type="text" placeholder="Имя*")
+              input.checkout-block__input(type="text" placeholder="Фамилия*")
+              input.checkout-block__input(type="text" placeholder="E-mail*")
+              input.checkout-block__input(type="text" placeholder="Номер телефона*")
+
+            .checkout-block
+              .checkout-block__ttl Способ доставки
+
+              .about-tabs
+                a.about-tabs__item.about-tabs__item--active(href="") Забрать из пункта выдачи
+                a.about-tabs__item(href="") Курьером до двери
+                a.about-tabs__item(href="") Самовывоз со склада
+
+              .checkout-address__pvz
+                .checkout-address__ttl выбранный адрес
+                .checkout-address__desc
+                  .checkout-address__desc--big ул. Красноармейская, 97
+                  div +7 (3435) 379-044
+                  .checkout-address__desc--small Вс 10:00-16:00, Сб 10:00-16:00, Пн-Пт 10:00-20:00
+                  .checkout-address__desc--small Напротив ТЦ Пирамида
+                  .checkout-address__desc--small Возможность примерки отсутствует
+
+              .checkout-address__courier
+                .checkout-address__ttl выбранный адрес
+                .checkout-address__desc г. Москва, ул. Стачек, 34
+
+              .checkout-address__sklad
+                .checkout-address__ttl адрес склада
+                .checkout-address__desc Санкт-Петербург, Московское шоссе, дом 25, к. 1, Бизнес-центр «Престиж», офис 248
+
+
+              button.checkout-block__btn Выбрать адрес на карте
+
+            .checkout-block
+              .checkout-block__ttl Способ оплаты
+
+              .checkout-block__txt Для выбора способа оплаты укажите способ доставки
+
+              .checkout-payment
+
+                .checkout-payment__item
+                  +checkoutPoint
+                  |Оплатить картой онлайн
+
+                .checkout-payment__item
+                  +checkoutPoint
+                  |Банковским переводом по счету
+
+          .checkout-right
+
+            button.checkout-login
+              +checkoutLogin
+              |войти
 
 
         .basket-aside
