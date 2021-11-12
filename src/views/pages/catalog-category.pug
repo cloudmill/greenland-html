@@ -17,17 +17,31 @@ block content
         .catalog-filter
           .catalog-filter-imgs
 
-            .catalog-filter-imgs__item Пластиковые
-            .catalog-filter-imgs__item Керамические
-            .catalog-filter-imgs__item Глиняные
-            .catalog-filter-imgs__item Мраморные
-            .catalog-filter-imgs__item Файберглас
-            .catalog-filter-imgs__item Из бетона
-            .catalog-filter-imgs__item Из стекла
+            .catalog-filter-imgs__item.is-active
+              img(src="assets/images/icons/filter-ico/filter-ico-1.png", alt="")
+              |Пластиковые
+            .catalog-filter-imgs__item
+              img(src="assets/images/icons/filter-ico/filter-ico-2.png", alt="")
+              |Керамические
+            .catalog-filter-imgs__item
+              img(src="assets/images/icons/filter-ico/filter-ico-3.png", alt="")
+              |Глиняные
+            .catalog-filter-imgs__item
+              img(src="assets/images/icons/filter-ico/filter-ico-4.png", alt="")
+              |Мраморные
+            .catalog-filter-imgs__item
+              img(src="assets/images/icons/filter-ico/filter-ico-5.png", alt="")
+              |Файберглас
+            .catalog-filter-imgs__item
+              img(src="assets/images/icons/filter-ico/filter-ico-6.png", alt="")
+              |Из бетона
+            .catalog-filter-imgs__item
+              img(src="assets/images/icons/filter-ico/filter-ico-7.png", alt="")
+              |Из стекла
 
           .catalog-filter-tabs
 
-            .catalog-filter-tabs__item Напольные
+            .catalog-filter-tabs__item.is-active Напольные
             .catalog-filter-tabs__item С автополивом
             .catalog-filter-tabs__item Для сада
             .catalog-filter-tabs__item Настенное
@@ -40,13 +54,40 @@ block content
 
           .catalog-filter-spoilers
 
-            .catalog-filter-spoilers__item Все фильтры
-            .catalog-filter-spoilers__item Наличие, скидки
-            .catalog-filter-spoilers__item Диапазон цены
-            .catalog-filter-spoilers__item Цвет
-            .catalog-filter-spoilers__item Форма
-            .catalog-filter-spoilers__item Применение
-            .catalog-filter-spoilers__item Особенности
+            .catalog-filter-spoilers__item
+            
+              |Все фильтры
+              .catalog-filter-spoilers__plus
+
+            .catalog-filter-spoilers__item
+              
+              |Наличие, скидки
+              img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+
+            .catalog-filter-spoilers__item
+
+              |Диапазон цены
+              img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+
+            .catalog-filter-spoilers__item
+
+              |Цвет
+              img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+
+            .catalog-filter-spoilers__item
+            
+              |Форма
+              img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+
+            .catalog-filter-spoilers__item
+            
+              |Применение
+              img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+
+            .catalog-filter-spoilers__item
+            
+              |Особенности
+              img(src="assets/images/icons/spoiler-arrow.svg", alt="")
 
         .category-row
          - for (i=0; i<5; i++)
@@ -120,6 +161,10 @@ block content
               .catalog-card__color Серебро
               .catalog-card__price 5 292 ₽
 
+        .catalog-block
+          
+          .catalog-block__desc
+        
         .pagination
           .pagination-list
             button.pagination__item.is-active 1
