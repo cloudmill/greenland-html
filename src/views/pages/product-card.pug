@@ -87,39 +87,82 @@ block content
               .product-card-info__item Правила эксплуатации
               .product-card-info__item Визуальная размерность
 
+            .product-card-buttons
+              button.btn-white купить в 1 клик
+              button.btn
+                +basketIco
+                |в корзину
+
         .product-card-body
 
           .product-card-aside
 
           .product-card-main
 
-            .category-row
-              - for (i=0; i<5; i++)
-                .catalog-card
-                  .catalog-card__labels
-                    .catalog-card__labels-item Скидки
-                    .catalog-card__labels-item Новинки
-                  .catalog-card__top
-                    .catalog-card__layer
-                      .catalog-card__pagination
-                        .catalog-card__pagination-item
-                        .catalog-card__pagination-item
-                        .catalog-card__pagination-item
-                        .catalog-card__pagination-item
-                      .catalog-card__buttons
-                        button.catalog-card__buttons-item
-                          img(src="assets/images/catalog-buttons-1.svg", alt="")
-                        button.catalog-card__buttons-item
-                          img(src="assets/images/catalog-buttons-2.svg", alt="")
-                    img.catalog-card__main-img(src=`assets/images/catalog-${i + 1}.png`, alt="")
-                  a.catalog-card__bottom(href="")
-                    .catalog-card__ttl Высокое напольное кашпо MUSCHEL
-                    .catalog-card__color Серебро
-                    .catalog-card__price 5 292 ₽
+            .product-card-size
+              h3.title-h3 размеры
+
+              .product-size-table
+                .product-size-top
+                  .product-size-code артикул
+                  .product-size-col Диаметр, см
+                  .product-size-col Высота, см
+                  .product-size-col Вес, кг
+                  .product-size-col наличие
+                  .product-size-price цена
+                  .product-size-button
+
+                - for (i=0; i<5; i++)
+                  .product-size-row
+                    .product-size-code TC 316 040Т
+                    .product-size-col 37
+                    .product-size-col 30
+                    .product-size-col 2
+                    .product-size-col В наличии
+                    .product-size-price 5 292 ₽
+                    .product-size-button
+                      button.btn
+                        +basketIco
+                        |в корзину
+          
+            .product-card-recommend
+              h3.title-h3 С этим покупают
+
+              .category-row
+                - for (i=0; i<5; i++)
+                  .catalog-card
+                    .catalog-card__labels
+                      .catalog-card__labels-item Скидки
+                      .catalog-card__labels-item Новинки
+                    .catalog-card__top
+                      .catalog-card__layer
+                        .catalog-card__pagination
+                          .catalog-card__pagination-item
+                          .catalog-card__pagination-item
+                          .catalog-card__pagination-item
+                          .catalog-card__pagination-item
+                        .catalog-card__buttons
+                          button.catalog-card__buttons-item
+                            img(src="assets/images/catalog-buttons-1.svg", alt="")
+                          button.catalog-card__buttons-item
+                            img(src="assets/images/catalog-buttons-2.svg", alt="")
+                      img.catalog-card__main-img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                    a.catalog-card__bottom(href="")
+                      .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                      .catalog-card__color Серебро
+                      .catalog-card__price 5 292 ₽
+
+            .product-card-desc
+              h3.title-h3 Описание
+
+              .product-card-txt
+                p Горшок для цветов - это не только емкость для размещения растения, но и предмет дизайна, украшение, а иногда и мебель или даже светильник. Правильно подобранные цветочные кашпо моментально преобразят помещение или ландшафт, в зависимости от поставленной задачи добавят ярких красок или, наоборот, сольются с окружающей средой, предоставив растениям возможность выйти на первый план.
+                p В нашем каталоге представлен широкий ассортимент цветочных горшков и кашпо - различные материалы, размеры и формы, функция автополива. Вы можете выбрать подходящее кашпо самостоятельно, или наши менеджеры подберут варианты для вас.
+                
 
             .designers-contacts.distributor-contacts
               .designers-contacts__top
-                h2.designers-contacts__title Начать работу с нами
+                h2.designers-contacts__title Задать вопрос
                 .designers-contacts__subtitle Звоните или пишите нам. Мы расскажем и о других 
                   br
                   |преимуществах работы с Green Land.

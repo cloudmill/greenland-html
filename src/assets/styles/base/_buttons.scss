@@ -37,5 +37,29 @@
   &:hover {
     background: $green;
     color: #fff;
+
+    svg rect, svg path {
+      stroke: #fff;
+    }
+  }
+}
+
+.btn-white {
+  border: 1px solid $green-extra-lighten;
+  border-radius: 0px 20px;
+  text-align: center;
+  padding: 17px 25px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  transition: .5s;
+
+  &:hover {
+    color: #fff;
+    background-color: $green;
+    border-color: $green;
   }
 }
