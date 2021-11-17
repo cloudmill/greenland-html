@@ -125,32 +125,44 @@ block content
                         +basketIco
                         |в корзину
           
-            .product-card-recommend
-              h3.title-h3 С этим покупают
-
-              .category-row
-                - for (i=0; i<5; i++)
-                  .catalog-card
-                    .catalog-card__labels
-                      .catalog-card__labels-item Скидки
-                      .catalog-card__labels-item Новинки
-                    .catalog-card__top
-                      .catalog-card__layer
-                        .catalog-card__pagination
-                          .catalog-card__pagination-item
-                          .catalog-card__pagination-item
-                          .catalog-card__pagination-item
-                          .catalog-card__pagination-item
-                        .catalog-card__buttons
-                          button.catalog-card__buttons-item
-                            img(src="assets/images/catalog-buttons-1.svg", alt="")
-                          button.catalog-card__buttons-item
-                            img(src="assets/images/catalog-buttons-2.svg", alt="")
-                      img.catalog-card__main-img(src=`assets/images/catalog-${i + 1}.png`, alt="")
-                    a.catalog-card__bottom(href="")
-                      .catalog-card__ttl Высокое напольное кашпо MUSCHEL
-                      .catalog-card__color Серебро
-                      .catalog-card__price 5 292 ₽
+            .product-card-recommend.designers-products
+              .designers-products__top
+                h3.title-h3
+                  |С этим покупают
+                .designers-products__controls(data-catalog-slider-controls="")
+                  .arrows.cover__slider-arrows
+                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-catalog-slider-prev="")
+                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-catalog-slider-next="")
+              .designers-products__catalog
+                .swiper-container(data-catalog-slider="")
+                  .swiper-wrapper
+                    - for (i=0; i<5; i++)
+                      .catalog-card.swiper-slide
+                        .catalog-card__labels
+                          .catalog-card__labels-item Скидки
+                          .catalog-card__labels-item Новинки
+                        .catalog-card__top
+                          .catalog-card__layer
+                            .catalog-card__pagination
+                              .catalog-card__pagination-item
+                              .catalog-card__pagination-item
+                              .catalog-card__pagination-item
+                              .catalog-card__pagination-item
+                            .catalog-card__buttons
+                              button.catalog-card__buttons-item
+                                img(src="assets/images/catalog-buttons-1.svg", alt="")
+                              button.catalog-card__buttons-item
+                                img(src="assets/images/catalog-buttons-2.svg", alt="")
+                          img.catalog-card__main-img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+                        a.catalog-card__bottom(href="")
+                          .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                          .catalog-card__color Серебро
+                          .catalog-card__price 5 292 ₽
+                          .catalog-card__buttons
+                            button.catalog-card__buttons-item
+                              img(src="assets/images/catalog-buttons-1.svg", alt="")
+                            button.catalog-card__buttons-item
+                              img(src="assets/images/catalog-buttons-2.svg", alt="")
 
             .product-card-desc
               h3.title-h3 Описание
@@ -158,14 +170,112 @@ block content
               .product-card-txt
                 p Горшок для цветов - это не только емкость для размещения растения, но и предмет дизайна, украшение, а иногда и мебель или даже светильник. Правильно подобранные цветочные кашпо моментально преобразят помещение или ландшафт, в зависимости от поставленной задачи добавят ярких красок или, наоборот, сольются с окружающей средой, предоставив растениям возможность выйти на первый план.
                 p В нашем каталоге представлен широкий ассортимент цветочных горшков и кашпо - различные материалы, размеры и формы, функция автополива. Вы можете выбрать подходящее кашпо самостоятельно, или наши менеджеры подберут варианты для вас.
+
+              .product-card-tags
+                .product-card-tags__ttl Найти по тегам
+                .product-card-tags__item #для улицы
+                .product-card-tags__item #для САДА
+                .product-card-tags__item #для офиса
+                .product-card-tags__item #для интерьера
+                .product-card-tags__item #для КВАРТИРЫ
+                .product-card-tags__item #для БАЛКОНА
+
+              .projects__slider-controls(data-product-projects-controls="")
+                  .projects-controls-container
+                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+                  .projects-controls-container
+                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+
+              .swiper-container(data-product-desc-slider="")
+                .swiper-wrapper
+                  .swiper-slider
+                    img(src="assets/images/product-card-1.jpg", alt="")
+                  .swiper-slider
+                    img(src="assets/images/product-card-1.jpg", alt="")
+
+
+            .designers-showrooms.product-projects
+              .ojects-projects-top
+                h2.ojects-projects-top__title.title-h2
+                  |Реализовано в проектах
+                a.ojects-projects-top__link(href="")
+                  |все проекты
+                  img(src="assets/images/objects-arrow.png", alt="")
+
+                .projects__slider-controls(data-product-projects-controls="")
+                  .projects-controls-container
+                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+                  .projects-controls-container
+                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+
+              
+
+              .projects__slider.swiper-container(data-product-projects-slider="")
+                .swiper-wrapper
+                  .swiper-slide.projects__slide
+                    .projects__item
+                      .projects__item-slider(data-fade-item-slider="")
+                        .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                          img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                        .bullets.projects__item-slider-bullets
+                          .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .projects__item-caption
+                        .epsilon.projects__item-name Отель Crowne Plaza
+                        .projects__item-tags
+                          .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                          .projects__item-tag.text__super-tn.text--uppercase Террасы
+                          .projects__item-tag.text__super-tn.text--uppercase Входные группы
+                  .swiper-slide.projects__slide
+                    .projects__item
+                      .projects__item-slider(data-fade-item-slider="")
+                        .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                          img.projects__item-img.is-active(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                        .bullets.projects__item-slider-bullets
+                          .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .projects__item-caption
+                        .epsilon.projects__item-name Отель Crowne Plaza
+                        .projects__item-tags
+                          .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                          .projects__item-tag.text__super-tn.text--uppercase Террасы
+                          .projects__item-tag.text__super-tn.text--uppercase Входные группы
+                  .swiper-slide.projects__slide
+                    .projects__item
+                      .projects__item-slider(data-fade-item-slider="")
+                        .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                          img.projects__item-img.is-active(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                        .bullets.projects__item-slider-bullets
+                        .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .projects__item-caption
+                        .epsilon.projects__item-name Отель Crowne Plaza
+                        .projects__item-tags
+                          .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                          .projects__item-tag.text__super-tn.text--uppercase Террасы
+                          .projects__item-tag.text__super-tn.text--uppercase Входные группы
                 
 
-            .designers-contacts.distributor-contacts
+
+            .designers-contacts
               .designers-contacts__top
-                h2.designers-contacts__title Задать вопрос
-                .designers-contacts__subtitle Звоните или пишите нам. Мы расскажем и о других 
-                  br
-                  |преимуществах работы с Green Land.
+                h2.designers-contacts__title Задать Вопрос
+
               .designers-contacts__row
                 .designers-contacts__card
                   .designers-contacts__img
@@ -177,23 +287,27 @@ block content
                       span.designers-contacts__tel 8 911 924-50-84
                       span sv@green-land.ru
 
-                    .contacts-btn
+                    .contacts-btn.btn-white
                       |обратная связь
                     
-              
+                .product-contact-col
 
-                .designers-contacts__links
-                  .designers-contacts__links-txt
-                    |Написать в соц. сетях
-                  .footer__socials
-                    a.footer__socials-link(href="")
-                      +fbIcon
-                    a.footer__socials-link(href="")
-                      +vkIcon
-                    a.footer__socials-link(href="")
-                      +instIcon
-                    a.footer__socials-link(href="")
-                      +houzzIcon
+                  p Если нужна помощь в подборе продукции, вы можете позвонить нам или оставить заявку на обратный звонок
+
+                  button.btn обратный звонок
+
+                  .designers-contacts__links
+                    .designers-contacts__links-txt
+                      |Написать в соц. сетях
+                    .footer__socials
+                      a.footer__socials-link(href="")
+                        +fbIcon
+                      a.footer__socials-link(href="")
+                        +vkIcon
+                      a.footer__socials-link(href="")
+                        +instIcon
+                      a.footer__socials-link(href="")
+                        +houzzIcon
 
         include ../partials/you-watched.pug
 

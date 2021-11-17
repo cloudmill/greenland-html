@@ -13,6 +13,7 @@ import initBrandsSlider from './assets/scripts/brands-slider';
 import initCatalogSlider from './assets/scripts/catalog-slider';
 import initBrandsLogosSlider from './assets/scripts/brands-logos-slider';
 import initOtherSlider from './assets/scripts/other-news-slider';
+import productProjects from './assets/scripts/product-projects-slider';
 
 import './assets/scripts/compare';
 
@@ -62,6 +63,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	try {
 		initOtherSlider();
+	} catch {}
+
+	try {
+		productProjects();
 	} catch {}
 
 	// new FullPage();

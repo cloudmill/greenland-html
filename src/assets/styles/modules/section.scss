@@ -11,3 +11,40 @@
     justify-content: space-between;
   }
 }
+
+.main-links {
+  height: 100vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  li {
+    margin: 10px 0;
+  }
+}
+
+.product-contact-col {
+  display: flex;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+
+  width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+
+  p {
+    width: 100%;
+    font-size: 25px;
+    line-height: 120%;
+  }
+
+  .btn {
+    height: 80px;
+  }
+
+  .designers-contacts__links {
+    padding-left: 0;
+    width: 200px;
+  }
+}
