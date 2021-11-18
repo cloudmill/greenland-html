@@ -5,12 +5,13 @@ export default function productDesc() {
 
   const BREAKPOINT = 1280;
 
-  const $productDesc = document.querySelector('[data-product-projects-slider]');
-  const $productProjectsControls = document.querySelector('[data-product-projects-controls]');
+  const $productDesc = document.querySelector('[data-product-desc-slider]');
+  const $productDescControls = document.querySelector('[data-product-desc-controls]');
 
   const productDesc = new Swiper($productDesc, {
     slidesPerView: 'auto',
     loop: true,
+    spaceBetween: 10,
 
     breakpoints: {
       [BREAKPOINT]: {
@@ -19,8 +20,8 @@ export default function productDesc() {
     },
 
     navigation: {
-      prevEl: $productDesc.querySelector('[data-projects-slider-prev]'),
-      nextEl: $productDesc.querySelector('[data-projects-slider-next]')
+      prevEl: $productDescControls.querySelector('[data-projects-slider-prev]'),
+      nextEl: $productDescControls.querySelector('[data-projects-slider-next]')
     }
   });
 

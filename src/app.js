@@ -14,6 +14,7 @@ import initCatalogSlider from './assets/scripts/catalog-slider';
 import initBrandsLogosSlider from './assets/scripts/brands-logos-slider';
 import initOtherSlider from './assets/scripts/other-news-slider';
 import productProjects from './assets/scripts/product-projects-slider';
+import productDesc from './assets/scripts/product-desc-slider';
 
 import './assets/scripts/compare';
 
@@ -67,6 +68,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	try {
 		productProjects();
+	} catch {}
+
+	try {
+		productDesc();
 	} catch {}
 
 	// new FullPage();

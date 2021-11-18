@@ -59,6 +59,11 @@
 
   transition: .5s;
 
+  @media (max-width: $breakpoint - 1px) {
+    padding: 13px;
+    font-size: 12px;
+  }
+
   &:hover {
     color: #fff;
     background-color: $green;

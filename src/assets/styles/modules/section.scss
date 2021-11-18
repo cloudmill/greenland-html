@@ -33,14 +33,30 @@
 
   width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
 
+  @media (max-width: $breakpoint - 1px) {
+    width: 100%;
+  }
+
   p {
     width: 100%;
     font-size: 25px;
     line-height: 120%;
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
   }
 
   .btn {
     height: 80px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-bottom: 20px;
+      height: auto;
+      background: transparent;
+      border: 1px solid $green-extra-lighten;
+    }
   }
 
   .designers-contacts__links {
