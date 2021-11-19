@@ -9,6 +9,27 @@
   background: url('assets/images/cover__bg.jpg') no-repeat center / cover;
   color: $white-lighten;
 
+  @media (max-width: $breakpoint - 1px) {
+    padding-top: 80px;
+    padding-bottom: 26px;
+    height: 100vh;
+
+    justify-content: flex-start;
+  }
+
+  .container {
+    @media (max-width: $breakpoint - 1px) {
+      height: 100vh;
+    }
+  }
+
+  .row {
+    @media (max-width: $breakpoint - 1px) {
+      height: 100%;
+      align-content: space-between;
+    }
+  }
+
   &::before {
     content: '';
 
@@ -47,6 +68,14 @@
     background: $white-lighten;
     color: $black;
 
+    @media (max-width: $breakpoint - 1px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      padding: 16px 115px 28px 16px;
+    }
+
     &-heading {
       position: relative;
       z-index: 2;
@@ -81,6 +110,13 @@
         position: relative;
         margin-bottom: 58px;
 
+        @media (max-width: $breakpoint - 1px) {
+          position: absolute;
+          // top: 8px;
+          right: 24px;
+          margin-bottom: 0;
+        }
+
         &::before {
           content: '';
           position: absolute;
@@ -93,6 +129,10 @@
 
           border: 1px solid $green-extra-lighten;
           border-radius: 0px 0px 900px 900px;
+
+          @media (max-width: $breakpoint - 1px) {
+            display: none;
+          }
         }
       }
     }
@@ -137,6 +177,12 @@
     &-arrows {
       flex: 0 0 92px;
       max-width: 92px;
+    }
+  }
+
+  .col {
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
     }
   }
 }
