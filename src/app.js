@@ -16,6 +16,8 @@ import initOtherSlider from './assets/scripts/other-news-slider';
 import productProjects from './assets/scripts/product-projects-slider';
 import productDesc from './assets/scripts/product-desc-slider';
 
+import './assets/scripts/modals';
+
 import './assets/scripts/compare';
 
 import './assets/scripts/spoiler';
