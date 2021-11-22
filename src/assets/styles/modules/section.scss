@@ -20,6 +20,8 @@
   flex-direction: column;
   flex-wrap: wrap;
 
+  overflow-x: scroll;
+
   li {
     margin: 10px 0;
   }

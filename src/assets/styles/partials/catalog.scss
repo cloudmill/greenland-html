@@ -340,6 +340,10 @@
         width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
         background-color: $green-extra-lighten;
         border-radius: 50px 0 0 50px;
+
+        &:hover {
+          background-color: $green-lighten;
+        }
       }
 
       &:not(:first-child) {
@@ -348,6 +352,10 @@
 
       &:not(:last-child) {
         border-right: 1px solid $green-extra-lighten;
+      }
+
+      &:last-child {
+        border-radius: 0 50px 50px 0;
       }
     }
 
@@ -602,8 +610,12 @@
     width: 100%;
 
     img {
-      width: 100%;
+      height: 100%;
       object-fit: cover;
+
+      @media (min-width: $breakpoint) {
+        width: 100%;
+      }
     }
   }
 }

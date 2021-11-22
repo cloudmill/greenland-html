@@ -1,9 +1,11 @@
 .compare-table {
   display: flex;
   margin-top: 80px;
+  margin-right: -40px;
 
   @media (max-width: $breakpoint - 1px) {
     margin-top: 20px;
+    margin-right: -10px;
   }
 
   &__col:nth-child(1) {
