@@ -209,6 +209,16 @@
 
   .breadcrumbs {
     width: 100%;
+
+    @media (max-width: $breakpoint - 1px) {
+      height: 10px;
+    }
+  }
+
+  &__block {
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
   }
 
   .breadcrumbs__link, h1 {

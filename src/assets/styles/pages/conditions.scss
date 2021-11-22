@@ -59,6 +59,18 @@
 
   &__list {
 
+    &.swiper-container {
+      ul {
+        overflow-x: unset;
+      }
+      li:not(:first-child) {
+        margin-left: 0;
+      }
+      li:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
     ul {
       display: flex;
       justify-content: space-between;
