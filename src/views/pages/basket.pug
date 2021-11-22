@@ -1,0 +1,124 @@
+extends ../layouts/master.pug
+
+block content
+
+  include ../partials/_aside.pug
+
+  .main__wrap(data-scroll-container="")
+
+    include ../partials/_header.pug
+
+    .section.page-wrapper
+      .container.basket
+        .basket-main
+          +breadcrumbs(['корзина'])
+
+          .favorites-top
+            h1.title-h1 Корзина
+            .favorites-top__reset
+              img(src="assets/images/icons/reset-ico.svg", alt="")
+              |очистить корзину
+
+
+          .favorites-table.basket-table
+            .favorites-table__top
+
+              .favorites-table__col
+              .favorites-table__col Наименование
+              .favorites-table__col параметры
+              .favorites-table__col стоимость
+              .favorites-table__col количество
+
+            - for (i=0; i<3; i++)
+              .favorites-table__row
+                .favorites-table__col
+                  img.favorites-table__img(src="assets/images/catalog-1.png", alt="")
+
+                a.favorites-table__col(href="")
+                  .catalog-card__labels
+                    .catalog-card__labels-item Скидки
+                    .catalog-card__labels-item Новинки
+
+                  .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+                  .catalog-card__color Серебро
+                  .catalog-card__small Артикул: 13410
+
+                .favorites-table__col
+                  .favorites-table__col-ttl параметры
+
+                  p Высота, см: 
+                    b 7.7
+                  p Диаметр, см: 
+                    b 13.7
+                  p Вес, кг: 
+                    b 2.7
+
+                .favorites-table__col
+                  .favorites-table__col-ttl стоимость
+
+                  .favorites-table__price-old 7 200 ₽
+                  .favorites-table__price 5 292 ₽
+
+                .favorites-table__col
+                  .favorites-table__col-ttl количество
+
+                  button.basket-btn-minus
+                  .basket-item-count 3
+                  button.basket-btn-plus
+
+                button.basket-item-delete
+
+
+          .basket-checkbox
+            .designers-form__checkbox
+              input(type="checkbox"  id="checkbox" checked="checked")
+              .checkbox
+            |Обрешечивание
+            +tooltipIco
+            span.basket-checkbox__price ~2 500 ₽
+
+          .basket-promocode
+            .basket-promocode__ttl промокод
+            input.basket-promocode__input(type="text" placeholder="СНОВАГРИНЛЕНД")
+            button.basket-promocode__btn применить
+
+          .basket-promocode__success Промокод СНОВАГРИНЛЕНД применен
+            br
+            |Скидка 20%
+          
+          .basket-promocode__error Промокод недействителен
+          
+
+        .basket-aside
+
+          .basket-aside__ttl ваш заказ
+
+          .basket-aside__table
+            .basket-aside__row
+              .basket-aside__name Общий вес
+              .basket-aside__value 10 кг
+
+            .basket-aside__row
+              .basket-aside__name Количество товаров
+              .basket-aside__value 6 шт
+
+            .basket-aside__row
+              .basket-aside__name Обрешечивание
+              .basket-aside__value 2 500 ₽
+
+            .basket-aside__row
+              .basket-aside__name Стоимость доставки
+              .basket-aside__value 5 292 ₽
+
+          .basket-aside__row
+            .basket-aside__name Сумма без скидки
+            .basket-aside__value 7 892 ₽
+
+          .basket-aside__total
+            .basket-aside__row
+              .basket-aside__name Сумма заказа
+              .basket-aside__value 135 292 ₽
+            button.btn перейти к оформлению заказа
+
+
+    include ../partials/_footer.pug

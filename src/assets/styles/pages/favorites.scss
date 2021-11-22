@@ -4,8 +4,17 @@
   align-items: center;
   margin-bottom: 80px;
 
+  @media (max-width: $breakpoint - 1px) {
+    margin-bottom: 20px;
+    justify-content: space-between;
+  }
+
   h1 {
     margin-right: 80px;
+
+    @media (max-width: $breakpoint - 1px) {
+      margin-right: 20px;
+    }
   }
 
   &__reset {
@@ -19,13 +28,25 @@
 
     cursor: pointer;
 
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 12px;
+    }
+
     img {
       margin-right: 10px;
+
+      @media (max-width: $breakpoint - 1px) {
+        width: 16px;
+      }
     }
   }
 }
 
 .favorites-table {
+  @media (max-width: $breakpoint - 1px) {
+    border-top: 1px solid $green-extra-lighten;
+  }
+
   &__top {
     border-bottom: 1px solid $green-extra-lighten;
 
@@ -33,6 +54,10 @@
     // border-right: 1px solid $green-extra-lighten;
 
     display: flex;
+
+    @media (max-width: $breakpoint - 1px) {
+      display: none;
+    }
 
     .favorites-table__col {
       padding-top: 0;
@@ -56,12 +81,28 @@
     border-left: 1px solid $green-extra-lighten;
     border-right: 1px solid $green-extra-lighten;
 
+    position: relative;
+
+    @media (max-width: $breakpoint - 1px) {
+      flex-wrap: wrap;
+      padding-left: calc(#{$col-part-m});
+    }
+
     .favorites-table__col {
       &:not(:first-child) {
         padding-bottom: 45px;
+
+        @media (max-width: $breakpoint - 1px) {
+          padding: 0;
+          margin-bottom: 20px;
+        }
       }
       &:nth-child(3), &:nth-child(4), &:nth-child(5) {
         padding-top: 70px;
+
+        @media (max-width: $breakpoint - 1px) {
+          padding: 0;
+        }
       }
       &:nth-child(3), &:nth-child(5) {
         font-size: 14px;
@@ -72,10 +113,29 @@
   .catalog-card__labels {
     padding: 20px 0;
     font-size: 12px;
+
+    @media (max-width: $breakpoint - 1px) {
+      display: flex;
+      padding: 20px 0 10px;
+    }
+
+    &-item {
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 8px;
+        padding: 4px 6px;
+      }
+    }
   }
   .catalog-card__ttl, .catalog-card__color {
     margin-bottom: 10px;
   }
+
+  .catalog-card__ttl {
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 14px;
+    }
+  }
+
   .catalog-card__small {
     font-size: 12px;
     line-height: 120%;
@@ -84,12 +144,48 @@
   &__col {
     width: calc(#{$col-part-d} * 2);
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+    }
+
+    &-ttl {
+      font-size: 8px;
+      line-height: 120%;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      width: 100%;
+
+      @media (min-width: $breakpoint) {
+        display: none;
+      }
+    }
+
     &:first-child {
       display: flex;
       align-items: center;
+
+      @media (max-width: $breakpoint - 1px) {
+        width: calc(#{$col-part-m});
+        padding-right: calc(#{$col-gap-m});
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
     }
     &:nth-child(2) {
       width: calc(#{$col-part-d} * 4);
+
+      @media (max-width: $breakpoint - 1px) {
+        width: 100%;
+      }
+    }
+
+    p {
+      margin: 0;
+
+      @media (max-width: $breakpoint - 1px) {
+        font-size: 12px;
+      }
     }
   }
 
@@ -111,6 +207,12 @@
     flex-direction: column;
     align-items: center;
 
+    @media (max-width: $breakpoint - 1px) {
+      width: 100%;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
     .btn, .btn-white {
       margin: 0 40px;
       width: calc(100% - 80px);
@@ -120,10 +222,15 @@
       display: flex;
       align-items: center;
 
+      @media (max-width: $breakpoint - 1px) {
+        margin: 0;
+      }
+
       img {
         margin-right: 20px;
       }
     }
+
     .btn-white {
       margin-top: 10px;
       border-radius: 0px 20px;
@@ -134,37 +241,6 @@
       text-transform: uppercase;
 
       justify-content: center;
-    }
-  }
-
-  &__close {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-
-    align-self: flex-end;
-    cursor: pointer;
-
-    border-left: 1px solid $green-extra-lighten;
-    border-bottom: 1px solid $green-extra-lighten;
-
-    &::before, &::after {
-      content: '';
-      position: absolute;
-      width: 18px;
-      height: 1px;
-      background-color: $black;
-
-      transition: .5s;
-    }
-    &::before {
-      transform: rotate(45deg);
-    }
-    &::after {
-      transform: rotate(135deg);
     }
   }
 }

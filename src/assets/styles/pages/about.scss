@@ -336,8 +336,15 @@
   justify-content: space-between;
   align-items: center;
 
+  transition: .5s;
+
   @media (max-width: $breakpoint - 1px) {
     margin-top: 40px;
+  }
+
+  &:hover {
+    background-color: $green;
+    color: #fff;
   }
 
   &__circle {

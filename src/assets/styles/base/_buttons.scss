@@ -3,8 +3,10 @@
 // --------------------------------------------------
 
 .btn {
-  display: inline-block;
-  font-weight: $btn-font-weight;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
   text-align: center;
   vertical-align: middle;
   touch-action: manipulation;
@@ -12,8 +14,59 @@
   text-decoration: none;
   background-image: none;
   border: 1px solid transparent;
-  @include button-size($padding-base-vertical, $padding-base-horizontal, $base-font-size, $base-line-height, $btn-border-radius-base);
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+
+  border-radius: 0px 20px;
+
+  padding: 32px 30px;
 
   min-width: 160px;
+  background: $green-lighten;
+
+  transition: .5s;
+
+  @media (max-width: $breakpoint - 1px) {
+    padding: 13px;
+    font-size: 12px;
+  }
+
+  &:hover {
+    background: $green;
+    color: #fff;
+
+    svg rect, svg path {
+      stroke: #fff;
+    }
+  }
+}
+
+.btn-white {
+  border: 1px solid $green-extra-lighten;
+  border-radius: 0px 20px;
+  text-align: center;
+  padding: 17px 25px;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
   text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: .5s;
+
+  @media (max-width: $breakpoint - 1px) {
+    padding: 13px;
+    font-size: 12px;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: $green;
+    border-color: $green;
+  }
 }

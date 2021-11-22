@@ -14,11 +14,20 @@
         left: 0;
         right: 0;
         padding-left: 316px;
+
+        @media (max-width: $breakpoint - 1px) {
+          padding-left: 3px;
+          bottom: 10px;
+        }
       }
     }
 
     &-bullets {
       display: flex;
+
+      @media (max-width: $breakpoint - 1px) {
+        justify-content: center;
+      }
     }
 
     &-bullet {
@@ -79,6 +88,10 @@
         white-space: nowrap;
 
         @include transition;
+
+        @media (max-width: $breakpoint - 1px) {
+          display: none;
+        }
 
         &-number {
           margin-right: 10px;
@@ -145,6 +158,10 @@
 
     padding: 0 0 40px 80px;
 
+    @media (max-width: $breakpoint - 1px) {
+      padding: 0 0 40px 0;
+    }
+
     &.swiper-slide-active {
 
       .conditions__slide-heading,
@@ -197,6 +214,10 @@
 
     &-heading {
       margin-bottom: 60px;
+
+      @media (max-width: $breakpoint - 1px) {
+        margin-bottom: 10px;
+      }
     }
 
     &-heading,

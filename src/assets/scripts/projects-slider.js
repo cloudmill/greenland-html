@@ -15,9 +15,9 @@ export default function initProjectsSlider() {
 
     breakpoints: {
       [BREAKPOINT]: {
-        centeredSlides: true,
+        // centeredSlides: true,
         // slidesPerView: 'auto',
-        
+        spaceBetween: 32,
       },
     },
 

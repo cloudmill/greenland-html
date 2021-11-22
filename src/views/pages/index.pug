@@ -7,116 +7,131 @@ block content
     -
       var pages = [
         {
-          href: 'main.html',
+          href: 'main',
           title: 'Главная',
         },
         {
-          href: 'about.html',
+          href: 'about',
           title: 'О компании',
         },
         {
-          href: 'history.html',
+          href: 'history',
           title: '[О компании] История',
         },
         {
-          href: 'brands.html',
+          href: 'brands',
           title: '[О компании] Бренды',
         },
         {
-          href: 'conditions-designers.html',
-          title: '[Работа с нами] Дизайнеры',
-        },
-        {
-          href: 'conditions-objects.html',
-          title: '[Работа с нами] Объекты',
-        },
-        {
-          href: 'conditions-distributor.html',
-          title: '[Работа с нами] Дистрибьютеры',
-        },
-        {
-          href: 'career.html',
+          href: 'career',
           title: 'Карьера',
         },
         {
-          href: 'news.html',
+          href: 'conditions-designers',
+          title: '[Работа с нами] Дизайнеры',
+        },
+        {
+          href: 'conditions-objects',
+          title: '[Работа с нами] Объекты',
+        },
+        {
+          href: 'conditions-distributor',
+          title: '[Работа с нами] Дистрибьютеры',
+        },
+        {
+          href: 'news',
           title: 'Новости',
         },
         {
-          href: 'news-page.html',
+          href: 'news-page',
           title: 'Детальная новость',
         },
+
         {
-          href: 'blog.html',
-          title: 'Блог',
-        },
-        {
-          href: 'blog-page.html',
-          title: 'Детальный блог',
-        },
-        {
-          href: 'projects.html',
+          href: 'projects',
           title: 'Проекты',
         },
         {
-          href: 'project-page.html',
+          href: 'project-page',
           title: 'Детальный проект',
         },
+
         {
-          href: 'delivery.html',
+          href: 'blog',
+          title: 'Блог',
+        },
+        {
+          href: 'blog-page',
+          title: 'Детальный блог',
+        },
+        
+        {
+          href: 'delivery',
           title: '[Клиентам] Доставка',
         },
         {
-          href: 'payment.html',
+          href: 'payment',
           title: '[Клиентам] Оплата',
         },
         {
-          href: 'refund.html',
+          href: 'refund',
           title: '[Клиентам] Возврат',
         },
         {
-          href: 'faq.html',
+          href: 'faq',
           title: 'Вопрос-ответ',
         },
         {
-          href: 'contacts.html',
+          href: 'contacts',
           title: 'Контакты',
         },
         {
-          href: 'compare.html',
+          href: 'compare',
           title: 'Сравнение',
         },
         {
-          href: 'searching-results.html',
+          href: 'searching-results',
           title: 'Результаты поиска',
         },
         {
-          href: 'landscaping.html',
+          href: 'landscaping',
           title: 'Озеленение',
         },
         {
-          href: 'ready-solutions.html',
-          title: '[Озеленение] Готовые решение',
+          href: 'ready-solutions',
+          title: '[Озеленение] Готовые решения',
         },
         {
-          href: 'actions.html',
+          href: 'abonements',
+          title: '[Озеленение] Абонементы',
+        },
+        {
+          href: 'full-construction',
+          title: '[Озеленение] Озеленение под ключ',
+        },
+        {
+          href: 'type-page',
+          title: '[Озеленение] Типовая страница',
+        },
+        {
+          href: 'actions',
           title: 'Акции',
         },
         {
-          href: 'action-page.html',
+          href: 'action-page',
           title: 'Детальная акция',
         },
         {
-          href: 'action-page-1.html',
+          href: 'action-page-1',
           title: 'Детальная акция 2',
         },
       ];
     .main__wrap
       .section
         .container
-          ol
+          ol.main-links
             each page in pages
-              li.margin20
-                a.btn.cover__btn(href=page.href)
+              li
+                a.btn(href=page.href)
                   |#{page.title}
 

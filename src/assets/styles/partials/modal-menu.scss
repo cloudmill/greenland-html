@@ -1,0 +1,146 @@
+.menu-modal {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  // height: 100vh;
+  width: 100vw;
+  background: $green-extra-lighten;
+
+  padding: 80px 0 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transform: translateY(-100%);
+  transition: .5s;
+
+  @media (min-width: $breakpoint) {
+    padding: 132px 40px 40px calc(120px + #{$col-width-d});
+    transform: translateX(-100%);
+    height: 100vh;
+  }
+
+  &.modal-active {
+    transform: none;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    @media (max-width: $breakpoint - 1px) {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $breakpoint) {
+      padding-right: calc(#{$col-width-d});
+    }
+  }
+  &__col:nth-child(1) {
+    
+
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 4);
+    }
+  }
+  &__col:nth-child(2) {
+    
+
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 3 + #{$col-gap-d});
+    }
+  }
+  &__col:nth-child(3) {
+    
+
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 4);
+    }
+
+    .menu-modal__item {
+      margin-bottom: 20px;
+    }
+
+    .menu-modal__ttl:not(:first-child) {
+      margin: 40px 0 0;
+    }
+  }
+  &__col:nth-child(4) {
+    
+
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
+      padding-right: 0;
+    }
+
+    .footer__phone {
+      color: $black;
+      font-size: 40px;
+    }
+    .footer__text {
+      color: $black;
+      opacity: 0.7;
+    }
+    .footer__mail {
+      color: $black;
+    }
+  }
+
+  &__ttl {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 130%;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    &:not(:first-child) {
+      margin-top: 60px;
+    }
+
+    @media (max-width: $breakpoint - 1px) {
+      font-size: 12px;
+      margin: 0;
+      padding: 15px 10px;
+      border: 1px solid $green;
+
+      &:not(:first-child) {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &__item {
+    font-size: 16px;
+    line-height: 130%;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+
+    padding-right: 230px;
+
+    &-item {
+      font-size: 14px;
+      line-height: 130%;
+      color: #000000;
+      opacity: 0.4;
+
+      a {
+        color: $green;
+      }
+    }
+  }
+}

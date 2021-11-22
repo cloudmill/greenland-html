@@ -183,8 +183,9 @@ module.exports = env => {
 					cache: true,
 					plugins: [
 						['gifsicle', {interlaced: true}],
-						['jpegtran', {progressive: true}],
+						// ['jpegtran', {progressive: true}],
 						['optipng', {optimizationLevel: 5}],
+						['mozjpeg', { quality: 60 }, {progressive: true}],
 						[
 							'svgo',
 							{

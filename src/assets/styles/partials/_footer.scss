@@ -210,7 +210,8 @@
 
   &__link,
   &__text {
-    color: rgba($white-lighten, 0.15);
+    // color: rgba($white-lighten, 0.15);
+    color: #fff;
   }
 
   &__download {
