@@ -238,13 +238,13 @@ block content
               .mission__main
                 .mission__slider-underlay
                 .designers-form__container
-                  form.designers-form__form
+                  form.designers-form__form(data-parsley-validate)
                     label.designers-form__label
-                      input.designers-form__input(placeholder="Имя")
+                      input.designers-form__input(placeholder="Имя" data-parsley-required)
                     label.designers-form__label
-                      input.designers-form__input(placeholder="E-mail")
+                      input.designers-form__input(placeholder="E-mail" required)
                     label.designers-form__label
-                      input.designers-form__input(placeholder="Телефон")
+                      input.designers-form__input(placeholder="Телефон" required)
                     label.designers-form__checkbox
                       input(type="checkbox"  id="checkbox")
                       .checkbox
