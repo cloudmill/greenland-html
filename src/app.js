@@ -22,6 +22,8 @@ import './assets/scripts/compare';
 
 import './assets/scripts/spoiler';
 
+import '@fancyapps/fancybox';
+
 import LocomotiveScroll from 'locomotive-scroll';
 
 import Swiper, {Navigation, Pagination, Mousewheel} from 'swiper';

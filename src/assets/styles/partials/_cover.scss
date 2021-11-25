@@ -30,6 +30,17 @@
     }
   }
 
+  &-row {
+    .col__xl-13 {
+      @media (max-width: $breakpoint - 1px) {
+        margin-top: 20%;
+      }
+      @media (max-width: $breakpoint-m - 1px) {
+        margin-top: 0;
+      }
+    }
+  }
+
   &::before {
     content: '';
 
@@ -45,8 +56,17 @@
   &__heading {
     margin-bottom: 40px;
 
+    font-size: 60px;
+    line-height: 110%;
+
     @media (max-width: $breakpoint - 1px) {
+      font-size: 40px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: $breakpoint-m - 1px) {
       font-size: 24px;
+      margin-top: 0;
     }
 
     &-line {
