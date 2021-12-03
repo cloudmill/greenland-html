@@ -182,6 +182,10 @@
 
       pointer-events: none;
 
+      @media (max-width: $breakpoint - 1px) {
+        width: 100%;
+      }
+
       & > * {
         pointer-events: auto;
       }
@@ -295,7 +299,7 @@
       font-size: $font-size-h5;
 
       @media (max-width: $breakpoint - 1px) {
-        left: calc(50% + 40px);
+        left: calc(50% - 55px);
         transform: unset;
         bottom: 52%;
       }
@@ -370,7 +374,7 @@
     margin: 0 auto;
     text-align: center;
 
-    @include title-h1;
+    // @include title-h1;
 
     text-transform: uppercase;
   }

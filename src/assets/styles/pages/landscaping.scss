@@ -1,3 +1,28 @@
+.landscaping-blockquote {
+  .mission__main {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__italic {
+    display: block;
+
+    font-family: $base-font-family-serif;
+    font-style: italic;
+    font-size: 12px;
+    line-height: 130%;
+    text-align: center;
+    text-transform: none;
+
+    margin-top: 20px;
+
+    @media (min-width: $breakpoint) {
+      margin-top: 30px;
+      font-size: 20px;
+    }
+  }
+}
+
 .landscaping-cards {
   margin-top: 160px;
   display: flex;

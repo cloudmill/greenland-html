@@ -389,6 +389,13 @@
     text-decoration: underline;
     text-transform: uppercase;
 
+    &:hover {
+      color: $green;
+    }
+    
+
+    // transition: .5s;
+
     @media (max-width: $breakpoint - 1px) {
       font-size: 24px;
     }
