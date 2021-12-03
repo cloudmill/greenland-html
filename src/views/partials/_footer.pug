@@ -14,10 +14,10 @@ footer.footer(data-scroll-section="")
         .col.col__xl-7.footer__main-left
           a.footer__phone(href="tel:+78122091884") 8 812 209-18-84
           .footer__phone-caption.text__sm.text--uppercase.footer__text
-            .footer__phone-caption-schedule Пн—Пт: 10 — 18
-            .footer__phone-caption-schedule Сб—Вс: выходные
+            .footer__phone-caption-schedule.footer__info Пн—Пт: 10 — 18
+            .footer__phone-caption-schedule.footer__info Сб—Вс: выходные
           a.footer__mail(href="mailto:sale@green-land.ru") sale@green-land.ru
-          .footer__address.text__lg  Московское шоссе, дом 25, к. 1, #[br] Бизнес-центр «Престиж», офис 248
+          //- .footer__address.text__lg  Московское шоссе, дом 25, к. 1, #[br] Бизнес-центр «Престиж», офис 248
           .footer__socials
             +footerSocial('facebook')
             +footerSocial('vk')
@@ -106,7 +106,8 @@ footer.footer(data-scroll-section="")
           .col
             a.footer__link.footer__text.text__lg(href="#") Обработка персональных данных
         .col.col__xl-7
-          .footer__text.text__lg 2021 © Green Land. Все права защищены
+          .footer__text.text__lg.footer__info 2021 © Green Land. Все права защищены
         .footer__footer-right
-          .footer__text.text__lg Сделано в
+          .footer__text.text__lg.flex
+            .footer__info Сделано в&nbsp;
             a.footer__footer-link(href="https://www.cloudmill.ru/" target="_blank")  CloudMill

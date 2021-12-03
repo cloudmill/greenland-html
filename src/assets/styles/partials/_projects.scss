@@ -33,6 +33,11 @@
         width: 125px;
         height: 12px;
         background-image: url('assets/images/highlight-1.png');
+
+        @media (max-width: $breakpoint - 1px) {
+          bottom: -2px;
+          width: 70px;
+        }
       }
     }
 
@@ -44,6 +49,11 @@
         width: 152px;
         height: 12px;
         background-image: url('assets/images/highlight-2.png');
+
+        @media (max-width: $breakpoint - 1px) {
+          bottom: -2px;
+          width: 85px;
+        }
       }
     }
   }
@@ -75,6 +85,18 @@
 
         @media (max-width: $breakpoint - 1px) {
           font-size: 14px;
+        }
+
+        .txt-desktop {
+          @media (max-width: $breakpoint - 1px) {
+            display: none;
+          }
+        }
+        .txt-mobile {
+          display: block;
+          @media (min-width: $breakpoint) {
+            display: none;
+          }
         }
       }
       
@@ -158,6 +180,12 @@
       & > * {
         pointer-events: auto;
       }
+    }
+  }
+
+  .bullets.projects__item-slider-bullets {
+    @media (max-width: $breakpoint - 1px) {
+      display: none;
     }
   }
 
