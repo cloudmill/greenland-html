@@ -1,0 +1,71 @@
+.modal-cover {
+  position: relative;
+  width: calc(#{$col-part-d} * 9 + #{$col-gap-d});
+  padding: 40px calc(#{$col-part-d} + 40px) 40px calc(#{$col-part-d} + #{$col-gap-d});
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__info {
+    margin: 20px 0 40px calc(#{$col-part-d});
+    display: flex;
+    font-size: 12px;
+
+    &-item {
+      width: calc(#{$col-part-d} * 2);
+    }
+  }
+
+  &__txt {
+    width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+    margin-left: calc(#{$col-part-d});
+
+    p {
+      font-size: 13px;
+    }
+  }
+
+  &__ttl {
+    @include title-h3();
+    text-transform: none;
+
+    margin-bottom: 30px;
+  }
+
+  &-close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+
+    width: calc(#{$col-width-d});
+    height: calc(#{$col-width-d});
+    max-width: 84px;
+    max-height: 84px;
+
+    border: 1px solid $green-extra-lighten;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+
+    &::after, &::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 1px;
+      background-color: $black;
+      transition: .5s;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(135deg);
+    }
+  }
+}
