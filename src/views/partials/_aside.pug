@@ -4,20 +4,20 @@ aside.aside
 
     .aside__header
       button.aside__btn.aside-btn
-        i.sprite.sprite--menu
+        +menuBurger
         span.aside__btn-title меню
     .aside__center
       button.aside__btn
-        i.sprite.sprite--search
+        +menuSearch
     a.header__logo.aside__logo(href="/")
       +logo('white')
     .aside__footer
       button.aside__btn
         span.aside__btn-counter 12
-        i.sprite.sprite--basket
+        +menuBasket
       button.aside__btn
         span.aside__btn-counter 0
-        i.sprite.sprite--favorite
+        +menuFavorite
       button.aside__btn
         span.aside__btn-counter 0
         i.sprite.sprite--filters
