@@ -27,6 +27,7 @@ import LocomotiveScroll from 'locomotive-scroll';
       const modalCover = $('.modal-cover');
       const main = $('.main');
       const closeBtn = $('.modal-cover-close');
+      const body = $('.page-main');
 
       $(window).on('click', (event) => {
 
@@ -35,11 +36,7 @@ import LocomotiveScroll from 'locomotive-scroll';
           if ( $(event.target).closest(openBtn).length ) {
             main.addClass('modal-cover--open');
             modalCover.addClass('modal-cover--active');
-          }
-  
-          if ( $(event.target).closest(closeBtn).length ) {
-            main.removeClass('modal-cover--open');
-            modalCover.removeClass('modal-cover--active');
+            body.addClass('overflow-hidden');
           }
 
         } else {
@@ -47,11 +44,13 @@ import LocomotiveScroll from 'locomotive-scroll';
           if ( $(event.target).closest(closeBtn).length ) {
             main.removeClass('modal-cover--open');
             modalCover.removeClass('modal-cover--active');
+            body.removeClass('overflow-hidden');
           }
 
           if (!$(event.target).closest(modalCover).length) {
             main.removeClass('modal-cover--open');
             modalCover.removeClass('modal-cover--active');
+            body.removeClass('overflow-hidden');
           }
         }
       })

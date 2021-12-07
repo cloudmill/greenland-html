@@ -6,7 +6,7 @@ export default function coverModal() {
   const BREAKPOINT = 1280;
 
   const $coverModal = document.querySelector('[data-cover-modal]');
-  const $coverModalCntrl = document.querySelector('[modal-cover-controls]');
+  const $coverModalCntrl = document.querySelector('[data-modal-cover-controls]');
 
 
 

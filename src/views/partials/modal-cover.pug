@@ -19,11 +19,10 @@
 
   .modal-cover-close
 
-  .modal-cover-controls(modal-cover-controls="")
-    //- div(data-cover-modal-prev)
-    //- div(data-cover-modal-next)
+  .modal-cover-controls(data-modal-cover-controls="")
 
-    //- .modal-cover-controls-container
-    //-   +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-cover-modal-prev="")
-    //- .modal-cover-controls-container
-    //-   +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-cover-modal-next="")
+    .projects-controls-container
+      +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-cover-modal-prev="")
+
+    .projects-controls-container
+      +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-cover-modal-next="")

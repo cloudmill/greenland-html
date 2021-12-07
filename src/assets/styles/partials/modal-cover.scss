@@ -1,7 +1,4 @@
-.modal-cover {
-  // display: none;
-
-  position: absolute;
+.modal-cover {position: absolute;
   top: 0;
   right: 0;
 
@@ -13,7 +10,6 @@
   transition: .5s;
 
   &--active {
-    // display: block;
     transform: none;
   }
   &--open {
@@ -93,8 +89,23 @@
       transform: rotate(135deg);
     }
   }
+
+  &-controls {
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+
+    position: absolute;
+    z-index: 100;
+    bottom: 40px;
+    right: 40px;
+  }
 }
 
 .cober-modal-btn {
   cursor: pointer;
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
