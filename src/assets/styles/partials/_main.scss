@@ -8,6 +8,10 @@
   }
 }
 
+.page-main {
+  overflow-x: hidden;
+}
+
 //
 // Main container
 
@@ -18,6 +22,8 @@
   bottom: 0;
   left: 0;
   // background: $black;
+  transform-origin: top left;
+  transition: .5s;
 
   &__wrap {
     transform: translate(0px, 0px) scale(1);

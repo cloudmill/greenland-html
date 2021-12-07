@@ -1,7 +1,30 @@
 .modal-cover {
-  position: relative;
-  width: calc(#{$col-part-d} * 9 + #{$col-gap-d});
+  // display: none;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: calc(#{$col-part-d} * 9 + 40px);
+  height: 100vh;
   padding: 40px calc(#{$col-part-d} + 40px) 40px calc(#{$col-part-d} + #{$col-gap-d});
+
+  transform: translateX(100%);
+  transition: .5s;
+
+  &--active {
+    // display: block;
+    transform: none;
+  }
+  &--open {
+    transform: scale(calc(7.4/16));
+    pointer-events: none;
+    border: 40px solid $green-lighten;
+
+    .aside {
+      display: none;
+    }
+  }
 
   &__img {
     width: 100%;
@@ -51,6 +74,8 @@
     justify-content: center;
     transition: .5s;
 
+    cursor: pointer;
+
     &::after, &::before {
       content: '';
       position: absolute;
@@ -68,4 +93,8 @@
       transform: rotate(135deg);
     }
   }
+}
+
+.cober-modal-btn {
+  cursor: pointer;
 }

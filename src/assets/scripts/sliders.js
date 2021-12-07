@@ -18,8 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	window.sliders = [];
 
-  coverModal();
-
 	try {
 		initCoverSlider();
 	} catch {};
@@ -63,8 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	try {
 		productDesc();
 	} catch {}
-
-  console.log(111);
 
   try {
     coverModal();

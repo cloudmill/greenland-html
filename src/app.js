@@ -18,3 +18,43 @@ import '@fancyapps/fancybox';
 import './assets/scripts/sliders';
 
 import LocomotiveScroll from 'locomotive-scroll';
+
+{
+  $(() => {
+    const openBtn = $('.cober-modal-btn');
+
+    if (openBtn.length) {
+      const modalCover = $('.modal-cover');
+      const main = $('.main');
+      const closeBtn = $('.modal-cover-close');
+
+      $(window).on('click', (event) => {
+
+        if (!main.hasClass('modal-cover--open')) {
+
+          if ( $(event.target).closest(openBtn).length ) {
+            main.addClass('modal-cover--open');
+            modalCover.addClass('modal-cover--active');
+          }
+  
+          if ( $(event.target).closest(closeBtn).length ) {
+            main.removeClass('modal-cover--open');
+            modalCover.removeClass('modal-cover--active');
+          }
+
+        } else {
+
+          if ( $(event.target).closest(closeBtn).length ) {
+            main.removeClass('modal-cover--open');
+            modalCover.removeClass('modal-cover--active');
+          }
+
+          if (!$(event.target).closest(modalCover).length) {
+            main.removeClass('modal-cover--open');
+            modalCover.removeClass('modal-cover--active');
+          }
+        }
+      })
+    }
+  })
+}
