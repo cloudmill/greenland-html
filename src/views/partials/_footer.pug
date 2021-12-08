@@ -17,7 +17,7 @@ footer.footer(data-scroll-section="")
             .footer__phone-caption-schedule.footer__info Пн—Пт: 10 — 18
             .footer__phone-caption-schedule.footer__info Сб—Вс: выходные
           a.footer__mail(href="mailto:sale@green-land.ru") sale@green-land.ru
-          //- .footer__address.text__lg  Московское шоссе, дом 25, к. 1, #[br] Бизнес-центр «Престиж», офис 248
+          //- .footer__address.footer-item  Московское шоссе, дом 25, к. 1, #[br] Бизнес-центр «Престиж», офис 248
           .footer__socials
             +footerSocial('facebook')
             +footerSocial('vk')
@@ -27,87 +27,98 @@ footer.footer(data-scroll-section="")
         .col.col__xl-9.footer__main-right
           .footer__menu.row
             .col.col__xl-4
-              .footer__menu-title.zeta О нас
+              .footer__menu-title О нас
+
               ul.footer__menu-list
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Склад
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Шоурум
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Новости
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Вакансии
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Блог
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Академия Green Land
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Проекты
+
+                -
+                  const list1 = [
+                    "Склад",
+                    "Шоурум",
+                    "Новости",
+                    "Вакансии",
+                    "Блог",
+                    "Академия Green Land",
+                    "Проекты",
+                  ]
+
+                each i in list1
+                  li.footer__menu-list-item
+                    a.footer__link.footer__text.footer-item(href="#") #{i}
+
             .col.col__xl-4
-              .footer__menu-title.zeta Работа с нами
+              .footer__menu-title Работа с нами
+
               ul.footer__menu-list
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Дизайнерам
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Комплектации для рестаранов, гостиниц, торговых центров, бизнес-центров, СПА
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Дистрибьютерам и оптовым покупателям
+
+                -
+                  const list2 = [
+                    "Дизайнерам",
+                    "Комплектации для рестаранов, гостиниц, торговых центров, бизнес-центров, СПА",
+                    "Дистрибьютерам и оптовым покупателям",
+                  ]
+
+                each i in list2
+                  li.footer__menu-list-item
+                    a.footer__link.footer__text.footer-item(href="#") #{i}
+
             .col.col__xl-4
-              .footer__menu-title.zeta Клиентам
+              .footer__menu-title Клиентам
               ul.footer__menu-list
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Способы доставки
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Способы оплаты
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Способы возврата
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Гарантия
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Рекламные материалы
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") FAQ
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Акции
+
+                -
+                  const list3 = [
+                    "Способы доставки",
+                    "Способы оплаты",
+                    "Способы возврата",
+                    "Гарантия",
+                    "Рекламные материалы",
+                    "FAQ",
+                    "Акции",
+                  ]
+
+                each i in list3
+                  li.footer__menu-list-item
+                    a.footer__link.footer__text.footer-item(href="#") #{i}
+
             .col.col__xl-4
-              .footer__menu-title.zeta Озеленение
+              .footer__menu-title Озеленение
               ul.footer__menu-list
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Фитодизайн
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Вертикальное
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Бизнес центров и офисов
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Гостиниц и мини-отелей
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Ресторанов и кафе
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Летних террас
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Торговых комплексов
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Фитнес-центров и SPA-салонов
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Зимнего сада
-                li.footer__menu-list-item
-                  a.footer__link.footer__text.text__lg(href="#") Уход за растениями
+
+                -
+                  const list4 = [
+                    "Фитодизайн",
+                    "Вертикальное",
+                    "Бизнес центров и офисов",
+                    "Гостиниц и мини-отелей",
+                    "Ресторанов и кафе",
+                    "Летних террас",
+                    "Торговых комплексов",
+                    "Фитнес-центров и SPA-салонов",
+                    "Зимнего сада",
+                    "Уход за растениями",
+                  ]
+                
+                each i in list4
+                  li.footer__menu-list-item
+                    a.footer__link.footer__text.footer-item(href="#") #{i}
+
           .footer__info.row.footer__info--desc
             .col.col__xl-4
-              a.footer__link.footer__text.text__lg(href="#") Договор оферты
+              a.footer__link.footer__text.footer-item(href="#") Договор оферты
             .col
-              a.footer__link.footer__text.text__lg(href="#") Обработка персональных данных
+              a.footer__link.footer__text.footer-item(href="#") Обработка персональных данных
   .footer__footer
     .container
       .row.footer__footer-row
         .footer__info.row.footer__info--mobile
           .col.col__xl-4
-            a.footer__link.footer__text.text__lg(href="#") Договор оферты
+            a.footer__link.footer__text.footer-item(href="#") Договор оферты
           .col
-            a.footer__link.footer__text.text__lg(href="#") Обработка персональных данных
+            a.footer__link.footer__text.footer-item(href="#") Обработка персональных данных
         .col.col__xl-7
-          .footer__text.text__lg.footer__info 2021 © Green Land. Все права защищены
+          .footer__text.footer-item.footer__info 2021 © Green Land. Все права защищены
         .footer__footer-right
-          .footer__text.text__lg.flex
+          .footer__text.footer-item.flex
             .footer__info Сделано в&nbsp;
             a.footer__footer-link(href="https://www.cloudmill.ru/" target="_blank")  CloudMill

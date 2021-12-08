@@ -1,7 +1,7 @@
 // Libraries
 const path = require('path');
 const webpack = require('webpack');
-const WebpackNotifierPlugin = require('webpack-notifier');
+// const WebpackNotifierPlugin = require('webpack-notifier');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const globImporter = require('node-sass-glob-importer');
@@ -232,10 +232,10 @@ module.exports = env => {
 				'window.jQuery': 'jquery'
 			}),
 
-			new WebpackNotifierPlugin({
-				title: 'Noob__ui',
-				contentImage: path.join(__dirname, '../src/assets/images/logo.png'),
-			}),
+			// new WebpackNotifierPlugin({
+			// 	title: 'Noob__ui',
+			// 	contentImage: path.join(__dirname, '../src/assets/images/logo.png'),
+			// }),
 		],
 
 		stats: {

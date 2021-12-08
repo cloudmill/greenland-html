@@ -43,8 +43,8 @@ mixin menuBasket
 //- footer download
 mixin footerDownload(title, caption, url="#")
   a.footer__download.text--uppercase(href= url, download= title)
-    .footer__download-title.text__sm= title
-    .footer__download-caption.text__super-tn= caption
+    .footer__download-title= title
+    .footer__download-caption= caption
     .footer__download-icon-wrap
       +downloadIcon
 

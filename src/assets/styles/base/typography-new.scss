@@ -81,3 +81,11 @@
     font-size: 20px;
   }
 }
+
+.footer-item {
+  font-size: 12px;
+
+  @media (min-width: $breakpoint) {
+    font-size: 14px;
+  }
+}

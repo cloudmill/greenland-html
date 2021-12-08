@@ -178,16 +178,22 @@
 
     &-title {
       margin-bottom: 20px;
+      font-size: 16px;
 
       @media (max-width: $breakpoint - 1px) {
         margin-bottom: 10px;
+        font-size: 14px;
       }
     }
 
     &-list {
       opacity: .4;
+      margin-bottom: 0;
       &-item {
-        margin-bottom: 10px;
+        // margin-bottom: 5px;
+        @media (min-width: $breakpoint) {
+          margin-bottom: 10px;
+        }
       }
     }
   }
@@ -243,6 +249,10 @@
 
     color: $white-lighten;
 
+    @media (max-width: $breakpoint - 1px) {
+      padding: 10px;
+    }
+
     @media (max-width: 425px) {
       width: 100%;
     }
@@ -262,6 +272,19 @@
 
     &-title {
       margin-bottom: 2px;
+      font-size: 10px;
+
+      @media (min-width: $breakpoint) {
+        font-size: 12px;
+      }
+    }
+
+    &-caption {
+      font-size: 8px;
+
+      @media (min-width: $breakpoint) {
+        font-size: 10px;
+      }
     }
 
     &-icon {
