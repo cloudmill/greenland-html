@@ -677,8 +677,31 @@
     display: flex;
     align-items: center;
 
-    img {
+    transition: .5s;
+
+    svg {
       margin-left: 10px;
+      transition: .5s;
+
+      rect {
+        transition: .5s;
+      }
+      path {
+        transition: .5s;
+      }
+    }
+
+    &:hover {
+      color: $green;
+
+      svg {
+        rect {
+          fill: $green;
+        }
+        path {
+          fill: #ffffff;
+        }
+      }
     }
   }
 }

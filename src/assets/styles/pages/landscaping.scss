@@ -1,3 +1,9 @@
+.landscaping-title {
+  @media (max-width: $breakpoint - 1px) {
+    margin-bottom: -20px;
+  }
+}
+
 .landscaping-blockquote {
   .mission__main {
     flex-direction: column;
@@ -191,6 +197,11 @@
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
+    transition: .5s;
+
+    &:hover {
+      color: $green;
+    }
   }
 }
 .landscaping-contacts {

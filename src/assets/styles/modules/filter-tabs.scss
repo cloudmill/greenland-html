@@ -27,6 +27,12 @@
 
   white-space: nowrap;
 
+  transition: .5s;
+
+  &:hover {
+    border: 1px solid $green;
+  }
+
   @media (max-width: $breakpoint - 1px) {
     padding: 5px 15px;
     font-size: 12px;
