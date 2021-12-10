@@ -268,6 +268,15 @@
 
     &:hover {
       color: $white-lighten;
+      background: $green;
+      // border: 1px solid rgba($white-lighten, 1);
+
+      .footer__download-icon-wrap {
+        // border-left: 1px solid transparent;
+        svg {
+          opacity: 1;
+        }
+      }
     }
 
     &-title {
@@ -305,6 +314,7 @@
 
         svg {
           opacity: .15;
+          transition: .5s;
         }
       }
     }

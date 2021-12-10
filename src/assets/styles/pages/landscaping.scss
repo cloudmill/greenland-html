@@ -63,6 +63,26 @@
     span {
       font-family: $base-font-family-serif;
       text-transform: lowercase;
+      position: relative;
+    }
+
+    .highlight1 {
+      &::before {
+        content: url('assets/images/new-highlights/landscaping-high-1.png');
+        position: absolute;
+        z-index: -1;
+        bottom: -10px;
+        left: -8px;
+      }
+    }
+    .highlight2 {
+      &::before {
+        content: url('assets/images/new-highlights/landscaping-high-2.png');
+        position: absolute;
+        z-index: -1;
+        bottom: -8px;
+        width: 158px;
+      }
     }
   }
   &__subtitle {
@@ -205,7 +225,7 @@
   }
 }
 .landscaping-contacts {
-  margin: 160px 0 80px;
+  margin: 160px 0 50px;
 
   @media (max-width: $breakpoint - 1px) {
     margin: 40px 0;
@@ -426,6 +446,7 @@
       font-family: $base-font-family-serif;
       font-size: 16px;
       line-height: 130%;
+      padding-right: 20px;
 
       @media (max-width: $breakpoint - 1px) {
         font-size: 14px;

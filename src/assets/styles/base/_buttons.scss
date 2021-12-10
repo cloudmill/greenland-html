@@ -30,8 +30,9 @@
   transition: .5s;
 
   @media (max-width: $breakpoint - 1px) {
-    padding: 13px;
+    padding: 13px 20px;
     font-size: 12px;
+    min-width: unset;
   }
 
   &:hover {

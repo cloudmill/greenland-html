@@ -144,7 +144,9 @@ block content
               |Выполненные проекты
             a.ojects-projects-top__link(href="")
               |все проекты
-              img(src="assets/images/objects-arrow.png", alt="")
+              //- img(src="assets/images/objects-arrow.png", alt="")
+              +allProjectsSvg
+
           .designers-products-filter
             ul
               li.filter-tab.active-tab Входные группы
@@ -231,7 +233,7 @@ block content
                 img(src="assets/images/designer-contacts-2.png", alt="")
                 .contacts-cards__name Шабала Виктория
                 .contacts-cards__position Менеджер по работе с дизйнерами
-                .contacts-cards__tel 8 812 209-18-84
+                //- .contacts-cards__tel 8 812 209-18-84
 
         include ../partials/you-watched
 
