@@ -43,10 +43,13 @@
   }
 
   &__top {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
 
     @media (max-width: $breakpoint - 1px) {
       flex-direction: column;
+      margin-bottom: 20px;
     }
   }
   &__title {
@@ -91,11 +94,17 @@
     font-size: 20px;
     line-height: 130%;
 
-    margin: 0 calc(#{$col-part-d} + #{$col-gap-d});
+    width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+    margin-left: calc(#{$col-part-d});
+
+    // margin: 0 calc(#{$col-part-d} + #{$col-gap-d});
 
     @media (max-width: $breakpoint - 1px) {
       margin: 20px 0 0;
       font-size: 16px;
+
+      width: unset;
+      margin-left: unset;
     }
   }
 
@@ -107,6 +116,20 @@
     @media (max-width: $breakpoint - 1px) {
       width: 100%;
       margin-top: 20px;
+
+
+      &:nth-child(2), &:nth-child(4) {
+
+        .landscaping-cards-item__count {
+          bottom: 70px;
+        }
+      }
+      &:nth-child(3) {
+        
+        .landscaping-cards-item__count {
+          bottom: 90px;
+        }
+      }
     }
 
     &__count {
@@ -124,7 +147,6 @@
       @media (max-width: $breakpoint - 1px) {
         font-size: 50px;
         left: 24px;
-        bottom: 90px;
       }
     }
 
@@ -170,11 +192,11 @@
   }
 
   &__ttl {
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     width: 100%;
 
     @media (max-width: $breakpoint - 1px) {
-      margin-bottom: 20px;
+      margin-bottom: 0;
     }
   }
   &__item {
@@ -184,16 +206,24 @@
     font-size: 20px;
     line-height: 120%;
 
-    margin-bottom: 30px;
-    padding-bottom: 20px;
+    // margin-bottom: 30px;
+    // padding-bottom: 20px;
+    padding: 30px 0 20px;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    &:hover {
+      background-color: $green;
+      color: #fff;
+    }
+
     @media (max-width: $breakpoint - 1px) {
       width: 100%;
       font-size: 16px;
+
+      padding: 20px 0;
     }
 
     // img {
@@ -204,10 +234,10 @@
   &__bottom {
     width: 100%;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 60px;
 
     @media (max-width: $breakpoint - 1px) {
-      margin-top: 0;
+      margin-top: 20px;
     }
   }
   &__button {
@@ -393,7 +423,7 @@
       margin-top: 40px;
       padding-top: 24px;
 
-      &:first-child {
+      &:nth-child(2) {
         margin-top: 20px;
       }
     }
@@ -422,6 +452,7 @@
         width: auto;
         margin-right: 13px;
         font-size: 50px;
+        margin-top: -2px;
       }
     }
     &__col {
@@ -490,6 +521,11 @@
       left: 0;
       right: calc(#{$col-part-d} * 2);
       bottom: 0;
+
+      @media (max-width: $breakpoint - 1px) {
+        top: 40px;
+        right: calc(#{$col-part-m});
+      }
     }
   }
   &__col1 {
@@ -497,6 +533,7 @@
 
     @media (max-width: $breakpoint - 1px) {
       margin-bottom: 20px;
+      padding-bottom: 40px;
     }
   }
   &__col2 {
@@ -504,6 +541,10 @@
 
     img {
       margin-top: 100px;
+
+      @media (max-width: $breakpoint - 1px) {
+        margin-top: 40px;
+      }
     }
 
     &:after {
@@ -512,6 +553,11 @@
       left: calc(#{$col-part-d} * 2);
       bottom: 100px;
       z-index: -1;
+
+      @media (max-width: $breakpoint - 1px) {
+        left: calc(#{$col-part-m});
+        bottom: 40px;
+      }
     }
   }
 }

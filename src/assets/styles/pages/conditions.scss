@@ -320,6 +320,15 @@
     ul {
       display: flex;
       margin: 0;
+
+      overflow-x: scroll;
+
+      @include scrollbar-hidden();
+
+      @media (max-width: $breakpoint - 1px) {
+        margin: 0 -20px;
+        padding: 0 20px;
+      }
     }
   }
   &__controls {
@@ -562,9 +571,10 @@
   }
 }
 
-.mission__main .designers-form__form {
-  width: calc(100% - 60px);
-}
+// .mission__main .designers-form__form {
+//   // width: calc(100% - 60px);
+//   width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+// }
 
 .designers-form__imgs {
   display: flex;

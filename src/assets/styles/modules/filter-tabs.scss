@@ -9,6 +9,8 @@
     display: flex;
 
     overflow-x: scroll;
+
+    @include scrollbar-hidden();
   }
 }
 

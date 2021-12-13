@@ -183,12 +183,6 @@
     }
   }
 
-  .bullets.projects__item-slider-bullets {
-    @media (max-width: $breakpoint - 1px) {
-      display: none;
-    }
-  }
-
   &__item {
 
     &-caption {
@@ -293,5 +287,11 @@
   @media (max-width: $breakpoint - 1px) {
     width: 270px;
     margin: 0 10px 0 0;
+  }
+}
+
+.bullets.projects__item-slider-bullets {
+  @media (max-width: $breakpoint - 1px) {
+    display: none;
   }
 }

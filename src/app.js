@@ -15,9 +15,16 @@ import './assets/scripts/spoiler';
 
 import '@fancyapps/fancybox';
 
+import parsley from "parsleyjs";
+import "parsleyjs/dist/i18n/ru";
+
 import './assets/scripts/sliders';
 
 import LocomotiveScroll from 'locomotive-scroll';
+
+
+
+// модалка с первого экрана главной
 
 {
   $(() => {
@@ -55,5 +62,39 @@ import LocomotiveScroll from 'locomotive-scroll';
         }
       })
     }
+  })
+}
+
+// стили фокуса в инпутах форм
+
+{
+  $(() => {
+    const label = $('.designers-form__label');
+    const btn = $('.designers-form__form').find('.btn');
+
+    $(window).on('click', event => {
+
+      if ($(event.target).closest(label).length) {
+        label.removeClass('input-focus');
+        $(event.target).closest(label).removeClass('error');
+        $(event.target).closest(label).addClass('input-focus placeholder-top');
+      } else {
+        label.removeClass('input-focus');
+      }
+
+      if ($(event.target).closest(btn).length) {
+
+        setTimeout(() => {
+          const error = $('.designers-form__form').find('.parsley-error');
+
+          if (error.length) {
+            error.closest(label).addClass('error')
+          } else {
+            error.closest(label).removeClass('error')
+          }
+        }, 0);
+        
+      }
+    })
   })
 }

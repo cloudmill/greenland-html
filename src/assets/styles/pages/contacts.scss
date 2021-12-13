@@ -157,8 +157,10 @@
     display: flex;
     justify-content: flex-start;
     overflow-x: scroll;
+    @include scrollbar-hidden();
 
-    margin-top: 40px;
+    margin: 40px -20px 0;
+    padding: 0 20px;
   }
 
   &__item {
