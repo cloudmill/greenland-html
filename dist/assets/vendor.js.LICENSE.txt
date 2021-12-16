@@ -22,3 +22,21 @@
  *
  * Date: 2021-03-02T17:08Z
  */
+
+/*!
+* Parsley.js
+* Version 2.9.2 - built Tue, Dec 10th 2019, 6:18 pm
+* http://parsleyjs.org
+* Guillaume Potier - <guillaume@wisembly.com>
+* Marc-Andre Lafortune - <petroselinum@marc-andre.ca>
+* MIT Licensed
+*/
+
+/**
+* JavaScript project for accessing and normalizing the accelerometer and gyroscope data on mobile devices
+*
+* @author Doruk Eker <dorukeker@gmail.com>
+* @copyright Doruk Eker <http://dorukeker.com>
+* @version 2.0.4
+* @license MIT License | http://opensource.org/licenses/MIT
+*/
