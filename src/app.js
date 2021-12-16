@@ -11,6 +11,8 @@ import './assets/scripts/modals';
 
 import './assets/scripts/compare';
 
+import './assets/scripts/3dEffect/index';
+
 import './assets/scripts/spoiler';
 
 import '@fancyapps/fancybox';

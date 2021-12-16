@@ -51,6 +51,10 @@ module.exports = env => {
 		module: {
 			rules: [
 				{
+					test: /\.glsl$/,
+					loader: 'webpack-glsl-loader'
+				},
+				{
 					test: /\.json$/,
 					loader: 'json-loader'
 				},
