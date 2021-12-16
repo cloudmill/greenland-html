@@ -31,7 +31,7 @@
   &__wrapper {
     display: flex;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       flex-direction: column;
     }
   }
@@ -105,7 +105,7 @@
       margin-top: 60px;
     }
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 12px;
       margin: 0;
       padding: 15px 10px;

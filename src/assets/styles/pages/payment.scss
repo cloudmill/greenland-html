@@ -5,7 +5,7 @@
 
   margin: 80px 0 120px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin: 40px 0;
   }
 
@@ -18,7 +18,7 @@
     margin-bottom: 0;
     width: 100%;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       padding-bottom: 20px;
     }
   }
@@ -28,7 +28,7 @@
     border-top: 1px solid $green-extra-lighten;
     padding-top: 20px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       flex-direction: column;
       width: 100%;
     }
@@ -38,7 +38,7 @@
     width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
     margin-right: calc(#{$col-part-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-right: 0;
     }
@@ -47,14 +47,14 @@
       font-size: 22px;
       line-height: 160%;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 16px;
       }
     }
     &:nth-child(2) {
       line-height: 160%;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 14px;
         margin-top: 20px;
       }
@@ -75,7 +75,7 @@
   margin-left: calc(#{$col-part-d} * 4);
   margin-top: 60px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
     margin-left: 0;
     flex-direction: column;
@@ -88,14 +88,14 @@
     width: 33%;
     padding: 20px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
 
     &:not(:last-child) {
       border-right: 1px solid $green-extra-lighten;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         border-right: none;
         border-bottom: 1px solid $green-extra-lighten;
       }
@@ -113,7 +113,7 @@
   font-size: 22px;
   line-height: 160%;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     font-size: 16px;
     margin-top: 20px;
   }

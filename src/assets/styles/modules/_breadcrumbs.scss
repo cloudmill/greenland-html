@@ -7,7 +7,7 @@
 
   margin-bottom: 80px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-bottom: 20px;
   }
 
@@ -31,7 +31,7 @@
     font-weight: 600;
     line-height: 100%;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 8px;
     }
   }

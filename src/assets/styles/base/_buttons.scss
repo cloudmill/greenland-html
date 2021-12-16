@@ -29,7 +29,7 @@
 
   transition: .5s;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     padding: 13px 20px;
     font-size: 12px;
     min-width: unset;
@@ -60,7 +60,7 @@
 
   transition: .5s;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     padding: 13px;
     font-size: 12px;
   }

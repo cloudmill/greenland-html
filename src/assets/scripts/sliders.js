@@ -10,6 +10,7 @@ import initOtherSlider from './other-news-slider';
 import productProjects from './product-projects-slider';
 import productDesc from './product-desc-slider';
 import coverModal from './cover-modal-slider';
+import abonementsSlider from './abonements-slider';
 
 import Swiper, {Navigation, Pagination, Mousewheel} from 'swiper';
 Swiper.use([Navigation, Pagination, Mousewheel]);
@@ -65,5 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
   try {
     coverModal();
   } catch {}
+
+	// try {
+  //   abonementsSlider();
+  // } catch {}
 
 });

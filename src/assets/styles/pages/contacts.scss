@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   margin-top: 80px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
     margin-top: 20px;
   }
@@ -12,7 +12,7 @@
     width: calc(#{$col-part-d} * 6);
     margin-bottom: 40px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-bottom: 20px;
     }
@@ -22,7 +22,7 @@
       line-height: 110%;
       margin-bottom: 10px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 25px;
       }
     }
@@ -33,7 +33,7 @@
       text-transform: uppercase;
       opacity: .4;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 10px;
       }
     }
@@ -46,7 +46,7 @@
   &__cities {
     width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       order: -1;
       margin-bottom: 40px;
       width: 100%;
@@ -57,7 +57,7 @@
     font-size: 25px;
     line-height: 110%;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-bottom: 40px;
       font-size: 16px;
@@ -67,7 +67,7 @@
     width: calc(#{$col-part-d} * 6);
     padding-right: calc(#{$col-part-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       padding-right: unset;
       margin-bottom: 40px;
@@ -78,7 +78,7 @@
       font-size: 25px;
       line-height: 140%;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 16px;
       }
     }
@@ -91,7 +91,7 @@
       line-height: 16px;
       text-transform: uppercase;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 12px;
       }
 
@@ -108,7 +108,7 @@
     .footer__socials-link {
       border-color: $black;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         flex: 0 0 40px;
         height: 40px;
       }
@@ -125,7 +125,7 @@
 
   display: flex;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
     margin: 40px 0 20px;
   } 
@@ -153,7 +153,7 @@
   row-gap: 80px;
   justify-content: space-between;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     display: flex;
     justify-content: flex-start;
     overflow-x: scroll;
@@ -187,7 +187,7 @@
     line-height: 120%;
     margin-top: 20px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 16px;
     }
   }
@@ -196,7 +196,7 @@
     line-height: 160%;
     margin-bottom: 20px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 12px;
       margin-bottom: 10px;
     }
@@ -205,7 +205,7 @@
     font-size: 14px;
     line-height: 16px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 12px;
     }
   }

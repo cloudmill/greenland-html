@@ -25,7 +25,7 @@ block content
 
           img.lanscaping-first-screen__background(src="assets/images/abonements-main.jpg", alt="")
 
-        .lanscaping-solutions-txt.title-h3
+        .lanscaping-solutions-txt.title-h3.only-desktop
           |Доверьте заботу о своих зелёных питомцах 
           br
           span.highlight-1 профессионалам
@@ -38,26 +38,58 @@ block content
           br
           span.accent красотой долгие годы.
 
-        .abonements-slider
-          .abonements-slide
-            img(src="assets/images/abonement-slide.jpg", alt="")
-            .abonements-slider__controls
+        .lanscaping-solutions-txt.title-h3.only-mobile
+          |Доверьте заботу о своих 
+          br
+          |зелёных питомцах 
+          br
+          span.highlight-1 профессионалам
+          |. Наша 
+          br
+          |компания возьмет все работы
+          br
+          |по поливу и уходу на себя,
+          br
+          |чтобы Вы могли 
+          span.highlight-2 наслаждаться
+          br
+          span.highlight-3 их красотой долгие годы.
 
-            .abonements-slider__desc
-              .abonements-slider__ttl Разовый выезд биолога для лечения растений
+        .abonements-slider.swiper-container(data-abonements-slider)
+          .swiper-wrapper
+            .swiper-slide
+              .abonements-slide
+                img.only-desktop(src="assets/images/abonement-slide.jpg", alt="")
+                img.only-mobile(src="assets/images/abonement-slide-mob.jpg", alt="")
 
-              ul
-                li Выявление неблагоприятных факторов и вредителей
-                li Обрезка зараженных и мертвых листьев
-                li Обработка необходимыми препаратами
-                li Полив, подкормка и удобрение при необходимости
-                li Полив, подкормка и удобрение при необходимости
-                li Рекомендации по дальнейшему уходу и лечению
-              
-              .abonements-slider__bottom
-                .abonements-slider__price от 3 000 ₽*
-                .abonements-slider__item * Зависит от расположения, количества и размера растений
-                .abonements-slider__item Все расходные материалы, препараты и химикаты входят в стоимость
+                .abonements-slider__desc
+
+                  .abonements-slider__top
+                  
+                    .abonements-slider__controls
+                      +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-abonements-slider-prev="")
+                      +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-abonements-slider-next="")
+
+                  .abonements-slider__ttl Разовый выезд биолога для лечения растений
+
+                  ul.spoiler__desc-list
+                    li Выявление неблагоприятных факторов и вредителей
+                    li Обрезка зараженных и мертвых листьев
+                    li Обработка необходимыми препаратами
+                    li Полив, подкормка и удобрение при необходимости
+                    li Полив, подкормка и удобрение при необходимости
+                    li Рекомендации по дальнейшему уходу и лечению
+                  
+                  .abonements-slider__bottom
+                    .abonements-slider__price от 3 000 ₽*
+                    .abonements-slider__item.only-desktop * Зависит от расположения, количества и размера растений
+                    .abonements-slider__item.only-mobile * Зависит от расположения, количества и 
+                      br
+                      |размера растений
+                    .abonements-slider__item.only-desktop Все расходные материалы, препараты и химикаты входят в стоимость
+                    .abonements-slider__item.only-mobile Все расходные материалы, препараты и 
+                      br
+                      |химикаты входят в стоимость
 
         .landscaping-contacts
           .contacts-cards__ttl.title-h2 Профессионалы Green Land
@@ -72,24 +104,13 @@ block content
 
         .designers-form.about-mission
           h2.designers-form__title.title-h2 Оставить заявку на абонемент
-          .mission__slide
+          .designers-form__row
             .mission__main
               .mission__slider-underlay
               .designers-form__container
-                form.designers-form__form
-                  label.designers-form__label
-                    input.designers-form__input(placeholder="Имя")
-                  label.designers-form__label
-                    input.designers-form__input(placeholder="E-mail")
-                  label.designers-form__label
-                    input.designers-form__input(placeholder="Телефон")
-                  label.designers-form__checkbox
-                    input(type="checkbox"  id="checkbox")
-                    .checkbox
-                    .designers-form__checkbox-txt Я соглашаюсь на обработку
-                      br
-                      a(href="") персональных данных
-                  button.btn.cover__btn(type="submit") отправить
+                
+                include ../partials/form-designer
+                
             .about-mission__img.designers-form__imgs
               img(src="assets/images/designer-form-1.jpg", alt="")
               img(src="assets/images/designer-form-2.jpg", alt="")

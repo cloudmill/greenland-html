@@ -40,7 +40,7 @@
 .designers-brands {
   margin-top: 120px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
   }
 
@@ -50,7 +50,7 @@
     line-height: 140%;
     margin-bottom: 70px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       font-size: 16px;
       margin-bottom: 20px;
@@ -90,7 +90,7 @@
       justify-content: center;
       align-items: center;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         min-width: 130px;
         width: 130px;
         min-height: 82px;
@@ -113,7 +113,7 @@
       text-transform: uppercase;
       text-align: center;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 10px;
       }
 
@@ -127,14 +127,14 @@
 .designers-offers {
   margin-top: 160px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
   }
 
   &__title {
     width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
   }
@@ -146,7 +146,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         flex-direction: column;
       }
     }
@@ -161,7 +161,7 @@
       display: flex;
       flex-direction: column;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         width: 100%;
         font-size: 14px;
         margin-top: 40px;
@@ -170,7 +170,7 @@
       div {
         margin-bottom: 57px;
 
-        @media (max-width: $breakpoint - 1px) {
+        @media (max-width: ($breakpoint - 1px)) {
           margin-bottom: 40px;
         }
       }
@@ -183,7 +183,7 @@
 
   margin-top: 160px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
   }
 
@@ -191,7 +191,7 @@
     margin-bottom: 80px;
     width: calc(#{$col-part-d} * 6 - (#{$col-gap-d} * 3));
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-bottom: 20px;
     }
@@ -204,7 +204,7 @@
       flex-wrap: wrap;
       justify-content: space-between;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         flex-direction: column;
       }
     }
@@ -216,7 +216,7 @@
 
       display: flex;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         width: 100%;
         flex-direction: column;
       }
@@ -224,7 +224,7 @@
       &:not(:last-child) {
         margin-bottom: 60px;
 
-        @media (max-width: $breakpoint - 1px) {
+        @media (max-width: ($breakpoint - 1px)) {
           margin-bottom: 40px;
         }
       }
@@ -234,7 +234,7 @@
   &__img {
     width: calc(#{$col-part-d} * 2);
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 40px;
       width: auto;
     }
@@ -243,7 +243,7 @@
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
     padding-right: calc(#{$col-part-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       padding-right: 0;
     }
@@ -254,7 +254,7 @@
       text-transform: uppercase;
       margin-bottom: 20px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 14px;
       }
     }
@@ -262,7 +262,7 @@
       font-size: 16px;
       line-height: 160%;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 14px;
       }
     }
@@ -272,7 +272,7 @@
 .designers-products {
   margin-top: 160px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
   }
 
@@ -282,7 +282,7 @@
     align-items: center;
     justify-content: space-between;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
     }
 
@@ -295,7 +295,7 @@
     text-indent: calc(#{$col-part-d});
     margin-bottom: 60px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
     }
 
@@ -313,7 +313,7 @@
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 10px;
     }
 
@@ -325,7 +325,7 @@
 
       @include scrollbar-hidden();
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin: 0 -20px;
         padding: 0 20px;
       }
@@ -334,7 +334,7 @@
   &__controls {
     width: 110px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       display: none;
     }
 
@@ -351,7 +351,7 @@
 .designers-block {
   margin-top: 70px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column-reverse;
     margin-top: 40px;
 
@@ -381,7 +381,7 @@
 .designers-showrooms {
   margin-top: 160px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
   }
 
@@ -389,7 +389,7 @@
     text-indent: calc(#{$col-part-d});
     margin-bottom: 80px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
     }
 
@@ -400,14 +400,14 @@
   }
 
   .projects__slide {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin: 0 10px 0 0;
       width: 270px;
     }
   }
 
   .projects__slider-controls {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       display: none;
     }
   }
@@ -416,7 +416,7 @@
 .designers-contacts {
   margin-top: 160px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
   }
 
@@ -424,7 +424,7 @@
     display: flex;
     margin-bottom: 80px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       flex-direction: column;
       margin-bottom: 20px;
     }
@@ -432,7 +432,7 @@
   &__title {
     width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-bottom: 20px;
     }
@@ -441,14 +441,14 @@
     font-family: $base-font-family-serif;
     font-size: 20px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 16px;
     }
   }
   &__row {
     display: flex;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       flex-direction: column;
     }
   }
@@ -459,7 +459,7 @@
 
     display: flex;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       flex-direction: column;
 
@@ -475,7 +475,7 @@
   &__img {
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: auto;
     }
   }
@@ -485,7 +485,7 @@
     display: flex;
     flex-direction: column;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-top: 20px;
     }
@@ -494,7 +494,7 @@
     font-size: 25px;
     line-height: 120%;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 18px;
     }
   }
@@ -508,7 +508,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin: 20px 0;
     }
 
@@ -534,7 +534,7 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       padding-left: 0;
     }
 
@@ -565,7 +565,7 @@
 
   text-align: center;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     padding: 13px 20px;
     font-size: 12px;
   }
@@ -584,14 +584,14 @@
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
     height: 80%;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: calc(35% - 5px);
     }
   }
   img:nth-child(2) {
     width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: calc(65% - 5px);
     }
   }
@@ -602,14 +602,14 @@
 .objects-form {
   margin-top: 160px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
   }
 
   h2 {
     margin-bottom: 80px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
     }
   }
@@ -666,7 +666,7 @@
   align-items: center;
   margin-bottom: 60px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-bottom: 20px;
     flex-direction: column;
     align-items: flex-start;
@@ -675,7 +675,7 @@
   &__title {
     width: calc(#{$col-part-d} * 8);
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: auto;
       margin-bottom: 20px;
     }
@@ -723,7 +723,7 @@
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
     margin-top: 40px;
   }
@@ -731,7 +731,7 @@
   &__ttl {
     width: calc(#{$col-part-d} * 7);
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-bottom: 20px;
     }
@@ -745,7 +745,7 @@
     font-size: 20px;
     line-height: 160%;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       font-size: 16px;
       line-height: 140%;
@@ -756,7 +756,7 @@
 .distributor-offers {
   margin-top: 80px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 0;
   }
 
@@ -771,7 +771,7 @@
   padding-bottom: 20px;
   border-bottom: 1px solid $green;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     border-bottom: none;
     padding-bottom: 0;
 
@@ -811,7 +811,7 @@
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
     margin-top: 60px;
   }
@@ -819,7 +819,7 @@
   &__ttl {
     width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
 
@@ -829,7 +829,7 @@
     }
 
     .footer__download {
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         display: none;
       }
     }
@@ -845,7 +845,7 @@
   &__txt {
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-top: 20px;
     }
@@ -855,7 +855,7 @@
       font-size: 20px;
       line-height: 130%;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 16px;
       }
     }
@@ -865,7 +865,7 @@
       align-items: center;
       padding-left: 46px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 14px;
       }
     }
@@ -897,7 +897,7 @@
   flex-direction: column;
   border-top: none;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     font-size: 36px;
   }
 }
@@ -905,7 +905,7 @@
 .distributor-brands {
   margin-top: 160px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
   }
 
@@ -914,7 +914,7 @@
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
     }
   }
@@ -932,7 +932,7 @@
   .designers-contacts__links {
     padding-left: calc(#{$col-part-d} * 3 - #{$col-gap-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       padding-left: 0;
     }
   }
@@ -945,7 +945,7 @@
 
   position: relative;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     padding: 40px 10px;
     margin: 40px -10px 0;
   }
@@ -953,7 +953,7 @@
   .mission__slider-underlay {
     width: calc(#{$col-part-d} * 6);
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       display: none;
     }
 

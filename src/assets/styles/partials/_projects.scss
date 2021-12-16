@@ -5,7 +5,7 @@
   padding-bottom: 160px;
   overflow: hidden;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     padding: 60px 0 40px;
   }
 
@@ -34,7 +34,7 @@
         height: 12px;
         background-image: url('assets/images/highlight-1.png');
 
-        @media (max-width: $breakpoint - 1px) {
+        @media (max-width: ($breakpoint - 1px)) {
           bottom: -2px;
           width: 70px;
         }
@@ -50,7 +50,7 @@
         height: 12px;
         background-image: url('assets/images/highlight-2.png');
 
-        @media (max-width: $breakpoint - 1px) {
+        @media (max-width: ($breakpoint - 1px)) {
           bottom: -2px;
           width: 85px;
         }
@@ -64,14 +64,14 @@
     display: flex;
     flex-wrap: wrap;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
     }
 
     &-subheading {
       margin-bottom: 40px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin-bottom: 20px;
       }
     }
@@ -83,12 +83,12 @@
       .projects__header-heading{
         font-size: 28px;
 
-        @media (max-width: $breakpoint - 1px) {
+        @media (max-width: ($breakpoint - 1px)) {
           font-size: 14px;
         }
 
         .txt-desktop {
-          @media (max-width: $breakpoint - 1px) {
+          @media (max-width: ($breakpoint - 1px)) {
             display: none;
           }
         }
@@ -101,7 +101,7 @@
       }
       
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         width: 100%;
         margin-right: 0;
         margin-bottom: 20px;
@@ -111,7 +111,7 @@
       width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
       font-size: 20px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         width: 100%;
         font-size: 14px;
       }
@@ -126,7 +126,7 @@
     line-height: 130%;
     text-transform: uppercase;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 23px;
     }
   }
@@ -167,7 +167,7 @@
 
       pointer-events: none;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         display: none;
       }
 
@@ -188,7 +188,7 @@
     &-caption {
       display: flex;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         flex-direction: column;
       }
     }
@@ -199,7 +199,7 @@
 
       font-size: 20px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         max-width: unset;
         flex: unset;
 
@@ -214,7 +214,7 @@
 
       font-size: 10px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 8px;
         margin-bottom: 5px;
       }
@@ -256,7 +256,7 @@
     &-slider {
       margin-bottom: 20px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin-bottom: 10px;
       }
 
@@ -284,14 +284,14 @@
   width: calc(#{$col-part-d} * 6 + #{$col-gap-d});
   margin: 0 calc((#{$col-part-d} * 2 - #{$col-gap-d}) / 2);
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 270px;
     margin: 0 10px 0 0;
   }
 }
 
 .bullets.projects__item-slider-bullets {
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     display: none;
   }
 }

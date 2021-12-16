@@ -3,7 +3,7 @@
   margin-top: 80px;
   margin-right: -40px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 20px;
     margin-right: -10px;
   }
@@ -32,7 +32,7 @@
     padding: 17px 20px;
     border-top: 1px solid $green-extra-lighten;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 12px;
       line-height: 120%;
     }
@@ -47,14 +47,14 @@
     width: 100%;
     justify-content: flex-end;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       justify-content: space-between;
       align-items: center;
     }
 
     .favorites-table__price {
       margin-left: 10px;
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-weight: 600;
         font-size: 12px;
         line-height: 120%;
@@ -62,7 +62,7 @@
       }
     }
     .favorites-table__price-old {
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         display: none;
       }
     }
@@ -75,7 +75,7 @@
 
   .catalog-card__labels {
     padding: 20px;
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       display: block;
       padding: 5px 0 0 5px;
     }
@@ -99,7 +99,7 @@
 }
 
 .compare-table__col.compare-col-fixed {
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     display: none;
   }
 }

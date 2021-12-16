@@ -2,7 +2,7 @@
   padding-top: 160px;
   padding-bottom: 160px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     padding-top: 40px;
     padding-bottom: 40px;
   }
@@ -46,7 +46,7 @@
   &__header {
     margin-bottom: 62px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       flex-direction: column;
       margin-bottom: 20px;
       margin-left: 0;
@@ -57,7 +57,7 @@
         display: flex;
         justify-content: flex-end;
 
-        @media (max-width: $breakpoint - 1px) {
+        @media (max-width: ($breakpoint - 1px)) {
           justify-content: flex-start;
           margin-top: 23px;
         }
@@ -74,7 +74,7 @@
     text-align: center;
     font-size: 20px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 16px;
     }
 
@@ -84,7 +84,7 @@
       border: 1px solid $green-extra-lighten;
       border-radius: 0px 0px 900px 900px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin-top: 0;
 
       }
@@ -94,7 +94,7 @@
         display: block;
         padding-top: 127.7%;
 
-        @media (max-width: $breakpoint - 1px) {
+        @media (max-width: ($breakpoint - 1px)) {
           padding-top: 0;
           height: 156px;
         }
@@ -103,7 +103,7 @@
   }
 
   &__main {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       .col:not(:first-child) {
         margin-top: 20px;
       }
@@ -126,7 +126,7 @@
       margin-bottom: 20px;
       line-height: normal;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin-bottom: 10px;
       }
     }
@@ -141,7 +141,7 @@
 
       font-size: 25px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 16px;
         height: auto;
 
@@ -174,7 +174,7 @@
     &-tags {
       margin-bottom: 15px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin-bottom: 10px;
       }
     }
@@ -185,7 +185,7 @@
       margin-bottom: 5px;
       font-size: 12px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin-bottom: 0;
         font-size: 8px;
       }

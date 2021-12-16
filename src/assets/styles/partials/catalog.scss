@@ -2,7 +2,7 @@
   width: 304px;
   border: 1px solid $green-extra-lighten;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 151px;
   }
 
@@ -31,7 +31,7 @@
     justify-content: space-between;
 
     .catalog-card__buttons {
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         display: none;
       }
     }
@@ -41,7 +41,7 @@
     padding: 10px;
     position: relative;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       display: none;
     }
 
@@ -65,7 +65,7 @@
       height: 6px;
       background-color: $green-extra-lighten;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         display: none;
       }
 
@@ -100,7 +100,7 @@
 
     padding: 20px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       padding: 0 10px 10px;
     }
 
@@ -126,7 +126,7 @@
     font-size: 16px;
     line-height: 120%;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 12px;
       margin-bottom: 6px;
     }
@@ -138,7 +138,7 @@
     font-size: 14px;
     line-height: 130%;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-bottom: 6px;
       font-size: 10px;
@@ -149,7 +149,7 @@
     font-size: 18px;
     line-height: 120%;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 12px;
     }
   }
@@ -176,7 +176,7 @@
 }
 
 .category-table {
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     .category-row:not(:first-child) {
       display: none;
     }
@@ -187,14 +187,14 @@
   display: flex;
   margin-bottom: 40px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-wrap: wrap;
     border-top: 1px solid $green-extra-lighten;
     border-right: 1px solid $green-extra-lighten;
   }
 
   .catalog-card {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 50%;
       border-top: none;
     }
@@ -204,7 +204,7 @@
 .catalog-filter {
   margin: 60px 0 40px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     display: none;
   }
 
@@ -212,7 +212,7 @@
     margin-bottom: 40px;
     display: flex;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 10px;
 
       // flex-direction: column;
@@ -237,7 +237,7 @@
       color: $black;
       transition: .5s;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 12px;
         line-height: 14px;
       }
@@ -245,7 +245,7 @@
       img {
         margin-right: 10px;
 
-        @media (max-width: $breakpoint - 1px) {
+        @media (max-width: ($breakpoint - 1px)) {
           width: 22px;
           height: 22px;
         }
@@ -271,7 +271,7 @@
 
     overflow-x: scroll;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 10px;
     }
 
@@ -287,7 +287,7 @@
 
       cursor: pointer;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         padding: 5px 15px;
         font-size: 12px;
         line-height: 14px;
@@ -297,7 +297,7 @@
       &:not(:first-child) {
         margin-left: 20px;
 
-        @media (max-width: $breakpoint - 1px) {
+        @media (max-width: ($breakpoint - 1px)) {
           margin-left: 0;
         }
       }
@@ -381,7 +381,7 @@
 }
 
 .catalog-filter-spoiler {
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
 
     border: 1px solid $green-extra-lighten;
@@ -450,7 +450,7 @@
   }
 
   .catalog-filter-imgs__item {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin: 0 10px 10px 0;
     }
   }
@@ -485,7 +485,7 @@
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
     margin-top: 40px;
   }
@@ -493,7 +493,7 @@
   .designers-contacts__card {
     width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       flex-direction: row;
     }
@@ -506,7 +506,7 @@
   .designers-contacts__img {
     margin-right: calc(#{$col-width-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: calc(#{$col-part-m});
       margin-right: 30px;
     }
@@ -517,7 +517,7 @@
   }
 
   .designers-contacts__desc {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-top: 0;
     }
   }
@@ -525,21 +525,21 @@
   &__desc {
     width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
 
     &-ttl {
       margin-bottom: 40px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin-bottom: 10px;
       }
     }
 
     &-txt {
       p {
-        @media (max-width: $breakpoint - 1px) {
+        @media (max-width: ($breakpoint - 1px)) {
           font-size: 14px;
         }
       }
@@ -553,7 +553,7 @@
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
     margin-bottom: 40px;
   }
@@ -566,7 +566,7 @@
   height: 554px;
   overflow: hidden;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
     height: 316px;
   }
@@ -576,7 +576,7 @@
     overflow: scroll;
     width: 130px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 55px;
     }
   }
@@ -589,7 +589,7 @@
     justify-content: center;
     align-items: center;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       height: 65px;
     }
 
@@ -623,7 +623,7 @@
 .product-card-info {
   width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
     margin-top: 20px;
 
@@ -635,7 +635,7 @@
     padding: 0;
     margin-bottom: 20px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       display: flex;
       order: -1;
       margin-bottom: 0;
@@ -663,7 +663,7 @@
     display: flex;
     flex-direction: column;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 50%;
     }
 
@@ -693,7 +693,7 @@
 
     font-size: 14px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
 
@@ -704,7 +704,7 @@
       display: flex;
       align-items: center;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         width: 100%;
       }
 
@@ -722,7 +722,7 @@
 
     font-size: 12px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: unset;
     }
 
@@ -736,7 +736,7 @@
   margin-top: 50px;
   display: flex;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
     width: 180px;
   }
@@ -751,14 +751,14 @@
     display: flex;
     align-items: center;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 11px;
     }
 
     &:not(:first-child) {
       margin-left: 20px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin: 15px 0 0;
       }
     }
@@ -782,7 +782,7 @@
 .product-card-body {
   display: flex;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
   }
 }
@@ -792,7 +792,7 @@
 
   position: relative;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
     margin-bottom: 40px;
   }
@@ -801,7 +801,7 @@
 .product-card-main {
   width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
   }
 }
@@ -810,7 +810,7 @@
   display: flex;
   margin-top: 40px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     order: -1;
     flex-direction: column;
     margin: 20px 0;
@@ -819,7 +819,7 @@
   .btn-white {
     margin-right: $col-gap-d;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin: 10px 0 0 0;
       order: 2;
     }
@@ -837,7 +837,7 @@
 .product-card-size {
   margin-bottom: 160px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-bottom: 40px;
   }
 }
@@ -845,7 +845,7 @@
 .product-size-table {
   margin-top: 80px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 22px;
     border-top: 1px solid $green-extra-lighten;
   }
@@ -855,7 +855,7 @@
   display: flex;
   border-bottom: 1px solid $green-extra-lighten;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     display: none;
   }
 
@@ -886,7 +886,7 @@
 
   border: 1px solid $green-extra-lighten;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-wrap: wrap;
     padding: 20px;
   }
@@ -907,7 +907,7 @@
     padding-left: 20px;
     width: calc(#{$col-part-d} * 2);
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 33%;
       padding-left: 0;
     }
@@ -916,7 +916,7 @@
   .product-size-col {
     width: calc((100% - (#{$col-part-d} * 6 - #{$col-gap-d})) / 4);
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 33%;
 
       &:nth-child(5) {
@@ -931,7 +931,7 @@
     display: flex;
     align-items: center;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 33%;
     }
   }
@@ -943,7 +943,7 @@
     align-items: center;
     justify-content: center;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 66%;
       padding: 0;
       justify-content: flex-start;
@@ -962,7 +962,7 @@
 .product-card-recommend {
   margin-bottom: 160px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-bottom: 40px;
   }
 }
@@ -975,7 +975,7 @@
     width: 100%;
     margin-bottom: 80px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
     }
   }
@@ -985,7 +985,7 @@
   width: calc(#{$col-part-d} * 7);
   margin: 0 calc(#{$col-part-d});
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
     margin: 0 0 30px 0;
     font-size: 14px;
@@ -998,7 +998,7 @@
 
   width: calc(#{$col-part-d} * 3 - 20px);
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
   }
 
@@ -1008,7 +1008,7 @@
     text-transform: uppercase;
     margin-bottom: 20px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 12px;
     }
   }
@@ -1018,7 +1018,7 @@
     text-transform: uppercase;
     color: $green;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 10px;
     }
 
@@ -1063,14 +1063,14 @@
   position: relative;
   // margin-top: 10px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 30px;
   }
 
   .swiper-slide {
     width: calc(#{$col-part-d} * 6 + 20px);
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 270px;
     }
 
@@ -1088,7 +1088,7 @@
   width: 100%;
   margin-bottom: 40px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     display: none;
   }
 
@@ -1102,7 +1102,7 @@
   flex-direction: column;
   position: fixed;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     position: relative;
     flex-direction: row;
     overflow-x: scroll;
@@ -1111,7 +1111,7 @@
   &__item {
     margin-bottom: 20px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       &:not(:first-child) {
         margin-left: 10px;
       }
@@ -1122,7 +1122,7 @@
   
       border-bottom: 1px solid $green-extra-lighten;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         white-space: nowrap;
       }
     }

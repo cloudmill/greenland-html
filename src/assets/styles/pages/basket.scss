@@ -1,7 +1,7 @@
 .basket {
   display: flex;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
   }
 }
@@ -32,7 +32,7 @@
     text-transform: uppercase;
     font-size: 24px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 14px;
     }
   }
@@ -40,7 +40,7 @@
   &__table {
     margin: 60px 0 256px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin: 20px 0 40px;
     }
   }
@@ -51,14 +51,14 @@
     font-size: 14px;
     text-transform: uppercase;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 11px;
     }
 
     &:not(:last-child) {
       margin-bottom: 25px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin-bottom: 10px;
       }
     }
@@ -75,7 +75,7 @@
     padding: 30px 40px;
     margin: 60px -40px 0;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin: 40px -10px 0;
       padding: 13px 10px;
 
@@ -87,7 +87,7 @@
     .basket-aside__row {
       font-size: 18px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 12px;
 
         .basket-aside__value {
@@ -106,7 +106,7 @@
   font-size: 16px;
   line-height: 160%;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin: 40px 0;
     font-size: 14px;
   }
@@ -114,7 +114,7 @@
   .designers-form__checkbox {
     margin-right: 20px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-right: 10px;
     }
   }
@@ -128,7 +128,7 @@
     font-weight: 600;
     font-size: 14px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin: 0 0 0 auto;
     }
   }
@@ -143,7 +143,7 @@
   padding-bottom: 20px;
   border-bottom: 1px solid $green-extra-lighten;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
     padding-bottom: 10px;
   }
@@ -154,7 +154,7 @@
     margin-bottom: 30px;
     font-size: 24px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 14px;
       margin-bottom: 20px;
     }
@@ -172,7 +172,7 @@
     //   opacity: 1;
     // }
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 12px;
       width: 50%;
     }
@@ -184,7 +184,7 @@
     line-height: 16px;
     text-transform: uppercase;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 12px;
     }
   }
@@ -194,7 +194,7 @@
     line-height: 120%;
     margin-top: 20px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 14px;
     }
   }
@@ -213,7 +213,7 @@
   .favorites-table__top, .favorites-table__row {
     width: calc(#{$col-part-d} * 11);
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
   }
@@ -225,7 +225,7 @@
       &:nth-child(4) {
         width: calc(#{$col-part-d});
 
-        @media (max-width: $breakpoint - 1px) {
+        @media (max-width: ($breakpoint - 1px)) {
           width: calc(#{$col-part-m});
         }
       }
@@ -237,7 +237,7 @@
         display: flex;
         align-items: center;
 
-        @media (max-width: $breakpoint - 1px) {
+        @media (max-width: ($breakpoint - 1px)) {
           margin-top: 0;
           padding: 0 0 0 20px;
           width: calc(#{$col-part-m} * 2 - 15px);
@@ -321,7 +321,7 @@
   border-bottom: 1px solid $green-extra-lighten;
   border-left: 1px solid $green-extra-lighten;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 30px;
     height: 30px;
   }
@@ -333,7 +333,7 @@
     height: 1px;
     background-color: $black;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 10px;
     }
   }

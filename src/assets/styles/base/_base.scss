@@ -117,7 +117,7 @@ button {
 .footer {
   padding-left: 80px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     padding-left: 0;
   }
 }
@@ -156,7 +156,7 @@ button {
 }
 
 .only-desktop {
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     display: none;
   }
 }

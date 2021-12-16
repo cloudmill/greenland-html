@@ -65,7 +65,7 @@
   justify-content: center;
   align-items: center;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin: 20px 0 40px;
   }
 
@@ -83,7 +83,7 @@
     align-items: center;
     justify-content: center;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 32px;
       height: 32px;
     }
@@ -109,7 +109,7 @@
     width: 102px;
     margin-left: 70px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-left: 40px;
     }
 

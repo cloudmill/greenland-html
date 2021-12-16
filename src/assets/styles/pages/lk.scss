@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 80px;
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 20px;
   }
 }
@@ -10,7 +10,7 @@
 .lk-sidebar {
   width: calc(#{$col-part-d} * 4);
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     display: none;
   }
 
@@ -84,7 +84,7 @@
 .lk-main {
   width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
   }
 
@@ -95,7 +95,7 @@
 
 .lk-table {
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     border-top: 1px solid $green-extra-lighten;
   }
 
@@ -105,7 +105,7 @@
 
     border-bottom: 1px solid $green-extra-lighten;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       display: none;
     }
 
@@ -124,7 +124,7 @@
     border-left: 1px solid $green-extra-lighten;
     border-right: 1px solid $green-extra-lighten;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       padding: 5px 20px 20px;
       flex-wrap: wrap;
     }
@@ -133,7 +133,7 @@
       font-size: 16px;
       line-height: 120%;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 14px;
       }
     }
@@ -141,7 +141,7 @@
   &__col {
     width: calc(#{$col-part-d} * 2);
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 33%;
       padding-top: 20px;
 
@@ -163,7 +163,7 @@
     &:first-child {
       text-align: center;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         text-align: left;
       }
     }
@@ -173,14 +173,14 @@
     &:nth-child(4) {
       width: calc(#{$col-part-d} * 4);
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         width: 100%;
       }
     }
     &:nth-child(5) {
       width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         width: 100%;
         display: flex;
         // flex-direction: row;
@@ -197,7 +197,7 @@
     margin-top: 10px;
     cursor: pointer;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-top: 0;
       font-size: 12px;
     }
@@ -206,7 +206,7 @@
 
 .lk-table-completed {
   .lk-table__col:nth-child(5) {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       flex-direction: row;
       justify-content: space-between;
     }
@@ -217,14 +217,14 @@
   display: flex;
   margin-bottom: 60px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-bottom: 40px;
   }
 
   &__item {
     width: calc(#{$col-part-d} * 3);
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 50%;
       padding-right: 20px;
     }
@@ -235,7 +235,7 @@
     text-transform: uppercase;
     margin-bottom: 10px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 8px;
     }
   }
@@ -243,7 +243,7 @@
     font-size: 16px;
     line-height: 120%;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 14px;
     }
   }
@@ -254,7 +254,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     justify-content: flex-start;
     flex-direction: column;
   }
@@ -270,7 +270,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-bottom: 20px;
       font-size: 14px;
@@ -291,14 +291,14 @@
   display: flex;
   flex-direction: column;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
   }
 
   label {
     margin-bottom: 20px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 0;
     }
 
@@ -341,7 +341,7 @@
     line-height: 16px;
     text-transform: uppercase;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-top: 20px;
       font-size: 12px;
     }
@@ -351,7 +351,7 @@
 .lk-order-top {
   display: flex;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     display: none;
   }
 
@@ -377,25 +377,25 @@
 .lk-order-list {
   margin-top: 60px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 0;
     border-top: 1px solid $green-extra-lighten;
   }
 
   .catalog-card__labels {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       display: flex;
     }
   }
 
   .favorites-table__top {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       display: none;
     }
   }
 
   .favorites-table__row {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       flex-wrap: wrap;
       padding-bottom: 20px;
 
@@ -406,12 +406,12 @@
   }
 
   .favorites-table__col:first-child {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: calc(#{$col-part-m});
     }
   }
   .favorites-table__col:nth-child(2) {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: calc(#{$col-part-m} * 3 - 12px);
       display: flex;
       flex-wrap: wrap;
@@ -419,7 +419,7 @@
     }
   }
   .favorites-table__col:nth-child(3) {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: calc(#{$col-part-m} * 3 - 20px);
       // margin-left: calc(#{$col-part-m});
     }
@@ -428,7 +428,7 @@
     display: flex;
     align-items: center;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       order: 1;
       width: calc(#{$col-part-m} * 2 - 20px);
       display: flex;
@@ -438,7 +438,7 @@
   .favorites-table__col:nth-child(5) {
     width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: calc(#{$col-part-m});
       // margin-left: calc(#{$col-part-m});
     }
@@ -459,7 +459,7 @@
   // justify-content: space-between;
   flex-wrap: wrap;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin: 40px 0 20px;
   }
 
@@ -467,7 +467,7 @@
     margin-bottom: 40px;
     width: 100%;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
     }
   }
@@ -477,7 +477,7 @@
     margin-bottom: 40px;
     padding-right: 40px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-bottom: 20px;
       padding-right: 0;
@@ -486,7 +486,7 @@
     &:nth-child(3) {
       width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         width: 100%;
       }
     }
@@ -498,7 +498,7 @@
     text-transform: uppercase;
     margin-bottom: 5px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 12px;
     }
   }
@@ -509,7 +509,7 @@
     line-height: 130%;
     text-transform: uppercase;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 12px;
     }
   }
@@ -522,7 +522,7 @@
 
   width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
     margin: 40px 0;
     font-size: 18px;
@@ -536,14 +536,14 @@
 .lk-faq-form {
   width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
   }
 
   .designers-form__container {
     justify-content: flex-end;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       justify-content: flex-start;
       margin: 0;
     }
@@ -552,7 +552,7 @@
     display: flex;
     flex-wrap: wrap;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
   }
@@ -563,7 +563,7 @@
     width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
     padding-right: calc(#{$col-part-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       padding-right: 0;
     }
@@ -572,7 +572,7 @@
     width: calc(#{$col-part-d} * 2);
     margin-top: 0;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 240px;
       margin-top: 40px;
     }
@@ -586,7 +586,7 @@
 
   margin-bottom: -60px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     justify-content: flex-start;
     flex-direction: column;
     margin-bottom: -40px;
@@ -601,7 +601,7 @@
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
     margin-bottom: 60px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-bottom: 40px;
     }
@@ -614,7 +614,7 @@
 
     margin: 20px 0 10px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 14px;
     }
   }
@@ -624,7 +624,7 @@
     font-size: 20px;
     line-height: 130%;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 12px;
     }
   }

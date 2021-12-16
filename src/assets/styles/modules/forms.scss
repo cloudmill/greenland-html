@@ -5,7 +5,7 @@
 
   margin-top: 140px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
 
     .mission__slider-underlay::before {
@@ -17,7 +17,7 @@
     display: flex;
     justify-content: space-between;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       flex-direction: column;
     }
   }
@@ -25,7 +25,7 @@
   &__title {
     margin-bottom: 60px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 10px;
     }
   }
@@ -37,14 +37,14 @@
     z-index: 1;
     margin: 60px 0;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin: 0 0 15px;
     }
   }
   &__form {
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
 
@@ -52,7 +52,7 @@
       width: 100%;
       margin-top: 40px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin-top: 20px;
       }
     }
@@ -70,7 +70,7 @@
       transition: .5s;
     }
 
-    // @media (max-width: $breakpoint - 1px) {
+    // @media (max-width: ($breakpoint - 1px)) {
     //   margin-bottom: 5px;
     // }
   }
@@ -82,7 +82,7 @@
     height: 30px;
     margin-top: 30px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-top: 20px;
     } 
 
@@ -137,7 +137,7 @@
 
     resize: none;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 14px;
       // margin-bottom: 20px;
       padding-bottom: 8px;
@@ -157,7 +157,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin: unset;
     }
@@ -174,7 +174,7 @@
       width: calc(#{$col-part-d} * 2);
       margin-top: 0;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin-top: 20px;
       }
     }

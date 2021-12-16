@@ -6,7 +6,7 @@
 
     margin-bottom: -20px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       flex-wrap: nowrap;
       overflow-x: scroll;
     }
@@ -20,7 +20,7 @@
   width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
   margin-bottom: 80px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
     margin-bottom: 40px;
   }
@@ -28,7 +28,7 @@
   .projects__item-caption {
     flex-wrap: wrap;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       flex-direction: column;
     }
   }
@@ -36,7 +36,7 @@
     width: calc(#{$col-part-d} * 4);
     margin-bottom: 18px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin: 0 0 20px;
       width: 100%;
     }
@@ -47,7 +47,7 @@
     width: calc(#{$col-part-d} * 4);
     font-size: 20px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       font-size: 14px;
     }
@@ -56,7 +56,7 @@
     width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
     margin-top: -32px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-top: 20px;
     }
@@ -67,14 +67,14 @@
   .blog-sidebar {
     width: calc(#{$col-part-d} * 4);
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
   }
   .blog-page-main {
     width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
   }
@@ -88,7 +88,7 @@
   display: flex;
   margin-top: 30px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 20px;
     flex-wrap: wrap;
   }
@@ -101,7 +101,7 @@
     font-size: 12px;
     line-height: 14px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       
       font-size: 10px;
       min-width: none;
@@ -132,7 +132,7 @@
       margin-bottom: 10px;
       font-weight: 600;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin-bottom: 5px;
       }
     }
@@ -146,7 +146,7 @@
   margin-top: 80px;
   width: calc(#{$col-part-d} * 8);
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
     margin-top: 40px;
   }
@@ -155,14 +155,14 @@
     font-size: 18px;
     line-height: 160%;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 14px;
     }
   }
   h3 {
     margin: 80px 0 40px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin: 40px 0 20px;
     }
   }
@@ -171,7 +171,7 @@
     margin: 80px 0;
     display: block;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin: 20px 0;
     }

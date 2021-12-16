@@ -1,7 +1,7 @@
 .career-titles {
   margin-top: 80px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 20px;
   }
 }
@@ -9,14 +9,14 @@
 .career-row {
   display: flex;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column-reverse;
   }
 
   &__img {
     width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
   }
@@ -28,7 +28,7 @@
     line-height: 120%;
     text-transform: uppercase;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-left: 0;
       margin-bottom: 20px;
@@ -40,7 +40,7 @@
   justify-content: flex-end;
   align-items: flex-end;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
   }
 
@@ -48,7 +48,7 @@
     margin-right: calc(#{$col-part-d} * 2);
     margin-top: 100px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-right: 0;
       margin-top: 40px;
     }
@@ -59,7 +59,7 @@
   margin-top: 120px;
   align-items: flex-end;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
   }
 }
@@ -68,7 +68,7 @@
   display: flex;
   margin-top: 160px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
     margin-top: 40px;
   }
@@ -76,7 +76,7 @@
   &__title {
     width: calc(#{$col-part-d} * 6);
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
   }
@@ -90,7 +90,7 @@
 
       position: relative;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 24px;
         margin-top: 20px;
       }
@@ -149,7 +149,7 @@
 .career-vacancies {
   margin-top: 160px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
   }
 }
@@ -158,7 +158,7 @@
   padding: 0 calc(#{$col-part-d} * 2);
   margin-top: 80px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     padding: 0;
     margin-top: 20px;
   }
@@ -183,7 +183,7 @@
 
       width: calc(100% - 102px);
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         padding: 20px;
         width: calc(100% - 40px);
       }
@@ -194,7 +194,7 @@
     font-size: 18px;
     line-height: 120%;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 16px;
       width: 100%;
     }
@@ -222,7 +222,7 @@
 
     transition: .5s;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
     height: 40px;
     width: 40px;
     border-bottom: 1px solid #CAE8D9;
@@ -237,7 +237,7 @@
 
       transition: .5s;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         width: 12px;
         height: 1px;
       }
@@ -252,7 +252,7 @@
       padding: 40px 20px 60px;
 
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         padding: 0 60px 20px 20px;
         font-size: 14px;
         line-height: 160%;
@@ -273,7 +273,7 @@
     &-list {
       li {
         display: flex;
-        align-items: center;
+        // align-items: center;
       }
       li:before {
         content: '';
@@ -282,9 +282,19 @@
         height: 6px;
         background-color: $green;
         margin-right: 40px;
+        margin-top: 10px;
+
+        @media (max-width: ($breakpoint - 1px)) {
+          margin-right: 20px;
+          margin-top: 8px;
+        }
       }
       li:not(:first-child) {
         margin-top: 20px;
+
+        @media (max-width: ($breakpoint - 1px)) {
+          margin-top: 10px;
+        }
       }
     }
   }
@@ -325,7 +335,7 @@
   width: calc(#{$col-part-d} * 6);
   margin-right: calc(#{$col-part-d});
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     font-size: 16px;
     width: 100%;
     margin-right: 0;
@@ -334,7 +344,7 @@
 .designers-contacts__card.career-contacts-card {
   width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
     margin-top: 40px;
   }
@@ -345,13 +355,13 @@
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
     margin-top: 40px;
   }
 
   &__form {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       flex-direction: column;
 
@@ -377,7 +387,7 @@
   border-top: 1px solid $green;
   border-bottom: 1px solid #CAE8D9;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
     height: 304px;
   }
@@ -396,7 +406,7 @@
 
     // transition: .5s;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 24px;
     }
   }
@@ -405,7 +415,7 @@
     position: absolute;
     z-index: -1;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       max-height: 224px;
     }
   }

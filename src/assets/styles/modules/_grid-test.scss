@@ -55,7 +55,7 @@ $col-part-d: '(#{$col-width-d} + #{$col-gap-d})';
 
     // скрываем на мобильном лишние колонки
     &:nth-child(-n + #{$col-count-d - $col-count-m}) {
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         display: none;
       }
     }

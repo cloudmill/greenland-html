@@ -10,7 +10,7 @@
   }
 
   &__header {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       padding-top: 10px;
       padding-bottom: 0;
       border-bottom: none;
@@ -19,7 +19,7 @@
 
   &__main {
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       padding: 20px 0;
 
       .footer-main-row {
@@ -28,7 +28,7 @@
     }
 
     &-left {
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin-top: 40px;
       }
 
@@ -43,7 +43,7 @@
       justify-content: space-between;
 
       .col__xl-4 {
-        @media (max-width: $breakpoint - 1px) {
+        @media (max-width: ($breakpoint - 1px)) {
           width: 100%;
         }
       }
@@ -57,7 +57,7 @@
       justify-content: space-between;
       flex-direction: row;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         flex-direction: column-reverse;
         justify-content: flex-start;
       }
@@ -66,7 +66,7 @@
     &-right {
       text-align: right;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         text-align: left;
         padding-left: 10px;
       }
@@ -88,7 +88,7 @@
     line-height: 1.1;
     color: $white-lighten;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 24px;
     }
 
@@ -99,7 +99,7 @@
     &-caption {
       margin-bottom: 40px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin-bottom: 10px;
       }
 
@@ -127,7 +127,7 @@
     color: $white-lighten;
     font-size: $font-size-h4;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
       font-size: 16px;
     }
@@ -141,7 +141,7 @@
   &__address {
     margin-bottom: 40px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       display: none;
     }
   }
@@ -168,7 +168,7 @@
 
   &__menu {
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       flex-direction: column;
 
       .col:not(:first-child) {
@@ -180,7 +180,7 @@
       margin-bottom: 20px;
       font-size: 16px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin-bottom: 10px;
         font-size: 14px;
       }
@@ -203,13 +203,13 @@
     opacity: .4;
 
     &--desc {
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         display: none;
       }
     }
 
     &--mobile {
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         flex-direction: column;
         padding-left: 10px;
         order: 1;
@@ -249,7 +249,7 @@
 
     color: $white-lighten;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       padding: 10px;
     }
 
@@ -260,7 +260,7 @@
     &:not(:last-child) {
       margin-right: 10px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         margin-right: 0;
         margin-bottom: 6px;
       }
@@ -337,7 +337,7 @@
 .footer-logo {
   width: calc(#{$col-part-d} * 6);
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     display: none;
   }
 }
@@ -346,12 +346,12 @@
   display: flex;
   width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
     width: 100%;
 
     .footer__download {
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         width: 100%;
       }
     }

@@ -5,7 +5,7 @@
 .about-title {
   margin-bottom: 40px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-bottom: 20px;
   }
 }
@@ -18,7 +18,7 @@
     border-bottom: 1px solid $green-extra-lighten;
     font-size: 16px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 12px;
     }
 
@@ -37,14 +37,14 @@
 
   padding-top: 80px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     padding-top: 40px;
   }
 
   .mission__slide {
     justify-content: space-between;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       flex-direction: column;
     }
   }
@@ -54,7 +54,7 @@
 
     flex: unset;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
   }
@@ -65,7 +65,7 @@
   }
 
   .mission__heading {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin: 28px auto 44px;
     }
   }
@@ -102,7 +102,7 @@
 
   margin: 60px 0;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     height: 150px;
     background-size: 150px;
     margin: 40px 0;
@@ -124,7 +124,7 @@
 .about-plan {
   margin-top: 160px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
   }
 }
@@ -138,7 +138,7 @@
 
   counter-reset: list1;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
     margin-top: 20px;
   }
@@ -150,7 +150,7 @@
 
     margin-bottom: 50px;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-bottom: 40px;
 
@@ -162,7 +162,7 @@
     p {
       font-size: 22px;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         font-size: 16px;
       }
     }
@@ -193,7 +193,7 @@
     line-height: 130%;
     color: $green;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 40px;
       height: 40px;
       font-size: 18px;
@@ -204,7 +204,7 @@
 .about-plan-rows {
   margin: 100px 0;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin: 40px 0;
   }
 }
@@ -214,7 +214,7 @@
   border-top: 1px solid $green-extra-lighten;
   padding: 20px 0 60px;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
     padding: 20px 0 40px;
 
@@ -226,7 +226,7 @@
   &__ttl {
     width: calc(#{$col-part-d} * 8);
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-bottom: 20px;
     }
@@ -234,7 +234,7 @@
   &__desc {
     width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
   }
@@ -243,7 +243,7 @@
 .about-block {
   display: flex;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column-reverse;
   }
 
@@ -254,7 +254,7 @@
 
     position: relative;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       text-align: right;
       padding-bottom: 40px;
@@ -264,7 +264,7 @@
       width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
       object-fit: cover;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         width: 85%;
       }
     }
@@ -279,7 +279,7 @@
       border-radius: 0px 0px 900px 900px;
       border: 1px solid $green-extra-lighten;
 
-      @media (max-width: $breakpoint - 1px) {
+      @media (max-width: ($breakpoint - 1px)) {
         right: 45px;
       }
     }
@@ -288,7 +288,7 @@
   &__desc {
     width: calc(#{$col-part-d} * 7);
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
   }
@@ -297,7 +297,7 @@
     margin-bottom: 60px;
     text-indent: calc(#{$col-part-d});
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 40px;
     }
 
@@ -315,7 +315,7 @@
     font-size: 22px;
     line-height: 130%;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       font-size: 16px;
     }
@@ -338,7 +338,7 @@
 
   transition: .5s;
 
-  @media (max-width: $breakpoint - 1px) {
+  @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
   }
 
@@ -357,7 +357,7 @@
     align-items: center;
     justify-content: center;
 
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       width: 50px;
       height: 50px;
 
