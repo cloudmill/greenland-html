@@ -1,5 +1,19 @@
 extends ../layouts/master.pug
 
 block content
-  .test 
-    |asd
+  .test
+  #conditions-container.conditions
+    - for (i = 0; i < 3; i++)
+      section.conditions__slider(class=`index${i}`)
+        img.conditions__slide-img(src=`assets/images/conditions-slider/conditions__slide-img-${i + 1}.jpg`, alt="")
+    .pagina
+      each item, i in ['дизайнерам', 'объектам', 'дистрибьютерам и оптовым покупателям']
+        .pagina__item 
+          .pagina__text 
+            |#{item}
+          .pagina__bot
+            .pagina__box(class=(i === 0 ? 'active' : ''))
+            - if (i !== 2)
+              .pagina__container
+                .pagina__line
+  .test

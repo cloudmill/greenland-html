@@ -75,6 +75,7 @@
     "parsleyjs": "^2.9.2",
     "rellax": "^1.12.1",
     "scrollmagic": "^2.0.8",
+    "scrollmagic-plugin-gsap": "^1.0.4",
     "select2": "^4.0.13",
     "swiper": "^6.6.1",
     "velocity-animate": "^1.5.2",
