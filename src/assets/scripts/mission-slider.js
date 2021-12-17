@@ -12,10 +12,7 @@ export default function initMissionSlider() {
 
   const missionSlider = new Swiper($missionSlider, {
     direction: 'vertical',
-    mousewheel: {
-      releaseOnEdges: true
-    },
-    touchReleaseOnEdges: true,
+    allowTouchMove: false,
     on: {
       init: function() {
         const length = this.slides.length;
@@ -35,11 +32,11 @@ export default function initMissionSlider() {
           <div class="mission__slider-counter-length">0${length}</div>
         `;
 
-        if (this.isBeginning || this.isEnd) {
-          this.params.mousewheel.releaseOnEdges = true;
-        } else {
-          this.params.mousewheel.releaseOnEdges = false;
-        }
+        // if (this.isBeginning || this.isEnd) {
+        //   this.params.mousewheel.releaseOnEdges = true;
+        // } else {
+        //   this.params.mousewheel.releaseOnEdges = false;
+        // }
       }
     },
     pagination: {
@@ -58,4 +55,5 @@ export default function initMissionSlider() {
 
   window.sliders.push(missionSlider);
 
+  
 }
