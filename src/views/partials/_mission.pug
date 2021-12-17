@@ -1,13 +1,14 @@
 section.section.mission(data-scroll-section="")
   .mission__slider.swiper-container(data-mission-slider="")
     .mission__slider-underlay
-      .mission__marquee.marquee3k
-        .mission__marquee-conten-wrap
-          .mission__marquee-content
-            .text__md.text--uppercase.mission__marquee-text творчество
-            .text__md.text--uppercase.mission__marquee-text созидание
-            .text__md.text--uppercase.mission__marquee-text greenland
-            .text__md.text--uppercase.mission__marquee-text красота
+      .mission__marquee
+        .mission__marquee-content-wrap
+          each item in ['starting', 'first-half', 'second-half', 'third-half']
+            .mission__marquee-content(class=item)
+              .text__md.text--uppercase.mission__marquee-text творчество
+              .text__md.text--uppercase.mission__marquee-text созидание
+              .text__md.text--uppercase.mission__marquee-text greenland
+              .text__md.text--uppercase.mission__marquee-text красота
 
 
     .swiper-wrapper

@@ -134,8 +134,33 @@
   &__marquee {
     margin-top: 40px;
 
-    &-content {
+    &-content-wrap {
+      position: relative;
+      z-index: 0;
       display: flex;
+    }
+
+    &-content {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      display: flex;
+
+      &.starting {
+        animation: tickerStart 21s 1 linear forwards;
+      }
+      &.first-half {
+        animation: 21s ticker infinite linear forwards;
+      }
+      &.second-half {
+        transform: translateX(100%);
+        animation: 21s ticker 7s infinite linear forwards;
+      }
+      &.third-half {
+        transform: translateX(100%);
+        animation: 21s ticker 14s infinite linear forwards;
+      }
     }
 
     &-text {
@@ -415,6 +440,29 @@
 
     text-transform: uppercase;
   }
+}
 
+// marquee keyframes
+@keyframes tickerStart {
+  0% {
+    transform: translateX(50%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-250%);
+  }
+}
 
+@keyframes ticker {
+  0% {
+    transform: translateX(150%);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
 }

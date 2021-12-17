@@ -4,7 +4,7 @@ Swiper.use([Navigation, Pagination, Mousewheel]);
 
 export default function initMissionSlider() {
 
-  Marquee3k.init();
+  // Marquee3k.init();
 
   const $missionSlider = document.querySelector('[data-mission-slider]');
   const $missionSliderBullets = $missionSlider.querySelector('[data-mission-slider-bullets]');
