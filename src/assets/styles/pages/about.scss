@@ -18,6 +18,13 @@
     border-bottom: 1px solid $green-extra-lighten;
     font-size: 16px;
     white-space: nowrap;
+    cursor: pointer;
+
+    transition: .5s;
+
+    &:hover {
+      border-color: $green;
+    }
 
     @media (max-width: ($breakpoint - 1px)) {
       font-size: 12px;
@@ -28,7 +35,7 @@
     }
 
     &--active {
-      border-bottom: 1px solid $green;
+      border-color: $green;
     }
   }
 }

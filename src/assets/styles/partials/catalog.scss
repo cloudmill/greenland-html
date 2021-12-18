@@ -41,6 +41,8 @@
     padding: 10px;
     position: relative;
 
+    line-height: 100%;
+
     @media (max-width: ($breakpoint - 1px)) {
       display: none;
     }

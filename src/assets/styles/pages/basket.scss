@@ -78,10 +78,6 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin: 40px -10px 0;
       padding: 13px 10px;
-
-      .btn {
-        width: 100%;
-      }
     }
 
     .basket-aside__row {
@@ -94,6 +90,10 @@
           font-size: 16px;
         }
       }
+    }
+
+    .btn {
+      width: 100%;
     }
   }
 }
@@ -113,14 +113,56 @@
 
   .designers-form__checkbox {
     margin-right: 20px;
+    margin-top: 0;
 
     @media (max-width: ($breakpoint - 1px)) {
       margin-right: 10px;
     }
   }
 
-  svg {
+  .basket-tooltip {
     margin-left: 5px;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+
+    .tooltip {
+      position: absolute;
+      top: -66px;
+      left: -90px;
+      width: 200px;
+      height: 61px;
+      padding: 8px 10px;
+      box-shadow: 0px 10px 30px rgba(43, 85, 55, 0.1);
+
+      font-size: 11px;
+      line-height: 140%;
+
+      opacity: 0;
+      pointer-events: none;
+      transition: .5s;
+    }
+
+    svg circle, svg path {
+      transition: .5s;
+    }
+
+    &:hover {
+      .tooltip {
+        opacity: 1;
+      }
+
+      svg {
+        circle {
+          fill: $green;
+        }
+        path {
+          fill: #fff;
+        }
+      }
+    }
   }
 
   &__price {
@@ -260,6 +302,19 @@
   }
 }
 
+.basket-table .favorites-table__row .favorites-table__col.basket-btn-row, .lk-order-list .favorites-table__row .favorites-table__col.basket-btn-row {
+  @media (max-width: ($breakpoint - 1px)) {
+    height: auto;
+    margin-bottom: 0;
+    position: relative;
+
+    .favorites-table__col-ttl {
+      position: absolute;
+      top: 0;
+    }
+  }
+}
+
 .basket-btn-minus {
   width: 27px;
   height: 27px;
@@ -321,6 +376,8 @@
   border-bottom: 1px solid $green-extra-lighten;
   border-left: 1px solid $green-extra-lighten;
 
+  transition: .5s;
+
   @media (max-width: ($breakpoint - 1px)) {
     width: 30px;
     height: 30px;
@@ -333,6 +390,8 @@
     height: 1px;
     background-color: $black;
 
+    transition: .5s;
+
     @media (max-width: ($breakpoint - 1px)) {
       width: 10px;
     }
@@ -342,5 +401,13 @@
   }
   &::after {
     transform: rotate(135deg);
+  }
+
+  &:hover {
+    background-color: $green;
+
+    &::before, &::after {
+      background-color: #fff;
+    }
   }
 }

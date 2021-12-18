@@ -72,6 +72,10 @@
   &__img {
     width: 100%;
     object-fit: cover;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 20px;
+    }
   }
 
   &__row {
@@ -123,6 +127,10 @@
       @media (max-width: ($breakpoint - 1px)) {
         font-size: 8px;
         padding: 4px 6px;
+
+        height: 17px;
+        display: flex;
+        align-items: center;
       }
     }
   }

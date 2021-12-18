@@ -44,8 +44,22 @@
   line-height: 16px;
   text-transform: uppercase;
 
+  transition: .5s;
+
   svg {
     margin-right: 10px;
+
+    path, circle {
+      transition: .5s;
+    }
+  }
+
+  &:hover {
+    color: $green;
+
+    svg path, svg circle {
+      stroke: $green;
+    }
   }
 }
 
@@ -60,6 +74,29 @@
   @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
     flex-direction: column;
+
+    &:first-child {
+      margin-top: 20px;
+    }
+  }
+
+  &__top {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .checkout-login {
+      margin: 0;
+      font-size: 14px;
+      svg {
+        width: 16px;
+        height: 18px;
+      }
+      @media (min-width: $breakpoint) {
+        display: none;
+      }
+    }
   }
 
   &__ttl {
@@ -74,9 +111,19 @@
     }
   }
 
-  &__input {
+  &__label {
+    margin-top: 25px;
     width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
-    margin-top: 40px;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    
     padding-bottom: 15px;
 
     font-size: 16px;
@@ -85,9 +132,9 @@
     border: none;
     border-bottom: 1px solid $green-extra-lighten;
 
+    transition: .5s;
+
     @media (max-width: ($breakpoint - 1px)) {
-      width: 100%;
-      margin-top: 20px;
       font-size: 14px;
       padding-bottom: 8px;
     }
@@ -95,13 +142,9 @@
     &::placeholder {
       opacity: 1;
     }
-  }
 
-  .about-tabs {
-    margin-top: 40px;
-
-    @media (max-width: ($breakpoint - 1px)) {
-      margin-top: 20px;
+    &.parsley-error {
+      border-bottom: 1px solid #FF0000;
     }
   }
 
@@ -151,17 +194,30 @@
     padding: 8px 15px 8px 8px;
     border-radius: 50px;
     border: 1px solid $green-extra-lighten;
+    white-space: nowrap;
 
     display: flex;
     align-items: center;
 
+    cursor: pointer;
+    transition: .5s;
+
     @media (max-width: ($breakpoint - 1px)) {
       padding: 5px 10px 5px 5px;
       font-size: 12px;
+      width: fit-content;
+    }
+
+    &:hover {
+      border-color: $green;
     }
 
     svg {
       margin-right: 10px;
+
+      circle: {
+        transition: .5s;
+      }
 
       @media (max-width: ($breakpoint - 1px)) {
         margin-right: 8px;
@@ -178,13 +234,99 @@
         margin-top: 10px;
       }
     }
+
+    &--active {
+      border-color: $green;
+
+      svg {
+        circle:nth-child(1) {
+          stroke: $green;
+        }
+        circle:nth-child(2) {
+          fill: $green;
+        }
+      } 
+    }
   }
 }
 
 .checkout-address {
-  &__pvz, &__courier, &__sklad {
+
+  &__filter {
+    margin-top: 40px;
+
+    .about-tabs__item {
+      svg {
+        display: none;
+      }
+    }
+
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-top: 20px;
+
+      flex-direction: column;
+
+      .about-tabs__item {
+        display: flex;
+        align-items: center;
+
+        width: fit-content;
+        border: 1px solid $green-extra-lighten;
+        border-radius: 50px;
+        padding: 5px 10px 5px 5px;
+
+        &:not(:first-child) {
+          margin-left: 0;
+          margin-top: 10px;
+        }
+
+        &--active {
+          border: 1px solid $green;
+
+          svg {
+            circle:nth-child(1) {
+              stroke: $green;
+            }
+            circle:nth-child(2) {
+              fill: $green;
+            }
+          }
+        }
+
+        svg {
+          display: block;
+          margin-right: 8px;
+          width: 18px;
+          height: 18px;
+
+          circle {
+            transition: .5s;
+          }
+        }
+      }
+    }
+  }
+
+  &__container {
+    display: grid;
+    grid-template-areas: 'z';
+  }
+
+  &__item {
     display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     margin: 35px 0 30px;
+
+    grid-area: z;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+
+    &--active {
+      opacity: 1;
+      pointer-events: all;
+    }
 
     @media (max-width: ($breakpoint - 1px)) {
       flex-direction: column;
@@ -215,6 +357,43 @@
 
     div:not(:last-child) {
       margin-bottom: 5px;
+    }
+
+    span {
+      display: block;
+    }
+
+    &-map {
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      transition: .5s;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        font-size: 12px;
+      }
+
+      svg {
+        margin-right: 12px;
+
+        path {
+          transition: .5s;
+        }
+      }
+
+      &:hover {
+        color: $green;
+
+        svg path {
+          stroke: $green;
+        }
+      }
     }
 
     &--big {
@@ -257,6 +436,7 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
       margin-bottom: 20px;
+      font-size: 12px;
     }
 
     &-value {

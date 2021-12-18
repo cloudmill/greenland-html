@@ -96,3 +96,62 @@ import LocomotiveScroll from 'locomotive-scroll';
     })
   })
 }
+
+// стили фокуса в инпутах корзины
+
+{
+  $(() => {
+    const label = $('.checkout-block__label');
+    const btn = $('.basket-aside__total').find('.btn');
+
+    $(window).on('click', event => {
+
+      if ($(event.target).closest(label).length) {
+        label.removeClass('input-focus');
+        $(event.target).closest(label).removeClass('error');
+        $(event.target).closest(label).addClass('input-focus placeholder-top');
+      } else {
+        label.removeClass('input-focus');
+      }
+
+      if ($(event.target).closest(btn).length) {
+
+        setTimeout(() => {
+          const error = $('.checkout-block').find('.parsley-error');
+
+          if (error.length) {
+            error.closest(label).addClass('error')
+          } else {
+            error.closest(label).removeClass('error')
+          }
+        }, 0);
+        
+      }
+    })
+  })
+}
+
+// переключение вариантов доставки в чекауте
+
+{
+  $(() => {
+    const filter = $(".checkout-address__filter");
+    const filterBtn = filter.find(".about-tabs__item");
+    const addressItem = $(".checkout-address__item");
+
+    if (filter.length) {
+      filter.on("click", (event) => {
+        if ($(event.target).closest(filterBtn).length) {
+          const activeBtn = $(event.target).closest(filterBtn);
+          const indexBtn = filterBtn.index(activeBtn);
+
+          filterBtn.removeClass("about-tabs__item--active");
+          addressItem.removeClass("checkout-address__item--active");
+
+          activeBtn.addClass("about-tabs__item--active");
+          $(addressItem[indexBtn]).addClass("checkout-address__item--active");
+        }
+      });
+    }
+  });
+}

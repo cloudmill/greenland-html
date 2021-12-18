@@ -63,16 +63,6 @@
 
     position: relative;
 
-    .placeholder-active {
-      font-size: 12px;
-      line-height: 160%;
-      color: $green;
-      opacity: 0;
-      padding-left: 3px;
-
-      transition: .5s;
-    }
-
     ul {
       margin-bottom: 0;
     }
@@ -233,6 +223,16 @@
   }
 }
 
+.placeholder-active {
+  font-size: 12px;
+  line-height: 160%;
+  color: $green;
+  opacity: 0;
+  padding-left: 3px;
+
+  transition: .5s;
+}
+
 .parsley-errors-list {
   font-size: 12px;
   line-height: 160%;
@@ -253,7 +253,12 @@
   .designers-form__input {
     border-bottom: 1px solid $green;
   }
+
+  .checkout-block__input {
+    border-bottom: 1px solid $green;
+  }
 }
+
 .placeholder-top {
   .placeholder-active {
     opacity: 1;

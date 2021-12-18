@@ -59,7 +59,7 @@ block content
                   .favorites-table__price-old 7 200 ₽
                   .favorites-table__price 5 292 ₽
 
-                .favorites-table__col
+                .favorites-table__col.basket-btn-row
                   .favorites-table__col-ttl количество
 
                   button.basket-btn-minus
@@ -69,12 +69,16 @@ block content
                 button.basket-item-delete
 
 
-          .basket-checkbox
+          label.basket-checkbox
             .designers-form__checkbox
               input(type="checkbox"  id="checkbox" checked="checked")
               .checkbox
             |Обрешечивание
-            +tooltipIco
+
+            .basket-tooltip
+              +tooltipIco
+              .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
+
             span.basket-checkbox__price ~2 500 ₽
 
           .basket-promocode

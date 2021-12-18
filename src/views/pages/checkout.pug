@@ -9,7 +9,7 @@ block content
     include ../partials/_header.pug
 
     .section.page-wrapper
-      .container.basket
+      form.container.basket(data-parsley-validate)
         .basket-main.checkout
           a.news-back-link(href="")
             +arrow('white', '#65BA7F', 'left', '15', '13', '46')
@@ -20,40 +20,70 @@ block content
           .checkout-left
 
             .checkout-block
-              .checkout-block__ttl контактные данные
+              .checkout-block__top
+                .checkout-block__ttl контактные данные
+                button.checkout-login
+                  +checkoutLogin
+                  |войти
 
-              input.checkout-block__input(type="text" placeholder="Имя*")
-              input.checkout-block__input(type="text" placeholder="Фамилия*")
-              input.checkout-block__input(type="text" placeholder="E-mail*")
-              input.checkout-block__input(type="text" placeholder="Номер телефона*")
+              label.checkout-block__label
+                .placeholder-active Имя*
+                input.checkout-block__input(type="text" placeholder="Имя*" required)
+              label.checkout-block__label
+                .placeholder-active Фамилия*
+                input.checkout-block__input(type="text" placeholder="Фамилия*" required)
+              label.checkout-block__label
+                .placeholder-active E-mail*
+                input.checkout-block__input(type="text" placeholder="E-mail*" required)
+              label.checkout-block__label
+                .placeholder-active Номер телефона*
+                input.checkout-block__input(type="text" placeholder="Номер телефона*" required)
 
             .checkout-block
               .checkout-block__ttl Способ доставки
 
-              .about-tabs
-                a.about-tabs__item.about-tabs__item--active(href="") Забрать из пункта выдачи
-                a.about-tabs__item(href="") Курьером до двери
-                a.about-tabs__item(href="") Самовывоз со склада
+              .about-tabs.checkout-address__filter
+                .about-tabs__item.about-tabs__item--active
+                  +checkoutPoint
+                  |Забрать из пункта выдачи
 
-              .checkout-address__pvz
-                .checkout-address__ttl выбранный адрес
-                .checkout-address__desc
-                  .checkout-address__desc--big ул. Красноармейская, 97
-                  div +7 (3435) 379-044
-                  .checkout-address__desc--small Вс 10:00-16:00, Сб 10:00-16:00, Пн-Пт 10:00-20:00
-                  .checkout-address__desc--small Напротив ТЦ Пирамида
-                  .checkout-address__desc--small Возможность примерки отсутствует
+                .about-tabs__item
+                  +checkoutPoint
+                  |Курьером до двери
+                
+                .about-tabs__item
+                  +checkoutPoint
+                  |Самовывоз со склада
 
-              .checkout-address__courier
-                .checkout-address__ttl выбранный адрес
-                .checkout-address__desc г. Москва, ул. Стачек, 34
+              .checkout-address__container
 
-              .checkout-address__sklad
-                .checkout-address__ttl адрес склада
-                .checkout-address__desc Санкт-Петербург, Московское шоссе, дом 25, к. 1, Бизнес-центр «Престиж», офис 248
+                .checkout-address__item.checkout-address__item--active
+                  .checkout-address__ttl выбранный адрес
+                  .checkout-address__desc
+                    .checkout-address__desc--big ул. Красноармейская, 97
+                    div +7 (3435) 379-044
+                    .checkout-address__desc--small Вс 10:00-16:00, Сб 10:00-16:00, Пн-Пт 10:00-20:00
+                    .checkout-address__desc--small Напротив ТЦ Пирамида
+                    .checkout-address__desc--small Возможность примерки отсутствует
 
+                  button.checkout-block__btn.btn-white Выбрать адрес на карте
 
-              button.checkout-block__btn Выбрать адрес на карте
+                .checkout-address__item
+                  .checkout-address__ttl выбранный адрес
+                  .checkout-address__desc г. Москва, ул. Стачек, 34
+
+                  button.checkout-block__btn.btn-white Выбрать адрес на карте
+
+                .checkout-address__item
+                  .checkout-address__ttl адрес склада
+                  .checkout-address__desc
+                    span Санкт-Петербург, Московское шоссе, дом 25, к. 1, Бизнес-центр «Престиж», офис 248
+                    .checkout-address__desc-map
+                      +addressIco
+                      |на карте
+
+                  button.checkout-block__btn.btn-white Выбрать адрес на карте
+
 
             .checkout-block
               .checkout-block__ttl Способ оплаты
@@ -61,11 +91,9 @@ block content
               .checkout-block__txt Для выбора способа оплаты укажите способ доставки
 
               .checkout-payment
-
-                .checkout-payment__item
+                .checkout-payment__item.checkout-payment__item--active
                   +checkoutPoint
                   |Оплатить картой онлайн
-
                 .checkout-payment__item
                   +checkoutPoint
                   |Банковским переводом по счету
@@ -106,7 +134,7 @@ block content
             .basket-aside__row
               .basket-aside__name Сумма заказа
               .basket-aside__value 135 292 ₽
-            button.btn перейти к оформлению заказа
+            button.btn(type="submit") перейти к оформлению заказа
 
 
     include ../partials/_footer.pug
