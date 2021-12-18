@@ -3,9 +3,7 @@
 // Styles
 import 'Styles/_app.scss';
 
-
 import FullPage from './assets/scripts/fullpage';
-
 
 import './assets/scripts/modals';
 

@@ -76,19 +76,35 @@
   }
   &__buttons {
     display: flex;
+
     &-item {
       width: 45px;
       height: 45px;
       border-radius: 50%;
-      background-color: #fff;
+      background-color: transparent;
       border: 1px solid $green-extra-lighten;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
+      transition: .5s;
+
+      svg line, svg path {
+        transition: .5s;
+      }
+
       &:not(:first-child) {
         margin-left: 5px;
+      }
+
+      &:hover {
+        background-color: $green;
+        border-color: $green;
+
+        svg line, svg path {
+          stroke: #fff;
+        }
       }
     }
   }
@@ -109,7 +125,7 @@
         width: 28px;
         height: 28px;
 
-        img{
+        svg {
           width: 16px;
         }
       }

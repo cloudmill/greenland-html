@@ -209,24 +209,12 @@ block content
 
         .designers-form.about-mission
           h2.designers-form__title.title-h2 Оставить заявку на абонемент
-          .mission__slide
+          .designers-form__row
             .mission__main
               .mission__slider-underlay
               .designers-form__container
-                form.designers-form__form
-                  label.designers-form__label
-                    input.designers-form__input(placeholder="Имя")
-                  label.designers-form__label
-                    input.designers-form__input(placeholder="E-mail")
-                  label.designers-form__label
-                    input.designers-form__input(placeholder="Телефон")
-                  label.designers-form__checkbox
-                    input(type="checkbox"  id="checkbox")
-                    .checkbox
-                    .designers-form__checkbox-txt Я соглашаюсь на обработку
-                      br
-                      a(href="") персональных данных
-                  button.btn.cover__btn(type="submit") отправить
+                
+                include ../partials/form-designer
             .about-mission__img.designers-form__imgs
               img(src="assets/images/designer-form-1.jpg", alt="")
               img(src="assets/images/designer-form-2.jpg", alt="")

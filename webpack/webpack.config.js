@@ -185,7 +185,7 @@ module.exports = env => {
 						['gifsicle', {interlaced: true}],
 						// ['jpegtran', {progressive: true}],
 						['optipng', {optimizationLevel: 5}],
-						['mozjpeg', { quality: 60 }, {progressive: true}],
+						['mozjpeg', { quality: 80 }, {progressive: true}],
 						[
 							'svgo',
 							{

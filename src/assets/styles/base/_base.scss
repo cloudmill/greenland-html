@@ -148,15 +148,3 @@ button {
     padding: 140px 0 160px 80px;
   }
 }
-
-.only-mobile {
-  @media (min-width: $breakpoint) {
-    display: none;
-  }
-}
-
-.only-desktop {
-  @media (max-width: ($breakpoint - 1px)) {
-    display: none;
-  }
-}

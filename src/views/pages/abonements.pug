@@ -23,9 +23,10 @@ block content
 
           +footerDownload('презентация компании', 'pdf, 12 мб')
 
-          img.lanscaping-first-screen__background(src="assets/images/abonements-main.jpg", alt="")
+          img.lanscaping-first-screen__background.only-desktop(src="assets/images/abonements-main.jpg", alt="")
+          img.lanscaping-first-screen__background.only-mobile(src="assets/images/abonements-main-mob.jpg", alt="")
 
-        .lanscaping-solutions-txt.title-h3.only-desktop
+        .lanscaping-solutions-txt.abonements-highlights.title-h3.only-desktop
           |Доверьте заботу о своих зелёных питомцах 
           br
           span.highlight-1 профессионалам
@@ -38,7 +39,7 @@ block content
           br
           span.accent красотой долгие годы.
 
-        .lanscaping-solutions-txt.title-h3.only-mobile
+        .lanscaping-solutions-txt.abonements-highlights.title-h3.only-mobile
           |Доверьте заботу о своих 
           br
           |зелёных питомцах 
@@ -110,7 +111,7 @@ block content
               .designers-form__container
                 
                 include ../partials/form-designer
-                
+
             .about-mission__img.designers-form__imgs
               img(src="assets/images/designer-form-1.jpg", alt="")
               img(src="assets/images/designer-form-2.jpg", alt="")

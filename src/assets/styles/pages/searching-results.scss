@@ -91,9 +91,17 @@
   margin: 40px 0;
   overflow-x: scroll;
 
+  @include scrollbar-hidden();
+
   &--second {
     @media (max-width: ($breakpoint - 1px)) {
       display: none;
+    }
+  }
+
+  &--mobile {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-right: -10px;
     }
   }
 

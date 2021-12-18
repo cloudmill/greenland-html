@@ -17,6 +17,7 @@
     padding-bottom: 10px;
     border-bottom: 1px solid $green-extra-lighten;
     font-size: 16px;
+    white-space: nowrap;
 
     @media (max-width: ($breakpoint - 1px)) {
       font-size: 12px;

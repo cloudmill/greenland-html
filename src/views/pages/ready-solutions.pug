@@ -23,9 +23,10 @@ block content
 
           +footerDownload('презентация компании', 'pdf, 12 мб')
 
-          img.lanscaping-first-screen__background(src="assets/images/ready-solutions-1.jpg", alt="")
+          img.lanscaping-first-screen__background.only-desktop(src="assets/images/ready-solutions-main.jpg", alt="")
+          img.lanscaping-first-screen__background.only-mobile(src="assets/images/ready-solutions-main-mob.jpg", alt="")
 
-        .lanscaping-solutions-txt.title-h3
+        .lanscaping-solutions-txt.solutions-highlights.title-h3.only-desktop
           |Мы выбрали для Вас растения 
           span.highlight-1 на все случаи жизни 
           |в
@@ -40,7 +41,30 @@ block content
           br
           |композицию.
 
-        .results-row
+        .lanscaping-solutions-txt.solutions-highlights.title-h3.only-mobile
+          |Мы выбрали для Вас
+          br
+          |растения 
+          span.highlight-1 на все случаи жизни 
+          |в
+          br
+          |самых популярных и красивых 
+          br
+          |дизайнерских кашпо. Вам
+          br
+          |остается только 
+          span.highlight-2 выбрать 
+          br
+          span.highlight-3 понравившийся вариант,
+          |&nbsp;а мы
+          br
+          |доставим Вам готовую, 
+          br
+          |бережно пересаженную
+          br
+          |композицию.
+
+        .results-row.results-row--mobile
           - for (i=0; i<5; i++)
             .catalog-card
               .catalog-card__labels
@@ -116,24 +140,13 @@ block content
           h2.designers-form__title.title-h2 Оставить заявку на подбор композиции
             br
             |для вашего проекта
-          .mission__slide
+          .designers-form__row
             .mission__main
               .mission__slider-underlay
               .designers-form__container
-                form.designers-form__form
-                  label.designers-form__label
-                    input.designers-form__input(placeholder="Имя")
-                  label.designers-form__label
-                    input.designers-form__input(placeholder="E-mail")
-                  label.designers-form__label
-                    input.designers-form__input(placeholder="Телефон")
-                  label.designers-form__checkbox
-                    input(type="checkbox"  id="checkbox")
-                    .checkbox
-                    .designers-form__checkbox-txt Я соглашаюсь на обработку
-                      br
-                      a(href="") персональных данных
-                  button.btn.cover__btn(type="submit") отправить
+                
+                include ../partials/form-designer
+
             .about-mission__img.designers-form__imgs
               img(src="assets/images/designer-form-1.jpg", alt="")
               img(src="assets/images/designer-form-2.jpg", alt="")

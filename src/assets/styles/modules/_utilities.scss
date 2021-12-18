@@ -72,3 +72,33 @@ button.close {
 .text-hide {
   @include text-hide;
 }
+
+.only-mobile {
+  @media (min-width: $breakpoint) {
+    display: none;
+  }
+}
+
+.only-desktop {
+  @media (max-width: ($breakpoint - 1px)) {
+    display: none;
+  }
+}
+
+.mt40 {
+  margin-top: 40px;
+}
+
+.pb60-desk {
+  @media (min-width: $breakpoint) {
+    padding-bottom: 60px;
+  }
+}
+
+.fw600 {
+  font-weight: 600;
+}
+
+.fz22 {
+  font-size: 22px;
+}

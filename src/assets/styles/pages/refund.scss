@@ -47,8 +47,9 @@
   }
 }
 
-.refund-block-ttl {
+.payment-block__item.refund-block-ttl {
   font-size: 24px;
+  line-height: 130%;
   text-transform: uppercase;
   margin-right: calc(#{$col-part-d} + #{$col-gap-d});
 
@@ -73,9 +74,8 @@
   }
 }
 
-.fw600 {
-  font-weight: 600;
-}
-.fz22 {
-  font-size: 22px;
+.payment-block__ttl.pb60-desk {
+  @media (min-width: $breakpoint) {
+    padding-bottom: 60px;
+  }
 }

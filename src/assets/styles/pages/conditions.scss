@@ -347,6 +347,15 @@
 .designers-products__catalog {
   display: flex;
 }
+.you-watched {
+  .designers-products__catalog {
+    margin-right: -40px;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-right: -10px;
+    }
+  }
+}
 
 .designers-block {
   margin-top: 70px;
