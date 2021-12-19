@@ -16,18 +16,45 @@ block content
 
         .product-card-top
           .product-card-gallery
-            .product-card-gallery__column
-              .product-card-gallery__item
-                img(src="assets/images/catalog-1.png", alt="")
-              .product-card-gallery__item
-                img(src="assets/images/catalog-1.png", alt="")
-              .product-card-gallery__item
-                img(src="assets/images/catalog-1.png", alt="")
-              .product-card-gallery__item
-                img(src="assets/images/catalog-1.png", alt="")
+            .product-card-gallery__column.swiper-container
 
-            .product-card-gallery__main
-              img(src="assets/images/catalog-1.png", alt="")
+              button.swiper-button-prev
+                +arrowSpoiler
+
+              .swiper-wrapper
+
+                .swiper-slide.product-card-gallery__item
+                  img(src="assets/images/catalog-1.png", alt="")
+
+                .swiper-slide.product-card-gallery__item
+                  img(src="assets/images/catalog-1.png", alt="")
+
+                .swiper-slide.product-card-gallery__item
+                  img(src="assets/images/catalog-1.png", alt="")
+
+                .swiper-slide.product-card-gallery__item
+                  img(src="assets/images/catalog-1.png", alt="")
+
+              button.swiper-button-next
+                +arrowSpoiler
+
+            .product-card-gallery__main.swiper-container
+
+              .catalog-card__buttons
+                button.catalog-card__buttons-item
+                  +cardSettingsBtn
+                button.catalog-card__buttons-item
+                  +cardFavoriteBtn
+
+              .swiper-wrapper
+                .swiper-slide
+                  img(src="assets/images/catalog-1.png", alt="")
+                .swiper-slide
+                  img(src="assets/images/catalog-1.png", alt="")
+                .swiper-slide
+                  img(src="assets/images/catalog-1.png", alt="")
+                .swiper-slide
+                  img(src="assets/images/catalog-1.png", alt="")
 
           .product-card-info
 
@@ -44,23 +71,49 @@ block content
 
               .product-card-info__item
                 span бренд
-                span Pottery Pots
+                span
+                  |Pottery Pots
+                  .basket-tooltip
+                    +tooltipIco
+                    .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
 
               .product-card-info__item
                 span материалы
-                span Файбергласс
+                span
+                  |Файбергласс
+                  .basket-tooltip
+                    +tooltipIco
+                    .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
 
               .product-card-info__item
                 span Страна
-                span Нидерланды
+                span
+                  |Нидерланды
+                  .basket-tooltip
+                    +tooltipIco
+                    .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
 
               .product-card-info__item
                 span серия
-                span Hi-Tech
+                span
+                  |Hi-Tech
+                  .basket-tooltip
+                    +tooltipIco
+                    .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
 
               .product-card-info__item
                 span Крепление
-                span Напольное
+                span
+                  |Напольное
+                  .basket-tooltip
+                    +tooltipIco
+                    .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
+
+                span
+                  |Универсальное
+                  .basket-tooltip
+                    +tooltipIco
+                    .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
 
             .product-card-info__row2
               .product-card-info__col
@@ -88,10 +141,19 @@ block content
               .product-card-info__item Визуальная размерность
 
             .product-card-buttons
-              button.btn-white купить в 1 клик
-              button.btn
-                +basketIco
-                |в корзину
+
+              .product-card-buttons__container
+                button.btn-white купить в 1 клик
+                button.btn
+                  +basketIco
+                  |в корзину
+
+              .catalog-card__buttons
+                button.catalog-card__buttons-item
+                  +cardSettingsBtn
+                button.catalog-card__buttons-item
+                  +cardFavoriteBtn
+              
 
         .product-card-body
 
@@ -131,7 +193,9 @@ block content
                     .product-size-col 30
                     .product-size-col 2
                     .product-size-col В наличии
-                    .product-size-price 5 292 ₽
+                    .product-size-price
+                      .favorites-table__price-old 7 200 ₽
+                      .favorites-table__price 5 292 ₽
                     .product-size-button
                       button.btn
                         +basketIco
@@ -162,9 +226,9 @@ block content
                               .catalog-card__pagination-item
                             .catalog-card__buttons
                               button.catalog-card__buttons-item
-                                img(src="assets/images/catalog-buttons-1.svg", alt="")
+                                +cardSettingsBtn
                               button.catalog-card__buttons-item
-                                img(src="assets/images/catalog-buttons-2.svg", alt="")
+                                +cardFavoriteBtn
                           img.catalog-card__main-img(src=`assets/images/catalog-${i + 1}.png`, alt="")
                         a.catalog-card__bottom(href="")
                           .catalog-card__ttl Высокое напольное кашпо MUSCHEL
@@ -172,9 +236,9 @@ block content
                           .catalog-card__price 5 292 ₽
                           .catalog-card__buttons
                             button.catalog-card__buttons-item
-                              img(src="assets/images/catalog-buttons-1.svg", alt="")
+                              +cardSettingsBtn
                             button.catalog-card__buttons-item
-                              img(src="assets/images/catalog-buttons-2.svg", alt="")
+                              +cardFavoriteBtn
 
             .product-card-desc
               h3.title-h3 Описание
@@ -194,18 +258,16 @@ block content
 
               .product-desc-controls(data-product-desc-controls="")
                   .projects-controls-container
-                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-product-desc-prev="")
                   .projects-controls-container
-                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-product-desc-next="")
 
-              .product-desc-slider
-
-                .swiper-container(data-product-desc-slider="")
-                  .swiper-wrapper
-                    .swiper-slide
-                      img(src="assets/images/product-card-1.jpg", alt="")
-                    .swiper-slide
-                      img(src="assets/images/product-card-2.jpg", alt="")
+              .product-desc-slider.swiper-container(data-product-desc-slider="")
+                .swiper-wrapper
+                  .swiper-slide
+                    img(src="assets/images/product-card-1.jpg", alt="")
+                  .swiper-slide
+                    img(src="assets/images/product-card-2.jpg", alt="")
 
 
             .designers-showrooms.product-projects
@@ -219,9 +281,9 @@ block content
 
                 .projects__slider-controls(data-product-projects-controls="")
                   .projects-controls-container
-                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-product-projects-prev="")
                   .projects-controls-container
-                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-product-projects-next="")
 
               
 
@@ -287,7 +349,7 @@ block content
                 
 
 
-            .designers-contacts
+            .designers-contacts.product-card-contacts
               .designers-contacts__top
                 h3.designers-contacts__title.title-h3 Задать Вопрос
 
@@ -296,11 +358,11 @@ block content
                   .designers-contacts__img
                     img(src="assets/images/designer-contacts-1.png", alt="")
                   .designers-contacts__desc
-                    h4.designers-contacts__name Гвоздякова Алена
-                    .designers-contacts__position Менеджер по работе с дизайнерами
+                    h4.designers-contacts__name Стасенко Виктор
+                    .designers-contacts__position Специалист по работе с розничными покупателями
                     .designers-contacts__contacts
-                      span.designers-contacts__tel 8 911 924-50-84
-                      span sv@green-land.ru
+                      span.designers-contacts__tel 8 812 209-18-84
+                      span ga@green-land.ru
 
                     .contacts-btn.btn-white
                       |обратная связь
@@ -324,7 +386,7 @@ block content
                       a.footer__socials-link(href="")
                         +houzzIcon
 
-        include ../partials/you-watched.pug
+        include ../partials/you-watched
 
 
     include ../partials/_footer.pug

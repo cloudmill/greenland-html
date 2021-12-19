@@ -19,8 +19,8 @@ export default function productProjects() {
     },
 
     navigation: {
-      prevEl: $productProjects.querySelector('[data-projects-slider-prev]'),
-      nextEl: $productProjects.querySelector('[data-projects-slider-next]')
+      prevEl: $productProjectsControls.querySelector('[data-product-projects-prev]'),
+      nextEl: $productProjectsControls.querySelector('[data-product-projects-next]')
     }
   });
 

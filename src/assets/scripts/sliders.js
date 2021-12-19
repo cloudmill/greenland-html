@@ -5,12 +5,16 @@ import initProjectsSlider from './projects-slider';
 import initFadeSliders from './fade-slider';
 import initBrandsSlider from './brands-slider';
 import initCatalogSlider from './catalog-slider';
+import watchedSlider from './you-watched-slider';
 import initBrandsLogosSlider from './brands-logos-slider';
 import initOtherSlider from './other-news-slider';
 import productProjects from './product-projects-slider';
 import productDesc from './product-desc-slider';
 import coverModal from './cover-modal-slider';
-import abonementsSlider from './abonements-slider';
+import './abonements-slider';
+import './product-gallery-slider';
+
+
 
 import Swiper, {Navigation, Pagination, Mousewheel} from 'swiper';
 Swiper.use([Navigation, Pagination, Mousewheel]);
@@ -42,9 +46,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	try {
 		initBrandsSlider();
 	} catch {}
-
+	
 	try {
 		initCatalogSlider();
+	} catch {}
+
+	try {
+		watchedSlider();
 	} catch {}
 
 	try {

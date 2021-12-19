@@ -582,7 +582,7 @@
   border: 1px solid $green-extra-lighten;
   width: calc(#{$col-part-d} * 7 - #{$col-width-d});
   height: 554px;
-  overflow: hidden;
+  // overflow: hidden;
 
   @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
@@ -591,40 +591,71 @@
 
   &__column {
     border-right: 1px solid $green-extra-lighten;
-    overflow: scroll;
+    // overflow: scroll;
     width: 130px;
+    padding: 50px 0;
 
     @media (max-width: ($breakpoint - 1px)) {
+      padding: 0;
       width: 55px;
+    }
+
+    .swiper-button-prev {
+      width: 100%;
+      height: 50px;
+      border-bottom: 1px solid $green-extra-lighten;
+      background-color: #fff;
+
+      position: absolute;
+      top: 0;
+      z-index: 10;
+
+      svg {
+        transform: rotate(180deg);
+      }
+
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
+    }
+
+    .swiper-button-next {
+      width: 100%;
+      height: 51px;
+      border-top: 1px solid $green-extra-lighten;
+      background-color: #fff;
+
+      position: absolute;
+      bottom: 0;
+      z-index: 10;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
     }
   }
 
   &__item {
-    height: 152px;
-    width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 1px solid $green-extra-lighten;
 
     @media (max-width: ($breakpoint - 1px)) {
       height: 65px;
-    }
-
-    &:not(:last-child) {
-      border-bottom: 1px solid $green-extra-lighten;
     }
 
     img {
       width: 100%;
       object-fit: cover;
     }
+
+    &.swiper-slide-active {
+      border: 1px solid $green;
+    }
   }
 
   &__main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
 
     img {
@@ -633,6 +664,17 @@
 
       @media (min-width: $breakpoint) {
         width: 100%;
+      }
+    }
+
+    .catalog-card__buttons {
+      position: absolute;
+      z-index: 10;
+      top: 24px;
+      right: 20px;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
       }
     }
   }
@@ -689,10 +731,17 @@
       text-transform: uppercase;
       font-size: 12px;
     }
-    span:nth-child(2) {
+    span:nth-child(2), span:nth-child(3) {
       font-size: 14px;
       line-height: 130%;
       font-weight: 600;
+
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-left: 5px;
+      }
     }
   }
 }
@@ -830,24 +879,73 @@
 
   @media (max-width: ($breakpoint - 1px)) {
     order: -1;
-    flex-direction: column;
     margin: 20px 0;
+    // flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__container {
+    display: flex;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      flex-direction: column;
+      width: 210px;
+    }
   }
 
   .btn-white {
     margin-right: $col-gap-d;
+    white-space: nowrap;
+    width: 172px;
 
     @media (max-width: ($breakpoint - 1px)) {
       margin: 10px 0 0 0;
       order: 2;
+
+      width: 100%;
+      height: 40px;
     }
   }
 
   .btn {
     padding: 13px 25px;
+    white-space: nowrap;
+    width: 268px;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+      height: 40px;
+    }
 
     svg {
       margin-right: 20px;
+    }
+  }
+
+  .catalog-card__buttons {
+    order: 1;
+    flex-direction: row-reverse;
+
+    &-item {
+      width: 40px;
+      height: 40px;
+
+      &:nth-child(1) {
+        margin-left: 5px;
+        svg {
+          width: 23px;
+          height: 22px;
+        }
+      }
+        
+      &:nth-child(2) svg {
+        width: 23px;
+        height: 20px;
+      }
+    }
+
+    @media (min-width: $breakpoint) {
+      display: none;
     }
   }
 }
@@ -947,7 +1045,8 @@
     width: calc(#{$col-part-d});
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 
     @media (max-width: ($breakpoint - 1px)) {
       width: 33%;
@@ -969,9 +1068,12 @@
 
     .btn {
       padding: 13px 25px;
+      width: 100%;
+      white-space: nowrap;
   
       svg {
         margin-right: 20px;
+        flex: none;
       }
     }
   }
@@ -982,6 +1084,14 @@
 
   @media (max-width: ($breakpoint - 1px)) {
     margin-bottom: 40px;
+  }
+
+  .designers-products__catalog {
+    margin-right: -10px;
+
+    @media (min-width: $breakpoint) {
+      margin-right: -40px;
+    }
   }
 }
 
@@ -996,6 +1106,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
     }
+  }
+
+  .designers-contacts__row {
+    justify-content: space-between;
   }
 }
 
@@ -1078,11 +1192,11 @@
 }
 
 .product-desc-slider {
-  position: relative;
-  // margin-top: 10px;
+  margin-right: -40px;
 
   @media (max-width: ($breakpoint - 1px)) {
     margin-top: 30px;
+    margin-right: -10px;
   }
 
   .swiper-slide {
@@ -1094,6 +1208,7 @@
 
     img {
       width: 100%;
+      height: 100%;
       object-fit: cover;
     }
   }
@@ -1112,6 +1227,12 @@
 
   .projects-controls-container:last-child {
     margin-left: 10px;
+  }
+}
+
+.product-card-contacts {
+  .designers-contacts__row {
+    justify-content: space-between;
   }
 }
 

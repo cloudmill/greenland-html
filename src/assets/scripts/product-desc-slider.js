@@ -20,8 +20,8 @@ export default function productDesc() {
     },
 
     navigation: {
-      prevEl: $productDescControls.querySelector('[data-projects-slider-prev]'),
-      nextEl: $productDescControls.querySelector('[data-projects-slider-next]')
+      prevEl: $productDescControls.querySelector('[data-product-desc-prev]'),
+      nextEl: $productDescControls.querySelector('[data-product-desc-next]')
     }
   });
 

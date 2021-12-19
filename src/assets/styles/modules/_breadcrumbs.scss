@@ -4,11 +4,15 @@
 
 .breadcrumbs {
   display: flex;
-
   margin-bottom: 80px;
 
   @media (max-width: ($breakpoint - 1px)) {
-    margin-bottom: 20px;
+    margin: 0 -10px 20px;
+    padding: 0 10px;
+    overflow-x: scroll;
+    white-space: nowrap;
+
+    @include scrollbar-hidden;
   }
 
   &__item {

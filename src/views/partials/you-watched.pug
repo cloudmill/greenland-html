@@ -2,12 +2,12 @@
   .designers-products__top
     h2.title-h2
       |Вы смотрели 
-    .designers-products__controls(data-catalog-slider-controls="")
+    .designers-products__controls(data-watched-controls="")
       .arrows.cover__slider-arrows
-        +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-catalog-slider-prev="")
-        +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-catalog-slider-next="")
+        +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-watched-prev="")
+        +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-watched-next="")
   .designers-products__catalog
-    .swiper-container(data-catalog-slider="")
+    .swiper-container(data-watched-slider="")
       .swiper-wrapper
         - for (i=0; i<5; i++)
           .catalog-card.swiper-slide

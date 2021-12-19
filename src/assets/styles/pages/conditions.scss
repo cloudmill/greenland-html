@@ -482,10 +482,16 @@
     }
   }
   &__img {
-    width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+    width: calc(#{$col-part-d} * 2);
+    margin-right: calc(#{$col-width-d});
 
     @media (max-width: ($breakpoint - 1px)) {
-      width: auto;
+      width: calc(#{$col-part-m} * 2 + (#{$col-width-m} / 2));
+    }
+
+    img {
+      width: 100%;
+      border-radius: 0px 20px;
     }
   }
   &__desc {

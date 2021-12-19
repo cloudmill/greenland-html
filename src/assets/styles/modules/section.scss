@@ -33,7 +33,7 @@
   align-content: space-between;
   flex-wrap: wrap;
 
-  width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
+  width: calc(#{$col-part-d} * 5);
 
   @media (max-width: ($breakpoint - 1px)) {
     width: 100%;

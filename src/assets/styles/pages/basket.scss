@@ -120,51 +120,6 @@
     }
   }
 
-  .basket-tooltip {
-    margin-left: 5px;
-    position: relative;
-    display: flex;
-    align-items: center;
-
-    cursor: pointer;
-
-    .tooltip {
-      position: absolute;
-      top: -66px;
-      left: -90px;
-      width: 200px;
-      height: 61px;
-      padding: 8px 10px;
-      box-shadow: 0px 10px 30px rgba(43, 85, 55, 0.1);
-
-      font-size: 11px;
-      line-height: 140%;
-
-      opacity: 0;
-      pointer-events: none;
-      transition: .5s;
-    }
-
-    svg circle, svg path {
-      transition: .5s;
-    }
-
-    &:hover {
-      .tooltip {
-        opacity: 1;
-      }
-
-      svg {
-        circle {
-          fill: $green;
-        }
-        path {
-          fill: #fff;
-        }
-      }
-    }
-  }
-
   &__price {
     margin-left: 10px;
     font-weight: 600;
@@ -172,6 +127,54 @@
 
     @media (max-width: ($breakpoint - 1px)) {
       margin: 0 0 0 auto;
+    }
+  }
+}
+
+.basket-tooltip {
+  margin-left: 5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  .tooltip {
+    position: absolute;
+    bottom: 25px;
+    left: -90px;
+    max-width: 200px;
+    width: max-content;
+    height: auto;
+    padding: 8px 10px;
+    background: #fff;
+    box-shadow: 0px 10px 30px rgba(43, 85, 55, 0.1);
+
+    font-size: 11px;
+    line-height: 140%;
+    font-weight: 400;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+  }
+
+  svg circle, svg path {
+    transition: .5s;
+  }
+
+  &:hover {
+    .tooltip {
+      opacity: 1;
+    }
+
+    svg {
+      circle {
+        fill: $green;
+      }
+      path {
+        fill: #fff;
+      }
     }
   }
 }
