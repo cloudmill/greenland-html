@@ -4,6 +4,9 @@
 // Easing
 
 // $transition
+$transition-duration: 0.5s;
+$transition-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+$transition: $transition-duration $transition-timing-function;
 
 // breakpoints
 $breakpoint-m: 768px;
