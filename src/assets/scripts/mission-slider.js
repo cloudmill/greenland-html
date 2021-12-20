@@ -1,4 +1,3 @@
-import Marquee3k from 'marquee3000';
 import Swiper, {Navigation, Pagination, Mousewheel} from 'swiper';
 Swiper.use([Navigation, Pagination, Mousewheel]);
 import {mediaQuery} from './mediaQueries'
@@ -30,8 +29,6 @@ export default function initMissionSlider() {
       speed: 750,
     }
   }
-
-  Marquee3k.init();
 
   const $missionSlider = document.querySelector('[data-mission-slider]');
   const $missionSliderBullets = $missionSlider.querySelector('[data-mission-slider-bullets]');
