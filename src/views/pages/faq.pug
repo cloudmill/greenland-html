@@ -4,7 +4,7 @@ block content
 
   include ../partials/_aside.pug
 
-  .main__wrap(data-scroll-container="")
+  .main__wrap.main__wrap--visible(data-scroll-container="")
 
     include ../partials/_header.pug
 
@@ -81,7 +81,7 @@ block content
               .spoiler__dropdown
                 .spoiler__dropdown-inner
                   p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, corrupti? Aut rerum nam dolorum aliquid at corrupti expedita deleniti tempore error veniam, quo quia cum voluptatem libero dolorem unde aperiam.
-
-          button.btn.faq-ask задать вопрос
+          .faq-col
+            button.btn.faq-ask задать вопрос
 
     include ../partials/_footer.pug

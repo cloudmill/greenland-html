@@ -4,7 +4,7 @@ block content
 
   include ../partials/_aside.pug
 
-  .main__wrap(data-scroll-container="")
+  .main__wrap.main__wrap--visible(data-scroll-container="")
 
     include ../partials/_header.pug
 
@@ -13,44 +13,45 @@ block content
         +breadcrumbs(['Новости', 'Приехали и едут: редкие товары на складе'])
 
         .news-cols
-          .news-col-links
-            a.news-back-link(href="")
-              +arrow('white', '#65BA7F', 'left', '15', '13', '46')
-              |Все новости
+          .news-col-links.news-col-links--short
+            .news-col-links__container
+              a.news-back-link(href="")
+                +arrow('white', '#65BA7F', 'left', '15', '13', '46')
+                |Все новости
 
-            .news-social
-              .news-social__title
-                span Следите 
-                |за нами
-              ul.news-social__list
-                -
-                  var items = [
-                    'facebook',
-                    'instagram',
-                    'pinterest',
-                    'houzz',
-                    'наш блог',
-                  ]
-                each item in items
-                  li
-                    a(href="") #{item}
+              .news-social
+                .news-social__title
+                  span Следите 
+                  |за нами
+                ul.news-social__list
+                  -
+                    var items = [
+                      'facebook',
+                      'instagram',
+                      'pinterest',
+                      'houzz',
+                      'наш блог',
+                    ]
+                  each item in items
+                    li
+                      a(href="") #{item}
 
-            .news-subscribe
-              .news-social__title
-                span Подпишитесь 
-                |на нашу
-                br
-                |рассылку
-              form.designers-form__form
-                label.designers-form__label
-                  input.designers-form__input(placeholder="E-mail")
-                label.designers-form__checkbox
-                  input(type="checkbox"  id="checkbox")
-                  .checkbox
-                  .designers-form__checkbox-txt Я соглашаюсь на обработку
-                    br
-                    a(href="") персональных данных
-                button.btn.cover__btn(type="submit") отправить
+              .news-subscribe
+                .news-social__title
+                  span Подпишитесь 
+                  |на нашу
+                  br
+                  |рассылку
+                form.designers-form__form
+                  label.designers-form__label
+                    input.designers-form__input(placeholder="E-mail")
+                  label.designers-form__checkbox
+                    input(type="checkbox"  id="checkbox")
+                    .checkbox
+                    .designers-form__checkbox-txt Я соглашаюсь на обработку
+                      br
+                      a(href="") персональных данных
+                  button.btn.cover__btn(type="submit") отправить
 
           .news-single-main
             h1.about-title.title-h1 Приехали и едут: редкие товары на складе

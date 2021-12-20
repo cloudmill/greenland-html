@@ -4,7 +4,7 @@ block content
 
   include ../partials/_aside.pug
 
-  .main__wrap(data-scroll-container="")
+  .main__wrap.main__wrap--visible(data-scroll-container="")
 
     include ../partials/_header.pug
 
@@ -94,35 +94,35 @@ block content
           
 
         .basket-aside
+          .basket-aside__container
+            .basket-aside__ttl ваш заказ
 
-          .basket-aside__ttl ваш заказ
+            .basket-aside__table
+              .basket-aside__row
+                .basket-aside__name Общий вес
+                .basket-aside__value 10 кг
 
-          .basket-aside__table
+              .basket-aside__row
+                .basket-aside__name Количество товаров
+                .basket-aside__value 6 шт
+
+              .basket-aside__row
+                .basket-aside__name Обрешечивание
+                .basket-aside__value 2 500 ₽
+
+              .basket-aside__row
+                .basket-aside__name Стоимость доставки
+                .basket-aside__value 5 292 ₽
+
             .basket-aside__row
-              .basket-aside__name Общий вес
-              .basket-aside__value 10 кг
+              .basket-aside__name Сумма без скидки
+              .basket-aside__value 7 892 ₽
 
-            .basket-aside__row
-              .basket-aside__name Количество товаров
-              .basket-aside__value 6 шт
-
-            .basket-aside__row
-              .basket-aside__name Обрешечивание
-              .basket-aside__value 2 500 ₽
-
-            .basket-aside__row
-              .basket-aside__name Стоимость доставки
-              .basket-aside__value 5 292 ₽
-
-          .basket-aside__row
-            .basket-aside__name Сумма без скидки
-            .basket-aside__value 7 892 ₽
-
-          .basket-aside__total
-            .basket-aside__row
-              .basket-aside__name Сумма заказа
-              .basket-aside__value 135 292 ₽
-            button.btn перейти к оформлению заказа
+            .basket-aside__total
+              .basket-aside__row
+                .basket-aside__name Сумма заказа
+                .basket-aside__value 135 292 ₽
+              button.btn перейти к оформлению заказа
 
 
     include ../partials/_footer.pug

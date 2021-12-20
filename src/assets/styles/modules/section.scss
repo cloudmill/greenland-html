@@ -10,6 +10,12 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  &__sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 80px;
+  }
 }
 
 .main-links {

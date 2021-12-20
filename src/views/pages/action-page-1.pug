@@ -4,7 +4,7 @@ block content
 
   include ../partials/_aside.pug
 
-  .main__wrap(data-scroll-container="")
+  .main__wrap.main__wrap--visible(data-scroll-container="")
 
     include ../partials/_header.pug
 
@@ -17,9 +17,9 @@ block content
             a.news-back-link(href="")
               +arrow('white', '#65BA7F', 'left', '15', '13', '46')
               |Все акции
-
-            button.btn
-              |Задать вопрос
+            .section__sticky
+              button.btn
+                |Задать вопрос
 
           .blog-page-main
             h1.title-h1 Добавь весны! Скидка 40% на все самое яркое

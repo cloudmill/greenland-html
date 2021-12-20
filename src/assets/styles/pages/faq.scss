@@ -30,4 +30,9 @@
 .faq-ask {
   white-space: nowrap;
   width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+  @media (min-width: $breakpoint) {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 80px;
+  }
 }

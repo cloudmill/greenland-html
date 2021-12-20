@@ -1400,7 +1400,9 @@
 .product-card-links {
   display: flex;
   flex-direction: column;
-  position: fixed;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 80px;
 
   font-size: 16px;
 
