@@ -15,10 +15,22 @@
 
   padding-top: 40px;
 
-  // color: $white-lighten;
+  color: $black;
+  background: $white-lighten;
+  transition: $transition;
 
   @media (max-width: ($breakpoint - 1px)) {
     display: none;
+  }
+
+  &--up {
+    transform: translateY(-100%);
+  }
+
+  &__logo {
+    path {
+      fill: $green;
+    }
   }
 
   &__btn,
@@ -64,7 +76,7 @@
       width: 14px;
       height: 1.5px;
 
-      // background-color: $black;
+      background-color: $black;
     }
     &::after {
       transform: rotate(90deg);
@@ -103,6 +115,7 @@
 
 .mainHeader {
   color: #fff;
+  background: transparent;
 
   &::before {
     content: '';
