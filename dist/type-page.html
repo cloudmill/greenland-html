@@ -181,7 +181,7 @@
 										<path d="M1 0V20H28V0" stroke="#CAE8D9"></path>
 										<path d="M14.5 9L14.1746 9.37963L14.8254 9.37963L14.5 9ZM14 1.74846e-07L14 9L15 9L15 1.31134e-07L14 1.74846e-07ZM14.8254 9.37963L18.3254 6.37963L17.6746 5.62037L14.1746 8.62037L14.8254 9.37963ZM14.8254 8.62037L11.3254 5.62037L10.6746 6.37963L14.1746 9.37963L14.8254 8.62037Z" fill="#CAE8D9"></path>
 									</svg></div>
-							</a><img class="lanscaping-first-screen__background" src="assets/images/type-page-main.jpg" alt="">
+							</a><img class="lanscaping-first-screen__background only-desktop" src="assets/images/type-page-main.jpg" alt=""><img class="lanscaping-first-screen__background only-mobile" src="assets/images/type-page-main-mob.jpg" alt="">
 						</div>
 						<div class="type-page-row">
 							<div class="type-page-row__txt">Фитодизайн от цветочной вакханалии отличает профессиональный подход. Учитывается стиль пространства, вкусы и ритм жизни хозяев дома, задачи по зонированию или созданию особой атмосферы, желание быть или не быть в тренде. Профессионал сделает озеленение так, что вам будет в нём приятно жить и легко за ним ухаживать.</div>
@@ -222,10 +222,7 @@
 							</div>
 							<div class="designers-products-filter">
 								<ul>
-									<li class="filter-tab active-tab">Входные группы</li>
-									<li class="filter-tab">Атриумы</li>
-									<li class="filter-tab">Процесс производства</li>
-									<li class="filter-tab">Рестораны</li>
+									<li class="filter-tab active-tab">Фитодизайн</li>
 								</ul>
 							</div>
 							<div class="projects__slider swiper-container" data-projects-slider="">
@@ -327,14 +324,20 @@
 						</div>
 						<div class="designers-form about-mission">
 							<h2 class="designers-form__title title-h2">Оставить заявку на абонемент</h2>
-							<div class="mission__slide">
+							<div class="designers-form__row">
 								<div class="mission__main">
 									<div class="mission__slider-underlay"></div>
 									<div class="designers-form__container">
-										<form class="designers-form__form"><label class="designers-form__label"><input class="designers-form__input" placeholder="Имя"></label><label class="designers-form__label"><input class="designers-form__input" placeholder="E-mail"></label><label class="designers-form__label"><input class="designers-form__input" placeholder="Телефон"></label><label class="designers-form__checkbox"><input type="checkbox" id="checkbox">
+										<form class="designers-form__form" data-parsley-validate><label class="designers-form__label">
+												<div class="placeholder-active">Имя*</div><input class="designers-form__input" placeholder="Имя*" required>
+											</label><label class="designers-form__label">
+												<div class="placeholder-active">E-mail*</div><input class="designers-form__input" type="email" placeholder="E-mail*" required>
+											</label><label class="designers-form__label">
+												<div class="placeholder-active">Телефон*</div><input class="designers-form__input" type="tel" placeholder="Телефон*" required>
+											</label><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required>
 												<div class="checkbox"></div>
 												<div class="designers-form__checkbox-txt">Я соглашаюсь на обработку<br><a href="">персональных данных</a></div>
-											</label><button class="btn cover__btn" type="submit">отправить</button></form>
+											</label><button class="btn" type="submit">отправить</button></form>
 									</div>
 								</div>
 								<div class="about-mission__img designers-form__imgs"><img src="assets/images/designer-form-1.jpg" alt=""><img src="assets/images/designer-form-2.jpg" alt=""></div>

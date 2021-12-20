@@ -165,42 +165,75 @@
 					</div>
 				</header>
 				<div class="section page-wrapper">
-					<div class="container basket">
+					<form class="container basket" data-parsley-validate>
 						<div class="basket-main checkout"><a class="news-back-link" href=""><button class="arrow" style="border-color: #65BA7F; width: 46px; height: 46px"><svg width="15" height="13" viewBox="0 0 15 13">
 										<path d="M4.79971 0.984497L0.144073 6.16577V6.83414L4.79971 12.0154L5.54354 11.3471L1.63746 6.99996H14.4829V5.99996H1.63746L5.54354 1.65287L4.79971 0.984497Z" fill="white"></path>
 									</svg></button>вернуться в корзину</a>
 							<h1 class="title-h1 about-title">Оформление заказа</h1>
 							<div class="checkout-left">
 								<div class="checkout-block">
-									<div class="checkout-block__ttl">контактные данные</div><input class="checkout-block__input" placeholder="Имя*"><input class="checkout-block__input" placeholder="Фамилия*"><input class="checkout-block__input" placeholder="E-mail*"><input class="checkout-block__input" placeholder="Номер телефона*">
+									<div class="checkout-block__top">
+										<div class="checkout-block__ttl">контактные данные</div><button class="checkout-login"><svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M0.5 21.5C0.5 15.9771 4.97715 11.5 10.5 11.5C16.0228 11.5 20.5 15.9771 20.5 21.5V23.5H0.5V21.5Z" stroke="#0F2C2D"></path>
+												<circle cx="10.4998" cy="4.5" r="4" stroke="#0F2C2D"></circle>
+											</svg>войти</button>
+									</div><label class="checkout-block__label">
+										<div class="placeholder-active">Имя*</div><input class="checkout-block__input" placeholder="Имя*" required>
+									</label><label class="checkout-block__label">
+										<div class="placeholder-active">Фамилия*</div><input class="checkout-block__input" placeholder="Фамилия*" required>
+									</label><label class="checkout-block__label">
+										<div class="placeholder-active">E-mail*</div><input class="checkout-block__input" placeholder="E-mail*" required>
+									</label><label class="checkout-block__label">
+										<div class="placeholder-active">Номер телефона*</div><input class="checkout-block__input" placeholder="Номер телефона*" required>
+									</label>
 								</div>
 								<div class="checkout-block">
 									<div class="checkout-block__ttl">Способ доставки</div>
-									<div class="about-tabs"><a class="about-tabs__item about-tabs__item--active" href="">Забрать из пункта выдачи</a><a class="about-tabs__item" href="">Курьером до двери</a><a class="about-tabs__item" href="">Самовывоз со склада</a></div>
-									<div class="checkout-address__pvz">
-										<div class="checkout-address__ttl">выбранный адрес</div>
-										<div class="checkout-address__desc">
-											<div class="checkout-address__desc--big">ул. Красноармейская, 97</div>
-											<div>+7 (3435) 379-044</div>
-											<div class="checkout-address__desc--small">Вс 10:00-16:00, Сб 10:00-16:00, Пн-Пт 10:00-20:00</div>
-											<div class="checkout-address__desc--small">Напротив ТЦ Пирамида</div>
-											<div class="checkout-address__desc--small">Возможность примерки отсутствует</div>
+									<div class="about-tabs checkout-address__filter">
+										<div class="about-tabs__item about-tabs__item--active"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="12" cy="12" r="11.5" stroke="#CAE8D9"></circle>
+												<circle cx="12" cy="12" r="5" fill="#CAE8D9"></circle>
+											</svg>Забрать из пункта выдачи</div>
+										<div class="about-tabs__item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="12" cy="12" r="11.5" stroke="#CAE8D9"></circle>
+												<circle cx="12" cy="12" r="5" fill="#CAE8D9"></circle>
+											</svg>Курьером до двери</div>
+										<div class="about-tabs__item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<circle cx="12" cy="12" r="11.5" stroke="#CAE8D9"></circle>
+												<circle cx="12" cy="12" r="5" fill="#CAE8D9"></circle>
+											</svg>Самовывоз со склада</div>
+									</div>
+									<div class="checkout-address__container">
+										<div class="checkout-address__item checkout-address__item--active">
+											<div class="checkout-address__ttl">выбранный адрес</div>
+											<div class="checkout-address__desc">
+												<div class="checkout-address__desc--big">ул. Красноармейская, 97</div>
+												<div>+7 (3435) 379-044</div>
+												<div class="checkout-address__desc--small">Вс 10:00-16:00, Сб 10:00-16:00, Пн-Пт 10:00-20:00</div>
+												<div class="checkout-address__desc--small">Напротив ТЦ Пирамида</div>
+												<div class="checkout-address__desc--small">Возможность примерки отсутствует</div>
+											</div><button class="checkout-block__btn btn-white">Выбрать адрес на карте</button>
+										</div>
+										<div class="checkout-address__item">
+											<div class="checkout-address__ttl">выбранный адрес</div>
+											<div class="checkout-address__desc">г. Москва, ул. Стачек, 34</div><button class="checkout-block__btn btn-white">Выбрать адрес на карте</button>
+										</div>
+										<div class="checkout-address__item">
+											<div class="checkout-address__ttl">адрес склада</div>
+											<div class="checkout-address__desc"><span>Санкт-Петербург, Московское шоссе, дом 25, к. 1, Бизнес-центр «Престиж», офис 248</span>
+												<div class="checkout-address__desc-map"><svg width="20" height="24" viewBox="-1 -1 22 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M9.022 22.9439C9.05914 23.333 9.34885 23.65 9.74999 23.65C10.1511 23.65 10.4446 23.333 10.478 22.9439C10.6592 21.0187 12.9774 19.1643 14.8869 17.6369C15.5607 17.0979 16.1835 16.5996 16.6437 16.1533C18.4711 14.3809 19.5 11.9709 19.5 9.4636C19.5037 4.24007 15.1357 0 9.74999 0M9.022 22.9439L9.71633 22.8785L9.74949 22.8754L9.74999 22.8753L10.0176 22.8501C10.0175 22.8497 10.0175 22.8493 10.0175 22.8489M9.022 22.9439C8.8408 21.0214 6.52276 19.1658 4.6118 17.6361C3.93743 17.0963 3.31375 16.597 2.85257 16.1497C1.02514 14.3737 0 11.9673 0 9.4636C0 4.24007 4.36428 0.00360244 9.74999 0M9.022 22.9439L9.71167 22.8781L9.74482 22.8749L9.74999 22.8744L10.0175 22.8489M10.0175 22.8489C9.98148 22.4684 9.88637 22.1029 9.74981 21.7544M10.0175 22.8489C10.0154 22.8268 10.004 22.7834 9.95846 22.7376C9.90643 22.6853 9.82728 22.65 9.74999 22.65C9.67381 22.65 9.596 22.6845 9.5442 22.7363C9.50216 22.7784 9.48687 22.8209 9.4826 22.8502C9.48219 22.8531 9.48188 22.8558 9.48166 22.8583L9.48236 22.8502L9.48239 22.8502C9.51825 22.4693 9.61329 22.1033 9.74981 21.7544M9.74981 21.7544C9.93415 21.2833 10.1941 20.8432 10.4862 20.439C10.9976 19.7313 11.6543 19.0699 12.3232 18.4694C12.9622 17.8959 13.6429 17.3513 14.2559 16.861C14.286 16.8369 14.316 16.813 14.3457 16.7892C14.9974 16.2678 15.5475 15.8235 15.9475 15.4355C17.584 13.8482 18.5 11.6958 18.5 9.4636V9.46289C18.5033 4.82056 14.6123 1.00016 9.75031 1C9.75043 1 9.75055 1 9.75066 1L9.74999 0M9.74981 21.7544C9.56545 21.2838 9.30555 20.8441 9.01365 20.4403C8.50223 19.7329 7.84556 19.0713 7.1765 18.4705C6.53742 17.8966 5.85641 17.3515 5.24301 16.8605C5.21283 16.8363 5.18281 16.8123 5.15297 16.7884C4.501 16.2663 3.95016 15.8211 3.54905 15.4322M9.74999 0V1C4.8877 1.0036 1 4.82078 1 9.4636C1 11.6922 1.91224 13.8412 3.54905 15.4322M3.54905 15.4322C3.54896 15.4321 3.54888 15.432 3.54879 15.4319L2.8528 16.1495L3.54951 15.4326C3.54936 15.4325 3.54921 15.4323 3.54905 15.4322Z" stroke="#0F2C2D" stroke-width="2"></path>
+														<path d="M12.1745 9.46C12.1745 10.7128 11.1173 11.7814 9.74996 11.7814C8.38406 11.7814 7.3291 10.7141 7.3291 9.46C7.3291 8.20585 8.38406 7.13855 9.74996 7.13855C11.1173 7.13855 12.1745 8.20724 12.1745 9.46Z" stroke="#0F2C2D" stroke-width="2"></path>
+													</svg>на карте</div>
+											</div><button class="checkout-block__btn btn-white">Выбрать адрес на карте</button>
 										</div>
 									</div>
-									<div class="checkout-address__courier">
-										<div class="checkout-address__ttl">выбранный адрес</div>
-										<div class="checkout-address__desc">г. Москва, ул. Стачек, 34</div>
-									</div>
-									<div class="checkout-address__sklad">
-										<div class="checkout-address__ttl">адрес склада</div>
-										<div class="checkout-address__desc">Санкт-Петербург, Московское шоссе, дом 25, к. 1, Бизнес-центр «Престиж», офис 248</div>
-									</div><button class="checkout-block__btn">Выбрать адрес на карте</button>
 								</div>
 								<div class="checkout-block">
 									<div class="checkout-block__ttl">Способ оплаты</div>
 									<div class="checkout-block__txt">Для выбора способа оплаты укажите способ доставки</div>
 									<div class="checkout-payment">
-										<div class="checkout-payment__item"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<div class="checkout-payment__item checkout-payment__item--active"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<circle cx="12" cy="12" r="11.5" stroke="#CAE8D9"></circle>
 												<circle cx="12" cy="12" r="5" fill="#CAE8D9"></circle>
 											</svg>Оплатить картой онлайн</div>
@@ -244,10 +277,10 @@
 								<div class="basket-aside__row">
 									<div class="basket-aside__name">Сумма заказа</div>
 									<div class="basket-aside__value">135 292 ₽</div>
-								</div><button class="btn">перейти к оформлению заказа</button>
+								</div><button class="btn" type="submit">перейти к оформлению заказа</button>
 							</div>
 						</div>
-					</div>
+					</form>
 				</div>
 				<footer class="footer" data-scroll-section="">
 					<div class="footer__header">
