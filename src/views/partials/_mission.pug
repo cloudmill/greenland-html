@@ -1,13 +1,14 @@
 section.section.mission(data-scroll-section="")
   .mission__slider.swiper-container(data-mission-slider="")
     .mission__slider-underlay
-      .mission__marquee.marquee3k
-        .mission__marquee-conten-wrap
-          .mission__marquee-content
-            .text__md.text--uppercase.mission__marquee-text творчество
-            .text__md.text--uppercase.mission__marquee-text созидание
-            .text__md.text--uppercase.mission__marquee-text greenland
-            .text__md.text--uppercase.mission__marquee-text красота
+      .mission__marquee
+        .mission__marquee-content-wrap
+          each item in ['starting', 'first-half', 'second-half', 'third-half']
+            .mission__marquee-content(class=item)
+              .text__md.text--uppercase.mission__marquee-text творчество
+              .text__md.text--uppercase.mission__marquee-text созидание
+              .text__md.text--uppercase.mission__marquee-text greenland
+              .text__md.text--uppercase.mission__marquee-text красота
 
 
     .swiper-wrapper
@@ -16,26 +17,29 @@ section.section.mission(data-scroll-section="")
           .mission__heading.title-h3
             .
               Мы раскрываем #[br] потенциал пространства #[br] через #[span.accent  #[span.mission__highlight.mission__highlight--1 красоту, творчество] #[br] и #[span.mission__highlight.mission__highlight--2 созидание].]
-
-        img.mission__img(src="assets/images/mission__img-1.jpg" alt="Sketch")
+        .mission__image
+          img.mission__img(src="assets/images/mission__img-1.jpg" alt="Sketch")
       .mission__slide.swiper-slide
         .mission__main
           .mission__heading.title-h3
             .
               Наша миссия #[br] #[span.accent  — раскрытие потенциала #[br] пространства] через #[br] #[span.mission__highlight.mission__highlight--3 озеленение]
-        img.mission__img(src="assets/images/mission__img-2.jpg" alt="Sketch")
+        .mission__image
+          img.mission__img(src="assets/images/mission__img-2.jpg" alt="Sketch")
       .mission__slide.swiper-slide
         .mission__main
           .mission__heading.title-h3
             .
               Стремимся #[span.accent #[span.mission__highlight.mission__highlight--4 изменить] #[br] #[span.mission__highlight жизнь людей]] в  больших городах #[span.accent #[span.mission__highlight.mission__highlight--5 к лучшему]],#[br]помогая выбирать #[br] #[span.accent гармоничные #[br] по дизайну композиции] #[br] из кашпо и растений
-        img.mission__img(src="assets/images/mission__img-3.jpg" alt="Sketch")
+        .mission__image
+          img.mission__img(src="assets/images/mission__img-3.jpg" alt="Sketch")
       .mission__slide.swiper-slide
         .mission__main
           .mission__heading.title-h3
             .
               Мы делаем дизайнерское #[br] озеленение #[span.accent #[span.mission__highlight.mission__highlight--6 в ритме] #[br] #[span.mission__highlight.mission__highlight--7 большого города]], #[br] показывая, что горшки #[br] это не емкости для #[br] растений, #[br] #[span.accent а предметы интерьера]
-        img.mission__img(src="assets/images/mission__img-4.jpg" alt="Sketch")
+        .mission__image
+          img.mission__img(src="assets/images/mission__img-4.jpg" alt="Sketch")
 
     .mission__slider-controls
       .mission__slider-bullets(data-mission-slider-bullets="")
