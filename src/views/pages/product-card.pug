@@ -140,6 +140,11 @@ block content
               .product-card-info__item Правила эксплуатации
               .product-card-info__item Визуальная размерность
 
+            .product-card-info__col.only-mobile
+                a(href="") Особые условия для юридических лиц
+                a(href="") Условия оплаты
+                a(href="") Условия доставки
+
             .product-card-buttons
 
               .product-card-buttons__container
@@ -188,12 +193,23 @@ block content
 
                 - for (i=0; i<5; i++)
                   .product-size-row
-                    .product-size-code TC 316 040Т
-                    .product-size-col 37
-                    .product-size-col 30
-                    .product-size-col 2
-                    .product-size-col В наличии
+                    .product-size-code
+                      .product-size-col__mob-ttl Артикул
+                      |TC 316 040Т
+                    .product-size-col
+                      .product-size-col__mob-ttl Диаметр, см
+                      |37
+                    .product-size-col
+                      .product-size-col__mob-ttl Высота, см
+                      |30
+                    .product-size-col
+                      .product-size-col__mob-ttl Вес, кг
+                      |2
+                    .product-size-col
+                      .product-size-col__mob-ttl Наличие
+                      |В наличии
                     .product-size-price
+                      .product-size-col__mob-ttl Цена
                       .favorites-table__price-old 7 200 ₽
                       .favorites-table__price 5 292 ₽
                     .product-size-button
@@ -358,7 +374,7 @@ block content
                   .designers-contacts__img
                     img(src="assets/images/designer-contacts-1.png", alt="")
                   .designers-contacts__desc
-                    h4.designers-contacts__name Стасенко Виктор
+                    .designers-contacts__name Стасенко Виктор
                     .designers-contacts__position Специалист по работе с розничными покупателями
                     .designers-contacts__contacts
                       span.designers-contacts__tel 8 812 209-18-84

@@ -2,8 +2,15 @@
   width: 304px;
   border: 1px solid $green-extra-lighten;
 
+  transition: .5s;
+
   @media (max-width: ($breakpoint - 1px)) {
     width: 151px;
+  }
+
+  &:hover {
+    box-shadow: 0px 10px 30px rgba(43, 85, 55, 0.2);
+    z-index: 1000;
   }
 
   &:not(:last-child) {
@@ -585,8 +592,10 @@
   // overflow: hidden;
 
   @media (max-width: ($breakpoint - 1px)) {
-    width: 100%;
+    width: calc(100% + 10px);
     height: 316px;
+    margin-left: -10px;
+    border: none;
   }
 
   &__column {
@@ -598,6 +607,8 @@
     @media (max-width: ($breakpoint - 1px)) {
       padding: 0;
       width: 55px;
+      border-left: 1px solid $green-extra-lighten;
+      border-top: 1px solid $green-extra-lighten;
     }
 
     .swiper-button-prev {
@@ -650,13 +661,21 @@
       object-fit: cover;
     }
 
-    &.swiper-slide-active {
+    &.swiper-slide-thumb-active {
       border: 1px solid $green;
     }
   }
 
   &__main {
-    width: 100%;
+    width: calc(100% - 55px);
+
+    @media (min-width: $breakpoint) {
+      width: calc(100% - 55px);
+    }
+
+    .swiper-slide {
+      text-align: center;
+    }
 
     img {
       height: 100%;
@@ -703,18 +722,27 @@
       &-item {
         padding: 4px 6px;
         font-size: 8px;
+        line-height: 100%;
+        height: 17px;
       }
     }
   }
 
   .title-h1.about-title {
-    order: -2;
+    @media (max-width: ($breakpoint - 1px)) {
+      order: -2;
+      margin-bottom: 10px;
+    }
   }
 }
 
 .product-card-info__row1 {
   display: flex;
   flex-wrap: wrap;
+
+  @media (max-width: ($breakpoint - 1px)) {
+    margin-top: 20px;
+  }
 
   .product-card-info__item {
     width: 25%;
@@ -725,6 +753,7 @@
 
     @media (max-width: ($breakpoint - 1px)) {
       width: 50%;
+      margin-bottom: 20px;
     }
 
     span:nth-child(1) {
@@ -773,6 +802,10 @@
 
       @media (max-width: ($breakpoint - 1px)) {
         width: 100%;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
 
       img {
@@ -790,12 +823,26 @@
     font-size: 12px;
 
     @media (max-width: ($breakpoint - 1px)) {
-      width: unset;
+      display: none;
     }
 
     a:not(:last-child) {
       margin-bottom: 10px;
     }
+  }
+}
+
+.product-card-info__col.only-mobile {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 40px;
+
+  font-size: 10px;
+  line-height: 130%;
+
+  a:not(:last-child) {
+    margin-bottom: 10px;
   }
 }
 
@@ -805,7 +852,7 @@
 
   @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
-    width: 180px;
+    width: 190px;
   }
 
   .product-card-info__item {
@@ -818,8 +865,14 @@
     display: flex;
     align-items: center;
 
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 15px;
+    text-transform: uppercase;
+
     @media (max-width: ($breakpoint - 1px)) {
       font-size: 11px;
+      padding-bottom: 10px;
     }
 
     &:not(:first-child) {
@@ -998,13 +1051,13 @@
 
 .product-size-row {
   display: flex;
-  // justify-content: space-between;
 
   border: 1px solid $green-extra-lighten;
 
   @media (max-width: ($breakpoint - 1px)) {
     flex-wrap: wrap;
     padding: 20px;
+    justify-content: space-between;
   }
 
   &:not(:first-child) {
@@ -1017,6 +1070,13 @@
 
     display: flex;
     align-items: center;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: 12px;
+
+    }
   }
 
   .product-size-code {
@@ -1035,8 +1095,23 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: 33%;
 
+      &:nth-child(4) {
+        margin: 15px 0 20px 0;
+      }
+
       &:nth-child(5) {
-        margin: 15px 33% 15px 0;
+        margin: 15px 33% 20px 0;
+      }
+    }
+
+    &__mob-ttl {
+      font-size: 8px;
+      line-height: 120%;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+
+      @media (min-width: $breakpoint) {
+        display: none;
       }
     }
   }
@@ -1050,6 +1125,13 @@
 
     @media (max-width: ($breakpoint - 1px)) {
       width: 33%;
+
+      .favorites-table__price-old {
+        font-size: 12px;
+      }
+      .favorites-table__price {
+        font-size: 16px;
+      }
     }
   }
 
@@ -1070,10 +1152,20 @@
       padding: 13px 25px;
       width: 100%;
       white-space: nowrap;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        padding: 8px 24px;
+        height: 40px;
+        max-width: 200px;
+      }
   
       svg {
         margin-right: 20px;
         flex: none;
+
+        @media (max-width: ($breakpoint - 1px)) {
+          margin-right: 10px;
+        }
       }
     }
   }
@@ -1234,6 +1326,75 @@
   .designers-contacts__row {
     justify-content: space-between;
   }
+
+  .designers-contacts__card {
+    // width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
+
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-right: 0;
+    }
+
+    .contacts-btn {
+      margin: unset;
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 140px;
+        height: 40px;
+        padding: 13px 15px;
+      }
+    }
+  }
+
+  .designers-contacts__img {
+    margin-right: calc(#{$col-width-d});
+
+    @media (max-width: ($breakpoint - 1px)) {
+      width: calc(#{$col-part-m});
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .designers-contacts__desc {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: calc(#{$col-part-m} * 3 - 30px);
+      margin-top: 0;
+    }
+  }
+
+  .designers-contacts__name {
+    @media (max-width: ($breakpoint - 1px)) {
+      font-size: 16px;
+      margin-bottom: 3px;
+    }
+  }
+
+  .designers-contacts__position {
+    @media (max-width: ($breakpoint - 1px)) {
+      font-size: 10px;
+    }
+  }
+
+  .designers-contacts__contacts {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin: 10px 0 20px;
+      font-size: 10px;
+    }
+
+    .designers-contacts__tel {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-right: 6px;
+  
+        &::after {
+          margin-left: 6px;
+        }
+      }
+    }
+  }
 }
 
 .product-card-links {
@@ -1241,16 +1402,26 @@
   flex-direction: column;
   position: fixed;
 
+  font-size: 16px;
+
   @media (max-width: ($breakpoint - 1px)) {
     position: relative;
     flex-direction: row;
     overflow-x: scroll;
+
+    font-size: 14px;
+
+    margin-right: -10px;
+    padding-right: 10px;
+
+    @include scrollbar-hidden;
   }
 
   &__item {
     margin-bottom: 20px;
 
     @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 8px;
       &:not(:first-child) {
         margin-left: 10px;
       }

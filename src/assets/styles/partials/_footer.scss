@@ -163,6 +163,20 @@
       border-top: 1px solid rgba($white-lighten, 0.15);
       border-bottom: 1px solid rgba($white-lighten, 0.15);
       border-right: 1px solid rgba($white-lighten, 0.15);
+
+      transition: .5s;
+
+      svg path {
+        transition: .5s;
+      }
+
+      &:hover{
+        background-color: $green;
+
+        svg path {
+          fill: #fff;
+        }
+      }
     }
   }
 
