@@ -1,0 +1,21 @@
+extends ../layouts/master.pug
+
+block content
+  .test
+  #conditions-container.conditions
+    - for (i = 0; i < 3; i++)
+      section.conditions__slider(class=`index${i}`)
+        img.conditions__slide-img(src=`assets/images/conditions-slider/conditions__slide-img-${i + 1}.jpg`, alt="")
+    .conditions-nav
+      each item, i in ['дизайнерам', 'объектам', 'дистрибьютерам и оптовым покупателям']
+        .conditions-nav__item 
+          .conditions-nav__text 
+            span.conditions-nav__span 
+              |#{i + 1}
+            |#{item}
+          .conditions-nav__bot
+            .conditions-nav__box(class=(i === 0 ? 'active' : ''))
+            - if (i !== 2)
+              .conditions-nav__container
+                .conditions-nav__line
+  .test
