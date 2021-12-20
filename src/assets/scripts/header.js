@@ -31,7 +31,10 @@ $(() => {
           }
         }
   
-        if (scrollTop < 1) {
+        if (scrollTop > 1) {
+          header.addClass('header--scroll')
+        } else {
+          header.removeClass('header--scroll')
           header.removeClass('header--up')
         }
   

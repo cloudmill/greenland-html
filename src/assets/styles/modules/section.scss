@@ -12,9 +12,11 @@
   }
 
   &__sticky {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 80px;
+    @media (min-width: $breakpoint) {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 80px;
+    }
   }
 }
 

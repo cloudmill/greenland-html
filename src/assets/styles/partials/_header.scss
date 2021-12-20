@@ -23,8 +23,17 @@
     display: none;
   }
 
+  &--scroll {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
   &--up {
     transform: translateY(-100%);
+  }
+
+  &__row {
+    align-items: center;
   }
 
   &__logo {
@@ -97,6 +106,7 @@
   }
 
   &__menu {
+    margin: 0;
     display: flex;
     justify-content: space-between;
 
