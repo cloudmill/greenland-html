@@ -1,16 +1,18 @@
 .catalog-card {
   width: 304px;
+  height: 473px;
   border: 1px solid $green-extra-lighten;
-
+  position: relative;
   transition: .5s;
 
   @media (max-width: ($breakpoint - 1px)) {
     width: 151px;
+    height: 269px;
   }
 
   &:hover {
     box-shadow: 0px 10px 30px rgba(43, 85, 55, 0.2);
-    z-index: 1000;
+    z-index: 15;
   }
 
   &:not(:last-child) {
@@ -19,6 +21,11 @@
 
   &__top {
     position: relative;
+    height: 177px;
+
+    @media (min-width: $breakpoint) {
+      height: 359px;
+    }
   }
   &__main-img {
     width: 100%;
@@ -31,7 +38,7 @@
     right: 0;
     bottom: 0;
 
-    padding: 10px 10px 0 10px;
+    padding: 20px;
 
     display: flex;
     align-items: flex-end;
@@ -46,9 +53,13 @@
   &__labels {
     display: flex;
     padding: 10px;
-    position: relative;
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
     line-height: 100%;
+    font-size: 12px;
 
     @media (max-width: ($breakpoint - 1px)) {
       display: none;
@@ -59,8 +70,16 @@
       border: 1px solid $green-extra-lighten;
       border-radius: 0px 10px;
 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       &:not(:first-child) {
         margin-left: 5px;
+      }
+
+      @media (min-width: $breakpoint) {
+        height: 30px;
       }
     }
   }
@@ -291,10 +310,10 @@
   }
 
   &-tabs {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     display: flex;
-
-    overflow-x: scroll;
+    flex-wrap: wrap;
+    // overflow-x: scroll;
 
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 10px;
@@ -302,6 +321,7 @@
 
     &__item {
       padding: 12px 15px;
+      margin-bottom: 20px;
       border-radius: 50px;
       border: 1px solid $green-extra-lighten;
 
@@ -319,8 +339,8 @@
         margin: 0 10px 10px 0;
       }
 
-      &:not(:first-child) {
-        margin-left: 20px;
+      &:not(:last-child) {
+        margin-right: 20px;
 
         @media (max-width: ($breakpoint - 1px)) {
           margin-left: 0;
@@ -346,13 +366,7 @@
     background-color: #EBFAF2;
 
     &__item {
-
-      padding: 22px 20px;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
+      position: relative;
       cursor: pointer;
 
       transition: .5s;
@@ -365,6 +379,13 @@
         width: calc(#{$col-part-d} * 2 - #{$col-gap-d});
         background-color: $green-extra-lighten;
         border-radius: 50px 0 0 50px;
+
+        padding: 22px 20px;
+        font-size: 14px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         &:hover {
           background-color: $green-lighten;
@@ -381,6 +402,27 @@
 
       &:last-child {
         border-radius: 0 50px 50px 0;
+      }
+
+      &.spoiler--active {
+        background-color: $green-lighten;
+        .catalog-filter-spoilers__button img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &__button {
+      padding: 22px 20px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      font-size: 14px;
+
+      img {
+        transition: .5s;
       }
     }
 
@@ -400,6 +442,40 @@
       }
       &::after {
         transform: rotate(90deg);
+      }
+    }
+
+    &__dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      z-index: 20;
+      border: 1px solid #D4E8DC;
+      box-shadow: 0px 10px 30px rgba(43, 85, 55, 0.1);
+      left: 0;
+      right: 0;
+      background: #fff;
+      padding: 20px;
+
+      &-item {
+        display: flex;
+        justify-content: space-between;
+
+        &:not(:first-child) {
+          margin-top: 12px;
+        }
+
+        .designers-form__checkbox {
+          margin-top: 0;
+          height: 18px;
+          .checkbox::before {
+            height: 18px;
+            width: 18px;
+          }
+          input[type="checkbox"]:checked + .checkbox::before {
+            background-size: 18px;
+          }
+        }
       }
     }
   }
@@ -523,8 +599,13 @@
       flex-direction: row;
     }
 
-    .contacts-btn {
-      margin: unset;
+    .btn {
+      width: 187px;
+      white-space: nowrap;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 140px;
+      }
     }
   }
 
@@ -843,6 +924,10 @@
 
   a:not(:last-child) {
     margin-bottom: 10px;
+  }
+
+  @media (min-width: $breakpoint) {
+    display: none;
   }
 }
 

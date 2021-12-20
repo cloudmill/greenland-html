@@ -120,38 +120,137 @@ block content
 
             .catalog-filter-spoilers__item
               
-              |Наличие, скидки
-              img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+              .catalog-filter-spoilers__button
+                |Наличие, скидки
+                img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+
+              .catalog-filter-spoilers__dropdown
+                -
+                  var items = [
+                    'Крем',
+                    'Мятный',
+                    'Нежно-голубой',
+                    'Мальва',
+                    'Пион',
+                    'Лавандовый',
+                    'Бирюзовый',
+                  ]
+                each i in items
+                  .catalog-filter-spoilers__dropdown-item
+                    |#{i}
+                    input(type="checkbox")
+
+            .catalog-filter-spoilers__item
+              
+              .catalog-filter-spoilers__button
+                |Диапазон цены
+                img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+
+              .catalog-filter-spoilers__dropdown
+                -
+                  var items = [
+                    'Крем',
+                    'Мятный',
+                    'Нежно-голубой',
+                    'Мальва',
+                    'Пион',
+                    'Лавандовый',
+                    'Бирюзовый',
+                  ]
+                each i in items
+                  .catalog-filter-spoilers__dropdown-item
+                    |#{i}
+                    input(type="checkbox")
 
             .catalog-filter-spoilers__item
 
-              |Диапазон цены
-              img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+              .catalog-filter-spoilers__button
+                |Цвет
+                img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+
+              .catalog-filter-spoilers__dropdown
+                -
+                  var items = [
+                    'Крем',
+                    'Мятный',
+                    'Нежно-голубой',
+                    'Мальва',
+                    'Пион',
+                    'Лавандовый',
+                    'Бирюзовый',
+                  ]
+                each i in items
+                  .catalog-filter-spoilers__dropdown-item
+                    |#{i}
+                    input(type="checkbox")
 
             .catalog-filter-spoilers__item
 
-              |Цвет
-              img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+              .catalog-filter-spoilers__button
+                |Форма
+                img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+              
+              .catalog-filter-spoilers__dropdown
+                -
+                  var items = [
+                    'Крем',
+                    'Мятный',
+                    'Нежно-голубой',
+                    'Мальва',
+                    'Пион',
+                    'Лавандовый',
+                    'Бирюзовый',
+                  ]
+                each i in items
+                  .catalog-filter-spoilers__dropdown-item
+                    |#{i}
+                    input(type="checkbox")
 
-              //- .catalog-filter-spoilers__dropdown
-              //-   .catalog-filter-spoilers__dropdown-item
-              //-     |Крем
-              //-     input(type="checkbox")
+            .catalog-filter-spoilers__item
+
+              .catalog-filter-spoilers__button
+                |Применение
+                img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+
+              .catalog-filter-spoilers__dropdown
+                -
+                  var items = [
+                    'Крем',
+                    'Мятный',
+                    'Нежно-голубой',
+                    'Мальва',
+                    'Пион',
+                    'Лавандовый',
+                    'Бирюзовый',
+                  ]
+                each i in items
+                  .catalog-filter-spoilers__dropdown-item
+                    |#{i}
+                    input(type="checkbox")
 
             .catalog-filter-spoilers__item
             
-              |Форма
-              img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+              .catalog-filter-spoilers__button
+                |Особенности
+                img(src="assets/images/icons/spoiler-arrow.svg", alt="")
 
-            .catalog-filter-spoilers__item
-            
-              |Применение
-              img(src="assets/images/icons/spoiler-arrow.svg", alt="")
-
-            .catalog-filter-spoilers__item
-            
-              |Особенности
-              img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+              .catalog-filter-spoilers__dropdown
+                -
+                  var items = [
+                    'Крем',
+                    'Мятный',
+                    'Нежно-голубой',
+                    'Мальва',
+                    'Пион',
+                    'Лавандовый',
+                    'Бирюзовый',
+                  ]
+                each i in items
+                  .catalog-filter-spoilers__dropdown-item
+                    |#{i}
+                    label.designers-form__checkbox
+                      input(type="checkbox"  id="checkbox" required)
+                      .checkbox
 
         .category-table
 
@@ -245,13 +344,13 @@ block content
             .designers-contacts__img
               img(src="assets/images/designer-contacts-1.png", alt="")
             .designers-contacts__desc
-              .designers-contacts__name Шабала Виктория
-              .designers-contacts__position Менеджер по работе с дизайнерами
+              .designers-contacts__name Стасенко Виктор
+              .designers-contacts__position Специалист по работе с розничными покупателями
               .designers-contacts__contacts
-                span.designers-contacts__tel 8 911 924-50-84
-                span sv@green-land.ru
+                span.designers-contacts__tel 8 812 209-18-84
+                span ga@green-land.ru
 
-              .contacts-btn
+              .btn
                 |обратная связь
 
           .catalog-block__desc

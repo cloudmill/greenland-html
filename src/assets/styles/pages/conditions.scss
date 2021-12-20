@@ -346,6 +346,14 @@
 
 .designers-products__catalog {
   display: flex;
+
+  @media (min-width: $breakpoint) {
+    margin-bottom: -30px;
+
+    .swiper-container {
+      padding-bottom: 30px;
+    }
+  }
 }
 .you-watched {
   .designers-products__catalog {
