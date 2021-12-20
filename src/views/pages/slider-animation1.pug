@@ -6,14 +6,16 @@ block content
     - for (i = 0; i < 3; i++)
       section.conditions__slider(class=`index${i}`)
         img.conditions__slide-img(src=`assets/images/conditions-slider/conditions__slide-img-${i + 1}.jpg`, alt="")
-    .pagina
+    .conditions-nav
       each item, i in ['дизайнерам', 'объектам', 'дистрибьютерам и оптовым покупателям']
-        .pagina__item 
-          .pagina__text 
+        .conditions-nav__item 
+          .conditions-nav__text 
+            span.conditions-nav__span 
+              |#{i + 1}
             |#{item}
-          .pagina__bot
-            .pagina__box(class=(i === 0 ? 'active' : ''))
+          .conditions-nav__bot
+            .conditions-nav__box(class=(i === 0 ? 'active' : ''))
             - if (i !== 2)
-              .pagina__container
-                .pagina__line
+              .conditions-nav__container
+                .conditions-nav__line
   .test

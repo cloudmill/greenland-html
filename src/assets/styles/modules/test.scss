@@ -31,8 +31,9 @@ canvas {
 	height: 100vh;
 }
 
-.pagina {
+.conditions-nav {
 	position: absolute;
+	z-index: 100;
 	left: 50px;
 	bottom: 50px;
 
@@ -41,28 +42,26 @@ canvas {
 	&__item {
 		position: relative;
 		z-index: 0;
+
 		&:not(:last-child) {
-			padding-right: 30px;
-			margin-right: 10px;
-
-			.pagina__container {
-				&::before {
-					content: "";
-					position: absolute;
-					z-index: -1;
-					// left: 18px;
-					// right: 8px;
-					width: 100%;
-					height: 1px;
-
-					background: white;
-				}
-			}
+			padding-right: 40px;
 		}
+	}
+
+	&__text {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 13px;
+	}
+
+	&__span {
+		margin-right: 10px;
 	}
 
 	&__bot {
 		margin-top: 20px;
+
+		min-height: 12px;
 
 		display: flex;
 		align-items: center;
@@ -75,30 +74,42 @@ canvas {
 		width: var(--size);
 		height: var(--size);
 
-		border: 1px solid black;
+		border: 1px solid $white-lighten;
 
 		&.active {
-			background: green;
-			border-color: green;
+			--size: 12px;
+
+			background: $green;
+			border-color: $green;
 		}
 	}
 
 	&__container {
-		margin-left: 16px;
-		position: relative;
-		width: calc(100% + 30px);
+		position: absolute;
+		z-index: -1;
+		right: 10px;
+		left: 22px;
+
 		height: 1px;
+
+		&::before {
+			content: "";
+			position: absolute;
+
+			width: 100%;
+			height: 1px;
+
+			background: $white-lighten;
+		}
 	}
 
 	&__line {
 		content: "";
 		position: absolute;
-		z-index: -1;
-		// left: 18px;
-		// right: 8px;
-
+		z-index: 1;
+		
 		height: 1px;
 
-		background: green;
+		background: $green;
 	}
 }
