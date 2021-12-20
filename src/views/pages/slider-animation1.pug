@@ -4,7 +4,7 @@ block content
   .test
   #conditions-container.conditions
     - for (i = 0; i < 3; i++)
-      section.conditions__slider(class=`index${i}`)
+      section.conditions__slider
         img.conditions__slide-img(src=`assets/images/conditions-slider/conditions__slide-img-${i + 1}.jpg`, alt="")
     .conditions-nav
       each item, i in ['дизайнерам', 'объектам', 'дистрибьютерам и оптовым покупателям']

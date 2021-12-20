@@ -1,7 +1,7 @@
 import fragment from './shaders/fragment.glsl';
 import vertex from './shaders/vertex.glsl'
 
-import GyroNorm from 'gyronorm';
+import {GyroNorm} from './gyronorm';
 
 const gn = new GyroNorm();
 

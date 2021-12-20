@@ -1,12 +1,16 @@
-section.section.conditions(data-scroll-section="")
-  .swiper-container.conditions__slider(data-conditions-slider="")
-    .swiper-wrapper
-      - for (i = 0; i < conditions.length; i++)
-        .swiper-slide.conditions__slide
-          img.conditions__slide-img(src=`assets/images/conditions-slider/conditions__slide-img-${i + 1}.jpg`, alt="")
-          .container.conditions__slide-container
-            .conditions__slide-heading.title-h2 Условия работы #[br] #{conditions[i].title}
-            a.btn.conditions__slide-btn(href="#") подробнее
-    .conditions__slider-controls-wrap
-      .container.conditions__slider-controls
-        .conditions__slider-bullets(data-conditions-slider-bullets="")
+#conditions-container.conditions
+  - for (i = 0; i < 3; i++)
+    section.conditions__slider
+      img.conditions__slide-img(src=`assets/images/conditions-slider/conditions__slide-img-${i + 1}.jpg`, alt="")
+  .conditions-nav
+    each item, i in ['дизайнерам', 'объектам', 'дистрибьютерам и оптовым покупателям']
+      .conditions-nav__item 
+        .conditions-nav__text 
+          span.conditions-nav__span 
+            |#{i + 1}
+          |#{item}
+        .conditions-nav__bot
+          .conditions-nav__box(class=(i === 0 ? 'active' : ''))
+          - if (i !== 2)
+            .conditions-nav__container
+              .conditions-nav__line
