@@ -24,9 +24,20 @@ block content
           .mission__slide
             .mission__main
               .mission__slider-underlay
-              h3.title-h3.mission__heading
-                .
-                  Мы раскрываем #[br] потенциал пространства #[br] через #[span.accent  #[span.mission__highlight.mission__highlight--1 красоту, творчество] #[br] и #[span.mission__highlight.mission__highlight--2 созидание].]
+              h3.title-h3.mission__heading.about-mission-highlights
+
+                |Внедряем дизайнерское 
+                br
+                |озеленение в стандарты 
+                br
+                span.highlight-1 строительства, архитектуры и 
+                br
+                span.highlight-2 проектирования 
+                br
+                |общественных пространств 
+                br
+                |и помещений
+
             img.about-mission__img(src="assets/images/about-1.jpg" alt="")
 
         .about-deliveries
@@ -39,12 +50,24 @@ block content
         .about-mission.border-green-top
           
           .mission__slide
-            img.about-mission__img(src="assets/images/about-2.jpg" alt="")
-            .mission__main
+            img.about-mission__img.only-desktop(src="assets/images/about-2.jpg" alt="")
+            .mission__main.about-mission__slide
               .mission__slider-underlay
-              .gamma.mission__heading
-                .
-                  Мы раскрываем #[br] потенциал пространства #[br] через #[span.accent  #[span.mission__highlight.mission__highlight--1 красоту, творчество] #[br] и #[span.mission__highlight.mission__highlight--2 созидание].]
+              h3.title-h3.mission__heading.about-mission-highlights
+                |Помогаем нашим клиентам 
+                br
+                span.highlight-3 раскрыть потенциал 
+                br
+                |пространства, сделать его 
+                br
+                span.highlight-4 уютным и красивым
+              .about-mission-subtitle.only-desktop
+                |В наших шоу-румах представлены образцы, а на складах обширный запас товара, что позволяет нам оперативно отгружать заказы клиентам в любую точку России и стран Таможенного союза.
+
+          .about-mission-subtitle.only-mobile
+            |В наших шоу-румах представлены образцы, а на складах обширный запас товара, что позволяет нам оперативно отгружать заказы клиентам в любую точку России и стран Таможенного союза.
+
+          img.about-mission__img.only-mobile(src="assets/images/about-2.jpg" alt="")       
 
         .about-plan
           h2.title-h2 Наш замысел
@@ -80,9 +103,18 @@ block content
           .about-block
             .about-block__img
               img(src="assets/images/about-3.jpg" alt="")
+
             .about-block__desc
-              h3.about-block__ttl.title-h3 Мы — не просто крупная компания. 
-                span мы — лидер в своем направлении
+
+              h3.about-block__ttl.title-h3.only-desktop Мы — не просто крупная компания. 
+                span.highlight мы — лидер 
+                span в своем направлении
+
+              h3.about-block__ttl.title-h3.only-mobile Мы — не просто крупная компания. 
+                span мы —
+                span.highlight-1 лидер в своем
+                span.highlight-2 направлении
+
               .about-block__row Работаем, чтобы изменить жизнь людей из больших городов.
               .about-block__row Помогаем выбрать растения и кашпо, которые гармонично подчеркнут или полностью изменят атмосферу пространства.
               .about-block__row Создадим атмосферу свободы, уверенности и защищённости.
@@ -90,6 +122,6 @@ block content
           a.about-history(href="")
             .title-h3 История компании
             .about-history__circle
-              img(src="assets/images/about-history-arrow.svg" alt="")
+              +aboutBottomArrow
 
     include ../partials/_footer.pug
