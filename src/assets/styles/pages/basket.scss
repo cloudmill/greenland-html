@@ -25,7 +25,15 @@
     width: calc(#{$col-part-d} * 4 + #{$col-gap-d} + 40px);
 
     margin: -140px -40px -160px 0;
-    padding: 140px 40px;
+    padding: 140px 40px 0;
+  }
+
+  &__container {
+    @media (min-width: $breakpoint) {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 140px;
+    }
   }
 
   &__ttl {

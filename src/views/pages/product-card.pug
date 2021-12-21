@@ -4,15 +4,13 @@ block content
 
   include ../partials/_aside.pug
 
-  .main__wrap(data-scroll-container="")
+  .main__wrap.main__wrap--visible(data-scroll-container="")
 
     include ../partials/_header.pug
 
     .section.page-wrapper
       .container
         +breadcrumbs(['Цветочные горшки и кашпо', 'Пластиковые горшки и кашпо', 'Уличный вазон KATO'])
-
-        
 
         .product-card-top
           .product-card-gallery

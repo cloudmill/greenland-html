@@ -13,6 +13,8 @@ import './assets/scripts/3dEffect/index';
 
 import './assets/scripts/spoiler';
 
+import './assets/scripts/header';
+
 import '@fancyapps/fancybox';
 
 import parsley from "parsleyjs";

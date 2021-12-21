@@ -24,6 +24,20 @@
     order: 1;
     width: 100%;
   }
+
+  &--short {
+    @media (min-width: $breakpoint) {
+      padding-bottom: 160px;
+    }
+  }
+
+  &__container {
+    @media (min-width: $breakpoint) {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 80px;
+    }
+  }
 }
 
 .news-social {

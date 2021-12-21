@@ -10,6 +10,14 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  &__sticky {
+    @media (min-width: $breakpoint) {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 80px;
+    }
+  }
 }
 
 .main-links {

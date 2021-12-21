@@ -4,7 +4,7 @@ block content
 
   include ../partials/_aside.pug
 
-  .main__wrap(data-scroll-container="")
+  .main__wrap.main__wrap--visible(data-scroll-container="")
 
     include ../partials/_header.pug
 
@@ -14,28 +14,29 @@ block content
 
         .news-cols
           .news-col-links
-            a.news-back-link.project-back-link(href="")
-              +arrow('white', '#65BA7F', 'left', '15', '13', '46')
-              |Все проекты
+            .news-col-links__container
+              a.news-back-link.project-back-link(href="")
+                +arrow('white', '#65BA7F', 'left', '15', '13', '46')
+                |Все проекты
 
-            .news-social
-              .news-social__title
-                span Следите 
-                |за нами
-              ul.news-social__list
-                -
-                  var items = [
-                    'facebook',
-                    'instagram',
-                    'pinterest',
-                    'houzz',
-                    'наш блог',
-                  ]
-                each item in items
-                  li
-                    a(href="") #{item}
+              .news-social
+                .news-social__title
+                  span Следите 
+                  |за нами
+                ul.news-social__list
+                  -
+                    var items = [
+                      'facebook',
+                      'instagram',
+                      'pinterest',
+                      'houzz',
+                      'наш блог',
+                    ]
+                  each item in items
+                    li
+                      a(href="") #{item}
 
-            button.btn.cover__btn.project-aside-btn задать вопрос
+              button.btn.cover__btn.project-aside-btn задать вопрос
 
           .project-page-main
             h1.about-title.title-h1 Терраса ЛИДЕР кОНСАЛТ

@@ -15,10 +15,31 @@
 
   padding-top: 40px;
 
-  // color: $white-lighten;
+  color: $black;
+  background: $white-lighten;
+  transition: $transition;
 
   @media (max-width: ($breakpoint - 1px)) {
     display: none;
+  }
+
+  &--scroll {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &--up {
+    transform: translateY(-100%);
+  }
+
+  &__row {
+    align-items: center;
+  }
+
+  &__logo {
+    path {
+      fill: $green;
+    }
   }
 
   &__btn,
@@ -64,7 +85,7 @@
       width: 14px;
       height: 1.5px;
 
-      // background-color: $black;
+      background-color: $black;
     }
     &::after {
       transform: rotate(90deg);
@@ -85,6 +106,7 @@
   }
 
   &__menu {
+    margin: 0;
     display: flex;
     justify-content: space-between;
 
@@ -103,6 +125,7 @@
 
 .mainHeader {
   color: #fff;
+  background: transparent;
 
   &::before {
     content: '';
