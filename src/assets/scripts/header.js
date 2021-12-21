@@ -1,12 +1,15 @@
+import {mediaQuery} from './mediaQueries'
+
 $(() => {
 
-    // if (mediaQuery.matches) {
+    if (mediaQuery.matches) {
 
       const header = $('.header')
   
       const fps = 120
   
       let scrollTop = $(window).scrollTop()
+      
   
       $(window).one('scroll', scroll)
   
@@ -22,6 +25,8 @@ $(() => {
   
       function update() {
         const newScrollTop = $(window).scrollTop()
+        const transparentSection = $('[data-transparent-section]').closest('[data-scrollmagic-pin-spacer]')
+        const transparentSectionEnd = $('[data-transparent-end]')
   
         if (Math.abs(scrollTop - newScrollTop) >= 1) {
           if (newScrollTop > scrollTop) {
@@ -29,8 +34,8 @@ $(() => {
           } else {
             header.removeClass('header--up')
           }
-        }
-  
+        } 
+
         if (scrollTop > 1) {
           header.addClass('header--scroll')
         } else {
@@ -39,14 +44,19 @@ $(() => {
         }
   
         if ($('[data-header-transparent]').length) {
-          if (scrollTop < 1) {
+
+          if (scrollTop > transparentSection.offset().top && scrollTop < transparentSectionEnd.offset().top) {
             header.addClass('mainHeader')
           } else {
-            header.removeClass('mainHeader')
+            if (scrollTop < 1) {
+              header.addClass('mainHeader')
+            } else {
+              header.removeClass('mainHeader')
+            }
           }
         }
   
         scrollTop = newScrollTop
       }
-    // }
-  });
+    }
+});
