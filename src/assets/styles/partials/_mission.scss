@@ -405,12 +405,8 @@
     }
 
     &.swiper-slide-active {
-      #{$comp}__heading {
+      #{$comp}__heading--hidden {
         opacity: 1;
-        @media (max-width: ($breakpoint - 1px)) {
-          // transition: $transition;
-          // transition-delay: var(--transitionDelay);
-        }
         transition: $transition;
         transition-delay: var(--transitionDelay);
       }
@@ -474,12 +470,15 @@
 
     max-width: 620px;
     
-    opacity: 0;
     text-align: center;
     text-transform: uppercase;
-    transition: 0.25s $transition-timing-function;
-    @media (min-width: $breakpoint) {
-      transition: opacity 0.3s $transition-timing-function;
+
+    &--hidden {
+      opacity: 0;
+      transition: 0.25s $transition-timing-function;
+      @media (min-width: $breakpoint) {
+        transition: opacity 0.3s $transition-timing-function;
+      }
     }
   }
 }
