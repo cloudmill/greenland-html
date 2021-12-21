@@ -486,24 +486,18 @@
 // marquee keyframes
 @keyframes tickerStart {
   0% {
-    transform: translateX(50%);
-  }
-  50% {
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(-250%);
+    transform: translateX(-200%);
   }
 }
 
 @keyframes ticker {
   0% {
-    transform: translateX(150%);
-  }
-  50% {
-    transform: translateX(0);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(-150%);
+    transform: translateX(-200%);
   }
 }
