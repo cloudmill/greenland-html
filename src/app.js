@@ -17,6 +17,8 @@ import './assets/scripts/header';
 
 import '@fancyapps/fancybox';
 
+import './assets/scripts/aos';
+
 import parsley from "parsleyjs";
 import "parsleyjs/dist/i18n/ru";
 

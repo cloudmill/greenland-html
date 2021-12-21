@@ -422,6 +422,7 @@
   }
 
   &__image {
+    width: 100%;
     overflow: hidden;
   }
 
@@ -486,10 +487,10 @@
 // marquee keyframes
 @keyframes tickerStart {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(-300%);
   }
 }
 

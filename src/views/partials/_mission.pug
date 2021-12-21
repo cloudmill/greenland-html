@@ -1,7 +1,7 @@
 section.section.mission(data-scroll-section="")
   .mission__slider.swiper-container(data-mission-slider="")
     .mission__slider-underlay
-      .mission__marquee
+      .mission__marquee(data-aos="fade-up")
         .mission__marquee-content-wrap
           each item in ['starting', 'first-half', 'second-half', 'third-half']
             .mission__marquee-content(class=item)
@@ -11,7 +11,7 @@ section.section.mission(data-scroll-section="")
               .text__md.text--uppercase.mission__marquee-text красота
 
 
-    .swiper-wrapper
+    .swiper-wrapper(data-aos="fade-up")
       .mission__slide.swiper-slide
         .mission__main
           .mission__heading.mission__heading--hidden.title-h3
