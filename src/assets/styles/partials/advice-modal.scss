@@ -1,20 +1,24 @@
 .advice-modal {
-
+  display: none;
+  
+  margin-top: 56px;
   @media (min-width: $breakpoint) {
-    // margin-right: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 0;
+
     width: calc(#{$col-part-d} * 7 - #{$col-gap-d} + 125px);
   }
 
+  overflow: visible;
   background: $white-lighten;
 
   &__container {
-    padding: 32px 10px;
+    padding: 32px 10px 55px;
     @media (min-width: $breakpoint) {
       padding: 40px;
     }
-
-    // height: 100%;
-    // overflow-y: scroll;
   }
 
   &__title {
@@ -80,4 +84,48 @@
       }
     }
   }
+}
+
+.fancybox-slide--html .fancybox-close-small {
+  --pad: 7px;
+  --size: 36px;
+  @media (min-width: $breakpoint) {
+    --size: 88px;
+    --pad: 25px;
+  }
+
+  padding: var(--pad);
+
+  top: auto;
+  right: 10px;
+  bottom: calc(100% + 10px);
+  @media (min-width: $breakpoint) {
+    bottom: auto;
+    top: 20px;
+    right: auto;
+    left: calc(100% + 20px);
+  }
+
+  width: var(--size);
+  height: var(--size);
+
+  color: $white-lighten;
+  border: 1px solid $green-extra-lighten;
+}
+
+/* Custom animation slide-in-out */
+.fancybox-fx-slide-in-out.fancybox-slide--previous {
+  transform: translateX(-100%);
+}
+
+.fancybox-fx-slide-in-out.fancybox-slide--next {
+  transform: translateX(-100%);
+}
+
+.fancybox-fx-slide-in-out.fancybox-slide--current {
+  transform: translateX(0);
+}
+
+.fancybox-slide {
+  @include scrollbar-hidden;
 }

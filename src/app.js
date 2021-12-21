@@ -15,7 +15,7 @@ import './assets/scripts/spoiler';
 
 import './assets/scripts/header';
 
-import '@fancyapps/fancybox';
+import './assets/scripts/fancybox';
 
 import './assets/scripts/aos';
 
