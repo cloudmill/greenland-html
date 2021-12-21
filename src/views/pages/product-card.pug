@@ -1,5 +1,7 @@
 extends ../layouts/master.pug
 
+include ../partials/advice-modal.pug
+
 block content
 
   include ../partials/_aside.pug
@@ -401,6 +403,7 @@ block content
                         +houzzIcon
 
         include ../partials/you-watched
-
+  
+  +advice-modal
 
     include ../partials/_footer.pug
