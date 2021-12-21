@@ -1,0 +1,35 @@
+mixin advice-modal 
+  .advice-modal(data-fancy-modal='adv1')
+    .advice-modal__container 
+      h3.advice-modal__title.title-h3
+        |Советы Green Land
+      .advice-modal__content 
+        p.advice-modal__text 
+          |Горшок для цветов - это не только емкость для размещения растения, но и предмет дизайна, украшение, а иногда и мебель или даже светильник. Правильно подобранные цветочные кашпо моментально преобразят помещение или ландшафт, в зависимости от поставленной задачи добавят ярких красок или, наоборот, сольются с окружающей средой, предоставив растениям возможность выйти на первый план.
+        p.advice-modal__text 
+          |В нашем каталоге представлен широкий ассортимент цветочных горшков и кашпо - различные материалы, размеры и формы, функция автополива. Вы можете выбрать подходящее кашпо самостоятельно, или наши менеджеры подберут варианты для вас.
+      .advice-modal__images 
+        img.advice-modal__img(src="assets/images/advice-1.jpg", alt="")
+        .advice-modal__grid 
+          img.advice-modal__img(src="assets/images/advice-2.jpg", alt="")
+          img.advice-modal__img(src="assets/images/advice-3.jpg", alt="")
+      .advice-modal__links
+        .ojects-projects-top.ojects-projects-top--advice
+          h3.ojects-projects-top__title.title-h3
+            |Статьи на эту тему
+          a.ojects-projects-top__link(href="")
+            |блог
+            +allProjectsSvg
+      ul.advice-modal__list 
+        - for (i = 0; i < 2; i++)
+          li.advice-modal__item.projects.projects--advice
+            a.projects__item(href="")
+              .projects__item-slider
+                .projects__item-slider-wrapper
+                  img.projects__item-img.is-active(src="assets/images/blog-1-2x.jpg", alt="")
+              .projects__item-caption
+                .news-card__date 18 ноября 2020
+                .epsilon.projects__item-name Как пересадить орхидею сорта фаленопсис
+                .projects__item-tags
+                  .projects__item-tag.text__super-tn.text--uppercase Уход за растениями
+                  .projects__item-tag.text__super-tn.text--uppercase Полезно знать
