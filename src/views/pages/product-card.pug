@@ -1,5 +1,7 @@
 extends ../layouts/master.pug
 
+include ../partials/advice-modal.pug
+
 block content
 
   include ../partials/_aside.pug
@@ -136,7 +138,7 @@ block content
                 a(href="") Условия доставки
 
             .product-card-info__tabs
-              .product-card-info__item Советуем использовать
+              .product-card-info__item(data-fancy-button='adv1') Советуем использовать
               .product-card-info__item Правила эксплуатации
               .product-card-info__item Визуальная размерность
 
@@ -403,6 +405,7 @@ block content
                         +houzzIcon
 
         include ../partials/you-watched
-
+  
+  +advice-modal
 
     include ../partials/_footer.pug

@@ -685,6 +685,8 @@
 }
 
 .ojects-projects-top {
+  $comp: &;
+
   display: flex;
   align-items: center;
   margin-bottom: 60px;
@@ -693,6 +695,18 @@
     margin-bottom: 20px;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  &--advice {
+    justify-content: space-between;
+    @media (max-width: ($breakpoint - 1px)) {
+      flex-direction: row;
+      align-items: center;
+    }
+    #{$comp}__title {
+      margin-bottom: 0;
+      width: auto;
+    }
   }
 
   &__title {

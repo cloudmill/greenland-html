@@ -133,7 +133,7 @@ mixin logo(fill, width=244, height=44)
 mixin header(className)
   header.header(class=className)
     .container
-      .row.header__row
+      .row.header__row(data-aos="fade-up")
         .col.col__xl-4
           a.header__logo(href="/")
             +logo

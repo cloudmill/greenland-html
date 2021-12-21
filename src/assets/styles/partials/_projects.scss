@@ -9,6 +9,35 @@
     padding: 60px 0 40px;
   }
 
+  &--advice {
+    padding: 0;
+    --gap: 20px;
+
+    #{$comp}__item {
+      @media (min-width: $breakpoint) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: var(--gap);
+      }
+    }
+    #{$comp}__item-slider {
+      margin-bottom: 20px;
+      @media (min-width: $breakpoint) {
+        margin-bottom: 0;
+      }
+    }
+    #{$comp}__item-caption {
+      display: block;
+    }
+    .news-card__date {
+      margin-top: 0;
+      margin-bottom: var(--gap);
+    }
+    #{$comp}__item-name {
+      margin-bottom: var(--gap);
+    }
+  }
+
   &__highlight {
     position: relative;
     z-index: 0;
