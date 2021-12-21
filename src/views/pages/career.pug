@@ -24,19 +24,20 @@ block content
               span.accent гармонии с собой 
               |и реализующих 
               span.accent дело жизни.
+
           .career-row
-            
             .career-row__txt.title-h3
               | Каждый в Green Land — 
               span.accent эксперт без страха и сомнений, 
+              br
               |с осознанием точек роста и
               br
               |стремлением к развитию,
               br
               |стремящийся 
               span.accent помочь окружающим, несущий красоту в массы.
-
-            img.career-row__img(src="assets/images/career-2.jpg", alt="")
+            .career-row__figure
+              img(src="assets/images/career-2.jpg", alt="")
 
           .career-row
             img.career-row__img(src="assets/images/career-3.jpg", alt="")
@@ -51,7 +52,7 @@ block content
               li.highlight-1 Активный
               li.highlight-2 Инициативный
               li.highlight-3 Действует быстро
-              li.highlight-4 Несет
+              li.highlight-4.line100 Несет
                 br
                 |ответственность
               li.highlight-5 Предлагает идеи
@@ -96,8 +97,8 @@ block content
                   .spoiler__contact
                     button.btn.cover__btn откликнуться
                     .designers-contacts__desc
-                      h4.designers-contacts__name Галина Пашукова
-                      .designers-contacts__position Менеджер по работе с дизайнерами
+                      .designers-contacts__name Галина Пашукова
+                      .designers-contacts__position Контактное лицо
                       .designers-contacts__contacts
                         span.designers-contacts__tel 8 911 924-50-84
                         span sv@green-land.ru
@@ -138,8 +139,8 @@ block content
                   .spoiler__contact
                     button.btn.cover__btn откликнуться
                     .designers-contacts__desc
-                      h4.designers-contacts__name Галина Пашукова
-                      .designers-contacts__position Менеджер по работе с дизайнерами
+                      .designers-contacts__name Галина Пашукова
+                      .designers-contacts__position Контактное лицо
                       .designers-contacts__contacts
                         span.designers-contacts__tel 8 911 924-50-84
                         span sv@green-land.ru
@@ -180,8 +181,8 @@ block content
                   .spoiler__contact
                     button.btn.cover__btn откликнуться
                     .designers-contacts__desc
-                      h4.designers-contacts__name Галина Пашукова
-                      .designers-contacts__position Менеджер по работе с дизайнерами
+                      .designers-contacts__name Галина Пашукова
+                      .designers-contacts__position Контактное лицо
                       .designers-contacts__contacts
                         span.designers-contacts__tel 8 911 924-50-84
                         span sv@green-land.ru
@@ -222,43 +223,49 @@ block content
                   .spoiler__contact
                     button.btn.cover__btn откликнуться
                     .designers-contacts__desc
-                      h4.designers-contacts__name Галина Пашукова
-                      .designers-contacts__position Менеджер по работе с дизайнерами
+                      .designers-contacts__name Галина Пашукова
+                      .designers-contacts__position Контактное лицо
                       .designers-contacts__contacts
                         span.designers-contacts__tel 8 911 924-50-84
                         span sv@green-land.ru
 
         .designers-contacts
           .designers-contacts__row
-            .career-contacts-txt 
+            .career-contacts-txt.only-desktop
               |Мы всегда ищем талантливых специалистов и стажеров. 
               br 
               |Если сейчас нет активных вакансий, присылайте свое резюме, и, возможно, мы найдем для вас интересные проекты.
+            .career-contacts-txt.only-mobile
+              |Мы всегда ищем талантливых специалистов и стажеров. Если сейчас нет активных вакансий, присылайте свое резюме, и, возможно, мы найдем для вас интересные проекты.
             .designers-contacts__card.career-contacts-card
               .designers-contacts__img
                 img(src="assets/images/designer-contacts-1.png", alt="")
               .designers-contacts__desc
-                h4.designers-contacts__name Галина Пашукова
+                .designers-contacts__name Галина Пашукова
                 .designers-contacts__position HR менеджер
                 .designers-contacts__contacts
                   span.designers-contacts__tel 8 812 209-18-84
                   span ga@green-land.ru
 
         .career-form
-          form.career-form__form
-            label
-              input.designers-form__input(placeholder="Имя")
-            label
-              input.designers-form__input(placeholder="E-mail")
-            label
-              input.designers-form__input(placeholder="Телефон")
-            label
+          form.career-form__form(data-parsley-validate)
+            label.designers-form__label
+              .placeholder-active Имя*
+              input.designers-form__input(placeholder="Имя*" required)
+            label.designers-form__label
+              .placeholder-active E-mail*
+              input.designers-form__input(placeholder="E-mail*" required)
+            label.designers-form__label
+              .placeholder-active Телефон*
+              input.designers-form__input(placeholder="Телефон*" required)
+            label.designers-form__label
+              .placeholder-active Немного о себе
               textarea.designers-form__input(name="" cols="30" rows="3" placeholder="Немного о себе")
             label.form__add-file
               |прикрепить резюме
               input(type="file" multiple) 
             label.designers-form__checkbox
-              input(type="checkbox"  id="checkbox")
+              input(type="checkbox"  id="checkbox" required)
               .checkbox
               .designers-form__checkbox-txt Я соглашаюсь на обработку
                 br
