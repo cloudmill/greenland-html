@@ -29,10 +29,14 @@
 
 .faq-ask {
   white-space: nowrap;
-  width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+  
   @media (min-width: $breakpoint) {
+    width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
     position: sticky;
     position: -webkit-sticky;
     top: 80px;
+  }
+  @media (max-width: ($breakpoint - 1px)) {
+    border-radius: 0px 10px;
   }
 }

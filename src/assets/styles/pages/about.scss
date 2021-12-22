@@ -60,6 +60,7 @@
       position: relative;
       font-family: $base-font-family-serif;
       font-style: italic;
+      white-space: nowrap;
 
       &::before {
         position: absolute;

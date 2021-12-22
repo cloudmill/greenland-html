@@ -8,6 +8,12 @@
     margin-right: -10px;
   }
 
+  &__col {
+    .catalog-card {
+      height: auto;
+    }
+  }
+
   &__col:nth-child(1) {
     width: calc(#{$col-part-d} * 2);
     flex: none;
@@ -81,16 +87,23 @@
     }
 
     .catalog-card__buttons-item {
-      width: 30px;
-      height: 30px;
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 30px;
+        height: 30px;
 
-      &::before, &::after {
-        height: 11px;
+        &::before, &::after {
+          height: 11px;
+        }
       }
     }
   }
   .catalog-card__layer {
     padding: 20px 20px 0 20px;
+  }
+  .catalog-card__ttl {
+    @media (min-width: $breakpoint) {
+      font-size: 18px;
+    }
   }
 }
 

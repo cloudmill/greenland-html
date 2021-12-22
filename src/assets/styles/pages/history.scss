@@ -23,6 +23,7 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-bottom: 40px;
+      text-indent: calc(#{$col-width-m} / 3 * 2);
     }
   
     span {

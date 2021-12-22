@@ -15,9 +15,9 @@ block content
         h1.title-h1.about-title Условия работы с дизайнерами
 
         .about-tabs
-          a.about-tabs__item.about-tabs__item--active(href="") Условия работы с дизайнерами
-          a.about-tabs__item(href="") Условия работы для объектов
-          a.about-tabs__item(href="") Условия работы для дистрибьютеров и оптовых покупателей
+          a.about-tabs__item.about-tabs__item--active(href="") Для дизайнеров
+          a.about-tabs__item(href="") Для объектов
+          a.about-tabs__item(href="") Для дистрибьютеров
 
         //- .about-tabs-mob
         //-   a.about-tabs__item.about-tabs__item--active(href="") Для дизайнеров
@@ -29,9 +29,20 @@ block content
           .mission__slide
             .mission__main
               .mission__slider-underlay
-              .mission__heading.designers-highlight
-                .
-                  Дизайнерам интерьера #[br] архитекторным бюро #[br] #[span.accent  #[span.designers-highlight-1 декораторам,] #[br] #[span.designers-highlight-2 фитодизайнерам] #[br] #[span.designers-highlight-3 и озеленителям]]
+              .mission__heading.designers-highlight.title-h3
+                //- .
+                //-   Дизайнерам интерьера #[br] архитекторным бюро #[br] #[span.accent  #[span.designers-highlight-1 декораторам,] #[br] #[span.designers-highlight-2 фитодизайнерам] #[br] #[span.designers-highlight-3 и озеленителям]]
+
+                |Дизайнерам интерьера
+                br
+                |архитекторным бюро 
+                br
+                span.designers-highlight-1 декораторам,
+                br
+                span.designers-highlight-2 фитодизайнерам
+                br
+                span.designers-highlight-3 и озеленителям
+
             img.about-mission__img(src="assets/images/conditions-1.jpg" alt="")
 
         .designers-brands
@@ -129,30 +140,24 @@ block content
             .mission__main
               .mission__slider-underlay
               .designers-form__container
-                form.designers-form__form
-                  label.designers-form__label
-                    input.designers-form__input(placeholder="Имя")
-                  label.designers-form__label
-                    input.designers-form__input(placeholder="E-mail")
-                  label.designers-form__label
-                    input.designers-form__input(placeholder="Телефон")
-                  label.designers-form__checkbox
-                    input(type="checkbox"  id="checkbox")
-                    .checkbox
-                    .designers-form__checkbox-txt Я соглашаюсь на обработку
-                      br
-                      a(href="") персональных данных
-                  button.btn.cover__btn(type="submit") отправить
+                include ../partials/form-designer
             .about-mission__img.designers-form__imgs
               img(src="assets/images/designer-form-1.jpg", alt="")
               img(src="assets/images/designer-form-2.jpg", alt="")
 
         .designers-products
-          h3.designers-products__title.title-h3
+
+          h3.designers-products__title.title-h3.only-desktop
             |Наша продукция 
             span не выбивается 
             br
             |из общего дизайна интерьера
+
+          h3.designers-products__title.title-h3.only-mobile
+            |Наша продукция 
+            span не выбивается 
+            |из общего дизайна интерьера
+
           .designers-products-filter
             ul
               li.filter-tab.active-tab
@@ -191,21 +196,32 @@ block content
                           .catalog-card__pagination-item
                         .catalog-card__buttons
                           button.catalog-card__buttons-item
-                            img(src="assets/images/catalog-buttons-1.svg", alt="")
+                            +cardSettingsBtn
                           button.catalog-card__buttons-item
-                            img(src="assets/images/catalog-buttons-2.svg", alt="")
+                            +cardFavoriteBtn
                       img.catalog-card__img(src=`assets/images/catalog-${i + 1}.png`, alt="")
                     a.catalog-card__bottom(href="")
                       .catalog-card__ttl Высокое напольное кашпо MUSCHEL
                       .catalog-card__color Серебро
                       .catalog-card__price 5 292 ₽
+                      .catalog-card__buttons
+                        button.catalog-card__buttons-item
+                          +cardSettingsBtn
+                        button.catalog-card__buttons-item
+                          +cardFavoriteBtn
 
         .designers-showrooms
-          h3.designers-showrooms__title.title-h3
+
+          h3.designers-showrooms__title.title-h3.only-desktop
             |Шоу-румы в Москве и Санкт-Петербурге — 
             br
             |возможность 
             span посмотреть товар перед заказом
+
+          h3.designers-showrooms__title.title-h3.only-mobile
+            |Шоу-румы в Москве и Санкт-Петербурге — возможность 
+            span посмотреть товар перед заказом
+
           .designers-products-filter
             ul
               //- -

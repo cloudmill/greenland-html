@@ -378,6 +378,7 @@
   @media (max-width: ($breakpoint - 1px)) {
     margin: 40px 0;
     width: 100%;
+    text-indent: calc(#{$col-width-m} / 3 * 2);
   }
 
   .highlight-1, .highlight-2, .highlight-3 {
@@ -1020,6 +1021,7 @@
 
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
+      text-indent: calc(#{$col-width-m} / 3 * 2);
     }
   }
   &__desc {
