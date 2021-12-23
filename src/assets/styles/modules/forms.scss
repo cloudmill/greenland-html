@@ -242,7 +242,9 @@
   // bottom: -20px;
 
   &#parsley-id-multiple-checkbox {
-    bottom: 15px;
+    @media (min-width: $breakpoint) {
+      bottom: 15px;
+    }
   }
 }
 

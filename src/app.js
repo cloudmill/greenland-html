@@ -161,3 +161,28 @@ import LocomotiveScroll from 'locomotive-scroll';
     }
   });
 }
+
+// переключение вариантов доставки в чекауте
+
+{
+  $(() => {
+    const filter = $(".history-years__list");
+    const filterBtn = filter.find("li");
+    const addressItem = $(".history-years__list-desc-item");
+
+    if (filter.length) {
+      filter.on("click", (event) => {
+        if ($(event.target).closest(filterBtn).length) {
+          const activeBtn = $(event.target).closest(filterBtn);
+          const indexBtn = filterBtn.index(activeBtn);
+
+          filterBtn.removeClass("history-years__list--active");
+          addressItem.removeClass("is-active");
+
+          activeBtn.addClass("history-years__list--active");
+          $(addressItem[indexBtn]).addClass("is-active");
+        }
+      });
+    }
+  });
+}

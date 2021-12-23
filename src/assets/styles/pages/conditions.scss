@@ -93,6 +93,12 @@
       display: flex;
       justify-content: space-between;
       overflow-x: scroll;
+      @include scrollbar-hidden;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        margin: 0 -10px;
+        padding: 0 10px;
+      }
     }
 
     &-img {

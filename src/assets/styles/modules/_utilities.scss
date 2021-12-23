@@ -103,6 +103,12 @@ button.close {
   font-size: 22px;
 }
 
+.fz14-mob {
+  @media (max-width: ($breakpoint - 1px)) {
+    font-size: 14px;
+  }
+}
+
 .line100 {
   line-height: 100%;
 }

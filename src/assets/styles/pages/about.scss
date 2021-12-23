@@ -13,6 +13,11 @@
 .about-tabs {
   display: flex;
 
+  overflow-x: auto;
+  margin: 0 -10px;
+  padding: 0 10px;
+  @include scrollbar-hidden;
+
   &__item {
     padding-bottom: 10px;
     border-bottom: 1px solid $green-extra-lighten;
