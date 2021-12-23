@@ -15,9 +15,9 @@ block content
         h1.about-title.title-h1 Блог
 
         //- .brands-list.news-filter
-        .blog-filter
+        .blog-filter.margin
           ul
-            li.filter-tab.active-tab Все
+            li.filter-tab.small.active-tab Все
             -
               var items = [
                 'Уход за растенями',
@@ -31,7 +31,7 @@ block content
                 'Полезное',
               ]
             each item in items
-              li.filter-tab
+              li.filter-tab.small
                 |!{item}
 
         .news-cols

@@ -1,5 +1,13 @@
 .blog-filter {
 
+  &.margin {
+    margin: 20px 0 -20px;
+
+    @media (min-width: $breakpoint) {
+      margin: 50px 0 -30px;
+    }
+  }
+
   ul {
     display: flex;
     flex-wrap: wrap;

@@ -285,6 +285,10 @@
       background: $green;
       // border: 1px solid rgba($white-lighten, 1);
 
+      .footer__download-title, .footer__download-caption {
+        color: $white-lighten;
+      }
+
       .footer__download-icon-wrap {
         // border-left: 1px solid transparent;
         svg {
@@ -296,6 +300,7 @@
     &-title {
       margin-bottom: 2px;
       font-size: 10px;
+      transition: .5s;
 
       @media (min-width: $breakpoint) {
         font-size: 12px;
@@ -304,6 +309,7 @@
 
     &-caption {
       font-size: 8px;
+      transition: .5s;
 
       @media (min-width: $breakpoint) {
         font-size: 10px;
@@ -327,7 +333,7 @@
         border-left: 1px solid rgba($white-lighten, 0.15);
 
         svg {
-          opacity: .15;
+          
           transition: .5s;
         }
       }
@@ -341,6 +347,10 @@
     path:nth-child(2) {
       fill: #fff;
     }
+  }
+
+  .footer__download-icon-wrap svg {
+    opacity: .15;
   }
 }
 
