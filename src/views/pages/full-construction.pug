@@ -15,7 +15,7 @@ block content
           
           +breadcrumbs(['озеленение', 'Готовые решения'])
 
-          .lanscaping-first-screen__block
+          .lanscaping-first-screen__block(data-aos="fade-up")
             h1.title-h1.about-title Озеленение под ключ
             button.btn Запросить консультацию менеджера
 
@@ -25,7 +25,7 @@ block content
 
         .landscaping-block-white
 
-          .landscaping-block-white__col
+          .landscaping-block-white__col(data-aos="fade-up")
 
             .title-h3.landscaping-title--mobile Реализуем проекты любой 
               br
@@ -35,13 +35,13 @@ block content
               br
               |вертикального озеленения.
 
-            img(src="assets/images/full-construction-1.jpg", alt="")
+            img(src="assets/images/full-construction-1.jpg", alt="" data-aos="fade-up")
 
             .landscaping-block-white__price от 5 000 ₽*
 
           .landscaping-block-white__col
 
-            .title-h3.landscaping-title--desktop Реализуем проекты любой 
+            .title-h3.landscaping-title--desktop(data-aos="fade-up") Реализуем проекты любой 
               br
               |сложности, от пересадки
               br
@@ -49,11 +49,11 @@ block content
               br
               |вертикального озеленения.
 
-            .title-h3.landscaping-title--mobile Работаем с живыми, искусственными и стабилизированными растениями.
+            .title-h3.landscaping-title--mobile(data-aos="fade-up") Работаем с живыми, искусственными и стабилизированными растениями.
 
-            img(src="assets/images/full-construction-2.jpg", alt="")
+            img(src="assets/images/full-construction-2.jpg", alt="" data-aos="fade-up")
 
-          .landscaping-block-white__col
+          .landscaping-block-white__col(data-aos="fade-up")
 
             .title-h3.landscaping-title--desktop Работаем с живыми, искусственными и стабилизированными растениями.
 
@@ -89,36 +89,36 @@ block content
               ]
 
             each item in items
-              .landscaping-block-green__item
+              .landscaping-block-green__item(data-aos="fade-up")
                 .title-h4 #{item.title}
                 div #{item.desc}
-          .landscaping-block-green__img
+          .landscaping-block-green__img(data-aos="fade-up")
             img(src="assets/images/full-construction-3.jpg", alt="")
 
         .landscaping-numbers
-            .landscaping-numbers-col
+            .landscaping-numbers-col(data-aos="fade-up")
               .landscaping-numbers-col__ttl 200
                 br
                 |проектов
               .landscaping-numbers-col__txt реализованных
-            .landscaping-numbers-col
+            .landscaping-numbers-col(data-aos="fade-up")
               .landscaping-numbers-col__ttl 30 лет
               .landscaping-numbers-col__txt мы в теме озеленения
-            .landscaping-numbers-col
+            .landscaping-numbers-col(data-aos="fade-up")
               .landscaping-numbers-col__ttl 50+
                 br
                 |специалистов
               .landscaping-numbers-col__txt в команде Green Land
 
         .designers-showrooms
-            .ojects-projects-top
+            .ojects-projects-top(data-aos="fade-up")
               h2.ojects-projects-top__title.title-h2
                 |Выполненные проекты
               a.ojects-projects-top__link(href="")
                 |все проекты
                 //- img(src="assets/images/objects-arrow.png", alt="")
                 +allProjectsSvg
-            .designers-products-filter
+            .designers-products-filter(data-aos="fade-up")
               ul
                 li.filter-tab.active-tab Входные группы
                 -
@@ -131,7 +131,7 @@ block content
                   li.filter-tab
                     |#{i}
 
-            .projects__slider.swiper-container(data-projects-slider="")
+            .projects__slider.swiper-container(data-projects-slider="" data-aos="fade-up")
               .swiper-wrapper
                 .swiper-slide.projects__slide
                   .projects__item
@@ -196,7 +196,7 @@ block content
                 .projects-controls-container
                   +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
 
-        .landscaping-contacts
+        .landscaping-contacts(data-aos="fade-up")
           .contacts-cards__ttl.title-h2 Профессионалы Green Land
           .contacts-cards
             - for (i=0; i<4; i++)
@@ -207,7 +207,7 @@ block content
                 //- .contacts-cards__tel 8 812 209-18-84
 
 
-        .designers-form.about-mission
+        .designers-form.about-mission(data-aos="fade-up")
           h2.designers-form__title.title-h2 Оставить заявку на абонемент
           .designers-form__row
             .mission__main

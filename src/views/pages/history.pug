@@ -14,14 +14,14 @@ block content
 
         h1.title-h1.about-title История
 
-        .about-tabs
+        .about-tabs(data-aos="fade-up")
           a.about-tabs__item(href="") О компании
           a.about-tabs__item.about-tabs__item--active(href="") История
           a.about-tabs__item(href="") Бренды
 
         .history-desc
         
-          .history-desc__main.only-desktop
+          .history-desc__main.only-desktop(data-aos="fade-up")
             |Green Land 
 
             span.highlights-1 в 1989 году начинала свой путь 
@@ -36,7 +36,7 @@ block content
             br
             span.highlights-2 предметы интерьера.
 
-          .history-desc__main.only-mobile
+          .history-desc__main.only-mobile(data-aos="fade-up")
             |Green Land 
 
             span.highlights-mob-1 в 1989 году 
@@ -47,14 +47,14 @@ block content
             span горшки для нас — это не просто емкость для растений, а 
             span.highlights-2 предметы интерьера.
 
-          .history-desc__item
+          .history-desc__item(data-aos="fade-up")
             |Именно это подтолкнуло компанию 
             span к развитию и расширению ассортимента
             |. Мы расширили наш бизнес 
             span с упором на дизайнерское озеленение
             |.
 
-          .history-desc__item
+          .history-desc__item(data-aos="fade-up")
             |Сейчас мы не просто торговая компания, 
             span мы помогаем нашим клиентам и партнерам раскрывать потенциал пространства через озеленение, 
             |предлагая широкий ассортимент товара, а также консультации по дизайну интерьера и озеленению пространства.
@@ -63,22 +63,22 @@ block content
 
           .history-years__row
 
-            .history-years__item
+            .history-years__item(data-aos="fade-up")
               .history-years__year 1989
               .history-years__arrow
               .history-years__desc.fz14-mob В 1989-м году на потребительский рынок Ленинграда выходит компания Green Land, специализирующаяся на продаже свежесрезанных цветов и горшечных растений. Основатель бизнеса - Александр Гущин - делает ставку на необычное: продукция доставляется напрямую из Европы.
 
-            .history-years__item
+            .history-years__item(data-aos="fade-up")
               .history-years__year 1993
               .history-years__arrow
               .history-years__desc Вскоре деятельность Green Land оказывается настолько успешной, что у петербуржцев появляются запросы на цветы: метровые розы и диковинные орхидеи компания начинает возить фурами.
 
-            .history-years__item
+            .history-years__item(data-aos="fade-up")
               .history-years__year 1998
               .history-years__arrow.arrow-mobile
               .history-years__desc Дефолт 1998 года вносит свои корректировки в бизнес, продажу свежесрезанных цветов и горшечных растений приходится остановить.
 
-          .history-years__row
+          .history-years__row(data-aos="fade-up")
 
             .history-years__year 2000
             .history-years__arrow
@@ -106,7 +106,7 @@ block content
 
           .history-years__row
 
-            .history-years__item
+            .history-years__item(data-aos="fade-up")
               .history-years__year 2020
               .history-years__arrow
               .history-years__desc.padding-right
@@ -114,7 +114,7 @@ block content
                 br
                 |Достигнув многого, Green Land продолжает двигаться к целям и большим результатам. Поэтому 2020 года были сформулировали новые стандарты работы, объединенные в концепцию “Добавим зелень!”. Данная бизнес-стратегия предполагает, что Green Land берет на себя роль компании, задающей высокие стандарты озеленения с акцентом на бережное отношение к окружающей среде.
 
-            .history-years__item
+            .history-years__item(data-aos="fade-up")
               .history-years__year 2021
               .history-years__arrow.arrow-mobile
               .history-years__desc
@@ -122,10 +122,11 @@ block content
                 br
                 |Достигнув многого, Green Land продолжает двигаться к целям и большим результатам. Поэтому 2020 года были сформулировали новые стандарты работы, объединенные в концепцию “Добавим зелень!”. Данная бизнес-стратегия предполагает, что Green Land берет на себя роль компании, задающей высокие стандарты озеленения с акцентом на бережное отношение к окружающей среде.
 
-        a.about-history(href="")
-          .title-h3 Бренды
-          .about-history__circle
-            +aboutBottomArrow
+        .aos(data-aos="fade-up")
+          a.about-history(href="")
+            .title-h3 Бренды
+            .about-history__circle
+              +aboutBottomArrow
 
 
     include ../partials/_footer.pug

@@ -15,11 +15,11 @@ block content
         .news-cols
           .news-col-links.news-col-links--short.blog-sidebar
             .news-col-links__container
-              a.news-back-link(href="")
+              a.news-back-link(href="" data-aos="fade-up")
                 +arrow('white', '#65BA7F', 'left', '15', '13', '46')
                 |Все посты
 
-              .news-social
+              .news-social(data-aos="fade-up")
                 .news-social__title
                   span Следите 
                   |за нами
@@ -36,7 +36,7 @@ block content
                     li
                       a(href="") #{item}
 
-              .news-subscribe
+              .news-subscribe(data-aos="fade-up")
                 .news-social__title
                   span Подпишитесь 
                   |на нашу
@@ -54,11 +54,11 @@ block content
                   button.btn.cover__btn(type="submit") отправить
 
           .news-single-main.blog-page-main
-            h1.about-title.title-h1 Как пересадить монстеру
+            h1.about-title.title-h1(data-aos="fade-up") Как пересадить монстеру
 
             img.blog-image-main(src="assets/images/blog-2-2x.jpg", alt="")
 
-            .blog-info
+            .blog-info(data-aos="fade-up")
               .blog-info-col
                 .blog-info-col__ttl Категории
                 .blog-info-col__item #Уход за растениями
@@ -70,7 +70,7 @@ block content
                 .blog-info-col__ttl время чтения
                 .blog-info-col__item 15 минут
 
-            .blog-body
+            .blog-body(data-aos="fade-up")
               p Если корни фаленопсиса заполнили собой весь горшок и вытеснили грунт, значит – пришло время для пересадки. Дождитесь, пока растение отцветёт и приступайте к делу. 5 простых шагов помогут вам пересадить фаленопсис правильно и без хлопот!
               h3.title-h3 Шаг 1. Вынимаем фаленопсис из горшка
               p При пересадке фаленопсиса самое важное – свести к минимуму стресс для хрупких корней. Поэтому для начала полейте цветок и немного подождите: остатки земли хорошо размякнут и извлечь корни будет проще. Если вынуть корни аккуратно не получается, осторожно разрежьте горшок. Очень лёгкими и деликатными потряхивающими движениями освободите корни от остатков старого грунта.
@@ -88,14 +88,14 @@ block content
               p Во-вторых, рекомендуем поместить фаленопсис в полиэтиленовый пакет для создания особого микроклимата. При этом не забывайте устраивать растению периодические проветривания и не допускайте попадания на пакет прямых солнечных лучей. 
 
         .other-news
-          .other-news__top
+          .other-news__top(data-aos="fade-up")
             h2.title-h2 вам может понравиться
 
             .other-news__controls
               +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-other-slider-prev="")
               +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-other-slider-next="")
 
-          .swiper-container(data-other-news="")
+          .swiper-container(data-other-news="" data-aos="fade-up")
             .swiper-wrapper
 
               a.projects__item.blog-card.swiper-slide(href="")

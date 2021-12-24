@@ -15,7 +15,7 @@ block content
         +breadcrumbs(['Цветочные горшки и кашпо', 'Пластиковые горшки и кашпо', 'Уличный вазон KATO'])
 
         .product-card-top
-          .product-card-gallery
+          .product-card-gallery(data-aos="fade-up")
             .product-card-gallery__column.swiper-container
 
               button.swiper-button-prev
@@ -58,18 +58,18 @@ block content
 
           .product-card-info
 
-            .catalog-card__labels
+            .catalog-card__labels(data-aos="fade-up")
               .catalog-card__labels-item Скидки
               .catalog-card__labels-item Новинки
 
-            h1.title-h1.about-title Высокое напольное кашпо MUSCHEL
+            h1.title-h1.about-title(data-aos="fade-up") Высокое напольное кашпо MUSCHEL
 
             .product-card-info__row1
-              .product-card-info__item
+              .product-card-info__item(data-aos="fade-up")
                 span цвет
                 span Terracotta
 
-              .product-card-info__item
+              .product-card-info__item(data-aos="fade-up")
                 span бренд
                 span
                   |Pottery Pots
@@ -77,7 +77,7 @@ block content
                     +tooltipIco
                     .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
 
-              .product-card-info__item
+              .product-card-info__item(data-aos="fade-up")
                 span материалы
                 span
                   |Файбергласс
@@ -85,7 +85,7 @@ block content
                     +tooltipIco
                     .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
 
-              .product-card-info__item
+              .product-card-info__item(data-aos="fade-up")
                 span Страна
                 span
                   |Нидерланды
@@ -93,7 +93,7 @@ block content
                     +tooltipIco
                     .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
 
-              .product-card-info__item
+              .product-card-info__item(data-aos="fade-up")
                 span серия
                 span
                   |Hi-Tech
@@ -101,7 +101,7 @@ block content
                     +tooltipIco
                     .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
 
-              .product-card-info__item
+              .product-card-info__item(data-aos="fade-up")
                 span Крепление
                 span
                   |Напольное
@@ -117,45 +117,45 @@ block content
 
             .product-card-info__row2
               .product-card-info__col
-                .product-card-info__item
+                .product-card-info__item(data-aos="fade-up")
                   img(src="assets/images/icons/product-about-1.svg", alt="")
                   |Морозостойкая
-                .product-card-info__item
+                .product-card-info__item(data-aos="fade-up")
                   img(src="assets/images/icons/product-about-2.svg", alt="")
                   |Ударопрочная
-                .product-card-info__item
+                .product-card-info__item(data-aos="fade-up")
                   img(src="assets/images/icons/product-about-3.svg", alt="")
                   |Устойчив к осадкам
-                .product-card-info__item
+                .product-card-info__item(data-aos="fade-up")
                   img(src="assets/images/icons/product-about-4.svg", alt="")
                   |Устойчивость к ультрофилету
 
-              .product-card-info__col
+              .product-card-info__col(data-aos="fade-up")
                 a(href="") Особые условия для
                   br
                   |юридических лиц
                 a(href="") Условия оплаты
                 a(href="") Условия доставки
 
-            .product-card-info__tabs
+            .product-card-info__tabs(data-aos="fade-up")
               .product-card-info__item(data-fancy-button='adv1') Советуем использовать
               .product-card-info__item Правила эксплуатации
               .product-card-info__item Визуальная размерность
 
-            .product-card-info__col.only-mobile
+            .product-card-info__col.only-mobile(data-aos="fade-up")
                 a(href="") Особые условия для юридических лиц
                 a(href="") Условия оплаты
                 a(href="") Условия доставки
 
             .product-card-buttons
 
-              .product-card-buttons__container
+              .product-card-buttons__container(data-aos="fade-up")
                 button.btn-white купить в 1 клик
                 button.btn
                   +basketIco
                   |в корзину
 
-              .catalog-card__buttons
+              .catalog-card__buttons(data-aos="fade-up")
                 button.catalog-card__buttons-item
                   +cardSettingsBtn
                 button.catalog-card__buttons-item
@@ -166,7 +166,7 @@ block content
 
           .product-card-aside
 
-            .product-card-links
+            .product-card-links(data-aos="fade-up")
               .product-card-links__item
                 a(href="") Размеры
               .product-card-links__item
@@ -180,7 +180,7 @@ block content
 
           .product-card-main
 
-            .product-card-size
+            .product-card-size(data-aos="fade-up")
               h3.title-h3 размеры
 
               .product-size-table
@@ -220,14 +220,14 @@ block content
                         |в корзину
           
             .product-card-recommend.designers-products
-              .designers-products__top
+              .designers-products__top(data-aos="fade-up")
                 h3.title-h3
                   |С этим покупают
                 .designers-products__controls(data-catalog-slider-controls="")
                   .arrows.cover__slider-arrows
                     +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-catalog-slider-prev="")
                     +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-catalog-slider-next="")
-              .designers-products__catalog
+              .designers-products__catalog(data-aos="fade-up")
                 .swiper-container(data-catalog-slider="")
                   .swiper-wrapper
                     - for (i=0; i<5; i++)
@@ -259,13 +259,13 @@ block content
                               +cardFavoriteBtn
 
             .product-card-desc
-              h3.title-h3 Описание
+              h3.title-h3(data-aos="fade-up") Описание
 
-              .product-card-txt
+              .product-card-txt(data-aos="fade-up")
                 p Горшок для цветов - это не только емкость для размещения растения, но и предмет дизайна, украшение, а иногда и мебель или даже светильник. Правильно подобранные цветочные кашпо моментально преобразят помещение или ландшафт, в зависимости от поставленной задачи добавят ярких красок или, наоборот, сольются с окружающей средой, предоставив растениям возможность выйти на первый план.
                 p В нашем каталоге представлен широкий ассортимент цветочных горшков и кашпо - различные материалы, размеры и формы, функция автополива. Вы можете выбрать подходящее кашпо самостоятельно, или наши менеджеры подберут варианты для вас.
 
-              .product-card-tags
+              .product-card-tags(data-aos="fade-up")
                 .product-card-tags__ttl Найти по тегам
                 .product-card-tags__item #для улицы
                 .product-card-tags__item #для САДА
@@ -274,13 +274,13 @@ block content
                 .product-card-tags__item #для КВАРТИРЫ
                 .product-card-tags__item #для БАЛКОНА
 
-              .product-desc-controls(data-product-desc-controls="")
+              .product-desc-controls(data-product-desc-controls="" data-aos="fade-up")
                   .projects-controls-container
                     +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-product-desc-prev="")
                   .projects-controls-container
                     +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-product-desc-next="")
 
-              .product-desc-slider.swiper-container(data-product-desc-slider="")
+              .product-desc-slider.swiper-container(data-product-desc-slider="" data-aos="fade-up")
                 .swiper-wrapper
                   .swiper-slide
                     img(src="assets/images/product-card-1.jpg", alt="")
@@ -289,7 +289,7 @@ block content
 
 
             .designers-showrooms.product-projects
-              .ojects-projects-top
+              .ojects-projects-top(data-aos="fade-up")
                 h2.ojects-projects-top__title.title-h2
                   |Реализовано в проектах
                 a.ojects-projects-top__link(href="")
@@ -305,7 +305,7 @@ block content
 
               
 
-              .projects__slider.swiper-container(data-product-projects-slider="")
+              .projects__slider.swiper-container(data-product-projects-slider="" data-aos="fade-up")
                 .swiper-wrapper
                   .swiper-slide.projects__slide
                     .projects__item
@@ -368,11 +368,11 @@ block content
 
 
             .designers-contacts.product-card-contacts
-              .designers-contacts__top
+              .designers-contacts__top(data-aos="fade-up")
                 h3.designers-contacts__title.title-h3 Задать Вопрос
 
               .designers-contacts__row
-                .designers-contacts__card
+                .designers-contacts__card(data-aos="fade-up")
                   .designers-contacts__img
                     img(src="assets/images/designer-contacts-1.png", alt="")
                   .designers-contacts__desc
@@ -385,7 +385,7 @@ block content
                     .contacts-btn.btn-white
                       |обратная связь
                     
-                .product-contact-col
+                .product-contact-col(data-aos="fade-up")
 
                   p Если нужна помощь в подборе продукции, вы можете позвонить нам или оставить заявку на обратный звонок
 

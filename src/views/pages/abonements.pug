@@ -15,7 +15,7 @@ block content
           
           +breadcrumbs(['озеленение', 'Абонементы на уход за растениями'])
 
-          .lanscaping-first-screen__block
+          .lanscaping-first-screen__block(data-aos="fade-up")
             h1.title-h1.about-title Абонементы на уход
               br
               |за растениями
@@ -26,7 +26,7 @@ block content
           img.lanscaping-first-screen__background.only-desktop(src="assets/images/abonements-main.jpg", alt="")
           img.lanscaping-first-screen__background.only-mobile(src="assets/images/abonements-main-mob.jpg", alt="")
 
-        .lanscaping-solutions-txt.abonements-highlights.title-h3.only-desktop
+        .lanscaping-solutions-txt.abonements-highlights.title-h3.only-desktop(data-aos="fade-up")
           |Доверьте заботу о своих зелёных питомцах 
           br
           span.highlight-1 профессионалам
@@ -39,7 +39,7 @@ block content
           br
           span.accent красотой долгие годы.
 
-        .lanscaping-solutions-txt.abonements-highlights.title-h3.only-mobile
+        .lanscaping-solutions-txt.abonements-highlights.title-h3.only-mobile(data-aos="fade-up")
           |Доверьте заботу о своих 
           br
           |зелёных питомцах 
@@ -56,7 +56,7 @@ block content
           br
           span.highlight-3 их красотой долгие годы.
 
-        .abonements-slider.swiper-container(data-abonements-slider)
+        .abonements-slider.swiper-container(data-abonements-slider data-aos="fade-up")
           .swiper-wrapper
             .swiper-slide
               .abonements-slide
@@ -92,7 +92,7 @@ block content
                       br
                       |химикаты входят в стоимость
 
-        .landscaping-contacts
+        .landscaping-contacts(data-aos="fade-up")
           .contacts-cards__ttl.title-h2 Профессионалы Green Land
           .contacts-cards
             - for (i=0; i<4; i++)
@@ -103,7 +103,7 @@ block content
                 //- .contacts-cards__tel 8 812 209-18-84
 
 
-        .designers-form.about-mission
+        .designers-form.about-mission(data-aos="fade-up")
           h2.designers-form__title.title-h2 Оставить заявку на абонемент
           .designers-form__row
             .mission__main

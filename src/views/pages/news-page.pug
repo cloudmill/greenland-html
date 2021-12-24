@@ -15,12 +15,12 @@ block content
         .news-cols
           .news-col-links.news-col-links--short
             .news-col-links__container
-              a.news-back-link(href="")
+              a.news-back-link(href="" data-aos="fade-up")
                 +arrow('white', '#65BA7F', 'left', '15', '13', '46')
                 |Все новости
 
               .news-social
-                .news-social__title
+                .news-social__title(data-aos="fade-up")
                   span Следите 
                   |за нами
                 ul.news-social__list
@@ -33,16 +33,16 @@ block content
                       'наш блог',
                     ]
                   each item in items
-                    li
+                    li(data-aos="fade-up")
                       a(href="") #{item}
 
               .news-subscribe
-                .news-social__title
+                .news-social__title(data-aos="fade-up")
                   span Подпишитесь 
                   |на нашу
                   br
                   |рассылку
-                form.designers-form__form
+                form.designers-form__form(data-aos="fade-up")
                   label.designers-form__label
                     input.designers-form__input(placeholder="E-mail")
                   label.designers-form__checkbox
@@ -54,26 +54,26 @@ block content
                   button.btn.cover__btn(type="submit") отправить
 
           .news-single-main
-            h1.about-title.title-h1 Приехали и едут: редкие товары на складе
+            h1.about-title.title-h1(data-aos="fade-up") Приехали и едут: редкие товары на складе
 
-            .news-single__info
+            .news-single__info(data-aos="fade-up")
               .news-single__date 18 ноября 2020
               .news-single__tags
                 .news-single__tags-item #компания
                 .news-single__tags-item #продукция
 
-            .news-single__txt
+            .news-single__txt(data-aos="fade-up")
               p О нашем главном преимуществе знают все дизайнеры.
 
               p Они говорят так: у Грин Лэнд всегда найдёшь в наличии подходящее кашпо, даже если нужно было «на вчера». Свою складскую программу мы формировали вместе с дизайнерами, флористами, архитекторами. Сегодня на складе в наличии всегда есть порядка 7000 наименований.
 
               p Но есть в нашем каталоге и просто-таки неуловимые модели. Не успеваем привезти, как их раскупают. И вот сейчас мы привезли их очень много!
 
-            img.news-single__img(src="assets/images/news-single-1-2x.jpg", alt="")
+            img.news-single__img(src="assets/images/news-single-1-2x.jpg", alt="" data-aos="fade-up")
 
-            h3.news-single__subtitle.title-h3 Горшки и кашпо
+            h3.news-single__subtitle.title-h3(data-aos="fade-up") Горшки и кашпо
 
-            .news-single__txt
+            .news-single__txt(data-aos="fade-up")
               p Новинка итальянского бренда Дерома — 
                 a(href="") Вазон Сиена
                 |. Морозостойкая уличная модель из глины Галестро по очень приятной цене.
@@ -90,13 +90,13 @@ block content
                   p А также лаконичные кашпо и квадро Олл и Куб
 
         .other-news
-          .other-news__top
+          .other-news__top(data-aos="fade-up")
             h2.title-h2 другие новости
             .other-news__controls
               +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-other-slider-prev="")
               +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-other-slider-next="")
 
-          .swiper-container(data-other-news="")
+          .swiper-container(data-other-news="" data-aos="fade-up")
             .swiper-wrapper
               .swiper-slide.news-card.news-card--slide(href="")
                 .news-card__date 18 ноября 2020

@@ -12,44 +12,44 @@ block content
       .container
         +breadcrumbs(['Выполненные заказы', 'Заказ № 5523456'])
 
-        h1.title-h1.about-title Заказ № 5523456
+        h1.title-h1.about-title(data-aos="fade-up") Заказ № 5523456
 
-        .lk-mobile-menu
+        .lk-mobile-menu(data-aos="fade-up")
           .lk-mobile-menu__ttl Мой кабинет
           .lk-mobile-menu__cross
 
         .lk-cols
           .lk-sidebar
-            .lk-sidebar__block
+            .lk-sidebar__block(data-aos="fade-up")
               .lk-sidebar__ttl История заказов
               a.lk-sidebar__item(href="") Активные заказы
               a.lk-sidebar__item(href="") Выполненные заказы
 
-            .lk-sidebar__block
+            .lk-sidebar__block(data-aos="fade-up")
               .lk-sidebar__ttl История заказов
               a.lk-sidebar__item(href="") Активные заказы
               a.lk-sidebar__item(href="") Выполненные заказы
 
-            .lk-sidebar__block
+            .lk-sidebar__block(data-aos="fade-up")
               .lk-sidebar__ttl История заказов
               a.lk-sidebar__item(href="") Активные заказы
 
-            button.lk-sidebar__exit.lk-sidebar__item Выйти
+            button.lk-sidebar__exit.lk-sidebar__item(data-aos="fade-up") Выйти
 
           .lk-main
             .lk-order-top
-              .lk-order-top__item
+              .lk-order-top__item(data-aos="fade-up")
                 .lk-order-top__ttl Дата заказа
                 .lk-order-top__value 16.04.2021
-              .lk-order-top__item
+              .lk-order-top__item(data-aos="fade-up")
                 .lk-order-top__ttl Дата отправки
                 .lk-order-top__value 16.04.2021
-              .lk-order-top__item
+              .lk-order-top__item(data-aos="fade-up")
                 .lk-order-top__ttl Сумма заказа
                 .lk-order-top__value 12 540 ₽
 
             .favorites-table.lk-order-list
-              .favorites-table__top
+              .favorites-table__top(data-aos="fade-up")
 
                 .favorites-table__col
                 .favorites-table__col товар
@@ -58,7 +58,7 @@ block content
                 .favorites-table__col цена
 
               - for (i=0; i<3; i++)
-                .favorites-table__row
+                .favorites-table__row(data-aos="fade-up")
                   .favorites-table__col
                     img.favorites-table__img(src="assets/images/catalog-1.png", alt="")
 
@@ -93,7 +93,7 @@ block content
                     .favorites-table__price-old 7 200 ₽
                     .favorites-table__price 5 292 ₽
 
-            button.lk-repeat-order повторить заказ
+            button.lk-repeat-order(data-aos="fade-up") повторить заказ
 
             .lk-delivery-info
               .lk-delivery-info__ttl.title-h4 Информация о доставке
@@ -123,7 +123,7 @@ block content
                 ]
 
               each item in items
-                .lk-delivery-info__item
+                .lk-delivery-info__item(data-aos="fade-up")
                   .lk-delivery-info__name #{item.name}
                   .lk-delivery-info__value #{item.value}
 

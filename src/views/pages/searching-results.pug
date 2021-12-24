@@ -12,24 +12,24 @@ block content
       .container
         +breadcrumbs(['Результат поиска'])
 
-        h1.title-h1 Результат поиска
+        h1.title-h1(data-aos="fade-up") Результат поиска
 
-        .results-amount
+        .results-amount(data-aos="fade-up")
           |По запросу 
           span «pottery» 
           |найдено результатов: 5
 
-        .results-searh
+        .results-searh(data-aos="fade-up")
           input
           button.btn поиск
 
-        h3.results-subtitle.title-h3 продукция
+        h3.results-subtitle.title-h3(data-aos="fade-up") продукция
 
         .results-table
 
           .results-row
             - for (i=0; i<5; i++)
-              .catalog-card
+              .catalog-card(data-aos="fade-up")
                 .catalog-card__labels
                   .catalog-card__labels-item Скидки
                   .catalog-card__labels-item Новинки
@@ -53,7 +53,7 @@ block content
 
           .results-row
             - for (i=0; i<5; i++)
-              .catalog-card
+              .catalog-card(data-aos="fade-up")
                 .catalog-card__labels
                   .catalog-card__labels-item Скидки
                   .catalog-card__labels-item Новинки
@@ -77,7 +77,7 @@ block content
 
           .results-row
             - for (i=0; i<5; i++)
-              .catalog-card
+              .catalog-card(data-aos="fade-up")
                 .catalog-card__labels
                   .catalog-card__labels-item Скидки
                   .catalog-card__labels-item Новинки
@@ -100,7 +100,7 @@ block content
                   .catalog-card__price 5 292 ₽
 
         .pagination
-          .pagination-list
+          .pagination-list(data-aos="fade-up")
             button.pagination__item.is-active 1
             button.pagination__item 2
             button.pagination__item 3
@@ -108,7 +108,7 @@ block content
             button.pagination__dots ...
             button.pagination__item 12
 
-          .pagination-controls
+          .pagination-controls(data-aos="fade-up")
             +arrow('white', '#CAE8D9', 'left', '15', '13', '46')
             +arrow('white', '#65BA7F', 'right', '15', '13', '46').arrow-active
 

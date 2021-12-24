@@ -13,13 +13,13 @@ block content
         +breadcrumbs(['клиентам'])
 
         //- .clients-top
-        h1.title-h1.about-title клиентам
-        .about-tabs
+        h1.title-h1.about-title(data-aos="fade-up") клиентам
+        .about-tabs(data-aos="fade-up")
           a.about-tabs__item(href="") Возврат денеженых средств
           a.about-tabs__item(href="") Доставка
           a.about-tabs__item.about-tabs__item--active(href="") Оплата
 
-        .payment-block
+        .payment-block(data-aos="fade-up")
           h3.payment-block__ttl.title-h3 Если возникли вопросы по заказу
           .payment-block__row
             .payment-block__item Мы ответим на любые ваши вопросы в рабочее время с понедельника по пятницу с 9:00 до 18:00.
@@ -30,28 +30,28 @@ block content
               |, а так же связаться с вашим персональным менеджером напрямую.
 
         .payment-block
-          h3.payment-block__ttl.title-h3 СПОСОБЫ ОПЛАТЫ
-          .payment-block__row
+          h3.payment-block__ttl.title-h3(data-aos="fade-up") СПОСОБЫ ОПЛАТЫ
+          .payment-block__row(data-aos="fade-up")
             .payment-block__item Заказы оплачиваются безналичным способом:
             .payment-block__item.only-desktop Оплата за наличный расчет возможно только в шоуруме г. Санкт-Петербург.
 
           .payment-row-table
-            .payment-row-table__item
+            .payment-row-table__item(data-aos="fade-up")
               div
                 img(src="assets/images/payment-1.png", alt="")
               |На основании выставленного счета
-            .payment-row-table__item
+            .payment-row-table__item(data-aos="fade-up")
               div
                 img(src="assets/images/payment-2.png", alt="")
               |Через платежную систему E-Pos
-            .payment-row-table__item
+            .payment-row-table__item(data-aos="fade-up")
               div
                 img(src="assets/images/payment-3.png", alt="")
               |Банковской картой
 
-          .payment-block__item.only-mobile Оплата за наличный расчет возможно только в шоуруме г. Санкт-Петербург.
+          .payment-block__item.only-mobile(data-aos="fade-up") Оплата за наличный расчет возможно только в шоуруме г. Санкт-Петербург.
 
-        h3.title-h3 налоги
-        .payment-taxes-desc Все налоги включены в стоимость товара и доставки.
+        h3.title-h3(data-aos="fade-up") налоги
+        .payment-taxes-desc(data-aos="fade-up") Все налоги включены в стоимость товара и доставки.
     
     include ../partials/_footer.pug

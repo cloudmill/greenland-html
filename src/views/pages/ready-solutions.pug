@@ -13,7 +13,7 @@ block content
     .section.page-wrapper
       .container
         
-        .lanscaping-first-screen
+        .lanscaping-first-screen(data-aos="fade-up")
           
           +breadcrumbs(['озеленение', 'Готовые решения'])
 
@@ -26,7 +26,7 @@ block content
           img.lanscaping-first-screen__background.only-desktop(src="assets/images/ready-solutions-main.jpg", alt="")
           img.lanscaping-first-screen__background.only-mobile(src="assets/images/ready-solutions-main-mob.jpg", alt="")
 
-        .lanscaping-solutions-txt.solutions-highlights.title-h3.only-desktop
+        .lanscaping-solutions-txt.solutions-highlights.title-h3.only-desktop(data-aos="fade-up")
           |Мы выбрали для Вас растения 
           span.highlight-1 на все случаи жизни 
           |в
@@ -41,7 +41,7 @@ block content
           br
           |композицию.
 
-        .lanscaping-solutions-txt.solutions-highlights.title-h3.only-mobile
+        .lanscaping-solutions-txt.solutions-highlights.title-h3.only-mobile(data-aos="fade-up")
           |Мы выбрали для Вас
           br
           |растения 
@@ -66,7 +66,7 @@ block content
 
         .results-row.results-row--mobile
           - for (i=0; i<5; i++)
-            .catalog-card
+            .catalog-card(data-aos="fade-up")
               .catalog-card__labels
                 .catalog-card__labels-item Скидки
                 .catalog-card__labels-item Новинки
@@ -90,7 +90,7 @@ block content
 
         .results-row.results-row--second
           - for (i=0; i<5; i++)
-            .catalog-card
+            .catalog-card(data-aos="fade-up")
               .catalog-card__labels
                 .catalog-card__labels-item Скидки
                 .catalog-card__labels-item Новинки
@@ -113,13 +113,13 @@ block content
                 .catalog-card__price 5 292 ₽
 
         .lanscaping-solutions-txt2
-          .lanscaping-solutions-txt2__col
+          .lanscaping-solutions-txt2__col(data-aos="fade-up")
             |В стоимость входит кашпо,
             br
             |растение, грунт, услуга по
             br
             |пересадке.
-          .lanscaping-solutions-txt2__col
+          .lanscaping-solutions-txt2__col(data-aos="fade-up")
             |Каждое растение может быть
             br
             |высаженное в любое кашпо из
@@ -127,7 +127,7 @@ block content
             |нашего ассортимента на Ваш
             br
             |выбор.
-          .lanscaping-solutions-txt2__col
+          .lanscaping-solutions-txt2__col(data-aos="fade-up")
             |Если Вы не нашли подходящий
             br
             |вариант, свяжитесь с нами и мы
@@ -137,7 +137,7 @@ block content
             |композицию.
 
         .designers-form.about-mission
-          h2.designers-form__title.title-h2 Оставить заявку на подбор композиции
+          h2.designers-form__title.title-h2(data-aos="fade-up") Оставить заявку на подбор композиции
             br
             |для вашего проекта
           .designers-form__row
@@ -147,12 +147,12 @@ block content
                 
                 include ../partials/form-designer
 
-            .about-mission__img.designers-form__imgs
+            .about-mission__img.designers-form__imgs(data-aos="fade-up")
               img(src="assets/images/designer-form-1.jpg", alt="")
               img(src="assets/images/designer-form-2.jpg", alt="")
 
         .designers-showrooms
-          .ojects-projects-top
+          .ojects-projects-top(data-aos="fade-up")
             h2.ojects-projects-top__title.title-h2
               |Выполненные проекты
             a.ojects-projects-top__link(href="")
@@ -160,7 +160,7 @@ block content
               //- img(src="assets/images/objects-arrow.png", alt="")
               +allProjectsSvg
 
-          .designers-products-filter
+          .designers-products-filter(data-aos="fade-up")
             ul
               li.filter-tab.active-tab Входные группы
               -
@@ -173,7 +173,7 @@ block content
                 li.filter-tab
                   |#{i}
 
-          .projects__slider.swiper-container(data-projects-slider="")
+          .projects__slider.swiper-container(data-projects-slider="" data-aos="fade-up")
             .swiper-wrapper
               .swiper-slide.projects__slide
                 .projects__item
@@ -238,7 +238,7 @@ block content
               .projects-controls-container
                 +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
 
-        .landscaping-contacts
+        .landscaping-contacts(data-aos="fade-up")
           .contacts-cards__ttl.title-h2 Профессионалы Green Land
           .contacts-cards
             - for (i=0; i<4; i++)

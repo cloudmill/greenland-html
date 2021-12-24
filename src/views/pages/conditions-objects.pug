@@ -12,16 +12,16 @@ block content
       .container
         +breadcrumbs(['работа с нами', 'условия работы для объектов'])
 
-        h1.title-h1.about-title Условия работы для объектов
+        h1.title-h1.about-title(data-aos="fade-up") Условия работы для объектов
 
-        .about-tabs
+        .about-tabs(data-aos="fade-up")
           a.about-tabs__item(href="") Условия работы с дизайнерами
           a.about-tabs__item.about-tabs__item--active(href="") Условия работы для объектов
           a.about-tabs__item(href="") Условия работы для дистрибьютеров и оптовых покупателей
 
         .about-mission
 
-          .mission__slide
+          .mission__slide(data-aos="fade-up")
             .mission__main
               .mission__slider-underlay
               .gamma.mission__heading.objects-highlights
@@ -30,7 +30,7 @@ block content
             img.about-mission__img(src="assets/images/objects-1.jpg" alt="")
 
         .designers-benefits
-          .designers-benefits__table
+          .designers-benefits__table(data-aos="fade-up")
             ul
               -
                 var items = [
@@ -49,7 +49,7 @@ block content
                     //- .designers-benefits__ttl #{item.title}
                     .designers-benefits__desc #{item}
 
-        .about-block.designers-block
+        .about-block.designers-block(data-aos="fade-up")
           .about-block__img
             img(src="assets/images/objects-2.jpg" alt="")
           .about-block__desc
@@ -66,14 +66,14 @@ block content
               |клиентский сервис
             
         .designers-showrooms
-          .ojects-projects-top
+          .ojects-projects-top(data-aos="fade-up")
             h2.ojects-projects-top__title.title-h2
               |Выполненные проекты
             a.ojects-projects-top__link(href="")
               |все проекты
               //- img(src="assets/images/objects-arrow.png", alt="")
               +allProjectsSvg
-          .designers-products-filter
+          .designers-products-filter(data-aos="fade-up")
             ul
               li.filter-tab.active-tab Входные группы
               -
@@ -86,7 +86,7 @@ block content
                 li.filter-tab
                   |#{item}
 
-          .projects__slider.swiper-container(data-projects-slider="")
+          .projects__slider.swiper-container(data-projects-slider="" data-aos="fade-up")
             .swiper-wrapper
               .swiper-slide.projects__slide
                 .projects__item
@@ -152,9 +152,9 @@ block content
                 +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
 
         .objects-form
-          h2.title-h2
+          h2.title-h2(data-aos="fade-up")
             |Связаться с нами
-          form.designers-form__form
+          form.designers-form__form(data-aos="fade-up")
             label.designers-form__label
               input.designers-form__input(placeholder="Имя")
             label.designers-form__label

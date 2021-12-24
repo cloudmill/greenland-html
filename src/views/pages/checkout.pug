@@ -15,34 +15,34 @@ block content
             +arrow('white', '#65BA7F', 'left', '15', '13', '46')
             |вернуться в корзину
 
-          h1.title-h1.about-title Оформление заказа
+          h1.title-h1.about-title(data-aos="fade-up") Оформление заказа
 
           .checkout-left
 
             .checkout-block
-              .checkout-block__top
+              .checkout-block__top(data-aos="fade-up")
                 .checkout-block__ttl контактные данные
                 button.checkout-login
                   +checkoutLogin
                   |войти
 
-              label.checkout-block__label
+              label.checkout-block__label(data-aos="fade-up")
                 .placeholder-active Имя*
                 input.checkout-block__input(type="text" placeholder="Имя*" required)
-              label.checkout-block__label
+              label.checkout-block__label(data-aos="fade-up")
                 .placeholder-active Фамилия*
                 input.checkout-block__input(type="text" placeholder="Фамилия*" required)
-              label.checkout-block__label
+              label.checkout-block__label(data-aos="fade-up")
                 .placeholder-active E-mail*
                 input.checkout-block__input(type="text" placeholder="E-mail*" required)
-              label.checkout-block__label
+              label.checkout-block__label(data-aos="fade-up")
                 .placeholder-active Номер телефона*
                 input.checkout-block__input(type="text" placeholder="Номер телефона*" required)
 
             .checkout-block
-              .checkout-block__ttl Способ доставки
+              .checkout-block__ttl(data-aos="fade-up") Способ доставки
 
-              .about-tabs.checkout-address__filter
+              .about-tabs.checkout-address__filter(data-aos="fade-up")
                 .about-tabs__item.about-tabs__item--active
                   +checkoutPoint
                   |Забрать из пункта выдачи
@@ -55,7 +55,7 @@ block content
                   +checkoutPoint
                   |Самовывоз со склада
 
-              .checkout-address__container
+              .checkout-address__container(data-aos="fade-up")
 
                 .checkout-address__item.checkout-address__item--active
                   .checkout-address__ttl выбранный адрес
@@ -86,11 +86,11 @@ block content
 
 
             .checkout-block
-              .checkout-block__ttl Способ оплаты
+              .checkout-block__ttl(data-aos="fade-up") Способ оплаты
 
-              .checkout-block__txt Для выбора способа оплаты укажите способ доставки
+              .checkout-block__txt(data-aos="fade-up") Для выбора способа оплаты укажите способ доставки
 
-              .checkout-payment
+              .checkout-payment(data-aos="fade-up")
                 .checkout-payment__item.checkout-payment__item--active
                   +checkoutPoint
                   |Оплатить картой онлайн
@@ -107,34 +107,35 @@ block content
 
         .basket-aside
           .basket-aside__container
-            .basket-aside__ttl ваш заказ
+            .basket-aside__ttl(data-aos="fade-up") ваш заказ
 
             .basket-aside__table
-              .basket-aside__row
+              .basket-aside__row(data-aos="fade-up")
                 .basket-aside__name Общий вес
                 .basket-aside__value 10 кг
 
-              .basket-aside__row
+              .basket-aside__row(data-aos="fade-up")
                 .basket-aside__name Количество товаров
                 .basket-aside__value 6 шт
 
-              .basket-aside__row
+              .basket-aside__row(data-aos="fade-up")
                 .basket-aside__name Обрешечивание
                 .basket-aside__value 2 500 ₽
 
-              .basket-aside__row
+              .basket-aside__row(data-aos="fade-up")
                 .basket-aside__name Стоимость доставки
                 .basket-aside__value 5 292 ₽
 
-            .basket-aside__row
+            .basket-aside__row(data-aos="fade-up")
               .basket-aside__name Сумма без скидки
               .basket-aside__value 7 892 ₽
 
             .basket-aside__total
-              .basket-aside__row
+              .basket-aside__row(data-aos="fade-up")
                 .basket-aside__name Сумма заказа
                 .basket-aside__value 135 292 ₽
-              button.btn(type="submit") перейти к оформлению заказа
+              .aos(data-aos="fade-up")
+                button.btn(type="submit") перейти к оформлению заказа
 
 
     include ../partials/_footer.pug

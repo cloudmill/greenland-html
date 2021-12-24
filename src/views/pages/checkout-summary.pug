@@ -11,19 +11,20 @@ block content
     .section.page-wrapper
       .container
 
-        h1.title-h1.summary-title Заказ оформлен
+        h1.title-h1.summary-title(data-aos="fade-up") Заказ оформлен
 
         .summary
-          .summary__item
+          .summary__item(data-aos="fade-up")
             .summary__item-ttl Общая сумма 
             .summary__item-value 4 500 ₽
-          .summary__item
+          .summary__item(data-aos="fade-up")
             .summary__item-ttl Номер заказа 
             .summary__item-value 4324DFD32
-          .summary__item
+          .summary__item(data-aos="fade-up")
             .summary__item-ttl Статус заказа 
             .summary__item-value Получено
 
-          .btn Вернуться на главную страницу
+          .aos(data-aos="fade-up")
+            .btn Вернуться на главную страницу
 
     include ../partials/_footer.pug
