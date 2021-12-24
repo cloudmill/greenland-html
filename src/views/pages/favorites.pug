@@ -12,14 +12,14 @@ block content
         .container
           +breadcrumbs(['избранное'])
 
-          .favorites-top
+          .favorites-top(data-aos="fade-up")
             h1.title-h1 избранное
             .favorites-top__reset
               img(src="assets/images/icons/reset-ico.svg", alt="")
               |очистить избранное
 
           .favorites-table
-            .favorites-table__top
+            .favorites-table__top(data-aos="fade-up")
 
               .favorites-table__col
               .favorites-table__col Наименование
@@ -28,7 +28,7 @@ block content
               .favorites-table__col наличие
 
             - for (i=0; i<3; i++)
-              .favorites-table__row
+              .favorites-table__row(data-aos="fade-up")
                 .favorites-table__col
                   img.favorites-table__img(src="assets/images/catalog-1.png", alt="")
 

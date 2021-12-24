@@ -12,33 +12,33 @@ block content
       .container
         +breadcrumbs(['РЕДАКТИРОВАТЬ ПРОФИЛЬ'])
 
-        h1.title-h1.about-title РЕДАКТИРОВАТЬ ПРОФИЛЬ
+        h1.title-h1.about-title(data-aos="fade-up") РЕДАКТИРОВАТЬ ПРОФИЛЬ
 
-        .lk-mobile-menu
+        .lk-mobile-menu(data-aos="fade-up")
           .lk-mobile-menu__ttl Мой кабинет
           .lk-mobile-menu__cross
 
         .lk-cols
           .lk-sidebar
-            .lk-sidebar__block
+            .lk-sidebar__block(data-aos="fade-up")
               .lk-sidebar__ttl История заказов
               a.lk-sidebar__item(href="") Активные заказы
               a.lk-sidebar__item(href="") Выполненные заказы
 
-            .lk-sidebar__block
+            .lk-sidebar__block(data-aos="fade-up")
               .lk-sidebar__ttl История заказов
               a.lk-sidebar__item(href="") Активные заказы
               a.lk-sidebar__item(href="") Выполненные заказы
 
-            .lk-sidebar__block
+            .lk-sidebar__block(data-aos="fade-up")
               .lk-sidebar__ttl История заказов
               a.lk-sidebar__item(href="") Активные заказы
 
-            button.lk-sidebar__exit.lk-sidebar__item Выйти
+            button.lk-sidebar__exit.lk-sidebar__item(data-aos="fade-up") Выйти
 
           .lk-main
 
-            .lk-profile-top
+            .lk-profile-top(data-aos="fade-up")
               .lk-profile-top__item
                 .lk-profile-top__ttl Ваш статус
                 .lk-profile-top__value Юридическое лицо
@@ -93,7 +93,7 @@ block content
                 ]
 
               each item in items
-                .lk-profile-info__item
+                .lk-profile-info__item(data-aos="fade-up")
                   span.lk-profile-info__item-label #{item.label}
                   |#{item.value}
                   button

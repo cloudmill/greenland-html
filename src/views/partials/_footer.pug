@@ -2,16 +2,16 @@ footer.footer(data-scroll-section="")
   .footer__header
     .container
       .row
-        .col.footer-logo
+        .col.footer-logo(data-aos="fade-up")
           a.footer__logo(href="/")
             +logo('white', 395, 72)
-        .col.col__xl-9.footer-download-container
+        .col.col__xl-9.footer-download-container(data-aos="fade-up")
           +footerDownload('каталог продукции', 'xls, 12 мб')
           +footerDownload('презентация компании', 'pdf, 12 мб')
   .footer__main
     .container
       .row.footer-main-row
-        .col.col__xl-7.footer__main-left
+        .col.col__xl-7.footer__main-left(data-aos="fade-up")
           a.footer__phone(href="tel:+78122091884") 8 812 209-18-84
           .footer__phone-caption.text__sm.text--uppercase.footer__text
             .footer__phone-caption-schedule.footer__info Пн—Пт: 10 — 18
@@ -27,7 +27,7 @@ footer.footer(data-scroll-section="")
         .col.col__xl-9.footer__main-right
           .footer__menu.row
             .col.col__xl-4
-              .footer__menu-title О нас
+              .footer__menu-title(data-aos="fade-up") О нас
 
               ul.footer__menu-list
 
@@ -43,11 +43,11 @@ footer.footer(data-scroll-section="")
                   ]
 
                 each i in list1
-                  li.footer__menu-list-item
+                  li.footer__menu-list-item(data-aos="fade-up")
                     a.footer__link.footer__text.footer-item(href="#") #{i}
 
             .col.col__xl-4
-              .footer__menu-title Работа с нами
+              .footer__menu-title(data-aos="fade-up") Работа с нами
 
               ul.footer__menu-list
 
@@ -59,11 +59,11 @@ footer.footer(data-scroll-section="")
                   ]
 
                 each i in list2
-                  li.footer__menu-list-item
+                  li.footer__menu-list-item(data-aos="fade-up")
                     a.footer__link.footer__text.footer-item(href="#") #{i}
 
             .col.col__xl-4
-              .footer__menu-title Клиентам
+              .footer__menu-title(data-aos="fade-up") Клиентам
               ul.footer__menu-list
 
                 -
@@ -78,11 +78,11 @@ footer.footer(data-scroll-section="")
                   ]
 
                 each i in list3
-                  li.footer__menu-list-item
+                  li.footer__menu-list-item(data-aos="fade-up")
                     a.footer__link.footer__text.footer-item(href="#") #{i}
 
             .col.col__xl-4
-              .footer__menu-title Озеленение
+              .footer__menu-title(data-aos="fade-up") Озеленение
               ul.footer__menu-list
 
                 -
@@ -100,25 +100,25 @@ footer.footer(data-scroll-section="")
                   ]
                 
                 each i in list4
-                  li.footer__menu-list-item
+                  li.footer__menu-list-item(data-aos="fade-up")
                     a.footer__link.footer__text.footer-item(href="#") #{i}
 
           .footer__info.row.footer__info--desc
-            .col.col__xl-4
+            .col.col__xl-4(data-aos="fade-up")
               a.footer__link.footer__text.footer-item(href="#") Договор оферты
-            .col
+            .col(data-aos="fade-up")
               a.footer__link.footer__text.footer-item(href="#") Обработка персональных данных
   .footer__footer
     .container
       .row.footer__footer-row
         .footer__info.row.footer__info--mobile
-          .col.col__xl-4
+          .col.col__xl-4(data-aos="fade-up")
             a.footer__link.footer__text.footer-item(href="#") Договор оферты
-          .col
+          .col(data-aos="fade-up")
             a.footer__link.footer__text.footer-item(href="#") Обработка персональных данных
-        .col.col__xl-7
+        .col.col__xl-7(data-aos="fade-up")
           .footer__text.footer-item.footer__info 2021 © Green Land. Все права защищены
         .footer__footer-right
-          .footer__text.footer-item.flex
+          .footer__text.footer-item.flex(data-aos="fade-up")
             .footer__info Сделано в&nbsp;
             a.footer__footer-link(href="https://www.cloudmill.ru/" target="_blank")  CloudMill

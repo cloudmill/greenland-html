@@ -12,9 +12,9 @@ block content
       .container
         +breadcrumbs(['работа с нами', 'Условия работы с дизайнерами'])
 
-        h1.title-h1.about-title Условия работы с дизайнерами
+        h1.title-h1.about-title(data-aos="fade-up") Условия работы с дизайнерами
 
-        .about-tabs
+        .about-tabs(data-aos="fade-up")
           a.about-tabs__item.about-tabs__item--active(href="") Условия работы с дизайнерами
           a.about-tabs__item(href="") Условия работы для объектов
           a.about-tabs__item(href="") Условия работы для дистрибьютеров и оптовых покупателей
@@ -26,7 +26,7 @@ block content
 
         .about-mission
           
-          .mission__slide
+          .mission__slide(data-aos="fade-up")
             .mission__main
               .mission__slider-underlay
               .mission__heading.designers-highlight
@@ -35,9 +35,9 @@ block content
             img.about-mission__img(src="assets/images/conditions-1.jpg" alt="")
 
         .designers-brands
-          .designers-brands__desc
+          .designers-brands__desc(data-aos="fade-up")
             |Green Land является официальным и эксклюзивным поставщиком дизайнерских кашпо от ведущих европейских брендов:
-          .designers-brands__list
+          .designers-brands__list(data-aos="fade-up")
             ul
               -
                 var items = [
@@ -55,8 +55,8 @@ block content
                   |#{item}
 
         .designers-offers
-          h2.designers-offers__title.title-h2 Если вы дизайнер, Green Land готов предложить
-          .designers-offers__table
+          h2.designers-offers__title.title-h2(data-aos="fade-up") Если вы дизайнер, Green Land готов предложить
+          .designers-offers__table(data-aos="fade-up")
             ul
               -
                 var items = [
@@ -76,8 +76,8 @@ block content
                   |#{item}
 
         .designers-benefits
-          h2.designers-benefits__title.title-h2 Выгода от работы с нами
-          .designers-benefits__table
+          h2.designers-benefits__title.title-h2(data-aos="fade-up") Выгода от работы с нами
+          .designers-benefits__table(data-aos="fade-up")
             ul
               -
                 var items = [
@@ -124,8 +124,8 @@ block content
                     .designers-benefits__desc #{item.desc}
 
         .designers-form.about-mission
-          h2.designers-form__title.title-h2 Оставить заявку на консультацию
-          .mission__slide
+          h2.designers-form__title.title-h2(data-aos="fade-up") Оставить заявку на консультацию
+          .mission__slide(data-aos="fade-up")
             .mission__main
               .mission__slider-underlay
               .designers-form__container
@@ -148,12 +148,12 @@ block content
               img(src="assets/images/designer-form-2.jpg", alt="")
 
         .designers-products
-          h3.designers-products__title.title-h3
+          h3.designers-products__title.title-h3(data-aos="fade-up")
             |Наша продукция 
             span не выбивается 
             br
             |из общего дизайна интерьера
-          .designers-products-filter
+          .designers-products-filter(data-aos="fade-up")
             ul
               li.filter-tab.active-tab
                 |Классический
@@ -173,7 +173,7 @@ block content
                 +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-catalog-slider-next="")
 
 
-          .designers-products__catalog
+          .designers-products__catalog(data-aos="fade-up")
             .swiper-container(data-catalog-slider="")
               .swiper-wrapper
             
@@ -201,12 +201,12 @@ block content
                       .catalog-card__price 5 292 ₽
 
         .designers-showrooms
-          h3.designers-showrooms__title.title-h3
+          h3.designers-showrooms__title.title-h3(data-aos="fade-up")
             |Шоу-румы в Москве и Санкт-Петербурге — 
             br
             |возможность 
             span посмотреть товар перед заказом
-          .designers-products-filter
+          .designers-products-filter(data-aos="fade-up")
             ul
               //- -
               //-   var items = [
@@ -220,7 +220,7 @@ block content
               li.filter-tab.active-tab Шоу-рум
               li.filter-tab Упаковка продукции
               
-          .projects__slider.swiper-container(data-projects-slider="")
+          .projects__slider.swiper-container(data-projects-slider="" data-aos="fade-up")
             .swiper-wrapper
               - for (i=0; i<3; i++)
                 .swiper-slide.projects__slide
@@ -236,13 +236,13 @@ block content
                 +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
 
         .designers-contacts
-          .designers-contacts__top
+          .designers-contacts__top(data-aos="fade-up")
             h2.designers-contacts__title.title-h2 Начать работу с нами
             .designers-contacts__subtitle Звоните или пишите нам. Мы расскажем и о других 
               br
               |преимуществах работы с Green Land.
           .designers-contacts__row
-            .designers-contacts__card
+            .designers-contacts__card(data-aos="fade-up")
               .designers-contacts__img
                 img(src="assets/images/designer-contacts-1.png", alt="")
               .designers-contacts__desc
@@ -255,7 +255,7 @@ block content
                 .contacts-btn
                   |обратная связь
                 
-            .designers-contacts__card
+            .designers-contacts__card(data-aos="fade-up")
               .designers-contacts__img
                 img(src="assets/images/designer-contacts-2.png", alt="")
               .designers-contacts__desc
@@ -268,7 +268,7 @@ block content
                 .contacts-btn
                   |обратная связь
 
-            .designers-contacts__links
+            .designers-contacts__links(data-aos="fade-up")
               .designers-contacts__links-txt
                 |Написать в соц. сетях
               .footer__socials

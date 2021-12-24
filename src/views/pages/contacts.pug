@@ -12,29 +12,29 @@ block content
       .container
         +breadcrumbs(['Контакты'])
 
-        h1.title-h1 Контакты
+        h1.title-h1(data-aos="fade-up") Контакты
 
         .contacts-top
-          .contacts-top__numbers
+          .contacts-top__numbers(data-aos="fade-up")
             .contacts-top__numbers-tel 8 812 426-97-10
             .contacts-top__numbers-schedule
               .contacts-top__numbers-item Пн—Пт: 10 — 18
               div Сб—Вс: выходные
-          .contacts-top__cities
+          .contacts-top__cities(data-aos="fade-up")
             .about-tabs
               a.about-tabs__item.about-tabs__item--active(href="") Санкт-Петербург
               a.about-tabs__item(href="") Москва
               a.about-tabs__item(href="") Краснодар
 
-          .contacts-top__mail sale@green-land.ru
+          .contacts-top__mail(data-aos="fade-up") sale@green-land.ru
 
-          .contacts-top__address
+          .contacts-top__address(data-aos="fade-up")
             .contacts-top__address-item Московское шоссе, дом 25, к. 1, Бизнес-центр «Престиж», офис 248
             a.contacts-top__address-link(href="")
               img(src="assets/images/icons/contacts-map-ico.png", alt="")
               |смотреть на яндекс.карты
 
-          .contacts-top__social
+          .contacts-top__social(data-aos="fade-up")
             .footer__socials
               a.footer__socials-link(href="")
                 +fbIcon
@@ -46,10 +46,10 @@ block content
                 +houzzIcon
 
         .contacts-txt
-          h3.contacts-txt__ttl.title-h3 шоурум
-          .contacts-txt__desc
+          h3.contacts-txt__ttl.title-h3(data-aos="fade-up") шоурум
+          .contacts-txt__desc(data-aos="fade-up")
             |Посмотреть вживую наши вазоны, кашпо, горшки и искусственные растения можно в шоуруме в Москве и Санкт-Петербурге. Сотрудники Green Land проконсультируют вас, помогут подобрать наиболее актуальные модели, сориентируют по стоимости и срокам поставки, с радостью ответят на любой ваш вопрос, касающийся товаров представленных в ассортименте компании, а так же условий сотрудничества. Всё что вам требуется сделать, это связаться с нашим сотрудником по телефону и сообщить о дате и времени своего визита.
-        .projects__slider.swiper-container(data-projects-slider="")
+        .projects__slider.swiper-container(data-projects-slider="" data-aos="fade-up")
           .swiper-wrapper
             - for (i=0; i<3; i++)
               .swiper-slide.projects__slide
@@ -64,7 +64,7 @@ block content
             .projects-controls-container
               +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
 
-        .contacts-cards
+        .contacts-cards(data-aos="fade-up")
           - for (i=0; i<6; i++)
             .contacts-cards__item
               img(src="assets/images/designer-contacts-2.png", alt="")
@@ -72,7 +72,7 @@ block content
               .contacts-cards__position Менеджер по работе с дизйнерами
               .contacts-cards__tel 8 812 209-18-84
 
-        .objects-form
+        .objects-form(data-aos="fade-up")
           h2.title-h2 Связаться с нами
           form.designers-form__form
             label.designers-form__label

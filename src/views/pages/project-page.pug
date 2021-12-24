@@ -14,7 +14,7 @@ block content
 
         .news-cols
           .news-col-links
-            .news-col-links__container
+            .news-col-links__container(data-aos="fade-up")
               a.news-back-link.project-back-link(href="")
                 +arrow('white', '#65BA7F', 'left', '15', '13', '46')
                 |Все проекты
@@ -39,22 +39,22 @@ block content
               button.btn.cover__btn.project-aside-btn задать вопрос
 
           .project-page-main
-            h1.about-title.title-h1 Терраса ЛИДЕР кОНСАЛТ
+            h1.about-title.title-h1(data-aos="fade-up") Терраса ЛИДЕР кОНСАЛТ
 
-            img.blog-image-main(src="assets/images/project-page-1.jpg", alt="")
+            img.blog-image-main(src="assets/images/project-page-1.jpg", alt="" data-aos="fade-up")
 
             .project-info
-              .project-info__col
+              .project-info__col(data-aos="fade-up")
                 .project-info__ttl расположение
                 .project-info__txt Санкт-Петербург, Лиговский проспект., 61
-              .project-info__col
+              .project-info__col(data-aos="fade-up")
                 .project-info__ttl Что было сделано
                 .project-info__txt Терраса, бизнес-центр, озеленение офиса
 
             .project-products
-              h3.title-h2
+              h3.title-h2(data-aos="fade-up")
                 |На проекте использовалось
-              .designers-products-filter
+              .designers-products-filter(data-aos="fade-up")
                 ul
                   li.filter-tab.active-tab
                     |Кашпо
@@ -74,7 +74,7 @@ block content
                     +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-catalog-slider-next="")
 
 
-              .designers-products__catalog
+              .designers-products__catalog(data-aos="fade-up")
                 .swiper-container(data-catalog-slider="")
                   .swiper-wrapper
                 
@@ -101,7 +101,7 @@ block content
                           .catalog-card__color Серебро
                           .catalog-card__price 5 292 ₽
 
-            .blog-body
+            .blog-body(data-aos="fade-up")
               h3.title-h3 о проекте
               p Открытая терраса на 8 этаже офиса компании ЛИДЕР КОНСАЛТ Менеджмент на Лиговском проспекте в г. Санкт-Петербург.
               p В проекте использованы кашпо Pottery Pots  модель Orb, а также искусственные Самшиты 
@@ -111,12 +111,12 @@ block content
               h3.title-h3 Как решали
               p Выбрали кашпо из файбергласса устойчивой формы, фактура кашпо идеально подошла к оформлению террасы. Файбергласс отлично подходит для открытых террас, тк не выгорает на солнце, имеет хорошую устойчивость к царапинам и сколам, разнообразие фактур и форм помогает подобрать вариант под любое пространство.
 
-            .project-photos
+            .project-photos(data-aos="fade-up")
               - for (i=0; i<4; i++)
                 img.project-photos__item(src=`assets/images/project-photo-${i + 1}.jpg`, alt="")
 
 
-            .career-hh.project-review
+            .career-hh.project-review(data-aos="fade-up")
               a.career-hh__link(data-fancybox="images" href="assets/images/review.jpg")
                 div отзыв
                   br
