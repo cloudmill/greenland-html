@@ -12,6 +12,11 @@ mixin arrow(arrowColor, borderColor, direction, arrowWidth, arrowHeight, size)
         //- right
         path(d="M10.1998 0.984497L14.8554 6.16577V6.83414L10.1998 12.0154L9.45597 11.3471L13.3621 6.99996H0.516602L0.516602 5.99996H13.3621L9.45597 1.65287L10.1998 0.984497Z" fill= arrowColor)
 
+mixin arrowBtn
+  svg(width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg")
+    circle(r="23" transform="matrix(-1 0 0 1 23 23)" fill="#65BA7F")
+    path(d="M15.1646 23.0002L14.7927 23.3344V22.666L15.1646 23.0002ZM30.835 23.5002H15.1646V22.5002H30.835V23.5002ZM14.7927 22.666L20.0162 16.8528L20.76 17.5212L15.5365 23.3344L14.7927 22.666ZM15.5365 22.666L20.76 28.4792L20.0162 29.1476L14.7927 23.3344L15.5365 22.666Z" fill="white")
+
 //- menu
 mixin headerMenu(items)
   ul.header__menu

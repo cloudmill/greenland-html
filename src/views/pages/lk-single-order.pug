@@ -85,9 +85,9 @@ block content
                   .favorites-table__col.basket-btn-row
                     .favorites-table__col-ttl количество
 
-                    button.basket-btn-minus
+                    //- button.basket-btn-minus
                     .basket-item-count 3
-                    button.basket-btn-plus
+                    //- button.basket-btn-plus
 
                   .favorites-table__col
                     .favorites-table__price-old 7 200 ₽
@@ -128,7 +128,8 @@ block content
                   .lk-delivery-info__value #{item.value}
 
             a.news-back-link(href="")
-              +arrow('white', '#65BA7F', 'left', '15', '13', '46')
+              button.arrow
+                +arrowBtn
               |Вернуться к списку заказов
 
     include ../partials/_footer.pug

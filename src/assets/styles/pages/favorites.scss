@@ -117,6 +117,7 @@
   .catalog-card__labels {
     padding: 20px 0;
     font-size: 12px;
+    position: relative;
 
     @media (max-width: ($breakpoint - 1px)) {
       display: flex;
@@ -214,6 +215,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
@@ -232,6 +234,7 @@
 
       @media (max-width: ($breakpoint - 1px)) {
         margin: 0;
+        width: 190px;
       }
 
       img {
@@ -241,14 +244,6 @@
 
     .btn-white {
       margin-top: 10px;
-      border-radius: 0px 20px;
-      border: 1px solid $green-extra-lighten;
-
-      font-size: 14px;
-      font-weight: 600;
-      text-transform: uppercase;
-
-      justify-content: center;
     }
   }
 }
