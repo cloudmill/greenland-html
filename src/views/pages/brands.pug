@@ -12,15 +12,15 @@ block content
       .container
         +breadcrumbs(['Бренды'])
 
-        h1.title-h1.about-title Бренды
+        h1.title-h1.about-title(data-aos="fade-up") Бренды
 
-        .about-tabs
+        .about-tabs(data-aos="fade-up")
           a.about-tabs__item(href="") О компании
           a.about-tabs__item(href="") История
           a.about-tabs__item.about-tabs__item--active(href="") Бренды
 
         .brands-list
-          ul
+          ul(data-aos="fade-up")
             li.filter-tab.active-tab Serralunga
             -
               var items = [
@@ -41,21 +41,21 @@ block content
                 |!{item}
 
         .brands-top
-          .brands-top-logo
+          .brands-top-logo(data-aos="fade-up")
             img(src="assets/images/brand-logo1.png", alt="")
-          .brands-top-desc
+          .brands-top-desc(data-aos="fade-up")
             .brands-top-desc__ttl.title-h3 Serralunga
             .brands-top-desc__txt Компания Serralunga — лидирующая компания среди производителей уличной мебели – была основана в 1825 году в итальянском городе Бьелла у подножия Альп. Название компании — это фамилия семьи, которая уже на протяжении пяти поколений управляет бизнесом. 
-          .brands-top-links
+          .brands-top-links(data-aos="fade-up")
             +footerDownload('презентация компании', 'pdf, 12 мб')
             a.btn.projects__header-btn(href="#") каталог продукции
 
         .brands-pics
-          .brands-pics-row
+          .brands-pics-row(data-aos="fade-up")
             img(src="assets/images/brands-1.jpg", alt="")
             img(src="assets/images/brands-2.jpg", alt="")
 
-          .projects__slider.swiper-container(data-projects-slider="")
+          .projects__slider.swiper-container(data-projects-slider="" data-aos="fade-up")
             .swiper-wrapper
               - for (i=2; i<5; i++)
                 .swiper-slide.projects__slide
@@ -71,15 +71,15 @@ block content
                 +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
 
           .brands-pics-txt
-            .brands-pics-txt__col
+            .brands-pics-txt__col(data-aos="fade-up")
               |Предметы Serralunga, одновременно красивые и функциональные, притягивают к себе взгляд – будь то скульптурное цветочное кашпо, геометрический стол или минималистичный шезлонг. При изготовлении используются самые современные материалы и технологии. Благодаря этому, в том числе, продукция компании Serralunga не боится плохой погоды, и ею можно пользоваться как в помещении, так и на улице, расширяя тем самым свою зону комфорта.
-            .brands-pics-txt__col
+            .brands-pics-txt__col(data-aos="fade-up")
               |В 1950-х копания начала работать с пластиком, и до сих пор он остаётся основным материалом, с которым работает Serralunga. А в 1980-х из США пришла идея создавать предметы из объёмного пластика методом ротационного формования, эта техника была успешно перенята и позволила производить цветочные кашпо объёмом до 3 000 литров. Ротационное формование - это метод изготовления тонкостенных полых изделий. Закрытая металлическая форма наполняется материалом (в порошке или гранулах) и, нагреваясь, вращается по двум и более пересекающимся осям. Материал равномерно распределяется по форме и создает тонкую оболочку. При охлаждении фиксируются полученные форма и размер.
-
-        a.about-history(href="")
-          .title-h3 миссия и ценности
-          .about-history__circle
-            +aboutBottomArrow
+        .aos(data-aos="fade-up")
+          a.about-history(href="")
+            .title-h3 миссия и ценности
+            .about-history__circle
+              +aboutBottomArrow
 
 
     include ../partials/_footer.pug

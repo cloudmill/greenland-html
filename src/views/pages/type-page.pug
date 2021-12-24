@@ -15,7 +15,7 @@ block content
           
           +breadcrumbs(['озеленение', 'Готовые решения'])
 
-          .lanscaping-first-screen__block
+          .lanscaping-first-screen__block(data-aos="fade-up")
             h1.title-h1.about-title Фитодизайн. Озеленение
               br
               |интерьеров
@@ -23,46 +23,46 @@ block content
 
           +footerDownload('презентация компании', 'pdf, 12 мб')
 
-          img.lanscaping-first-screen__background.only-desktop(src="assets/images/type-page-main.jpg", alt="")
+          img.lanscaping-first-screen__background.only-desktop(src="assets/images/type-page-main.jpg", alt="" data-aos="fade-up")
 
-          img.lanscaping-first-screen__background.only-mobile(src="assets/images/type-page-main-mob.jpg", alt="")
+          img.lanscaping-first-screen__background.only-mobile(src="assets/images/type-page-main-mob.jpg", alt="" data-aos="fade-up")
 
-        .type-page-row
+        .type-page-row(data-aos="fade-up")
           .type-page-row__txt Фитодизайн от цветочной вакханалии отличает профессиональный подход. Учитывается стиль пространства, вкусы и ритм жизни хозяев дома, задачи по зонированию или созданию особой атмосферы, желание быть или не быть в тренде. Профессионал сделает озеленение так, что вам будет в нём приятно жить и легко за ним ухаживать.
           .landscaping-block-white__price от 5 000 ₽*
 
-        .type-page-img
+        .type-page-img(data-aos="fade-up")
           h3.type-page-img__ttl.title-h3 Сегодня сложно представить дом без растения в горшке
           .type-page-img__txt.p_large Но, как превратить этот горшок с растением в фитодизайн?
           img(src="assets/images/type-page-1.jpg", alt="")
 
         .type-page-block
           .type-page-block__row
-            .type-page-block__txt
+            .type-page-block__txt(data-aos="fade-up")
               h3.type-page-block__ttl Фитодизайн от цветочной вакханалии отличает профессиональный подход
               .type-page-block__desc
                 p Учитывается стиль пространства, вкусы и ритм жизни хозяев дома, задачи по зонированию или созданию особой атмосферы, желание быть или не быть в тренде. Профессионал сделает озеленение так, что вам будет в нём приятно жить и легко за ним ухаживать. 
                 p Озеленитель составит список растений под условия освещения и влажности. Предложит кашпо, ящик или вазон, которые идеально подойдут в интерьер и подберёт альтернативы. Современные аналоги земли тоже стали частью фитодизайна. Они упрощают уход, дают растениям больше силы и эстетически намного привлекательней земли.
-            .type-page-block__img
+            .type-page-block__img(data-aos="fade-up")
               img(src="assets/images/type-page-2.jpg", alt="")
           .type-page-block__row
-            .type-page-block__txt
+            .type-page-block__txt(data-aos="fade-up")
               h3.type-page-block__ttl Фитодизайн от цветочной вакханалии отличает профессиональный подход
               .type-page-block__desc
                 p Учитывается стиль пространства, вкусы и ритм жизни хозяев дома, задачи по зонированию или созданию особой атмосферы, желание быть или не быть в тренде. Профессионал сделает озеленение так, что вам будет в нём приятно жить и легко за ним ухаживать. 
                 p Озеленитель составит список растений под условия освещения и влажности. Предложит кашпо, ящик или вазон, которые идеально подойдут в интерьер и подберёт альтернативы. Современные аналоги земли тоже стали частью фитодизайна. Они упрощают уход, дают растениям больше силы и эстетически намного привлекательней земли.
-            .type-page-block__img
+            .type-page-block__img(data-aos="fade-up")
               img(src="assets/images/type-page-3.jpg", alt="")
 
         .designers-showrooms
-            .ojects-projects-top
+            .ojects-projects-top(data-aos="fade-up")
               h2.ojects-projects-top__title.title-h2
                 |Выполненные проекты
               a.ojects-projects-top__link(href="")
                 |все проекты
                 //- img(src="assets/images/objects-arrow.png", alt="")
                 +allProjectsSvg
-            .designers-products-filter
+            .designers-products-filter(data-aos="fade-up")
               ul
                 li.filter-tab.active-tab Фитодизайн
                 //- -
@@ -75,7 +75,7 @@ block content
                 //-   li.filter-tab
                 //-     |#{i}
 
-            .projects__slider.swiper-container(data-projects-slider="")
+            .projects__slider.swiper-container(data-projects-slider="" data-aos="fade-up")
               .swiper-wrapper
                 .swiper-slide.projects__slide
                   .projects__item
@@ -141,10 +141,10 @@ block content
                   +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
 
         .landscaping-contacts
-          .contacts-cards__ttl.title-h2 Профессионалы Green Land
+          .contacts-cards__ttl.title-h2(data-aos="fade-up") Профессионалы Green Land
           .contacts-cards
             - for (i=0; i<4; i++)
-              .contacts-cards__item
+              .contacts-cards__item(data-aos="fade-up")
                 img(src="assets/images/designer-contacts-2.png", alt="")
                 .contacts-cards__name Шабала Виктория
                 .contacts-cards__position Менеджер по работе с дизйнерами
@@ -152,14 +152,14 @@ block content
 
 
         .designers-form.about-mission
-          h2.designers-form__title.title-h2 Оставить заявку на абонемент
+          h2.designers-form__title.title-h2(data-aos="fade-up") Оставить заявку на абонемент
           .designers-form__row
             .mission__main
               .mission__slider-underlay
               .designers-form__container
                 
                 include ../partials/form-designer
-            .about-mission__img.designers-form__imgs
+            .about-mission__img.designers-form__imgs(data-aos="fade-up")
               img(src="assets/images/designer-form-1.jpg", alt="")
               img(src="assets/images/designer-form-2.jpg", alt="")
 

@@ -14,14 +14,14 @@ block content
       .container
         +breadcrumbs(['работа с нами', 'Для дистрибьютеров и оптовых покупателей'])
 
-        h1.title-h1.about-title Для дистрибьютеров и оптовых покупателей
+        h1.title-h1.about-title(data-aos="fade-up") Для дистрибьютеров и оптовых покупателей
 
-        .about-tabs
+        .about-tabs(data-aos="fade-up")
           a.about-tabs__item(href="") Условия работы с дизайнерами
           a.about-tabs__item(href="") Условия работы для объектов
           a.about-tabs__item.about-tabs__item--active(href="") Условия работы для дистрибьютеров и оптовых покупателей
 
-        .distributor-desc
+        .distributor-desc(data-aos="fade-up")
           h3.distributor-desc__ttl.title-h3
             |Оптовым покупателям, 
             br
@@ -31,7 +31,7 @@ block content
             |Green Land всегда открыт для партнерства, мы знаем что предложить вашему бизнесу для успешного развития. Основываясь на собственном опыте, мы подобрали товары наиболее востребованные у современного покупателя, а предлагаемые коммерческие условия, помогут вам заработать.
 
         .designers-offers.distributor-offers
-          .designers-offers__table
+          .designers-offers__table(data-aos="fade-up")
             ul
               -
                 var items = [
@@ -47,7 +47,7 @@ block content
                   |#{item}
 
         .designers-benefits.distributor-benefits
-          .designers-benefits__table
+          .designers-benefits__table(data-aos="fade-up")
             ul
               -
                 var items = [
@@ -68,7 +68,7 @@ block content
                     .designers-benefits__ttl #{item}
 
         .distributor-price
-          .distributor-price__ttl
+          .distributor-price__ttl(data-aos="fade-up")
             h3.title-h3 Мы помогаем 
               span.accent развивать 
               |ваш бизнес, 
@@ -79,7 +79,7 @@ block content
               span.accent поддержку
             +footerDownload('скачать прайс-лист', 'pdf, 2 мб')
 
-          .distributor-price__txt
+          .distributor-price__txt(data-aos="fade-up")
             p Предоставляем обучающие материалы для вас и ваших сотрудников.
             p После регистрации вы получаете доступ к:
             ul
@@ -90,11 +90,11 @@ block content
             +footerDownload('скачать прайс-лист', 'pdf, 2 мб')
 
         .designers-products
-          h2.title-h2.distributor-products-ttl
+          h2.title-h2.distributor-products-ttl(data-aos="fade-up")
             |Складская программа 
             br
             |для торговых организаций
-          .designers-products-filter
+          .designers-products-filter(data-aos="fade-up")
             ul
               li.filter-tab.active-tab
                 |De Roma
@@ -111,7 +111,7 @@ block content
               .arrows.cover__slider-arrows
                 +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-catalog-slider-prev="")
                 +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-catalog-slider-next="")
-          .designers-products__catalog
+          .designers-products__catalog(data-aos="fade-up")
             .swiper-container(data-catalog-slider="")
               .swiper-wrapper
             
@@ -139,7 +139,7 @@ block content
                       .catalog-card__price 5 292 ₽
 
         .distributor-brands
-          .distributor-brands__top
+          .distributor-brands__top(data-aos="fade-up")
             h2.title-h2
               |С нами уже работают
             .designers-products__controls(data-brands-logos-controls="")
@@ -147,7 +147,7 @@ block content
                 +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-brands-logos-prev="")
                 +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-brands-logos-next="")
 
-          .designers-brands__list.swiper-container(data-brands-logos-slider="")
+          .designers-brands__list.swiper-container(data-brands-logos-slider="" data-aos="fade-up")
             ul.swiper-wrapper
               -
                 var items = [
@@ -163,13 +163,13 @@ block content
                   |#{item}
 
         .designers-showrooms
-          h3.designers-showrooms__title.title-h3
+          h3.designers-showrooms__title.title-h3(data-aos="fade-up")
             |Товар 
             span всегда в наличии 
             |на самом большом 
             br
             |складе кашпо и горшков в РФ
-          .designers-products-filter
+          .designers-products-filter(data-aos="fade-up")
             ul
               //- -
               //-   var items = [
@@ -183,7 +183,7 @@ block content
               li.filter-tab.active-tab Шоу-рум
               li.filter-tab Упаковка продукции
 
-          .projects__slider.swiper-container(data-projects-slider="")
+          .projects__slider.swiper-container(data-projects-slider="" data-aos="fade-up")
             .swiper-wrapper
               - for (i=0; i<3; i++)
                 .swiper-slide.projects__slide
@@ -199,13 +199,13 @@ block content
                 +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
 
         .designers-contacts.distributor-contacts
-          .designers-contacts__top
+          .designers-contacts__top(data-aos="fade-up")
             h2.designers-contacts__title.title-h2 Начать работу с нами
             .designers-contacts__subtitle Звоните или пишите нам. Мы расскажем и о других 
               br
               |преимуществах работы с Green Land.
           .designers-contacts__row
-            .designers-contacts__card
+            .designers-contacts__card(data-aos="fade-up")
               .designers-contacts__img
                 img(src="assets/images/designer-contacts-1.png", alt="")
               .designers-contacts__desc
@@ -220,7 +220,7 @@ block content
                 
            
 
-            .designers-contacts__links
+            .designers-contacts__links(data-aos="fade-up")
               .designers-contacts__links-txt
                 |Написать в соц. сетях
               .footer__socials
@@ -235,12 +235,12 @@ block content
 
         .objects-form.distributor-form
           .mission__slider-underlay
-          h2.title-h2
+          h2.title-h2(data-aos="fade-up")
             |Вы комплексный поставщик
             br
             |— задайте вопрос
 
-          form.designers-form__form
+          form.designers-form__form(data-aos="fade-up")
             label.designers-form__label
               input.designers-form__input(placeholder="Имя")
             label.designers-form__label
