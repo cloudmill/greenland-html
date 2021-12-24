@@ -83,13 +83,21 @@
     align-items: center;
     justify-content: center;
 
+    transition: .5s;
+
     @media (max-width: ($breakpoint - 1px)) {
       width: 32px;
       height: 32px;
     }
 
+    &:hover {
+      color: $green;
+    }
+
     &:not(:first-child) {
-      margin-left: 12px;
+      @media (min-width: $breakpoint) {
+        margin-left: 12px;
+      }
     }
 
     &.is-active {
@@ -111,13 +119,43 @@
 
     @media (max-width: ($breakpoint - 1px)) {
       margin-left: 40px;
+      width: 75px;
     }
 
     .arrow {
       background-color: #CAE8D9;
+      border: none;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 34px;
+        height: 34px;
+      }
+
+      svg circle, svg path {
+        transition: .5s;
+      }
+
+      &:hover {
+        svg {
+          circle {
+            fill: $green-lighten;
+          }
+          path {
+            fill: $black;
+          }
+        }
+      }
+    }
+    .right {
+      transform: rotate(180deg);
     }
     .arrow-active {
       background-color: $green;
+    }
+    .not-active {
+      svg circle {
+        fill: $green-extra-lighten;
+      }
     }
   }
 }

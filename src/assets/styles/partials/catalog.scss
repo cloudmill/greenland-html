@@ -22,14 +22,20 @@
   &__top {
     position: relative;
     height: 177px;
+    text-align: center;
 
     @media (min-width: $breakpoint) {
       height: 359px;
     }
   }
   &__main-img {
-    width: 100%;
     object-fit: cover;
+    height: 100%;
+    max-width: 100%;
+
+    @media (min-width: $breakpoint) {
+      width: 100%;
+    }
   }
   &__layer {
     position: absolute;
@@ -60,13 +66,17 @@
     z-index: 10;
     line-height: 100%;
     font-size: 12px;
+    flex-wrap: wrap;
 
     @media (max-width: ($breakpoint - 1px)) {
-      display: none;
+      // display: none;
+      font-size: 8px;
+      padding: 5px;
+      
     }
 
     &-item {
-      padding: 8px 16px;
+      padding: 4px 6px;
       border: 1px solid $green-extra-lighten;
       border-radius: 0px 10px;
 
@@ -75,11 +85,20 @@
       justify-content: center;
 
       &:not(:first-child) {
-        margin-left: 5px;
+        margin-left: 2px;
       }
+
+      margin-bottom: 2px;
+      // height: 17px;
 
       @media (min-width: $breakpoint) {
         height: 30px;
+        padding: 8px 16px;
+
+        &:not(:first-child) {
+          margin-left: 5px;
+          margin-bottom: 5px;
+        }
       }
     }
   }

@@ -124,13 +124,13 @@
   }
 }
 
-.news-cols {
-  .action-aside {
-    @media (max-width: ($breakpoint - 1px)) {
-      display: none;
-    }
-  }
-}
+// .news-cols {
+//   .action-aside {
+//     @media (max-width: ($breakpoint - 1px)) {
+//       display: none;
+//     }
+//   }
+// }
 
 .action-aside {
   width: calc(#{$col-part-d} * 4);
