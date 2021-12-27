@@ -55,12 +55,14 @@
   &__link {
     margin-left: 40px;
 
+    transition: $transition;
+
     &:first-child {
       margin-left: 0;
     }
 
     &:hover {
-      color: inherit;
+      color: $green;
     }
   }
 

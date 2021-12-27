@@ -8,21 +8,21 @@ aside.aside
         span.aside__btn-title меню
     .aside__center
       button.aside__btn
-        +menuSearch
+        +menuSearch.aside__btn-svg
     a.header__logo.aside__logo(href="/")
       +logo('white')
     .aside__footer
       button.aside__btn
         span.aside__btn-counter 12
-        +menuBasket
+        +menuBasket.aside__btn-svg
       button.aside__btn
         span.aside__btn-counter 0
-        +menuFavorite
+        +menuFavorite.aside__btn-svg
       button.aside__btn
         span.aside__btn-counter 0
-        i.sprite.sprite--filters
+        +settings-svg.aside__btn-svg
       button.aside__btn
-        i.sprite.sprite--user
+        +user-svg.aside__btn-svg
 
   include ../partials/modal-search
   include ../partials/modal-menu

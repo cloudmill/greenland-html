@@ -27,21 +27,21 @@ mixin headerMenu(items)
           span.text__sm.header__btn-caption= item.caption
 
 mixin menuBurger
-  svg(width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg")
+  svg(class=attributes.class width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg")
     line(y1="0.5" x2="35" y2="0.5" stroke="white")
     line(y1="14.5" x2="35" y2="14.5" stroke="white")
 
 mixin menuSearch
-  svg(width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg")
+  svg(class=attributes.class width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg")
     line(x1="6.61007" y1="27.5001" x2="14.8395" y2="19.2707" stroke="white")
     circle(cx="20.8901" cy="13.2937" r="8.90005" transform="rotate(45 20.8901 13.2937)" stroke="white")
 
 mixin menuFavorite
-  svg(width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+  svg(class=attributes.class width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg")
     path(d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="white")
 
 mixin menuBasket
-  svg(width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg")
+  svg(class=attributes.class width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg")
     rect(x="0.5" y="4.49988" width="20" height="20" stroke="white")
     path(d="M16.4529 8.13201C16.4529 4.19311 13.7919 1 10.5095 1C7.22709 1 4.56616 4.19311 4.56616 8.13201" stroke="white")
 
@@ -199,3 +199,18 @@ mixin arrowSpoiler
 mixin aboutBottomArrow
   svg(width="39" height="33" viewBox="0 0 39 33" fill="none" xmlns="http://www.w3.org/2000/svg")
     path(d="M38 16.5L38.5807 16.9746V16.0254L38 16.5ZM0 17.25H38V15.75L0 15.75L0 17.25ZM38.5807 16.0254L25.9141 0.525412L24.7526 1.47459L37.4193 16.9746L38.5807 16.0254ZM37.4193 16.0254L24.7526 31.5254L25.9141 32.4746L38.5807 16.9746L37.4193 16.0254Z" fill="#65BA7F")
+
+mixin settings-svg 
+  svg(class=attributes.class width='25' height='24' viewbox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+    line(x1='2.50049' x2='2.50049' y2='24' stroke='white')
+    line(x1='5' y1='3.5' y2='3.5' stroke='white')
+    line(x1='22.5002' x2='22.5002' y2='24' stroke='white')
+    line(x1='25' y1='20.5' x2='20' y2='20.5' stroke='white')
+    line(x1='12.5005' x2='12.5005' y2='24' stroke='white')
+    line(x1='15' y1='11.5' x2='10' y2='11.5' stroke='white')
+
+mixin user-svg
+  svg(class=attributes.class width='21' height='24' viewbox='0 0 21 24' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M0.5 21.5C0.5 15.9771 4.97715 11.5 10.5 11.5C16.0228 11.5 20.5 15.9771 20.5 21.5V23.5H0.5V21.5Z' stroke='white')
+    circle(cx='10.4998' cy='4.5' r='4' stroke='white')
+

@@ -115,6 +115,7 @@
   &__btn {
     display: block;
     position: relative;
+    z-index: 0;
 
     width: 100%;
     margin-top: 40px;
@@ -126,6 +127,43 @@
 
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 0;
+    }
+
+    &::before {
+      --size: 41px;
+
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: -1;
+      transform: translate(-50%, -50%);
+
+      width: var(--size);
+      height: var(--size);
+
+      transition: background $transition;
+      border-radius: 50%;
+      background: transparent;
+    }
+
+    &:hover {
+      #{$comp}__btn-svg {
+        $props: path, line, rect, circle;
+
+        @each $item in $props {
+          #{$item} {
+            stroke: $black;
+          }
+        }
+      }
+      #{$comp}__btn-counter {
+        color: $black;
+      }
+    }
+
+    &:hover::before {
+      background: $green-lighten;
     }
 
     &:first-child {
@@ -149,10 +187,26 @@
       transform: translate(0, -100%);
 
       font-size: $font-size-small;
+      transition: color $transition;
 
       @media (max-width: ($breakpoint - 1px)) {
         font-size: 9px;
         right: 8px;
+      }
+    }
+    &-svg {
+
+      path {
+        transition: $transition;
+      }
+      line {
+        transition: $transition;
+      }
+      rect {
+        transition: $transition;
+      }
+      circle {
+        transition: $transition;
       }
     }
   }
