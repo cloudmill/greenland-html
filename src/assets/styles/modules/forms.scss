@@ -172,6 +172,7 @@
       margin-top: 0;
 
       @media (max-width: ($breakpoint - 1px)) {
+        width: 241px;
         margin-top: 20px;
       }
     }
@@ -185,6 +186,12 @@
 
     &:nth-child(3) {
       width: 100%;
+    }
+  }
+  .parsley-errors-list#parsley-id-multiple-checkbox {
+    bottom: 32px;
+    @media (min-width: $breakpoint) {
+      bottom: -10px;
     }
   }
 }

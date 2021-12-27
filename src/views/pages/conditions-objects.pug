@@ -15,21 +15,21 @@ block content
         h1.title-h1.about-title(data-aos="fade-up") Условия работы для объектов
 
         .about-tabs(data-aos="fade-up")
-          a.about-tabs__item(href="") Условия работы с дизайнерами
-          a.about-tabs__item.about-tabs__item--active(href="") Условия работы для объектов
-          a.about-tabs__item(href="") Условия работы для дистрибьютеров и оптовых покупателей
+          a.about-tabs__item.about-tabs__item--active(href="") Для дизайнеров
+          a.about-tabs__item(href="") Для объектов
+          a.about-tabs__item(href="") Для дистрибьютеров
 
         .about-mission
 
           .mission__slide(data-aos="fade-up")
             .mission__main
               .mission__slider-underlay
-              .gamma.mission__heading.objects-highlights
+              .mission__heading.objects-highlights.title-h3
                 .
                   Мы знаем какие #[span.accent проблемы #[br] решает озеленение #[br] бизнес-пространств.] #[br] если стоит задача подобрать #[br] товар для декодирования #[br] или озеленения своими #[br] силами, #[span.accent #[span.objects-highlights-1 наши менеджеры] #[br] #[span.objects-highlights-2 помогут] с выбором кашпо и #[br] растений]
             img.about-mission__img(src="assets/images/objects-1.jpg" alt="")
 
-        .designers-benefits
+        .designers-benefits.objects-benefits
           .designers-benefits__table(data-aos="fade-up")
             ul
               -
@@ -56,8 +56,8 @@ block content
             h3.about-block__ttl.title-h3 Мы 
               span.objects-highlights-3 гордимся своими 
               br
-              span.objects-highlights-4 проектами, 
-              |а наши партнёры 
+              span.objects-highlights-4 проектами
+              |, а наши партнёры 
               br
               |благодарят нас за сроки, 
               br 
@@ -154,17 +154,20 @@ block content
         .objects-form
           h2.title-h2(data-aos="fade-up")
             |Связаться с нами
-          form.designers-form__form(data-aos="fade-up")
+          form.designers-form__form(data-aos="fade-up" data-parsley-validate)
             label.designers-form__label
-              input.designers-form__input(placeholder="Имя")
+              .placeholder-active Имя*
+              input.designers-form__input(placeholder="Имя*" required)
             label.designers-form__label
-              input.designers-form__input(placeholder="E-mail")
+              .placeholder-active E-mail*
+              input.designers-form__input(placeholder="E-mail*" required)
 
             label.designers-form__label
-              textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос")
+              .placeholder-active Вопрос*
+              textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос*" required)
 
             label.designers-form__checkbox
-              input(type="checkbox"  id="checkbox")
+              input(type="checkbox"  id="checkbox" required)
               .checkbox
               .designers-form__checkbox-txt Я соглашаюсь на обработку
                 br

@@ -9,7 +9,7 @@ block content
     include ../partials/_header.pug
 
     .section.page-wrapper
-      .container
+      .container.projects-page
         +breadcrumbs(['Проекты'])
 
         h1.about-title.title-h1(data-aos="fade-up") Проекты
@@ -18,7 +18,7 @@ block content
           |Наша продукция используется 
           span по всей России
 
-        .blog-filter(data-aos="fade-up")
+        .blog-filter.projects-tabs(data-aos="fade-up")
           ul
             li.filter-tab.active-tab Озеленение интерьерное
             -
@@ -51,7 +51,7 @@ block content
                 .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
                 .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
             .projects__item-caption
-              .projects__item-name Детский сад 59 в д. Новое Девяткино
+              h5.projects__item-name Детский сад 59 в д. Новое Девяткино
               .projects__item-tags
                 .projects__item-tag.text__super-tn.text--uppercase озеленение интерьерное
                 .projects__item-tag.text__super-tn.text--uppercase озеленение уличное
@@ -71,7 +71,7 @@ block content
                 .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
                 .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
             .projects__item-caption
-              .epsilon.projects__item-name Терраса ЛИДЕР СОНСАЛТ
+              h5.projects__item-name Терраса ЛИДЕР СОНСАЛТ
               .projects__item-tags
                 .projects__item-tag.text__super-tn.text--uppercase Терраса
                 .projects__item-tag.text__super-tn.text--uppercase бизнес-центр
@@ -90,7 +90,7 @@ block content
                 .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
                 .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
             .projects__item-caption
-              .epsilon.projects__item-name Бар-клуб на ул. Садовая
+              h5.projects__item-name Бар-клуб на ул. Садовая
               .projects__item-tags
                 .projects__item-tag.text__super-tn.text--uppercase Терраса
                 .projects__item-tag.text__super-tn.text--uppercase бизнес-центр
@@ -109,7 +109,7 @@ block content
                 .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
                 .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
             .projects__item-caption
-              .epsilon.projects__item-name Бизнес зал Кронштадт Пулково
+              h5.projects__item-name Бизнес зал Кронштадт Пулково
               .projects__item-tags
                 .projects__item-tag.text__super-tn.text--uppercase озеленение интерьерное
                 .projects__item-tag.text__super-tn.text--uppercase озеленение уличное
@@ -129,7 +129,7 @@ block content
                 .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
                 .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
             .projects__item-caption
-              .epsilon.projects__item-name Бизнес зал Кронштадт Пулково
+              h5.projects__item-name Бизнес зал Кронштадт Пулково
               .projects__item-tags
                 .projects__item-tag.text__super-tn.text--uppercase Терраса
                 .projects__item-tag.text__super-tn.text--uppercase бизнес-центр
@@ -148,25 +148,27 @@ block content
                 .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
                 .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
             .projects__item-caption
-              .epsilon.projects__item-name Бизнес зал Кронштадт Пулково
+              h5.projects__item-name Бизнес зал Кронштадт Пулково
               .projects__item-tags
                 .projects__item-tag.text__super-tn.text--uppercase Терраса
                 .projects__item-tag.text__super-tn.text--uppercase бизнес-центр
                 .projects__item-tag.text__super-tn.text--uppercase озеленение офиса
 
 
-        .pagination.project-pagination
-          .pagination-list(data-aos="fade-up")
-            button.pagination__item.is-active 1
-            button.pagination__item 2
-            button.pagination__item 3
-            button.pagination__item 4
-            button.pagination__dots ...
-            button.pagination__item 12
+        //- .pagination.project-pagination
+        //-   .pagination-list(data-aos="fade-up")
+        //-     button.pagination__item.is-active 1
+        //-     button.pagination__item 2
+        //-     button.pagination__item 3
+        //-     button.pagination__item 4
+        //-     button.pagination__dots ...
+        //-     button.pagination__item 12
 
-          .pagination-controls(data-aos="fade-up")
-            +arrow('white', '#CAE8D9', 'left', '15', '13', '46')
-            +arrow('white', '#65BA7F', 'right', '15', '13', '46').arrow-active
+        //-   .pagination-controls(data-aos="fade-up")
+        //-     +arrow('white', '#CAE8D9', 'left', '15', '13', '46')
+        //-     +arrow('white', '#65BA7F', 'right', '15', '13', '46').arrow-active
+
+        include ../partials/pagination
 
 
     include ../partials/_footer.pug
