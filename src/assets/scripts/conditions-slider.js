@@ -18,7 +18,8 @@ $(() => {
     const scene = new ScrollMagic.Scene({
       triggerElement: "#conditions-container",
       triggerHook: "onLeave",
-      duration: "500%"
+      duration: "500%",
+      refreshInterval: 0,
     })
       .setPin("#conditions-container")
       .setTween(wipe)
