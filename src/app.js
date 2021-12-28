@@ -24,8 +24,17 @@ import "parsleyjs/dist/i18n/ru";
 
 import './assets/scripts/sliders';
 
+import { CatalogCard } from './assets/scripts/catalog-card';
+
+
 import LocomotiveScroll from 'locomotive-scroll';
 
+
+{
+  $(() => {
+    const catalogCard = new CatalogCard()
+  })
+}
 
 
 // модалка с первого экрана главной

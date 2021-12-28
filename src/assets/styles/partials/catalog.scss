@@ -1,9 +1,12 @@
 .catalog-card {
   width: 304px;
   height: 473px;
+
+  flex-shrink: 0;
+  
   border: 1px solid $green-extra-lighten;
   position: relative;
-  transition: .5s;
+  transition: $transition;
 
   @media (max-width: ($breakpoint - 1px)) {
     width: 151px;
@@ -27,6 +30,22 @@
     @media (min-width: $breakpoint) {
       height: 359px;
     }
+  }
+  &__list {
+    margin: 0;
+
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+  }
+  &__item {
+    width: 100%;
+    height: 100%;
   }
   &__main-img {
     object-fit: cover;
@@ -111,6 +130,7 @@
       width: 6px;
       height: 6px;
       background-color: $green-extra-lighten;
+      // transition: background-color $transition;
 
       @media (max-width: ($breakpoint - 1px)) {
         display: none;
@@ -118,6 +138,10 @@
 
       &:not(:first-child) {
         margin-left: 10px;
+      }
+
+      &.active {
+        background-color: $green;
       }
     }
   }
