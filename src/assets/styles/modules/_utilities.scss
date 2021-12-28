@@ -88,6 +88,11 @@ button.close {
 .mt40 {
   margin-top: 40px;
 }
+.mt40-mob {
+  @media (max-width: ($breakpoint - 1px)) {
+    margin-top: 40px;
+  }
+}
 
 .pb60-desk {
   @media (min-width: $breakpoint) {
@@ -111,4 +116,8 @@ button.close {
 
 .line100 {
   line-height: 100%;
+}
+
+.hidden {
+  overflow: hidden;
 }

@@ -19,3 +19,30 @@ $(
     }
   }
 )
+
+$(
+  () => {
+    const askBtn = $('.project-aside-btn');
+    const askModal = $('.modal-ask');
+    const body = $('body');
+
+    if (askBtn.length !== 0) {
+      askBtn.on('click', () => {
+        askModal.addClass('modal-active');
+        body.addClass('hidden');
+      })
+
+      $(window).on('click', (event) => {
+          
+        if (
+          askModal.hasClass('modal-active') && 
+          $(event.target).closest('.modal-ask__wrapper').length === 0 && 
+          $(event.target).closest(askBtn).length === 0
+        ) {
+          console.log('helo');
+          askModal.removeClass('modal-active');
+          body.removeClass('hidden');
+        }
+      })
+    }
+  })

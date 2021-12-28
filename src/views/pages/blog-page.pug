@@ -13,7 +13,7 @@ block content
         +breadcrumbs(['Блог', 'Как пересадить монстеру'])
 
         .news-cols
-          .news-col-links.news-col-links--short.blog-sidebar
+          .news-col-links.news-col-links--short.blog-sidebar.only-desktop
             .news-col-links__container
               a.news-back-link(href="" data-aos="fade-up")
                 +arrow('white', '#65BA7F', 'left', '15', '13', '46')
@@ -80,7 +80,7 @@ block content
               +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-other-slider-prev="")
               +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-other-slider-next="")
 
-          .swiper-container(data-other-news="" data-aos="fade-up")
+          .swiper-container.blog-other-slider(data-other-news="" data-aos="fade-up")
             .swiper-wrapper
 
               a.projects__item.blog-card.swiper-slide(href="")
@@ -103,6 +103,33 @@ block content
                   .epsilon.projects__item-name Как пересадить толстянку (денежное дерево)
                   .projects__item-tags
                     .projects__item-tag.text__super-tn.text--uppercase Озеленение и зимостойкость
+
+
+        .blog-sidebar.only-mobile
+          .news-col-links__container
+            a.news-back-link(href="" data-aos="fade-up")
+              button.arrow
+                +arrowBtn
+              |Все посты
+
+            .news-social(data-aos="fade-up")
+              .news-social__title
+                span Следите 
+                |за нами
+              ul.news-social__list
+                -
+                  var items = [
+                    'facebook',
+                    'instagram',
+                    'pinterest',
+                    'houzz',
+                    'наш блог',
+                  ]
+                each item in items
+                  li
+                    a(href="") #{item}
+
+            include ../partials/aside-news-subscribe
 
     
     include ../partials/_footer.pug

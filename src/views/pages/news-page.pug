@@ -13,7 +13,7 @@ block content
         +breadcrumbs(['Новости', 'Приехали и едут: редкие товары на складе'])
 
         .news-cols
-          .news-col-links.news-col-links--short
+          .news-col-links.news-col-links--short.only-desktop
             .news-col-links__container
               a.news-back-link(href="" data-aos="fade-up")
                 +arrow('white', '#65BA7F', 'left', '15', '13', '46')
@@ -102,6 +102,32 @@ block content
                   li.news-card__tag #продукция
                 .news-card__desc
                   |Не тратьте время на поиск 3D-моделей товаров нашей линейки и ассортиментной матрицы Green Land.
+
+        .news-col-links.news-col-links--short.only-mobile.mt40-mob
+            .news-col-links__container
+              a.news-back-link(href="" data-aos="fade-up")
+                button.arrow
+                  +arrowBtn
+                |Все новости
+
+              .news-social
+                .news-social__title(data-aos="fade-up")
+                  span Следите 
+                  |за нами
+                ul.news-social__list
+                  -
+                    var items = [
+                      'facebook',
+                      'instagram',
+                      'pinterest',
+                      'houzz',
+                      'наш блог',
+                    ]
+                  each item in items
+                    li(data-aos="fade-up")
+                      a(href="") #{item}
+
+              include ../partials/aside-news-subscribe
 
     
     include ../partials/_footer.pug

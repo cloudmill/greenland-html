@@ -6,6 +6,8 @@ block content
 
   .main__wrap.main__wrap--visible(data-scroll-container="")
 
+    include ../partials/modal-ask
+
     include ../partials/_header.pug
 
     .section.page-wrapper
@@ -36,12 +38,24 @@ block content
                     li
                       a(href="") #{item}
 
-              button.btn.cover__btn.project-aside-btn задать вопрос
+              button.btn.project-aside-btn задать вопрос
 
           .project-page-main
+
             h1.about-title.title-h1(data-aos="fade-up") Терраса ЛИДЕР кОНСАЛТ
 
-            img.blog-image-main(src="assets/images/project-page-1.jpg", alt="" data-aos="fade-up")
+            .project-image-main(data-aos="fade-up")
+              .projects__item-slider(data-fade-item-slider="")
+                .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                  img.projects__item-img.is-active(src="assets/images/project-page-1.jpg", alt="", data-fade-item-slider-item="")
+                  img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                  img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                  img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                .bullets.projects__item-slider-bullets
+                  .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                  .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                  .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                  .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
 
             .project-info
               .project-info__col(data-aos="fade-up")

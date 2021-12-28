@@ -112,6 +112,13 @@
     width: 100%;
     margin-bottom: 40px;
   }
+
+  .project-products .swiper-container {
+    margin-right: -40px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-right: -10px;
+    }
+  }
 }
 
 .project-info {
@@ -242,9 +249,37 @@
 
   @media (max-width: ($breakpoint - 1px)) {
     width: calc(#{$col-part-m} * 3);
+    margin-top: 30px;
   }
 }
 
 .project-pagination {
   margin: 0;
+}
+
+.project-image-main {
+  height: 600px;
+
+  @media (max-width: ($breakpoint - 1px)) {
+    height: 184px;
+  }
+
+  img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 0 20px;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      height: 184px;
+      border-radius: 0px 10px;
+    }
+  }
+
+  .bullets.projects__item-slider-bullets {
+    left: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      display: flex;
+    }
+  }
 }

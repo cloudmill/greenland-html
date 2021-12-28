@@ -86,7 +86,7 @@
     }
   }
   sup {
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       display: block;
       font-size: 8px;
       transform: translateY(-40%);
