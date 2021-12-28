@@ -182,16 +182,16 @@
 							<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">условия работы для объектов</a></li>
 						</ul>
 						<h1 class="title-h1 about-title" data-aos="fade-up">Условия работы для объектов</h1>
-						<div class="about-tabs" data-aos="fade-up"><a class="about-tabs__item" href="">Условия работы с дизайнерами</a><a class="about-tabs__item about-tabs__item--active" href="">Условия работы для объектов</a><a class="about-tabs__item" href="">Условия работы для дистрибьютеров и оптовых покупателей</a></div>
+						<div class="about-tabs" data-aos="fade-up"><a class="about-tabs__item about-tabs__item--active" href="">Для дизайнеров</a><a class="about-tabs__item" href="">Для объектов</a><a class="about-tabs__item" href="">Для дистрибьютеров</a></div>
 						<div class="about-mission">
 							<div class="mission__slide" data-aos="fade-up">
 								<div class="mission__main">
 									<div class="mission__slider-underlay"></div>
-									<div class="gamma mission__heading objects-highlights">Мы знаем какие <span class="accent">проблемы<br>решает озеленение<br>бизнес-пространств.</span><br>если стоит задача подобрать<br>товар для декодирования<br>или озеленения своими<br>силами, <span class="accent"><span class="objects-highlights-1">наши менеджеры</span><br><span class="objects-highlights-2">помогут</span> с выбором кашпо и<br>растений</span></div>
+									<div class="mission__heading objects-highlights title-h3">Мы знаем какие <span class="accent">проблемы<br>решает озеленение<br>бизнес-пространств.</span><br>если стоит задача подобрать<br>товар для декодирования<br>или озеленения своими<br>силами, <span class="accent"><span class="objects-highlights-1">наши менеджеры</span><br><span class="objects-highlights-2">помогут</span> с выбором кашпо и<br>растений</span></div>
 								</div><img class="about-mission__img" src="assets/images/objects-1.jpg" alt="">
 							</div>
 						</div>
-						<div class="designers-benefits">
+						<div class="designers-benefits objects-benefits">
 							<div class="designers-benefits__table" data-aos="fade-up">
 								<ul>
 									<li>
@@ -230,7 +230,7 @@
 						<div class="about-block designers-block" data-aos="fade-up">
 							<div class="about-block__img"><img src="assets/images/objects-2.jpg" alt=""></div>
 							<div class="about-block__desc">
-								<h3 class="about-block__ttl title-h3">Мы <span class="objects-highlights-3">гордимся своими</span><br><span class="objects-highlights-4">проектами, </span>а наши партнёры<br>благодарят нас за сроки,<br>качество и отличный<br>клиентский сервис</h3>
+								<h3 class="about-block__ttl title-h3">Мы <span class="objects-highlights-3">гордимся своими</span><br><span class="objects-highlights-4">проектами</span>, а наши партнёры<br>благодарят нас за сроки,<br>качество и отличный<br>клиентский сервис</h3>
 							</div>
 						</div>
 						<div class="designers-showrooms">
@@ -326,7 +326,13 @@
 						</div>
 						<div class="objects-form">
 							<h2 class="title-h2" data-aos="fade-up">Связаться с нами</h2>
-							<form class="designers-form__form" data-aos="fade-up"><label class="designers-form__label"><input class="designers-form__input" placeholder="Имя"></label><label class="designers-form__label"><input class="designers-form__input" placeholder="E-mail"></label><label class="designers-form__label"><textarea class="designers-form__input" name="" cols="30" rows="1" placeholder="Вопрос"></textarea></label><label class="designers-form__checkbox"><input type="checkbox" id="checkbox">
+							<form class="designers-form__form" data-aos="fade-up" data-parsley-validate><label class="designers-form__label">
+									<div class="placeholder-active">Имя*</div><input class="designers-form__input" placeholder="Имя*" required>
+								</label><label class="designers-form__label">
+									<div class="placeholder-active">E-mail*</div><input class="designers-form__input" placeholder="E-mail*" required>
+								</label><label class="designers-form__label">
+									<div class="placeholder-active">Вопрос*</div><textarea class="designers-form__input" name="" cols="30" rows="1" placeholder="Вопрос*" required></textarea>
+								</label><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required>
 									<div class="checkbox"></div>
 									<div class="designers-form__checkbox-txt">Я соглашаюсь на обработку<br><a href="">персональных данных</a></div>
 								</label><button class="btn cover__btn" type="submit">отправить</button></form>
