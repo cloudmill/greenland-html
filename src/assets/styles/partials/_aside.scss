@@ -169,7 +169,9 @@
     }
 
     &:hover::before {
-      background: $green-lighten;
+      @media (min-width: $breakpoint) {
+        background: $green-lighten;
+      }
     }
 
     &:first-child {

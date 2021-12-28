@@ -82,11 +82,14 @@
   }
 
   &__phone {
-    display: block;
     margin-bottom: 10px;
+
+    display: block;
+
     font-size: 45px;
     line-height: 1.1;
     color: $white-lighten;
+    transition: color $transition;
 
     @media (max-width: ($breakpoint - 1px)) {
       font-size: 24px;
@@ -121,21 +124,23 @@
   }
 
   &__mail {
-    display: block;
     margin-bottom: 40px;
-
-    color: $white-lighten;
-    font-size: $font-size-h4;
-
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
+    }
+
+    display: block;
+
+    color: $white-lighten;
+    transition: color $transition;
+    font-size: $font-size-h4;
+    @media (max-width: ($breakpoint - 1px)) {
       font-size: 16px;
     }
 
     &:hover {
       color: $white-lighten;
     }
-
   }
 
   &__address {

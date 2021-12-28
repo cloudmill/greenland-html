@@ -57,6 +57,9 @@
 
   &__heading {
     margin-bottom: 40px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 20px;
+    }
 
     font-size: 60px;
     line-height: 110%;
@@ -101,8 +104,12 @@
     &-heading {
       position: relative;
       z-index: 2;
-
       margin-bottom: 33px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: 10px;
+
+        font-size: 12px;
+      }
       font-weight: 600;
       line-height: 1.2;
     }
@@ -116,6 +123,10 @@
     }
 
     &-tag {
+      @media (max-width: ($breakpoint - 1px)) {
+        font-size: 8px;
+        line-height: 9px;
+      }
       &::before {
         content: '#';
       }
@@ -134,7 +145,7 @@
 
         @media (max-width: ($breakpoint - 1px)) {
           position: absolute;
-          // top: 8px;
+          top: 8px;
           right: 24px;
           margin-bottom: 0;
         }
@@ -170,8 +181,15 @@
 
       flex: 0 0 106px;
       max-width: 106px;
+      @media (max-width: ($breakpoint - 1px)) {
+        flex: 0 0 63px;
+        max-width: 63px;
+      }
 
       font-size: $font-size-h5;
+      @media (max-width: ($breakpoint - 1px)) {
+        font-size: 14px;
+      }
 
       &::before {
         content: '';
@@ -190,10 +208,13 @@
     }
 
     &-controls {
+      margin-bottom: 20px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: 8px;
+      }
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 20px;
     }
 
     &-arrows {
