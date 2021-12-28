@@ -11,39 +11,42 @@ $(() => {
   
   if ($('#conditions-container').length) {
 
+    const items = $('.conditions-nav__item')
     const sections = $('.conditions__slider')
-    const controller = new ScrollMagic.Controller()
+    const controller = new ScrollMagic.Controller({
+      refreshInterval: 0,
+    })
     
     const wipe = new TimelineMax()
     const scene = new ScrollMagic.Scene({
       triggerElement: "#conditions-container",
       triggerHook: "onLeave",
-      duration: "500%"
+      duration: "500%",
     })
       .setPin("#conditions-container")
       .setTween(wipe)
       .addTo(controller);
-
     
     sections.each(function(index) {
       const content = $(this).find('.conditions__slide-container')
       const contentOut = TweenMax.to(content, 0.3, {y: "50%", opacity: 0, ease: Linear.easeIn})
-      const contetnIn = TweenMax.fromTo(content, 0.3, {y: "-50%", opacity: 0}, {y: "0%", opacity: 1})
+
+      const slideTitle = items.eq(index).find('.conditions-nav__text')
 
       if (index) {
-        const slideChange = TweenMax.fromTo($(this), 1, {x: "100%"}, {x: "0%", ease: Linear.easeIn})
-        
-        wipe.add(slideChange)
-        wipe.add(contetnIn)
+        wipe.add(TweenMax.to(items.eq(index - 1).find('.conditions-nav__text'), 0.1, {color: "#FFF"}))
+        wipe.add(TweenMax.fromTo($(this), 1, {x: "100%"}, {x: "0%", ease: Linear.easeIn}))
+        wipe.add(TweenMax.to(slideTitle, 0.1, {color: "#65BA7F"}, {color: "#FFF"}))
+        wipe.add(TweenMax.fromTo(content, 0.3, {y: "-50%", opacity: 0}, {y: "0%", opacity: 1}))
         if (index !== sections.length - 1) {
           wipe.add(contentOut)
         } 
       } else {
         wipe.add(contentOut)
+        wipe.add(TweenMax.fromTo(slideTitle, 0.1, {color: "#65BA7F"}, {color: "#FFF"}))
       }
     })
 
-    const items = $('.conditions-nav__item')
     const wipe2 = new TimelineMax()
     const scene2 = new ScrollMagic.Scene({
       triggerElement: "#conditions-container",

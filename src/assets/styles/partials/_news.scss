@@ -53,6 +53,7 @@
     }
 
     &-btn {
+      white-space: nowrap;
       &-wrap {
         display: flex;
         justify-content: flex-end;
