@@ -12,19 +12,19 @@ $(() => {
   if ($('#conditions-container').length) {
 
     const sections = $('.conditions__slider')
-    const controller = new ScrollMagic.Controller()
+    const controller = new ScrollMagic.Controller({
+      refreshInterval: 0,
+    })
     
     const wipe = new TimelineMax()
     const scene = new ScrollMagic.Scene({
       triggerElement: "#conditions-container",
       triggerHook: "onLeave",
       duration: "500%",
-      refreshInterval: 0,
     })
       .setPin("#conditions-container")
       .setTween(wipe)
       .addTo(controller);
-
     
     sections.each(function(index) {
       const content = $(this).find('.conditions__slide-container')
