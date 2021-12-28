@@ -38,6 +38,12 @@
     margin-bottom: 40px;
   }
 
+  .projects__item-slider {
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 20px;
+    }
+  }
+
   .projects__item-caption {
     flex-wrap: wrap;
 
@@ -48,6 +54,7 @@
   .news-card__date {
     width: calc(#{$col-part-d} * 4);
     margin-bottom: 18px;
+    margin-top: 0;
 
     @media (max-width: ($breakpoint - 1px)) {
       margin: 0 0 20px;
@@ -63,6 +70,7 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       font-size: 14px;
+      margin-bottom: 0;
     }
   }
   .projects__item-tags {
@@ -72,6 +80,10 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-top: 20px;
+
+      .projects__item-tag {
+        font-size: 10px;
+      }
     }
   }
 }
@@ -95,6 +107,11 @@
 
 .blog-image-main {
   width: 100%;
+  border-radius: 0px 10px;
+
+  @media (min-width: $breakpoint) {
+    border-radius: 0px 20px;
+  }
 }
 
 .blog-info {
@@ -102,7 +119,7 @@
   margin-top: 30px;
 
   @media (max-width: ($breakpoint - 1px)) {
-    margin-top: 20px;
+    margin-top: 12px;
     flex-wrap: wrap;
   }
 

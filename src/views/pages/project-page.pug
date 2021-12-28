@@ -54,7 +54,7 @@ block content
             .project-products
               h3.title-h2(data-aos="fade-up")
                 |На проекте использовалось
-              .designers-products-filter(data-aos="fade-up")
+              .designers-products-filter.tabs-num(data-aos="fade-up")
                 ul
                   li.filter-tab.active-tab
                     |Кашпо
@@ -100,6 +100,11 @@ block content
                           .catalog-card__ttl Высокое напольное кашпо MUSCHEL
                           .catalog-card__color Серебро
                           .catalog-card__price 5 292 ₽
+                          .catalog-card__buttons
+                            button.catalog-card__buttons-item
+                              +cardSettingsBtn
+                            button.catalog-card__buttons-item
+                              +cardFavoriteBtn
 
             .blog-body(data-aos="fade-up")
               h3.title-h3 о проекте

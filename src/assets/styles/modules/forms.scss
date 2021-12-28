@@ -254,6 +254,11 @@
     }
   }
 }
+.form-column .parsley-errors-list#parsley-id-multiple-checkbox {
+  @media (min-width: $breakpoint) {
+    bottom: unset;
+  }
+}
 
 .designers-form__input.parsley-error {
   border-bottom: 1px solid #FF0000;

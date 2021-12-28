@@ -54,22 +54,7 @@ block content
                     li
                       a(href="") #{item}
 
-              .news-subscribe
-                .news-social__title(data-aos="fade-up")
-                  span Подпишитесь 
-                  |на нашу
-                  br
-                  |рассылку
-                form.designers-form__form(data-aos="fade-up")
-                  label.designers-form__label
-                    input.designers-form__input(placeholder="E-mail")
-                  label.designers-form__checkbox
-                    input(type="checkbox"  id="checkbox")
-                    .checkbox
-                    .designers-form__checkbox-txt Я соглашаюсь на обработку
-                      br
-                      a(href="") персональных данных
-                  button.btn.cover__btn(type="submit") отправить
+              include ../partials/aside-news-subscribe
 
           .news-col-main
             .news-list
@@ -80,7 +65,7 @@ block content
                     img.projects__item-img.is-active(src="assets/images/blog-1-2x.jpg", alt="")
                 .projects__item-caption
                   .news-card__date 18 ноября 2020
-                  .projects__item-name Как пересадить орхидею сорта фаленопсис
+                  h5.projects__item-name Как пересадить орхидею сорта фаленопсис
                   .projects__item-tags
                     .projects__item-tag.text__super-tn.text--uppercase Уход за растениями
                     .projects__item-tag.text__super-tn.text--uppercase Полезно знать
@@ -91,7 +76,7 @@ block content
                     img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="")
                 .projects__item-caption
                   .news-card__date 18 ноября 2020
-                  .epsilon.projects__item-name Как пересадить толстянку (денежное дерево)
+                  h5.projects__item-name Как пересадить толстянку (денежное дерево)
                   .projects__item-tags
                     .projects__item-tag.text__super-tn.text--uppercase Озеленение и зимостойкость
 
@@ -101,7 +86,7 @@ block content
                     img.projects__item-img.is-active(src="assets/images/blog-1-2x.jpg", alt="")
                 .projects__item-caption
                   .news-card__date 18 ноября 2020
-                  .epsilon.projects__item-name Как пересадить орхидею сорта фаленопсис
+                  h5.projects__item-name Как пересадить орхидею сорта фаленопсис
                   .projects__item-tags
                     .projects__item-tag.text__super-tn.text--uppercase Уход за растениями
                     .projects__item-tag.text__super-tn.text--uppercase Полезно знать
@@ -112,7 +97,7 @@ block content
                     img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="")
                 .projects__item-caption
                   .news-card__date 18 ноября 2020
-                  .epsilon.projects__item-name Как пересадить толстянку (денежное дерево)
+                  h5.projects__item-name Как пересадить толстянку (денежное дерево)
                   .projects__item-tags
                     .projects__item-tag.text__super-tn.text--uppercase Озеленение и зимостойкость
 
@@ -122,7 +107,7 @@ block content
                     img.projects__item-img.is-active(src="assets/images/blog-1-2x.jpg", alt="")
                 .projects__item-caption
                   .news-card__date 18 ноября 2020
-                  .epsilon.projects__item-name Как пересадить орхидею сорта фаленопсис
+                  h5.projects__item-name Как пересадить орхидею сорта фаленопсис
                   .projects__item-tags
                     .projects__item-tag.text__super-tn.text--uppercase Уход за растениями
                     .projects__item-tag.text__super-tn.text--uppercase Полезно знать
@@ -133,7 +118,7 @@ block content
                     img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="")
                 .projects__item-caption
                   .news-card__date 18 ноября 2020
-                  .epsilon.projects__item-name Как пересадить толстянку (денежное дерево)
+                  h5.projects__item-name Как пересадить толстянку (денежное дерево)
                   .projects__item-tags
                     .projects__item-tag.text__super-tn.text--uppercase Озеленение и зимостойкость
 
@@ -143,7 +128,7 @@ block content
                     img.projects__item-img.is-active(src="assets/images/blog-1-2x.jpg", alt="")
                 .projects__item-caption
                   .news-card__date 18 ноября 2020
-                  .epsilon.projects__item-name Как пересадить орхидею сорта фаленопсис
+                  h5.projects__item-name Как пересадить орхидею сорта фаленопсис
                   .projects__item-tags
                     .projects__item-tag.text__super-tn.text--uppercase Уход за растениями
                     .projects__item-tag.text__super-tn.text--uppercase Полезно знать
@@ -154,21 +139,10 @@ block content
                     img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="")
                 .projects__item-caption
                   .news-card__date 18 ноября 2020
-                  .epsilon.projects__item-name Как пересадить толстянку (денежное дерево)
+                  h5.projects__item-name Как пересадить толстянку (денежное дерево)
                   .projects__item-tags
                     .projects__item-tag.text__super-tn.text--uppercase Озеленение и зимостойкость
 
-            .pagination(data-aos="fade-up")
-              .pagination-list
-                button.pagination__item.is-active 1
-                button.pagination__item 2
-                button.pagination__item 3
-                button.pagination__item 4
-                button.pagination__dots ...
-                button.pagination__item 12
-
-              .pagination-controls
-                +arrow('white', '#CAE8D9', 'left', '15', '13', '46')
-                +arrow('white', '#65BA7F', 'right', '15', '13', '46').arrow-active
+            include ../partials/pagination
 
     include ../partials/_footer.pug

@@ -36,22 +36,7 @@ block content
                     li
                       a(href="") #{item}
 
-              .news-subscribe(data-aos="fade-up")
-                .news-social__title
-                  span Подпишитесь 
-                  |на нашу
-                  br
-                  |рассылку
-                form.designers-form__form
-                  label.designers-form__label
-                    input.designers-form__input(placeholder="E-mail")
-                  label.designers-form__checkbox
-                    input(type="checkbox"  id="checkbox")
-                    .checkbox
-                    .designers-form__checkbox-txt Я соглашаюсь на обработку
-                      br
-                      a(href="") персональных данных
-                  button.btn.cover__btn(type="submit") отправить
+              include ../partials/aside-news-subscribe
 
           .news-single-main.blog-page-main
             h1.about-title.title-h1(data-aos="fade-up") Как пересадить монстеру

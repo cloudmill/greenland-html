@@ -4,14 +4,6 @@
   }
 }
 
-.projects-tabs {
-  @media (min-width: $breakpoint) {
-    li {
-      margin-bottom: 10px;
-    }
-  }
-}
-
 .projects-subtitle {
   margin: 40px 0 60px;
   @include title-h3;
@@ -68,6 +60,10 @@
 
   .projects__item-caption {
     flex-direction: column;
+
+    .news-card__date {
+      margin-top: 0;
+    }
 
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 20px;
@@ -138,6 +134,11 @@
 
       &:first-child {
         margin-bottom: 20px;
+      }
+    }
+    &:first-child .project-info__txt {
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
       }
     }
   }

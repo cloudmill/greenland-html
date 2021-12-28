@@ -94,6 +94,10 @@
     }
   }
 
+  .designers-form__checkbox {
+    margin-top: 20px;
+  }
+
   .designers-form__form button[type="submit"] {
     @media (max-width: ($breakpoint - 1px)) {
       width: calc(#{$col-part-m} * 3);

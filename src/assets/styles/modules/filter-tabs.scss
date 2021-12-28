@@ -77,3 +77,19 @@
   background-color: $green;
   border: 1px solid $green;
 }
+
+.tabs-num {
+  .filter-tab {
+    height: 24px;
+    @media (min-width: $breakpoint) {
+      height: 40px;
+    }
+  }
+  sup {
+    @media (max-width: $breakpoint - 1px) {
+      display: block;
+      font-size: 8px;
+      transform: translateY(-40%);
+    }
+  }
+}
