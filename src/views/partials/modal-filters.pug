@@ -1,0 +1,41 @@
+mixin modal-filters 
+  .modal-filters(data-fancy-modal='f1')
+    .modal-filters__container 
+      h3.title-h3.modal-filters__title 
+        |фильтры
+      ul.modal-filters__list.catalog-filters-spoilers
+        each item in ['Наличие, скидки', 'Диапазон цены', 'Цвет', 'Форма', 'Применение', 'Особенности']
+          li.modal-filters__item(data-accordion='')
+            .modal-filters__button(data-accordion-button='')
+              .modal-filters__text 
+                |#{item}
+              .modal-filters__icon 
+                +arrowSpoiler.modal-filters__svg
+            .modal-filters__dropdown(data-accordion-dropdown='')
+              .catalog-filter-spoilers__dropdown
+                -
+                  var items = [
+                    'Крем',
+                    'Мятный',
+                    'Нежно-голубой',
+                    'Мальва',
+                    'Пион',
+                    'Лавандовый',
+                    'Бирюзовый',
+                  ]
+                each i in items
+                  .catalog-filter-spoilers__dropdown-item
+                    label.designers-form__checkbox
+                      input(type="checkbox"  id="checkbox" required)
+                      .checkbox
+                      .catalog-filter-spoilers__dropdown-text   
+                        |#{i}
+      .modal-filters__buttons 
+        .modal-filters__buttons-item
+          .btn.btn--sm
+            |применить
+        .modal-filters__buttons-item
+          .favorites-top.favorites-top--default
+            .favorites-top__reset
+              img(src="assets/images/icons/reset-ico.svg", alt="")
+              |очистить корзину

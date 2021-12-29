@@ -462,6 +462,7 @@
 }
 
 .designers-contacts {
+  $comp: &;
   margin-top: 160px;
 
   @media (max-width: ($breakpoint - 1px)) {
@@ -501,11 +502,12 @@
     }
   }
   &__card {
-    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
     padding: 20px 20px 0 0;
-    border-top: 1px solid $green-extra-lighten;
 
+    width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
     display: flex;
+
+    border-top: 1px solid $green-extra-lighten;
 
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
@@ -518,6 +520,27 @@
     
     &:first-child {
       margin-right: $col-gap-d;
+    }
+
+    &--wide {
+
+      #{$comp}__desc {
+        width: auto;
+      }
+
+      .designers-contacts__name {
+        margin-bottom: 5px;
+        @media (max-width: ($breakpoint - 1px)) {
+          margin-bottom: 3px;
+        }
+      }
+
+      .designers-contacts__contacts {
+        margin: 40px 0;
+        @media (max-width: ($breakpoint - 1px)) {
+          margin: 10px 0 20px;
+        }
+      }
     }
   }
   &__img {

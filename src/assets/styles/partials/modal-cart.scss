@@ -1,0 +1,29 @@
+.modal-cart {
+  margin-top: 56px;
+  @media (min-width: $breakpoint) {
+    margin-left: 80px;
+    margin-top: 105px;
+    
+    width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
+
+    border-radius: 0 20px;
+    overflow: hidden;
+  }
+
+  // for swiper initialization
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+
+  &.fancybox-content {
+    position: static;
+    visibility: visible;
+  }
+
+  &__container {
+    padding: 0 40px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0 10px;
+    }
+  }
+}

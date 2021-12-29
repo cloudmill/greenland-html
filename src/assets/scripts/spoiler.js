@@ -16,3 +16,12 @@
     })
   })
 }
+{
+  $(() => {
+    $('[data-accordion-button]').on('click', event => {
+      const currentSpoiler = $(event.target).closest('[data-accordion]');
+      currentSpoiler.toggleClass('active');
+      currentSpoiler.find('[data-accordion-dropdown]').slideToggle(500);
+    })
+  })
+}

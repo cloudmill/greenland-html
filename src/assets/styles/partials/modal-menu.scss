@@ -75,7 +75,6 @@
   }
   &__col:nth-child(4) {
     
-
     @media (min-width: $breakpoint) {
       width: calc(#{$col-part-d} * 4 - #{$col-gap-d});
       padding-right: 0;
@@ -84,6 +83,13 @@
     .footer__phone {
       color: $black;
       font-size: 40px;
+      @media (max-width: ($breakpoint - 1px)) {
+        font-size: 25px;
+      }
+      
+      &:hover {
+        color: $green;
+      }
     }
     .footer__text {
       color: $black;
@@ -91,6 +97,9 @@
     }
     .footer__mail {
       color: $black;
+      &:hover {
+        color: $green;
+      }
     }
   }
 
