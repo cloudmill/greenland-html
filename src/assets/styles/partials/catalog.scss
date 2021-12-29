@@ -1,11 +1,14 @@
 .catalog-card {
+  $comp: &;
+
+  position: relative;
+
   width: 304px;
   height: 473px;
 
   flex-shrink: 0;
   
   border: 1px solid $green-extra-lighten;
-  position: relative;
   transition: $transition;
 
   @media (max-width: ($breakpoint - 1px)) {
@@ -16,6 +19,13 @@
   &:hover {
     box-shadow: 0px 10px 30px rgba(43, 85, 55, 0.2);
     z-index: 15;
+
+    @media (min-width: $breakpoint) {
+      #{$comp}__btns {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
   }
 
   &:not(:last-child) {
@@ -76,16 +86,18 @@
     }
   }
   &__labels {
-    display: flex;
     padding: 10px;
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    z-index: 10;
+    z-index: 1;
+
+    display: flex;
+    flex-wrap: wrap;
+    
     line-height: 100%;
     font-size: 12px;
-    flex-wrap: wrap;
 
     @media (max-width: ($breakpoint - 1px)) {
       // display: none;
@@ -182,17 +194,37 @@
       }
     }
   }
+  &__container {
+    padding: 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0 10px 10px;
+    }
+    position: relative;
+    z-index: 0;
+  }
+  &__btns {
+    position: absolute;
+    top: 15px;
+    bottom: 16px;
+    left: 8px;
+    right: 8px;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $transition;
+    background: $white-lighten;
+  }
+  &__btns-item {
+
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
   &__bottom {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-
-    padding: 20px;
-
-    @media (max-width: ($breakpoint - 1px)) {
-      padding: 0 10px 10px;
-    }
 
     .catalog-card__buttons {
       &-item {
@@ -419,6 +451,9 @@
     border-radius: 50px;
     border: 1px solid $green-extra-lighten;
     background-color: #EBFAF2;
+    @media (min-width: $breakpoint) {
+      
+    }
 
     &__item {
       position: relative;
@@ -501,20 +536,22 @@
     }
 
     &__dropdown {
-      display: none;
-      position: absolute;
-      top: 100%;
-      z-index: 20;
-      border: 1px solid #D4E8DC;
-      box-shadow: 0px 10px 30px rgba(43, 85, 55, 0.1);
-      left: 0;
-      right: 0;
-      background: #fff;
-      padding: 20px;
+      @media (min-width: $breakpoint) {
+        padding: 20px;
+        position: absolute;
+        top: 100%;
+        z-index: 20;
+        left: 0;
+        right: 0;
+  
+        display: none;
+        
+        border: 1px solid #D4E8DC;
+        box-shadow: 0px 10px 30px rgba(43, 85, 55, 0.1);
+        background: #fff;
+      }
 
       &-item {
-        display: flex;
-        justify-content: space-between;
 
         &:not(:first-child) {
           margin-top: 12px;
@@ -522,15 +559,29 @@
 
         .designers-form__checkbox {
           margin-top: 0;
+
           height: 18px;
+          justify-content: space-between;
+          
           .checkbox::before {
             height: 18px;
             width: 18px;
           }
-          input[type="checkbox"]:checked + .checkbox::before {
+          input[type="checkbox"]:checked ~ .checkbox::before {
             background-size: 18px;
           }
+          input[type="checkbox"]:checked ~ .catalog-filter-spoilers__dropdown-text {
+            color: $green;
+          }
         }
+      }
+
+      &-text {
+        order: -1;
+
+        font-size: 14px;
+        line-height: 16px;
+        transition: color $transition;
       }
     }
   }
@@ -538,12 +589,13 @@
 
 .catalog-filter-spoiler {
   @media (max-width: ($breakpoint - 1px)) {
+    padding: 8px 10px 10px;
+
     flex-direction: column;
 
     border: 1px solid $green-extra-lighten;
     border-radius: 15px;
-
-    padding: 8px 10px 10px;
+    cursor: pointer;
   }
 }
 
@@ -836,6 +888,13 @@
 }
 
 .product-card-info {
+  padding-top: 50px;
+  @media (max-width: ($breakpoint - 1px)) {
+    padding-top: 0;
+  }
+  position: relative;
+  z-index: 0;
+
   width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
 
   @media (max-width: ($breakpoint - 1px)) {
@@ -851,9 +910,11 @@
     margin-bottom: 20px;
 
     @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 0;
+      position: static;
+
       display: flex;
       order: -1;
-      margin-bottom: 0;
 
       &-item {
         padding: 4px 6px;

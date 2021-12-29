@@ -1,0 +1,125 @@
+mixin catalog-filters 
+  .catalog-filter-mobile
+    .catalog-filter-spoiler.catalog-filter-imgs.spoiler
+
+      .catalog-filter-mobile__btn.spoiler__button(data-aos="fade-up")
+        .catalog-filter-mobile__ttl материал
+        .catalog-filter-mobile__ico
+
+      .spoiler__dropdown
+
+        .catalog-filter-mobile__spoiler
+
+          .catalog-filter-imgs__item.is-active(data-aos="fade-up")
+            img(src="assets/images/icons/filter-ico/filter-ico-1.png", alt="")
+            |Пластиковые
+          .catalog-filter-imgs__item(data-aos="fade-up")
+            img(src="assets/images/icons/filter-ico/filter-ico-2.png", alt="")
+            |Керамические
+          .catalog-filter-imgs__item(data-aos="fade-up")
+            img(src="assets/images/icons/filter-ico/filter-ico-3.png", alt="")
+            |Глиняные
+          .catalog-filter-imgs__item(data-aos="fade-up")
+            img(src="assets/images/icons/filter-ico/filter-ico-4.png", alt="")
+            |Мраморные
+          .catalog-filter-imgs__item(data-aos="fade-up")
+            img(src="assets/images/icons/filter-ico/filter-ico-5.png", alt="")
+            |Файберглас
+          .catalog-filter-imgs__item(data-aos="fade-up")
+            img(src="assets/images/icons/filter-ico/filter-ico-6.png", alt="")
+            |Из бетона
+          .catalog-filter-imgs__item(data-aos="fade-up")
+            img(src="assets/images/icons/filter-ico/filter-ico-7.png", alt="")
+            |Из стекла
+
+    .catalog-filter-spoiler.catalog-filter-tabs.spoiler
+
+      .catalog-filter-mobile__btn.spoiler__button(data-aos="fade-up")
+        .catalog-filter-mobile__ttl Применение
+        .catalog-filter-mobile__ico
+
+      .spoiler__dropdown
+
+        .catalog-filter-mobile__spoiler(data-aos="fade-up")
+
+          .catalog-filter-tabs__item.is-active Напольные
+          .catalog-filter-tabs__item С автополивом
+          .catalog-filter-tabs__item Для сада
+          .catalog-filter-tabs__item Настенное
+          .catalog-filter-tabs__item Лечуза
+          .catalog-filter-tabs__item Подставка под кашпо
+          .catalog-filter-tabs__item Подставка под кашпо
+          .catalog-filter-tabs__item Высокие
+          .catalog-filter-tabs__item Пластиковые
+          .catalog-filter-tabs__item Подвесные
+
+    .catalog-filter-spoiler.catalog-filter-spoilers(data-aos="fade-up" data-fancy-button='f1')
+      .catalog-filter-mobile__btn
+        .catalog-filter-mobile__ttl все фильтры
+        .catalog-filter-mobile__ico
+
+  .catalog-filter
+    .catalog-filter-imgs(data-aos="fade-up")
+
+      .catalog-filter-imgs__item.is-active
+        img(src="assets/images/icons/filter-ico/filter-ico-1.png", alt="")
+        |Пластиковые
+      .catalog-filter-imgs__item
+        img(src="assets/images/icons/filter-ico/filter-ico-2.png", alt="")
+        |Керамические
+      .catalog-filter-imgs__item
+        img(src="assets/images/icons/filter-ico/filter-ico-3.png", alt="")
+        |Глиняные
+      .catalog-filter-imgs__item
+        img(src="assets/images/icons/filter-ico/filter-ico-4.png", alt="")
+        |Мраморные
+      .catalog-filter-imgs__item
+        img(src="assets/images/icons/filter-ico/filter-ico-5.png", alt="")
+        |Файберглас
+      .catalog-filter-imgs__item
+        img(src="assets/images/icons/filter-ico/filter-ico-6.png", alt="")
+        |Из бетона
+      .catalog-filter-imgs__item
+        img(src="assets/images/icons/filter-ico/filter-ico-7.png", alt="")
+        |Из стекла
+
+    .catalog-filter-tabs(data-aos="fade-up")
+
+      .catalog-filter-tabs__item.is-active Напольные
+      .catalog-filter-tabs__item С автополивом
+      .catalog-filter-tabs__item Для сада
+      .catalog-filter-tabs__item Настенное
+      .catalog-filter-tabs__item Лечуза
+      .catalog-filter-tabs__item Подставка под кашпо
+      .catalog-filter-tabs__item Подставка под кашпо
+      .catalog-filter-tabs__item Высокие
+      .catalog-filter-tabs__item Пластиковые
+      .catalog-filter-tabs__item Подвесные
+
+    .catalog-filter-spoilers
+      .catalog-filter-spoilers__item
+        |Все фильтры
+        .catalog-filter-spoilers__plus
+      each item in ['Наличие, скидки', 'Диапазон цены', 'Цвет', 'Форма', 'Применение', 'Особенности']
+        .catalog-filter-spoilers__item
+          .catalog-filter-spoilers__button
+            |#{item}
+            img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+          .catalog-filter-spoilers__dropdown
+            -
+              var items = [
+                'Крем',
+                'Мятный',
+                'Нежно-голубой',
+                'Мальва',
+                'Пион',
+                'Лавандовый',
+                'Бирюзовый',
+              ]
+            each i in items
+              .catalog-filter-spoilers__dropdown-item
+                label.designers-form__checkbox
+                  input(type="checkbox"  id="checkbox" required)
+                  .checkbox
+                  .catalog-filter-spoilers__dropdown-text   
+                    |#{i}

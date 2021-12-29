@@ -1,0 +1,27 @@
+mixin catalog-card 
+  .catalog-card(class=attributes.class data-catalog-images=attributes.images)
+    .catalog-card__labels
+      .catalog-card__labels-item Скидки
+      .catalog-card__labels-item Новинки
+    .catalog-card__top
+      ul.catalog-card__list
+      .catalog-card__layer
+        .catalog-card__pagination
+        .catalog-card__buttons
+          button.catalog-card__buttons-item
+            +cardSettingsBtn
+          button.catalog-card__buttons-item
+            +cardFavoriteBtn
+      img.catalog-card__main-img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+    .catalog-card__container
+      .catalog-card__btns
+        .catalog-card__btns-item
+          button.btn.btn--sm
+            +basketIco.btn__svg
+            |в корзину
+        .catalog-card__btns-item
+          button.btn-buy купить в 1 клик
+      .catalog-card__bottom
+        .catalog-card__ttl Высокое напольное кашпо MUSCHEL
+        .catalog-card__color Серебро
+        .catalog-card__price 5 292 ₽

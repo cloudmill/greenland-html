@@ -1,0 +1,104 @@
+.modal-filters {
+  $comp: &;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 22px;
+
+  height: 100%;
+  display: none;
+
+  background: $white-lighten;
+
+  &__container {
+    padding: 24px 12px;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid $green-extra-lighten;
+    transition: border-color $transition;
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+
+    &.active {
+      border-color: $green;
+
+      #{$comp}__svg {
+        transform: rotate(180deg);
+
+        path {
+          stroke: $green;
+        }
+      }
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__svg {
+    transition: transform $transition;
+
+    path {
+      transition: stroke $transition;
+    }
+  }
+
+  &__dropdown {
+    padding: 20px 0 10px;
+
+    display: none;
+  }
+
+  &__buttons {}
+  &__buttons-item {
+
+    &:not(:first-child) {
+      margin-top: 20px;
+    }
+  }
+
+  .fancybox-close-small {
+    --pad: 0;
+    --size: 30px;
+
+    top: 20px;
+    right: 13px;
+
+    border: none;
+
+    svg {
+      color: $black;
+    }
+  }
+}
