@@ -5,7 +5,7 @@
 
   @media (max-width: ($breakpoint - 1px)) {
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 40px;
   }
 
   &__numbers {
@@ -103,10 +103,15 @@
   &__social {
     .footer__socials {
       margin: 0;
+      border-left: 1px solid #DBDFE0;
     }
 
     .footer__socials-link {
       border-color: $black;
+
+      border-top: 1px solid #DBDFE0;
+      border-right: 1px solid #DBDFE0;
+      border-bottom: 1px solid #DBDFE0;
 
       @media (max-width: ($breakpoint - 1px)) {
         flex: 0 0 40px;
@@ -114,7 +119,7 @@
       }
 
       &:first-child {
-        border-left: 1px solid $black;
+        border-left: 1px solid #DBDFE0;
       }
     }
   }
@@ -130,9 +135,11 @@
     margin: 40px 0 20px;
   } 
   &__ttl {
-
     @media (min-width: $breakpoint) {
       width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+    }
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 20px;
     }
   }
   &__desc {

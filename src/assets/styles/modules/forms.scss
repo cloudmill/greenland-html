@@ -125,6 +125,7 @@
     border-bottom: 1px solid $green-extra-lighten;
     background-color: transparent;
     font-family: "SuisseIntl", Arial, sans-serif;
+    // color: $black;
     font-size: 16px;
     line-height: 160%;
     padding-bottom: 15px;
@@ -142,6 +143,7 @@
 
     &::placeholder, &::-webkit-input-placeholder {
       opacity: 1;
+      color: $black;
     }
   }
 }

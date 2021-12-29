@@ -330,8 +330,6 @@
     }
   }
 
-
-
   &-filter {
     margin-bottom: 80px;
 
@@ -365,6 +363,13 @@
 
     .cover__slider-arrows {
       max-width: 110px;
+    }
+  }
+
+  .swiper-container {
+    margin-right: -10px;
+    @media (min-width: $breakpoint) {
+      margin-right: -40px;
     }
   }
 }
@@ -596,6 +601,15 @@
     .footer__socials, .footer__socials-link {
       border-color: $black;
       margin-bottom: 0;
+    }
+  }
+
+  .btn-resize {
+    width: 149px;
+    height: 40px;
+    @media (min-width: $breakpoint) {
+      width: 187px;
+      height: 80px;
     }
   }
 }
