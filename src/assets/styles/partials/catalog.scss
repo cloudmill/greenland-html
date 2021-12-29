@@ -146,6 +146,9 @@
     }
   }
   &__buttons {
+    position: relative;
+    z-index: 2;
+    
     display: flex;
 
     &-item {
