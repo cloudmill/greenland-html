@@ -53,13 +53,7 @@
   }
 
   &__link {
-    margin-left: 40px;
-
     transition: $transition;
-
-    &:first-child {
-      margin-left: 0;
-    }
 
     &:hover {
       color: $green;
@@ -82,7 +76,7 @@
     &::after, &::before {
       content: '';
       position: absolute;
-      top: 0;
+      top: 7px;
       right: 0;
       width: 14px;
       height: 1.5px;
@@ -122,6 +116,33 @@
   &__links {
     display: flex;
     justify-content: flex-end;
+  }
+  &__links-item {
+    margin-left: 40px;
+
+    display: flex;
+    align-items: center;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__link-icon {
+    --size: 15px;
+
+    margin-left: 5px;
+
+    width: var(--size);
+    height: var(--size);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: $green-extra-lighten;
+    cursor: pointer;
   }
 }
 

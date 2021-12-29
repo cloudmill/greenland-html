@@ -146,8 +146,12 @@ mixin header(className)
           +headerMenu(menu)
         .col.col__xl-4
           .header__links
-            a.text__md.text--uppercase.header__link(href="/contacts") контакты
-            a.text__md.text--uppercase.header__link(href="tel:+78122091884", target="_blank") 8 812 209-18-84
+            .header__links-item
+              a.text__md.text--uppercase.header__link(href="/contacts") контакты
+            .header__links-item
+              a.text__md.text--uppercase.header__link.header__link--icon(href="tel:+78122091884", target="_blank") 8 812 209-18-84
+              .header__link-icon 
+                +header-arrow-svg.header__link-svg
 
 mixin tooltipIco
   svg(width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg")
@@ -193,7 +197,7 @@ mixin addressIco
     path(d="M12.1745 9.46C12.1745 10.7128 11.1173 11.7814 9.74996 11.7814C8.38406 11.7814 7.3291 10.7141 7.3291 9.46C7.3291 8.20585 8.38406 7.13855 9.74996 7.13855C11.1173 7.13855 12.1745 8.20724 12.1745 9.46Z" stroke="#0F2C2D" stroke-width="2")
 
 mixin arrowSpoiler
-  svg(width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg")
+  svg(class=attributes.class width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg")
     path(d="M7.31864 5.64029L7.60793 6.0481L7.02935 6.0481L7.31864 5.64029ZM7.02935 6.0481L0.710707 1.56577L1.28929 0.750149L7.60793 5.23248L7.02935 6.0481ZM7.02935 5.23248L13.348 0.750148L13.9266 1.56577L7.60793 6.0481L7.02935 5.23248Z" fill="#0F2C2D")
 
 mixin aboutBottomArrow
@@ -214,3 +218,6 @@ mixin user-svg
     path(d='M0.5 21.5C0.5 15.9771 4.97715 11.5 10.5 11.5C16.0228 11.5 20.5 15.9771 20.5 21.5V23.5H0.5V21.5Z' stroke='white')
     circle(cx='10.4998' cy='4.5' r='4' stroke='white')
 
+mixin header-arrow-svg  
+  svg(class=attributes.class width='9' height='5' viewbox='0 0 9 5' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M4.5 4L4.1746 4.37963L4.8254 4.37963L4.5 4ZM4.8254 4.37963L8.3254 1.37963L7.6746 0.620372L4.1746 3.62037L4.8254 4.37963ZM4.8254 3.62037L1.3254 0.620371L0.674604 1.37963L4.1746 4.37963L4.8254 3.62037Z' fill='#0F2C2D')
