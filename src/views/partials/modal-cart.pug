@@ -1,0 +1,146 @@
+mixin modal-cart 
+  .modal-cart(data-fancy-modal='c1')
+    .product-card-top.product-card-top--modal
+      .product-card-gallery.product-card-gallery--modal
+        .product-card-gallery__column.swiper-container
+
+          .swiper-wrapper
+
+            .swiper-slide.product-card-gallery__item
+              img(src="assets/images/catalog-1.png", alt="")
+
+            .swiper-slide.product-card-gallery__item
+              img(src="assets/images/catalog-1.png", alt="")
+
+            .swiper-slide.product-card-gallery__item
+              img(src="assets/images/catalog-1.png", alt="")
+
+            .swiper-slide.product-card-gallery__item
+              img(src="assets/images/catalog-1.png", alt="")
+
+        .product-card-gallery__main.swiper-container
+
+          .catalog-card__buttons
+            button.catalog-card__buttons-item
+              +cardSettingsBtn
+            button.catalog-card__buttons-item
+              +cardFavoriteBtn
+
+          .swiper-wrapper
+            .swiper-slide
+              img(src="assets/images/catalog-1.png", alt="")
+            .swiper-slide
+              img(src="assets/images/catalog-1.png", alt="")
+            .swiper-slide
+              img(src="assets/images/catalog-1.png", alt="")
+            .swiper-slide
+              img(src="assets/images/catalog-1.png", alt="")
+
+      .product-card-info.product-card-info--modal
+
+        .catalog-card__labels
+          .catalog-card__labels-item Скидки
+          .catalog-card__labels-item Новинки
+
+        .product-card-info__title.about-title Высокое напольное кашпо MUSCHEL
+
+        .product-card-info__row1
+          .product-card-info__item
+            span цвет
+            span Terracotta
+
+          .product-card-info__item
+            span бренд
+            span
+              |Pottery Pots
+              .basket-tooltip
+                +tooltipIco
+                .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
+
+          .product-card-info__item
+            span материалы
+            span
+              |Файбергласс
+              .basket-tooltip
+                +tooltipIco
+                .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
+
+          .product-card-info__item
+            span Страна
+            span
+              |Нидерланды
+              .basket-tooltip
+                +tooltipIco
+                .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
+
+          .product-card-info__item
+            span серия
+            span
+              |Hi-Tech
+              .basket-tooltip
+                +tooltipIco
+                .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
+
+          .product-card-info__item
+            span Крепление
+            span
+              |Напольное
+              .basket-tooltip
+                +tooltipIco
+                .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
+
+            span
+              |Универсальное
+              .basket-tooltip
+                +tooltipIco
+                .tooltip Температура хранения изделия: -30°C + 60°C. Отличный уровень сервиса, оперативная доставка
+
+        .product-card-buttons
+
+          .product-card-buttons__container
+            button.btn
+              |подробнее
+
+          .catalog-card__buttons
+            button.catalog-card__buttons-item
+              +cardSettingsBtn
+            button.catalog-card__buttons-item
+              +cardFavoriteBtn
+    .modal-cart__container 
+      h3.title-h3 размеры
+      .product-size-table
+        .product-size-top.product-size-top--modal
+          .product-size-code артикул
+          .product-size-col Диаметр, см
+          .product-size-col Высота, см
+          .product-size-col Вес, кг
+          .product-size-col наличие
+          .product-size-price цена
+          .product-size-button
+
+        - for (i=0; i<5; i++)
+          .product-size-row.product-size-row--modal
+            .product-size-code
+              .product-size-col__mob-ttl Артикул
+              |TC 316 040Т
+            .product-size-col
+              .product-size-col__mob-ttl Диаметр, см
+              |37
+            .product-size-col
+              .product-size-col__mob-ttl Высота, см
+              |30
+            .product-size-col
+              .product-size-col__mob-ttl Вес, кг
+              |2
+            .product-size-col
+              .product-size-col__mob-ttl Наличие
+              |В наличии
+            .product-size-price
+              .product-size-col__mob-ttl Цена
+              .favorites-table__price-old 7 200 ₽
+              .favorites-table__price 5 292 ₽
+            .product-size-button
+              button.btn
+                +basketIco
+                |в корзину
+        

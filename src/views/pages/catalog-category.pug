@@ -3,6 +3,7 @@ extends ../layouts/master.pug
 include ../partials/catalog-card.pug
 include ../partials/catalog-filters.pug
 include ../partials/modal-filters.pug
+include ../partials/modal-cart.pug
 
 block content
 
@@ -21,10 +22,18 @@ block content
         +catalog-filters
 
         .category-table
-          - for (x = 0; x < 3; x++)
-            .category-row(data-aos="fade-up")
-              - for (i = 0; i < 5; i++)
-                +catalog-card(images=["assets/images/catalog-1.png", "https://via.placeholder.com/600/771796", "https://via.placeholder.com/150/92c952"])
+          .category-row(data-aos="fade-up")
+            - for (i = 0; i < 5; i++)
+              +catalog-card(images=["assets/images/catalog-1.png", "https://via.placeholder.com/600/771796", "https://via.placeholder.com/150/92c952", "https://via.placeholder.com/150/1fe46f"])
+          .category-row(data-aos="fade-up")
+            - for (i = 0; i < 5; i++)
+              +catalog-card(images=["assets/images/catalog-1.png", "https://via.placeholder.com/600/771796", "https://via.placeholder.com/150/92c952"])
+          .category-row(data-aos="fade-up")
+            - for (i = 0; i < 5; i++)
+              +catalog-card(images=["assets/images/catalog-1.png", "https://via.placeholder.com/600/771796"])
+          .category-row(data-aos="fade-up")
+            - for (i = 0; i < 5; i++)
+              +catalog-card
 
         .pagination
           .pagination-list(data-aos="fade-up")
@@ -65,3 +74,4 @@ block content
     include ../partials/_footer.pug
   
   +modal-filters
+  +modal-cart
