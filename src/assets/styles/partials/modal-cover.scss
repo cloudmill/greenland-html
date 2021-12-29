@@ -10,37 +10,95 @@
   transform: translateX(100%);
   transition: .5s;
 
+  @media (max-width: ($breakpoint - 1px)) {
+    z-index: 1002;
+    background: rgba(15, 44, 45, 0.67);
+    // width: 100vw;
+    width: calc(#{$col-part-m} * 4 + #{$col-gap-m});
+    padding: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
+  }
+
   &--active {
     transform: none;
+    overflow-y: scroll;
+    @include scrollbar-hidden;
   }
   &--open {
-    transform: scale(calc(7.4/16));
-    pointer-events: none;
-    border: 40px solid $green-lighten;
+    overflow: hidden;
 
-    .aside {
-      display: none;
+    @media (min-width: $breakpoint) {
+      transform: scale(calc(7.4/16));
+      pointer-events: none;
+      border: 40px solid $green-lighten;
+      width: 100vw;
+      position: fixed;
+
+      .aside {
+        display: none;
+      }
+    }
+  }
+
+  &__slider {
+    @media (max-width: ($breakpoint - 1px)) {
+      background-color: #fff;
+      top: 56px;
+      width: calc(#{$col-part-m} * 4 + #{$col-gap-m});
+
+      .swiper-slide {
+        padding: 30px 10px 40px;
+      }
     }
   }
 
   &__img {
     width: 100%;
     object-fit: cover;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      height: 200px;
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 15px 0 40px calc(#{$col-part-d});
+
+    @media (max-width: ($breakpoint - 1px)) {
+      margin: 15px 0;
+    }
   }
 
   &__info {
-    margin: 20px 0 40px calc(#{$col-part-d});
+    // margin: 20px 0 40px calc(#{$col-part-d});
     display: flex;
     font-size: 12px;
 
+    @media (max-width: ($breakpoint - 1px)) {
+      flex-direction: column;
+    }
+
     &-item {
-      width: calc(#{$col-part-d} * 2);
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 2);
+      }
     }
   }
 
   &__txt {
-    width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
-    margin-left: calc(#{$col-part-d});
+
+    @media (min-width: $breakpoint) {
+      width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+      margin-left: calc(#{$col-part-d});
+    }
 
     p {
       font-size: 13px;
@@ -73,6 +131,14 @@
 
     cursor: pointer;
 
+    @media (max-width: ($breakpoint - 1px)) {
+      top: 10px;
+      right: 10px;
+      // position: relative;
+      height: 36px;
+      width: 36px;
+    }
+
     &::after, &::before {
       content: '';
       position: absolute;
@@ -80,6 +146,10 @@
       height: 1px;
       background-color: $black;
       transition: .5s;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        background-color: #fff;
+      }
     }
 
     &::before {
@@ -96,10 +166,42 @@
     justify-content: space-between;
     width: 110px;
 
-    position: absolute;
+    position: fixed;
     z-index: 100;
     bottom: 40px;
     right: 40px;
+
+    &.only-desktop {
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
+    }
+    &.only-mobile {
+      position: unset;
+      width: 76px;
+
+      .arrow {
+        border-color: $green-extra-lighten;
+        width: 34px;
+        height: 34px;
+
+        circle {
+          fill: transparent;
+        }
+
+        path {
+          fill: $black;
+        }
+
+        &.right {
+          transform: rotate(180deg);
+        }
+      }
+
+      @media (min-width: $breakpoint) {
+        display: none;
+      }
+    }
   }
 }
 
@@ -107,6 +209,11 @@
   cursor: pointer;
 }
 
-.overflow-hidden {
+// .overflow-hidden {
+//   overflow: hidden;
+// }
+
+.scroll-block {
+  height: 300vh;
   overflow: hidden;
 }

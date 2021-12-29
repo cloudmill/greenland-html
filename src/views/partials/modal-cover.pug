@@ -1,28 +1,46 @@
 .modal-cover
 
-  .swiper-container(data-cover-modal="")
+  .modal-cover__slider.swiper-container(data-cover-modal="")
     .swiper-wrapper
-      .swiper-slide
+      - for (let i = 0; i < 5; i++)
 
-        .modal-cover__wrapper
-          img.modal-cover__img(src="assets/images/cover-modal-img.jpg", alt="")
-          .modal-cover__info
-            .modal-cover__info-item 18 ноября 2020
-            .modal-cover__info-item #новинка
+        .swiper-slide
 
-          .modal-cover__txt 
-            h3.modal-cover__ttl У нас новая категория продукции
+          .modal-cover__wrapper
+            img.modal-cover__img(src="assets/images/cover-modal-img.jpg", alt="")
 
-            p В Москве 23 октября начал работу новый торгово-развлекательный центр Щелковский. «Зеленый» партнер ТРЦ — компания Green Land.
-            p В общей сложности для проекта было посажено более 300 растений. Озеленение от Green Land в ТРЦ Щелковский на всех пяти этажах! В комплексе расположены деревянные скамейки и кресла, сделанные по индивидуальному заказу. 
-            p Интересный факт: протяженность одной скамейки составляет 64 метра, это рекордная длина!
+            .modal-cover__top
+              .modal-cover__info
+                .modal-cover__info-item 18 ноября 2020
+                .modal-cover__info-item #новинка
+                
+              .modal-cover-controls.only-mobile(data-modal-cover-controls="")
+                .projects-controls-container
+                  //- +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-cover-modal-prev="")
+                  button.arrow(data-cover-modal-prev="")
+                    +arrowBtn
+                .projects-controls-container
+                  //- +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-cover-modal-next="")
+                  button.arrow.right(data-cover-modal-next="")
+                    +arrowBtn
+
+            .modal-cover__txt 
+              h3.modal-cover__ttl У нас новая категория продукции
+
+              p В Москве 23 октября начал работу новый торгово-развлекательный центр Щелковский. «Зеленый» партнер ТРЦ — компания Green Land.
+              p В общей сложности для проекта было посажено более 300 растений. Озеленение от Green Land в ТРЦ Щелковский на всех пяти этажах! В комплексе расположены деревянные скамейки и кресла, сделанные по индивидуальному заказу. 
+              p Интересный факт: протяженность одной скамейки составляет 64 метра, это рекордная длина!
 
   .modal-cover-close
 
-  .modal-cover-controls(data-modal-cover-controls="")
+  .modal-cover-controls.only-desktop(data-modal-cover-controls="")
 
     .projects-controls-container
-      +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-cover-modal-prev="")
+      //- +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-cover-modal-prev="")
+      button.arrow.not-active(data-cover-modal-prev="")
+        +arrowBtn
 
     .projects-controls-container
-      +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-cover-modal-next="")
+      //- +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-cover-modal-next="")
+      button.arrow.not-active.right(data-cover-modal-next="")
+        +arrowBtn

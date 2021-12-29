@@ -12,7 +12,12 @@ block content
       .container
         +breadcrumbs(['Контакты'])
 
-        h1.title-h1(data-aos="fade-up") Контакты
+        h1.title-h1.about-title(data-aos="fade-up") Контакты
+
+        .about-tabs(data-aos="fade-up")
+          a.about-tabs__item.about-tabs__item--active(href="") Санкт-Петербург
+          a.about-tabs__item(href="") Москва
+          a.about-tabs__item(href="") Краснодар
 
         .contacts-top
           .contacts-top__numbers(data-aos="fade-up")
@@ -20,11 +25,11 @@ block content
             .contacts-top__numbers-schedule
               .contacts-top__numbers-item Пн—Пт: 10 — 18
               div Сб—Вс: выходные
-          .contacts-top__cities(data-aos="fade-up")
-            .about-tabs
-              a.about-tabs__item.about-tabs__item--active(href="") Санкт-Петербург
-              a.about-tabs__item(href="") Москва
-              a.about-tabs__item(href="") Краснодар
+          //- .contacts-top__cities(data-aos="fade-up")
+          //-   .about-tabs
+          //-     a.about-tabs__item.about-tabs__item--active(href="") Санкт-Петербург
+          //-     a.about-tabs__item(href="") Москва
+          //-     a.about-tabs__item(href="") Краснодар
 
           .contacts-top__mail(data-aos="fade-up") sale@green-land.ru
 

@@ -1,3 +1,5 @@
+// модалки из бокового блока "поиск" и "меню"
+
 $(
   () => {
     const aside = $('.aside');
@@ -20,8 +22,9 @@ $(
   }
 )
 
-$(
-  () => {
+// модалка по кнопке "задать вопрос"
+
+$(() => {
     const askBtn = $('.project-aside-btn');
     const askModal = $('.modal-ask');
     const body = $('body');
@@ -39,10 +42,81 @@ $(
           $(event.target).closest('.modal-ask__wrapper').length === 0 && 
           $(event.target).closest(askBtn).length === 0
         ) {
-          console.log('helo');
           askModal.removeClass('modal-active');
           body.removeClass('hidden');
         }
       })
     }
+})
+
+// модалка "вход/регистрация"
+
+$(() => {
+  const registerBtn = $('.register-btn');
+  const registerModal = $('.modal-register');
+  const body = $('body');
+
+  if (registerBtn.length !== 0) {
+    registerBtn.on('click', () => {
+      registerModal.addClass('modal-active');
+      body.addClass('hidden');
+    })
+
+    $(window).on('click', (event) => {
+        
+      if (
+        registerModal.hasClass('modal-active') && 
+        $(event.target).closest('.modal-register__wrapper').length === 0 && 
+        $(event.target).closest(registerBtn).length === 0
+      ) {
+        registerModal.removeClass('modal-active');
+        body.removeClass('hidden');
+      }
+    })
+  }
+})
+
+// модалка с первого экрана главной
+
+{
+  $(() => {
+    const openBtn = $('.cober-modal-btn');
+
+    if (openBtn.length) {
+      const modalCover = $('.modal-cover');
+      const main = $('.main');
+      const closeBtn = $('.modal-cover-close');
+      const body = $('.page-main');
+
+      $(window).on('click', (event) => {
+
+        if (!main.hasClass('modal-cover--open')) {
+
+          if ( $(event.target).closest(openBtn).length ) {
+            main.addClass('modal-cover--open scroll-block');
+            modalCover.addClass('modal-cover--active');
+            // body.addClass('overflow-hidden');
+
+            // setTimeout(() => {
+            //   main.addClass('scroll-block')
+            // }, 500);
+          }
+
+        } else {
+
+          if ( $(event.target).closest(closeBtn).length ) {
+            main.removeClass('modal-cover--open scroll-block');
+            modalCover.removeClass('modal-cover--active');
+            // body.removeClass('overflow-hidden');
+          }
+
+          if (!$(event.target).closest(modalCover).length) {
+            main.removeClass('modal-cover--open scroll-block');
+            modalCover.removeClass('modal-cover--active');
+            // body.removeClass('overflow-hidden');
+          }
+        }
+      })
+    }
   })
+}

@@ -27,48 +27,6 @@ import './assets/scripts/sliders';
 import LocomotiveScroll from 'locomotive-scroll';
 
 
-
-// модалка с первого экрана главной
-
-{
-  $(() => {
-    const openBtn = $('.cober-modal-btn');
-
-    if (openBtn.length) {
-      const modalCover = $('.modal-cover');
-      const main = $('.main');
-      const closeBtn = $('.modal-cover-close');
-      const body = $('.page-main');
-
-      $(window).on('click', (event) => {
-
-        if (!main.hasClass('modal-cover--open')) {
-
-          if ( $(event.target).closest(openBtn).length ) {
-            main.addClass('modal-cover--open');
-            modalCover.addClass('modal-cover--active');
-            body.addClass('overflow-hidden');
-          }
-
-        } else {
-
-          if ( $(event.target).closest(closeBtn).length ) {
-            main.removeClass('modal-cover--open');
-            modalCover.removeClass('modal-cover--active');
-            body.removeClass('overflow-hidden');
-          }
-
-          if (!$(event.target).closest(modalCover).length) {
-            main.removeClass('modal-cover--open');
-            modalCover.removeClass('modal-cover--active');
-            body.removeClass('overflow-hidden');
-          }
-        }
-      })
-    }
-  })
-}
-
 // стили фокуса в инпутах форм
 
 {
@@ -162,7 +120,7 @@ import LocomotiveScroll from 'locomotive-scroll';
   });
 }
 
-// переключение вариантов доставки в чекауте
+// переключение годов в истории
 
 {
   $(() => {
@@ -181,6 +139,31 @@ import LocomotiveScroll from 'locomotive-scroll';
 
           activeBtn.addClass("history-years__list--active");
           $(addressItem[indexBtn]).addClass("is-active");
+        }
+      });
+    }
+  });
+}
+
+// переключение форм в модалке входа и регистрации
+
+{
+  $(() => {
+    const filter = $(".modal-register__top");
+    const filterBtn = filter.find(".modal-register__ttl");
+    const formsItem = $(".modal-register__forms").find(".designers-form__form");
+
+    if (filter.length) {
+      filter.on("click", (event) => {
+        if ($(event.target).closest(filterBtn).length) {
+          const activeBtn = $(event.target).closest(filterBtn);
+          const indexBtn = filterBtn.index(activeBtn);
+
+          filterBtn.removeClass("is-active");
+          formsItem.removeClass("is-active");
+
+          activeBtn.addClass("is-active");
+          $(formsItem[indexBtn]).addClass("is-active");
         }
       });
     }

@@ -1,0 +1,58 @@
+.modal-register
+  .modal-register__container
+    .modal-register__wrapper
+      .modal-register__top
+        .modal-register__ttl.is-active вход
+        .modal-register__ttl регистрация
+
+      .modal-register__forms
+
+        form.designers-form__form.form-column.is-active(data-parsley-validate)
+          
+          label.designers-form__label(data-aos="fade-up")
+            .placeholder-active E-mail
+            input.designers-form__input(type="email" placeholder="E-mail" required)
+
+          label.designers-form__label(data-aos="fade-up")
+            .placeholder-active Пароль
+            input.designers-form__input(type="password" placeholder="Пароль" required)
+
+          button.btn(type="submit") войти
+
+          a.modal-register__reset-pass(href="") Забыли пароль?
+
+
+        form.designers-form__form.form-column(data-parsley-validate)
+          
+          label.designers-form__label(data-aos="fade-up")
+            .placeholder-active Почта
+            input.designers-form__input(type="email" placeholder="Почта" required)
+
+          label.designers-form__label(data-aos="fade-up")
+            .placeholder-active Фамилия
+            input.designers-form__input(type="text" placeholder="Фамилия" required)
+
+          label.designers-form__label(data-aos="fade-up")
+            .placeholder-active E-mail
+            input.designers-form__input(type="email" placeholder="E-mail" required)
+
+          label.designers-form__label(data-aos="fade-up")
+            .placeholder-active Пароль
+            input.designers-form__input(type="password" placeholder="Пароль" required)
+
+          label.designers-form__checkbox(data-aos="fade-up")
+            input(type="checkbox"  id="checkbox")
+            .checkbox
+            .designers-form__checkbox-txt Я хочу получать уведомления о спецпредложениях и акции на электронную почту
+
+          label.designers-form__checkbox(data-aos="fade-up")
+            input(type="checkbox"  id="checkbox" required)
+            .checkbox
+            .designers-form__checkbox-txt Я соглашаюсь на обработку 
+              a(href="") персональных данных
+
+          button.btn(type="submit") войти
+
+          a.modal-register__reset-pass(href="") Забыли пароль?
+
+    .modal-register__close

@@ -12,7 +12,7 @@ export default function coverModal() {
 
   const coverModal = new Swiper($coverModal, {
     slidesPerView: 1,
-    loop: true,
+    // loop: true,
 
     navigation: {
       prevEl: $coverModalCntrl.querySelector('[data-cover-modal-prev]'),
