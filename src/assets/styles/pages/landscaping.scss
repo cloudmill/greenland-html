@@ -366,6 +366,12 @@
 
     z-index: -1;
   }
+
+  .consult-btn {
+    @media (max-width: ($breakpoint - 1px)) {
+      white-space: nowrap;
+    }
+  }
 }
 
 .lanscaping-solutions-txt {

@@ -22,12 +22,15 @@ $(
   }
 )
 
-// модалка по кнопке "задать вопрос"
+// модалка по кнопке "задать вопрос" и консультация озеленение
 
 $(() => {
     const askBtn = $('.project-aside-btn');
     const askModal = $('.modal-ask');
     const body = $('body');
+
+    const consultModal = $('.modal-consult');
+    const consultBtn = $('.consult-btn'); 
 
     if (askBtn.length !== 0) {
       askBtn.on('click', () => {
@@ -43,6 +46,25 @@ $(() => {
           $(event.target).closest(askBtn).length === 0
         ) {
           askModal.removeClass('modal-active');
+          body.removeClass('hidden');
+        }
+      })
+    }
+
+    if (consultBtn.length !== 0) {
+      consultBtn.on('click', () => {
+        consultModal.addClass('modal-active');
+        body.addClass('hidden');
+      })
+
+      $(window).on('click', (event) => {
+          
+        if (
+          consultModal.hasClass('modal-active') && 
+          $(event.target).closest('.modal-ask__wrapper').length === 0 && 
+          $(event.target).closest(consultBtn).length === 0
+        ) {
+          consultModal.removeClass('modal-active');
           body.removeClass('hidden');
         }
       })
@@ -95,11 +117,6 @@ $(() => {
           if ( $(event.target).closest(openBtn).length ) {
             main.addClass('modal-cover--open scroll-block');
             modalCover.addClass('modal-cover--active');
-            // body.addClass('overflow-hidden');
-
-            // setTimeout(() => {
-            //   main.addClass('scroll-block')
-            // }, 500);
           }
 
         } else {
@@ -107,13 +124,11 @@ $(() => {
           if ( $(event.target).closest(closeBtn).length ) {
             main.removeClass('modal-cover--open scroll-block');
             modalCover.removeClass('modal-cover--active');
-            // body.removeClass('overflow-hidden');
           }
 
           if (!$(event.target).closest(modalCover).length) {
             main.removeClass('modal-cover--open scroll-block');
             modalCover.removeClass('modal-cover--active');
-            // body.removeClass('overflow-hidden');
           }
         }
       })
