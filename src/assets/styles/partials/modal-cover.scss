@@ -29,7 +29,7 @@
     @include scrollbar-hidden;
   }
   &--open {
-    overflow: hidden;
+    // overflow: hidden;
 
     @media (min-width: $breakpoint) {
       transform: scale(calc(7.4/16));
