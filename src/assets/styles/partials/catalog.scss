@@ -584,6 +584,26 @@
         transition: color $transition;
       }
     }
+
+    &__caption {
+      display: flex;
+      align-items: center;
+    }
+    &__count {
+      padding: 2px 10px;
+      margin-left: 5px;
+
+      font-size: 10px;
+      line-height: 12px;
+      color: $white-lighten;
+      background: $green;
+      border-radius: 4px;
+      transition: opacity $transition;
+
+      &.hidden {
+        opacity: 0;
+      }
+    }
   }
 }
 

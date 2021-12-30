@@ -17,6 +17,7 @@ import './assets/scripts/header';
 
 import './assets/scripts/fancybox';
 
+
 import './assets/scripts/aos';
 
 import parsley from "parsleyjs";
@@ -25,6 +26,7 @@ import "parsleyjs/dist/i18n/ru";
 import './assets/scripts/sliders';
 
 import { CatalogCard } from './assets/scripts/catalog-card';
+import { CatalogFilters } from './assets/scripts/catalog-filters';
 
 
 import LocomotiveScroll from 'locomotive-scroll';
@@ -33,6 +35,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 {
   $(() => {
     const catalogCard = new CatalogCard()
+    const catalogFilters = new CatalogFilters()
   })
 }
 
