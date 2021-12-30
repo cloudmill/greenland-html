@@ -215,16 +215,12 @@
       top: 0;
       bottom: 0;
       left: 0;
-      @media (max-width: ($breakpoint - 1px)) {
-        top: 50px;
-      }
-
       width: 50%;
       height: 100%;
 
       @media (max-width: ($breakpoint - 1px)) {
         width: 100%;
-        height: calc(50% - 50px);
+        // height: 50%;
       }
 
       &::before {
@@ -234,14 +230,30 @@
         left: 96px;
         right: 96px;
         bottom: 0;
+        border-radius: 0px 0px 900px 900px;
+        border: 1px solid $green-extra-lighten;
+
         @media (max-width: ($breakpoint - 1px)) {
-          top: 38px;
+          top: 100px;
           left: 10px;
           right: 10px;
         }
+      }
 
-        border-radius: 0px 0px 900px 900px;
-        border: 1px solid $green-extra-lighten;
+      &--main {
+        @media (max-width: ($breakpoint - 1px)) {
+          top: 50px;
+          width: 100%;
+          height: calc(50% - 50px);
+        }
+
+        &::before {
+          @media (max-width: ($breakpoint - 1px)) {
+            top: 38px;
+            left: 10px;
+            right: 10px;
+          }
+        }
       }
     }
 

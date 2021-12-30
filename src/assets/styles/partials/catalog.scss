@@ -798,6 +798,8 @@
   }
 
   &--modal {
+    margin-bottom: -1px;
+    
     width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
     height: 432px;
     @media (max-width: ($breakpoint - 1px)) {

@@ -20,8 +20,13 @@ mixin catalog-card
             +basketIco.btn__svg
             |в корзину
         .catalog-card__btns-item
-          button.btn-buy купить в 1 клик
+          button.btn-buy(data-fancy-button='b1') купить в 1 клик
       .catalog-card__bottom
         .catalog-card__ttl Высокое напольное кашпо MUSCHEL
         .catalog-card__color Серебро
         .catalog-card__price 5 292 ₽
+        .catalog-card__buttons
+          button.catalog-card__buttons-item
+            +cardSettingsBtn
+          button.catalog-card__buttons-item
+            +cardFavoriteBtn

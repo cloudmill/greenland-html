@@ -503,11 +503,14 @@
   }
   &__card {
     padding: 20px 20px 0 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 10px 0 0;
+    }
 
     width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
     display: flex;
 
-    border-top: 1px solid $green-extra-lighten;
+    border-top: 1px solid $green;
 
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
@@ -544,6 +547,7 @@
     }
   }
   &__img {
+    flex-shrink: 0;
     width: calc(#{$col-part-d} * 2);
     margin-right: calc(#{$col-width-d});
 
@@ -587,11 +591,15 @@
 
     @media (max-width: ($breakpoint - 1px)) {
       margin: 20px 0;
+      font-size: 10px;
     }
 
     .designers-contacts__tel {
       position: relative;
       margin-right: 15px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-right: 6px;
+      }
       display: flex;
       align-items: center;
     }
@@ -599,6 +607,9 @@
       content: '';
       display: block;
       margin-left: 15px;
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-left: 6px;
+      }
 
       width: 6px;
       height: 6px;

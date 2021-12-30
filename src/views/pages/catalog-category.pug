@@ -4,6 +4,7 @@ include ../partials/catalog-card.pug
 include ../partials/catalog-filters.pug
 include ../partials/modal-filters.pug
 include ../partials/modal-cart.pug
+include ../partials/modal-buy.pug
 
 block content
 
@@ -35,18 +36,7 @@ block content
             - for (i = 0; i < 5; i++)
               +catalog-card
 
-        .pagination
-          .pagination-list(data-aos="fade-up")
-            button.pagination__item.is-active 1
-            button.pagination__item 2
-            button.pagination__item 3
-            button.pagination__item 4
-            button.pagination__dots ...
-            button.pagination__item 12
-
-          .pagination-controls(data-aos="fade-up")
-            +arrow('white', '#CAE8D9', 'left', '15', '13', '46')
-            +arrow('white', '#65BA7F', 'right', '15', '13', '46').arrow-active
+        include ../partials/pagination
 
         .catalog-block
           .designers-contacts__card.designers-contacts__card--wide
@@ -75,3 +65,4 @@ block content
   
   +modal-filters
   +modal-cart
+  +modal-buy

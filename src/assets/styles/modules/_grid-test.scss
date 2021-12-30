@@ -24,7 +24,7 @@ $col-part-d: '(#{$col-width-d} + #{$col-gap-d})';
   top: 0;
   bottom: 0;
   left: 0;
-  z-index: 20000000; // ?
+  z-index: 2000; // ?
 
   width: 100vw;
   overflow: hidden;
@@ -51,7 +51,7 @@ $col-part-d: '(#{$col-width-d} + #{$col-gap-d})';
     flex-shrink: 0;
     min-height: 100vh;
 
-    background-color: rgba($color: black, $alpha: 0.1); // ?
+    // background-color: rgba($color: black, $alpha: 0.1); // ?
 
     // скрываем на мобильном лишние колонки
     &:nth-child(-n + #{$col-count-d - $col-count-m}) {
