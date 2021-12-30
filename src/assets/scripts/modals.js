@@ -22,7 +22,7 @@ $(
   }
 )
 
-// модалка по кнопке "задать вопрос" и консультация озеленение
+// модалки по кнопке "задать вопрос" и консультация озеленение
 
 $(() => {
     const askBtn = $('.project-aside-btn');
@@ -31,6 +31,8 @@ $(() => {
 
     const consultModal = $('.modal-consult');
     const consultBtn = $('.consult-btn'); 
+
+    const faqBtn = $('.faq-ask');
 
     if (askBtn.length !== 0) {
       askBtn.on('click', () => {
@@ -44,6 +46,25 @@ $(() => {
           askModal.hasClass('modal-active') && 
           $(event.target).closest('.modal-ask__wrapper').length === 0 && 
           $(event.target).closest(askBtn).length === 0
+        ) {
+          askModal.removeClass('modal-active');
+          body.removeClass('hidden');
+        }
+      })
+    }
+
+    if (faqBtn.length !== 0) {
+      faqBtn.on('click', () => {
+        askModal.addClass('modal-active');
+        body.addClass('hidden');
+      })
+
+      $(window).on('click', (event) => {
+          
+        if (
+          askModal.hasClass('modal-active') && 
+          $(event.target).closest('.modal-ask__wrapper').length === 0 && 
+          $(event.target).closest(faqBtn).length === 0
         ) {
           askModal.removeClass('modal-active');
           body.removeClass('hidden');
