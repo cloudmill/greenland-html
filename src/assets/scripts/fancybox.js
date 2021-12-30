@@ -22,6 +22,10 @@ $(() => {
         $.fancybox.defaults.animationEffect = 'slide-in-out'
         $.fancybox.defaults.animationDuration = 500
         break
+      case 'f1':
+        $.fancybox.defaults.animationEffect = 'slide-in-out'
+        $.fancybox.defaults.animationDuration = 500
+        break
       default:
         $.fancybox.defaults.closeExisting = true;
         $.fancybox.defaults.touch = false;

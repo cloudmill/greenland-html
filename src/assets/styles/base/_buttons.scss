@@ -65,6 +65,10 @@
     width: 100%;
     min-width: auto;
 
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 }
 
