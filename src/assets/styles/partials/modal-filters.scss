@@ -72,9 +72,16 @@
   }
 
   &__text {
+    display: flex;
+    align-items: center;
+
     font-weight: 600;
     font-size: 12px;
     line-height: 14px;
+    @media (min-width: $breakpoint) {
+      font-size: 14px;
+      line-height: 16px;
+    }
   }
 
   &__icon {

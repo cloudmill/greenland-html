@@ -6,10 +6,12 @@ mixin modal-filters
       .modal-filters__content
         ul.modal-filters__list.catalog-filters-spoilers
           each item in ['Наличие, скидки', 'Диапазон цены', 'Цвет', 'Форма', 'Применение', 'Особенности']
-            li.modal-filters__item(data-accordion='')
+            li.modal-filters__item(data-accordion='' data-filters-item='')
               .modal-filters__button(data-accordion-button='')
                 .modal-filters__text 
                   |#{item}
+                  span.catalog-filter-spoilers__count.hidden(data-filters-count='')
+                    |0
                 .modal-filters__icon 
                   +arrowSpoiler.modal-filters__svg
               .modal-filters__dropdown(data-accordion-dropdown='')
@@ -27,7 +29,7 @@ mixin modal-filters
                   each i in items
                     .catalog-filter-spoilers__dropdown-item
                       label.designers-form__checkbox
-                        input(type="checkbox"  id="checkbox" required)
+                        input(type="checkbox"  id="checkbox" required data-filters-checkbox='')
                         .checkbox
                         .catalog-filter-spoilers__dropdown-text   
                           |#{i}

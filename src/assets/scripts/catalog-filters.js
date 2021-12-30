@@ -1,6 +1,5 @@
 export class CatalogFilters {
   constructor() {
-    this.root = document.querySelectorAll('[data-filters-item]')
     this.checkboxes = document.querySelectorAll('[data-filters-checkbox]')
 
     if (this.checkboxes) {
