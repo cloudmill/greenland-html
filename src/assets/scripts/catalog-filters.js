@@ -21,10 +21,8 @@ export class CatalogFilters {
         }
 
         if (+count.textContent) {
-          console.log(123);
           count.classList.remove('hidden')
         } else {
-          console.log(1111);
           count.classList.add('hidden')
         }
       }
