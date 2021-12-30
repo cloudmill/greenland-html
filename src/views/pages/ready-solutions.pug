@@ -4,11 +4,11 @@ block content
 
   include ../partials/_aside.pug
 
+  include ../partials/modal-consult
+
   .main__wrap(data-scroll-container="")
 
     +header('mainHeader')
-
-    
 
     .section.page-wrapper
       .container
@@ -19,7 +19,7 @@ block content
 
           .lanscaping-first-screen__block
             h1.title-h1.about-title Готовые решения
-            button.btn Запросить консультацию менеджера
+            button.btn.consult-btn Запросить консультацию менеджера
 
           +footerDownload('презентация компании', 'pdf, 12 мб')
 

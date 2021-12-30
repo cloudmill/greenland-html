@@ -4,6 +4,8 @@ block content
 
   include ../partials/_aside.pug
 
+  include ../partials/modal-consult
+
   .main__wrap(data-scroll-container="")
 
     +header('mainHeader')
@@ -19,7 +21,7 @@ block content
             h1.title-h1.about-title Фитодизайн. Озеленение
               br
               |интерьеров
-            button.btn Запросить консультацию менеджера
+            button.btn.consult-btn Запросить консультацию менеджера
 
           +footerDownload('презентация компании', 'pdf, 12 мб')
 

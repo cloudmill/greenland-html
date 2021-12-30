@@ -4,6 +4,8 @@ block content
 
   include ../partials/_aside.pug
 
+  include ../partials/modal-consult
+
   .main__wrap(data-scroll-container="")
 
     +header('mainHeader')
@@ -17,7 +19,7 @@ block content
 
           .lanscaping-first-screen__block(data-aos="fade-up")
             h1.title-h1.about-title Озеленение под ключ
-            button.btn Запросить консультацию менеджера
+            button.btn.consult-btn Запросить консультацию менеджера
 
           +footerDownload('презентация компании', 'pdf, 12 мб')
 

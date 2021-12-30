@@ -1,4 +1,4 @@
-.modal-ask, .modal-register {
+.modal-ask, .modal-register, .modal-consult {
   position: fixed;
   z-index: 1001;
   top: 0;
@@ -68,6 +68,14 @@
 }
 
 .modal-register__container {
+  top: 100px;
+
+  @media (max-width: ($breakpoint - 1px)) {
+    top: 0;
+  }
+}
+
+.modal-consult .modal-ask__container {
   top: 100px;
 
   @media (max-width: ($breakpoint - 1px)) {
