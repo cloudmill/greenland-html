@@ -53,7 +53,6 @@ export class CatalogFilters {
 
   clear() {
     const button = this.root.querySelector('[data-clear-button]')
-    const acceptButton = this.root.querySelector('[data-accept-button]')
 
     button.onclick = () => {
 
@@ -64,7 +63,6 @@ export class CatalogFilters {
         count.textContent = 0
         this.generalCount = 0
         count.classList.add('hidden')
-        // acceptButton.classList.add('hidden')
       })
     }
   }
