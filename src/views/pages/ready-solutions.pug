@@ -113,13 +113,16 @@ block content
                 .catalog-card__price 5 292 ₽
 
         .lanscaping-solutions-txt2
-          .lanscaping-solutions-txt2__col(data-aos="fade-up")
+          .lanscaping-solutions-txt2__col.only-desktop(data-aos="fade-up")
             |В стоимость входит кашпо,
             br
             |растение, грунт, услуга по
             br
             |пересадке.
-          .lanscaping-solutions-txt2__col(data-aos="fade-up")
+          .lanscaping-solutions-txt2__col.only-mobile(data-aos="fade-up")
+            |В стоимость входит кашпо, растение, грунт, услуга по пересадке.
+
+          .lanscaping-solutions-txt2__col.only-desktop(data-aos="fade-up")
             |Каждое растение может быть
             br
             |высаженное в любое кашпо из
@@ -127,7 +130,10 @@ block content
             |нашего ассортимента на Ваш
             br
             |выбор.
-          .lanscaping-solutions-txt2__col(data-aos="fade-up")
+          .lanscaping-solutions-txt2__col.only-mobile(data-aos="fade-up")
+            |Каждое растение может быть высаженное в любое кашпо из нашего ассортимента на Ваш выбор.
+
+          .lanscaping-solutions-txt2__col.only-desktop(data-aos="fade-up")
             |Если Вы не нашли подходящий
             br
             |вариант, свяжитесь с нами и мы
@@ -135,6 +141,8 @@ block content
             |подберем оптимальную
             br
             |композицию.
+          .lanscaping-solutions-txt2__col.only-mobile(data-aos="fade-up")
+            |Если Вы не нашли подходящий вариант, свяжитесь с нами и мы подберем оптимальную композицию.
 
         .designers-form.about-mission
           h2.designers-form__title.title-h2(data-aos="fade-up") Оставить заявку на подбор композиции
