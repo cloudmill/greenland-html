@@ -13,9 +13,15 @@
   // for swiper initialization
   position: absolute;
   top: 0;
+  width: 1px;
   visibility: hidden;
 
+  @media (max-width: ($breakpoint - 1px)) {
+    display: none;
+  }
+
   &.fancybox-content {
+    width: auto;
     position: relative;
     visibility: visible;
   }
