@@ -55,7 +55,9 @@ mixin catalog-filters
 
     .catalog-filter-spoiler.catalog-filter-spoilers(data-aos="fade-up" data-fancy-button='f1')
       .catalog-filter-mobile__btn
-        .catalog-filter-mobile__ttl все фильтры
+        .catalog-filter-mobile__ttl 
+          |все фильтры
+          span.catalog-filter-spoilers__count.hidden(data-general-count='')
         .catalog-filter-mobile__ico
 
   .catalog-filter
@@ -96,7 +98,7 @@ mixin catalog-filters
       .catalog-filter-tabs__item Пластиковые
       .catalog-filter-tabs__item Подвесные
 
-    .catalog-filter-spoilers
+    .catalog-filter-spoilers(data-filters='')
       .catalog-filter-spoilers__item(data-fancy-button='f1')
         |Все фильтры
         .catalog-filter-spoilers__plus

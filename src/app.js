@@ -35,7 +35,15 @@ import LocomotiveScroll from 'locomotive-scroll';
 {
   $(() => {
     const catalogCard = new CatalogCard()
-    const catalogFilters = new CatalogFilters()
+
+    const filters = document.querySelectorAll('[data-filters]')
+    
+    filters.forEach(item => {
+      const catalogFilters = new CatalogFilters(item)
+    })
+    
+    const filtersModal = document.querySelector('[data-filters-modal]')
+    const catalogFiltersModal = new CatalogFilters(filtersModal, true)
   })
 }
 

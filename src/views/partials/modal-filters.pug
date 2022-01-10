@@ -1,6 +1,6 @@
 mixin modal-filters 
   .modal-filters(data-fancy-modal='f1')
-    .modal-filters__container 
+    .modal-filters__container(data-filters-modal='')
       h3.title-h3.modal-filters__title 
         |фильтры
       .modal-filters__content
@@ -15,30 +15,29 @@ mixin modal-filters
                 .modal-filters__icon 
                   +arrowSpoiler.modal-filters__svg
               .modal-filters__dropdown(data-accordion-dropdown='')
-                .catalog-filter-spoilers__dropdown
-                  -
-                    var items = [
-                      'Крем',
-                      'Мятный',
-                      'Нежно-голубой',
-                      'Мальва',
-                      'Пион',
-                      'Лавандовый',
-                      'Бирюзовый',
-                    ]
-                  each i in items
-                    .catalog-filter-spoilers__dropdown-item
-                      label.designers-form__checkbox
-                        input(type="checkbox"  id="checkbox" required data-filters-checkbox='')
-                        .checkbox
-                        .catalog-filter-spoilers__dropdown-text   
-                          |#{i}
+                -
+                  var items = [
+                    'Крем',
+                    'Мятный',
+                    'Нежно-голубой',
+                    'Мальва',
+                    'Пион',
+                    'Лавандовый',
+                    'Бирюзовый',
+                  ]
+                each i in items
+                  .catalog-filter-spoilers__dropdown-item
+                    label.designers-form__checkbox
+                      input(type="checkbox"  id="checkbox" required data-filters-checkbox='')
+                      .checkbox
+                      .catalog-filter-spoilers__dropdown-text   
+                        |#{i}
         .modal-filters__buttons 
           .modal-filters__buttons-item
             .btn.btn--sm.hidden(data-accept-button='')
               |применить
           .modal-filters__buttons-item
-            .favorites-top.favorites-top--default
+            .favorites-top.favorites-top--default(data-clear-button='')
               .favorites-top__reset
                 img(src="assets/images/icons/reset-ico.svg", alt="")
                 |сбросить фильтры
