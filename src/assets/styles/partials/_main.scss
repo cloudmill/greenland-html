@@ -35,7 +35,9 @@
     overflow: hidden;
 
     &--visible {
-      overflow: visible;
+      @media (min-width: $breakpoint) {
+        overflow: visible;
+      }
     }
 
     &.is-scaled {

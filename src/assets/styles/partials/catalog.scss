@@ -871,8 +871,22 @@
       top: 0;
       z-index: 10;
 
+      transition: .5s;
+
+      &:hover {
+        background-color: $green;
+
+        svg path {
+          fill: #fff;
+        }
+      }
+
       svg {
         transform: rotate(180deg);
+
+        path {
+          transition: .5s;
+        }
       }
 
       @media (max-width: ($breakpoint - 1px)) {
@@ -889,6 +903,20 @@
       position: absolute;
       bottom: 0;
       z-index: 10;
+
+      transition: .5s;
+
+      &:hover {
+        background-color: $green;
+
+        svg path {
+          fill: #fff;
+        }
+      }
+      
+      svg path {
+        transition: .5s;
+      }
 
       @media (max-width: ($breakpoint - 1px)) {
         display: none;
@@ -1162,6 +1190,8 @@
     line-height: 15px;
     text-transform: uppercase;
 
+    transition: .5s;
+
     @media (max-width: ($breakpoint - 1px)) {
       font-size: 11px;
       padding-bottom: 10px;
@@ -1183,10 +1213,25 @@
       background-color: $black;
 
       right: 0;
+
+      transition: .5s;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        width: 10px;
+      }
     }
 
     &::after {
       transform: rotate(90deg);
+    }
+
+    &:hover {
+      color: $green;
+      cursor: pointer;
+
+      &::before, &::after {
+        background-color: $green;
+      }
     }
   }
 }
@@ -1801,7 +1846,11 @@
     }
 
     &.is-active a {
-      border-color: $green;
+      border-bottom: 1px solid $green;
+    }
+
+    &:hover a {
+      border-bottom: 1px solid $green;
     }
   }
 }

@@ -45,6 +45,7 @@
 
   @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
+    flex-direction: column;
   }
 
   p {
@@ -66,6 +67,9 @@
       height: auto;
       background: transparent;
       border: 1px solid $green-extra-lighten;
+
+      width: 150px;
+      white-space: nowrap;
     }
   }
 
