@@ -197,13 +197,11 @@
 			</div>
 			<div class="modal-cover-close"></div>
 			<div class="modal-cover-controls only-desktop" data-modal-cover-controls="">
-				<div class="projects-controls-container"><button class="arrow not-active" data-cover-modal-prev=""><svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<circle r="23" transform="matrix(-1 0 0 1 23 23)" fill="#65BA7F"></circle>
-							<path d="M15.1646 23.0002L14.7927 23.3344V22.666L15.1646 23.0002ZM30.835 23.5002H15.1646V22.5002H30.835V23.5002ZM14.7927 22.666L20.0162 16.8528L20.76 17.5212L15.5365 23.3344L14.7927 22.666ZM15.5365 22.666L20.76 28.4792L20.0162 29.1476L14.7927 23.3344L15.5365 22.666Z" fill="white"></path>
+				<div class="projects-controls-container"><button class="arrow" style="border-color: #CAE8D9; width: 50px; height: 50px" data-cover-modal-prev=""><svg width="18" height="14" viewBox="0 0 15 13">
+							<path d="M4.79971 0.984497L0.144073 6.16577V6.83414L4.79971 12.0154L5.54354 11.3471L1.63746 6.99996H14.4829V5.99996H1.63746L5.54354 1.65287L4.79971 0.984497Z" fill="#0F2C2D"></path>
 						</svg></button></div>
-				<div class="projects-controls-container"><button class="arrow not-active right" data-cover-modal-next=""><svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<circle r="23" transform="matrix(-1 0 0 1 23 23)" fill="#65BA7F"></circle>
-							<path d="M15.1646 23.0002L14.7927 23.3344V22.666L15.1646 23.0002ZM30.835 23.5002H15.1646V22.5002H30.835V23.5002ZM14.7927 22.666L20.0162 16.8528L20.76 17.5212L15.5365 23.3344L14.7927 22.666ZM15.5365 22.666L20.76 28.4792L20.0162 29.1476L14.7927 23.3344L15.5365 22.666Z" fill="white"></path>
+				<div class="projects-controls-container"><button class="arrow" style="border-color: #CAE8D9; width: 50px; height: 50px" data-cover-modal-next=""><svg width="18" height="14" viewBox="0 0 15 13">
+							<path d="M10.1998 0.984497L14.8554 6.16577V6.83414L10.1998 12.0154L9.45597 11.3471L13.3621 6.99996H0.516602L0.516602 5.99996H13.3621L9.45597 1.65287L10.1998 0.984497Z" fill="#0F2C2D"></path>
 						</svg></button></div>
 			</div>
 		</div>
@@ -270,6 +268,7 @@
 					</div>
 				</div>
 				<div class="modal-register">
+					<div class="modal-ask__background"></div>
 					<div class="modal-register__container">
 						<div class="modal-register__wrapper">
 							<div class="modal-register__top">
@@ -407,201 +406,213 @@
 								<div class="catalog-filter-tabs__item">Подвесные</div>
 							</div>
 							<div class="catalog-filter-spoilers">
-								<div class="catalog-filter-spoilers__item">Все фильтры<div class="catalog-filter-spoilers__plus"></div>
+								<div class="catalog-filter-spoilers__item" data-fancy-button="f1">Все фильтры<div class="catalog-filter-spoilers__plus"></div>
 								</div>
-								<div class="catalog-filter-spoilers__item">
-									<div class="catalog-filter-spoilers__button">Наличие, скидки<img src="assets/images/icons/spoiler-arrow.svg" alt="" /></div>
+								<div class="catalog-filter-spoilers__item" data-filters-item="">
+									<div class="catalog-filter-spoilers__button">
+										<div class="catalog-filter-spoilers__caption">Наличие, скидки<span class="catalog-filter-spoilers__count hidden" data-filters-count="">0</span></div><img src="assets/images/icons/spoiler-arrow.svg" alt="" />
+									</div>
 									<div class="catalog-filter-spoilers__dropdown">
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
 											</label></div>
 									</div>
 								</div>
-								<div class="catalog-filter-spoilers__item">
-									<div class="catalog-filter-spoilers__button">Диапазон цены<img src="assets/images/icons/spoiler-arrow.svg" alt="" /></div>
+								<div class="catalog-filter-spoilers__item" data-filters-item="">
+									<div class="catalog-filter-spoilers__button">
+										<div class="catalog-filter-spoilers__caption">Диапазон цены<span class="catalog-filter-spoilers__count hidden" data-filters-count="">0</span></div><img src="assets/images/icons/spoiler-arrow.svg" alt="" />
+									</div>
 									<div class="catalog-filter-spoilers__dropdown">
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
 											</label></div>
 									</div>
 								</div>
-								<div class="catalog-filter-spoilers__item">
-									<div class="catalog-filter-spoilers__button">Цвет<img src="assets/images/icons/spoiler-arrow.svg" alt="" /></div>
+								<div class="catalog-filter-spoilers__item" data-filters-item="">
+									<div class="catalog-filter-spoilers__button">
+										<div class="catalog-filter-spoilers__caption">Цвет<span class="catalog-filter-spoilers__count hidden" data-filters-count="">0</span></div><img src="assets/images/icons/spoiler-arrow.svg" alt="" />
+									</div>
 									<div class="catalog-filter-spoilers__dropdown">
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
 											</label></div>
 									</div>
 								</div>
-								<div class="catalog-filter-spoilers__item">
-									<div class="catalog-filter-spoilers__button">Форма<img src="assets/images/icons/spoiler-arrow.svg" alt="" /></div>
+								<div class="catalog-filter-spoilers__item" data-filters-item="">
+									<div class="catalog-filter-spoilers__button">
+										<div class="catalog-filter-spoilers__caption">Форма<span class="catalog-filter-spoilers__count hidden" data-filters-count="">0</span></div><img src="assets/images/icons/spoiler-arrow.svg" alt="" />
+									</div>
 									<div class="catalog-filter-spoilers__dropdown">
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
 											</label></div>
 									</div>
 								</div>
-								<div class="catalog-filter-spoilers__item">
-									<div class="catalog-filter-spoilers__button">Применение<img src="assets/images/icons/spoiler-arrow.svg" alt="" /></div>
+								<div class="catalog-filter-spoilers__item" data-filters-item="">
+									<div class="catalog-filter-spoilers__button">
+										<div class="catalog-filter-spoilers__caption">Применение<span class="catalog-filter-spoilers__count hidden" data-filters-count="">0</span></div><img src="assets/images/icons/spoiler-arrow.svg" alt="" />
+									</div>
 									<div class="catalog-filter-spoilers__dropdown">
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
 											</label></div>
 									</div>
 								</div>
-								<div class="catalog-filter-spoilers__item">
-									<div class="catalog-filter-spoilers__button">Особенности<img src="assets/images/icons/spoiler-arrow.svg" alt="" /></div>
+								<div class="catalog-filter-spoilers__item" data-filters-item="">
+									<div class="catalog-filter-spoilers__button">
+										<div class="catalog-filter-spoilers__caption">Особенности<span class="catalog-filter-spoilers__count hidden" data-filters-count="">0</span></div><img src="assets/images/icons/spoiler-arrow.svg" alt="" />
+									</div>
 									<div class="catalog-filter-spoilers__dropdown">
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
 											</label></div>
-										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" required="required" data-filters-checkbox="" />
 												<div class="checkbox"></div>
 												<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
 											</label></div>
@@ -638,12 +649,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -674,12 +695,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -710,12 +741,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -746,12 +787,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -782,12 +833,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -820,12 +881,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -856,12 +927,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -892,12 +973,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -928,12 +1019,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -964,12 +1065,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -1002,12 +1113,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -1038,12 +1159,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -1074,12 +1205,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -1110,12 +1251,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -1146,12 +1297,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -1184,12 +1345,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -1220,12 +1391,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -1256,12 +1437,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -1292,12 +1483,22 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
@@ -1328,23 +1529,35 @@
 														<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
 														<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 													</svg>в корзину</button></div>
-											<div class="catalog-card__btns-item"><button class="btn-buy">купить в 1 клик</button></div>
+											<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
 										</div>
 										<div class="catalog-card__bottom">
 											<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
 											<div class="catalog-card__color">Серебро</div>
 											<div class="catalog-card__price">5 292 ₽</div>
+											<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+														<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+														<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+														<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+														<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+														<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+													</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="pagination">
-							<div class="pagination-list" data-aos="fade-up"><button class="pagination__item is-active">1</button><button class="pagination__item">2</button><button class="pagination__item">3</button><button class="pagination__item">4</button><button class="pagination__dots">...</button><button class="pagination__item">12</button></div>
-							<div class="pagination-controls" data-aos="fade-up"><button class="arrow" style="border-color: #CAE8D9; width: 46px; height: 46px"><svg width="15" height="13" viewBox="0 0 15 13">
-										<path d="M4.79971 0.984497L0.144073 6.16577V6.83414L4.79971 12.0154L5.54354 11.3471L1.63746 6.99996H14.4829V5.99996H1.63746L5.54354 1.65287L4.79971 0.984497Z" fill="white"></path>
-									</svg></button><button class="arrow arrow-active" style="border-color: #65BA7F; width: 46px; height: 46px"><svg width="15" height="13" viewBox="0 0 15 13">
-										<path d="M10.1998 0.984497L14.8554 6.16577V6.83414L10.1998 12.0154L9.45597 11.3471L13.3621 6.99996H0.516602L0.516602 5.99996H13.3621L9.45597 1.65287L10.1998 0.984497Z" fill="white"></path>
+						<div class="pagination" data-aos="fade-up">
+							<div class="pagination-list"><button class="pagination__item is-active">1</button><button class="pagination__item">2</button><button class="pagination__item">3</button><button class="pagination__item">4</button><button class="pagination__dots">...</button><button class="pagination__item">12</button></div>
+							<div class="pagination-controls"><button class="arrow not-active"><svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle r="23" transform="matrix(-1 0 0 1 23 23)" fill="#65BA7F"></circle>
+										<path d="M15.1646 23.0002L14.7927 23.3344V22.666L15.1646 23.0002ZM30.835 23.5002H15.1646V22.5002H30.835V23.5002ZM14.7927 22.666L20.0162 16.8528L20.76 17.5212L15.5365 23.3344L14.7927 22.666ZM15.5365 22.666L20.76 28.4792L20.0162 29.1476L14.7927 23.3344L15.5365 22.666Z" fill="white"></path>
+									</svg></button><button class="arrow right"><svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<circle r="23" transform="matrix(-1 0 0 1 23 23)" fill="#65BA7F"></circle>
+										<path d="M15.1646 23.0002L14.7927 23.3344V22.666L15.1646 23.0002ZM30.835 23.5002H15.1646V22.5002H30.835V23.5002ZM14.7927 22.666L20.0162 16.8528L20.76 17.5212L15.5365 23.3344L14.7927 22.666ZM15.5365 22.666L20.76 28.4792L20.0162 29.1476L14.7927 23.3344L15.5365 22.666Z" fill="white"></path>
 									</svg></button></div>
 						</div>
 						<div class="catalog-block">
@@ -1379,7 +1592,7 @@
 							<div class="designers-products__catalog" data-aos="fade-up">
 								<div class="swiper-container" data-watched-slider="">
 									<div class="swiper-wrapper">
-										<div class="catalog-card swiper-slide" data-catalog-images="[&quot;assets/images/catalog-1.png&quot;, &quot;https://via.placeholder.com/600/771796&quot;, &quot;https://via.placeholder.com/150/92c952&quot;, &quot;https://via.placeholder.com/600/8985dc&quot;]">
+										<div class="catalog-card swiper-slide" data-catalog-images="[&quot;assets/images/catalog-1.png&quot;,&quot;https://via.placeholder.com/600/771796&quot;,&quot;https://via.placeholder.com/150/92c952&quot;,&quot;https://via.placeholder.com/600/8985dc&quot;]">
 											<div class="catalog-card__labels">
 												<div class="catalog-card__labels-item">Скидки</div>
 												<div class="catalog-card__labels-item">Новинки</div>
@@ -1399,23 +1612,33 @@
 																<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
 															</svg></button></div>
 												</div><img class="catalog-card__main-img" src="assets/images/catalog-1.png" alt="">
-											</div><a class="catalog-card__bottom" href="">
-												<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
-												<div class="catalog-card__color">Серебро</div>
-												<div class="catalog-card__price">5 292 ₽</div>
-												<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
-															<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
-															<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
-															<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
-															<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
-															<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
-														</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
-														</svg></button></div>
-											</a>
+											</div>
+											<div class="catalog-card__container">
+												<div class="catalog-card__btns">
+													<div class="catalog-card__btns-item"><button class="btn btn--sm" data-fancy-button="c1"><svg class="btn__svg" width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
+																<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
+															</svg>в корзину</button></div>
+													<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
+												</div>
+												<div class="catalog-card__bottom">
+													<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
+													<div class="catalog-card__color">Серебро</div>
+													<div class="catalog-card__price">5 292 ₽</div>
+													<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+																<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+																<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+																<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+																<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+																<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+															</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+															</svg></button></div>
+												</div>
+											</div>
 										</div>
-										<div class="catalog-card swiper-slide" data-catalog-images="[&quot;assets/images/catalog-1.png&quot;, &quot;https://via.placeholder.com/600/771796&quot;, &quot;https://via.placeholder.com/150/92c952&quot;, &quot;https://via.placeholder.com/600/8985dc&quot;]">
+										<div class="catalog-card swiper-slide" data-catalog-images="[&quot;assets/images/catalog-1.png&quot;,&quot;https://via.placeholder.com/600/771796&quot;,&quot;https://via.placeholder.com/150/92c952&quot;,&quot;https://via.placeholder.com/600/8985dc&quot;]">
 											<div class="catalog-card__labels">
 												<div class="catalog-card__labels-item">Скидки</div>
 												<div class="catalog-card__labels-item">Новинки</div>
@@ -1435,23 +1658,33 @@
 																<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
 															</svg></button></div>
 												</div><img class="catalog-card__main-img" src="assets/images/catalog-2.png" alt="">
-											</div><a class="catalog-card__bottom" href="">
-												<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
-												<div class="catalog-card__color">Серебро</div>
-												<div class="catalog-card__price">5 292 ₽</div>
-												<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
-															<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
-															<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
-															<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
-															<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
-															<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
-														</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
-														</svg></button></div>
-											</a>
+											</div>
+											<div class="catalog-card__container">
+												<div class="catalog-card__btns">
+													<div class="catalog-card__btns-item"><button class="btn btn--sm" data-fancy-button="c1"><svg class="btn__svg" width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
+																<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
+															</svg>в корзину</button></div>
+													<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
+												</div>
+												<div class="catalog-card__bottom">
+													<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
+													<div class="catalog-card__color">Серебро</div>
+													<div class="catalog-card__price">5 292 ₽</div>
+													<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+																<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+																<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+																<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+																<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+																<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+															</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+															</svg></button></div>
+												</div>
+											</div>
 										</div>
-										<div class="catalog-card swiper-slide" data-catalog-images="[&quot;assets/images/catalog-1.png&quot;, &quot;https://via.placeholder.com/600/771796&quot;, &quot;https://via.placeholder.com/150/92c952&quot;, &quot;https://via.placeholder.com/600/8985dc&quot;]">
+										<div class="catalog-card swiper-slide" data-catalog-images="[&quot;assets/images/catalog-1.png&quot;,&quot;https://via.placeholder.com/600/771796&quot;,&quot;https://via.placeholder.com/150/92c952&quot;,&quot;https://via.placeholder.com/600/8985dc&quot;]">
 											<div class="catalog-card__labels">
 												<div class="catalog-card__labels-item">Скидки</div>
 												<div class="catalog-card__labels-item">Новинки</div>
@@ -1471,23 +1704,33 @@
 																<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
 															</svg></button></div>
 												</div><img class="catalog-card__main-img" src="assets/images/catalog-3.png" alt="">
-											</div><a class="catalog-card__bottom" href="">
-												<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
-												<div class="catalog-card__color">Серебро</div>
-												<div class="catalog-card__price">5 292 ₽</div>
-												<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
-															<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
-															<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
-															<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
-															<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
-															<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
-														</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
-														</svg></button></div>
-											</a>
+											</div>
+											<div class="catalog-card__container">
+												<div class="catalog-card__btns">
+													<div class="catalog-card__btns-item"><button class="btn btn--sm" data-fancy-button="c1"><svg class="btn__svg" width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
+																<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
+															</svg>в корзину</button></div>
+													<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
+												</div>
+												<div class="catalog-card__bottom">
+													<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
+													<div class="catalog-card__color">Серебро</div>
+													<div class="catalog-card__price">5 292 ₽</div>
+													<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+																<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+																<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+																<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+																<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+																<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+															</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+															</svg></button></div>
+												</div>
+											</div>
 										</div>
-										<div class="catalog-card swiper-slide" data-catalog-images="[&quot;assets/images/catalog-1.png&quot;, &quot;https://via.placeholder.com/600/771796&quot;, &quot;https://via.placeholder.com/150/92c952&quot;, &quot;https://via.placeholder.com/600/8985dc&quot;]">
+										<div class="catalog-card swiper-slide" data-catalog-images="[&quot;assets/images/catalog-1.png&quot;,&quot;https://via.placeholder.com/600/771796&quot;,&quot;https://via.placeholder.com/150/92c952&quot;,&quot;https://via.placeholder.com/600/8985dc&quot;]">
 											<div class="catalog-card__labels">
 												<div class="catalog-card__labels-item">Скидки</div>
 												<div class="catalog-card__labels-item">Новинки</div>
@@ -1507,23 +1750,33 @@
 																<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
 															</svg></button></div>
 												</div><img class="catalog-card__main-img" src="assets/images/catalog-4.png" alt="">
-											</div><a class="catalog-card__bottom" href="">
-												<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
-												<div class="catalog-card__color">Серебро</div>
-												<div class="catalog-card__price">5 292 ₽</div>
-												<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
-															<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
-															<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
-															<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
-															<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
-															<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
-														</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
-														</svg></button></div>
-											</a>
+											</div>
+											<div class="catalog-card__container">
+												<div class="catalog-card__btns">
+													<div class="catalog-card__btns-item"><button class="btn btn--sm" data-fancy-button="c1"><svg class="btn__svg" width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
+																<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
+															</svg>в корзину</button></div>
+													<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
+												</div>
+												<div class="catalog-card__bottom">
+													<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
+													<div class="catalog-card__color">Серебро</div>
+													<div class="catalog-card__price">5 292 ₽</div>
+													<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+																<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+																<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+																<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+																<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+																<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+															</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+															</svg></button></div>
+												</div>
+											</div>
 										</div>
-										<div class="catalog-card swiper-slide" data-catalog-images="[&quot;assets/images/catalog-1.png&quot;, &quot;https://via.placeholder.com/600/771796&quot;, &quot;https://via.placeholder.com/150/92c952&quot;, &quot;https://via.placeholder.com/600/8985dc&quot;]">
+										<div class="catalog-card swiper-slide" data-catalog-images="[&quot;assets/images/catalog-1.png&quot;,&quot;https://via.placeholder.com/600/771796&quot;,&quot;https://via.placeholder.com/150/92c952&quot;,&quot;https://via.placeholder.com/600/8985dc&quot;]">
 											<div class="catalog-card__labels">
 												<div class="catalog-card__labels-item">Скидки</div>
 												<div class="catalog-card__labels-item">Новинки</div>
@@ -1543,21 +1796,31 @@
 																<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
 															</svg></button></div>
 												</div><img class="catalog-card__main-img" src="assets/images/catalog-5.png" alt="">
-											</div><a class="catalog-card__bottom" href="">
-												<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
-												<div class="catalog-card__color">Серебро</div>
-												<div class="catalog-card__price">5 292 ₽</div>
-												<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
-															<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
-															<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
-															<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
-															<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
-															<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
-														</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
-														</svg></button></div>
-											</a>
+											</div>
+											<div class="catalog-card__container">
+												<div class="catalog-card__btns">
+													<div class="catalog-card__btns-item"><button class="btn btn--sm" data-fancy-button="c1"><svg class="btn__svg" width="21" height="25" viewBox="0 0 21 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect x="0.5" y="4.49994" width="20" height="20" stroke="#0F2C2D"></rect>
+																<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
+															</svg>в корзину</button></div>
+													<div class="catalog-card__btns-item"><button class="btn-buy" data-fancy-button="b1">купить в 1 клик</button></div>
+												</div>
+												<div class="catalog-card__bottom">
+													<div class="catalog-card__ttl">Высокое напольное кашпо MUSCHEL</div>
+													<div class="catalog-card__color">Серебро</div>
+													<div class="catalog-card__price">5 292 ₽</div>
+													<div class="catalog-card__buttons"><button class="catalog-card__buttons-item"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<line x1="2.50049" x2="2.50049" y2="24" stroke="#0F2C2D"></line>
+																<line x1="5" y1="3.5" y2="3.5" stroke="#0F2C2D"></line>
+																<line x1="22.5" x2="22.5" y2="24" stroke="#0F2C2D"></line>
+																<line x1="25" y1="20.5" x2="20" y2="20.5" stroke="#0F2C2D"></line>
+																<line x1="12.5005" x2="12.5005" y2="24" stroke="#0F2C2D"></line>
+																<line x1="15" y1="11.5" x2="10" y2="11.5" stroke="#0F2C2D"></line>
+															</svg></button><button class="catalog-card__buttons-item"><svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<path d="M13.3568 23L13.2891 22.9551C11.3646 21.6647 9.51602 20.2614 7.7528 18.7522C3.96903 15.4982 1.80763 12.6778 1.32847 10.3755C1.10362 9.65864 0.992851 8.90998 1.00036 8.15772C1.01425 6.68347 1.47202 5.24881 2.31223 4.04622C3.15245 2.84364 4.33491 1.93066 5.70096 1.42981C7.06702 0.928954 8.55131 0.864176 9.95467 1.24417C11.358 1.62416 12.6133 2.43074 13.5521 3.55569C14.6294 2.31383 16.0946 1.4858 17.7019 1.2105C19.3093 0.935205 20.961 1.22939 22.38 2.0437C23.488 2.68168 24.4078 3.60868 25.0442 4.72874C25.6807 5.84879 26.0105 7.12117 25.9997 8.41412C25.992 9.17066 25.8654 9.92109 25.6248 10.6372C25.0987 12.9184 22.8748 15.6886 19.0416 18.8605C17.2513 20.3367 15.3766 21.7039 13.4271 22.9551L13.3568 23ZM8.11737 1.26392C6.30987 1.26454 4.57566 1.98932 3.29173 3.28071C2.0078 4.5721 1.27792 6.32572 1.26077 8.16036C1.25311 8.88845 1.36037 9.61309 1.57847 10.3067C2.65396 15.4612 12.4376 22.0748 13.3594 22.6854C14.2943 22.0933 24.1977 15.6886 25.3748 10.5631C25.8895 9.02847 25.8588 7.35932 25.2881 5.8452C24.7173 4.33108 23.6424 3.06752 22.2498 2.27367C20.8612 1.4795 19.2432 1.20179 17.6746 1.4884C16.106 1.77501 14.6849 2.60798 13.6563 3.84381L13.5547 3.9654L13.4558 3.84381C12.8189 3.046 12.0161 2.401 11.1049 1.95499C10.1937 1.50898 9.19665 1.27299 8.18508 1.26392H8.11737Z" fill="white" stroke="#0F2C2D"></path>
+															</svg></button></div>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -1690,255 +1953,257 @@
 			<div class="modal-filters" data-fancy-modal="f1">
 				<div class="modal-filters__container">
 					<h3 class="title-h3 modal-filters__title">фильтры</h3>
-					<ul class="modal-filters__list catalog-filters-spoilers">
-						<li class="modal-filters__item" data-accordion="">
-							<div class="modal-filters__button" data-accordion-button="">
-								<div class="modal-filters__text">Наличие, скидки</div>
-								<div class="modal-filters__icon"><svg class="modal-filters__svg" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M7.31864 5.64029L7.60793 6.0481L7.02935 6.0481L7.31864 5.64029ZM7.02935 6.0481L0.710707 1.56577L1.28929 0.750149L7.60793 5.23248L7.02935 6.0481ZM7.02935 5.23248L13.348 0.750148L13.9266 1.56577L7.60793 6.0481L7.02935 5.23248Z" fill="#0F2C2D"></path>
-									</svg></div>
-							</div>
-							<div class="modal-filters__dropdown" data-accordion-dropdown="">
-								<div class="catalog-filter-spoilers__dropdown">
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
-										</label></div>
+					<div class="modal-filters__content">
+						<ul class="modal-filters__list catalog-filters-spoilers">
+							<li class="modal-filters__item" data-accordion="">
+								<div class="modal-filters__button" data-accordion-button="">
+									<div class="modal-filters__text">Наличие, скидки</div>
+									<div class="modal-filters__icon"><svg class="modal-filters__svg" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M7.31864 5.64029L7.60793 6.0481L7.02935 6.0481L7.31864 5.64029ZM7.02935 6.0481L0.710707 1.56577L1.28929 0.750149L7.60793 5.23248L7.02935 6.0481ZM7.02935 5.23248L13.348 0.750148L13.9266 1.56577L7.60793 6.0481L7.02935 5.23248Z" fill="#0F2C2D"></path>
+										</svg></div>
 								</div>
-							</div>
-						</li>
-						<li class="modal-filters__item" data-accordion="">
-							<div class="modal-filters__button" data-accordion-button="">
-								<div class="modal-filters__text">Диапазон цены</div>
-								<div class="modal-filters__icon"><svg class="modal-filters__svg" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M7.31864 5.64029L7.60793 6.0481L7.02935 6.0481L7.31864 5.64029ZM7.02935 6.0481L0.710707 1.56577L1.28929 0.750149L7.60793 5.23248L7.02935 6.0481ZM7.02935 5.23248L13.348 0.750148L13.9266 1.56577L7.60793 6.0481L7.02935 5.23248Z" fill="#0F2C2D"></path>
-									</svg></div>
-							</div>
-							<div class="modal-filters__dropdown" data-accordion-dropdown="">
-								<div class="catalog-filter-spoilers__dropdown">
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
-										</label></div>
+								<div class="modal-filters__dropdown" data-accordion-dropdown="">
+									<div class="catalog-filter-spoilers__dropdown">
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
+											</label></div>
+									</div>
 								</div>
-							</div>
-						</li>
-						<li class="modal-filters__item" data-accordion="">
-							<div class="modal-filters__button" data-accordion-button="">
-								<div class="modal-filters__text">Цвет</div>
-								<div class="modal-filters__icon"><svg class="modal-filters__svg" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M7.31864 5.64029L7.60793 6.0481L7.02935 6.0481L7.31864 5.64029ZM7.02935 6.0481L0.710707 1.56577L1.28929 0.750149L7.60793 5.23248L7.02935 6.0481ZM7.02935 5.23248L13.348 0.750148L13.9266 1.56577L7.60793 6.0481L7.02935 5.23248Z" fill="#0F2C2D"></path>
-									</svg></div>
-							</div>
-							<div class="modal-filters__dropdown" data-accordion-dropdown="">
-								<div class="catalog-filter-spoilers__dropdown">
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
-										</label></div>
+							</li>
+							<li class="modal-filters__item" data-accordion="">
+								<div class="modal-filters__button" data-accordion-button="">
+									<div class="modal-filters__text">Диапазон цены</div>
+									<div class="modal-filters__icon"><svg class="modal-filters__svg" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M7.31864 5.64029L7.60793 6.0481L7.02935 6.0481L7.31864 5.64029ZM7.02935 6.0481L0.710707 1.56577L1.28929 0.750149L7.60793 5.23248L7.02935 6.0481ZM7.02935 5.23248L13.348 0.750148L13.9266 1.56577L7.60793 6.0481L7.02935 5.23248Z" fill="#0F2C2D"></path>
+										</svg></div>
 								</div>
-							</div>
-						</li>
-						<li class="modal-filters__item" data-accordion="">
-							<div class="modal-filters__button" data-accordion-button="">
-								<div class="modal-filters__text">Форма</div>
-								<div class="modal-filters__icon"><svg class="modal-filters__svg" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M7.31864 5.64029L7.60793 6.0481L7.02935 6.0481L7.31864 5.64029ZM7.02935 6.0481L0.710707 1.56577L1.28929 0.750149L7.60793 5.23248L7.02935 6.0481ZM7.02935 5.23248L13.348 0.750148L13.9266 1.56577L7.60793 6.0481L7.02935 5.23248Z" fill="#0F2C2D"></path>
-									</svg></div>
-							</div>
-							<div class="modal-filters__dropdown" data-accordion-dropdown="">
-								<div class="catalog-filter-spoilers__dropdown">
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
-										</label></div>
+								<div class="modal-filters__dropdown" data-accordion-dropdown="">
+									<div class="catalog-filter-spoilers__dropdown">
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
+											</label></div>
+									</div>
 								</div>
-							</div>
-						</li>
-						<li class="modal-filters__item" data-accordion="">
-							<div class="modal-filters__button" data-accordion-button="">
-								<div class="modal-filters__text">Применение</div>
-								<div class="modal-filters__icon"><svg class="modal-filters__svg" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M7.31864 5.64029L7.60793 6.0481L7.02935 6.0481L7.31864 5.64029ZM7.02935 6.0481L0.710707 1.56577L1.28929 0.750149L7.60793 5.23248L7.02935 6.0481ZM7.02935 5.23248L13.348 0.750148L13.9266 1.56577L7.60793 6.0481L7.02935 5.23248Z" fill="#0F2C2D"></path>
-									</svg></div>
-							</div>
-							<div class="modal-filters__dropdown" data-accordion-dropdown="">
-								<div class="catalog-filter-spoilers__dropdown">
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
-										</label></div>
+							</li>
+							<li class="modal-filters__item" data-accordion="">
+								<div class="modal-filters__button" data-accordion-button="">
+									<div class="modal-filters__text">Цвет</div>
+									<div class="modal-filters__icon"><svg class="modal-filters__svg" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M7.31864 5.64029L7.60793 6.0481L7.02935 6.0481L7.31864 5.64029ZM7.02935 6.0481L0.710707 1.56577L1.28929 0.750149L7.60793 5.23248L7.02935 6.0481ZM7.02935 5.23248L13.348 0.750148L13.9266 1.56577L7.60793 6.0481L7.02935 5.23248Z" fill="#0F2C2D"></path>
+										</svg></div>
 								</div>
-							</div>
-						</li>
-						<li class="modal-filters__item" data-accordion="">
-							<div class="modal-filters__button" data-accordion-button="">
-								<div class="modal-filters__text">Особенности</div>
-								<div class="modal-filters__icon"><svg class="modal-filters__svg" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M7.31864 5.64029L7.60793 6.0481L7.02935 6.0481L7.31864 5.64029ZM7.02935 6.0481L0.710707 1.56577L1.28929 0.750149L7.60793 5.23248L7.02935 6.0481ZM7.02935 5.23248L13.348 0.750148L13.9266 1.56577L7.60793 6.0481L7.02935 5.23248Z" fill="#0F2C2D"></path>
-									</svg></div>
-							</div>
-							<div class="modal-filters__dropdown" data-accordion-dropdown="">
-								<div class="catalog-filter-spoilers__dropdown">
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
-										</label></div>
-									<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
-											<div class="checkbox"></div>
-											<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
-										</label></div>
+								<div class="modal-filters__dropdown" data-accordion-dropdown="">
+									<div class="catalog-filter-spoilers__dropdown">
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
+											</label></div>
+									</div>
 								</div>
+							</li>
+							<li class="modal-filters__item" data-accordion="">
+								<div class="modal-filters__button" data-accordion-button="">
+									<div class="modal-filters__text">Форма</div>
+									<div class="modal-filters__icon"><svg class="modal-filters__svg" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M7.31864 5.64029L7.60793 6.0481L7.02935 6.0481L7.31864 5.64029ZM7.02935 6.0481L0.710707 1.56577L1.28929 0.750149L7.60793 5.23248L7.02935 6.0481ZM7.02935 5.23248L13.348 0.750148L13.9266 1.56577L7.60793 6.0481L7.02935 5.23248Z" fill="#0F2C2D"></path>
+										</svg></div>
+								</div>
+								<div class="modal-filters__dropdown" data-accordion-dropdown="">
+									<div class="catalog-filter-spoilers__dropdown">
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
+											</label></div>
+									</div>
+								</div>
+							</li>
+							<li class="modal-filters__item" data-accordion="">
+								<div class="modal-filters__button" data-accordion-button="">
+									<div class="modal-filters__text">Применение</div>
+									<div class="modal-filters__icon"><svg class="modal-filters__svg" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M7.31864 5.64029L7.60793 6.0481L7.02935 6.0481L7.31864 5.64029ZM7.02935 6.0481L0.710707 1.56577L1.28929 0.750149L7.60793 5.23248L7.02935 6.0481ZM7.02935 5.23248L13.348 0.750148L13.9266 1.56577L7.60793 6.0481L7.02935 5.23248Z" fill="#0F2C2D"></path>
+										</svg></div>
+								</div>
+								<div class="modal-filters__dropdown" data-accordion-dropdown="">
+									<div class="catalog-filter-spoilers__dropdown">
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
+											</label></div>
+									</div>
+								</div>
+							</li>
+							<li class="modal-filters__item" data-accordion="">
+								<div class="modal-filters__button" data-accordion-button="">
+									<div class="modal-filters__text">Особенности</div>
+									<div class="modal-filters__icon"><svg class="modal-filters__svg" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M7.31864 5.64029L7.60793 6.0481L7.02935 6.0481L7.31864 5.64029ZM7.02935 6.0481L0.710707 1.56577L1.28929 0.750149L7.60793 5.23248L7.02935 6.0481ZM7.02935 5.23248L13.348 0.750148L13.9266 1.56577L7.60793 6.0481L7.02935 5.23248Z" fill="#0F2C2D"></path>
+										</svg></div>
+								</div>
+								<div class="modal-filters__dropdown" data-accordion-dropdown="">
+									<div class="catalog-filter-spoilers__dropdown">
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Крем</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Мятный</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Нежно-голубой</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Мальва</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Пион</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Лавандовый</div>
+											</label></div>
+										<div class="catalog-filter-spoilers__dropdown-item"><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required="required" />
+												<div class="checkbox"></div>
+												<div class="catalog-filter-spoilers__dropdown-text">Бирюзовый</div>
+											</label></div>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<div class="modal-filters__buttons">
+							<div class="modal-filters__buttons-item">
+								<div class="btn btn--sm hidden" data-accept-button="">применить</div>
 							</div>
-						</li>
-					</ul>
-					<div class="modal-filters__buttons">
-						<div class="modal-filters__buttons-item">
-							<div class="btn btn--sm">применить</div>
-						</div>
-						<div class="modal-filters__buttons-item">
-							<div class="favorites-top favorites-top--default">
-								<div class="favorites-top__reset"><img src="assets/images/icons/reset-ico.svg" alt="" />очистить корзину</div>
+							<div class="modal-filters__buttons-item">
+								<div class="favorites-top favorites-top--default">
+									<div class="favorites-top__reset"><img src="assets/images/icons/reset-ico.svg" alt="" />сбросить фильтры</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -2145,6 +2410,23 @@
 										<path d="M16.4529 8.13208C16.4529 4.19317 13.7919 1.00006 10.5095 1.00006C7.22709 1.00006 4.56616 4.19317 4.56616 8.13208" stroke="#0F2C2D"></path>
 									</svg>в корзину</button></div>
 						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-ask modal-ask--default" data-fancy-modal="b1">
+				<div class="modal-ask__container">
+					<div class="modal-ask__wrapper">
+						<div class="modal-ask__ttl">купить в 1 клик</div>
+						<form class="designers-form__form form-column" data-parsley-validate="data-parsley-validate"><label class="designers-form__label" data-aos="fade-up">
+								<div class="placeholder-active">Имя</div><input class="designers-form__input" placeholder="Имя" required="required" />
+							</label><label class="designers-form__label" data-aos="fade-up">
+								<div class="placeholder-active">Телефон</div><input class="designers-form__input" type="tel" placeholder="Телефон" required="required" />
+							</label><label class="designers-form__label" data-aos="fade-up">
+								<div class="placeholder-active">Комментарий к заказу</div><input class="designers-form__input" placeholder="Комментарий к заказу" required="required" />
+							</label><label class="designers-form__checkbox" data-aos="fade-up"><input type="checkbox" id="checkbox" required="required" />
+								<div class="checkbox"></div>
+								<div class="designers-form__checkbox-txt">Я соглашаюсь на обработку<br /><a href="">персональных данных</a></div>
+							</label><button class="btn" type="submit">отправить</button></form>
 					</div>
 				</div>
 			</div>
