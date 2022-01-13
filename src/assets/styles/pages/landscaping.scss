@@ -1298,3 +1298,29 @@
     }
   }
 }
+
+.ready-projects__container {
+  display: grid;
+  grid-template-areas: 'z';
+
+  .projects__slider {
+    grid-area: z;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+
+    .projects__slider-controls {
+      // z-index: -10;
+      display: none;
+    }
+
+    &.is-active {
+      opacity: 1;
+      pointer-events: all;
+
+      .projects__slider-controls {
+        display: flex;
+      }
+    }
+  }
+}
