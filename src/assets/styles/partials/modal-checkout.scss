@@ -63,6 +63,62 @@
     }
   }
 
+  &__body {
+    height: 100%;
+
+    @media (min-width: $breakpoint) {
+      width: calc(100% - 110px);
+    }
+
+    iframe {
+      width: 100%;
+      height: 480px;
+    }
+  }
+
+  &__top {
+    background-color: #fff;
+    padding: 20px 40px 20px 10px;
+
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $breakpoint) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 30px 60px;
+    }
+
+    .btn {
+      @media (min-width: $breakpoint) {
+        padding: 12px 40px;
+      }
+    }
+  }
+
+  &__input {
+    border: none;
+    border-bottom: 1px solid $green-extra-lighten;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 160%;
+    color: $black;
+
+    &::placeholder {
+      color: $black;
+    }
+
+    @media (min-width: $breakpoint) {
+      margin-bottom: 0;
+
+      font-size: 16px;
+
+      width: calc(100% - 220px);
+    }
+  }
+
   &__close {
     width: 84px;
     height: 84px;

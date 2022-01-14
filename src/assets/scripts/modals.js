@@ -161,10 +161,13 @@ $(() => {
 
 {
   $(() => {
-    const mapBtn = $('.checkout-block__btn');
+    const mapBtn = $('[data-map-btn]');
+    const mapInputBtn = $('[data-map-input-btn]');
 
     if (mapBtn.length) {
-      const mapModal = $('.modal-map');
+      // const mapModal = $('.modal-map');
+      const mapModal = $('[data-map-modal]');
+      const mapInputModal = $('[data-map-input]')
       const body = $('body');
 
       mapBtn.on('click', () => {
@@ -172,14 +175,22 @@ $(() => {
         body.addClass('hidden');
       })
 
+      mapInputBtn.on('click', () => {
+        mapInputModal.addClass('modal-active');
+        body.addClass('hidden');
+      })
+
       $(window).on('click', (event) => {
           
-        if (
-          mapModal.hasClass('modal-active') && 
+        if ((mapModal.hasClass('modal-active') && 
           $(event.target).closest('.modal-map__wrapper').length === 0 && 
-          $(event.target).closest(mapBtn).length === 0
+          $(event.target).closest(mapBtn).length === 0) || 
+          (mapInputModal.hasClass('modal-active') && 
+          $(event.target).closest('.modal-map__body').length === 0 && 
+          $(event.target).closest(mapInputBtn).length === 0)
         ) {
           mapModal.removeClass('modal-active');
+          mapInputModal.removeClass('modal-active');
           body.removeClass('hidden');
         }
       })
