@@ -2,21 +2,13 @@
 
 // Styles
 import 'Styles/_app.scss';
-
 import FullPage from './assets/scripts/fullpage';
-
 import './assets/scripts/modals';
-
 import './assets/scripts/compare';
-
 import './assets/scripts/3dEffect/index';
-
 import './assets/scripts/spoiler';
-
 import './assets/scripts/header';
-
 import './assets/scripts/fancybox';
-
 
 import './assets/scripts/aos';
 
@@ -226,6 +218,33 @@ import LocomotiveScroll from 'locomotive-scroll';
 
           activeBtn.addClass("is-active");
           $(formsItem[indexBtn]).addClass("is-active");
+        }
+      });
+    }
+  });
+}
+
+// переключение слайдеров по табам
+
+{
+  $(() => {
+    const slidersList = $('.ready-projects__container');
+
+    if (slidersList.length) {
+      const filter = $('.designers-products-filter');
+      const filterBtn = filter.find('.filter-tab');
+      const sliderItem = slidersList.find('.projects__slider');
+
+      filter.on("click", (event) => {
+        if ($(event.target).closest(filterBtn).length) {
+          const activeBtn = $(event.target).closest(filterBtn);
+          const indexBtn = filterBtn.index(activeBtn);
+
+          filterBtn.removeClass("active-tab");
+          sliderItem.removeClass("is-active");
+
+          activeBtn.addClass("is-active");
+          $(sliderItem[indexBtn]).addClass("is-active");
         }
       });
     }

@@ -8,16 +8,12 @@ export default function initProjectsSlider() {
   const $projectsSlider = document.querySelector('[data-projects-slider]');
 
   const projectsSlider = new Swiper($projectsSlider, {
-    // slidesPerView: 3,
     slidesPerView: 'auto',
-    // spaceBetween: 172,
     loop: true,
 
     breakpoints: {
       [BREAKPOINT]: {
         centeredSlides: true,
-        // slidesPerView: 'auto',
-        // spaceBetween: 32,
       },
     },
 

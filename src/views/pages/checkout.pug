@@ -1,8 +1,11 @@
 extends ../layouts/master.pug
 
+include ../partials/modal-checkout
+
 block content
 
   include ../partials/_aside.pug
+
 
   .main__wrap.main__wrap--visible(data-scroll-container="")
 
@@ -66,13 +69,13 @@ block content
                     .checkout-address__desc--small Напротив ТЦ Пирамида
                     .checkout-address__desc--small Возможность примерки отсутствует
 
-                  button.checkout-block__btn.btn-white Выбрать адрес на карте
+                  .checkout-block__btn.btn-white(data-map-btn="") Выбрать адрес на карте
 
                 .checkout-address__item
                   .checkout-address__ttl выбранный адрес
                   .checkout-address__desc г. Москва, ул. Стачек, 34
 
-                  button.checkout-block__btn.btn-white Выбрать адрес на карте
+                  .checkout-block__btn.btn-white(data-map-input-btn="") Выбрать адрес на карте
 
                 .checkout-address__item
                   .checkout-address__ttl адрес склада
@@ -82,7 +85,7 @@ block content
                       +addressIco
                       |на карте
 
-                  button.checkout-block__btn.btn-white Выбрать адрес на карте
+                  .checkout-block__btn.btn-white(data-map-btn="") Выбрать адрес на карте
 
 
             .checkout-block
@@ -137,5 +140,7 @@ block content
               .aos(data-aos="fade-up")
                 button.btn(type="submit") перейти к оформлению заказа
 
+    +map-modal
+    +map-input-modal
 
     include ../partials/_footer.pug

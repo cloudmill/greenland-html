@@ -1,6 +1,7 @@
 extends ../layouts/master.pug
 
 include ../partials/advice-modal.pug
+include ../partials/modal-buy
 
 block content
 
@@ -139,8 +140,8 @@ block content
 
             .product-card-info__tabs(data-aos="fade-up")
               .product-card-info__item(data-fancy-button='adv1') Советуем использовать
-              .product-card-info__item Правила эксплуатации
-              .product-card-info__item Визуальная размерность
+              .product-card-info__item(data-fancy-button='adv1') Правила эксплуатации
+              .product-card-info__item(data-fancy-button='adv1') Визуальная размерность
 
             .product-card-info__col.only-mobile(data-aos="fade-up")
                 a(href="") Особые условия для юридических лиц
@@ -150,7 +151,7 @@ block content
             .product-card-buttons
 
               .product-card-buttons__container(data-aos="fade-up")
-                button.btn-white купить в 1 клик
+                button.btn-white(data-fancy-button="b1") купить в 1 клик
                 button.btn
                   +basketIco
                   |в корзину
@@ -406,6 +407,7 @@ block content
 
         include ../partials/you-watched
   
-  +advice-modal
+    +advice-modal
+    +modal-buy
 
     include ../partials/_footer.pug

@@ -73,6 +73,12 @@ button.close {
   @include text-hide;
 }
 
+.aos-slider-fix.aos-animate.projects__slider.swiper-container {
+  @media (min-width: $breakpoint) {
+    transform: translateX(-50%);
+  }
+}
+
 .only-mobile {
   @media (min-width: $breakpoint) {
     display: none;

@@ -13,7 +13,7 @@ import productDesc from './product-desc-slider';
 import coverModal from './cover-modal-slider';
 import './abonements-slider';
 import './product-gallery-slider';
-
+import './project-slider-doubles';
 
 
 import Swiper, {Navigation, Pagination, Mousewheel} from 'swiper';

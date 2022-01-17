@@ -156,3 +156,77 @@ $(() => {
     }
   })
 }
+
+// модалка с картой в чекауте
+
+{
+  $(() => {
+    const mapBtn = $('[data-map-btn]');
+    const mapInputBtn = $('[data-map-input-btn]');
+
+    if (mapBtn.length) {
+      // const mapModal = $('.modal-map');
+      const mapModal = $('[data-map-modal]');
+      const mapInputModal = $('[data-map-input]')
+      const body = $('body');
+
+      mapBtn.on('click', () => {
+        mapModal.addClass('modal-active');
+        body.addClass('hidden');
+      })
+
+      mapInputBtn.on('click', () => {
+        mapInputModal.addClass('modal-active');
+        body.addClass('hidden');
+      })
+
+      $(window).on('click', (event) => {
+          
+        if ((mapModal.hasClass('modal-active') && 
+          $(event.target).closest('.modal-map__wrapper').length === 0 && 
+          $(event.target).closest(mapBtn).length === 0) || 
+          (mapInputModal.hasClass('modal-active') && 
+          $(event.target).closest('.modal-map__body').length === 0 && 
+          $(event.target).closest(mapInputBtn).length === 0)
+        ) {
+          mapModal.removeClass('modal-active');
+          mapInputModal.removeClass('modal-active');
+          body.removeClass('hidden');
+        }
+      })
+    }
+  })
+}
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const mapBtn = document.querySelectorAll('.checkout-block__btn');
+
+//   console.log(mapBtn);
+
+//   if (mapBtn.length) {
+//     console.log(123);
+
+//     const mapModal = document.querySelectorAll('.modal-map');
+//     const body = document.querySelectorAll('body');
+
+//     mapBtn.addEventListener('click', () => {
+//       mapModal.classList.add('modal-active');
+//       body.classList.add('hidden');
+//     })
+
+//     window.addEventListener('click', (event) => {
+
+//       let target = event.target;
+
+//       if (
+//         mapModal.classList.contains('modal-active') && 
+//         target.closest('.modal-ask__wrapper').length === 0 && 
+//         target.closest(faqBtn).length === 0
+//       ) {
+//         mapModal.classList.remove('modal-active');
+//         body.classList.remove('hidden');
+//       }
+
+//     })
+//   }
+// })

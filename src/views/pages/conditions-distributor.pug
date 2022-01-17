@@ -165,7 +165,8 @@ block content
               li.filter-tab.active-tab Шоу-рум
               li.filter-tab Упаковка продукции
 
-          .projects__slider.swiper-container(data-projects-slider="")
+          
+          .aos-slider-fix.projects__slider.swiper-container(data-projects-slider="" data-aos="fade-up")
             .swiper-wrapper
               - for (i=0; i<3; i++)
                 .swiper-slide.projects__slide

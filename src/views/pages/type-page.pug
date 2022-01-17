@@ -36,7 +36,8 @@ block content
         .type-page-img(data-aos="fade-up")
           h3.type-page-img__ttl.title-h3 Сегодня сложно представить дом без растения в горшке
           .type-page-img__txt.p_large Но, как превратить этот горшок с растением в фитодизайн?
-          img(src="assets/images/type-page-1.jpg", alt="")
+          img.only-desktop(src="assets/images/type-page-1.jpg", alt="")
+          img.only-mobile(src="assets/images/type-page-1-mob.jpg", alt="")
 
         .type-page-block
           .type-page-block__row
@@ -67,81 +68,212 @@ block content
             .designers-products-filter(data-aos="fade-up")
               ul
                 li.filter-tab.active-tab Фитодизайн
-                //- -
-                //-   var projects = [
-                //-     'Атриумы',
-                //-     'Процесс производства',
-                //-     'Рестораны',
-                //-   ]
-                //- each i in projects
-                //-   li.filter-tab
-                //-     |#{i}
+                -
+                  var projects = [
+                    'Фитодизайн 2',
+                    'Фитодизайн 3',
+                  ]
+                each i in projects
+                  li.filter-tab
+                    |#{i}
 
-            .projects__slider.swiper-container(data-projects-slider="" data-aos="fade-up")
-              .swiper-wrapper
-                .swiper-slide.projects__slide
-                  .projects__item
-                    .projects__item-slider(data-fade-item-slider="")
-                      .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
-                        img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                        img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                        img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
-                        img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                      .bullets.projects__item-slider-bullets
-                        .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
-                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                    .projects__item-caption
-                      .epsilon.projects__item-name Отель Crowne Plaza
-                      .projects__item-tags
-                        .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
-                        .projects__item-tag.text__super-tn.text--uppercase Террасы
-                        .projects__item-tag.text__super-tn.text--uppercase Входные группы
-                .swiper-slide.projects__slide
-                  .projects__item
-                    .projects__item-slider(data-fade-item-slider="")
-                      .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
-                        img.projects__item-img.is-active(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                        img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                        img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
-                        img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                      .bullets.projects__item-slider-bullets
-                        .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
-                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                    .projects__item-caption
-                      .epsilon.projects__item-name Отель Crowne Plaza
-                      .projects__item-tags
-                        .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
-                        .projects__item-tag.text__super-tn.text--uppercase Террасы
-                        .projects__item-tag.text__super-tn.text--uppercase Входные группы
-                .swiper-slide.projects__slide
-                  .projects__item
-                    .projects__item-slider(data-fade-item-slider="")
-                      .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
-                        img.projects__item-img.is-active(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
-                        img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                        img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                        img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                      .bullets.projects__item-slider-bullets
-                      .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
-                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                        .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                    .projects__item-caption
-                      .epsilon.projects__item-name Отель Crowne Plaza
-                      .projects__item-tags
-                        .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
-                        .projects__item-tag.text__super-tn.text--uppercase Террасы
-                        .projects__item-tag.text__super-tn.text--uppercase Входные группы
-              .projects__slider-controls
-                .projects-controls-container
-                  +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
-                .projects-controls-container
-                  +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+            .ready-projects__container
 
+              .aos-slider-fix.projects__slider.is-active.swiper-container(data-projects-slider="")
+                .swiper-wrapper
+                  .swiper-slide.projects__slide
+                    .projects__item
+                      .projects__item-slider(data-fade-item-slider="")
+                        .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                          img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                        .bullets.projects__item-slider-bullets
+                          .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .projects__item-caption
+                        .epsilon.projects__item-name Отель Crowne Plaza
+                        .projects__item-tags
+                          .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                          .projects__item-tag.text__super-tn.text--uppercase Террасы
+                          .projects__item-tag.text__super-tn.text--uppercase Входные группы
+                  .swiper-slide.projects__slide
+                    .projects__item
+                      .projects__item-slider(data-fade-item-slider="")
+                        .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                          img.projects__item-img.is-active(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                        .bullets.projects__item-slider-bullets
+                          .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .projects__item-caption
+                        .epsilon.projects__item-name Отель Crowne Plaza
+                        .projects__item-tags
+                          .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                          .projects__item-tag.text__super-tn.text--uppercase Террасы
+                          .projects__item-tag.text__super-tn.text--uppercase Входные группы
+                  .swiper-slide.projects__slide
+                    .projects__item
+                      .projects__item-slider(data-fade-item-slider="")
+                        .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                          img.projects__item-img.is-active(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                        .bullets.projects__item-slider-bullets
+                        .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .projects__item-caption
+                        .epsilon.projects__item-name Отель Crowne Plaza
+                        .projects__item-tags
+                          .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                          .projects__item-tag.text__super-tn.text--uppercase Террасы
+                          .projects__item-tag.text__super-tn.text--uppercase Входные группы
+                .projects__slider-controls
+                  .projects-controls-container
+                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+                  .projects-controls-container
+                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+
+              .aos-slider-fix.projects__slider.swiper-container(data-projects-slider-2="")
+                .swiper-wrapper
+                  .swiper-slide.projects__slide
+                    .projects__item
+                      .projects__item-slider(data-fade-item-slider="")
+                        .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                          img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                        .bullets.projects__item-slider-bullets
+                          .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .projects__item-caption
+                        .epsilon.projects__item-name Отель Crowne Plaza
+                        .projects__item-tags
+                          .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                          .projects__item-tag.text__super-tn.text--uppercase Террасы
+                          .projects__item-tag.text__super-tn.text--uppercase Входные группы
+                  .swiper-slide.projects__slide
+                    .projects__item
+                      .projects__item-slider(data-fade-item-slider="")
+                        .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                          img.projects__item-img.is-active(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                        .bullets.projects__item-slider-bullets
+                          .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .projects__item-caption
+                        .epsilon.projects__item-name Отель Crowne Plaza
+                        .projects__item-tags
+                          .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                          .projects__item-tag.text__super-tn.text--uppercase Террасы
+                          .projects__item-tag.text__super-tn.text--uppercase Входные группы
+                  .swiper-slide.projects__slide
+                    .projects__item
+                      .projects__item-slider(data-fade-item-slider="")
+                        .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                          img.projects__item-img.is-active(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                        .bullets.projects__item-slider-bullets
+                        .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .projects__item-caption
+                        .epsilon.projects__item-name Отель Crowne Plaza
+                        .projects__item-tags
+                          .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                          .projects__item-tag.text__super-tn.text--uppercase Террасы
+                          .projects__item-tag.text__super-tn.text--uppercase Входные группы
+                .projects__slider-controls
+                  .projects-controls-container
+                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-2-prev="")
+                  .projects-controls-container
+                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-2-next="")
+
+              .aos-slider-fix.projects__slider.swiper-container(data-projects-slider-3="")
+                .swiper-wrapper
+                  .swiper-slide.projects__slide
+                    .projects__item
+                      .projects__item-slider(data-fade-item-slider="")
+                        .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                          img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                        .bullets.projects__item-slider-bullets
+                          .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .projects__item-caption
+                        .epsilon.projects__item-name Отель Crowne Plaza
+                        .projects__item-tags
+                          .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                          .projects__item-tag.text__super-tn.text--uppercase Террасы
+                          .projects__item-tag.text__super-tn.text--uppercase Входные группы
+                  .swiper-slide.projects__slide
+                    .projects__item
+                      .projects__item-slider(data-fade-item-slider="")
+                        .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                          img.projects__item-img.is-active(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                        .bullets.projects__item-slider-bullets
+                          .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .projects__item-caption
+                        .epsilon.projects__item-name Отель Crowne Plaza
+                        .projects__item-tags
+                          .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                          .projects__item-tag.text__super-tn.text--uppercase Террасы
+                          .projects__item-tag.text__super-tn.text--uppercase Входные группы
+                  .swiper-slide.projects__slide
+                    .projects__item
+                      .projects__item-slider(data-fade-item-slider="")
+                        .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                          img.projects__item-img.is-active(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
+                        .bullets.projects__item-slider-bullets
+                        .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                      .projects__item-caption
+                        .epsilon.projects__item-name Отель Crowne Plaza
+                        .projects__item-tags
+                          .projects__item-tag.text__super-tn.text--uppercase Вертикальное озеленение
+                          .projects__item-tag.text__super-tn.text--uppercase Террасы
+                          .projects__item-tag.text__super-tn.text--uppercase Входные группы
+                .projects__slider-controls
+                  .projects-controls-container
+                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-3-prev="")
+                  .projects-controls-container
+                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-3-next="")        
+        
         .landscaping-contacts
           .contacts-cards__ttl.title-h2(data-aos="fade-up") Профессионалы Green Land
           .contacts-cards

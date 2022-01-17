@@ -5,7 +5,7 @@
   right: 0;
   left: 0;
   bottom: 0;
-  background: rgba(15, 44, 45, 0.67);
+  // background: rgba(15, 44, 45, 0.67);
 
   display: flex;
   align-items: center;
@@ -17,12 +17,27 @@
 
   &.modal-active {
     opacity: 1;
-    transform: none;
+    // transform: none;
+
+    .modal-ask__background, .modal-ask__container, .modal-register__container {
+      transform: translateX(100vw);
+    }
   }
 }
 
 .modal-ask {
   $comp: &;
+
+  &__background {
+    background: rgba(15, 44, 45, 0.67);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 
   &--default {
     position: relative;
@@ -34,15 +49,26 @@
     transform: none;
     background: none;
 
+    @media (max-width: ($breakpoint - 1px)) {
+      position: fixed;
+    }
+
     #{$comp}__container {
       @media (min-width: $breakpoint) {
         position: static;
         // border-radius: 0 20px;
       }
+      @media (max-width: ($breakpoint - 1px)) {
+        top: 56px;
+      }
     }
 
     .fancybox-button.fancybox-close-small {
       top: 0;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        top: 10px;
+      }
     }
   }
 }
@@ -51,6 +77,7 @@
   display: flex;
   position: absolute;
   z-index: 100;
+  transition: .5s;
 
   @media (max-width: ($breakpoint - 1px)) {
     // top: 0;

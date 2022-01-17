@@ -779,6 +779,38 @@
 
     .landscaping-title--mobile {
       margin-bottom: 20px;
+      text-indent: calc(#{$col-width-m} / 3 * 2);
+
+      span::before {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 10px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        z-index: -1;
+      }
+      .highlight-1 {
+        position: relative;
+  
+        &::before {
+          background-image: url('assets/images/new-highlights/full-construction-high-1.png');
+          bottom: -3px;
+          left: 0;
+        }
+      }
+      .highlight-2 {
+        position: relative;
+        display: inline-block;
+        text-indent: initial;
+  
+        &::before {
+          background-image: url('assets/images/new-highlights/full-construction-high-2.png');
+          bottom: 0;
+          left: 0;
+        }
+      }
     }
 
     img {
@@ -802,11 +834,44 @@
       margin-bottom: 120px;
       margin-right: calc(#{$col-part-d} * -2);
       white-space: nowrap;
+      text-indent: calc(#{$col-part-d});
 
       @media (max-width: ($breakpoint - 1px)) {
         margin-bottom: 20px;
         margin-right: 0;
         white-space: unset;
+        text-indent: calc(#{$col-width-m} / 3 * 2);
+      }
+    }
+
+    span::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 10px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      z-index: -1;
+    }
+
+    .highlight-1 {
+      position: relative;
+
+      &::before {
+        background-image: url('assets/images/new-highlights/full-construction-high-1.png');
+        bottom: 5px;
+        left: 0;
+      }
+    }
+
+    .highlight-2 {
+      position: relative;
+
+      &::before {
+        background-image: url('assets/images/new-highlights/full-construction-high-2.png');
+        bottom: 5px;
+        left: 0;
       }
     }
 
@@ -834,9 +899,52 @@
 
     .title-h3 {
       margin-top: 85px;
+      text-indent: calc(#{$col-part-d});
 
       @media (max-width: ($breakpoint - 1px)) {
         margin-top: 40px;
+        text-indent: calc(#{$col-width-m} / 3 * 2);
+      }
+    }
+
+    span::before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 10px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+      z-index: -1;
+    }
+
+    .highlight-1 {
+      position: relative;
+
+      &::before {
+        background-image: url('assets/images/new-highlights/full-construction-high-3.png');
+        bottom: 5px;
+        left: 0;
+
+        @media (max-width: ($breakpoint - 1px)) {
+          display: none;
+        }
+      }
+    }
+
+    .highlight-2 {
+      position: relative;
+      display: inline-block;
+      text-indent: initial;
+
+      &::before {
+        background-image: url('assets/images/new-highlights/full-construction-high-4.png');
+        bottom: 5px;
+        left: 0;
+
+        @media (max-width: ($breakpoint - 1px)) {
+          display: none;
+        }
       }
     }
 
@@ -863,9 +971,9 @@
     width: calc(#{$col-part-d} * 10);
 
     display: flex;
-
+    justify-content: flex-end;
     flex-wrap: wrap;
-    flex-direction: row-reverse;
+    // flex-direction: row-reverse;
 
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
@@ -879,6 +987,7 @@
 
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
+      padding-bottom: 40px;
     }
 
     .title-h4 {
@@ -915,11 +1024,13 @@
 
   &__txt {
     width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
-    @include title-h4;
+    font-size: 24px;
+    line-height: 120%;
 
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-bottom: 40px;
+      font-size: 18px;
     }
   }
   .landscaping-block-white__price {
@@ -1017,6 +1128,15 @@
 
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 160%;
+
+      @media (min-width: $breakpoint) {
+        font-size: 16px;
+      }
     }
   }
   &__ttl {
@@ -1186,6 +1306,38 @@
   &__item:last-child {
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 10px;
+    }
+  }
+}
+
+.ready-projects__container {
+  display: grid;
+  grid-template-areas: 'z';
+
+  .aos-slider-fix {
+    @media (min-width: $breakpoint) {
+      transform: translateX(-75%);
+    }
+  }
+
+  .projects__slider {
+    grid-area: z;
+    opacity: 0;
+    pointer-events: none;
+    transition: .5s;
+
+    .projects__slider-controls {
+      // z-index: -10;
+      display: none;
+    }
+
+    &.is-active {
+      opacity: 1;
+      pointer-events: all;
+
+      .projects__slider-controls {
+        display: flex;
+      }
     }
   }
 }

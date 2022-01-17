@@ -81,6 +81,7 @@
   }
 
   &__top {
+    width: 100%;
     @media (max-width: ($breakpoint - 1px)) {
       display: flex;
       justify-content: space-between;
