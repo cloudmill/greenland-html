@@ -1024,11 +1024,13 @@
 
   &__txt {
     width: calc(#{$col-part-d} * 10 - #{$col-gap-d});
-    @include title-h4;
+    font-size: 24px;
+    line-height: 120%;
 
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
       margin-bottom: 40px;
+      font-size: 18px;
     }
   }
   .landscaping-block-white__price {
@@ -1126,6 +1128,15 @@
 
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 160%;
+
+      @media (min-width: $breakpoint) {
+        font-size: 16px;
+      }
     }
   }
   &__ttl {
@@ -1302,6 +1313,12 @@
 .ready-projects__container {
   display: grid;
   grid-template-areas: 'z';
+
+  .aos-slider-fix {
+    @media (min-width: $breakpoint) {
+      transform: translateX(-75%);
+    }
+  }
 
   .projects__slider {
     grid-area: z;

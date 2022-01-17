@@ -36,7 +36,8 @@ block content
         .type-page-img(data-aos="fade-up")
           h3.type-page-img__ttl.title-h3 Сегодня сложно представить дом без растения в горшке
           .type-page-img__txt.p_large Но, как превратить этот горшок с растением в фитодизайн?
-          img(src="assets/images/type-page-1.jpg", alt="")
+          img.only-desktop(src="assets/images/type-page-1.jpg", alt="")
+          img.only-mobile(src="assets/images/type-page-1-mob.jpg", alt="")
 
         .type-page-block
           .type-page-block__row
@@ -143,7 +144,7 @@ block content
                   .projects-controls-container
                     +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
 
-              .aos-slider-fix.projects__slider.swiper-container(data-projects-slider="")
+              .aos-slider-fix.projects__slider.swiper-container(data-projects-slider-2="")
                 .swiper-wrapper
                   .swiper-slide.projects__slide
                     .projects__item
@@ -204,11 +205,11 @@ block content
                           .projects__item-tag.text__super-tn.text--uppercase Входные группы
                 .projects__slider-controls
                   .projects-controls-container
-                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-2-prev="")
                   .projects-controls-container
-                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-2-next="")
 
-              .aos-slider-fix.projects__slider.swiper-container(data-projects-slider="")
+              .aos-slider-fix.projects__slider.swiper-container(data-projects-slider-3="")
                 .swiper-wrapper
                   .swiper-slide.projects__slide
                     .projects__item
@@ -269,9 +270,9 @@ block content
                           .projects__item-tag.text__super-tn.text--uppercase Входные группы
                 .projects__slider-controls
                   .projects-controls-container
-                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-3-prev="")
                   .projects-controls-container
-                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")        
+                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-3-next="")        
         
         .landscaping-contacts
           .contacts-cards__ttl.title-h2(data-aos="fade-up") Профессионалы Green Land
