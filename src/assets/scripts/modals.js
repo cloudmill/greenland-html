@@ -1,26 +1,26 @@
 // модалки из бокового блока "поиск" и "меню"
 
-$(
-  () => {
-    const aside = $('.aside');
+// $(
+//   () => {
+//     const aside = $('.aside');
 
-    if (aside.length !== 0) {
-      const searchButton = aside.find('.aside__center');
-      const searchModal = $('.search-modal');
+//     if (aside.length !== 0) {
+//       const searchButton = aside.find('.aside__center');
+//       const searchModal = $('.search-modal');
 
-      searchButton.on('click', function () {
-        searchModal.toggleClass('modal-active')
-      })
+//       searchButton.on('click', function () {
+//         searchModal.toggleClass('modal-active')
+//       })
 
-      const menuButton = aside.find('.aside-btn');
-      const menuModal = $('.menu-modal');
+//       const menuButton = aside.find('.aside-btn');
+//       const menuModal = $('.menu-modal');
 
-      menuButton.on('click', function () {
-        menuModal.toggleClass('modal-active')
-      })
-    }
-  }
-)
+//       menuButton.on('click', function () {
+//         menuModal.toggleClass('modal-active')
+//       })
+//     }
+//   }
+// )
 
 // модалки по кнопке "задать вопрос" и консультация озеленение
 

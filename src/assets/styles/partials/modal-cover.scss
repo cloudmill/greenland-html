@@ -159,6 +159,14 @@
     &::after {
       transform: rotate(135deg);
     }
+
+    &:hover {
+      background-color: $green;
+
+      &::after, &::before {
+        background-color: #fff;
+      }
+    }
   }
 
   &-controls {

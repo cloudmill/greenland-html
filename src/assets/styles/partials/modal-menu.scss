@@ -13,7 +13,6 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 
   transform: translateY(-100%);
   transition: .5s;
@@ -22,6 +21,14 @@
     padding: 132px 40px 40px calc(120px + #{$col-width-d});
     transform: translateX(-100%);
     height: 100vh;
+    justify-content: space-between;
+  }
+  @media (max-width: ($breakpoint - 1px)) {
+    overflow-y: scroll;
+    height: 100vh;
+    padding: 65px 0 40px;
+
+    @include scrollbar-hidden;
   }
 
   &.modal-active {
@@ -43,16 +50,25 @@
     @media (min-width: $breakpoint) {
       padding-right: calc(#{$col-width-d});
     }
+
+    .only-mobile {
+      @media (min-width: $breakpoint) {
+        display: none;
+      }
+    }
+    .only-desktop {
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
+    }
   }
   &__col:nth-child(1) {
-    
-
+  
     @media (min-width: $breakpoint) {
       width: calc(#{$col-part-d} * 4);
     }
   }
   &__col:nth-child(2) {
-    
 
     @media (min-width: $breakpoint) {
       width: calc(#{$col-part-d} * 3 + #{$col-gap-d});
@@ -60,17 +76,47 @@
   }
   &__col:nth-child(3) {
     
+    margin-bottom: 30px;
 
     @media (min-width: $breakpoint) {
       width: calc(#{$col-part-d} * 4);
+      margin-bottom: 0;
     }
 
-    .menu-modal__item {
-      margin-bottom: 20px;
+    .menu-modal__spoiler {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: 5px;
+        border-bottom: 1px solid $green;
+
+        .menu-modal__ttl {
+          padding: 0;
+        }
+      }
+    }
+
+    .menu-modal__item:not(:last-child) {
+      @media (min-width: $breakpoint) {
+        margin-bottom: 20px;
+      }
+    }
+
+    .menu-modal__ttl {
+      @media (max-width: ($breakpoint - 1px)) {
+        padding: 10px;
+      }
     }
 
     .menu-modal__ttl:not(:first-child) {
-      margin: 40px 0 0;
+      margin: 0;
+
+      @media (min-width: $breakpoint) {
+        margin: 40px 0 0;
+      }
+    }
+    .menu-modal__ttl:nth-child(2) {
+      @media (min-width: $breakpoint) {
+        margin: 0;
+      }
     }
   }
   &__col:nth-child(4) {
@@ -80,15 +126,30 @@
       padding-right: 0;
     }
 
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0 10px;
+    }
+
     .footer__phone {
       color: $black;
       font-size: 40px;
+      white-space: nowrap;
       @media (max-width: ($breakpoint - 1px)) {
         font-size: 25px;
       }
       
       &:hover {
         color: $green;
+      }
+    }
+    .footer__phone-caption-schedule {
+      @media (max-width: ($breakpoint - 1px)) {
+        font-size: 10px;
+
+        &:first-child {
+          border-right: 1px solid $black;
+          padding-right: 20px;
+        }
       }
     }
     .footer__text {
@@ -103,17 +164,80 @@
     }
   }
 
-  &__ttl {
-    margin-bottom: 20px;
+  &__spoiler {
+    display: flex;
+    flex-direction: column;
 
+    &.active {
+      .menu-modal__spoiler-btn {
+        background-color: #fff;
+        // border-bottom: 1px solid transparent;
+        img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &-profile {
+      .menu-modal__spoiler-btn {
+        border-top: none;
+      }
+      .menu-modal__spoiler-btn, .menu-modal__spoiler-drop {
+        background-color: $green-extra-lighten;
+      }
+      &.active {
+        .menu-modal__spoiler-btn {
+          background-color: $green-extra-lighten;
+        }
+      } 
+    }
+
+    &-btn {
+      display: flex;
+      justify-content: space-between;
+      transition: .5s;
+
+      @media (min-width: $breakpoint) {
+        margin-bottom: 40px;
+      }
+      @media (max-width: ($breakpoint - 1px)) {
+        border-top: 1px solid $green;
+        padding: 15px 10px;
+      }
+
+      img {
+        transition: .5s;
+        @media (min-width: $breakpoint) {
+          display: none;
+        }
+      }
+    }
+    &-drop {
+      padding-bottom: 60px;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        background-color: #fff;
+        padding: 0 30px 15px;
+        display: none;
+      }
+    }
+    &-inner {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__ttl {
     font-weight: 600;
     font-size: 18px;
     line-height: 130%;
     text-transform: uppercase;
     transition: color $transition;
 
-    &:hover {
-      color: $green;
+    @media (min-width: $breakpoint) {
+      &:hover {
+        color: $green;
+      }
     }
 
     &:not(:first-child) {
@@ -121,13 +245,23 @@
     }
 
     @media (max-width: ($breakpoint - 1px)) {
+      display: block;
       font-size: 12px;
       margin: 0;
-      padding: 15px 10px;
-      border: 1px solid $green;
+
+      display: flex;
+      align-items: center;
 
       &:not(:first-child) {
         margin-top: 0;
+      }
+
+      svg {
+        margin-right: 17px;
+
+        path, & circle, & line {
+          stroke: $black;
+        }
       }
     }
   }
@@ -143,6 +277,15 @@
 
     &:not(:first-child) {
       margin-top: 20px;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 8px;
+      }
+    }
+
+    @media (max-width: ($breakpoint - 1px)) {
+      font-size: 14px;
+      line-height: 160%;
     }
   }
 
@@ -152,6 +295,12 @@
 
     padding-right: 230px;
 
+    @media (max-width: ($breakpoint - 1px)) {
+      flex-direction: column-reverse;
+      padding-right: 0;
+      padding-left: 10px;
+    }
+
     &-item {
       font-size: 14px;
       line-height: 130%;
@@ -160,6 +309,16 @@
 
       a {
         color: $green;
+      }
+
+      @media (max-width: ($breakpoint - 1px)) {
+        font-size: 12px;
+      }
+
+      &:last-child {
+        @media (max-width: ($breakpoint - 1px)) {
+          margin-bottom: 6px;
+        }
       }
     }
   }

@@ -1,3 +1,6 @@
+import {mediaQuery} from './mediaQueries';
+const { event } = require("jquery");
+
 {
   $(() => {
     $('.spoiler__button').on('click', event => {
@@ -25,3 +28,17 @@
     })
   })
 }
+
+// спойлер в мобильном меню
+
+$(() => {
+
+  if (!mediaQuery.matches) {
+
+    $('.menu-modal__spoiler-btn').on('click', event => {
+      const currentSpoiler = $(event.target).closest('.menu-modal__spoiler');
+      currentSpoiler.toggleClass('active');
+      currentSpoiler.find('.menu-modal__spoiler-drop').slideToggle(500);
+    })
+  }
+})

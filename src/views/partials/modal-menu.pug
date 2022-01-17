@@ -1,34 +1,112 @@
-.menu-modal
+.menu-modal.modal-active
   .menu-modal__wrapper
     .menu-modal__col
-      a.menu-modal__ttl(href="") Работа с нами
 
-      a.menu-modal__item(href="") Условия работы с дизайнерами
-      a.menu-modal__item(href="") Условия работы для объектов
-      a.menu-modal__item(href="") Условия работы для дистрибьютеров и оптовых покупателей
+      .menu-modal__spoiler.menu-modal__spoiler-profile.only-mobile
+        .menu-modal__spoiler-btn
+          .menu-modal__ttl
+            +user-svg
+            |Игорь Денисов
+          img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+        .menu-modal__spoiler-drop
+          .menu-modal__spoiler-inner
+            -
+              let points1 = [
+                'Активные заказы',
+                'Выполненые заказы',
+                'Популярные вопросы',
+                'Изменить пароль',
+                'Популярные вопросы',
+                'выйти',
+              ]
+            each i in points1
+              a.menu-modal__item(href="") #{i}
 
-      a.menu-modal__ttl(href="") О компании
+      .menu-modal__spoiler.only-mobile
+        .menu-modal__spoiler-btn
+          .menu-modal__ttl
+            +settings-svg
+            |Сравнение
 
-      a.menu-modal__item(href="") История
-      a.menu-modal__item(href="") Бренды
+      .menu-modal__spoiler.only-mobile
+        .menu-modal__spoiler-btn
+          .menu-modal__ttl каталог продукции
+          img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+        .menu-modal__spoiler-drop
+          .menu-modal__spoiler-inner
+            -
+              let points2 = [
+                'Цветочные горшки и кашпо',
+                'Вазоны',
+                'Cадовый декор',
+                'Искусственные растения',
+                'Дизайнерское озеленение',
+                'Мебель и свет',
+                'Грунт и керамзит',
+                'Аксессуары',
+              ]
+            each i in points2
+              a.menu-modal__item(href="") #{i}
+
+      .menu-modal__spoiler
+        .menu-modal__spoiler-btn
+          a.menu-modal__ttl.only-desktop(href="") Работа с нами
+          .menu-modal__ttl.only-mobile Работа с нами
+          img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+        .menu-modal__spoiler-drop
+          .menu-modal__spoiler-inner
+            -
+              let points3 = [
+                'Условия работы с дизайнерами',
+                'Условия работы для объектов',
+                'Условия работы для дистрибьютеров и оптовых покупателей',
+              ]
+            each i in points3
+              a.menu-modal__item(href="") #{i}
+
+      .menu-modal__spoiler
+        .menu-modal__spoiler-btn
+          a.menu-modal__ttl.only-desktop(href="") О компании
+          .menu-modal__ttl.only-mobile О компании
+          img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+        .menu-modal__spoiler-drop
+          .menu-modal__spoiler-inner
+            a.menu-modal__item(href="") История
+            a.menu-modal__item(href="") Бренды
 
     .menu-modal__col
-      a.menu-modal__ttl(href="") озеленение
+      .menu-modal__spoiler
+        .menu-modal__spoiler-btn
+          a.menu-modal__ttl.only-desktop(href="") озеленение
+          .menu-modal__ttl.only-mobile услуги по озеленению
+          img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+        .menu-modal__spoiler-drop
+          .menu-modal__spoiler-inner
+            a.menu-modal__item(href="") Готовые решения
+            a.menu-modal__item(href="") Абонементы на уход за растениями
+            a.menu-modal__item(href="") Озеленение под ключ
+            a.menu-modal__item(href="") Фитодизайн. Озеленение интерьеров
 
-      a.menu-modal__item(href="") Готовые решения
-      a.menu-modal__item(href="") Абонементы на уход за растениями
-      a.menu-modal__item(href="") Озеленение под ключ
-      a.menu-modal__item(href="") Фитодизайн. Озеленение интерьеров
-
-      a.menu-modal__ttl(href="") Клиентам
-      a.menu-modal__item(href="") Возврат денеженых средств
-      a.menu-modal__item(href="") Доставка
-      a.menu-modal__item(href="") Оплата
+      .menu-modal__spoiler
+        .menu-modal__spoiler-btn
+          a.menu-modal__ttl.only-desktop(href="") Клиентам
+          .menu-modal__ttl.only-mobile клиентам
+          img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+        .menu-modal__spoiler-drop
+          .menu-modal__spoiler-inner
+            a.menu-modal__item(href="") Возврат денеженых средств
+            a.menu-modal__item(href="") Доставка
+            a.menu-modal__item(href="") Оплата
 
     .menu-modal__col
-      a.menu-modal__ttl(href="") Акции
-      
-      a.menu-modal__item(href="") Предстоящие акции
+      .menu-modal__spoiler
+        .menu-modal__spoiler-btn
+          a.menu-modal__ttl.only-desktop(href="") Акции
+          .menu-modal__ttl.only-mobile акции
+          img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+        .menu-modal__spoiler-drop
+          .menu-modal__spoiler-inner
+            a.menu-modal__item(href="") Предстоящие акции
 
       a.menu-modal__ttl(href="") Проекты
       a.menu-modal__ttl(href="") Новости

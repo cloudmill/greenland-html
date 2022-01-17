@@ -5,6 +5,8 @@ $(window).on('load', () => {
 
   const BREAKPOINT = 1280;
 
+  
+
   const $projectsSlider2 = document.querySelector('[data-projects-slider-2]');
 
   const projectsSlider2 = new Swiper($projectsSlider2, {
