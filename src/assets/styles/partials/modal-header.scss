@@ -1,0 +1,12 @@
+.work-modal {
+  position: relative;
+
+  &__ttl {
+    position: absolute;
+    top: 40px;
+    transform: rotate(90deg);
+
+    font-size: 38px;
+    line-height: 110%;
+  }
+}

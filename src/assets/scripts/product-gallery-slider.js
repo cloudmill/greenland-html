@@ -5,7 +5,7 @@ $(window).on('load', () => {
 
   const BREAKPOINT = 1280;
 
-  var galleryColumn = new Swiper('.product-card-gallery__column', {
+  var galleryColumn = new Swiper('[data-product-photo-column]', {
     direction: 'vertical',
     slidesPerView: 4,
     freeMode: true,
