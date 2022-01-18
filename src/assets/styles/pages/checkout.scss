@@ -142,6 +142,7 @@
 
     &::placeholder {
       opacity: 1;
+      color: $black;
     }
 
     &.parsley-error {
