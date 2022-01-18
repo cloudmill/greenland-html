@@ -206,6 +206,7 @@
       }
 
       img {
+        width: 13px;
         transition: .5s;
         @media (min-width: $breakpoint) {
           display: none;
