@@ -39,6 +39,15 @@ import LocomotiveScroll from 'locomotive-scroll';
   })
 }
 
+// возвращение транзишна после загрузки страницы
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log(123);
+  const body = document.querySelector('.no-transition');
+  body.classList.remove('no-transition');
+  console.log('class remove');
+})
+
 
 // модалка с первого экрана главной
 

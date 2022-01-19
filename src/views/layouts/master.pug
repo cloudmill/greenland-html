@@ -70,7 +70,7 @@ html(lang='ru')
     block pageName
       - var pageName = "main"
 
-  body(class="page-" + pageName)
+  body.no-transition(class="page-" + pageName)
 
     block grid-test
       +grid-test
