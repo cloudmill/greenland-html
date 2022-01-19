@@ -84,7 +84,7 @@
       align-items: center;
       width: calc(#{$col-part-m});
       @media (max-width: ($breakpoint - 1px)) {
-        width: auto;
+        // width: auto;
         justify-content: flex-end;
       }
 
@@ -93,7 +93,9 @@
         margin-left: calc(#{$col-part-m} / 2 - 50px);
         @media (max-width: ($breakpoint - 1px)) {
           margin-left: 14px;
-          width: auto;
+          // width: auto;
+          width: 50%;
+          text-align: right;
         }
 
         &:first-child {
