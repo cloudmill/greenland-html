@@ -146,9 +146,15 @@
   }
 
   &__img {
-    &.only-mobile {
-      border-radius: 0px 20px;
-      height: 240px;
+    border-radius: 0px 20px;
+    // &.only-mobile {
+    //   border-radius: 0px 20px;
+    //   height: 240px;
+    //   object-fit: cover;
+    // }
+
+    @media (max-width: ($breakpoint - 1px)) {
+      height: 270px;
       object-fit: cover;
     }
   }

@@ -84,7 +84,6 @@ button.close {
     display: none;
   }
 }
-
 .only-desktop {
   @media (max-width: ($breakpoint - 1px)) {
     display: none;

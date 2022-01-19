@@ -22,6 +22,49 @@ $(
   }
 )
 
+// модалки из хедера
+
+$(
+  () => {
+    const headerMenu = $('.header__menu');
+
+    if (headerMenu.length !== 0) {
+      const closeBtn = $('.header-modal__close');
+      const body = $('.page-main');
+
+      const workBtn = $('[data-work-btn]');
+      const workModal = $('[data-work-modal]');
+
+      workBtn.on('click', () => {
+        workModal.addClass('active');
+        body.addClass('hidden');
+      });
+      
+      const lanscapingBtn = $('[data-landscaping-btn]');
+      const lanscapingModal = $('[data-landscaping-modal]');
+
+      lanscapingBtn.on('click', () => {
+        lanscapingModal.addClass('active');
+        body.addClass('hidden');
+      });
+
+      const catalogBtn = $('[data-catalog-btn]');
+      const catalogModal = $('[data-catalog-modal]');
+
+      catalogBtn.on('click', () => {
+        catalogModal.addClass('active');
+        body.addClass('hidden');
+      });
+
+      closeBtn.on('click', () => {
+        // console.log(123);
+        $('.header-modal').removeClass('active');
+        body.removeClass('hidden');
+      })
+    }
+  }
+)
+
 // модалки по кнопке "задать вопрос" и консультация озеленение
 
 $(() => {

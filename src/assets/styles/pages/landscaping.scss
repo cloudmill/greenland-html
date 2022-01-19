@@ -5,6 +5,18 @@
 }
 
 .landscaping-blockquote {
+
+  .only-mobile {
+    @media (min-width: $breakpoint) {
+      display: none;
+    }
+  }
+  .only-desktop {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+  }
+
   .mission__main {
     flex-direction: column;
     justify-content: center;
@@ -27,6 +39,39 @@
       font-size: 20px;
     }
   }
+
+  span {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      z-index: -1;
+      content: '';
+      width: 100%;
+      height: 10px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        display: none;
+      }
+    }
+  }
+  .highlight-1::before {
+    background-image: url('assets/images/new-highlights/landscaping-high-1.png');
+    left: -3px;
+    bottom: 2px;
+  }
+  .highlight-2 {
+    display: inline-block;
+
+    &::before {
+      background-image: url('assets/images/new-highlights/landscaping-high-2.png');
+      left: 0;
+      bottom: 5px;
+    }
+  }
 }
 
 .landscaping-cards {
@@ -39,6 +84,8 @@
 
   @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
+  }
+  @media (max-width: ($breakpoint-m - 1px)) {
     flex-direction: column;
   }
 
@@ -114,9 +161,8 @@
     position: relative;
 
     @media (max-width: ($breakpoint - 1px)) {
-      width: 100%;
+      
       margin-top: 20px;
-
 
       &:nth-child(2), &:nth-child(4) {
 
@@ -130,6 +176,9 @@
           bottom: 90px;
         }
       }
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
+      width: 100%;
     }
 
     &__count {
@@ -604,7 +653,7 @@
   display: flex;
   justify-content: space-between;
   
-  @media (max-width: ($breakpoint - 1px)) {
+  @media (max-width: ($breakpoint-m - 1px)) {
     flex-direction: column;
   }
 
@@ -614,13 +663,16 @@
     position: relative;
 
     @media (max-width: ($breakpoint - 1px)) {
+      width: calc(50% - 10px);
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
       width: 100%;
     }
 
     img {
       width: calc(#{$col-part-d} * 6 - #{$col-gap-d});
 
-      @media (max-width: ($breakpoint - 1px)) {
+      @media (max-width: ($breakpoint-m - 1px)) {
         width: calc(#{$col-part-m} * 3 - #{$col-gap-m});
       }
     }
@@ -636,7 +688,7 @@
       right: calc(#{$col-part-d} * 2);
       bottom: 0;
 
-      @media (max-width: ($breakpoint - 1px)) {
+      @media (max-width: ($breakpoint-m - 1px)) {
         top: 40px;
         right: calc(#{$col-part-m});
       }
@@ -669,8 +721,11 @@
       z-index: -1;
 
       @media (max-width: ($breakpoint - 1px)) {
-        left: calc(#{$col-part-m});
+        
         bottom: 40px;
+      }
+      @media (max-width: ($breakpoint-m - 1px)) {
+        left: calc(#{$col-part-m});
       }
     }
   }
