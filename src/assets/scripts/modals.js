@@ -30,12 +30,14 @@ $(
 
     if (headerMenu.length !== 0) {
       const closeBtn = $('.header-modal__close');
+      const body = $('.page-main');
 
       const workBtn = $('[data-work-btn]');
       const workModal = $('[data-work-modal]');
 
       workBtn.on('click', () => {
         workModal.addClass('active');
+        body.addClass('hidden');
       });
       
       const lanscapingBtn = $('[data-landscaping-btn]');
@@ -43,6 +45,7 @@ $(
 
       lanscapingBtn.on('click', () => {
         lanscapingModal.addClass('active');
+        body.addClass('hidden');
       });
 
       const catalogBtn = $('[data-catalog-btn]');
@@ -50,11 +53,13 @@ $(
 
       catalogBtn.on('click', () => {
         catalogModal.addClass('active');
+        body.addClass('hidden');
       });
 
       closeBtn.on('click', () => {
         // console.log(123);
         $('.header-modal').removeClass('active');
+        body.removeClass('hidden');
       })
     }
   }
