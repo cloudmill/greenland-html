@@ -1,0 +1,122 @@
+mixin work-modal
+  .header-modal(data-work-modal="")
+    .header-modal__ttl работа с нами
+    .header-modal__wrapper
+      -
+        const items = [
+          {
+            pic: 'header-modal-1.jpg',
+            ttl: 'Условия работы с дизайнерами',
+          },
+          {
+            pic: 'header-modal-2.jpg',
+            ttl: 'Условия работы для объектов',
+          },
+          {
+            pic: 'header-modal-3.jpg',
+            ttl: 'Условия работы для дистрибьютеров и оптовых покупателей',
+          },
+        ]
+
+      each i in items
+        .header-modal__row
+          img.header-modal__img(src=`assets/images/${i.pic}`, alt="")
+          a.header-modal__row-ttl(href="")
+            |#{i.ttl}
+            img(src="assets/images/icons/lanscape-arrow.svg", alt="")
+
+    .header-modal__close
+
+mixin landscaping-modal
+  .header-modal(data-landscaping-modal="")
+    .header-modal__ttl.landscaping-modal-ttl Услуги по озеленению
+    .header-modal__wrapper
+      -
+        const items = [
+          {
+            pic: 'header-modal-4.jpg',
+            ttl: 'озеленение',
+          },
+          {
+            pic: 'header-modal-5.jpg',
+            ttl: 'Готовые решения',
+          },
+          {
+            pic: 'header-modal-6.jpg',
+            ttl: 'Абонементы на уход за растениями',
+          },
+          {
+            pic: 'header-modal-7.jpg',
+            ttl: 'Озеленение под ключ',
+          },
+          {
+            pic: 'header-modal-8.jpg',
+            ttl: 'Фитодизайн. Озеленение интерьеров',
+          },
+        ]
+
+      each i in items
+        .header-modal__row
+          img.header-modal__img(src=`assets/images/${i.pic}`, alt="")
+          a.header-modal__row-ttl(href="")
+            |#{i.ttl}
+            img(src="assets/images/icons/lanscape-arrow.svg", alt="")
+
+
+    .header-modal__close
+
+mixin catalog-modal
+  .header-modal(data-catalog-modal="")
+    .header-modal__ttl.catalog-modal-ttl каталог продукции
+    .header-modal__wrapper.catalog-modal-table
+      -
+        const items = [
+          {
+            ttl: 'Вазоны',
+            img: 'header-catalog-2.png',
+            full: 'header-catalog-2-full.jpg',
+          },
+          {
+            ttl: 'Cадовый декор',
+            img: 'header-catalog-3.png',
+            full: 'header-catalog-3-full.jpg',
+          },
+          {
+            ttl: 'Искусственные растения',
+            img: 'header-catalog-4.png',
+            full: 'header-catalog-4-full.jpg',
+          },
+          {
+            ttl: 'Дизайнерское озеленение',
+            img: 'header-catalog-5.png',
+            full: 'header-catalog-5-full.jpg',
+          },
+          {
+            ttl: 'Мебель и свет',
+            img: 'header-catalog-6.png',
+            full: 'header-catalog-6-full.jpg',
+          },
+          {
+            ttl: 'Грунт и керамзит',
+            img: 'header-catalog-7.png',
+            full: 'header-catalog-7-full.jpg',
+          },
+          {
+            ttl: 'Аксессуары',
+            img: 'header-catalog-8.png',
+            full: 'header-catalog-8-full.jpg',
+          },
+        ]
+
+      a.catalog-modal-cell.first(href="")
+        .catalog-modal-cell__ttl Цветочные горшки и кашпо
+        img.active(src=`assets/images/header-catalog-1.png`, alt="")
+        img.back(src=`assets/images/header-catalog-1-full.jpg`, alt="")
+
+      each i in items
+        a.catalog-modal-cell(href="")
+          .catalog-modal-cell__ttl #{i.ttl}
+          img.active(src=`assets/images/${i.img}`, alt="")
+          img.back(src=`assets/images/${i.full}`, alt="")
+
+    .header-modal__close

@@ -8,6 +8,8 @@ include ../mixins/_mixins.pug
 
 include ../components/grids
 
+include ../partials/modal-header
+
 doctype html
 html(lang='ru')
   head
@@ -84,6 +86,10 @@ html(lang='ru')
     block header
 
     include ../partials/modal-cover.pug
+
+    +work-modal
+    +landscaping-modal
+    +catalog-modal
 
     //- block content
     main.main

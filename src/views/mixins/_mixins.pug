@@ -20,11 +20,20 @@ mixin arrowBtn
 //- menu
 mixin headerMenu(items)
   ul.header__menu
-    each item in items
-      li.header__menu-item
-        button.header__btn
-          span.text__md.text--uppercase.header__btn-title= item.title
-          span.text__sm.header__btn-caption= item.caption
+    li.header__menu-item(data-catalog-btn="")
+      button.header__btn
+        span.text__md.text--uppercase.header__btn-title каталог продукции
+        span.text__sm.header__btn-caption Прямые поставки из Европы
+
+    li.header__menu-item(data-work-btn="")
+      button.header__btn
+        span.text__md.text--uppercase.header__btn-title работа с нами
+        span.text__sm.header__btn-caption Предлагаем особые условия
+
+    li.header__menu-item(data-landscaping-btn="")
+      button.header__btn
+        span.text__md.text--uppercase.header__btn-title Услуги по озеленению
+        span.text__sm.header__btn-caption Эксперты в дизайнерском озеленении
 
 mixin menuBurger
   svg(class=attributes.class width="35" height="15" viewBox="0 0 35 15" fill="none" xmlns="http://www.w3.org/2000/svg")
@@ -143,7 +152,7 @@ mixin header(className)
           a.header__logo(href="/")
             +logo
         .col.col__xl-8
-          +headerMenu(menu)
+          +headerMenu
         .col.col__xl-4
           .header__links
             .header__links-item
