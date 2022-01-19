@@ -1,5 +1,18 @@
 .blog-filter {
 
+  &--sm {
+    ul {
+      @media (min-width: $breakpoint) {
+        margin-bottom: -10px;
+      }
+      li {
+        @media (min-width: $breakpoint) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+
   &.margin {
     margin: 20px 0 -20px;
 
