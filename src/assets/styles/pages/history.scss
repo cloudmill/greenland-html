@@ -15,7 +15,9 @@
     width: 1135px;
     margin-bottom: 80px;
 
-    white-space: nowrap;
+    @media (min-width: $breakpoint) {
+      white-space: nowrap;
+    }
 
     @include title-h3;
     text-transform: uppercase;
@@ -84,10 +86,14 @@
   &__item {
     // width: calc(#{$col-part-d} * 7 - #{$col-gap-d});
     &:nth-child(3) {
-      width: calc(#{$col-part-d} * 7);
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 7);
+      }
     }
     &:nth-child(4) {
-      width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+      @media (min-width: $breakpoint) {
+        width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+      }
     }
 
     font-size: 20px;
