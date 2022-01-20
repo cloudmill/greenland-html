@@ -1,5 +1,6 @@
 import fragment from './shaders/fragment.glsl';
 import vertex from './shaders/vertex.glsl'
+import throttle from '../throttle';
 
 import {GyroNorm} from './gyronorm';
 
@@ -207,15 +208,18 @@ export default class Sketch {
 
   mouseMove() {
   	let that = this;
-  	document.addEventListener('mousemove', function(e) {
+    const section = document.querySelector('.section')
+    const optimizatedMouseHandler = throttle(mouseHandler, 13)
+
+    function mouseHandler(e) {
       let halfX = that.windowWidth/2;
       let halfY = that.windowHeight/2;
 
-  		that.mouseTargetX = (halfX - e.clientX)/halfX;
+      that.mouseTargetX = (halfX - e.clientX)/halfX;
   		that.mouseTargetY = (halfY - e.clientY)/halfY;
+    }
 
-      
-  	});
+  	section.addEventListener('mousemove', optimizatedMouseHandler);
   }
 
 
