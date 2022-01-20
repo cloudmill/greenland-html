@@ -306,4 +306,4 @@ function clamp(number, lower, upper) {
   }
   return number;
 }
-new Sketch();
+// new Sketch();
