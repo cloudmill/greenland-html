@@ -5,18 +5,42 @@ $(
     const aside = $('.aside');
 
     if (aside.length !== 0) {
+      const body = $('.page-main');
+
       const searchButton = aside.find('.aside__center');
       const searchModal = $('.search-modal');
-
-      searchButton.on('click', function () {
-        searchModal.toggleClass('modal-active')
-      })
 
       const menuButton = aside.find('.aside-btn');
       const menuModal = $('.menu-modal');
 
+      searchButton.on('click', function () {
+        searchModal.toggleClass('modal-active');
+        menuModal.removeClass('modal-active');
+        body.addClass('hidden');
+      })
+
       menuButton.on('click', function () {
-        menuModal.toggleClass('modal-active')
+        menuModal.toggleClass('modal-active');
+        searchModal.removeClass('modal-active');
+        body.addClass('hidden');
+      })
+
+      $(window).on('click', (event) => {
+        if (
+          menuModal.hasClass('modal-active') &&
+          $(event.target).closest('.menu-modal').length === 0 && 
+          $(event.target).closest('.aside-btn').length === 0
+        ) {
+
+        }
+        if (
+          searchModal.hasClass('modal-active') && 
+          $(event.target).closest('.search-modal').length === 0 && 
+          $(event.target).closest('.aside__center').length === 0
+        ) {
+          searchModal.removeClass('modal-active');
+          body.removeClass('hidden');
+        }
       })
     }
   }
