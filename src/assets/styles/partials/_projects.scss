@@ -160,8 +160,6 @@
     }
   }
 
-
-
   &__slider {
     // max-width: 37.5%;
     // max-width: 596px;
@@ -258,8 +256,6 @@
     }
 
     &-img {
-      display: block;
-
       position: absolute;
       top: 0;
       left: 0;
@@ -268,17 +264,22 @@
 
       height: 100%;
       width: 100%;
+      display: block;
 
       object-fit: cover;
-
-      opacity: 0;
-      z-index: 1;
-
       @include transition;
+    }
 
-      &.is-active {
-        opacity: 1;
-        z-index: 2;
+    &-bullets {
+      --pad: 20px;
+      position: absolute;
+      z-index: 1;
+      top: var(--pad);
+      right: var(--pad);
+
+      display: none;
+      @media (min-width: $breakpoint) {
+        display: block;
       }
     }
 
@@ -298,6 +299,7 @@
 
       &-wrapper {
         position: relative;
+        z-index: 0;
 
         &::before {
           content: '';

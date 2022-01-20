@@ -22,7 +22,7 @@ block content
 
         +catalog-filters
 
-        .category-table
+        .category-table(data-catalog='')
           .category-row(data-aos="fade-up")
             - for (i = 0; i < 5; i++)
               +catalog-card(images=["assets/images/catalog-1.png", "https://via.placeholder.com/600/771796", "https://via.placeholder.com/150/92c952", "https://via.placeholder.com/150/1fe46f"])
@@ -34,7 +34,7 @@ block content
               +catalog-card(images=["assets/images/catalog-1.png", "https://via.placeholder.com/600/771796"])
           .category-row(data-aos="fade-up")
             - for (i = 0; i < 5; i++)
-              +catalog-card
+              +catalog-card(images = [])
 
         include ../partials/pagination
 

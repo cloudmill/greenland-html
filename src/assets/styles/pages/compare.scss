@@ -36,11 +36,21 @@
 
   &__cell {
     padding: 17px 20px;
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 0;
+    }
     border-top: 1px solid $green-extra-lighten;
 
     @media (max-width: ($breakpoint - 1px)) {
+      border-top: none;
       font-size: 12px;
       line-height: 120%;
+    }
+
+    &:not(:first-child) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 20px;
+      }
     }
   }
 
@@ -109,6 +119,10 @@
 
 .compare-table__list {
   margin: 0;
+  @media (max-width: ($breakpoint - 1px)) {
+    padding: 20px 10px;
+    border-top: 1px solid $green-extra-lighten;
+  }
 }
 
 .compare-table__col.compare-col-fixed {
