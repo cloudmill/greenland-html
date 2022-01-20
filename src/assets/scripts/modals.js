@@ -13,6 +13,8 @@ $(
       const menuButton = aside.find('.aside-btn');
       const menuModal = $('.menu-modal');
 
+      // открытие-закрытие модалки, закрытие другой и блок скролла
+
       searchButton.on('click', function () {
         searchModal.toggleClass('modal-active');
         menuModal.removeClass('modal-active');
@@ -26,13 +28,20 @@ $(
       })
 
       $(window).on('click', (event) => {
+
+        // если меню открыто, клик не по меню и не по кнопке - закрыть
+
         if (
           menuModal.hasClass('modal-active') &&
           $(event.target).closest('.menu-modal').length === 0 && 
           $(event.target).closest('.aside-btn').length === 0
         ) {
-
+          menuModal.removeClass('modal-active');
+          body.removeClass('hidden');
         }
+
+        // если поиск открыт и клик не по модалке и не по поиску - закрыть
+
         if (
           searchModal.hasClass('modal-active') && 
           $(event.target).closest('.search-modal').length === 0 && 
@@ -40,6 +49,15 @@ $(
         ) {
           searchModal.removeClass('modal-active');
           body.removeClass('hidden');
+        }
+
+        if (
+          (!menuModal.hasClass('modal-active') && !searchModal.hasClass('modal-active'))
+          // && 
+          // (!$(event.target).closest('.aside-btn').length || !$(event.target).closest('.aside__center').length)
+        ) {
+          body.removeClass('hidden');
+          console.log(123);
         }
       })
     }
