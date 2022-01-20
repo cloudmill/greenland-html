@@ -122,7 +122,7 @@
       }
     }
   }
-  .projects__slider.swiper-container {
+  .brands-pics-slider {
     margin-top: 120px;
 
     @media (max-width: ($breakpoint - 1px)) {
@@ -133,6 +133,9 @@
       @media (max-width: ($breakpoint - 1px)) {
         display: none;
       }
+    }
+    .projects__item-slider {
+      margin-bottom: 0;
     }
   }
 
