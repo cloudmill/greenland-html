@@ -17,7 +17,7 @@ import "parsleyjs/dist/i18n/ru";
 
 import './assets/scripts/sliders';
 
-import { CatalogCard } from './assets/scripts/catalog-card';
+import './assets/scripts/catalog-card';
 import { CatalogFilters } from './assets/scripts/catalog-filters';
 
 
@@ -26,8 +26,6 @@ import LocomotiveScroll from 'locomotive-scroll';
 
 {
   $(() => {
-    const catalogCard = new CatalogCard()
-
     const filters = document.querySelectorAll('[data-filters]')
     
     filters.forEach(item => {
@@ -37,6 +35,10 @@ import LocomotiveScroll from 'locomotive-scroll';
     const filtersModal = document.querySelector('[data-filters-modal]')
     const catalogFiltersModal = new CatalogFilters(filtersModal, true)
   })
+
+  // $(window).on('load', () => {
+  //   const catalogCard = new CatalogCard()
+  // })
 }
 
 // возвращение транзишна после загрузки страницы

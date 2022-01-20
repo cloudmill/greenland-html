@@ -1,18 +1,22 @@
 mixin catalog-card 
-  .catalog-card(class=attributes.class data-catalog-images=attributes.images)
+  .catalog-card(class=attributes.class)
     .catalog-card__labels
       .catalog-card__labels-item Скидки
       .catalog-card__labels-item Новинки
-    .catalog-card__top
-      ul.catalog-card__list
+    .catalog-card__top(data-catalog-card='')
+      ul.catalog-list
+        each item in attributes.images
+          li.catalog-list__item(data-catalog-image = item)
       .catalog-card__layer
-        .catalog-card__pagination
+        .catalog-pagination
+          - for (x = 0; x < attributes.images.length; x++)
+            .catalog-pagination__item(class=(x === 0 ? 'active' : '' ))
         .catalog-card__buttons
           button.catalog-card__buttons-item
             +cardSettingsBtn
           button.catalog-card__buttons-item
             +cardFavoriteBtn
-      img.catalog-card__main-img(src=`assets/images/catalog-${i + 1}.png`, alt="")
+      img.catalog-card__main-img(src=`assets/images/catalog-${i + 1}.png`, alt="" data-card-image='')
     .catalog-card__container
       .catalog-card__btns
         .catalog-card__btns-item

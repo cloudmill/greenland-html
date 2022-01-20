@@ -8,6 +8,13 @@
   @media (max-width: ($breakpoint - 1px)) {
     margin-bottom: 20px;
   }
+
+  &--md {
+    margin-bottom: 60px;
+    @media (max-width: ($breakpoint - 1px)) {
+      margin-bottom: 20px;
+    }
+  }
 }
 
 .about-tabs {

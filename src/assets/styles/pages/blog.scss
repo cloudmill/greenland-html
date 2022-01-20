@@ -40,6 +40,14 @@
   li {
     margin-bottom: 20px;
   }
+
+  &--default {
+    li {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .blog-card {

@@ -60,8 +60,9 @@
     }
   }
   &__label {
-    margin-bottom: 20px;
-    // padding-bottom: 20px;
+    @media (min-width: $breakpoint) {
+      margin-bottom: 20px;
+    }
 
     position: relative;
 
@@ -69,9 +70,11 @@
       margin-bottom: 0;
     }
 
-    // @media (max-width: ($breakpoint - 1px)) {
-    //   margin-bottom: 5px;
-    // }
+    &:not(:first-child) {
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-top: 20px;
+      }
+    }
   }
   &__checkbox {
     display: flex;
@@ -83,6 +86,7 @@
 
     @media (max-width: ($breakpoint - 1px)) {
       margin-top: 20px;
+      // margin-top: 0;
     } 
 
     input[type="checkbox"] {
@@ -165,6 +169,10 @@
 
     textarea {
       resize: none;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        min-height: 60px;
+      }
 
       &::placeholder {
         opacity: 1;

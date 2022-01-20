@@ -1,50 +1,45 @@
+{
+  $(() => {
+    const catalogParent = $('[data-catalog]')
 
+    if (catalogParent.length) {
+      let currentElem = null
 
-export class CatalogCard {
-  constructor() {
-    this.root = document.querySelectorAll('[data-catalog-images]')
+      catalogParent.on('mouseover', event => {
+        if (currentElem) return;
 
-    if (this.root) {
-      
-      this.init()
+        let target = $(event.target).closest('.catalog-list__item');
+
+        if (!target[0]) return;
+        const img = target.closest('[data-catalog-card]').find('[data-card-image]')
+        const imgSrc = target.data('catalog-image')
+        const paginationItems = target.closest('[data-catalog-card]').find('.catalog-pagination__item')
+
+        img.attr('src', imgSrc)
+        paginationItems.removeClass('active')
+        paginationItems.eq(target.index()).addClass('active')
+        currentElem = target.closest('[data-catalog-card]')
+      })
+
+      catalogParent.on('mouseout', event => {
+        if (!currentElem) return;
+
+        let relatedTarget = $(event.relatedTarget);
+
+        if (relatedTarget.closest('[data-catalog-card]')[0] !== currentElem[0]) {
+          const img = currentElem.find('[data-card-image]')
+          const imgSrc = currentElem.find('.catalog-list__item')
+          const paginationItems = currentElem.find('.catalog-pagination__item')
+
+          paginationItems.removeClass('active')
+          paginationItems.eq(0).addClass('active')
+          img.attr('src', imgSrc.eq(0).data('catalog-image'))
+
+          currentElem = null;
+        } else {
+          currentElem = null;
+        }
+      })
     }
-  }
-
-  init() {
-    this.root.forEach(item => {
-      const images = JSON.parse(item.getAttribute('data-catalog-images'))
-      const overlay = item.querySelector('.catalog-card__list')
-      const mainImage = item.querySelector('.catalog-card__main-img')
-      
-      if (images.length > 1) {
-
-        for (let i = 0; i < images.length; i++) {
-          const paginationItem = document.createElement('div')
-          paginationItem.className = 'catalog-card__pagination-item'
-  
-          const overlayItem = document.createElement('li')
-          overlayItem.className = 'catalog-card__item'
-  
-          overlayItem.onmouseenter = () => {
-            this.imageChanger(mainImage, item, images, i)
-          }
-  
-          item.querySelector('.catalog-card__pagination').append(paginationItem)
-          overlay.append(overlayItem)
-        }
-  
-        item.querySelector('.catalog-card__pagination-item').classList.add('active')
-  
-        overlay.onmouseleave = () => {
-          this.imageChanger(mainImage, item, images)
-        }
-      }
-    })
-  }
-
-  imageChanger(img, item, items, i = 0) {
-    img.setAttribute('src', items[i])
-    item.querySelector('.catalog-card__pagination-item.active').classList.remove('active')
-    item.querySelectorAll('.catalog-card__pagination-item')[i].classList.add('active')
-  }
+  })
 }
