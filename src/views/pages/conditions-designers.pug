@@ -214,21 +214,22 @@ block content
 
               li.filter-tab.active-tab Шоу-рум
               li.filter-tab Упаковка продукции
-              
-          .projects__slider.swiper-container.aos-slider-fix(data-projects-slider="" data-aos="fade-up")
-            .swiper-wrapper
-              - for (i=0; i<3; i++)
-                .swiper-slide.projects__slide
-                  .projects__item
-                    .projects__item-slider(data-fade-item-slider="")
-                      .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
-                        img.projects__item-img.is-active(src=`assets/images/projects__item-img-${i + 1}.jpg`, alt="", data-fade-item-slider-item="")
-              
-            .projects__slider-controls
-              .projects-controls-container
-                +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
-              .projects-controls-container
-                +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+
+          div(data-aos="fade-up")
+            .projects__slider.swiper-container(data-projects-slider="")
+              .swiper-wrapper
+                - for (i=0; i<3; i++)
+                  .swiper-slide.projects__slide
+                    .projects__item
+                      .projects__item-slider(data-fade-item-slider="")
+                        .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
+                          img.projects__item-img.is-active(src=`assets/images/projects__item-img-${i + 1}.jpg`, alt="", data-fade-item-slider-item="")
+                
+              .projects__slider-controls
+                .projects-controls-container
+                  +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
+                .projects-controls-container
+                  +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
 
         .designers-contacts
           .designers-contacts__top(data-aos="fade-up")

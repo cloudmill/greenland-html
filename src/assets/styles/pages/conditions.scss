@@ -213,7 +213,8 @@
 
   &__title {
     margin-bottom: 80px;
-    width: calc(#{$col-part-d} * 6 - (#{$col-gap-d} * 3));
+    width: 490px;
+    // width: calc(#{$col-part-d} * 6 - (#{$col-gap-d} * 3));
 
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
@@ -552,7 +553,8 @@
     margin-right: calc(#{$col-width-d});
 
     @media (max-width: ($breakpoint - 1px)) {
-      width: calc(#{$col-part-m} * 2 + (#{$col-width-m} / 2));
+      // width: calc(#{$col-part-m} * 2 + (#{$col-width-m} / 2));
+      width: 192px;
     }
 
     img {
@@ -747,6 +749,9 @@
   }
   &-3 {
     position: relative;
+
+    display: inline-block;
+    text-indent: 0;
 
     &::after {
       position: absolute;
@@ -944,10 +949,22 @@
   justify-content: center;
 
   &::before {
-    content: url('assets/images/new-highlights/distributor-highlight.png');
+    content: '';
+    background-image: url('assets/images/new-highlights/distributor-highlight.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     position: absolute;
     z-index: -1;
     top: 5px;
+
+    width: 92px;
+    height: 29px;
+
+    @media (min-width: $breakpoint) {
+      width: 202px;
+      height: 63px;
+    }
   }
 }
 
@@ -1037,7 +1054,7 @@
     }
 
     .footer__download {
-      width: 100%;
+      width: 300px;
       @media (min-width: $breakpoint) {
         display: none;
       }
