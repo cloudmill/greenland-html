@@ -14,6 +14,7 @@ import coverModal from './cover-modal-slider';
 import './abonements-slider';
 import './product-gallery-slider';
 import './project-slider-doubles';
+import initbrandsPicsSlider from './brands-pics-slider';
 
 
 import Swiper, {Navigation, Pagination, Mousewheel} from 'swiper';
@@ -74,6 +75,10 @@ document.addEventListener('DOMContentLoaded', () => {
   try {
     coverModal();
   } catch {}
+
+	try {
+		initbrandsPicsSlider()
+	} catch {}
 
 	// try {
   //   abonementsSlider();

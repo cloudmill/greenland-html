@@ -311,6 +311,7 @@
       height: 40px;
       font-size: 18px;
       padding-top: 7px;
+      margin: 0 20px 0 -10px;
     }
   }
 }
@@ -467,11 +468,19 @@
 
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 40px;
+      text-indent: 0;
+    }
+    @media (max-width: ($breakpoint-m - 1px)) {
       text-indent: calc(#{$col-width-m} / 3 * 2);
     }
 
     span {
       font-family: $base-font-family-serif;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        display: inline-block;
+        text-indent: 0;
+      }
     }
   }
 
