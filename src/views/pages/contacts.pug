@@ -79,17 +79,20 @@ block content
 
         .objects-form(data-aos="fade-up")
           h2.title-h2 Связаться с нами
-          form.designers-form__form
+          form.designers-form__form(data-aos="fade-up" data-parsley-validate)
             label.designers-form__label
-              input.designers-form__input(placeholder="Имя")
+              .placeholder-active Имя*
+              input.designers-form__input(placeholder="Имя*" required)
             label.designers-form__label
-              input.designers-form__input(placeholder="E-mail")
+              .placeholder-active E-mail*
+              input.designers-form__input(placeholder="E-mail*" required)
 
             label.designers-form__label
-              textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос")
+              .placeholder-active Вопрос*
+              textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос*" required)
 
             label.designers-form__checkbox
-              input(type="checkbox"  id="checkbox")
+              input(type="checkbox"  id="checkbox" required)
               .checkbox
               .designers-form__checkbox-txt Я соглашаюсь на обработку
                 br

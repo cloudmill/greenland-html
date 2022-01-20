@@ -31,6 +31,7 @@
   &__wrapper {
     width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
     overflow-y: auto;
+    @include scrollbar-hidden;
   }
 
   &__row {
@@ -135,6 +136,8 @@
 
 .catalog-modal-cell {
   position: relative;
+  z-index: 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -148,11 +151,11 @@
       color: #fff;
     }
     .active {
-      z-index: -2;
-      opacity: 0;
+      // z-index: -2;
+      // opacity: 0;
     }
     .back {
-      z-index: -1;
+      // z-index: -1;
       opacity: 1;
     }
   }
@@ -164,7 +167,7 @@
     top: 20px;
     left: 20px;
 
-    transition: .5s;
+    transition: $transition;
   }
 
   img {
@@ -172,14 +175,14 @@
     max-width: 100%;
   }
   .active {
-    z-index: -1;
-    opacity: 1;
-    transition: .5s;
+    // z-index: -1;
+    // opacity: 1;
+    // transition: $transition;
   }
   .back {
-    z-index: -2;
+    // z-index: -2;
     opacity: 0;
-    transition: .5s;
+    transition: $transition;
 
     width: 100%;
     height: 100%;

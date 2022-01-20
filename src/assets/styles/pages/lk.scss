@@ -241,8 +241,12 @@
     width: calc(#{$col-part-d} * 3);
 
     @media (max-width: ($breakpoint - 1px)) {
-      width: 50%;
-      padding-right: 20px;
+      width: auto;
+      // padding-right: 20px;
+
+      &:not(:first-child) {
+        margin-left: 40px;
+      }
     }
   }
   &__ttl {
@@ -485,6 +489,8 @@
 
     @media (max-width: ($breakpoint - 1px)) {
       margin-bottom: 20px;
+
+      font-size: 14px;
     }
   }
 
@@ -611,6 +617,7 @@
   img {
     width: 100%;
     object-fit: cover;
+    display: block;
   }
 
   &__item {
