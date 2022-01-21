@@ -46,12 +46,20 @@
     }
   }
 
+  &__inner {
+    display: flex;
+    align-items: center;
+    @media (min-width: $breakpoint) {
+      display: contents;
+    }
+  }
+
   &__header {
     height: 237px;
 
     @media (max-width: ($breakpoint - 1px)) {
       height: auto;
-      width: calc(#{$col-part-m} / 2);
+      // width: calc(#{$col-part-m} / 2);
 
       #{$comp}__btn {
         display: flex;
@@ -64,7 +72,8 @@
   }
   &__center {
     @media (max-width: ($breakpoint - 1px)) {
-      width: calc(#{$col-part-m} / 2);
+      // width: calc(#{$col-part-m} / 2);
+      margin-left: 15px;
 
       #{$comp}__btn {
         display: flex;
@@ -138,7 +147,9 @@
     &::before {
       --size: 41px;
 
-      content: "";
+      @media (min-width: $breakpoint) {
+        content: "";
+      }
       position: absolute;
       left: 50%;
       top: 50%;
@@ -154,17 +165,19 @@
     }
 
     &:hover {
-      #{$comp}__btn-svg {
-        $props: path, line, rect, circle;
-
-        @each $item in $props {
-          #{$item} {
-            stroke: $black;
+      @media (min-width: $breakpoint) {
+        #{$comp}__btn-svg {
+          $props: path, line, rect, circle;
+  
+          @each $item in $props {
+            #{$item} {
+              stroke: $black;
+            }
           }
         }
-      }
-      #{$comp}__btn-counter {
-        color: $black;
+        #{$comp}__btn-counter {
+          color: $black;
+        }
       }
     }
 

@@ -8,7 +8,7 @@ include ./catalog-card
       .arrows.cover__slider-arrows
         +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-watched-prev="")
         +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-watched-next="")
-  .designers-products__catalog(data-aos="fade-up")
+  .designers-products__catalog(data-aos="fade-up" data-catalog='')
     .swiper-container(data-watched-slider="")
       .swiper-wrapper
         - for (i=0; i<5; i++)

@@ -66,11 +66,11 @@ block content
           br
           |композицию.
 
-        .results-row.results-row--mobile
+        .results-row.results-row--mobile(data-catalog='')
           - for (i=0; i<5; i++)
             +catalog-card(images=["assets/images/catalog-1.png", "https://via.placeholder.com/600/771796", "https://via.placeholder.com/150/92c952", "https://via.placeholder.com/150/1fe46f"])
 
-        .results-row.results-row--second
+        .results-row.results-row--second(data-catalog='')
           - for (i=0; i<5; i++)
             +catalog-card(images=["assets/images/catalog-1.png", "https://via.placeholder.com/600/771796", "https://via.placeholder.com/150/92c952", "https://via.placeholder.com/150/1fe46f"])
 
