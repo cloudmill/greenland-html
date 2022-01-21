@@ -235,6 +235,10 @@
 
   &__logo {
     width: calc(#{$col-part-m} * 2 - #{$col-gap-m});
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
     text-align: center;
 
     svg {
