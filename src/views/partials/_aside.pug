@@ -1,14 +1,14 @@
 aside.aside
 
   .aside-wrapper
-
-    .aside__header
-      button.aside__btn.aside-btn
-        +menuBurger
-        span.aside__btn-title меню
-    .aside__center
-      button.aside__btn
-        +menuSearch.aside__btn-svg
+    .aside__inner
+      .aside__header
+        button.aside__btn.aside-btn
+          +menuBurger
+          span.aside__btn-title меню
+      .aside__center
+        button.aside__btn
+          +menuSearch.aside__btn-svg
     a.aside__logo(href="/")
       +logo('white')
     .aside__footer

@@ -1,8 +1,10 @@
+import {mediaQuery} from './mediaQueries'
+
 {
   $(() => {
     const catalogParent = $('[data-catalog]')
 
-    if (catalogParent.length) {
+    if (catalogParent.length && mediaQuery.matches) {
       let currentElem = null
 
       catalogParent.on('mouseover', event => {

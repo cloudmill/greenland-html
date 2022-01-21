@@ -50,7 +50,7 @@ block content
                   each item in items
                     li.filter-tab
                       |!{item}
-              .action-products
+              .action-products(data-catalog='')
                 
                 - for (i=0; i<5; i++)
                   +catalog-card(images=["assets/images/catalog-1.png", "https://via.placeholder.com/600/771796", "https://via.placeholder.com/150/92c952", "https://via.placeholder.com/150/1fe46f"])

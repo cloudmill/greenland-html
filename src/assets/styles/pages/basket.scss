@@ -422,3 +422,10 @@
     }
   }
 }
+
+.basket-item-count {
+  @media (max-width: ($breakpoint - 1px)) {
+    font-size: 14px;
+    line-height: 120%;
+  }
+}
