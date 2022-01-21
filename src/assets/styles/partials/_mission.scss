@@ -157,17 +157,21 @@
       display: flex;
 
       &.starting {
+        -webkit-animation: tickerStart 21s 1 linear forwards;
         animation: tickerStart 21s 1 linear forwards;
       }
       &.first-half {
+        -webkit-animation: 21s ticker infinite linear forwards;
         animation: 21s ticker infinite linear forwards;
       }
       &.second-half {
         transform: translateX(100%);
+        -webkit-animation: 21s ticker 7s infinite linear forwards;
         animation: 21s ticker 7s infinite linear forwards;
       }
       &.third-half {
         transform: translateX(100%);
+        -webkit-animation: 21s ticker 14s infinite linear forwards;
         animation: 21s ticker 14s infinite linear forwards;
       }
     }
@@ -191,6 +195,7 @@
       &:nth-child(even) {
         font-family: $base-font-family-serif;
         font-weight: 700;
+        font-style: italic;
       }
     }
   }
@@ -513,18 +518,22 @@
 // marquee keyframes
 @keyframes tickerStart {
   0% {
+    -webkit-transform: translateX(0);
     transform: translateX(0);
   }
   100% {
+    -webkit-transform: translateX(-300%);
     transform: translateX(-300%);
   }
 }
 
 @keyframes ticker {
   0% {
+    -webkit-transform: translateX(100%);
     transform: translateX(100%);
   }
   100% {
+    -webkit-transform: translateX(-200%);
     transform: translateX(-200%);
   }
 }

@@ -9,11 +9,12 @@
   }
 
   &__numbers {
-    width: calc(#{$col-part-d} * 6);
+    // width: calc(#{$col-part-d} * 6);
+    width: 100%;
     margin-bottom: 40px;
 
     @media (max-width: ($breakpoint - 1px)) {
-      width: 100%;
+      // width: 100%;
       margin-bottom: 20px;
     }
 

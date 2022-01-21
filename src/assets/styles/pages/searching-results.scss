@@ -88,11 +88,15 @@
 }
 
 .results-row {
-  display: flex;
   margin: 40px 0;
-  overflow-x: scroll;
+  
+  display: flex;
 
-  @include scrollbar-hidden();
+  @media (max-width: ($breakpoint - 1px)) {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    @include scrollbar-hidden();
+  }
 
   &--second {
     @media (max-width: ($breakpoint - 1px)) {
@@ -111,8 +115,8 @@
 
     @media (max-width: ($breakpoint - 1px)) {
       width: auto;
-      min-width: 150px;
-      max-width: 50%;
+      min-width: 149px;
+      max-width: calc(50% - 1px);
     }
   }
   .catalog-card__img {

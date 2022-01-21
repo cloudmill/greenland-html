@@ -49,6 +49,8 @@
 }
 
 .favorites-table {
+  $comp: &;
+
   @media (max-width: ($breakpoint - 1px)) {
     border-top: 1px solid $green-extra-lighten;
   }
@@ -200,6 +202,19 @@
 
       @media (max-width: ($breakpoint - 1px)) {
         font-size: 12px;
+      }
+    }
+
+    &--sm {
+      #{$comp}__price {
+        @media (max-width: ($breakpoint - 1px)) {
+          font-size: 16px;
+        }
+      }
+      #{$comp}__price-old {
+        @media (max-width: ($breakpoint - 1px)) {
+          font-size: 12px;
+        }
       }
     }
   }

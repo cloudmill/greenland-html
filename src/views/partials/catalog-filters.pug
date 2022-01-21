@@ -98,33 +98,34 @@ mixin catalog-filters
       .catalog-filter-tabs__item Пластиковые
       .catalog-filter-tabs__item Подвесные
 
-    .catalog-filter-spoilers(data-filters='')
-      .catalog-filter-spoilers__item(data-fancy-button='f1')
-        |Все фильтры
-        .catalog-filter-spoilers__plus
-      each item in ['Наличие, скидки', 'Диапазон цены', 'Цвет', 'Форма', 'Применение', 'Особенности']
-        .catalog-filter-spoilers__item(data-filters-item='')
-          .catalog-filter-spoilers__button
-            .catalog-filter-spoilers__caption
-              |#{item}
-              span.catalog-filter-spoilers__count.hidden(data-filters-count='')
-                |0
-            img(src="assets/images/icons/spoiler-arrow.svg", alt="")
-          .catalog-filter-spoilers__dropdown
-            -
-              var items = [
-                'Крем',
-                'Мятный',
-                'Нежно-голубой',
-                'Мальва',
-                'Пион',
-                'Лавандовый',
-                'Бирюзовый',
-              ]
-            each i in items
-              .catalog-filter-spoilers__dropdown-item
-                label.designers-form__checkbox
-                  input(type="checkbox" required data-filters-checkbox='')
-                  .checkbox
-                  .catalog-filter-spoilers__dropdown-text   
-                    |#{i}
+    .aos(data-aos='fade-up')
+      .catalog-filter-spoilers(data-filters='')
+        .catalog-filter-spoilers__item(data-fancy-button='f1')
+          |Все фильтры
+          .catalog-filter-spoilers__plus
+        each item in ['Наличие, скидки', 'Диапазон цены', 'Цвет', 'Форма', 'Применение', 'Особенности']
+          .catalog-filter-spoilers__item(data-filters-item='')
+            .catalog-filter-spoilers__button
+              .catalog-filter-spoilers__caption
+                |#{item}
+                span.catalog-filter-spoilers__count.hidden(data-filters-count='')
+                  |0
+              img(src="assets/images/icons/spoiler-arrow.svg", alt="")
+            .catalog-filter-spoilers__dropdown
+              -
+                var items = [
+                  'Крем',
+                  'Мятный',
+                  'Нежно-голубой',
+                  'Мальва',
+                  'Пион',
+                  'Лавандовый',
+                  'Бирюзовый',
+                ]
+              each i in items
+                .catalog-filter-spoilers__dropdown-item
+                  label.designers-form__checkbox
+                    input(type="checkbox" required data-filters-checkbox='')
+                    .checkbox
+                    .catalog-filter-spoilers__dropdown-text   
+                      |#{i}
