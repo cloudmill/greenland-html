@@ -111,6 +111,7 @@
 
 .other-news {
   .swiper-container {
+    margin-right: -40px;
     @media (max-width: ($breakpoint - 1px)) {
       margin: 0 -10px;
       padding-left: 10px;
