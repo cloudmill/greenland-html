@@ -51,14 +51,14 @@ $(
           body.removeClass('hidden');
         }
 
-        if (
-          (!menuModal.hasClass('modal-active') && !searchModal.hasClass('modal-active'))
-          // && 
-          // (!$(event.target).closest('.aside-btn').length || !$(event.target).closest('.aside__center').length)
-        ) {
-          body.removeClass('hidden');
-          console.log(123);
-        }
+        // if (
+        //   (!menuModal.hasClass('modal-active') && !searchModal.hasClass('modal-active'))
+        //   // && 
+        //   // (!$(event.target).closest('.aside-btn').length || !$(event.target).closest('.aside__center').length)
+        // ) {
+        //   body.removeClass('hidden');
+        //   console.log(123);
+        // }
       })
     }
   }

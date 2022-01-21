@@ -123,6 +123,12 @@
       width: 270px;
     }
   }
+
+  .blog-card {
+    @media (min-width: $breakpoint) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 
