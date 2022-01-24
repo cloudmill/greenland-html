@@ -214,28 +214,13 @@ block content
                 a.footer__socials-link(href="")
                   +houzzIcon
 
-        .objects-form.distributor-form
+        .objects-form.distributor-form(data-form="")
           .mission__slider-underlay
           h2.title-h2(data-aos="fade-up")
             |Вы комплексный поставщик
             br
             |— задайте вопрос
 
-          form.designers-form__form(data-aos="fade-up")
-            label.designers-form__label
-              input.designers-form__input(placeholder="Имя")
-            label.designers-form__label
-              input.designers-form__input(placeholder="E-mail")
-
-            label.designers-form__label
-              textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос")
-
-            label.designers-form__checkbox
-              input(type="checkbox"  id="checkbox")
-              .checkbox
-              .designers-form__checkbox-txt Я соглашаюсь на обработку
-                br
-                a(href="") персональных данных
-            button.btn.cover__btn(type="submit") отправить
+          include ../partials/form-contacts
 
     include ../partials/_footer.pug

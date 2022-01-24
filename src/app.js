@@ -265,25 +265,23 @@ document.addEventListener('DOMContentLoaded', () => {
 $('[data-send-form]').submit(function (e) {
   e.preventDefault();
 
-  const form = $('.designers-form');
+  const form = $('[data-form]');
   const response = $('.response');
-  // const responseButton = $('.response__btn');
-  // const formTitle = $('.form-title')
+  const responseButton = $('.response__btn');
 
   setTimeout(() => {
     if (!$(this).find('.parsley-error').length) {
-      console.log('error');
       form.addClass('form--hidden');
       response.addClass('response--active');
-      // formTitle.addClass('display-none');
     }
   }, 0);
 
-  // responseButton.on('click', function () {
-  //   form.removeClass('form--hidden');
-  //   response.removeClass('response--active');
-  //   formTitle.removeClass('display-none');
-  // });
+  if (responseButton.length !== 0) {
+    responseButton.on('click', function () {
+      form.removeClass('form--hidden');
+      response.removeClass('response--active');
+    });
+  }
 })
 
 // tel mask

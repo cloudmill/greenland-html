@@ -158,27 +158,9 @@ block content
                 .projects-controls-container
                   +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
 
-        .objects-form
+        .objects-form(data-form="")
           h2.title-h2(data-aos="fade-up")
             |Связаться с нами
-          form.designers-form__form(data-aos="fade-up" data-parsley-validate)
-            label.designers-form__label
-              .placeholder-active Имя*
-              input.designers-form__input(placeholder="Имя*" required)
-            label.designers-form__label
-              .placeholder-active E-mail*
-              input.designers-form__input(placeholder="E-mail*" required)
-
-            label.designers-form__label
-              .placeholder-active Вопрос*
-              textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос*" required)
-
-            label.designers-form__checkbox
-              input(type="checkbox"  id="checkbox" required)
-              .checkbox
-              .designers-form__checkbox-txt Я соглашаюсь на обработку
-                br
-                a(href="") персональных данных
-            button.btn.cover__btn(type="submit") отправить
+          include ../partials/form-contacts
 
     include ../partials/_footer.pug

@@ -1,0 +1,22 @@
+form.designers-form__form(data-aos="fade-up" data-parsley-validate data-send-form="")
+  label.designers-form__label
+    .placeholder-active Имя*
+    input.designers-form__input(type="text" placeholder="Имя*" required)
+  label.designers-form__label
+    .placeholder-active E-mail*
+    input.designers-form__input(type="email" placeholder="E-mail*" required)
+
+  label.designers-form__label
+    .placeholder-active Вопрос*
+    textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос*" required)
+
+  label.designers-form__checkbox
+    input(type="checkbox" checked="checked" id="checkbox" required)
+    .checkbox
+    .designers-form__checkbox-txt Я соглашаюсь на обработку
+      br
+      a(href="") персональных данных
+  button.btn.cover__btn(type="submit") отправить
+
+.response
+  .response-txt.title-h2 Спасибо за вашу заявку. Мы свяжемся с вами в ближайшее время.

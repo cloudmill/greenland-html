@@ -1,16 +1,22 @@
-.news-subscribe
+.news-subscribe(data-form="")
   .news-social__title(data-aos="fade-up" data-parsley-validate)
     span Подпишитесь 
     |на нашу
     br
     |рассылку
-  form.designers-form__form(data-aos="fade-up" data)
+  form.designers-form__form(data-aos="fade-up" data-send-form="")
     label.designers-form__label
       input.designers-form__input(placeholder="E-mail" required)
     label.designers-form__checkbox
-      input(type="checkbox"  id="checkbox" required)
+      input(type="checkbox" checked="checked" id="checkbox" required)
       .checkbox
       .designers-form__checkbox-txt Я соглашаюсь на обработку
         br
         a(href="") персональных данных
     button.btn.cover__btn(type="submit") отправить
+
+  .response
+    .response-txt.title-h4 Спасибо.
+      br
+      |Вы успешно подписались на рассылку.
+    button.btn.response__btn подписаться еще

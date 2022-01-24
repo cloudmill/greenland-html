@@ -700,6 +700,7 @@
 
 .objects-form {
   margin-top: 160px;
+  position: relative;
 
   @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;

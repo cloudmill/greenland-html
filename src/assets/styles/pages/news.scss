@@ -83,6 +83,7 @@
 
 .news-subscribe {
   margin-top: 60px;
+  position: relative;
 
   @media (max-width: ($breakpoint - 1px)) {
     margin-top: 40px;
@@ -106,6 +107,24 @@
     @media (max-width: ($breakpoint - 1px)) {
       // width: calc(#{$col-part-m} * 3);
       width: 241px;
+    }
+  }
+
+  .response {
+    // width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+
+    &-txt {
+      width: calc(#{$col-part-d} * 3 - #{$col-gap-d});
+      margin-bottom: 90px;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        width: auto;
+        margin-bottom: 40px;
+      }
+    }
+
+    .btn {
+      white-space: nowrap;
     }
   }
 }

@@ -321,7 +321,7 @@
   &--active {
     opacity: 1;
     visibility: visible;
-    @media (max-width: $breakpoint - 1px) {
+    @media (max-width: ($breakpoint - 1px)) {
       position: static;
     }
   }
@@ -339,5 +339,53 @@
   }
   .designers-form__form {
     display: none;
+  }
+  .career-form__form {
+    display: none;
+  }
+
+  &.career-form {
+    justify-content: flex-end;
+    min-height: 375px;
+  }
+
+  &.objects-form {
+    @media (min-width: $breakpoint) {
+      min-height: 525px;
+    }
+
+    .response {
+      top: unset;
+      left: unset;
+    }
+  }
+
+  &.distributor-form {
+    .mission__slider-underlay {
+      opacity: 1;
+    }
+
+    .response {
+      @media (min-width: $breakpoint) {
+        top: 50%;
+      }
+
+      &-txt {
+        @media (max-width: ($breakpoint - 1px)) {
+          font-size: 14px;
+          margin-top: 20px;
+        }
+        @media (min-width: $breakpoint) {
+          width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+          font-size: 36px;
+        }
+      }
+    }
+  }
+
+  &.news-subscribe {
+    .news-social__title {
+      display: none;
+    }
   }
 }

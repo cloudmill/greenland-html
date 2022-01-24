@@ -77,26 +77,8 @@ block content
               .contacts-cards__position Менеджер по работе с дизйнерами
               .contacts-cards__tel 8 812 209-18-84
 
-        .objects-form(data-aos="fade-up")
+        .objects-form(data-aos="fade-up" data-form="")
           h2.title-h2 Связаться с нами
-          form.designers-form__form(data-aos="fade-up" data-parsley-validate)
-            label.designers-form__label
-              .placeholder-active Имя*
-              input.designers-form__input(placeholder="Имя*" required)
-            label.designers-form__label
-              .placeholder-active E-mail*
-              input.designers-form__input(placeholder="E-mail*" required)
-
-            label.designers-form__label
-              .placeholder-active Вопрос*
-              textarea.designers-form__input(name="" cols="30" rows="1" placeholder="Вопрос*" required)
-
-            label.designers-form__checkbox
-              input(type="checkbox"  id="checkbox" required)
-              .checkbox
-              .designers-form__checkbox-txt Я соглашаюсь на обработку
-                br
-                a(href="") персональных данных
-            button.btn.cover__btn(type="submit") отправить
+          include ../partials/form-contacts
 
     include ../partials/_footer.pug
