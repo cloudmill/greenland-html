@@ -8,16 +8,16 @@ export default function coverModal() {
   const $coverModal = document.querySelector('[data-cover-modal]');
   const $coverModalCntrl = document.querySelector('[data-modal-cover-controls]');
 
-
-
   const coverModal = new Swiper($coverModal, {
     slidesPerView: 1,
-    // loop: true,
+  });
 
-    navigation: {
-      prevEl: $coverModalCntrl.querySelector('[data-cover-modal-prev]'),
-      nextEl: $coverModalCntrl.querySelector('[data-cover-modal-next]')
-    }
+  $('[data-cover-modal-prev]').on('click', () => {
+    coverModal.slidePrev();
+  });
+
+  $('[data-cover-modal-next]').on('click', () => {
+    coverModal.slideNext()
   });
 
   window.sliders.push(coverModal);
