@@ -1,5 +1,7 @@
 import Swiper, {Navigation} from 'swiper';
+import { Pagination } from 'swiper';
 Swiper.use([Navigation]);
+Swiper.use([Pagination]);
 
 // export default function abonementsSlider() {
 
@@ -44,6 +46,10 @@ $(window).on('load', () => {
   const abonementsSlider = new Swiper($abonementsSlider, {
 
     loop: true,
+
+    pagination: {
+      el: ".swiper-pagination",
+    },
 
     // breakpoints: {
     //   [BREAKPOINT]: {

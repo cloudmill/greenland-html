@@ -1363,6 +1363,35 @@
       margin-top: 10px;
     }
   }
+
+  .swiper-pagination {
+    position: absolute;
+    top: 22px;
+    right: 0;
+
+    display: flex;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      display: none;
+    }
+
+    &-bullet {
+      display: block;
+      width: 6px;
+      height: 6px;
+      background-color: $green-extra-lighten;
+
+      transition: .5s;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &-active {
+        background-color: $green;
+      }
+    }
+  }
 }
 
 .ready-projects__container {

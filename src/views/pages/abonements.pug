@@ -66,40 +66,43 @@ block content
           span.highlight-3 их красотой долгие годы.
 
         .abonements-slider.swiper-container(data-abonements-slider data-aos="fade-up")
+          .swiper-pagination
+
           .swiper-wrapper
-            .swiper-slide
-              .abonements-slide
-                img.only-desktop(src="assets/images/abonement-slide.jpg", alt="")
-                img.only-mobile(src="assets/images/abonement-slide-mob.jpg", alt="")
+            - for (i=0; i<3; i++)
+              .swiper-slide
+                .abonements-slide
+                  img.only-desktop(src="assets/images/abonement-slide.jpg", alt="")
+                  img.only-mobile(src="assets/images/abonement-slide-mob.jpg", alt="")
 
-                .abonements-slider__desc
+                  .abonements-slider__desc
 
-                  .abonements-slider__top
-                  
-                    .abonements-slider__controls
-                      +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-abonements-slider-prev="")
-                      +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-abonements-slider-next="")
+                    .abonements-slider__top
+                    
+                      .abonements-slider__controls
+                        +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-abonements-slider-prev="")
+                        +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-abonements-slider-next="")
 
-                  .abonements-slider__ttl Разовый выезд биолога для лечения растений
+                    .abonements-slider__ttl Разовый выезд биолога для лечения растений
 
-                  ul.spoiler__desc-list
-                    li Выявление неблагоприятных факторов и вредителей
-                    li Обрезка зараженных и мертвых листьев
-                    li Обработка необходимыми препаратами
-                    li Полив, подкормка и удобрение при необходимости
-                    li Полив, подкормка и удобрение при необходимости
-                    li Рекомендации по дальнейшему уходу и лечению
-                  
-                  .abonements-slider__bottom
-                    .abonements-slider__price от 3 000 ₽*
-                    .abonements-slider__item.only-desktop * Зависит от расположения, количества и размера растений
-                    .abonements-slider__item.only-mobile * Зависит от расположения, количества и 
-                      br
-                      |размера растений
-                    .abonements-slider__item.only-desktop Все расходные материалы, препараты и химикаты входят в стоимость
-                    .abonements-slider__item.only-mobile Все расходные материалы, препараты и 
-                      br
-                      |химикаты входят в стоимость
+                    ul.spoiler__desc-list
+                      li Выявление неблагоприятных факторов и вредителей
+                      li Обрезка зараженных и мертвых листьев
+                      li Обработка необходимыми препаратами
+                      li Полив, подкормка и удобрение при необходимости
+                      li Полив, подкормка и удобрение при необходимости
+                      li Рекомендации по дальнейшему уходу и лечению
+                    
+                    .abonements-slider__bottom
+                      .abonements-slider__price от 3 000 ₽*
+                      .abonements-slider__item.only-desktop * Зависит от расположения, количества и размера растений
+                      .abonements-slider__item.only-mobile * Зависит от расположения, количества и 
+                        br
+                        |размера растений
+                      .abonements-slider__item.only-desktop Все расходные материалы, препараты и химикаты входят в стоимость
+                      .abonements-slider__item.only-mobile Все расходные материалы, препараты и 
+                        br
+                        |химикаты входят в стоимость
 
         .landscaping-contacts(data-aos="fade-up")
           .contacts-cards__ttl.title-h2 Профессионалы Green Land
