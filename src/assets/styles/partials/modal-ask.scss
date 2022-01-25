@@ -115,6 +115,7 @@
   background: #FFFFFF;
   border-radius: 0px 20px;
   padding: 60px calc(#{$col-part-d});
+  position: relative;
 
   @media (max-width: ($breakpoint - 1px)) {
     width: 100%;
@@ -124,6 +125,54 @@
 
   .designers-form__form {
     width: 100%;
+  }
+
+  .designers-form__form button[type="submit"] {
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+    }
+  }
+}
+
+.modal-ask__wrapper {
+  .response {
+    padding: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      padding: 40px;
+    }
+
+    &__txt {
+      font-size: 24px;
+      text-align: center;
+      text-transform: uppercase;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        font-size: 16px;
+      }
+    }
+    &__subtxt {
+      font-family: $base-font-family-serif;
+      font-size: 20px;
+      line-height: 130%;
+      text-align: center;
+      margin-top: 20px;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        font-size: 12px;
+      }
+    }
+  }
+  &.form--hidden {
+    min-height: 500px;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      min-height: 200px;
+    }
   }
 }
 

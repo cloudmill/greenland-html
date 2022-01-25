@@ -386,7 +386,7 @@ $(window).on('load', () => {
   
     onYouTubeIframeAPIReady();
 
-    $('.video-preview').on('click', (event) => {
+    $('.video-preview:not(.video-preview--active)').on('click', (event) => {
       
       let currentVid = $(event.target).closest('.lk-videos__item');
       currentVid.addClass('video-preview--active');
@@ -395,10 +395,5 @@ $(window).on('load', () => {
 
       player[activeIndex].playVideo();
     })
-  
-    // video.on('click', () => {
-    //   video.find('.video-preview__frame').playVideo();
-    //   video.find('.video-preview__img').addClass('video-preview__img--hide');
-    // })
   }
 })
