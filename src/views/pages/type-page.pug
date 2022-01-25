@@ -79,21 +79,20 @@ block content
 
             .ready-projects__container
 
-              .aos-slider-fix.projects__slider.is-active.swiper-container(data-projects-slider="")
+              .projects__slider.swiper-container.is-active(data-projects-slider="" data-catalog='')
                 .swiper-wrapper
                   .swiper-slide.projects__slide
                     .projects__item
-                      .projects__item-slider(data-fade-item-slider="")
+                      .projects__item-slider(data-catalog-card='')
                         .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
-                          img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                        .bullets.projects__item-slider-bullets
-                          .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          ul.catalog-list
+                            each item in ["assets/images/projects__item-img-3.jpg", "https://via.placeholder.com/600/771796", "https://via.placeholder.com/150/92c952", "https://via.placeholder.com/150/1fe46f"]
+                              li.catalog-list__item(data-catalog-image = item)
+                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="" data-card-image='')
+                        .projects__item-bullets 
+                          .catalog-pagination
+                            - for (x = 0; x < 4; x++)
+                              .catalog-pagination__item
                       .projects__item-caption
                         .epsilon.projects__item-name Отель Crowne Plaza
                         .projects__item-tags
@@ -102,17 +101,16 @@ block content
                           .projects__item-tag.text__super-tn.text--uppercase Входные группы
                   .swiper-slide.projects__slide
                     .projects__item
-                      .projects__item-slider(data-fade-item-slider="")
+                      .projects__item-slider(data-catalog-card='')
                         .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
-                          img.projects__item-img.is-active(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                        .bullets.projects__item-slider-bullets
-                          .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          ul.catalog-list
+                            each item in ["assets/images/projects__item-img-1.jpg", "https://via.placeholder.com/600/771796", "https://via.placeholder.com/150/92c952"]
+                              li.catalog-list__item(data-catalog-image = item)
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="" data-card-image='')
+                        .projects__item-bullets 
+                          .catalog-pagination
+                            - for (x = 0; x < 3; x++)
+                              .catalog-pagination__item
                       .projects__item-caption
                         .epsilon.projects__item-name Отель Crowne Plaza
                         .projects__item-tags
@@ -121,17 +119,16 @@ block content
                           .projects__item-tag.text__super-tn.text--uppercase Входные группы
                   .swiper-slide.projects__slide
                     .projects__item
-                      .projects__item-slider(data-fade-item-slider="")
+                      .projects__item-slider(data-catalog-card='')
                         .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
-                          img.projects__item-img.is-active(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                        .bullets.projects__item-slider-bullets
-                        .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          ul.catalog-list
+                            each item in ["assets/images/projects__item-img-2.jpg", "https://via.placeholder.com/600/771796"]
+                              li.catalog-list__item(data-catalog-image = item)
+                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="" data-card-image='')
+                        .projects__item-bullets 
+                          .catalog-pagination
+                            - for (x = 0; x < 2; x++)
+                              .catalog-pagination__item
                       .projects__item-caption
                         .epsilon.projects__item-name Отель Crowne Plaza
                         .projects__item-tags
@@ -143,22 +140,20 @@ block content
                     +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
                   .projects-controls-container
                     +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
-
-              .aos-slider-fix.projects__slider.swiper-container(data-projects-slider-2="")
+              .projects__slider.swiper-container(data-projects-slider-2="" data-catalog='')
                 .swiper-wrapper
                   .swiper-slide.projects__slide
                     .projects__item
-                      .projects__item-slider(data-fade-item-slider="")
+                      .projects__item-slider(data-catalog-card='')
                         .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
-                          img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                        .bullets.projects__item-slider-bullets
-                          .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          ul.catalog-list
+                            each item in ["assets/images/projects__item-img-3.jpg", "https://via.placeholder.com/600/771796", "https://via.placeholder.com/150/92c952", "https://via.placeholder.com/150/1fe46f"]
+                              li.catalog-list__item(data-catalog-image = item)
+                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="" data-card-image='')
+                        .projects__item-bullets 
+                          .catalog-pagination
+                            - for (x = 0; x < 4; x++)
+                              .catalog-pagination__item
                       .projects__item-caption
                         .epsilon.projects__item-name Отель Crowne Plaza
                         .projects__item-tags
@@ -167,17 +162,16 @@ block content
                           .projects__item-tag.text__super-tn.text--uppercase Входные группы
                   .swiper-slide.projects__slide
                     .projects__item
-                      .projects__item-slider(data-fade-item-slider="")
+                      .projects__item-slider(data-catalog-card='')
                         .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
-                          img.projects__item-img.is-active(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                        .bullets.projects__item-slider-bullets
-                          .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          ul.catalog-list
+                            each item in ["assets/images/projects__item-img-1.jpg", "https://via.placeholder.com/600/771796", "https://via.placeholder.com/150/92c952"]
+                              li.catalog-list__item(data-catalog-image = item)
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="" data-card-image='')
+                        .projects__item-bullets 
+                          .catalog-pagination
+                            - for (x = 0; x < 3; x++)
+                              .catalog-pagination__item
                       .projects__item-caption
                         .epsilon.projects__item-name Отель Crowne Plaza
                         .projects__item-tags
@@ -186,17 +180,16 @@ block content
                           .projects__item-tag.text__super-tn.text--uppercase Входные группы
                   .swiper-slide.projects__slide
                     .projects__item
-                      .projects__item-slider(data-fade-item-slider="")
+                      .projects__item-slider(data-catalog-card='')
                         .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
-                          img.projects__item-img.is-active(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                        .bullets.projects__item-slider-bullets
-                        .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          ul.catalog-list
+                            each item in ["assets/images/projects__item-img-2.jpg", "https://via.placeholder.com/600/771796"]
+                              li.catalog-list__item(data-catalog-image = item)
+                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="" data-card-image='')
+                        .projects__item-bullets 
+                          .catalog-pagination
+                            - for (x = 0; x < 2; x++)
+                              .catalog-pagination__item
                       .projects__item-caption
                         .epsilon.projects__item-name Отель Crowne Plaza
                         .projects__item-tags
@@ -205,25 +198,23 @@ block content
                           .projects__item-tag.text__super-tn.text--uppercase Входные группы
                 .projects__slider-controls
                   .projects-controls-container
-                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-2-prev="")
+                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
                   .projects-controls-container
-                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-2-next="")
-
-              .aos-slider-fix.projects__slider.swiper-container(data-projects-slider-3="")
+                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
+              .projects__slider.swiper-container(data-projects-slider-3="" data-catalog='')
                 .swiper-wrapper
                   .swiper-slide.projects__slide
                     .projects__item
-                      .projects__item-slider(data-fade-item-slider="")
+                      .projects__item-slider(data-catalog-card='')
                         .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
-                          img.projects__item-img.is-active(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                        .bullets.projects__item-slider-bullets
-                          .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          ul.catalog-list
+                            each item in ["assets/images/projects__item-img-3.jpg", "https://via.placeholder.com/600/771796", "https://via.placeholder.com/150/92c952", "https://via.placeholder.com/150/1fe46f"]
+                              li.catalog-list__item(data-catalog-image = item)
+                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="" data-card-image='')
+                        .projects__item-bullets 
+                          .catalog-pagination
+                            - for (x = 0; x < 4; x++)
+                              .catalog-pagination__item
                       .projects__item-caption
                         .epsilon.projects__item-name Отель Crowne Plaza
                         .projects__item-tags
@@ -232,17 +223,16 @@ block content
                           .projects__item-tag.text__super-tn.text--uppercase Входные группы
                   .swiper-slide.projects__slide
                     .projects__item
-                      .projects__item-slider(data-fade-item-slider="")
+                      .projects__item-slider(data-catalog-card='')
                         .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
-                          img.projects__item-img.is-active(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                        .bullets.projects__item-slider-bullets
-                          .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          ul.catalog-list
+                            each item in ["assets/images/projects__item-img-1.jpg", "https://via.placeholder.com/600/771796", "https://via.placeholder.com/150/92c952"]
+                              li.catalog-list__item(data-catalog-image = item)
+                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="" data-card-image='')
+                        .projects__item-bullets 
+                          .catalog-pagination
+                            - for (x = 0; x < 3; x++)
+                              .catalog-pagination__item
                       .projects__item-caption
                         .epsilon.projects__item-name Отель Crowne Plaza
                         .projects__item-tags
@@ -251,17 +241,16 @@ block content
                           .projects__item-tag.text__super-tn.text--uppercase Входные группы
                   .swiper-slide.projects__slide
                     .projects__item
-                      .projects__item-slider(data-fade-item-slider="")
+                      .projects__item-slider(data-catalog-card='')
                         .projects__item-slider-wrapper(data-fade-item-slider-wrapper="")
-                          img.projects__item-img.is-active(src="assets/images/projects__item-img-2.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-3.jpg", alt="", data-fade-item-slider-item="")
-                          img.projects__item-img(src="assets/images/projects__item-img-1.jpg", alt="", data-fade-item-slider-item="")
-                        .bullets.projects__item-slider-bullets
-                        .bullet.projects__item-slider-bullet.is-active(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
-                          .bullet.projects__item-slider-bullet(data-fade-item-slider-bullet="true")
+                          ul.catalog-list
+                            each item in ["assets/images/projects__item-img-2.jpg", "https://via.placeholder.com/600/771796"]
+                              li.catalog-list__item(data-catalog-image = item)
+                          img.projects__item-img(src="assets/images/projects__item-img-2.jpg", alt="" data-card-image='')
+                        .projects__item-bullets 
+                          .catalog-pagination
+                            - for (x = 0; x < 2; x++)
+                              .catalog-pagination__item
                       .projects__item-caption
                         .epsilon.projects__item-name Отель Crowne Plaza
                         .projects__item-tags
@@ -270,10 +259,9 @@ block content
                           .projects__item-tag.text__super-tn.text--uppercase Входные группы
                 .projects__slider-controls
                   .projects-controls-container
-                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-3-prev="")
+                    +arrow('#0F2C2D', '#CAE8D9', 'left', 18, 14, 50)(data-projects-slider-prev="")
                   .projects-controls-container
-                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-3-next="")        
-        
+                    +arrow('#0F2C2D', '#CAE8D9', 'right', 18, 14, 50)(data-projects-slider-next="")
         .landscaping-contacts
           .contacts-cards__ttl.title-h2(data-aos="fade-up") Профессионалы Green Land
           .contacts-cards

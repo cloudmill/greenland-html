@@ -236,9 +236,14 @@
     font-size: 14px;
     line-height: 16px;
     text-transform: uppercase;
+    transition: $transition;
 
     @media (max-width: ($breakpoint - 1px)) {
       font-size: 12px;
+    }
+
+    &:hover {
+      color: $green;
     }
   }
 
