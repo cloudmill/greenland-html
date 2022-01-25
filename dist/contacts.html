@@ -410,18 +410,21 @@
 								<div class="contacts-cards__tel">8 812 209-18-84</div>
 							</div>
 						</div>
-						<div class="objects-form" data-aos="fade-up">
+						<div class="objects-form" data-aos="fade-up" data-form="">
 							<h2 class="title-h2">Связаться с нами</h2>
-							<form class="designers-form__form" data-aos="fade-up" data-parsley-validate><label class="designers-form__label">
+							<form class="designers-form__form" data-aos="fade-up" data-parsley-validate data-send-form=""><label class="designers-form__label">
 									<div class="placeholder-active">Имя*</div><input class="designers-form__input" placeholder="Имя*" required>
 								</label><label class="designers-form__label">
-									<div class="placeholder-active">E-mail*</div><input class="designers-form__input" placeholder="E-mail*" required>
+									<div class="placeholder-active">E-mail*</div><input class="designers-form__input" type="email" placeholder="E-mail*" required>
 								</label><label class="designers-form__label">
 									<div class="placeholder-active">Вопрос*</div><textarea class="designers-form__input" name="" cols="30" rows="1" placeholder="Вопрос*" required></textarea>
-								</label><label class="designers-form__checkbox"><input type="checkbox" id="checkbox" required>
+								</label><label class="designers-form__checkbox"><input type="checkbox" checked="checked" id="checkbox" required>
 									<div class="checkbox"></div>
 									<div class="designers-form__checkbox-txt">Я соглашаюсь на обработку<br><a href="">персональных данных</a></div>
 								</label><button class="btn cover__btn" type="submit">отправить</button></form>
+							<div class="response">
+								<div class="response-txt title-h2">Спасибо за вашу заявку. Мы свяжемся с вами в ближайшее время.</div>
+							</div>
 						</div>
 					</div>
 				</div>

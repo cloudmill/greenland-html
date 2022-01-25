@@ -142,10 +142,15 @@
         background-size: 100%;
       }
 
+      @media (max-width: ($breakpoint-l - 1px)) {
+        font-size: 68px;
+      }
+
       @media (max-width: ($breakpoint - 1px)) {
         font-size: 24px;
         margin-top: 20px;
       }
+
     }
     .highlight-4.line100 {
       line-height: 100%;
