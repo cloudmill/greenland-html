@@ -38,21 +38,52 @@ block content
 
           .lk-main
             .lk-videos
-              .lk-videos__item(data-aos="fade-up")
-                img(src="assets/images/lk-video-1.jpg", alt="")
-                .lk-videos__count Урок 1
-                .lk-videos__ttl Работа с глиной
-              .lk-videos__item(data-aos="fade-up")
-                img(src="assets/images/lk-video-1.jpg", alt="")
-                .lk-videos__count Урок 2
-                .lk-videos__ttl Как помочь заказчику, который не знает, что выбрать
-              .lk-videos__item(data-aos="fade-up")
-                img(src="assets/images/lk-video-1.jpg", alt="")
-                .lk-videos__count Урок 3
-                .lk-videos__ttl Работа с малыми архитектурными формами
-              .lk-videos__item(data-aos="fade-up")
-                img(src="assets/images/lk-video-1.jpg", alt="")
-                .lk-videos__count Урок 4
-                .lk-videos__ttl Работа с кермикой
+
+              -
+                const video = [
+                  {
+                    ind: '0',
+                    ttl: 'Урок 1',
+                    desc: 'Работа с глиной',
+                    id: 'A_MjCqQoLLA',
+                  },
+                  {
+                    ind: '1',
+                    ttl: 'Урок 2',
+                    desc: 'Как помочь заказчику, который не знает, что выбрать',
+                    id: 'rblYSKz_VnI',
+                  },
+                  {
+                    ind: '2',
+                    ttl: 'Урок 3',
+                    desc: 'Работа с малыми архитектурными формами',
+                    id: '2Q_ZzBGPdqE',
+                  },
+                  {
+                    ind: '3',
+                    ttl: 'Урок 4',
+                    desc: 'Работа с кермикой',
+                    id: '45cYwDMibGo',
+                  },
+                ]
+
+              each item in video
+
+                .lk-videos__item(data-aos="fade-up")
+
+                  //- img(src="assets/images/lk-video-1.jpg", alt="")
+
+                  .video-preview(data-video)
+                  
+                    .video-preview__frame(id=`player${item.ind}` data-video-id=`${item.id}`)
+
+                    .video-preview__img
+                      img(src="assets/images/lk-video-1.jpg", alt="")
+
+                  .lk-videos__count #{item.ttl}
+                  .lk-videos__ttl #{item.desc}
 
     include ../partials/_footer.pug
+
+block scripts
+  script(src="https://www.youtube.com/iframe_api")

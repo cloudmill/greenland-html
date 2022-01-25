@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 }
 
-// ответ формы
+// ответ форм
 
 $('[data-send-form]').submit(function (e) {
   e.preventDefault();
@@ -363,3 +363,42 @@ $('[data-send-form]').submit(function (e) {
     }
   })
 }
+
+// youtube api
+
+$(window).on('load', () => {
+
+  const video = $('[data-video]');
+
+  if (video.length !== 0) {
+    const vidNumber = video.length;
+
+    var player = [];
+
+    function onYouTubeIframeAPIReady() {
+
+      for (let i=0; i<vidNumber; i++) {
+        player[i] = new YT.Player(`player${i}`, {
+          videoId: $(`#player${i}`).attr('data-video-id'),
+        });
+      }
+    }
+  
+    onYouTubeIframeAPIReady();
+
+    $('.video-preview').on('click', (event) => {
+      
+      let currentVid = $(event.target).closest('.lk-videos__item');
+      currentVid.addClass('video-preview--active');
+
+      let activeIndex = $('.lk-videos__item').index(currentVid);
+
+      player[activeIndex].playVideo();
+    })
+  
+    // video.on('click', () => {
+    //   video.find('.video-preview__frame').playVideo();
+    //   video.find('.video-preview__img').addClass('video-preview__img--hide');
+    // })
+  }
+})

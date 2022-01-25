@@ -18,7 +18,7 @@
   padding-top: 40px;
 
   color: $black;
-  // background: $white-lighten;
+  background: $white-lighten;
   transition: $transition;
 
   @media (max-width: ($breakpoint - 1px)) {
@@ -29,7 +29,7 @@
     // padding-top: 15px;
     padding-bottom: 15px;
     transform: translateY(-25px);
-    background: #fff;
+    background: transparent;
   }
 
   &--up {
