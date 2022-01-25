@@ -120,6 +120,13 @@
     @media (max-width: ($breakpoint - 1px)) {
       width: 100%;
     }
+
+    &.title-h2 {
+      @media (max-width: ($breakpoint-l - 1px)) and (min-width: $breakpoint) {
+        font-size: 38px;
+        padding-right: 40px;
+      }
+    }
   }
   &__list {
     li {
