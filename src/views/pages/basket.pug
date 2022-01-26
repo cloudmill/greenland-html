@@ -1,12 +1,15 @@
 extends ../layouts/master.pug
 
+block header
+  +header('basketHeader')
+
 block content
 
   include ../partials/_aside.pug
 
   .main__wrap.main__wrap--visible(data-scroll-container="")
 
-    include ../partials/_header.pug
+    //- include ../partials/_header.pug
 
     .section.page-wrapper
       .container.basket
