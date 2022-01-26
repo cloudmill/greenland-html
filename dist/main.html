@@ -387,7 +387,7 @@
 				<div class="modal-register">
 					<div class="modal-ask__background"></div>
 					<div class="modal-register__container">
-						<div class="modal-register__wrapper">
+						<div class="modal-register__wrapper" data-form>
 							<div class="modal-register__top">
 								<div class="modal-register__ttl is-active">вход</div>
 								<div class="modal-register__ttl">регистрация</div>
@@ -398,7 +398,7 @@
 									</label><label class="designers-form__label" data-aos="fade-up">
 										<div class="placeholder-active">Пароль</div><input class="designers-form__input" type="password" placeholder="Пароль" required>
 									</label><button class="btn" type="submit">войти</button><a class="modal-register__reset-pass" href="">Забыли пароль?</a></form>
-								<form class="designers-form__form form-column" data-parsley-validate><label class="designers-form__label" data-aos="fade-up">
+								<form class="designers-form__form form-column" data-parsley-validate data-send-form><label class="designers-form__label" data-aos="fade-up">
 										<div class="placeholder-active">Почта</div><input class="designers-form__input" type="email" placeholder="Почта" required>
 									</label><label class="designers-form__label" data-aos="fade-up">
 										<div class="placeholder-active">Фамилия</div><input class="designers-form__input" placeholder="Фамилия" required>
@@ -406,13 +406,17 @@
 										<div class="placeholder-active">E-mail</div><input class="designers-form__input" type="email" placeholder="E-mail" required>
 									</label><label class="designers-form__label" data-aos="fade-up">
 										<div class="placeholder-active">Пароль</div><input class="designers-form__input" type="password" placeholder="Пароль" required>
-									</label><label class="designers-form__checkbox" data-aos="fade-up"><input type="checkbox" id="checkbox">
+									</label><label class="designers-form__checkbox" data-aos="fade-up"><input type="checkbox" id="checkbox" checked="checked">
 										<div class="checkbox"></div>
 										<div class="designers-form__checkbox-txt">Я хочу получать уведомления о спецпредложениях и акции на электронную почту</div>
-									</label><label class="designers-form__checkbox" data-aos="fade-up"><input type="checkbox" id="checkbox" required>
+									</label><label class="designers-form__checkbox" data-aos="fade-up"><input type="checkbox" id="checkbox" checked="checked" required>
 										<div class="checkbox"></div>
 										<div class="designers-form__checkbox-txt">Я соглашаюсь на обработку <a href="">персональных данных</a></div>
 									</label><button class="btn" type="submit">войти</button><a class="modal-register__reset-pass" href="">Забыли пароль?</a></form>
+								<div class="response">
+									<div class="response__txt">Мы получили вашу заявку на регистрацию</div>
+									<div class="response__subtxt">Через 20 минут мы вышлем письмо с ссылкой на подтверждение.</div>
+								</div>
 							</div>
 						</div>
 						<div class="modal-register__close"></div>

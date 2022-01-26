@@ -242,7 +242,7 @@
 				<div class="modal-register">
 					<div class="modal-ask__background"></div>
 					<div class="modal-register__container">
-						<div class="modal-register__wrapper">
+						<div class="modal-register__wrapper" data-form>
 							<div class="modal-register__top">
 								<div class="modal-register__ttl is-active">вход</div>
 								<div class="modal-register__ttl">регистрация</div>
@@ -253,7 +253,7 @@
 									</label><label class="designers-form__label" data-aos="fade-up">
 										<div class="placeholder-active">Пароль</div><input class="designers-form__input" type="password" placeholder="Пароль" required>
 									</label><button class="btn" type="submit">войти</button><a class="modal-register__reset-pass" href="">Забыли пароль?</a></form>
-								<form class="designers-form__form form-column" data-parsley-validate><label class="designers-form__label" data-aos="fade-up">
+								<form class="designers-form__form form-column" data-parsley-validate data-send-form><label class="designers-form__label" data-aos="fade-up">
 										<div class="placeholder-active">Почта</div><input class="designers-form__input" type="email" placeholder="Почта" required>
 									</label><label class="designers-form__label" data-aos="fade-up">
 										<div class="placeholder-active">Фамилия</div><input class="designers-form__input" placeholder="Фамилия" required>
@@ -261,13 +261,17 @@
 										<div class="placeholder-active">E-mail</div><input class="designers-form__input" type="email" placeholder="E-mail" required>
 									</label><label class="designers-form__label" data-aos="fade-up">
 										<div class="placeholder-active">Пароль</div><input class="designers-form__input" type="password" placeholder="Пароль" required>
-									</label><label class="designers-form__checkbox" data-aos="fade-up"><input type="checkbox" id="checkbox">
+									</label><label class="designers-form__checkbox" data-aos="fade-up"><input type="checkbox" id="checkbox" checked="checked">
 										<div class="checkbox"></div>
 										<div class="designers-form__checkbox-txt">Я хочу получать уведомления о спецпредложениях и акции на электронную почту</div>
-									</label><label class="designers-form__checkbox" data-aos="fade-up"><input type="checkbox" id="checkbox" required>
+									</label><label class="designers-form__checkbox" data-aos="fade-up"><input type="checkbox" id="checkbox" checked="checked" required>
 										<div class="checkbox"></div>
 										<div class="designers-form__checkbox-txt">Я соглашаюсь на обработку <a href="">персональных данных</a></div>
 									</label><button class="btn" type="submit">войти</button><a class="modal-register__reset-pass" href="">Забыли пароль?</a></form>
+								<div class="response">
+									<div class="response__txt">Мы получили вашу заявку на регистрацию</div>
+									<div class="response__subtxt">Через 20 минут мы вышлем письмо с ссылкой на подтверждение.</div>
+								</div>
 							</div>
 						</div>
 						<div class="modal-register__close"></div>
@@ -345,7 +349,23 @@
 							</div>
 						</div>
 						<div class="landscaping-solutions" data-aos="fade-up">
-							<div class="landscaping-solutions__ttl title-h2">Индивидуальные решения</div><a class="landscaping-solutions__item" href="">Искусственные растения<img src="assets/images/icons/lanscape-arrow.svg" alt=""></a><a class="landscaping-solutions__item" href="">Вертикальное озеленение: зелёные стены и фитомодули<img src="assets/images/icons/lanscape-arrow.svg" alt=""></a><a class="landscaping-solutions__item" href="">Озеленение бизнес центров и офисов<img src="assets/images/icons/lanscape-arrow.svg" alt=""></a><a class="landscaping-solutions__item" href="">Озеленение гостиниц и мини-отелей<img src="assets/images/icons/lanscape-arrow.svg" alt=""></a><a class="landscaping-solutions__item" href="">Озеленение ресторанов и кафе<img src="assets/images/icons/lanscape-arrow.svg" alt=""></a><a class="landscaping-solutions__item" href="">Озеленение летних террас<img src="assets/images/icons/lanscape-arrow.svg" alt=""></a><a class="landscaping-solutions__item" href="">Озеленение торговых комплексов<img src="assets/images/icons/lanscape-arrow.svg" alt=""></a><a class="landscaping-solutions__item" href="">Озеленение фитнес-центров и SPA-салонов<img src="assets/images/icons/lanscape-arrow.svg" alt=""></a>
+							<div class="landscaping-solutions__ttl title-h2">Индивидуальные решения</div><a class="landscaping-solutions__item" href="">Искусственные растения<svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M24 9L24.3841 9.32009V8.67991L24 9ZM24 8.5H6V9.5H24V8.5ZM1.5 4V0H0.5V4H1.5ZM24.3841 8.67991L19.3841 2.67991L18.6159 3.32009L23.6159 9.32009L24.3841 8.67991ZM23.6159 8.67991L18.6159 14.6799L19.3841 15.3201L24.3841 9.32009L23.6159 8.67991ZM6 8.5C3.51472 8.5 1.5 6.48528 1.5 4H0.5C0.5 7.03757 2.96243 9.5 6 9.5V8.5Z" fill="#CAE8D9"></path>
+								</svg></a><a class="landscaping-solutions__item" href="">Вертикальное озеленение: зелёные стены и фитомодули<svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M24 9L24.3841 9.32009V8.67991L24 9ZM24 8.5H6V9.5H24V8.5ZM1.5 4V0H0.5V4H1.5ZM24.3841 8.67991L19.3841 2.67991L18.6159 3.32009L23.6159 9.32009L24.3841 8.67991ZM23.6159 8.67991L18.6159 14.6799L19.3841 15.3201L24.3841 9.32009L23.6159 8.67991ZM6 8.5C3.51472 8.5 1.5 6.48528 1.5 4H0.5C0.5 7.03757 2.96243 9.5 6 9.5V8.5Z" fill="#CAE8D9"></path>
+								</svg></a><a class="landscaping-solutions__item" href="">Озеленение бизнес центров и офисов<svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M24 9L24.3841 9.32009V8.67991L24 9ZM24 8.5H6V9.5H24V8.5ZM1.5 4V0H0.5V4H1.5ZM24.3841 8.67991L19.3841 2.67991L18.6159 3.32009L23.6159 9.32009L24.3841 8.67991ZM23.6159 8.67991L18.6159 14.6799L19.3841 15.3201L24.3841 9.32009L23.6159 8.67991ZM6 8.5C3.51472 8.5 1.5 6.48528 1.5 4H0.5C0.5 7.03757 2.96243 9.5 6 9.5V8.5Z" fill="#CAE8D9"></path>
+								</svg></a><a class="landscaping-solutions__item" href="">Озеленение гостиниц и мини-отелей<svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M24 9L24.3841 9.32009V8.67991L24 9ZM24 8.5H6V9.5H24V8.5ZM1.5 4V0H0.5V4H1.5ZM24.3841 8.67991L19.3841 2.67991L18.6159 3.32009L23.6159 9.32009L24.3841 8.67991ZM23.6159 8.67991L18.6159 14.6799L19.3841 15.3201L24.3841 9.32009L23.6159 8.67991ZM6 8.5C3.51472 8.5 1.5 6.48528 1.5 4H0.5C0.5 7.03757 2.96243 9.5 6 9.5V8.5Z" fill="#CAE8D9"></path>
+								</svg></a><a class="landscaping-solutions__item" href="">Озеленение ресторанов и кафе<svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M24 9L24.3841 9.32009V8.67991L24 9ZM24 8.5H6V9.5H24V8.5ZM1.5 4V0H0.5V4H1.5ZM24.3841 8.67991L19.3841 2.67991L18.6159 3.32009L23.6159 9.32009L24.3841 8.67991ZM23.6159 8.67991L18.6159 14.6799L19.3841 15.3201L24.3841 9.32009L23.6159 8.67991ZM6 8.5C3.51472 8.5 1.5 6.48528 1.5 4H0.5C0.5 7.03757 2.96243 9.5 6 9.5V8.5Z" fill="#CAE8D9"></path>
+								</svg></a><a class="landscaping-solutions__item" href="">Озеленение летних террас<svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M24 9L24.3841 9.32009V8.67991L24 9ZM24 8.5H6V9.5H24V8.5ZM1.5 4V0H0.5V4H1.5ZM24.3841 8.67991L19.3841 2.67991L18.6159 3.32009L23.6159 9.32009L24.3841 8.67991ZM23.6159 8.67991L18.6159 14.6799L19.3841 15.3201L24.3841 9.32009L23.6159 8.67991ZM6 8.5C3.51472 8.5 1.5 6.48528 1.5 4H0.5C0.5 7.03757 2.96243 9.5 6 9.5V8.5Z" fill="#CAE8D9"></path>
+								</svg></a><a class="landscaping-solutions__item" href="">Озеленение торговых комплексов<svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M24 9L24.3841 9.32009V8.67991L24 9ZM24 8.5H6V9.5H24V8.5ZM1.5 4V0H0.5V4H1.5ZM24.3841 8.67991L19.3841 2.67991L18.6159 3.32009L23.6159 9.32009L24.3841 8.67991ZM23.6159 8.67991L18.6159 14.6799L19.3841 15.3201L24.3841 9.32009L23.6159 8.67991ZM6 8.5C3.51472 8.5 1.5 6.48528 1.5 4H0.5C0.5 7.03757 2.96243 9.5 6 9.5V8.5Z" fill="#CAE8D9"></path>
+								</svg></a><a class="landscaping-solutions__item" href="">Озеленение фитнес-центров и SPA-салонов<svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M24 9L24.3841 9.32009V8.67991L24 9ZM24 8.5H6V9.5H24V8.5ZM1.5 4V0H0.5V4H1.5ZM24.3841 8.67991L19.3841 2.67991L18.6159 3.32009L23.6159 9.32009L24.3841 8.67991ZM23.6159 8.67991L18.6159 14.6799L19.3841 15.3201L24.3841 9.32009L23.6159 8.67991ZM6 8.5C3.51472 8.5 1.5 6.48528 1.5 4H0.5C0.5 7.03757 2.96243 9.5 6 9.5V8.5Z" fill="#CAE8D9"></path>
+								</svg></a>
 							<div class="landscaping-solutions__bottom"><button class="landscaping-solutions__button">показать все</button></div>
 						</div>
 						<div class="landscaping-stages">
