@@ -263,9 +263,15 @@
     justify-content: space-between;
     align-items: center;
 
+    transition: .5s;
+
     &:hover {
-      background-color: $green;
-      color: #fff;
+      border-bottom: 1px solid $green;
+      color: $green;
+
+      svg path {
+        fill: $green;
+      }
     }
 
     @media (max-width: ($breakpoint - 1px)) {
@@ -279,6 +285,10 @@
     //   flex: none;
     //   height: 15px;
     // }
+
+    svg path {
+      transition: .5s;
+    }
   }
   &__bottom {
     width: 100%;
@@ -1398,13 +1408,11 @@
   display: grid;
   grid-template-areas: 'z';
 
-  .aos-slider-fix {
-    @media (min-width: $breakpoint) {
-      transform: translateX(-71%);
-    }
+  @media (min-width: $breakpoint) {
+    justify-content: center;
   }
 
-  .projects__slider {
+  .ready-projects__item {
     grid-area: z;
     opacity: 0;
     pointer-events: none;
@@ -1420,7 +1428,9 @@
       pointer-events: all;
 
       .projects__slider-controls {
-        display: flex;
+        @media (min-width: $breakpoint) {
+          display: flex;
+        }
       }
     }
   }

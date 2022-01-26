@@ -343,6 +343,9 @@
   .career-form__form {
     display: none;
   }
+  .modal-ask__ttl {
+    display: none;
+  }
 
   &.career-form {
     justify-content: flex-end;
@@ -387,5 +390,17 @@
     .news-social__title {
       display: none;
     }
+  }
+
+  &.modal-register__wrapper {
+    min-height: 579px;
+    @media (min-width: $breakpoint) {
+      min-height: 828px;
+    }
+
+    .modal-register__top {
+      display: none;
+    }
+
   }
 }

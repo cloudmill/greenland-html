@@ -242,7 +242,7 @@
 				<div class="modal-register">
 					<div class="modal-ask__background"></div>
 					<div class="modal-register__container">
-						<div class="modal-register__wrapper">
+						<div class="modal-register__wrapper" data-form>
 							<div class="modal-register__top">
 								<div class="modal-register__ttl is-active">вход</div>
 								<div class="modal-register__ttl">регистрация</div>
@@ -253,7 +253,7 @@
 									</label><label class="designers-form__label" data-aos="fade-up">
 										<div class="placeholder-active">Пароль</div><input class="designers-form__input" type="password" placeholder="Пароль" required>
 									</label><button class="btn" type="submit">войти</button><a class="modal-register__reset-pass" href="">Забыли пароль?</a></form>
-								<form class="designers-form__form form-column" data-parsley-validate><label class="designers-form__label" data-aos="fade-up">
+								<form class="designers-form__form form-column" data-parsley-validate data-send-form><label class="designers-form__label" data-aos="fade-up">
 										<div class="placeholder-active">Почта</div><input class="designers-form__input" type="email" placeholder="Почта" required>
 									</label><label class="designers-form__label" data-aos="fade-up">
 										<div class="placeholder-active">Фамилия</div><input class="designers-form__input" placeholder="Фамилия" required>
@@ -261,13 +261,17 @@
 										<div class="placeholder-active">E-mail</div><input class="designers-form__input" type="email" placeholder="E-mail" required>
 									</label><label class="designers-form__label" data-aos="fade-up">
 										<div class="placeholder-active">Пароль</div><input class="designers-form__input" type="password" placeholder="Пароль" required>
-									</label><label class="designers-form__checkbox" data-aos="fade-up"><input type="checkbox" id="checkbox">
+									</label><label class="designers-form__checkbox" data-aos="fade-up"><input type="checkbox" id="checkbox" checked="checked">
 										<div class="checkbox"></div>
 										<div class="designers-form__checkbox-txt">Я хочу получать уведомления о спецпредложениях и акции на электронную почту</div>
-									</label><label class="designers-form__checkbox" data-aos="fade-up"><input type="checkbox" id="checkbox" required>
+									</label><label class="designers-form__checkbox" data-aos="fade-up"><input type="checkbox" id="checkbox" checked="checked" required>
 										<div class="checkbox"></div>
 										<div class="designers-form__checkbox-txt">Я соглашаюсь на обработку <a href="">персональных данных</a></div>
 									</label><button class="btn" type="submit">войти</button><a class="modal-register__reset-pass" href="">Забыли пароль?</a></form>
+								<div class="response">
+									<div class="response__txt">Мы получили вашу заявку на регистрацию</div>
+									<div class="response__subtxt">Через 20 минут мы вышлем письмо с ссылкой на подтверждение.</div>
+								</div>
 							</div>
 						</div>
 						<div class="modal-register__close"></div>
@@ -277,16 +281,20 @@
 			<div class="modal-consult">
 				<div class="modal-ask__background"></div>
 				<div class="modal-ask__container">
-					<div class="modal-ask__wrapper">
+					<div class="modal-ask__wrapper" data-form>
 						<div class="modal-ask__ttl">Заполните форму<br>и мы вам перезвоним</div>
-						<form class="designers-form__form form-column" data-parsley-validate><label class="designers-form__label" data-aos="fade-up">
+						<form class="designers-form__form form-column" data-parsley-validate data-send-form><label class="designers-form__label" data-aos="fade-up">
 								<div class="placeholder-active">Имя</div><input class="designers-form__input" placeholder="Имя" required>
 							</label><label class="designers-form__label" data-aos="fade-up">
-								<div class="placeholder-active">Телефон</div><input class="designers-form__input" type="tel" placeholder="Телефон" required>
-							</label><label class="designers-form__checkbox" data-aos="fade-up"><input type="checkbox" id="checkbox" required>
+								<div class="placeholder-active">Телефон</div><input class="designers-form__input" type="tel" placeholder="Телефон" data-tel-input required>
+							</label><label class="designers-form__checkbox" data-aos="fade-up"><input type="checkbox" checked="checked" id="checkbox" required>
 								<div class="checkbox"></div>
 								<div class="designers-form__checkbox-txt">Я соглашаюсь на обработку<br><a href="">персональных данных</a></div>
 							</label><button class="btn" type="submit">отправить</button></form>
+						<div class="response">
+							<div class="response__txt">Мы получили вашу заявку на регистрацию</div>
+							<div class="response__subtxt">Через 20 минут мы вышлем письмо с ссылкой на подтверждение.</div>
+						</div>
 					</div>
 					<div class="modal-ask__close"></div>
 				</div>
@@ -388,230 +396,236 @@
 									<li class="filter-tab">Фитодизайн 3</li>
 								</ul>
 							</div>
-							<div class="ready-projects__container">
-								<div class="aos-slider-fix projects__slider is-active swiper-container" data-projects-slider="">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide projects__slide">
-											<div class="projects__item">
-												<div class="projects__item-slider" data-fade-item-slider="">
-													<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""></div>
-													<div class="bullets projects__item-slider-bullets">
-														<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+							<div class="ready-projects__container" data-aos="fade-up">
+								<div class="ready-projects__item is-active">
+									<div class="projects__slider swiper-container" data-projects-slider="">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide projects__slide">
+												<div class="projects__item">
+													<div class="projects__item-slider" data-fade-item-slider="">
+														<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""></div>
+														<div class="bullets projects__item-slider-bullets">
+															<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+														</div>
+													</div>
+													<div class="projects__item-caption">
+														<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
+														<div class="projects__item-tags">
+															<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
+														</div>
 													</div>
 												</div>
-												<div class="projects__item-caption">
-													<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
-													<div class="projects__item-tags">
-														<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
+											</div>
+											<div class="swiper-slide projects__slide">
+												<div class="projects__item">
+													<div class="projects__item-slider" data-fade-item-slider="">
+														<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""></div>
+														<div class="bullets projects__item-slider-bullets">
+															<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+														</div>
+													</div>
+													<div class="projects__item-caption">
+														<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
+														<div class="projects__item-tags">
+															<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide projects__slide">
+												<div class="projects__item">
+													<div class="projects__item-slider" data-fade-item-slider="">
+														<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""></div>
+														<div class="bullets projects__item-slider-bullets"></div>
+														<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true">
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+														</div>
+													</div>
+													<div class="projects__item-caption">
+														<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
+														<div class="projects__item-tags">
+															<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="swiper-slide projects__slide">
-											<div class="projects__item">
-												<div class="projects__item-slider" data-fade-item-slider="">
-													<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""></div>
-													<div class="bullets projects__item-slider-bullets">
-														<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-													</div>
-												</div>
-												<div class="projects__item-caption">
-													<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
-													<div class="projects__item-tags">
-														<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
-													</div>
-												</div>
-											</div>
+										<div class="projects__slider-controls">
+											<div class="projects-controls-container"><button class="arrow" style="border-color: #CAE8D9; width: 50px; height: 50px" data-projects-slider-prev=""><svg width="18" height="14" viewBox="0 0 15 13">
+														<path d="M4.79971 0.984497L0.144073 6.16577V6.83414L4.79971 12.0154L5.54354 11.3471L1.63746 6.99996H14.4829V5.99996H1.63746L5.54354 1.65287L4.79971 0.984497Z" fill="#0F2C2D"></path>
+													</svg></button></div>
+											<div class="projects-controls-container"><button class="arrow" style="border-color: #CAE8D9; width: 50px; height: 50px" data-projects-slider-next=""><svg width="18" height="14" viewBox="0 0 15 13">
+														<path d="M10.1998 0.984497L14.8554 6.16577V6.83414L10.1998 12.0154L9.45597 11.3471L13.3621 6.99996H0.516602L0.516602 5.99996H13.3621L9.45597 1.65287L10.1998 0.984497Z" fill="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
-										<div class="swiper-slide projects__slide">
-											<div class="projects__item">
-												<div class="projects__item-slider" data-fade-item-slider="">
-													<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""></div>
-													<div class="bullets projects__item-slider-bullets"></div>
-													<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true">
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-													</div>
-												</div>
-												<div class="projects__item-caption">
-													<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
-													<div class="projects__item-tags">
-														<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="projects__slider-controls">
-										<div class="projects-controls-container"><button class="arrow" style="border-color: #CAE8D9; width: 50px; height: 50px" data-projects-slider-prev=""><svg width="18" height="14" viewBox="0 0 15 13">
-													<path d="M4.79971 0.984497L0.144073 6.16577V6.83414L4.79971 12.0154L5.54354 11.3471L1.63746 6.99996H14.4829V5.99996H1.63746L5.54354 1.65287L4.79971 0.984497Z" fill="#0F2C2D"></path>
-												</svg></button></div>
-										<div class="projects-controls-container"><button class="arrow" style="border-color: #CAE8D9; width: 50px; height: 50px" data-projects-slider-next=""><svg width="18" height="14" viewBox="0 0 15 13">
-													<path d="M10.1998 0.984497L14.8554 6.16577V6.83414L10.1998 12.0154L9.45597 11.3471L13.3621 6.99996H0.516602L0.516602 5.99996H13.3621L9.45597 1.65287L10.1998 0.984497Z" fill="#0F2C2D"></path>
-												</svg></button></div>
 									</div>
 								</div>
-								<div class="aos-slider-fix projects__slider swiper-container" data-projects-slider-2="">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide projects__slide">
-											<div class="projects__item">
-												<div class="projects__item-slider" data-fade-item-slider="">
-													<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""></div>
-													<div class="bullets projects__item-slider-bullets">
-														<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+								<div class="ready-projects__item">
+									<div class="projects__slider swiper-container" data-projects-slider-2="">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide projects__slide">
+												<div class="projects__item">
+													<div class="projects__item-slider" data-fade-item-slider="">
+														<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""></div>
+														<div class="bullets projects__item-slider-bullets">
+															<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+														</div>
+													</div>
+													<div class="projects__item-caption">
+														<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
+														<div class="projects__item-tags">
+															<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
+														</div>
 													</div>
 												</div>
-												<div class="projects__item-caption">
-													<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
-													<div class="projects__item-tags">
-														<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
+											</div>
+											<div class="swiper-slide projects__slide">
+												<div class="projects__item">
+													<div class="projects__item-slider" data-fade-item-slider="">
+														<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""></div>
+														<div class="bullets projects__item-slider-bullets">
+															<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+														</div>
+													</div>
+													<div class="projects__item-caption">
+														<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
+														<div class="projects__item-tags">
+															<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide projects__slide">
+												<div class="projects__item">
+													<div class="projects__item-slider" data-fade-item-slider="">
+														<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""></div>
+														<div class="bullets projects__item-slider-bullets"></div>
+														<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true">
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+														</div>
+													</div>
+													<div class="projects__item-caption">
+														<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
+														<div class="projects__item-tags">
+															<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="swiper-slide projects__slide">
-											<div class="projects__item">
-												<div class="projects__item-slider" data-fade-item-slider="">
-													<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""></div>
-													<div class="bullets projects__item-slider-bullets">
-														<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-													</div>
-												</div>
-												<div class="projects__item-caption">
-													<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
-													<div class="projects__item-tags">
-														<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
-													</div>
-												</div>
-											</div>
+										<div class="projects__slider-controls">
+											<div class="projects-controls-container"><button class="arrow" style="border-color: #CAE8D9; width: 50px; height: 50px" data-projects-slider-2-prev=""><svg width="18" height="14" viewBox="0 0 15 13">
+														<path d="M4.79971 0.984497L0.144073 6.16577V6.83414L4.79971 12.0154L5.54354 11.3471L1.63746 6.99996H14.4829V5.99996H1.63746L5.54354 1.65287L4.79971 0.984497Z" fill="#0F2C2D"></path>
+													</svg></button></div>
+											<div class="projects-controls-container"><button class="arrow" style="border-color: #CAE8D9; width: 50px; height: 50px" data-projects-slider-2-next=""><svg width="18" height="14" viewBox="0 0 15 13">
+														<path d="M10.1998 0.984497L14.8554 6.16577V6.83414L10.1998 12.0154L9.45597 11.3471L13.3621 6.99996H0.516602L0.516602 5.99996H13.3621L9.45597 1.65287L10.1998 0.984497Z" fill="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
-										<div class="swiper-slide projects__slide">
-											<div class="projects__item">
-												<div class="projects__item-slider" data-fade-item-slider="">
-													<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""></div>
-													<div class="bullets projects__item-slider-bullets"></div>
-													<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true">
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-													</div>
-												</div>
-												<div class="projects__item-caption">
-													<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
-													<div class="projects__item-tags">
-														<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="projects__slider-controls">
-										<div class="projects-controls-container"><button class="arrow" style="border-color: #CAE8D9; width: 50px; height: 50px" data-projects-slider-2-prev=""><svg width="18" height="14" viewBox="0 0 15 13">
-													<path d="M4.79971 0.984497L0.144073 6.16577V6.83414L4.79971 12.0154L5.54354 11.3471L1.63746 6.99996H14.4829V5.99996H1.63746L5.54354 1.65287L4.79971 0.984497Z" fill="#0F2C2D"></path>
-												</svg></button></div>
-										<div class="projects-controls-container"><button class="arrow" style="border-color: #CAE8D9; width: 50px; height: 50px" data-projects-slider-2-next=""><svg width="18" height="14" viewBox="0 0 15 13">
-													<path d="M10.1998 0.984497L14.8554 6.16577V6.83414L10.1998 12.0154L9.45597 11.3471L13.3621 6.99996H0.516602L0.516602 5.99996H13.3621L9.45597 1.65287L10.1998 0.984497Z" fill="#0F2C2D"></path>
-												</svg></button></div>
 									</div>
 								</div>
-								<div class="aos-slider-fix projects__slider swiper-container" data-projects-slider-3="">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide projects__slide">
-											<div class="projects__item">
-												<div class="projects__item-slider" data-fade-item-slider="">
-													<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""></div>
-													<div class="bullets projects__item-slider-bullets">
-														<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+								<div class="ready-projects__item">
+									<div class="projects__slider swiper-container" data-projects-slider-3="">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide projects__slide">
+												<div class="projects__item">
+													<div class="projects__item-slider" data-fade-item-slider="">
+														<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""></div>
+														<div class="bullets projects__item-slider-bullets">
+															<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+														</div>
+													</div>
+													<div class="projects__item-caption">
+														<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
+														<div class="projects__item-tags">
+															<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
+														</div>
 													</div>
 												</div>
-												<div class="projects__item-caption">
-													<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
-													<div class="projects__item-tags">
-														<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
+											</div>
+											<div class="swiper-slide projects__slide">
+												<div class="projects__item">
+													<div class="projects__item-slider" data-fade-item-slider="">
+														<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""></div>
+														<div class="bullets projects__item-slider-bullets">
+															<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+														</div>
+													</div>
+													<div class="projects__item-caption">
+														<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
+														<div class="projects__item-tags">
+															<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="swiper-slide projects__slide">
+												<div class="projects__item">
+													<div class="projects__item-slider" data-fade-item-slider="">
+														<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""></div>
+														<div class="bullets projects__item-slider-bullets"></div>
+														<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true">
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+															<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
+														</div>
+													</div>
+													<div class="projects__item-caption">
+														<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
+														<div class="projects__item-tags">
+															<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
+															<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
+														</div>
 													</div>
 												</div>
 											</div>
 										</div>
-										<div class="swiper-slide projects__slide">
-											<div class="projects__item">
-												<div class="projects__item-slider" data-fade-item-slider="">
-													<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""></div>
-													<div class="bullets projects__item-slider-bullets">
-														<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-													</div>
-												</div>
-												<div class="projects__item-caption">
-													<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
-													<div class="projects__item-tags">
-														<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
-													</div>
-												</div>
-											</div>
+										<div class="projects__slider-controls">
+											<div class="projects-controls-container"><button class="arrow" style="border-color: #CAE8D9; width: 50px; height: 50px" data-projects-slider-3-prev=""><svg width="18" height="14" viewBox="0 0 15 13">
+														<path d="M4.79971 0.984497L0.144073 6.16577V6.83414L4.79971 12.0154L5.54354 11.3471L1.63746 6.99996H14.4829V5.99996H1.63746L5.54354 1.65287L4.79971 0.984497Z" fill="#0F2C2D"></path>
+													</svg></button></div>
+											<div class="projects-controls-container"><button class="arrow" style="border-color: #CAE8D9; width: 50px; height: 50px" data-projects-slider-3-next=""><svg width="18" height="14" viewBox="0 0 15 13">
+														<path d="M10.1998 0.984497L14.8554 6.16577V6.83414L10.1998 12.0154L9.45597 11.3471L13.3621 6.99996H0.516602L0.516602 5.99996H13.3621L9.45597 1.65287L10.1998 0.984497Z" fill="#0F2C2D"></path>
+													</svg></button></div>
 										</div>
-										<div class="swiper-slide projects__slide">
-											<div class="projects__item">
-												<div class="projects__item-slider" data-fade-item-slider="">
-													<div class="projects__item-slider-wrapper" data-fade-item-slider-wrapper=""><img class="projects__item-img is-active" src="assets/images/projects__item-img-2.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-3.jpg" alt="" data-fade-item-slider-item=""><img class="projects__item-img" src="assets/images/projects__item-img-1.jpg" alt="" data-fade-item-slider-item=""></div>
-													<div class="bullets projects__item-slider-bullets"></div>
-													<div class="bullet projects__item-slider-bullet is-active" data-fade-item-slider-bullet="true">
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-														<div class="bullet projects__item-slider-bullet" data-fade-item-slider-bullet="true"></div>
-													</div>
-												</div>
-												<div class="projects__item-caption">
-													<div class="epsilon projects__item-name">Отель Crowne Plaza</div>
-													<div class="projects__item-tags">
-														<div class="projects__item-tag text__super-tn text--uppercase">Вертикальное озеленение</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Террасы</div>
-														<div class="projects__item-tag text__super-tn text--uppercase">Входные группы</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="projects__slider-controls">
-										<div class="projects-controls-container"><button class="arrow" style="border-color: #CAE8D9; width: 50px; height: 50px" data-projects-slider-3-prev=""><svg width="18" height="14" viewBox="0 0 15 13">
-													<path d="M4.79971 0.984497L0.144073 6.16577V6.83414L4.79971 12.0154L5.54354 11.3471L1.63746 6.99996H14.4829V5.99996H1.63746L5.54354 1.65287L4.79971 0.984497Z" fill="#0F2C2D"></path>
-												</svg></button></div>
-										<div class="projects-controls-container"><button class="arrow" style="border-color: #CAE8D9; width: 50px; height: 50px" data-projects-slider-3-next=""><svg width="18" height="14" viewBox="0 0 15 13">
-													<path d="M10.1998 0.984497L14.8554 6.16577V6.83414L10.1998 12.0154L9.45597 11.3471L13.3621 6.99996H0.516602L0.516602 5.99996H13.3621L9.45597 1.65287L10.1998 0.984497Z" fill="#0F2C2D"></path>
-												</svg></button></div>
 									</div>
 								</div>
 							</div>

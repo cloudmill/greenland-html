@@ -50,47 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
 })
 
 
-// модалка с первого экрана главной
-
-// {
-//   $(() => {
-//     const openBtn = $('.cober-modal-btn');
-
-//     if (openBtn.length) {
-//       const modalCover = $('.modal-cover');
-//       const main = $('.main');
-//       const closeBtn = $('.modal-cover-close');
-//       const body = $('.page-main');
-
-//       $(window).on('click', (event) => {
-
-//         if (!main.hasClass('modal-cover--open')) {
-
-//           if ( $(event.target).closest(openBtn).length ) {
-//             main.addClass('modal-cover--open');
-//             modalCover.addClass('modal-cover--active');
-//             body.addClass('overflow-hidden');
-//           }
-
-//         } else {
-
-//           if ( $(event.target).closest(closeBtn).length ) {
-//             main.removeClass('modal-cover--open');
-//             modalCover.removeClass('modal-cover--active');
-//             body.removeClass('overflow-hidden');
-//           }
-
-//           if (!$(event.target).closest(modalCover).length) {
-//             main.removeClass('modal-cover--open');
-//             modalCover.removeClass('modal-cover--active');
-//             body.removeClass('overflow-hidden');
-//           }
-//         }
-//       })
-//     }
-//   })
-// }
-
 // стили фокуса в инпутах форм
 
 {
@@ -243,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (slidersList.length) {
       const filter = $('.designers-products-filter');
       const filterBtn = filter.find('.filter-tab');
-      const sliderItem = slidersList.find('.projects__slider');
+      const sliderItem = slidersList.find('.ready-projects__item');
 
       filter.on("click", (event) => {
         if ($(event.target).closest(filterBtn).length) {
@@ -387,7 +346,7 @@ $(window).on('load', () => {
   
     onYouTubeIframeAPIReady();
 
-    $('.video-preview').on('click', (event) => {
+    $('.video-preview:not(.video-preview--active)').on('click', (event) => {
       
       let currentVid = $(event.target).closest('.lk-videos__item');
       currentVid.addClass('video-preview--active');
@@ -396,10 +355,5 @@ $(window).on('load', () => {
 
       player[activeIndex].playVideo();
     })
-  
-    // video.on('click', () => {
-    //   video.find('.video-preview__frame').playVideo();
-    //   video.find('.video-preview__img').addClass('video-preview__img--hide');
-    // })
   }
 })

@@ -2,6 +2,9 @@ extends ../layouts/master.pug
 
 include ../partials/modal-checkout
 
+block header
+  +header('basketHeader')
+
 block content
 
   include ../partials/_aside.pug
@@ -9,7 +12,7 @@ block content
 
   .main__wrap.main__wrap--visible(data-scroll-container="")
 
-    include ../partials/_header.pug
+    //- include ../partials/_header.pug
 
     .section.page-wrapper
       form.container.basket(data-parsley-validate)

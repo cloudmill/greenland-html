@@ -71,14 +71,13 @@ block content
 
                 .lk-videos__item(data-aos="fade-up")
 
-                  //- img(src="assets/images/lk-video-1.jpg", alt="")
-
                   .video-preview(data-video)
                   
                     .video-preview__frame(id=`player${item.ind}` data-video-id=`${item.id}`)
 
                     .video-preview__img
                       img(src="assets/images/lk-video-1.jpg", alt="")
+                      //- img(src=`https://img.youtube.com/vi/${item.id}/maxresdefault.jpg`, alt="")
 
                   .lk-videos__count #{item.ttl}
                   .lk-videos__ttl #{item.desc}

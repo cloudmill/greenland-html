@@ -1,7 +1,7 @@
 .modal-register
   .modal-ask__background
   .modal-register__container
-    .modal-register__wrapper
+    .modal-register__wrapper(data-form)
       .modal-register__top
         .modal-register__ttl.is-active вход
         .modal-register__ttl регистрация
@@ -23,7 +23,7 @@
           a.modal-register__reset-pass(href="") Забыли пароль?
 
 
-        form.designers-form__form.form-column(data-parsley-validate)
+        form.designers-form__form.form-column(data-parsley-validate data-send-form)
           
           label.designers-form__label(data-aos="fade-up")
             .placeholder-active Почта
@@ -42,12 +42,12 @@
             input.designers-form__input(type="password" placeholder="Пароль" required)
 
           label.designers-form__checkbox(data-aos="fade-up")
-            input(type="checkbox" id="checkbox")
+            input(type="checkbox" id="checkbox" checked="checked")
             .checkbox
             .designers-form__checkbox-txt Я хочу получать уведомления о спецпредложениях и акции на электронную почту
 
           label.designers-form__checkbox(data-aos="fade-up")
-            input(type="checkbox" id="checkbox" required)
+            input(type="checkbox" id="checkbox" checked="checked" required)
             .checkbox
             .designers-form__checkbox-txt Я соглашаюсь на обработку 
               a(href="") персональных данных
@@ -55,5 +55,9 @@
           button.btn(type="submit") войти
 
           a.modal-register__reset-pass(href="") Забыли пароль?
+
+        .response
+          .response__txt Мы получили вашу заявку на регистрацию
+          .response__subtxt Через 20 минут мы вышлем письмо с ссылкой на подтверждение.
 
     .modal-register__close
