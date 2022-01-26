@@ -263,9 +263,15 @@
     justify-content: space-between;
     align-items: center;
 
+    transition: .5s;
+
     &:hover {
-      background-color: $green;
-      color: #fff;
+      border-bottom: 1px solid $green;
+      color: $green;
+
+      svg path {
+        fill: $green;
+      }
     }
 
     @media (max-width: ($breakpoint - 1px)) {
@@ -279,6 +285,10 @@
     //   flex: none;
     //   height: 15px;
     // }
+
+    svg path {
+      transition: .5s;
+    }
   }
   &__bottom {
     width: 100%;

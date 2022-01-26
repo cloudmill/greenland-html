@@ -134,17 +134,12 @@
   }
 }
 
-.modal-ask__wrapper {
+.modal-ask__wrapper, .modal-register__wrapper {
   .response {
-    padding: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-    @media (max-width: ($breakpoint - 1px)) {
-      padding: 40px;
-    }
 
     &__txt {
       font-size: 24px;
@@ -173,6 +168,14 @@
     @media (max-width: ($breakpoint - 1px)) {
       min-height: 200px;
     }
+  }
+}
+
+.modal-ask__wrapper .response {
+  padding: 70px;
+
+  @media (max-width: ($breakpoint - 1px)) {
+    padding: 40px;
   }
 }
 
@@ -281,6 +284,7 @@
   display: grid;
   grid-template-areas: 'z';
   position: relative;
+  height: 100%;
 
   .designers-form__form {
     grid-area: z;

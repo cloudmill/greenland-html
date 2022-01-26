@@ -391,4 +391,16 @@
       display: none;
     }
   }
+
+  &.modal-register__wrapper {
+    min-height: 579px;
+    @media (min-width: $breakpoint) {
+      min-height: 828px;
+    }
+
+    .modal-register__top {
+      display: none;
+    }
+
+  }
 }
