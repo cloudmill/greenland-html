@@ -1397,7 +1397,10 @@
 .ready-projects__container {
   display: grid;
   grid-template-areas: 'z';
-  justify-content: center;
+
+  @media (min-width: $breakpoint) {
+    justify-content: center;
+  }
 
   .ready-projects__item {
     grid-area: z;
@@ -1415,7 +1418,9 @@
       pointer-events: all;
 
       .projects__slider-controls {
-        display: flex;
+        @media (min-width: $breakpoint) {
+          display: flex;
+        }
       }
     }
   }
