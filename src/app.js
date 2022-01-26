@@ -16,6 +16,7 @@ import parsley from "parsleyjs";
 import "parsleyjs/dist/i18n/ru";
 
 import './assets/scripts/sliders';
+import './assets/scripts/nav-links';
 
 import './assets/scripts/catalog-card';
 import { CatalogFilters } from './assets/scripts/catalog-filters';

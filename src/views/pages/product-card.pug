@@ -169,20 +169,20 @@ block content
           .product-card-aside
 
             .product-card-links(data-aos="fade-up")
-              .product-card-links__item
-                a(href="") Размеры
-              .product-card-links__item
-                a(href="") С этим покупают
-              .product-card-links__item.is-active
-                a(href="") Описание
-              .product-card-links__item
-                a(href="") Реализовано в проектах
-              .product-card-links__item
-                a(href="") Задать вопрос
+              .product-card-links__item.active(data-scroll-item='')
+                a(href="" data-scroll='#size') Размеры
+              .product-card-links__item(data-scroll-item='')
+                a(href="" data-scroll='#buy') С этим покупают
+              .product-card-links__item(data-scroll-item='')
+                a(href="" data-scroll='#description') Описание
+              .product-card-links__item(data-scroll-item='')
+                a(href="" data-scroll='#projects') Реализовано в проектах
+              .product-card-links__item(data-scroll-item='')
+                a(href="" data-scroll='#faq') Задать вопрос
 
           .product-card-main
 
-            .product-card-size(data-aos="fade-up")
+            .product-card-size#size(data-aos="fade-up" data-section='')
               h3.title-h3 размеры
 
               .product-size-table
@@ -221,7 +221,7 @@ block content
                         +basketIco
                         |в корзину
           
-            .product-card-recommend.designers-products
+            .product-card-recommend.designers-products#buy(data-section='')
               .designers-products__top(data-aos="fade-up")
                 h3.title-h3
                   |С этим покупают
@@ -235,7 +235,7 @@ block content
                     - for (i=0; i<5; i++)
                       +catalog-card.swiper-slide(images=["assets/images/catalog-1.png", "https://via.placeholder.com/600/771796", "https://via.placeholder.com/150/92c952", "https://via.placeholder.com/150/1fe46f"])
 
-            .product-card-desc
+            .product-card-desc#description(data-section='')
               h3.title-h3(data-aos="fade-up") Описание
 
               .product-card-txt(data-aos="fade-up")
@@ -264,8 +264,7 @@ block content
                   .swiper-slide
                     img(src="assets/images/product-card-2.jpg", alt="")
 
-
-            .designers-showrooms.product-projects
+            .designers-showrooms.product-projects#projects(data-section='')
               .ojects-projects-top(data-aos="fade-up")
                 h2.ojects-projects-top__title.title-h2
                   |Реализовано в проектах
@@ -351,9 +350,7 @@ block content
                           .projects__item-tag.text__super-tn.text--uppercase Террасы
                           .projects__item-tag.text__super-tn.text--uppercase Входные группы
                 
-
-
-            .designers-contacts.product-card-contacts
+            .designers-contacts.product-card-contacts#faq(data-section='')
               .designers-contacts__top(data-aos="fade-up")
                 h3.designers-contacts__title.title-h3 Задать Вопрос
 
