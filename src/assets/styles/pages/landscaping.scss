@@ -1397,14 +1397,9 @@
 .ready-projects__container {
   display: grid;
   grid-template-areas: 'z';
+  justify-content: center;
 
-  .aos-slider-fix {
-    @media (min-width: $breakpoint) {
-      transform: translateX(-71%);
-    }
-  }
-
-  .projects__slider {
+  .ready-projects__item {
     grid-area: z;
     opacity: 0;
     pointer-events: none;

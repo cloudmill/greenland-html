@@ -242,7 +242,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (slidersList.length) {
       const filter = $('.designers-products-filter');
       const filterBtn = filter.find('.filter-tab');
-      const sliderItem = slidersList.find('.projects__slider');
+      const sliderItem = slidersList.find('.ready-projects__item');
 
       filter.on("click", (event) => {
         if ($(event.target).closest(filterBtn).length) {
