@@ -8,17 +8,23 @@ export default function initCatalogSlider() {
 
   // console.log('yo1');
 
-  const catalogSlider = new Swiper($catalogSlider, {
+  let sliderParams = {
     slidesPerView: 'auto',
-    // spaceBetween: 172,
     loop: true,
     navigation: {
       prevEl: $catalogSliderControls.querySelector('[data-catalog-slider-prev]'),
       nextEl: $catalogSliderControls.querySelector('[data-catalog-slider-next]')
     }
+  }
 
-    
-  });
+  if ($catalogSlider.getAttribute('data-catalog-slider') === 'hold') {
+    sliderParams = {
+      allowTouchMove: false,
+      ...sliderParams
+    }
+  }
+
+  const catalogSlider = new Swiper($catalogSlider, sliderParams);
   // console.log('yo2');
   window.sliders.push(catalogSlider);
 
