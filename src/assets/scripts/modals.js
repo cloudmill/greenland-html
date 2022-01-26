@@ -19,12 +19,28 @@ $(
         searchModal.toggleClass('modal-active');
         menuModal.removeClass('modal-active');
         body.addClass('hidden');
+
+        // если по клику на кнопку все модалки закрыты - снять блок скролла
+
+        setTimeout(() => {
+          if (body.hasClass('hidden') && !searchModal.hasClass('modal-active') && !menuModal.hasClass('modal-active')) {
+            body.removeClass('hidden');
+          }
+        }, 500);
       })
 
       menuButton.on('click', function () {
         menuModal.toggleClass('modal-active');
         searchModal.removeClass('modal-active');
         body.addClass('hidden');
+
+        // если по клику на кнопку все модалки закрыты - снять блок скролла
+
+        setTimeout(() => {
+          if (body.hasClass('hidden') && !searchModal.hasClass('modal-active') && !menuModal.hasClass('modal-active')) {
+            body.removeClass('hidden');
+          }
+        }, 500);
       })
 
       $(window).on('click', (event) => {
@@ -50,15 +66,6 @@ $(
           searchModal.removeClass('modal-active');
           body.removeClass('hidden');
         }
-
-        // if (
-        //   (!menuModal.hasClass('modal-active') && !searchModal.hasClass('modal-active'))
-        //   // && 
-        //   // (!$(event.target).closest('.aside-btn').length || !$(event.target).closest('.aside__center').length)
-        // ) {
-        //   body.removeClass('hidden');
-        //   console.log(123);
-        // }
       })
     }
   }
