@@ -392,7 +392,7 @@
   border-bottom: 1px solid $green-extra-lighten;
   border-left: 1px solid $green-extra-lighten;
 
-  transition: .5s;
+  // transition: $transition;
 
   @media (max-width: ($breakpoint - 1px)) {
     width: 30px;
@@ -404,14 +404,14 @@
     position: absolute;
     width: 17px;
     height: 1px;
-    background-color: $black;
-
-    transition: .5s;
-
     @media (max-width: ($breakpoint - 1px)) {
       width: 10px;
     }
+    
+    background: $black;
+    transition: $transition;
   }
+
   &::before {
     transform: rotate(45deg);
   }
@@ -423,9 +423,16 @@
     background-color: $green;
 
     &::before, &::after {
-      background-color: #fff;
+      background: #fff;
     }
   }
+
+  // &:hover::before {
+  //   background-color: #fff;
+  // }
+  // &:hover::after {
+  //   background-color: #fff;
+  // }
 }
 
 .basket-item-count {

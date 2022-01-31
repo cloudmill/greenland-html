@@ -20,7 +20,7 @@ import './assets/scripts/nav-links';
 
 import './assets/scripts/catalog-card';
 import { CatalogFilters } from './assets/scripts/catalog-filters';
-
+import { Counter } from './assets/scripts/counter'
 
 import LocomotiveScroll from 'locomotive-scroll';
 
@@ -28,6 +28,12 @@ import LocomotiveScroll from 'locomotive-scroll';
 {
   $(() => {
     const filters = document.querySelectorAll('[data-filters]')
+
+    const counters = document.querySelectorAll('[data-count]')
+
+    counters.forEach(item => {
+      const counter = new Counter(item)
+    })
     
     filters.forEach(item => {
       const catalogFilters = new CatalogFilters(item)
