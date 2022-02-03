@@ -386,18 +386,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 40px;
   height: 40px;
-  border-bottom: 1px solid $green-extra-lighten;
-  border-left: 1px solid $green-extra-lighten;
-
-  // transition: $transition;
-
   @media (max-width: ($breakpoint - 1px)) {
     width: 30px;
     height: 30px;
   }
+
+  border-bottom: 1px solid $green-extra-lighten;
+  border-left: 1px solid $green-extra-lighten;
+  transition: $transition;
 
   &::before, &::after {
     content: '';
@@ -426,13 +424,6 @@
       background: #fff;
     }
   }
-
-  // &:hover::before {
-  //   background-color: #fff;
-  // }
-  // &:hover::after {
-  //   background-color: #fff;
-  // }
 }
 
 .basket-item-count {
