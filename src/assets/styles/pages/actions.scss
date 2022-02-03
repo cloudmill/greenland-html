@@ -109,18 +109,26 @@
 }
 
 .action-products {
+  @media (max-width: ($breakpoint - 1px)) {
+    margin-left: 1px;
+  }
   display: flex;
   flex-wrap: wrap;
 
   border-top: 1px solid $green-extra-lighten;
   border-right: 1px solid $green-extra-lighten;
+  @media (max-width: ($breakpoint - 1px)) {
+    border-right: none;
+  }
 
   .catalog-card {
     width: calc(100% / 3);
     border-top: none;
 
     @media (max-width: ($breakpoint - 1px)) {
+      margin-left: -1px;
       width: 50%;
+      border-right: 1px solid $green-extra-lighten;
     }
   }
 }

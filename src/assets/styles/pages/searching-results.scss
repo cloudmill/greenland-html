@@ -75,15 +75,20 @@
 
 .results-table {
   @media (max-width: ($breakpoint - 1px)) {
+    margin-top: 1px;
+    margin-left: 1px;
+
+    display: flex;
+    flex-wrap: wrap;
+    
     .results-row {
       margin: 0;
     }
-    .results-row:not(:first-child) {
-      .catalog-card {
-        border-top: none;
-      }
+    .catalog-card {
+      border-right: 1px solid $green-extra-lighten;
+      margin-left: -1px;
+      margin-top: -1px;
     }
-    
   }
 }
 
@@ -107,6 +112,12 @@
   &--mobile {
     @media (max-width: ($breakpoint - 1px)) {
       margin-right: -10px;
+    }
+  }
+
+  &--contents {
+    @media (max-width: ($breakpoint - 1px)) {
+      display: contents;
     }
   }
 
