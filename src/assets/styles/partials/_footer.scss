@@ -381,9 +381,7 @@
     width: 100%;
 
     .footer__download {
-      @media (max-width: ($breakpoint - 1px)) {
-        width: 100%;
-      }
+      width: 100%;
     }
   }
 }
