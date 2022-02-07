@@ -203,6 +203,7 @@
     justify-content: space-between;
     width: 100%;
     overflow-x: scroll;
+    @include scrollbar-hidden;
   }
 
   &-item {
