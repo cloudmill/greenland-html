@@ -64,7 +64,7 @@ mixin footerDownload(title, caption, url="#")
 
 //- breadcrumbs
 mixin breadcrumbs(titles)
-  ul.breadcrumbs(data-aos="fade-up")
+  ul.breadcrumbs(data-aos="fade-up")&attributes(attributes)
     li.breadcrumbs__main
       a.breadcrumbs__link(href="#") Главная
     each item in titles

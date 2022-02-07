@@ -15,18 +15,18 @@ block content
     .section.page-wrapper
       .container
         
-        .lanscaping-first-screen(data-aos="fade-up")
+        .lanscaping-first-screen
           
           +breadcrumbs(['озеленение', 'Готовые решения'])
 
-          .lanscaping-first-screen__block
+          .lanscaping-first-screen__block(data-aos="fade-up")
             h1.title-h1.about-title Готовые решения
             button.btn.consult-btn Запросить консультацию менеджера
 
           +footerDownload('презентация компании', 'pdf, 12 мб')
 
-          img.lanscaping-first-screen__background.only-desktop(src="assets/images/ready-solutions-main.jpg", alt="")
-          img.lanscaping-first-screen__background.only-mobile(src="assets/images/ready-solutions-main-mob.jpg", alt="")
+          img.lanscaping-first-screen__background.only-desktop(src="assets/images/ready-solutions-main.jpg", alt="" data-aos="fade-up")
+          img.lanscaping-first-screen__background.only-mobile(src="assets/images/ready-solutions-main-mob.jpg", alt="" data-aos="fade-up")
 
         .lanscaping-solutions-txt.solutions-highlights.title-h3.only-desktop(data-aos="fade-up")
           |Мы выбрали для Вас растения 

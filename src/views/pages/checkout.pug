@@ -17,9 +17,10 @@ block content
     .section.page-wrapper
       form.container.basket(data-parsley-validate)
         .basket-main.checkout
-          a.news-back-link(href="")
-            +arrow('white', '#65BA7F', 'left', '15', '13', '46')
-            |вернуться в корзину
+          .aos(data-aos='fade-up')
+            a.news-back-link(href="")
+              +arrow('white', '#65BA7F', 'left', '15', '13', '46')
+              |вернуться в корзину
 
           h1.title-h1.about-title(data-aos="fade-up") Оформление заказа
 
